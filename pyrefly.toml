@@ -1,0 +1,24 @@
+# Cấu hình môi trường cho Language Server Pyrefly (Meta) trong Antigravity IDE
+python-interpreter-path = "C:/Users/PC ASUS/miniconda3/envs/cnn_env/python.exe"
+
+search-path = [
+    "."
+]
+
+site-package-path = [
+    "C:/Users/PC ASUS/miniconda3/envs/cnn_env/Lib/site-packages"
+]
+
+project-includes = [
+    "**/*.py"
+]
+
+project-excludes = [
+    "**/*.ipynb",
+    "**/.ipynb_checkpoints/**"
+]
+
+[errors]
+untyped-import = "ignore"
+missing-source = "ignore"
+missing-import = "ignore"

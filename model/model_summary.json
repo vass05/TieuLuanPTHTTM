@@ -1,0 +1,38 @@
+{
+    "Chương 2 - Học máy Thống kê (SML)": {
+        "Bài toán": "Định giá Bất động sản (Vietnam Housing)",
+        "Mô hình tối ưu nhất": "XGBoost Regressor",
+        "File lưu trữ": "best_housing_model.joblib",
+        "Số mẫu dữ liệu huấn luyện": 18444,
+        "Đặc trưng đầu vào": [
+            "area",
+            "bedroom",
+            "toilet",
+            "floors"
+        ],
+        "Độ đo đánh giá": {
+            "R2 Score": 0.3288,
+            "RMSE (Tỷ VNĐ)": 1.802,
+            "MAE (Tỷ VNĐ)": 1.423
+        }
+    },
+    "Chương 3 - Mạng Nơ-ron Tích chập (CNN)": {
+        "Bài toán": "Phân loại Sản phẩm Thời trang (Fashion-MNIST)",
+        "Mô hình tối ưu nhất": "Squeeze-and-Excitation CNN (SE-Block)",
+        "File lưu trữ": "fashion_se_model.keras",
+        "Độ chính xác kiểm thử (Accuracy)": "91.67%",
+        "Mất mát kiểm thử (Loss)": 0.235,
+        "Số lượng tham số (Parameters)": 424706
+    },
+    "Chương 4 - Mạng Nơ-ron Hồi quy (RNN)": {
+        "Bài toán": "Dự báo Chuỗi Thời gian Tài chính (AMZN Stock)",
+        "Mô hình tối ưu nhất": "Keras Stacked LSTM",
+        "File lưu trữ": "amzn_lstm_model.keras",
+        "Bộ chuẩn hóa đi kèm": "time_series_scaler.pkl",
+        "Độ đo đánh giá": {
+            "R2 Score": 0.858,
+            "RMSE (USD)": 12.02,
+            "MAE (USD)": 11.02
+        }
+    }
+}

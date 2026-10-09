@@ -1,0 +1,215 @@
+{% extends "base.html" %}
+
+{% block title %}Hệ Thống Định Giá Bất Động Sản - XGBoost Regressor{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row g-4">
+        <!-- Cột trái: Thông số nhập liệu -->
+        <div class="col-lg-5">
+            <div class="custom-card p-4">
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                    <h5 class="fw-bold mb-0 text-dark">
+                        <i class="fa-solid fa-house-chimney text-primary me-2"></i>Thông Số Bất Động Sản
+                    </h5>
+                    <span class="badge bg-primary-subtle text-primary border border-primary-subtle">
+                        XGBoost Tối ưu
+                    </span>
+                </div>
+
+                <!-- Nút chọn mẫu nhanh -->
+                <div class="mb-3">
+                    <label class="form-label-custom">Mẫu nhà phổ biến:</label>
+                    <div class="d-flex flex-wrap gap-2">
+                        {% for pr in presets %}
+                        <button type="button" class="btn btn-sm btn-light border" 
+                                onclick="applyPreset({{ pr.area }}, {{ pr.bedroom }}, {{ pr.toilet }}, {{ pr.floors }})">
+                            {{ pr.name }}
+                        </button>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <form id="housingForm">
+                    <!-- Diện tích -->
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <label class="form-label-custom">Diện tích sử dụng (m²):</label>
+                            <span class="fw-bold text-primary" id="areaVal">75 m²</span>
+                        </div>
+                        <input type="range" class="form-range" id="areaInput" min="15" max="350" step="1" value="75">
+                    </div>
+
+                    <!-- Số phòng ngủ -->
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <label class="form-label-custom">Số phòng ngủ (Phòng):</label>
+                            <span class="fw-bold text-dark" id="bedVal">3 phòng</span>
+                        </div>
+                        <input type="range" class="form-range" id="bedInput" min="1" max="10" step="1" value="3">
+                    </div>
+
+                    <!-- Số phòng vệ sinh -->
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <label class="form-label-custom">Số phòng vệ sinh (Phòng):</label>
+                            <span class="fw-bold text-dark" id="toiletVal">2 phòng</span>
+                        </div>
+                        <input type="range" class="form-range" id="toiletInput" min="1" max="8" step="1" value="2">
+                    </div>
+
+                    <!-- Số tầng -->
+                    <div class="mb-4">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <label class="form-label-custom">Số tầng cao (Tầng):</label>
+                            <span class="fw-bold text-dark" id="floorVal">2 tầng</span>
+                        </div>
+                        <input type="range" class="form-range" id="floorInput" min="1" max="7" step="1" value="2">
+                    </div>
+
+                    <button type="submit" id="btnHouseCalc" class="btn btn-primary-custom w-100 py-2">
+                        <i class="fa-solid fa-calculator me-2"></i>Tính Toán Định Giá Ngay
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Cột phải: Kết quả định giá & Phân tích -->
+        <div class="col-lg-7">
+            <!-- 2 Thẻ KPI chính -->
+            <div class="row g-3 mb-4">
+                <div class="col-md-6">
+                    <div class="custom-card stat-card border-primary border-2">
+                        <div>
+                            <div class="stat-title">Giá trị thị trường ước tính</div>
+                            <div class="stat-value text-primary" id="resPriceBillion">{{ initial.predicted_price_billion }} Tỷ VNĐ</div>
+                        </div>
+                        <div class="stat-subtext" id="resSegmentBadge">
+                            Phân khúc: <strong class="text-{{ initial.badge_color }}">{{ initial.segment }}</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="custom-card stat-card">
+                        <div>
+                            <div class="stat-title">Đơn giá trung bình</div>
+                            <div class="stat-value text-dark" id="resPriceM2">{{ initial.price_per_m2_million }} Tr/m²</div>
+                        </div>
+                        <div class="stat-subtext text-muted">Mô hình: XGBoost Regressor (30,229 mẫu)</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card giải thích chi tiết & đặc trưng đóng góp -->
+            <div class="custom-card p-4">
+                <h6 class="fw-bold mb-3 text-dark">
+                    <i class="fa-solid fa-chart-pie text-primary me-2"></i>Trọng Số Đóng Góp Giá Trị Theo Mô Hình XGBoost
+                </h6>
+                <p class="text-muted small">
+                    Theo thực nghiệm Chương 2 trên tập <em>vietnam_housing_dataset.csv</em>, diện tích và số tầng là 2 thuộc tính quyết định hơn 70% giá trị giao dịch thực tế.
+                </p>
+
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between small mb-1">
+                        <span>Diện tích sử dụng (Area Weight: 52.4%)</span>
+                        <span class="fw-semibold text-primary">Cao nhất</span>
+                    </div>
+                    <div class="progress" style="height: 8px;">
+                        <div class="progress-bar bg-primary" style="width: 52.4%"></div>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between small mb-1">
+                        <span>Số tầng xây dựng (Floors Weight: 21.8%)</span>
+                        <span class="fw-semibold">Rất quan trọng</span>
+                    </div>
+                    <div class="progress" style="height: 8px;">
+                        <div class="progress-bar bg-info" style="width: 21.8%"></div>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between small mb-1">
+                        <span>Số nhà vệ sinh (Toilets Weight: 15.6%)</span>
+                        <span class="fw-semibold">Trung bình</span>
+                    </div>
+                    <div class="progress" style="height: 8px;">
+                        <div class="progress-bar bg-warning" style="width: 15.6%"></div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="d-flex justify-content-between small mb-1">
+                        <span>Số phòng ngủ (Bedrooms Weight: 10.2%)</span>
+                        <span class="fw-semibold">Bổ trợ</span>
+                    </div>
+                    <div class="progress" style="height: 8px;">
+                        <div class="progress-bar bg-secondary" style="width: 10.2%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+    const areaInput = document.getElementById("areaInput");
+    const bedInput = document.getElementById("bedInput");
+    const toiletInput = document.getElementById("toiletInput");
+    const floorInput = document.getElementById("floorInput");
+
+    function updateLabels() {
+        document.getElementById("areaVal").textContent = areaInput.value + " m²";
+        document.getElementById("bedVal").textContent = bedInput.value + " phòng";
+        document.getElementById("toiletVal").textContent = toiletInput.value + " phòng";
+        document.getElementById("floorVal").textContent = floorInput.value + " tầng";
+    }
+
+    [areaInput, bedInput, toiletInput, floorInput].forEach(el => el.addEventListener("input", () => {
+        updateLabels();
+        calcPrice();
+    }));
+
+    function applyPreset(area, bed, toilet, floors) {
+        areaInput.value = area;
+        bedInput.value = bed;
+        toiletInput.value = toilet;
+        floorInput.value = floors;
+        updateLabels();
+        calcPrice();
+    }
+
+    async function calcPrice() {
+        try {
+            const resp = await fetch("/api/housing/predict", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    area: parseFloat(areaInput.value),
+                    bedroom: parseFloat(bedInput.value),
+                    toilet: parseFloat(toiletInput.value),
+                    floors: parseFloat(floorInput.value)
+                })
+            });
+            const res = await resp.json();
+            if (res.success) {
+                const r = res.result;
+                document.getElementById("resPriceBillion").textContent = r.predicted_price_billion + " Tỷ VNĐ";
+                document.getElementById("resPriceM2").textContent = r.price_per_m2_million + " Tr/m²";
+                document.getElementById("resSegmentBadge").innerHTML = `Phân khúc: <strong class="text-${r.badge_color}">${r.segment}</strong>`;
+            }
+        } catch (e) {
+            console.error(e);
+        }
+    }
+
+    document.getElementById("housingForm").addEventListener("submit", e => {
+        e.preventDefault();
+        calcPrice();
+    });
+</script>
+{% endblock %}

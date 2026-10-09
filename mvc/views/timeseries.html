@@ -1,0 +1,184 @@
+{% extends "base.html" %}
+
+{% block title %}Dự Báo Chuỗi Thời Gian - Hệ Thống Thông Minh AI{% endblock %}
+
+{% block content %}
+<div class="container">
+    <!-- 1. FORM ĐIỀU KHIỂN DỰ BÁO (Control Bar) -->
+    <div class="custom-card p-4 mb-4">
+        <form id="forecastForm" class="row g-3 align-items-end">
+            <!-- Nguồn dữ liệu -->
+            <div class="col-lg-3 col-md-6">
+                <label class="form-label form-label-custom">Nguồn dữ liệu</label>
+                <div class="input-group">
+                    <span class="input-group-text bg-light border-end-0 text-warning">
+                        <i class="fa-solid fa-bolt"></i>
+                    </span>
+                    <select id="sourceSelect" class="form-select form-select-custom border-start-0 ps-0">
+                        <option value="dataset" selected>Thời gian thực (Tập dữ liệu tối ưu)</option>
+                        <option value="amzn_csv">Tệp AMZN.csv (5,842 phiên)</option>
+                        <option value="aep_csv">Tệp AEP_hourly.csv (121k giờ)</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Mã cổ phiếu -->
+            <div class="col-lg-4 col-md-6">
+                <label class="form-label form-label-custom">Mã cổ phiếu</label>
+                <select id="symbolSelect" class="form-select form-select-custom">
+                    <option value="AMZN" {% if symbol == 'AMZN' %}selected{% endif %}>AMZN - Amazon.com Inc. (Mỹ)</option>
+                    <option value="AEP" {% if symbol == 'AEP' %}selected{% endif %}>AEP - American Electric Power (Điện lực)</option>
+                </select>
+            </div>
+
+            <!-- Khoảng thời gian dự báo -->
+            <div class="col-lg-3 col-md-6">
+                <label class="form-label form-label-custom">Khoảng thời gian dự báo</label>
+                <select id="stepsSelect" class="form-select form-select-custom">
+                    <option value="7" {% if steps == 7 %}selected{% endif %}>7 ngày tới (1 tuần)</option>
+                    <option value="14" {% if steps == 14 %}selected{% endif %}>14 ngày tới (2 tuần)</option>
+                    <option value="30" {% if steps == 30 %}selected{% endif %}>30 ngày tới (1 tháng)</option>
+                </select>
+            </div>
+
+            <!-- Nút bấm dự báo -->
+            <div class="col-lg-2 col-md-6">
+                <button type="submit" id="btnSubmit" class="btn btn-primary-custom w-100 d-flex align-items-center justify-content-center gap-2">
+                    <i class="fa-solid fa-bolt"></i>
+                    <span>Thực Hiện Dự Báo</span>
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <!-- 2. BỐN THẺ KPI THỐNG KÊ (Stat Cards) -->
+    <div class="row g-3 mb-4">
+        <!-- Thẻ 1: Giá đóng cửa gần nhất -->
+        <div class="col-lg-3 col-md-6">
+            <div class="custom-card stat-card">
+                <div>
+                    <div class="stat-title">Giá đóng cửa gần nhất</div>
+                    <div class="stat-value" id="kpiLastPrice">{{ hist.last_price }} {{ hist.unit }}</div>
+                </div>
+                <div class="stat-subtext" id="kpiLastDate">Phiên ngày: {{ hist.last_date }}</div>
+            </div>
+        </div>
+
+        <!-- Thẻ 2: Giá dự báo cuối kỳ -->
+        <div class="col-lg-3 col-md-6">
+            <div class="custom-card stat-card">
+                <div>
+                    <div class="stat-title" id="kpiTargetTitle">Giá dự báo cuối kỳ (T+{{ steps }})</div>
+                    <div class="stat-value text-primary" id="kpiFinalPrice">{{ forecast.final_price }} {{ hist.unit }}</div>
+                </div>
+                <div class="stat-subtext" id="kpiT1Price">Phiên T+1: {{ forecast.t1_price }} {{ hist.unit }}</div>
+            </div>
+        </div>
+
+        <!-- Thẻ 3: Biến động cả kỳ -->
+        <div class="col-lg-3 col-md-6">
+            <div class="custom-card stat-card">
+                <div>
+                    <div class="stat-title" id="kpiDiffTitle">Biến động cả kỳ ({{ steps }} ngày)</div>
+                    <div class="stat-value {% if forecast.diff_total >= 0 %}text-success{% else %}text-danger{% endif %}" id="kpiDiffTotal">
+                        {% if forecast.diff_total >= 0 %}+{% endif %}{{ forecast.diff_total }} {{ hist.unit }}
+                    </div>
+                </div>
+                <div class="stat-subtext" id="kpiPctSubtext">
+                    {% if forecast.pct_total >= 0 %}+{% endif %}{{ forecast.pct_total }}% (T+1: {% if forecast.pct_t1 >= 0 %}+{% endif %}{{ forecast.pct_t1 }}%)
+                </div>
+            </div>
+        </div>
+
+        <!-- Thẻ 4: Xu hướng kỳ -->
+        <div class="col-lg-3 col-md-6">
+            <div class="custom-card stat-card">
+                <div>
+                    <div class="stat-title" id="kpiTrendTitle">Xu hướng kỳ {{ steps }} ngày</div>
+                    <div class="mt-2">
+                        <span class="trend-badge {% if forecast.trend_total == 'Tăng' %}up{% else %}down{% endif %}" id="kpiTrendBadge">
+                            <i class="fa-solid {% if forecast.trend_total == 'Tăng' %}fa-arrow-trend-up{% else %}fa-arrow-trend-down{% endif %} me-1"></i>
+                            <span id="kpiTrendText">{{ forecast.trend_total }}</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="stat-subtext" id="kpiTrendSubtext">Phiên T+1: {{ forecast.trend_t1 }}</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. BIỂU ĐỒ ĐƯỜNG DIỄN BIẾN GIÁ & DỰ BÁO LỚN -->
+    <div class="custom-card p-4 mb-4">
+        <div class="d-flex align-items-center justify-content-between mb-3 flex-wrap gap-2">
+            <h5 class="fw-bold mb-0 text-dark" id="chartCardTitle">
+                Diễn Biến Giá & Dự Báo (<span id="titleSymbol">{{ symbol }}</span>)
+            </h5>
+            <span class="live-badge">
+                <span class="live-dot"></span>
+                <span>Trực tuyến (Tập dữ liệu tối ưu)</span>
+            </span>
+        </div>
+
+        <!-- Vùng vẽ Chart.js -->
+        <div style="position: relative; height: 420px; width: 100%;">
+            <canvas id="stockChart"></canvas>
+        </div>
+    </div>
+
+    <!-- 4. BẢNG DỮ LIỆU DỰ BÁO CHI TIẾT TỪNG PHIÊN (T+1 đến T+N) -->
+    <div class="custom-card p-4">
+        <h6 class="fw-bold mb-3 text-dark">
+            <i class="fa-solid fa-calendar-days text-primary me-2"></i>Chi Tiết Điểm Dự Báo Theo Phiên Tương Lai
+        </h6>
+        <div class="table-responsive">
+            <table class="table table-hover align-middle mb-0" id="forecastTable">
+                <thead class="table-light">
+                    <tr>
+                        <th class="ps-3">Bước dự báo</th>
+                        <th>Ngày giao dịch</th>
+                        <th>Giá dự báo ({{ hist.unit }})</th>
+                        <th>Mức chênh lệch so với giá hiện tại</th>
+                        <th>Tỷ lệ biến động</th>
+                        <th>Trạng thái</th>
+                    </tr>
+                </thead>
+                <tbody id="forecastTableBody">
+                    {% for p in forecast.forecast_prices %}
+                    {% set diff = (p - hist.last_price)|round(2) %}
+                    {% set pct = ((diff / hist.last_price) * 100)|round(2) %}
+                    <tr>
+                        <td class="ps-3 fw-bold text-primary">T+{{ loop.index }}</td>
+                        <td>{{ forecast.forecast_dates[loop.index0] }}</td>
+                        <td class="fw-bold">{{ p }} {{ hist.unit }}</td>
+                        <td class="{% if diff >= 0 %}text-success{% else %}text-danger{% endif %} fw-semibold">
+                            {% if diff >= 0 %}+{% endif %}{{ diff }} {{ hist.unit }}
+                        </td>
+                        <td class="{% if pct >= 0 %}text-success{% else %}text-danger{% endif %}">
+                            {% if pct >= 0 %}+{% endif %}{{ pct }}%
+                        </td>
+                        <td>
+                            <span class="badge {% if diff >= 0 %}bg-success-subtle text-success border border-success-subtle{% else %}bg-danger-subtle text-danger border border-danger-subtle{% endif %}">
+                                {% if diff >= 0 %}Tăng giá{% else %}Giảm giá{% endif %}
+                            </span>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+    // Dữ liệu ban đầu truyền từ Flask Controller (Jinja2)
+    const initialHistDates = {{ hist.dates | tojson }};
+    const initialHistPrices = {{ hist.prices | tojson }};
+    const initialForecastDates = {{ forecast.forecast_dates | tojson }};
+    const initialForecastPrices = {{ forecast.forecast_prices | tojson }};
+    const initialSymbol = "{{ symbol }}";
+    const initialUnit = "{{ hist.unit }}";
+</script>
+<script src="{{ url_for('static', filename='js/timeseries.js') }}"></script>
+{% endblock %}

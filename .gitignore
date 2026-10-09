@@ -1,0 +1,12 @@
+# Python & Jupyter cache
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints/
+
+# IDE settings
+.vscode/
+
+# GitHub file size limit is 100 MB (ignore files > 100MB)
+DATA/fashion-mnist_train.csv
+DATA/mnist_train.csv

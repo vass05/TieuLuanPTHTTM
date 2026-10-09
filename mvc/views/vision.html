@@ -1,0 +1,318 @@
+{% extends "base.html" %}
+
+{% block title %}Hệ Thống Thị Giác AI - SE-Block CNN (Fashion-MNIST){% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row g-4">
+        <!-- Cột trái: Vùng tương tác vẽ nét hoặc tải ảnh -->
+        <div class="col-lg-5">
+            <div class="custom-card p-4">
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                    <h5 class="fw-bold mb-0 text-dark">
+                        <i class="fa-solid fa-paintbrush text-primary me-2"></i>Vùng Nhập Ảnh Tương Tác
+                    </h5>
+                    <span class="badge bg-success-subtle text-success border border-success-subtle">
+                        Độ chính xác: 91.67%
+                    </span>
+                </div>
+
+                <!-- Tabs: Vẽ tay vs Tải ảnh -->
+                <ul class="nav nav-pills nav-fill mb-3" id="visionInputTabs">
+                    <li class="nav-item">
+                        <button class="nav-link active py-2" id="tabDraw" data-bs-toggle="pill" data-bs-target="#paneDraw" type="button">
+                            <i class="fa-solid fa-pen-nib me-1"></i> Vẽ Tay (Canvas)
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link py-2" id="tabUpload" data-bs-toggle="pill" data-bs-target="#paneUpload" type="button">
+                            <i class="fa-solid fa-upload me-1"></i> Tải Ảnh Lên
+                        </button>
+                    </li>
+                </ul>
+
+                <div class="tab-content">
+                    <!-- Tab 1: Canvas vẽ tay -->
+                    <div class="tab-pane fade show active text-center" id="paneDraw">
+                        <p class="text-muted small mb-2">Vẽ nét đơn giản của sản phẩm (Áo, quần, giày, túi xách, đầm...)</p>
+                        <div class="d-inline-block position-relative mb-3">
+                            <canvas id="paintCanvas" width="280" height="280"></canvas>
+                        </div>
+                        <div class="d-flex justify-content-center gap-2">
+                            <button type="button" id="btnClearCanvas" class="btn btn-outline-secondary btn-sm px-3">
+                                <i class="fa-solid fa-eraser me-1"></i> Xóa bảng
+                            </button>
+                            <button type="button" id="btnPredictCanvas" class="btn btn-primary-custom btn-sm px-4">
+                                <i class="fa-solid fa-wand-magic-sparkles me-1"></i> Nhận diện nét vẽ
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Tab 2: Tải file ảnh có xem trước (Image Preview) -->
+                    <div class="tab-pane fade" id="paneUpload">
+                        <div id="dropZone" class="border rounded-3 p-3 text-center bg-light mb-3 position-relative" style="border-style: dashed !important; border-width: 2px !important; border-color: #cbd5e1 !important; background-color: #f8fafc !important; transition: all 0.2s ease;">
+                            <!-- Trạng thái chưa chọn ảnh -->
+                            <div id="uploadPlaceholder" class="py-3">
+                                <i class="fa-solid fa-cloud-arrow-up fa-3x text-primary mb-2"></i>
+                                <p class="text-muted small mb-2">Kéo thả ảnh vào đây hoặc bấm nút bên dưới</p>
+                                <p class="text-muted small mb-3" style="font-size: 0.78rem;">Hỗ trợ PNG, JPG, JPEG (Tự động resize 28×28)</p>
+                                <label for="imageFileInput" class="btn btn-outline-primary btn-sm px-3 mb-0" style="cursor: pointer;">
+                                    <i class="fa-solid fa-folder-open me-1"></i> Chọn tệp hình ảnh
+                                </label>
+                            </div>
+
+                            <!-- Vùng Xem Trước (Preview) khi đã chọn ảnh -->
+                            <div id="previewContainer" class="d-none py-1">
+                                <div class="position-relative d-inline-block mb-2">
+                                    <img id="previewImg" src="" alt="Ảnh xem trước" class="img-fluid rounded-3 shadow-sm border" style="max-height: 230px; max-width: 100%; object-fit: contain; background: #ffffff; padding: 4px;">
+                                    <button type="button" id="btnRemoveImg" class="btn btn-danger btn-sm rounded-circle position-absolute top-0 end-0 translate-middle shadow" title="Xóa ảnh này" style="width: 26px; height: 26px; padding: 0; line-height: 24px; font-size: 0.75rem;">
+                                        <i class="fa-solid fa-xmark"></i>
+                                    </button>
+                                </div>
+                                <div>
+                                    <span id="fileNameBadge" class="badge bg-secondary font-monospace fw-normal mb-2 text-truncate" style="max-width: 260px;"></span>
+                                </div>
+                                <label for="imageFileInput" class="btn btn-link btn-sm text-decoration-none p-0 text-muted" style="font-size: 0.82rem; cursor: pointer;">
+                                    <i class="fa-solid fa-arrow-rotate-right me-1"></i> Chọn ảnh khác
+                                </label>
+                            </div>
+
+                            <input type="file" id="imageFileInput" class="d-none" accept="image/*">
+                        </div>
+
+                        <button type="button" id="btnPredictUpload" class="btn btn-primary-custom w-100 py-2">
+                            <i class="fa-solid fa-wand-magic-sparkles me-1"></i> Nhận Diện File Ảnh
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cột phải: Kết quả nhận diện Top-1 & Bảng phân phối xác suất -->
+        <div class="col-lg-7">
+            <!-- Thẻ KPI Top 1 -->
+            <div class="custom-card p-4 mb-4 border-primary border-2">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div>
+                        <div class="text-muted small fw-semibold text-uppercase tracking-wider">Dự đoán tốt nhất (Top-1)</div>
+                        <h2 class="fw-bolder text-primary mb-1" id="topLabelVi">Chờ nhận diện...</h2>
+                        <div class="text-muted" id="topLabelEn">Vui lòng vẽ nét hoặc tải ảnh để bắt đầu</div>
+                    </div>
+                    <div class="text-end">
+                        <div class="stat-value text-dark" id="topConfidence">--%</div>
+                        <div class="text-muted small">Độ tin cậy (Confidence)</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bảng phân bố xác suất Top 5 -->
+            <div class="custom-card p-4">
+                <h6 class="fw-bold mb-3 text-dark">
+                    <i class="fa-solid fa-chart-simple text-primary me-2"></i>Phân Phối Xác Suất Nhận Diện (Top-5 Phổ biến)
+                </h6>
+                <div id="probBarsContainer">
+                    <p class="text-muted small text-center my-4">Chưa có kết quả dự đoán.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+    // Logic Canvas HTML5
+    const canvas = document.getElementById("paintCanvas");
+    const ctx = canvas.getContext("2d");
+    let isDrawing = false;
+
+    // Thiết lập bút vẽ
+    ctx.fillStyle = "#ffffff";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.strokeStyle = "#000000";
+    ctx.lineWidth = 18;
+    ctx.lineCap = "round";
+    ctx.lineJoin = "round";
+
+    function getPos(e) {
+        const rect = canvas.getBoundingClientRect();
+        const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+        const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+        return { x: clientX - rect.left, y: clientY - rect.top };
+    }
+
+    function startDraw(e) {
+        isDrawing = true;
+        const pos = getPos(e);
+        ctx.beginPath();
+        ctx.moveTo(pos.x, pos.y);
+        e.preventDefault();
+    }
+
+    function draw(e) {
+        if (!isDrawing) return;
+        const pos = getPos(e);
+        ctx.lineTo(pos.x, pos.y);
+        ctx.stroke();
+        e.preventDefault();
+    }
+
+    function stopDraw() {
+        isDrawing = false;
+    }
+
+    canvas.addEventListener("mousedown", startDraw);
+    canvas.addEventListener("mousemove", draw);
+    canvas.addEventListener("mouseup", stopDraw);
+    canvas.addEventListener("mouseleave", stopDraw);
+
+    canvas.addEventListener("touchstart", startDraw, { passive: false });
+    canvas.addEventListener("touchmove", draw, { passive: false });
+    canvas.addEventListener("touchend", stopDraw);
+
+    document.getElementById("btnClearCanvas").addEventListener("click", () => {
+        ctx.fillStyle = "#ffffff";
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+    });
+
+    // Hàm hiển thị kết quả
+    function displayVisionResult(res) {
+        document.getElementById("topLabelVi").textContent = res.top_label_vi;
+        document.getElementById("topLabelEn").textContent = res.top_label_en;
+        document.getElementById("topConfidence").textContent = res.confidence + "%";
+
+        const container = document.getElementById("probBarsContainer");
+        container.innerHTML = "";
+
+        res.ranking.forEach(item => {
+            const row = document.createElement("div");
+            row.className = "mb-3";
+            row.innerHTML = `
+                <div class="d-flex justify-content-between small mb-1">
+                    <span class="fw-semibold text-dark">
+                        <i class="fa-solid ${item.icon} text-primary me-2"></i>
+                        ${item.label_vi} <span class="text-muted font-monospace">(${item.label_en})</span>
+                    </span>
+                    <span class="fw-bold ${item.rank === 1 ? 'text-primary' : 'text-dark'}">${item.probability}%</span>
+                </div>
+                <div class="progress" style="height: 9px; border-radius: 6px;">
+                    <div class="progress-bar ${item.rank === 1 ? 'bg-primary' : 'bg-secondary'}" style="width: ${item.probability}%;"></div>
+                </div>
+            `;
+            container.appendChild(row);
+        });
+    }
+
+    // Gửi nét vẽ Canvas
+    document.getElementById("btnPredictCanvas").addEventListener("click", async () => {
+        const b64 = canvas.toDataURL("image/png");
+        try {
+            const resp = await fetch("/api/vision/predict", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ image_base64: b64 })
+            });
+            if (!resp.ok) {
+                const errText = await resp.text();
+                throw new Error(`Máy chủ phản hồi mã ${resp.status}`);
+            }
+            const data = await resp.json();
+            if (data.success) displayVisionResult(data.result);
+            else alert("Lỗi xử lý: " + (data.error || "Không xác định"));
+        } catch (e) {
+            alert("Lỗi: " + e.message);
+        }
+    });
+
+    // Xử lý xem trước ảnh khi chọn file (Image Preview)
+    const fileInput = document.getElementById("imageFileInput");
+    const previewContainer = document.getElementById("previewContainer");
+    const previewImg = document.getElementById("previewImg");
+    const uploadPlaceholder = document.getElementById("uploadPlaceholder");
+    const fileNameBadge = document.getElementById("fileNameBadge");
+    const btnRemoveImg = document.getElementById("btnRemoveImg");
+    const dropZone = document.getElementById("dropZone");
+
+    function handleFileSelected(file) {
+        if (!file || !file.type.startsWith("image/")) {
+            alert("Vui lòng chọn một tệp hình ảnh hợp lệ (PNG, JPG, JPEG)!");
+            return;
+        }
+        const reader = new FileReader();
+        reader.onload = (e) => {
+            previewImg.src = e.target.result;
+            previewContainer.classList.remove("d-none");
+            uploadPlaceholder.classList.add("d-none");
+            fileNameBadge.textContent = `${file.name} (${(file.size / 1024).toFixed(1)} KB)`;
+        };
+        reader.readAsDataURL(file);
+    }
+
+    fileInput.addEventListener("change", (e) => {
+        if (e.target.files && e.target.files[0]) {
+            handleFileSelected(e.target.files[0]);
+        }
+    });
+
+    btnRemoveImg.addEventListener("click", () => {
+        fileInput.value = "";
+        previewImg.src = "";
+        previewContainer.classList.add("d-none");
+        uploadPlaceholder.classList.remove("d-none");
+    });
+
+    // Hỗ trợ Kéo & Thả ảnh (Drag & Drop)
+    ['dragenter', 'dragover'].forEach(eventName => {
+        dropZone.addEventListener(eventName, (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            dropZone.style.borderColor = '#2563eb';
+            dropZone.style.backgroundColor = '#eff6ff';
+        }, false);
+    });
+
+    ['dragleave', 'drop'].forEach(eventName => {
+        dropZone.addEventListener(eventName, (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            dropZone.style.borderColor = '#cbd5e1';
+            dropZone.style.backgroundColor = '#f8fafc';
+        }, false);
+    });
+
+    dropZone.addEventListener('drop', (e) => {
+        const dt = e.dataTransfer;
+        const files = dt.files;
+        if (files && files[0]) {
+            fileInput.files = files;
+            handleFileSelected(files[0]);
+        }
+    });
+
+    // Gửi file ảnh upload
+    document.getElementById("btnPredictUpload").addEventListener("click", async () => {
+        if (!fileInput.files || fileInput.files.length === 0) {
+            alert("Vui lòng chọn 1 tệp hình ảnh để nhận diện!");
+            return;
+        }
+        const formData = new FormData();
+        formData.append("image_file", fileInput.files[0]);
+
+        try {
+            const resp = await fetch("/api/vision/predict", {
+                method: "POST",
+                body: formData
+            });
+            if (!resp.ok) {
+                const errText = await resp.text();
+                throw new Error(`Máy chủ phản hồi mã ${resp.status}`);
+            }
+            const data = await resp.json();
+            if (data.success) displayVisionResult(data.result);
+            else alert("Lỗi xử lý: " + (data.error || "Không xác định"));
+        } catch (e) {
+            alert("Lỗi: " + e.message);
+        }
+    });
+</script>
+{% endblock %}

@@ -1,0 +1,219 @@
+{% extends "base.html" %}
+
+{% block title %}Dữ Liệu Tùy Biến - RNN Stock Predictor{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row g-4">
+        <!-- Cột trái: Nhập chuỗi dữ liệu -->
+        <div class="col-lg-5">
+            <div class="custom-card p-4">
+                <h5 class="fw-bold mb-3 text-dark">
+                    <i class="fa-solid fa-sliders text-primary me-2"></i>Nhập Chuỗi Dữ Liệu Tùy Biến
+                </h5>
+                <p class="text-muted small">
+                    Nhập tối thiểu 30 giá trị số thực liên tiếp (cách nhau bởi dấu phẩy hoặc xuống dòng) để khởi tạo cửa sổ trượt nạp vào mô hình LSTM.
+                </p>
+
+                <!-- Các nút kịch bản mẫu -->
+                <div class="mb-3">
+                    <label class="form-label-custom">Kịch bản mẫu nhanh:</label>
+                    <div class="d-flex flex-wrap gap-2">
+                        <button type="button" class="btn btn-sm btn-light border" onclick="loadPreset('amzn')">
+                            Mẫu AMZN Thực tế
+                        </button>
+                        <button type="button" class="btn btn-sm btn-light border" onclick="loadPreset('uptrend')">
+                            Xu hướng Tăng
+                        </button>
+                        <button type="button" class="btn btn-sm btn-light border" onclick="loadPreset('volatile')">
+                            Dao động mạnh
+                        </button>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label-custom">Chuỗi 30 giá trị (USD):</label>
+                    <textarea id="customInput" class="form-control form-control-custom" rows="6" style="font-family: monospace; font-size: 0.88rem;">{{ default_vals }}</textarea>
+                    <div class="form-text" id="countFeedback">Đang có 30 giá trị hợp lệ.</div>
+                </div>
+
+                <div class="mb-4">
+                    <label class="form-label-custom">Số phiên dự báo tương lai:</label>
+                    <select id="customSteps" class="form-select form-select-custom">
+                        <option value="7" selected>7 ngày tới (1 tuần)</option>
+                        <option value="14">14 ngày tới (2 tuần)</option>
+                        <option value="30">30 ngày tới (1 tháng)</option>
+                    </select>
+                </div>
+
+                <button type="button" id="btnCustomPredict" class="btn btn-primary-custom w-100 py-2">
+                    <i class="fa-solid fa-bolt me-2"></i>Thực Hiện Dự Báo Tùy Biến
+                </button>
+            </div>
+        </div>
+
+        <!-- Cột phải: Kết quả KPI & Biểu đồ -->
+        <div class="col-lg-7">
+            <!-- 2 Thẻ KPI tóm tắt -->
+            <div class="row g-3 mb-4">
+                <div class="col-md-6">
+                    <div class="custom-card stat-card">
+                        <div>
+                            <div class="stat-title">Giá dự báo cuối kỳ</div>
+                            <div class="stat-value text-primary" id="customFinalPrice">--</div>
+                        </div>
+                        <div class="stat-subtext" id="customT1Price">Phiên T+1: --</div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="custom-card stat-card">
+                        <div>
+                            <div class="stat-title">Biến động dự kiến</div>
+                            <div class="stat-value" id="customDiffPrice">--</div>
+                        </div>
+                        <div class="stat-subtext" id="customPctPrice">--</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card đồ thị -->
+            <div class="custom-card p-4">
+                <h6 class="fw-bold mb-3 text-dark">
+                    <i class="fa-solid fa-chart-line text-primary me-2"></i>Biểu Đồ Nối Tiếp Chuỗi Tùy Biến & Dự Báo
+                </h6>
+                <div style="position: relative; height: 350px;">
+                    <canvas id="customChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+    const amznPreset = {{ default_vals | tojson }};
+    const uptrendPreset = Array.from({length: 30}, (_, i) => (150 + i * 1.5 + Math.sin(i)*0.8).toFixed(2)).join(", ");
+    const volatilePreset = Array.from({length: 30}, (_, i) => (160 + (i % 2 === 0 ? 5 : -5) + Math.cos(i)*3).toFixed(2)).join(", ");
+
+    function loadPreset(type) {
+        const txt = document.getElementById("customInput");
+        if (type === 'amzn') txt.value = amznPreset;
+        else if (type === 'uptrend') txt.value = uptrendPreset;
+        else if (type === 'volatile') txt.value = volatilePreset;
+        updateCount();
+    }
+
+    function parseValues() {
+        const raw = document.getElementById("customInput").value;
+        return raw.split(/[\s,]+/).map(x => parseFloat(x.trim())).filter(x => !isNaN(x));
+    }
+
+    function updateCount() {
+        const vals = parseValues();
+        const fb = document.getElementById("countFeedback");
+        if (vals.length >= 30) {
+            fb.textContent = `Đang có ${vals.length} giá trị hợp lệ (sẽ sử dụng 30 giá trị cuối).`;
+            fb.className = "form-text text-success";
+        } else {
+            fb.textContent = `Đang có ${vals.length}/30 giá trị (cần thêm ${30 - vals.length} giá trị).`;
+            fb.className = "form-text text-danger";
+        }
+    }
+
+    document.getElementById("customInput").addEventListener("input", updateCount);
+
+    let customChartInstance = null;
+    const ctxC = document.getElementById("customChart").getContext("2d");
+
+    async function runCustomForecast() {
+        const vals = parseValues();
+        if (vals.length < 30) {
+            alert("Vui lòng nhập tối thiểu 30 giá trị số thực!");
+            return;
+        }
+
+        const steps = parseInt(document.getElementById("customSteps").value);
+        const btn = document.getElementById("btnCustomPredict");
+        btn.disabled = true;
+        btn.innerHTML = `<span class="spinner-border spinner-border-sm me-2"></span> Đang dự báo...`;
+
+        try {
+            const resp = await fetch("/api/timeseries/custom_predict", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ window_values: vals, steps: steps })
+            });
+            const res = await resp.json();
+
+            if (res.success) {
+                const fc = res.forecast;
+                const inPrices = res.input_prices;
+
+                // Cập nhật KPI
+                document.getElementById("customFinalPrice").textContent = `${fc.final_price} USD`;
+                document.getElementById("customT1Price").textContent = `Phiên T+1: ${fc.t1_price} USD`;
+                
+                const sign = fc.diff_total >= 0 ? "+" : "";
+                const diffElem = document.getElementById("customDiffPrice");
+                diffElem.textContent = `${sign}${fc.diff_total} USD`;
+                diffElem.className = `stat-value ${fc.diff_total >= 0 ? "text-success" : "text-danger"}`;
+                document.getElementById("customPctPrice").textContent = `Tỷ lệ: ${sign}${fc.pct_total}%`;
+
+                // Cập nhật Chart
+                const histLabels = Array.from({length: inPrices.length}, (_, i) => `T-${inPrices.length - 1 - i}`);
+                const foreLabels = fc.forecast_dates.map((_, i) => `T+${i + 1}`);
+                const allLabels = [...histLabels, ...foreLabels];
+
+                const actualSeries = [...inPrices, ...Array(foreLabels.length).fill(null)];
+                const foreSeries = [
+                    ...Array(inPrices.length - 1).fill(null),
+                    inPrices[inPrices.length - 1],
+                    ...fc.forecast_prices
+                ];
+
+                if (customChartInstance) customChartInstance.destroy();
+
+                customChartInstance = new Chart(ctxC, {
+                    type: "line",
+                    data: {
+                        labels: allLabels,
+                        datasets: [
+                            {
+                                label: "Dữ liệu tùy biến nhập vào",
+                                data: actualSeries,
+                                borderColor: "#334155",
+                                borderWidth: 2,
+                                pointRadius: 3
+                            },
+                            {
+                                label: "Dự báo LSTM Tối ưu",
+                                data: foreSeries,
+                                borderColor: "#2563eb",
+                                borderWidth: 2.2,
+                                borderDash: [5, 5],
+                                pointRadius: 4,
+                                pointBackgroundColor: "#2563eb"
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        interaction: { intersect: false, mode: "index" }
+                    }
+                });
+            }
+        } catch (err) {
+            alert("Lỗi: " + err.message);
+        } finally {
+            btn.disabled = false;
+            btn.innerHTML = `<i class="fa-solid fa-bolt me-2"></i>Thực Hiện Dự Báo Tùy Biến`;
+        }
+    }
+
+    document.getElementById("btnCustomPredict").addEventListener("click", runCustomForecast);
+    // Chạy mặc định lần đầu
+    runCustomForecast();
+</script>
+{% endblock %}
