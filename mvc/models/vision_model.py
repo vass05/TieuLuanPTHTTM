@@ -10,7 +10,10 @@ import io
 import base64
 import numpy as np
 from PIL import Image, ImageOps
-import tensorflow as tf
+try:
+    import tensorflow as tf
+except ImportError:
+    tf = None
 
 class VisionModel:
     CLASSES = [
@@ -36,11 +39,11 @@ class VisionModel:
         
     def _load_model(self):
         """Tải mô hình Keras SE-Block CNN"""
-        if os.path.exists(self.model_path):
+        if os.path.exists(self.model_path) and tf is not None:
             self.model = tf.keras.models.load_model(self.model_path)
             print(f"[Model Layer] Đã nạp Fashion SE-CNN Model từ: {self.model_path}")
         else:
-            print(f"[Model Layer] CẢNH BÁO: Không tìm thấy mô hình tại {self.model_path}")
+            print(f"[Model Layer] CẢNH BÁO: Không tìm thấy mô hình hoặc thiếu TensorFlow tại {self.model_path}")
 
     def predict_image(self, image_input):
         """

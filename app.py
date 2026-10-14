@@ -22,6 +22,7 @@ except Exception:
 from mvc.controllers.timeseries_controller import timeseries_bp
 from mvc.controllers.housing_controller import housing_bp
 from mvc.controllers.vision_controller import vision_bp
+from mvc.controllers.rag_controller import rag_bp
 
 # Khởi tạo ứng dụng Flask với đường dẫn MVC views và static
 app = Flask(
@@ -36,13 +37,18 @@ app.config['TEMPLATES_AUTO_RELOAD'] = True
 app.register_blueprint(timeseries_bp)
 app.register_blueprint(housing_bp)
 app.register_blueprint(vision_bp)
+app.register_blueprint(rag_bp)
 
-# Đồng bộ tương thích ngược với các endpoint cũ của 3 API đơn lẻ
+# Đồng bộ tương thích ngược với các endpoint cũ của 3 API đơn lẻ + RAG
 from mvc.models.housing_model import HousingModel
 from mvc.models.vision_model import VisionModel
 from mvc.models.timeseries_model import TimeSeriesModel
+from mvc.models.rag_model import RAGModel
 
 legacy_housing_model = HousingModel()
+legacy_vision_model = VisionModel()
+legacy_ts_model = TimeSeriesModel()
+legacy_rag_model = RAGModel()
 legacy_vision_model = VisionModel()
 legacy_ts_model = TimeSeriesModel()
 

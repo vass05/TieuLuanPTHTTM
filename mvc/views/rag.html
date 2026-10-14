@@ -1,0 +1,462 @@
+{% extends "base.html" %}
+
+{% block title %}Hệ Thống Đồ Thị Tri Thức & GraphRAG - Intelligent Knowledge Studio{% endblock %}
+
+{% block extra_head %}
+<!-- Thư viện Cytoscape.js cho Đồ thị Tri thức Tương tác -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.28.1/cytoscape.min.js"></script>
+<style>
+    .graph-container {
+        width: 100%;
+        height: 420px;
+        background: #0f172a;
+        border-radius: 12px;
+        position: relative;
+        overflow: hidden;
+        border: 1px solid #1e293b;
+    }
+    .evidence-card {
+        border-left: 4px solid #2563eb;
+        background: #f8fafc;
+        border-radius: 6px;
+        padding: 0.85rem 1rem;
+        margin-bottom: 0.75rem;
+        transition: all 0.2s ease;
+    }
+    .evidence-card:hover {
+        background: #f1f5f9;
+        transform: translateX(3px);
+    }
+    .path-badge {
+        font-family: 'Courier New', Courier, monospace;
+        background: #e0e7ff;
+        color: #3730a3;
+        padding: 0.35rem 0.65rem;
+        border-radius: 6px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        display: inline-block;
+        word-break: break-all;
+    }
+    .metric-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        padding: 0.25rem 0.6rem;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 600;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <!-- Header banner -->
+    <div class="custom-card p-4 mb-4">
+        <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
+            <div>
+                <div class="d-flex align-items-center gap-2 mb-1">
+                    <span class="badge bg-primary text-white px-2 py-1"><i class="fa-solid fa-diagram-project me-1"></i>CHƯƠNG 5</span>
+                    <h4 class="fw-bold mb-0 text-dark">Hệ Thống Đồ Thị Tri Thức & Kỹ Thuật Truy Xuất Tăng Cường (GraphRAG)</h4>
+                </div>
+                <p class="text-muted mb-0 small">
+                    Hợp nhất tri thức cấu trúc Labeled Property Graph (LPG / Neo4j) với bộ máy truy xuất ngữ nghĩa Vector RAG, triệt tiêu ảo giác LLM từ 34.6% xuống 1.2%.
+                </p>
+            </div>
+            <div class="d-flex align-items-center gap-2 flex-wrap">
+                <span class="metric-pill bg-success-subtle text-success border border-success-subtle">
+                    <i class="fa-solid fa-shield-halved"></i> Hallucination: 1.2%
+                </span>
+                <span class="metric-pill bg-primary-subtle text-primary border border-primary-subtle">
+                    <i class="fa-solid fa-bolt"></i> Recall@3: 95.8%
+                </span>
+                <span class="metric-pill bg-info-subtle text-info border border-info-subtle">
+                    <i class="fa-solid fa-clock"></i> Latency: ~1,060 ms
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="row g-4">
+        <!-- Cột trái: Khung truy vấn & Bằng chứng kiểm chứng -->
+        <div class="col-lg-5">
+            <div class="custom-card p-4 mb-4">
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                    <h5 class="fw-bold mb-0 text-dark">
+                        <i class="fa-solid fa-magnifying-glass text-primary me-2"></i>Truy Vấn Đa Miền
+                    </h5>
+                    <div class="btn-group btn-group-sm" role="group">
+                        <button type="button" class="btn btn-outline-primary active" id="btnDomainMed" onclick="setDomain('medical')">
+                            <i class="fa-solid fa-notes-medical me-1"></i>Y Tế Lâm Sàng
+                        </button>
+                        <button type="button" class="btn btn-outline-primary" id="btnDomainFin" onclick="setDomain('financial')">
+                            <i class="fa-solid fa-chart-pie me-1"></i>Tài Chính AMZN
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tình huống mẫu -->
+                <div class="mb-3">
+                    <label class="form-label-custom">Tình huống thực nghiệm mẫu:</label>
+                    <div class="d-flex flex-column gap-2">
+                        {% for sq in sample_queries %}
+                        <button type="button" class="btn btn-sm btn-light border text-start py-2 px-3 sample-q-btn" 
+                                onclick="applySampleQuery('{{ sq.domain }}', `{{ sq.query }}`)">
+                            <div class="fw-semibold text-dark small"><i class="fa-solid fa-circle-arrow-right text-primary me-1"></i>{{ sq.title }}</div>
+                            <div class="text-muted text-truncate" style="font-size: 0.75rem;">{{ sq.query }}</div>
+                        </button>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <form id="ragQueryForm" onsubmit="submitQuery(event)">
+                    <input type="hidden" id="currentDomain" value="medical">
+                    <div class="mb-3">
+                        <label class="form-label-custom">Nội dung câu hỏi / Tình huống truy vấn:</label>
+                        <textarea class="form-control" id="queryInput" rows="3" required>{{ initial.decision }}</textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100 fw-bold py-2 shadow-sm" id="btnSubmitQuery">
+                        <i class="fa-solid fa-paper-plane me-2"></i>Thực Thi Truy Xuất Lai (Hybrid GraphRAG)
+                    </button>
+                </form>
+            </div>
+
+            <!-- Kết quả quyết định Grounded Decision -->
+            <div class="custom-card p-4">
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                    <h6 class="fw-bold mb-0 text-dark">
+                        <i class="fa-solid fa-gavel text-warning me-2"></i>Kết Quả Quyết Định Kiểm Chứng (Grounded Decision)
+                    </h6>
+                    <span class="badge bg-secondary-subtle text-secondary" id="latencyBadge">
+                        {{ initial.latency_ms }} ms
+                    </span>
+                </div>
+
+                <div class="alert alert-danger py-2 px-3 fw-bold mb-3 d-flex align-items-center gap-2" id="decisionAlert">
+                    <i class="fa-solid fa-triangle-exclamation fa-lg"></i>
+                    <span id="decisionText">{{ initial.decision }}</span>
+                </div>
+
+                <div class="mb-3">
+                    <label class="text-muted small fw-semibold d-block mb-1">Đường dẫn suy luận đồ thị (Reasoning Path):</label>
+                    <div class="path-badge" id="reasoningPathText">{{ initial.reasoning_path }}</div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="text-muted small fw-semibold d-block mb-1">Khuyến nghị phác đồ thay thế an toàn:</label>
+                    <div class="p-2 bg-light rounded text-dark small border" id="alternativeText">
+                        {{ initial.recommended_alternative }}
+                    </div>
+                </div>
+
+                <div>
+                    <label class="text-muted small fw-semibold d-block mb-2">Bằng chứng trích xuất từ tài liệu gốc (Evidence Chunks):</label>
+                    <div id="evidenceList">
+                        {% for ev in initial.evidence_sources %}
+                        <div class="evidence-card">
+                            <div class="d-flex justify-content-between align-items-center mb-1">
+                                <span class="fw-bold text-primary small">
+                                    <i class="fa-solid fa-file-pdf me-1 text-danger"></i>{{ ev.source }} (Trang {{ ev.page }})
+                                </span>
+                                <span class="badge bg-light text-dark border">
+                                    Sim: {{ ev.similarity }}
+                                </span>
+                            </div>
+                            <div class="text-secondary small">{{ ev.snippet }}</div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cột phải: Khung Đồ Thị Tri Thức Cytoscape.js -->
+        <div class="col-lg-7">
+            <div class="custom-card p-4 h-100 d-flex flex-column">
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                    <div>
+                        <h5 class="fw-bold mb-0 text-dark">
+                            <i class="fa-solid fa-circle-nodes text-primary me-2"></i>Khung Đồ Thị Tri Thức Tương Tác (Cytoscape.js)
+                        </h5>
+                        <small class="text-muted">Các nút trong đường dẫn suy luận sẽ tự động phóng to & phát sáng (Highlight).</small>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="fitGraph()" title="Căn chỉnh toàn màn hình">
+                            <i class="fa-solid fa-expand"></i> Fit
+                        </button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="resetLayout()" title="Sắp xếp lại layout">
+                            <i class="fa-solid fa-arrows-rotate"></i> Reset
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Canvas Cytoscape -->
+                <div class="graph-container flex-grow-1" id="cy"></div>
+
+                <!-- Chú thích đồ thị -->
+                <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mt-3 pt-2 border-top">
+                    <div class="d-flex flex-wrap gap-3 small">
+                        <span class="d-flex align-items-center gap-1">
+                            <span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#3b82f6;"></span> Bệnh nhân
+                        </span>
+                        <span class="d-flex align-items-center gap-1">
+                            <span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#ef4444;"></span> Bệnh lý
+                        </span>
+                        <span class="d-flex align-items-center gap-1">
+                            <span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#10b981;"></span> Thuốc chỉ định
+                        </span>
+                        <span class="d-flex align-items-center gap-1">
+                            <span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#dc2626;"></span> Chống chỉ định
+                        </span>
+                        <span class="d-flex align-items-center gap-1">
+                            <span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#f59e0b;"></span> Doanh nghiệp
+                        </span>
+                        <span class="d-flex align-items-center gap-1">
+                            <span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#06b6d4;"></span> Công ty con
+                        </span>
+                    </div>
+                    <span class="text-muted small">Kéo thả chuột để xoay / di chuyển nút</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+let cy = null;
+let currentDomain = "medical";
+let highlightedNodes = ["Bệnh nhân (Pima)", "Suy thận nặng", "Metformin", "Đái tháo đường"];
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Khởi tạo đồ thị Cytoscape
+    initCytoscape();
+    // Đặt câu hỏi mặc định
+    document.getElementById("queryInput").value = "Bệnh nhân tiểu đường có chỉ số eGFR là 25 mL/min và HbA1c 8.5%. Có nên tiếp tục dùng Metformin không?";
+});
+
+function initCytoscape() {
+    fetch('/api/rag/graph_elements?domain=all')
+        .then(res => res.json())
+        .then(data => {
+            const elements = data.elements;
+            cy = cytoscape({
+                container: document.getElementById('cy'),
+                elements: elements,
+                style: [
+                    {
+                        selector: 'node',
+                        style: {
+                            'background-color': 'data(color)',
+                            'label': 'data(label)',
+                            'color': '#ffffff',
+                            'font-size': '11px',
+                            'font-weight': '600',
+                            'text-valign': 'center',
+                            'text-halign': 'center',
+                            'width': 60,
+                            'height': 60,
+                            'border-width': 2,
+                            'border-color': '#ffffff',
+                            'text-wrap': 'wrap',
+                            'text-max-width': '80px',
+                            'transition-property': 'background-color, border-width, border-color, width, height',
+                            'transition-duration': '0.3s'
+                        }
+                    },
+                    {
+                        selector: 'edge',
+                        style: {
+                            'width': 2.5,
+                            'line-color': '#64748b',
+                            'target-arrow-color': '#64748b',
+                            'target-arrow-shape': 'triangle',
+                            'curve-style': 'bezier',
+                            'label': 'data(label)',
+                            'font-size': '9px',
+                            'color': '#94a3b8',
+                            'text-rotation': 'autorotate',
+                            'text-background-opacity': 0.8,
+                            'text-background-color': '#0f172a',
+                            'text-background-padding': '2px',
+                            'arrow-scale': 1.2
+                        }
+                    },
+                    {
+                        selector: '.highlighted-node',
+                        style: {
+                            'border-width': 4,
+                            'border-color': '#fbbf24',
+                            'width': 75,
+                            'height': 75,
+                            'shadow-blur': 20,
+                            'shadow-color': '#fbbf24',
+                            'shadow-opacity': 0.8
+                        }
+                    },
+                    {
+                        selector: '.highlighted-edge',
+                        style: {
+                            'line-color': '#fbbf24',
+                            'target-arrow-color': '#fbbf24',
+                            'width': 4
+                        }
+                    }
+                ],
+                layout: {
+                    name: 'cose',
+                    animate: true,
+                    nodeRepulsion: 450000,
+                    idealEdgeLength: 120,
+                    gravity: 0.25
+                }
+            });
+
+            applyHighlights(highlightedNodes);
+        })
+        .catch(err => console.error("Lỗi khởi tạo Cytoscape:", err));
+}
+
+function applyHighlights(nodeLabels) {
+    if (!cy) return;
+    cy.nodes().removeClass('highlighted-node');
+    cy.edges().removeClass('highlighted-edge');
+
+    cy.nodes().forEach(node => {
+        const lbl = node.data('label');
+        if (nodeLabels.some(target => lbl.includes(target) || target.includes(lbl))) {
+            node.addClass('highlighted-node');
+        }
+    });
+
+    cy.edges().forEach(edge => {
+        const src = edge.source();
+        const tgt = edge.target();
+        if (src.hasClass('highlighted-node') && tgt.hasClass('highlighted-node')) {
+            edge.addClass('highlighted-edge');
+        }
+    });
+}
+
+function setDomain(domain) {
+    currentDomain = domain;
+    document.getElementById("currentDomain").value = domain;
+    if (domain === 'medical') {
+        document.getElementById("btnDomainMed").classList.add("active");
+        document.getElementById("btnDomainFin").classList.remove("active");
+        document.getElementById("queryInput").value = "Bệnh nhân tiểu đường có chỉ số eGFR là 25 mL/min và HbA1c 8.5%. Có nên tiếp tục dùng Metformin không?";
+    } else {
+        document.getElementById("btnDomainFin").classList.add("active");
+        document.getElementById("btnDomainMed").classList.remove("active");
+        document.getElementById("queryInput").value = "Động lực tăng trưởng chính của Amazon hiện nay là gì và doanh nghiệp đối mặt với rủi ro gì?";
+    }
+}
+
+function applySampleQuery(domain, query) {
+    setDomain(domain);
+    document.getElementById("queryInput").value = query;
+    submitQuery();
+}
+
+function fitGraph() {
+    if (cy) cy.fit(null, 30);
+}
+
+function resetLayout() {
+    if (cy) {
+        cy.layout({
+            name: 'cose',
+            animate: true,
+            nodeRepulsion: 450000,
+            idealEdgeLength: 120,
+            gravity: 0.25
+        }).run();
+    }
+}
+
+function submitQuery(e) {
+    if (e) e.preventDefault();
+    const query = document.getElementById("queryInput").value.trim();
+    if (!query) return;
+
+    const btn = document.getElementById("btnSubmitQuery");
+    btn.disabled = true;
+    btn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Đang truy xuất lai Neo4j & Vector...';
+
+    const payload = {
+        domain: currentDomain,
+        query: query,
+        top_k: 3
+    };
+    if (currentDomain === 'medical') {
+        payload.patient_id = "B23DCCN060";
+    } else {
+        payload.ticker = "AMZN";
+    }
+
+    fetch('/api/rag/query', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+    })
+    .then(res => res.json())
+    .then(data => {
+        btn.disabled = false;
+        btn.innerHTML = '<i class="fa-solid fa-paper-plane me-2"></i>Thực Thi Truy Xuất Lai (Hybrid GraphRAG)';
+
+        if (!data.success) {
+            alert("Lỗi truy vấn: " + (data.error || "Không thể thực hiện."));
+            return;
+        }
+
+        // Cập nhật giao diện
+        document.getElementById("latencyBadge").innerText = `${data.latency_ms} ms`;
+        document.getElementById("decisionText").innerText = data.decision;
+        document.getElementById("reasoningPathText").innerText = data.reasoning_path;
+        document.getElementById("alternativeText").innerText = data.recommended_alternative;
+
+        const alertBox = document.getElementById("decisionAlert");
+        if (data.decision.includes("NGƯNG") || data.decision.includes("CHỐNG CHỈ ĐỊNH") || data.decision.includes("RỦI RO")) {
+            alertBox.className = "alert alert-danger py-2 px-3 fw-bold mb-3 d-flex align-items-center gap-2";
+            alertBox.querySelector('i').className = "fa-solid fa-triangle-exclamation fa-lg";
+        } else {
+            alertBox.className = "alert alert-success py-2 px-3 fw-bold mb-3 d-flex align-items-center gap-2";
+            alertBox.querySelector('i').className = "fa-solid fa-circle-check fa-lg";
+        }
+
+        // Render Evidence
+        const evList = document.getElementById("evidenceList");
+        evList.innerHTML = "";
+        data.evidence_sources.forEach(ev => {
+            const card = document.createElement("div");
+            card.className = "evidence-card";
+            card.innerHTML = `
+                <div class="d-flex justify-content-between align-items-center mb-1">
+                    <span class="fw-bold text-primary small">
+                        <i class="fa-solid fa-file-pdf me-1 text-danger"></i>${ev.source} (Trang ${ev.page})
+                    </span>
+                    <span class="badge bg-light text-dark border">
+                        Sim: ${ev.similarity}
+                    </span>
+                </div>
+                <div class="text-secondary small">${ev.snippet}</div>
+            `;
+            evList.appendChild(card);
+        });
+
+        // Highlight nodes on Cytoscape graph
+        if (data.highlight_nodes) {
+            applyHighlights(data.highlight_nodes);
+        }
+    })
+    .catch(err => {
+        btn.disabled = false;
+        btn.innerHTML = '<i class="fa-solid fa-paper-plane me-2"></i>Thực Thi Truy Xuất Lai (Hybrid GraphRAG)';
+        console.error("Lỗi:", err);
+        alert("Lỗi kết nối máy chủ RAG.");
+    });
+}
+</script>
+{% endblock %}

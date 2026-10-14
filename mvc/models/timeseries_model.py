@@ -12,8 +12,11 @@ import pandas as pd
 import joblib
 from datetime import datetime, timedelta
 
-# TensorFlow / Keras
-import tensorflow as tf
+# TensorFlow / Keras (safe import)
+try:
+    import tensorflow as tf
+except ImportError:
+    tf = None
 
 class TimeSeriesModel:
     def __init__(self, workspace_dir=None):
@@ -38,11 +41,11 @@ class TimeSeriesModel:
         else:
             print(f"[Model Layer] CẢNH BÁO: Không tìm thấy Scaler tại {scaler_path}")
             
-        if os.path.exists(lstm_path):
+        if os.path.exists(lstm_path) and tf is not None:
             self.lstm_model = tf.keras.models.load_model(lstm_path)
             print(f"[Model Layer] Đã nạp Keras LSTM từ: {lstm_path}")
         else:
-            print(f"[Model Layer] CẢNH BÁO: Không tìm thấy mô hình LSTM tại {lstm_path}")
+            print(f"[Model Layer] CẢNH BÁO: Không tìm thấy mô hình LSTM hoặc thiếu TensorFlow tại {lstm_path}")
 
     def get_historical_data(self, symbol="AMZN", limit=60):
         """
