@@ -197,7 +197,7 @@
 
 {% block content %}
 <div class="container-fluid px-lg-4">
-    <!-- Top Patient Profile & Navigation Bar -->
+    <!-- Top Navigation Bar -->
     <div class="patient-bar mb-3">
         <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
             <div class="d-flex align-items-center gap-2">
@@ -206,20 +206,17 @@
                 </div>
                 <div>
                     <h6 class="fw-bold mb-0 text-dark">Trợ Lý Y Khoa Thông Minh (Medical GraphRAG Chatbot)</h6>
-                    <small class="text-muted">Đồng bộ Tri thức Đồ thị Neo4j & Phác đồ Điều trị ADA/KDIGO 2026</small>
+                    <small class="text-muted">Tư vấn sức khỏe toàn dân • Liên kết Đồ thị Tri thức Neo4j & Nhà thuốc FPT Long Châu</small>
                 </div>
             </div>
 
-            <!-- Patient Parameters -->
+            <!-- System Info & Reset Action -->
             <div class="d-flex align-items-center gap-2 flex-wrap">
+                <span class="badge-metric bg-success-subtle text-success border border-success-subtle">
+                    <i class="fa-solid fa-circle-check me-1"></i>Hỗ trợ: <strong>Tất cả mọi người</strong>
+                </span>
                 <span class="badge-metric bg-primary-subtle text-primary border border-primary-subtle">
-                    <i class="fa-solid fa-id-badge me-1"></i>BN: <strong id="barPatientId">B23DCCN060</strong>
-                </span>
-                <span class="badge-metric bg-danger-subtle text-danger border border-danger-subtle" title="Mức lọc cầu thận ước tính">
-                    <i class="fa-solid fa-kidneys me-1"></i>eGFR: <strong id="barEgfr">{{ patient_profile.egfr }}</strong> mL/min
-                </span>
-                <span class="badge-metric bg-warning-subtle text-warning border border-warning-subtle" title="Chỉ số đường huyết 3 tháng">
-                    <i class="fa-solid fa-droplet me-1"></i>HbA1c: <strong id="barHba1c">{{ patient_profile.hba1c }}%</strong>
+                    <i class="fa-solid fa-book-medical me-1"></i>Dữ liệu: <strong>Đa chuyên khoa & Dược phẩm GPP</strong>
                 </span>
                 <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill" onclick="resetChatSession()" title="Làm mới cuộc trò chuyện">
                     <i class="fa-solid fa-rotate-right me-1"></i>Đặt lại
@@ -248,9 +245,21 @@
                             <small class="text-muted" style="font-size:0.75rem;">Hỗ trợ tư vấn chẩn đoán & an toàn kê đơn</small>
                         </div>
                     </div>
-                    <span class="badge bg-light text-secondary border small" id="latencyIndicator">
-                        <i class="fa-solid fa-bolt text-warning me-1"></i>GraphRAG Active
-                    </span>
+                    <div class="d-flex align-items-center gap-2">
+                        <!-- Toggle Bật/Tắt Gemini AI -->
+                        <div class="form-check form-switch m-0 d-flex align-items-center gap-1" title="Bật/Tắt mô hình ngôn ngữ lớn Google Gemini">
+                            <input class="form-check-input" type="checkbox" id="toggleGemini" style="cursor:pointer;" onchange="onToggleGeminiChange(this.checked)">
+                            <label class="form-check-label small fw-semibold text-secondary" for="toggleGemini" style="font-size:0.75rem; cursor:pointer;" id="toggleGeminiLabel">
+                                Gemini AI
+                            </label>
+                        </div>
+                        <span class="badge border small" id="engineBadge" style="background:#f1f5f9; color:#475569; font-size:0.72rem;">
+                            <i class="fa-solid fa-database text-primary me-1"></i>GraphRAG Cục bộ
+                        </span>
+                        <span class="badge bg-light text-secondary border small" id="latencyIndicator" style="font-size:0.72rem;">
+                            <i class="fa-solid fa-bolt text-warning me-1"></i>Sẵn sàng
+                        </span>
+                    </div>
                 </div>
 
                 <!-- Chat Messages Scroll Area -->
@@ -262,23 +271,29 @@
                         </div>
                         <div class="message-bubble bubble-ai">
                             <div class="fw-bold text-primary mb-1">
-                                <i class="fa-solid fa-circle-check text-success me-1"></i>Hệ Thống Trợ Lý Lâm Sàng Đã Sẵn Sàng!
+                                <i class="fa-solid fa-circle-check text-success me-1"></i>Hệ Thống Trợ Lý Y Khoa Sẵn Sàng Phục Vụ!
                             </div>
                             <p class="mb-2">
-                                Chào bạn, tôi là **Trợ lý Y khoa GraphRAG**. Hồ sơ ghi nhận bệnh nhân 55 tuổi có tiền sử Đái tháo đường Tuýp 2, 
-                                chỉ số <strong>eGFR = 25 mL/min/1.73m²</strong> (Suy thận mạn Giai đoạn 4) và <strong>HbA1c = 8.5%</strong>.
+                                Chào bạn, tôi là **Bác sĩ Trợ lý Y khoa & Dược sĩ AI**. Tôi có thể hỗ trợ tư vấn sức khỏe cho bạn và gia đình:
                             </p>
+                            <ul class="mb-2 ps-3 small text-muted">
+                                <li><strong>Bệnh lý thông thường:</strong> Đau đầu, chóng mặt, cảm cúm, ho sốt, đau dạ dày (GERD), gout, dị ứng mề đay...</li>
+                                <li><strong>An toàn dùng thuốc:</strong> Liều dùng, tương tác thuốc, kiểm tra an toàn cho người bệnh mạn tính.</li>
+                                <li><strong>Tra cứu biệt dược Long Châu:</strong> Giá thuốc, cách dùng thuốc chính hãng tại chuỗi Nhà thuốc FPT Long Châu.</li>
+                            </ul>
                             <p class="mb-2 small text-muted">
-                                Bạn có thể hỏi bất kỳ vấn đề nào về đơn thuốc, chống chỉ định hoặc phác đồ điều trị. Mọi câu trả lời đều được 
-                                đối soát đồng thời qua <strong>Đồ thị Tri thức Neo4j</strong> và <strong>Phác đồ KDIGO / ADA</strong>.
+                                Bạn có thể nhập bất kỳ câu hỏi sức khỏe nào hoặc bấm vào các câu hỏi gợi ý bên dưới để bắt đầu!
                             </p>
-                            <!-- Followup gợi ý -->
+                            <!-- Followup gợi ý đa dạng -->
                             <div class="d-flex flex-wrap gap-1 mt-2">
-                                <button type="button" class="chip-btn" onclick="sendQuickPrompt('Bệnh nhân có chỉ số eGFR là 25 mL/min và HbA1c 8.5%. Có nên tiếp tục dùng Metformin không?')">
-                                    ⚠️ Bệnh nhân eGFR 25 có nên dùng Metformin?
+                                <button type="button" class="chip-btn" onclick="sendQuickPrompt('Bị đau đầu chóng mặt thì nên uống thuốc gì an toàn?')">
+                                    💊 Đau đầu chóng mặt uống thuốc gì?
                                 </button>
-                                <button type="button" class="chip-btn" onclick="sendQuickPrompt('Khi eGFR dưới 30 thì chuyển sang Insulin nền liều lượng như thế nào?')">
-                                    💉 Phác đồ chuyển sang Insulin nền
+                                <button type="button" class="chip-btn" onclick="sendQuickPrompt('Bị trào ngược dạ dày ợ chua rát cổ uống thuốc gì?')">
+                                    🔥 Trào ngược dạ dày, ợ chua uống gì?
+                                </button>
+                                <button type="button" class="chip-btn" onclick="sendQuickPrompt('Cảm sốt, đau rát họng uống Panadol hay Hapacol?')">
+                                    🌡️ Cảm sốt, đau họng uống thuốc gì?
                                 </button>
                             </div>
                         </div>
@@ -624,6 +639,28 @@ function cyReset() {
     }
 }
 
+function onToggleGeminiChange(isChecked) {
+    const engBadge = document.getElementById('engineBadge');
+    const label = document.getElementById('toggleGeminiLabel');
+    if (isChecked) {
+        if (label) label.className = 'form-check-label small fw-bold text-primary';
+        if (engBadge) {
+            engBadge.innerHTML = `<i class="fa-solid fa-wand-magic-sparkles text-purple me-1"></i>Gemini AI (Bật)`;
+            engBadge.style.background = '#f3e8ff';
+            engBadge.style.color = '#7e22ce';
+            engBadge.className = 'badge border small border-purple-subtle';
+        }
+    } else {
+        if (label) label.className = 'form-check-label small fw-semibold text-secondary';
+        if (engBadge) {
+            engBadge.innerHTML = `<i class="fa-solid fa-database text-primary me-1"></i>GraphRAG Cục bộ`;
+            engBadge.style.background = '#f1f5f9';
+            engBadge.style.color = '#475569';
+            engBadge.className = 'badge border small';
+        }
+    }
+}
+
 // Xử lý gửi tin nhắn Chat
 function handleChatSubmit(e) {
     if (e) e.preventDefault();
@@ -635,12 +672,16 @@ function handleChatSubmit(e) {
     appendUserMessage(msg);
     showTypingIndicator();
 
+    const toggle = document.getElementById('toggleGemini');
+    const useLlm = toggle ? toggle.checked : false;
+
     fetch('/api/rag/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
             message: msg,
-            session_id: currentSessionId
+            session_id: currentSessionId,
+            use_llm: useLlm
         })
     })
     .then(res => res.json())
@@ -651,10 +692,20 @@ function handleChatSubmit(e) {
             return;
         }
 
-        // Cập nhật thông số bệnh nhân trên thanh Top Bar nếu có
-        if (data.patient_profile) {
-            if (data.patient_profile.egfr) document.getElementById('barEgfr').innerText = data.patient_profile.egfr;
-            if (data.patient_profile.hba1c) document.getElementById('barHba1c').innerText = data.patient_profile.hba1c + '%';
+        // Cập nhật Engine Badge hiển thị trạng thái
+        const engBadge = document.getElementById('engineBadge');
+        if (engBadge) {
+            if (data.llm_enhanced) {
+                engBadge.innerHTML = `<i class="fa-solid fa-wand-magic-sparkles text-purple me-1"></i>Gemini AI`;
+                engBadge.style.background = '#f3e8ff';
+                engBadge.style.color = '#7e22ce';
+                engBadge.className = 'badge border small border-purple-subtle';
+            } else {
+                engBadge.innerHTML = `<i class="fa-solid fa-database text-primary me-1"></i>GraphRAG Cục bộ`;
+                engBadge.style.background = '#f1f5f9';
+                engBadge.style.color = '#475569';
+                engBadge.className = 'badge border small';
+            }
         }
 
         // Thêm câu trả lời vào chat
@@ -684,14 +735,17 @@ function appendUserMessage(text) {
     const chat = document.getElementById('chatMessages');
     const row = document.createElement('div');
     row.className = 'message-row user-row';
-    row.innerHTML = `
-        <div class="avatar-icon avatar-user">
-            <i class="fa-solid fa-user"></i>
-        </div>
-        <div class="message-bubble bubble-user">
-            ${escapeHtml(text)}
-        </div>
-    `;
+    
+    const avatar = document.createElement('div');
+    avatar.className = 'avatar-icon avatar-user';
+    avatar.innerHTML = '<i class="fa-solid fa-user"></i>';
+    
+    const bubble = document.createElement('div');
+    bubble.className = 'message-bubble bubble-user';
+    bubble.textContent = text;
+    
+    row.appendChild(avatar);
+    row.appendChild(bubble);
     chat.appendChild(row);
     chat.scrollTop = chat.scrollHeight;
 }
@@ -719,6 +773,19 @@ function removeTypingIndicator() {
     if (row) row.remove();
 }
 
+function formatMarkdown(raw) {
+    if (!raw) return '';
+    return raw
+        .replace(/### (.*?)\n/g, '<h6 class="fw-bold text-primary mt-2 mb-1">$1</h6>')
+        .replace(/## (.*?)\n/g, '<h6 class="fw-bold text-dark mt-2 mb-1">$1</h6>')
+        .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+        .replace(/\*(.*?)\*/g, '<em>$1</em>')
+        .replace(/\n\n/g, '<br><br>')
+        .replace(/\n•/g, '<br>•')
+        .replace(/\n- /g, '<br>• ')
+        .replace(/\n/g, '<br>');
+}
+
 function appendAIMessage(data) {
     const chat = document.getElementById('chatMessages');
     const row = document.createElement('div');
@@ -731,11 +798,10 @@ function appendAIMessage(data) {
         triageBadge = `<span class="badge bg-warning-subtle text-warning border border-warning-subtle mb-2 d-inline-block"><i class="fa-solid fa-bolt me-1"></i>Xử trí Cấp tính</span>`;
     }
 
-    // Định dạng Markdown đơn giản (in đậm, ngắt dòng, bullet)
-    let formattedText = data.reply
-        .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-        .replace(/\n\n/g, '<br><br>')
-        .replace(/\n•/g, '<br>•');
+    let llmBadge = '';
+    if (data.llm_enhanced) {
+        llmBadge = `<span class="badge border mb-2 ms-1 d-inline-block" style="background:#f3e8ff; color:#7e22ce; border-color:#e9d5ff !important;"><i class="fa-solid fa-wand-magic-sparkles me-1"></i>Tăng cường Gemini AI</span>`;
+    }
 
     // Accordion bằng chứng phác đồ
     let evidenceHtml = '';
@@ -768,7 +834,7 @@ function appendAIMessage(data) {
             <div class="d-flex flex-wrap gap-1 mt-3 pt-2 border-top">
                 <small class="text-muted w-100 mb-1" style="font-size:0.72rem;"><i class="fa-regular fa-lightbulb me-1"></i>Câu hỏi gợi ý tiếp theo:</small>
                 ${data.suggested_followups.map(f => `
-                    <button type="button" class="chip-btn" onclick="sendQuickPrompt('${escapeHtml(f)}')">${escapeHtml(f)}</button>
+                    <button type="button" class="chip-btn" data-query="${escapeHtml(f)}" onclick="sendQuickPrompt(this.getAttribute('data-query'))">${escapeHtml(f)}</button>
                 `).join('')}
             </div>
         `;
@@ -779,15 +845,53 @@ function appendAIMessage(data) {
             <i class="fa-solid fa-stethoscope"></i>
         </div>
         <div class="message-bubble bubble-ai">
-            ${triageBadge}
-            <div>${formattedText}</div>
-            ${evidenceHtml}
-            ${followupsHtml}
+            <div>${triageBadge}${llmBadge}</div>
+            <div class="ai-text-content"></div>
+            <div class="ai-extra-content" style="display:none;">
+                ${evidenceHtml}
+                ${followupsHtml}
+            </div>
         </div>
     `;
 
     chat.appendChild(row);
-    chat.scrollTop = chat.scrollHeight;
+
+    // Cuộn mượt mà định vị tại ĐỈNH của tin nhắn mới để người dùng đọc tự nhiên từ trên xuống dưới
+    setTimeout(() => {
+        chat.scrollTo({
+            top: row.offsetTop - 15,
+            behavior: 'smooth'
+        });
+    }, 40);
+
+    // Hiệu ứng Typewriter hiển thị mượt mà từ trên xuống dưới (không bị hiện một phát xuống cuối)
+    const textEl = row.querySelector('.ai-text-content');
+    const extraEl = row.querySelector('.ai-extra-content');
+    const rawReply = data.reply || '';
+    const words = rawReply.split(' ');
+    
+    if (words.length <= 5) {
+        textEl.innerHTML = formatMarkdown(rawReply);
+        if (extraEl) extraEl.style.display = 'block';
+    } else {
+        let currentIdx = 0;
+        const step = 4; // Hiển thị 4 từ mỗi nhịp
+        const intervalMs = 20; // 20ms mỗi nhịp -> tốc độ mượt mà ~0.8 - 1.2s
+
+        const timer = setInterval(() => {
+            currentIdx += step;
+            if (currentIdx >= words.length) {
+                clearInterval(timer);
+                textEl.innerHTML = formatMarkdown(rawReply);
+                if (extraEl) {
+                    extraEl.style.display = 'block';
+                    extraEl.style.animation = 'fadeIn 0.3s ease-in-out';
+                }
+            } else {
+                textEl.innerHTML = formatMarkdown(words.slice(0, currentIdx).join(' '));
+            }
+        }, intervalMs);
+    }
 }
 
 function resetChatSession() {
@@ -806,7 +910,7 @@ function resetChatSession() {
                             <i class="fa-solid fa-circle-check text-success me-1"></i>Phiên Làm Việc Đã Được Làm Mới!
                         </div>
                         <p class="mb-0 small text-muted">
-                            Hồ sơ bệnh nhân đã được đặt lại về mặc định. Bạn có thể bắt đầu đặt câu hỏi mới.
+                            Cuộc trò chuyện đã được làm mới. Bạn có thể bắt đầu đặt câu hỏi sức khỏe hoặc tra cứu thuốc.
                         </p>
                     </div>
                 </div>
@@ -818,8 +922,9 @@ function resetChatSession() {
 }
 
 function escapeHtml(text) {
+    if (!text) return '';
     const div = document.createElement('div');
-    div.innerText = text;
+    div.textContent = text;
     return div.innerHTML;
 }
 </script>

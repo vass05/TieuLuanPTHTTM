@@ -2,6 +2,7 @@
 """
 rag_controller.py
 Tầng Controller (C) trong kiến trúc MVC cho Hệ thống Trợ lý Y khoa Thông minh GraphRAG Chatbot.
+Tích hợp Knowledge Graph (Neo4j) + Dược phẩm Long Châu + Google Gemini 1.5 Flash LLM.
 """
 
 from typing import Any, Optional
@@ -16,37 +17,47 @@ def index():
     """Giao diện Trợ lý Y khoa Thông minh & Đồ thị Tri thức Đàm thoại"""
     session_id, session_data = rag_model.get_or_create_session()
     
-    # Gợi ý tình huống lâm sàng khởi tạo
+    # Gợi ý tình huống lâm sàng phong phú (bao gồm bệnh mạn tính & bệnh thông thường)
     quick_prompts = [
+        {
+            "icon": "fa-pills",
+            "title": "Đau đầu uống Panadol",
+            "query": "Bị đau đầu uống Panadol hay Hapacol, liều dùng an toàn thế nào?"
+        },
+        {
+            "icon": "fa-fire-flame-curved",
+            "title": "Trào ngược dạ dày (GERD)",
+            "query": "Bị trào ngược dạ dày ợ chua rát cổ họng nên uống Nexium Mups hay Gaviscon?"
+        },
+        {
+            "icon": "fa-head-side-virus",
+            "title": "Cảm sốt & Đau họng",
+            "query": "Bị cảm sốt và đau rát họng nên uống thuốc gì an toàn?"
+        },
         {
             "icon": "fa-triangle-exclamation",
             "title": "Chống chỉ định Metformin",
-            "query": "Bệnh nhân có chỉ số eGFR là 25 mL/min và HbA1c 8.5%. Có nên tiếp tục dùng Metformin không?"
+            "query": "Người bệnh suy thận nặng có nên tiếp tục uống Metformin không?"
         },
         {
-            "icon": "fa-syringe",
-            "title": "Phác đồ chuyển sang Insulin",
-            "query": "Khi eGFR dưới 30 thì chuyển sang Insulin nền liều lượng như thế nào?"
+            "icon": "fa-bone",
+            "title": "Cơn Gout cấp",
+            "query": "Sưng đau khớp ngón chân cái do cơn gút cấp uống Colchicine thế nào?"
         },
         {
-            "icon": "fa-heart-pulse",
-            "title": "Bảo vệ Tim - Thận (SGLT-2i)",
-            "query": "Bệnh nhân tiểu đường có suy tim thì dùng Dapagliflozin có lợi ích gì?"
+            "icon": "fa-shield-virus",
+            "title": "Dị ứng & Mề đay",
+            "query": "Bị dị ứng thời tiết nổi mề đay mẩn ngứa uống Telfast HD 180mg có an toàn không?"
+        },
+        {
+            "icon": "fa-compass",
+            "title": "Chóng mặt tiền đình",
+            "query": "Hay bị hoa mắt chóng mặt quay cuồng do rối loạn tiền đình nên uống Betaserc thế nào?"
         },
         {
             "icon": "fa-store",
-            "title": "Báo giá Trajenta tại Long Châu",
-            "query": "Thuốc Trajenta 5mg giá bao nhiêu ở Long Châu, suy thận có uống được không?"
-        },
-        {
-            "icon": "fa-prescription-bottle-medical",
-            "title": "Mua Glucophage & Đơn Rx",
-            "query": "Tôi ra Long Châu mua Glucophage 500mg uống được không, có cần đơn bác sĩ không?"
-        },
-        {
-            "icon": "fa-capsules",
-            "title": "Tương tác thuốc huyết áp Amlor",
-            "query": "Bệnh nhân tiểu đường vừa cao huyết áp uống Amlor 5mg chung với thuốc gì?"
+            "title": "Báo giá Dược phẩm Long Châu",
+            "query": "Thuốc Trajenta 5mg và Nexium Mups 20mg giá bao nhiêu ở Long Châu?"
         }
     ]
 
@@ -60,11 +71,13 @@ def index():
 
 @rag_bp.route('/api/rag/chat', methods=['POST'])
 def api_rag_chat():
-    """Endpoint Đàm thoại 2 chiều cho Chatbot Y tế Đa lượt"""
+    """Endpoint Đàm thoại 2 chiều cho Chatbot Y tế Đa lượt (Hỗ trợ Tăng cường Gemini 1.5 Flash)"""
     data = request.get_json(force=True) or {}
     message = str(data.get("message", "")).strip()
     session_id: Optional[str] = data.get("session_id")
     user_params: Optional[dict[str, Any]] = data.get("patient_params")
+    gemini_api_key: Optional[str] = data.get("gemini_api_key")
+    use_llm: bool = data.get("use_llm", True)
 
     if not message:
         return jsonify({"success": False, "error": "Tin nhắn không được để trống."}), 400
@@ -72,9 +85,29 @@ def api_rag_chat():
     res = rag_model.chat_medical(
         message=message,
         session_id=session_id,
-        user_params=user_params
+        user_params=user_params,
+        gemini_api_key=gemini_api_key,
+        use_llm=use_llm
     )
     return jsonify(res)
+
+@rag_bp.route('/api/rag/verify_gemini_key', methods=['POST'])
+def api_rag_verify_key():
+    """Kiểm tra tính hợp lệ của Gemini API Key"""
+    data = request.get_json(force=True) or {}
+    key = str(data.get("key", "")).strip()
+    if not key:
+        return jsonify({"valid": False, "error": "Vui lòng nhập API Key hợp lệ."}), 400
+
+    test_res = rag_model.call_gemini_llm(
+        prompt="Xin chào, hãy trả lời đúng 2 từ: Đã kết nối",
+        system_instruction="Trả lời cực kỳ ngắn gọn.",
+        api_key=key
+    )
+    if test_res:
+        return jsonify({"valid": True, "message": "API Key chính xác! Google Gemini 1.5 Flash đã sẵn sàng hoạt động."})
+    else:
+        return jsonify({"valid": False, "error": "API Key không chính xác hoặc không thể kết nối đến máy chủ Google AI Studio."}), 400
 
 @rag_bp.route('/api/rag/reset_session', methods=['POST'])
 def api_rag_reset_session():
@@ -112,3 +145,4 @@ def api_graph_elements():
     domain = request.args.get("domain", "all")
     elements = rag_model.get_cytoscape_elements(domain=domain)
     return jsonify({"success": True, "elements": elements})
+

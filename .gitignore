@@ -10,3 +10,8 @@ __pycache__/
 # GitHub file size limit is 100 MB (ignore files > 100MB)
 DATA/fashion-mnist_train.csv
 DATA/mnist_train.csv
+
+# Environment variables & secrets
+.env
+*.env
+
