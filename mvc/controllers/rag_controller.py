@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 """
 rag_controller.py
-Tầng Controller (C) trong kiến trúc MVC cho Hệ thống Đồ thị Tri thức (Knowledge Graph)
-và Kỹ thuật Tạo sinh Tăng cường Truy xuất (RAG) theo Chương 5.
+Tầng Controller (C) trong kiến trúc MVC cho Hệ thống Trợ lý Y khoa Thông minh GraphRAG Chatbot.
 """
 
+from typing import Any, Optional
 from flask import Blueprint, render_template, request, jsonify
 from mvc.models.rag_model import RAGModel
 
@@ -13,42 +13,82 @@ rag_model = RAGModel()
 
 @rag_bp.route('/rag')
 def index():
-    """Giao diện Dashboard Đồ thị Tri thức và GraphRAG tương tác"""
-    sample_queries = [
+    """Giao diện Trợ lý Y khoa Thông minh & Đồ thị Tri thức Đàm thoại"""
+    session_id, session_data = rag_model.get_or_create_session()
+    
+    # Gợi ý tình huống lâm sàng khởi tạo
+    quick_prompts = [
         {
-            "domain": "medical",
-            "title": "Chống chỉ định Metformin ở Bệnh nhân Suy thận",
-            "query": "Bệnh nhân tiểu đường có chỉ số eGFR là 25 mL/min và HbA1c 8.5%. Có nên tiếp tục dùng Metformin không?"
+            "icon": "fa-triangle-exclamation",
+            "title": "Chống chỉ định Metformin",
+            "query": "Bệnh nhân có chỉ số eGFR là 25 mL/min và HbA1c 8.5%. Có nên tiếp tục dùng Metformin không?"
         },
         {
-            "domain": "medical",
-            "title": "Mục tiêu Đường huyết & Chỉ định Insulin Khẩn cấp",
-            "query": "Mục tiêu HbA1c là bao nhiêu và khi nào cần khởi trị ngay bằng Insulin tiêm?"
+            "icon": "fa-syringe",
+            "title": "Phác đồ chuyển sang Insulin",
+            "query": "Khi eGFR dưới 30 thì chuyển sang Insulin nền liều lượng như thế nào?"
         },
         {
-            "domain": "financial",
-            "title": "Động lực AWS & Rủi ro Chuỗi cung ứng AI của Amazon",
-            "query": "Động lực tăng trưởng chính của Amazon hiện nay là gì và doanh nghiệp đối mặt với rủi ro chuỗi cung ứng phần cứng nào?"
+            "icon": "fa-heart-pulse",
+            "title": "Bảo vệ Tim - Thận (SGLT-2i)",
+            "query": "Bệnh nhân tiểu đường có suy tim thì dùng Dapagliflozin có lợi ích gì?"
+        },
+        {
+            "icon": "fa-store",
+            "title": "Báo giá Trajenta tại Long Châu",
+            "query": "Thuốc Trajenta 5mg giá bao nhiêu ở Long Châu, suy thận có uống được không?"
+        },
+        {
+            "icon": "fa-prescription-bottle-medical",
+            "title": "Mua Glucophage & Đơn Rx",
+            "query": "Tôi ra Long Châu mua Glucophage 500mg uống được không, có cần đơn bác sĩ không?"
+        },
+        {
+            "icon": "fa-capsules",
+            "title": "Tương tác thuốc huyết áp Amlor",
+            "query": "Bệnh nhân tiểu đường vừa cao huyết áp uống Amlor 5mg chung với thuốc gì?"
         }
     ]
-    
-    # Kết quả khởi tạo mặc định (Medical case)
-    initial_res = rag_model.query_medical(
-        query=sample_queries[0]["query"],
-        patient_id="B23DCCN060",
-        top_k=3
-    )
 
     return render_template(
         'rag.html',
-        sample_queries=sample_queries,
-        initial=initial_res,
+        session_id=session_id,
+        patient_profile=session_data["patient_profile"],
+        quick_prompts=quick_prompts,
         active_tab="rag"
     )
 
+@rag_bp.route('/api/rag/chat', methods=['POST'])
+def api_rag_chat():
+    """Endpoint Đàm thoại 2 chiều cho Chatbot Y tế Đa lượt"""
+    data = request.get_json(force=True) or {}
+    message = str(data.get("message", "")).strip()
+    session_id: Optional[str] = data.get("session_id")
+    user_params: Optional[dict[str, Any]] = data.get("patient_params")
+
+    if not message:
+        return jsonify({"success": False, "error": "Tin nhắn không được để trống."}), 400
+
+    res = rag_model.chat_medical(
+        message=message,
+        session_id=session_id,
+        user_params=user_params
+    )
+    return jsonify(res)
+
+@rag_bp.route('/api/rag/reset_session', methods=['POST'])
+def api_rag_reset_session():
+    """Tạo mới phiên làm việc bệnh án"""
+    session_id, session_data = rag_model.get_or_create_session()
+    return jsonify({
+        "success": True,
+        "session_id": session_id,
+        "patient_profile": session_data["patient_profile"]
+    })
+
 @rag_bp.route('/api/rag/query', methods=['POST'])
 def api_rag_query():
-    """Endpoint RESTful API tiếp nhận truy vấn GraphRAG đa miền (Y tế & Tài chính)"""
+    """Endpoint RESTful API tương thích ngược theo chuẩn Tiểu luận Chương 5"""
     data = request.get_json(force=True) or {}
     domain = data.get("domain", "medical").lower()
     query = data.get("query", "").strip()
