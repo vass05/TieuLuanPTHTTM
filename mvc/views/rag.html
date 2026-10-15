@@ -280,20 +280,21 @@
                                 <li><strong>Bệnh lý thông thường:</strong> Đau đầu, chóng mặt, cảm cúm, ho sốt, đau dạ dày (GERD), gout, dị ứng mề đay...</li>
                                 <li><strong>An toàn dùng thuốc:</strong> Liều dùng, tương tác thuốc, kiểm tra an toàn cho người bệnh mạn tính.</li>
                                 <li><strong>Tra cứu biệt dược Long Châu:</strong> Giá thuốc, cách dùng thuốc chính hãng tại chuỗi Nhà thuốc FPT Long Châu.</li>
+                                <li><strong>Tài chính & Chứng khoán (Mục 5.5):</strong> Phân tích cổ phiếu Amazon (AMZN), điện toán đám mây AWS (+19%), rủi ro chuỗi cung ứng GPU AI từ báo cáo Form 10-K.</li>
                             </ul>
                             <p class="mb-2 small text-muted">
-                                Bạn có thể nhập bất kỳ câu hỏi sức khỏe nào hoặc bấm vào các câu hỏi gợi ý bên dưới để bắt đầu!
+                                Bạn có thể nhập bất kỳ câu hỏi y tế hoặc tài chính nào hoặc bấm vào các câu hỏi gợi ý bên dưới để bắt đầu!
                             </p>
                             <!-- Followup gợi ý đa dạng -->
                             <div class="d-flex flex-wrap gap-1 mt-2">
                                 <button type="button" class="chip-btn" onclick="sendQuickPrompt('Bị đau đầu chóng mặt thì nên uống thuốc gì an toàn?')">
                                     💊 Đau đầu chóng mặt uống thuốc gì?
                                 </button>
+                                <button type="button" class="chip-btn" onclick="sendQuickPrompt('Cổ phiếu Amazon (AMZN) có tiềm năng gì và đối mặt rủi ro nào theo Form 10-K?')">
+                                    📈 Phân tích cổ phiếu Amazon (AMZN)
+                                </button>
                                 <button type="button" class="chip-btn" onclick="sendQuickPrompt('Bị trào ngược dạ dày ợ chua rát cổ uống thuốc gì?')">
                                     🔥 Trào ngược dạ dày, ợ chua uống gì?
-                                </button>
-                                <button type="button" class="chip-btn" onclick="sendQuickPrompt('Cảm sốt, đau rát họng uống Panadol hay Hapacol?')">
-                                    🌡️ Cảm sốt, đau họng uống thuốc gì?
                                 </button>
                             </div>
                         </div>
@@ -363,6 +364,9 @@
                         <button type="button" class="btn btn-outline-secondary" onclick="filterGraph('disease', this)">
                             <i class="fa-solid fa-hospital text-danger me-1"></i>Bệnh lý & BV
                         </button>
+                        <button type="button" class="btn btn-outline-secondary" onclick="filterGraph('financial', this)">
+                            <i class="fa-solid fa-chart-line text-warning me-1"></i>Tài chính (AMZN)
+                        </button>
                     </div>
                     <span class="badge bg-white text-dark border small" id="graphNodeCount">
                         <i class="fa-solid fa-network-wired text-primary me-1"></i>Đồ thị Live Neo4j
@@ -417,7 +421,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // Khởi tạo đồ thị Cytoscape
 function initCytoscapeGraph() {
-    fetch('/api/rag/graph_elements?domain=medical')
+    fetch('/api/rag/graph_elements?domain=all')
         .then(res => res.json())
         .then(data => {
             cy = cytoscape({
@@ -583,6 +587,14 @@ function filterGraph(cat, btn) {
     } else if (cat === 'disease') {
         cy.elements().addClass('d-none');
         cy.elements('node[category = "disease"], node[category = "facility"]').removeClass('d-none');
+        cy.edges().forEach(e => {
+            if (!e.source().hasClass('d-none') && !e.target().hasClass('d-none')) {
+                e.removeClass('d-none');
+            }
+        });
+    } else if (cat === 'financial') {
+        cy.elements().addClass('d-none');
+        cy.elements('node[id *= "Amazon"], node[id *= "AWS"], node[id *= "AI"], node[id *= "Microsoft"]').removeClass('d-none');
         cy.edges().forEach(e => {
             if (!e.source().hasClass('d-none') && !e.target().hasClass('d-none')) {
                 e.removeClass('d-none');

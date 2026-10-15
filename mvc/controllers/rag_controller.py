@@ -58,6 +58,11 @@ def index():
             "icon": "fa-store",
             "title": "Báo giá Dược phẩm Long Châu",
             "query": "Thuốc Trajenta 5mg và Nexium Mups 20mg giá bao nhiêu ở Long Châu?"
+        },
+        {
+            "icon": "fa-chart-line",
+            "title": "Cổ phiếu AMZN (Mục 5.5)",
+            "query": "Cổ phiếu Amazon (AMZN) có động lực tăng trưởng gì và đối mặt rủi ro nào theo Form 10-K?"
         }
     ]
 

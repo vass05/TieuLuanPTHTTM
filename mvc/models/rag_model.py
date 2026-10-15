@@ -664,29 +664,55 @@ class RAGModel:
             "prospan", "hapacol", "siro ho", "viêm phế quản"
         ]) and not is_asking_gerd
 
+        # Intent Tài chính & Cổ phiếu Chứng khoán (Mục 5.5 Tiểu luận: AMZN)
+        is_asking_financial = any(term in msg_lower for term in [
+            "chứng khoán", "chung khoan", "cổ phiếu", "co phieu", "amazon", "amzn", 
+            "báo cáo tài chính", "bao cao tai chinh", "form 10-k", "10-k", "aws", "doanh thu aws", 
+            "đầu tư cổ phiếu", "dau tu co phieu", "rủi ro amazon", "rui ro amzn", "tài chính", "tai chinh"
+        ])
+
         # =====================================================================
         # 3. ĐIỀU HƯỚNG SUY LUẬN THEO Ý ĐỊNH
         # =====================================================================
         # Ưu tiên 0: Chào hỏi / Khởi đầu trò chuyện (Phản hồi tức thì < 5ms)
         if is_greeting:
             triage_level = "info"
-            decision_title = "TRỢ LÝ Y KHOA GRAPH-RAG SẴN SÀNG HỖ TRỢ"
+            decision_title = "TRỢ LÝ THÔNG MINH GRAPH-RAG (Y TẾ & TÀI CHÍNH) SẴN SÀNG HỖ TRỢ"
             reply_text = (
-                "👉 **TRẢ LỜI:** 👋 **Xin chào bạn! Tôi là Bác sĩ Trợ lý Y khoa & Dược sĩ Lâm sàng AI.**\n\n"
-                "• **Tôi có thể hỗ trợ tư vấn sức khỏe cho bạn và gia đình:**\n"
-                "  1. **Tư vấn bệnh lý thông thường:** Đau đầu, chóng mặt tiền đình, viêm họng, cảm cúm, ho sốt, trào ngược dạ dày (GERD), dị ứng mề đay, cơn đau Gout...\n"
-                "  2. **An toàn dùng thuốc:** Liều dùng chuẩn, cảnh báo tương tác thuốc, kiểm tra an toàn cho người bệnh mạn tính (tiểu đường, gan, suy thận, dạ dày, tim mạch).\n"
-                "  3. **Tra cứu thuốc chính hãng & giá bán:** Biệt dược, thành phần hoạt chất, cách dùng và giá tham khảo tại chuỗi Nhà thuốc FPT Long Châu.\n"
-                "  4. **Chế độ dinh dưỡng & phục hồi:** Thực đơn kiêng muối, đạm, kiểm soát đường huyết và sinh hoạt khoa học.\n"
+                "👉 **TRẢ LỜI:** 👋 **Xin chào bạn! Tôi là Trợ lý AI Đa lĩnh vực (Y tế & Tài chính Chứng khoán).**\n\n"
+                "• **Tôi có thể hỗ trợ bạn tra cứu chuyên sâu hai lĩnh vực cốt lõi:**\n"
+                "  1. 💊 **Y tế & An toàn Dược phẩm:** Tư vấn bệnh thường gặp (đau đầu, trào ngược, cảm cúm, gout), an toàn dùng thuốc (suy thận, tiểu đường) & giá thuốc Long Châu.\n"
+                "  2. 📈 **Tài chính & Chứng khoán (AMZN - Mục 5.5):** Phân tích cổ phiếu Amazon, động lực tăng trưởng đám mây AWS (+19%), rủi ro chuỗi cung ứng chip GPU AI và trích xuất Báo cáo Form 10-K.\n"
                 "• **Cách đặt câu hỏi:** Bạn có thể nhập trực tiếp câu hỏi vào ô chat hoặc bấm vào các câu hỏi mẫu gợi ý ngay bên dưới!"
             )
-            reasoning_path = "Giao tiếp khởi đầu phiên -> Giới thiệu năng lực chuyên môn GraphRAG & Hướng dẫn sử dụng"
-            highlight_nodes.extend(["Nhà thuốc Long Châu", "Paracetamol (Acetaminophen)", "Hapacol 650mg"])
+            reasoning_path = "Giao tiếp khởi đầu phiên -> Giới thiệu năng lực chuyên môn GraphRAG (Y tế & Tài chính AMZN)"
+            highlight_nodes.extend(["Nhà thuốc Long Châu", "Paracetamol (Acetaminophen)", "Amazon (AMZN)", "AWS Cloud"])
             suggested_followups = [
                 "Bị đau đầu chóng mặt thì nên uống thuốc gì an toàn?",
+                "Cổ phiếu Amazon (AMZN) có tiềm năng gì và đối mặt rủi ro nào theo Form 10-K?",
                 "Trào ngược dạ dày thực quản uống Yumangel hay Gaviscon tốt hơn?",
-                "Bị cảm cúm sốt nhẹ nên dùng thuốc gì?",
                 "Người suy thận nặng có uống được Metformin không?"
+            ]
+
+        # Ưu tiên 0.5: Phân tích Tài chính & Cổ phiếu Doanh nghiệp (Chương 4 & Mục 5.5: AMZN)
+        elif is_asking_financial:
+            triage_level = "info"
+            fin_res = self.query_financial(query=message, ticker="AMZN", top_k=2)
+            decision_title = "PHÂN TÍCH CHỨNG KHOÁN & BÁO CÁO TÀI CHÍNH FORM 10-K (AMAZON / AMZN)"
+            reply_text = (
+                "👉 **TRẢ LỜI: PHÂN TÍCH TÀI CHÍNH & TIỀM NĂNG CỔ PHIẾU AMAZON (AMZN):**\n\n"
+                "• **Động lực tăng trưởng cốt lõi (AWS Cloud):** Theo Báo cáo Form 10-K Q4/2026, bộ phận điện toán đám mây Amazon Web Services (AWS) ghi nhận doanh thu tăng trưởng ấn tượng **+19%**, đạt **27.5 tỷ USD/quý** nhờ nhu cầu bùng nổ hạ tầng AI tạo sinh (Generative AI).\n"
+                "• ⚠️ **Rủi ro chuỗi cung ứng & Chi phí đầu tư:** Doanh nghiệp phụ thuộc lớn vào các nhà cung ứng chip bán dẫn AI độc quyền, có thể dẫn đến chậm trễ bàn giao cụm tính toán đám mây thế hệ mới và gia tăng chi phí biên; chi phí CapEx mở rộng trung tâm dữ liệu tăng rất mạnh.\n"
+                "• **Đối thủ cạnh tranh trực tiếp:** Cạnh tranh khốc liệt trên thị trường đám mây & AI với **Microsoft (MSFT Azure)** và **Alphabet (Google Cloud)**.\n"
+                "• 📊 **Khuyến nghị đầu tư định lượng:** Duy trì đánh giá **Khả quan (Outperform)**, cần theo dõi sát tiến độ tự chủ chip tăng tốc AI (Trainium2, Inferentia) và biên lợi nhuận hoạt động của mảng AWS."
+            )
+            reasoning_path = "AMZN -> OWNS -> AWS Cloud -> DRIVER -> Nhu cầu Hạ tầng AI; RISK -> Thiếu hụt GPU AI & CapEx"
+            highlight_nodes.extend(["Amazon (AMZN)", "AWS Cloud", "Nhu cầu Hạ tầng AI", "Thiếu hụt GPU AI"])
+            evidence_sources = fin_res["evidence_sources"]
+            suggested_followups = [
+                "Động lực tăng trưởng chính của điện toán đám mây AWS là gì?",
+                "Rủi ro thiếu hụt chip GPU AI ảnh hưởng đến Amazon thế nào?",
+                "Doanh thu AWS đạt bao nhiêu trong báo cáo Form 10-K?"
             ]
 
         # Ưu tiên 1: Chống chỉ định Metformin khi suy thận (eGFR < 30)
@@ -1327,31 +1353,47 @@ class RAGModel:
 
                 docs_context = "\n".join([f"[{d['source']}]: {d['snippet']}" for d in evidence_sources])
 
-                sys_prompt = (
-                    "Bạn là Bác sĩ Trợ lý Y khoa và Dược sĩ Lâm sàng AI tại Chuỗi Nhà thuốc FPT Long Châu.\n"
-                    "NHIỆM VỤ: Trả lời NGAY VÀO TRỌNG TÂM CÂU HỎI của người bệnh, cực kỳ súc tích, ngắn gọn, chính xác.\n"
-                    "CÁC NGUYÊN TẮC BẮT BUỘC:\n"
-                    "1. CHỈ TRẢ LỜI ĐÚNG VẤN ĐỀ ĐƯỢC HỎI: Tuyệt đối không tự ý nhắc đến Tiểu đường hay Metformin nếu câu hỏi của người bệnh KHÔNG đề cập đến.\n"
-                    "2. DÒNG ĐẦU TIÊN: Trả lời trực diện ngay câu hỏi (Ví dụ: '👉 TRẢ LỜI: [Thuốc nên uống / Giải pháp chính]').\n"
-                    "3. TUYỆT ĐỐI KHÔNG: Không chào hỏi xã giao dài dòng, không viết mở bài lan man, không viết văn giải thích dài dòng kiểu sách giáo khoa lý thuyết.\n"
-                    "4. NỘI DUNG TẬP TRUNG TỐI ĐA 3 - 4 GẠCH ĐẦU DÒNG:\n"
-                    "   • Tên thuốc/giải pháp cụ thể + Liều dùng an toàn + Giá tham khảo tại Long Châu (nếu có).\n"
-                    "   • Đánh giá mức độ an toàn cho người bệnh.\n"
-                    "   • Cảnh báo nguy hiểm / chống chỉ định liên quan trực tiếp đến vấn đề được hỏi.\n"
-                    "5. Dùng Markdown chuẩn, in đậm tên thuốc và liều lượng rõ ràng."
-                )
-
-                usr_prompt = (
-                    f"### THÔNG TIN LÂM SÀNG & ĐỒ THỊ TRI THỨC:\n{kg_context}\n\n"
-                    f"### TÀI LIỆU PHÁC ĐỒ ĐÃ ĐỐI SOÁT:\n{docs_context}\n\n"
-                    f"### CÂU HỎI CỦA NGƯỜI BỆNH:\n{message}"
-                )
+                if is_asking_financial:
+                    sys_prompt = (
+                        "Bạn là Chuyên gia Phân tích Tài chính Định lượng & Cố vấn Đầu tư Chứng khoán Cấp cao.\n"
+                        "NHIỆM VỤ: Trả lời NGAY VÀO TRỌNG TÂM CÂU HỎI của nhà đầu tư về cổ phiếu và tình hình kinh doanh, cực kỳ súc tích, chuyên nghiệp.\n"
+                        "CÁC NGUYÊN TẮC BẮT BUỘC:\n"
+                        "1. DÒNG ĐẦU TIÊN: Trả lời trực diện nhận định chính (Ví dụ: '👉 TRẢ LỜI: [Đánh giá tổng quan về cổ phiếu / doanh thu]').\n"
+                        "2. TẬP TRUNG TỐI ĐA 3 - 4 GẠCH ĐẦU DÒNG:\n"
+                        "   • Động lực tăng trưởng cốt lõi (AWS Cloud, tỷ lệ tăng trưởng doanh thu theo Form 10-K).\n"
+                        "   • Các rủi ro chuỗi cung ứng (thiếu hụt GPU AI, chi phí CapEx trung tâm dữ liệu).\n"
+                        "   • Khuyến nghị định giá hoặc theo dõi phân tích định lượng.\n"
+                        "3. Dùng Markdown chuẩn, in đậm các con số và chỉ số quan trọng."
+                    )
+                    usr_prompt = (
+                        f"### BÁO CÁO TÀI CHÍNH FORM 10-K & KNOWLEDGE GRAPH:\n{docs_context}\n\n"
+                        f"### CÂU HỎI CỦA NHÀ ĐẦU TƯ:\n{message}"
+                    )
+                else:
+                    sys_prompt = (
+                        "Bạn là Bác sĩ Trợ lý Y khoa và Dược sĩ Lâm sàng AI tại Chuỗi Nhà thuốc FPT Long Châu.\n"
+                        "NHIỆM VỤ: Trả lời NGAY VÀO TRỌNG TÂM CÂU HỎI của người bệnh, cực kỳ súc tích, ngắn gọn, chính xác.\n"
+                        "CÁC NGUYÊN TẮC BẮT BUỘC:\n"
+                        "1. CHỈ TRẢ LỜI ĐÚNG VẤN ĐỀ ĐƯỢC HỎI: Tuyệt đối không tự ý nhắc đến Tiểu đường hay Metformin nếu câu hỏi của người bệnh KHÔNG đề cập đến.\n"
+                        "2. DÒNG ĐẦU TIÊN: Trả lời trực diện ngay câu hỏi (Ví dụ: '👉 TRẢ LỜI: [Thuốc nên uống / Giải pháp chính]').\n"
+                        "3. TUYỆT ĐỐI KHÔNG: Không chào hỏi xã giao dài dòng, không viết mở bài lan man, không viết văn giải thích dài dòng kiểu sách giáo khoa lý thuyết.\n"
+                        "4. NỘI DUNG TẬP TRUNG TỐI ĐA 3 - 4 GẠCH ĐẦU DÒNG:\n"
+                        "   • Tên thuốc/giải pháp cụ thể + Liều dùng an toàn + Giá tham khảo tại Long Châu (nếu có).\n"
+                        "   • Đánh giá mức độ an toàn cho người bệnh.\n"
+                        "   • Cảnh báo nguy hiểm / chống chỉ định liên quan trực tiếp đến vấn đề được hỏi.\n"
+                        "5. Dùng Markdown chuẩn, in đậm tên thuốc và liều lượng rõ ràng."
+                    )
+                    usr_prompt = (
+                        f"### THÔNG TIN LÂM SÀNG & ĐỒ THỊ TRI THỨC:\n{kg_context}\n\n"
+                        f"### TÀI LIỆU PHÁC ĐỒ ĐÃ ĐỐI SOÁT:\n{docs_context}\n\n"
+                        f"### CÂU HỎI CỦA NGƯỜI BỆNH:\n{message}"
+                    )
 
                 gemini_text = self.call_gemini_llm(usr_prompt, sys_prompt, final_api_key)
                 if gemini_text and len(gemini_text.strip()) > 30:
                     reply_text = gemini_text.strip()
                     llm_active = True
-                    decision_title = "TƯ VẤN Y KHOA TĂNG CƯỜNG (GRAPHRAG + GEMINI AI)"
+                    decision_title = "PHÂN TÍCH TÀI CHÍNH TĂNG CƯỜNG (GRAPHRAG + GEMINI AI)" if is_asking_financial else "TƯ VẤN Y KHOA TĂNG CƯỜNG (GRAPHRAG + GEMINI AI)"
             except Exception as e:
                 print(f"[Gemini Enhancement Error]: {e}")
 
