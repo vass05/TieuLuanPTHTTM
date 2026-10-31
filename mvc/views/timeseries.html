@@ -15,9 +15,9 @@
                         <i class="fa-solid fa-bolt"></i>
                     </span>
                     <select id="sourceSelect" class="form-select form-select-custom border-start-0 ps-0">
-                        <option value="dataset" selected>Thời gian thực (Tập dữ liệu tối ưu)</option>
-                        <option value="amzn_csv">Tệp AMZN.csv (5,842 phiên)</option>
-                        <option value="aep_csv">Tệp AEP_hourly.csv (121k giờ)</option>
+                        <option value="live" {% if source == 'live' %}selected{% endif %}>Giá đóng cửa mới nhất (Yahoo Finance)</option>
+                        <option value="amzn_csv" {% if source == 'amzn_csv' %}selected{% endif %}>Tệp AMZN.csv (dữ liệu lịch sử)</option>
+                        <option value="aep_csv" {% if source == 'aep_csv' %}selected{% endif %}>Tệp AEP_hourly.csv (phụ tải điện)</option>
                     </select>
                 </div>
             </div>
@@ -49,6 +49,8 @@
                 </button>
             </div>
         </form>
+        <p class="small text-muted mt-3 mb-0">Nguồn trực tuyến dùng phiên AMZN đã đóng cửa, có thể có độ trễ từ nhà cung cấp. Các tệp CSV là dữ liệu lịch sử.</p>
+        <div id="forecastError" class="alert alert-warning mt-3 mb-0" role="alert" hidden></div>
     </div>
 
     <!-- 2. BỐN THẺ KPI THỐNG KÊ (Stat Cards) -->
@@ -113,11 +115,12 @@
             <h5 class="fw-bold mb-0 text-dark" id="chartCardTitle">
                 Diễn Biến Giá & Dự Báo (<span id="titleSymbol">{{ symbol }}</span>)
             </h5>
-            <span class="live-badge">
-                <span class="live-dot"></span>
-                <span>Trực tuyến (Tập dữ liệu tối ưu)</span>
+            <span class="{{ 'live-badge' if hist.is_live else 'badge bg-light text-secondary border' }}" id="dataSourceBadge">
+                <span class="live-dot" id="dataSourceDot" {% if not hist.is_live %}hidden{% endif %}></span>
+                <span id="dataSourceLabel">{{ hist.source_label }}</span>
             </span>
         </div>
+        <p class="small text-muted" id="dataAsOf">Dữ liệu đến phiên {{ hist.last_date }}{% if hist.fetched_at %} · Lấy lúc {{ hist.fetched_at }}{% endif %}</p>
 
         <!-- Vùng vẽ Chart.js -->
         <div style="position: relative; height: 420px; width: 100%;">

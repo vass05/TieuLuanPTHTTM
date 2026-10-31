@@ -4,6 +4,7 @@ import socket
 import subprocess
 import time
 import uuid
+from datetime import datetime,timedelta,timezone
 
 from check_agents_browser import Browser, CHROME, HTTP, OUT, ROOT, EXCEPTIONS
 
@@ -39,16 +40,29 @@ def main():
         browser.call('Network.setBlockedURLs',{'urls':['https://cdn.jsdelivr.net/npm/bootstrap@*/dist/js/*']})
         response=HTTP.get('http://127.0.0.1:5000/timeseries',timeout=20)
         check('timeseries_returns_200',response.status_code==200)
+        live=HTTP.post('http://127.0.0.1:5000/api/timeseries/forecast',json={'source':'live','steps':7},timeout=20).json()
+        check('live_api_has_recent_market_data',live['hist']['is_live'] and live['hist']['last_date']>=(datetime.now(timezone.utc)-timedelta(days=10)).strftime('%Y-%m-%d'))
         browser.call('Page.navigate',{'url':'http://127.0.0.1:5000/timeseries'})
         browser.wait("typeof Chart!=='undefined' && Boolean(Chart.getChart('stockChart'))",seconds=45)
         check('real_chart_renders',browser.js("Chart.getChart('stockChart').data.datasets.length===2"))
         check('initial_table_has_seven_predictions',browser.js("document.querySelectorAll('#forecastTableBody tr').length===7"))
-        check('chart_has_saved_model_prediction',browser.js("Chart.getChart('stockChart').data.datasets[1].data.includes(134.53)"))
+        check('chart_has_saved_model_prediction',browser.js("Chart.getChart('stockChart').data.datasets[1].data.includes("+json.dumps(live['forecast']['forecast_prices'][0])+")"))
+        check('live_source_and_as_of_date_are_visible',browser.js("document.getElementById('sourceSelect').value==='live' && document.getElementById('dataSourceLabel').textContent.includes('Yahoo Finance') && document.getElementById('dataAsOf').textContent.includes("+json.dumps(live['hist']['last_date'])+")"))
         browser.js("Chart.getChart('stockChart').stop();Chart.getChart('stockChart').update('none')")
         browser.screenshot('timeseries_fixed.png')
         browser.js("document.getElementById('stepsSelect').value='14';document.getElementById('forecastForm').dispatchEvent(new Event('submit',{cancelable:true,bubbles:true}))")
         browser.wait("document.querySelectorAll('#forecastTableBody tr').length===14 && !document.getElementById('btnSubmit').disabled")
         check('ajax_updates_to_fourteen_predictions',browser.js("Chart.getChart('stockChart').data.labels.length===74"))
+        browser.js("document.getElementById('sourceSelect').value='amzn_csv';document.getElementById('sourceSelect').dispatchEvent(new Event('change'));document.getElementById('forecastForm').dispatchEvent(new Event('submit',{cancelable:true,bubbles:true}))")
+        browser.wait("!document.getElementById('btnSubmit').disabled && document.getElementById('dataSourceLabel').textContent.includes('AMZN.csv')")
+        check('explicit_csv_selection_is_labelled_historical',browser.js("document.getElementById('kpiLastDate').textContent.includes('2023-12-05') && document.getElementById('dataSourceDot').hidden && !document.getElementById('dataSourceLabel').textContent.includes('Yahoo')"))
+        browser.js("document.getElementById('sourceSelect').value='live';document.getElementById('sourceSelect').dispatchEvent(new Event('change'));document.getElementById('forecastForm').dispatchEvent(new Event('submit',{cancelable:true,bubbles:true}))")
+        browser.wait("!document.getElementById('btnSubmit').disabled && document.getElementById('dataSourceLabel').textContent.includes('Yahoo Finance')")
+        check('switching_back_to_live_restores_latest_date',browser.js("document.getElementById('kpiLastDate').textContent.includes("+json.dumps(live['hist']['last_date'])+") && !document.getElementById('dataSourceDot').hidden"))
+        browser.js("window.originalForecastFetch=window.fetch;window.fetch=async()=>new Response(JSON.stringify({success:false,error:'Nguồn thị trường chưa sẵn sàng'}),{status:503,headers:{'Content-Type':'application/json'}});document.getElementById('forecastForm').dispatchEvent(new Event('submit',{cancelable:true,bubbles:true}))")
+        browser.wait("!document.getElementById('btnSubmit').disabled && !document.getElementById('forecastError').hidden")
+        check('provider_error_is_visible_without_csv_substitution',browser.js("document.getElementById('forecastError').textContent.includes('chưa sẵn sàng') && document.getElementById('kpiLastDate').textContent.includes("+json.dumps(live['hist']['last_date'])+")"))
+        browser.js("window.fetch=window.originalForecastFetch")
         check('desktop_has_no_horizontal_overflow',browser.js("document.documentElement.scrollWidth<=innerWidth"))
         browser.call('Emulation.setDeviceMetricsOverride',dict(width=390,height=844,deviceScaleFactor=1,mobile=True))
         check('mobile_has_no_horizontal_overflow',browser.js("document.documentElement.scrollWidth<=innerWidth"))

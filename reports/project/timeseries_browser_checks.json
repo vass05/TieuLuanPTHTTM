@@ -1,14 +1,19 @@
 {
   "checks": [
     "timeseries_returns_200",
+    "live_api_has_recent_market_data",
     "real_chart_renders",
     "initial_table_has_seven_predictions",
     "chart_has_saved_model_prediction",
+    "live_source_and_as_of_date_are_visible",
     "ajax_updates_to_fourteen_predictions",
+    "explicit_csv_selection_is_labelled_historical",
+    "switching_back_to_live_restores_latest_date",
+    "provider_error_is_visible_without_csv_substitution",
     "desktop_has_no_horizontal_overflow",
     "mobile_has_no_horizontal_overflow",
     "no_browser_javascript_exceptions"
   ],
-  "passed": 8,
+  "passed": 13,
   "exceptions": []
 }

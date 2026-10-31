@@ -78,7 +78,7 @@ def client(monkeypatch,model):
 
 
 def test_timeseries_page_renders_the_forecast_instead_of_503(client):
-    response=client.get('/timeseries')
+    response=client.get('/timeseries?source=amzn_csv')
     assert response.status_code==200
     assert b'id="stockChart"' in response.data
     assert b'const initialForecastPrices =' in response.data
@@ -87,7 +87,7 @@ def test_timeseries_page_renders_the_forecast_instead_of_503(client):
 
 @pytest.mark.parametrize('steps',[1,7,14,30])
 def test_forecast_api_returns_real_multistep_predictions(client,model,steps):
-    response=client.post('/api/timeseries/forecast',json={'symbol':'AMZN','steps':steps})
+    response=client.post('/api/timeseries/forecast',json={'symbol':'AMZN','steps':steps,'source':'amzn_csv'})
     assert response.status_code==200
     data=response.get_json()
     assert data['success']

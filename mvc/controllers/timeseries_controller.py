@@ -7,19 +7,60 @@ Xử lý các HTTP Request, kết nối với TimeSeriesModel và trả về d�
 
 from flask import Blueprint, render_template, request, jsonify, redirect, url_for
 from mvc.models.timeseries_model import TimeSeriesModel
+from mvc.models.market_data import MarketData, MarketDataUnavailable
+from werkzeug.exceptions import BadRequest
 
 timeseries_bp = Blueprint('timeseries', __name__, template_folder='../views')
 ts_model = TimeSeriesModel()
+market_data = MarketData(ts_model.workspace_dir)
+
+
+@timeseries_bp.errorhandler(BadRequest)
+def bad_request(error):
+    if request.path.startswith('/api/'):
+        return jsonify(success=False,error=error.description),400
+    return error.get_response()
+
+
+def forecast_options(values):
+    symbol=values.get('symbol','AMZN')
+    source=values.get('source','live')
+    if source=='dataset':source='live'  # Old clients called this option "real time".
+    try:
+        steps=int(values.get('steps',7))
+    except (ValueError,TypeError):
+        raise BadRequest('Số bước dự báo phải là số nguyên từ 1 đến 30.')
+    raw_steps=values.get('steps',7)
+    if isinstance(raw_steps,bool) or (isinstance(raw_steps,float) and raw_steps!=steps):
+        raise BadRequest('Số bước dự báo phải là số nguyên từ 1 đến 30.')
+    if not isinstance(symbol,str) or symbol.upper() not in ('AMZN','AEP'):
+        raise BadRequest('Mã dữ liệu không hợp lệ.')
+    symbol=symbol.upper()
+    if source not in ('live','amzn_csv','aep_csv') or not 1<=steps<=30:
+        raise BadRequest('Nguồn dữ liệu hoặc số bước dự báo không hợp lệ.')
+    if (source in ('live','amzn_csv') and symbol!='AMZN') or (source=='aep_csv' and symbol!='AEP'):
+        raise BadRequest('Nguồn trực tuyến và AMZN.csv dùng AMZN; AEP_hourly.csv dùng mã AEP.')
+    return symbol,steps,source
+
+
+def history_for_source(symbol,source):
+    if source=='live':
+        return market_data.history(symbol=symbol,limit=60)
+    hist=ts_model.get_historical_data(symbol=symbol,limit=60)
+    hist.update(source=source,is_live=False,source_label=('Tệp AMZN.csv · Dữ liệu lịch sử' if source=='amzn_csv'
+        else 'Tệp AEP_hourly.csv · Phụ tải điện lịch sử'),source_url=None,fetched_at=None)
+    return hist
 
 @timeseries_bp.route('/timeseries')
 def index():
     """Trang chủ hiển thị Bảng điều khiển dự báo giá cổ phiếu (Giao diện chuẩn tham khảo)"""
-    symbol = request.args.get('symbol', 'AMZN')
-    steps = int(request.args.get('steps', 7))
-    source = request.args.get('source', 'dataset')
+    symbol,steps,source = forecast_options(request.args)
     
     # Lấy dữ liệu lịch sử và thực hiện dự báo ban đầu
-    hist_data = ts_model.get_historical_data(symbol=symbol, limit=60)
+    try:
+        hist_data = history_for_source(symbol,source)
+    except MarketDataUnavailable as error:
+        return render_template('timeseries_unavailable.html',message=str(error),active_tab='market'),503
     forecast_data = ts_model.predict_future(
         history_prices=hist_data['prices'],
         steps=steps,
@@ -45,11 +86,10 @@ def custom_view():
 def api_forecast():
     """Endpoint API AJAX cho giao diện cập nhật biểu đồ không cần load lại trang"""
     data = request.get_json(force=True) or {}
-    symbol = data.get('symbol', 'AMZN')
-    steps = int(data.get('steps', 7))
-    source = data.get('source', 'dataset')
+    if not isinstance(data,dict):raise BadRequest('Dữ liệu yêu cầu phải là một đối tượng JSON.')
+    symbol,steps,source = forecast_options(data)
     
-    hist_data = ts_model.get_historical_data(symbol=symbol, limit=60)
+    hist_data = history_for_source(symbol,source)
     forecast_data = ts_model.predict_future(
         history_prices=hist_data['prices'],
         steps=steps,

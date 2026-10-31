@@ -123,6 +123,15 @@ document.addEventListener("DOMContentLoaded", function () {
     // Xử lý gửi biểu mẫu AJAX
     const form = document.getElementById("forecastForm");
     const btnSubmit = document.getElementById("btnSubmit");
+    const sourceSelect = document.getElementById("sourceSelect");
+    const symbolSelect = document.getElementById("symbolSelect");
+    function syncSource(){
+        const symbol=sourceSelect.value==='aep_csv'?'AEP':'AMZN';
+        symbolSelect.value=symbol;
+        [...symbolSelect.options].forEach(option=>{option.disabled=option.value!==symbol;});
+    }
+    sourceSelect.addEventListener('change',syncSource);
+    syncSource();
 
     form.addEventListener("submit", async function (e) {
         e.preventDefault();
@@ -133,6 +142,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Trạng thái Loading
         btnSubmit.disabled = true;
+        document.getElementById('forecastError').hidden=true;
         btnSubmit.innerHTML = `<span class="spinner-border spinner-border-sm me-2"></span> Đang tính toán...`;
 
         try {
@@ -142,6 +152,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 body: JSON.stringify({ symbol, steps, source })
             });
             const res = await resp.json();
+            if(!resp.ok || !res.success)throw new Error(res.error || 'Chưa lấy được dữ liệu dự báo.');
 
             if (res.success) {
                 const hist = res.hist;
@@ -175,6 +186,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 // 2. Cập nhật tiêu đề Card
                 document.getElementById("titleSymbol").textContent = symbol;
+                document.getElementById('dataSourceLabel').textContent=hist.source_label;
+                document.getElementById('dataSourceBadge').className=hist.is_live?'live-badge':'badge bg-light text-secondary border';
+                document.getElementById('dataSourceDot').hidden=!hist.is_live;
+                document.getElementById('dataAsOf').textContent='Dữ liệu đến phiên '+hist.last_date+
+                    (hist.fetched_at?' · Lấy lúc '+hist.fetched_at:'');
 
                 // 3. Cập nhật biểu đồ
                 const newChartData = buildChartData(hist.dates, hist.prices, fc.forecast_dates, fc.forecast_prices, symbol, hist.unit);
@@ -216,7 +232,8 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         } catch (err) {
             console.error("Lỗi dự báo:", err);
-            alert("Đã xảy ra lỗi trong quá trình dự báo: " + err.message);
+            const error=document.getElementById('forecastError');
+            error.textContent=err.message;error.hidden=false;
         } finally {
             btnSubmit.disabled = false;
             btnSubmit.innerHTML = `<i class="fa-solid fa-bolt"></i> <span>Thực Hiện Dự Báo</span>`;

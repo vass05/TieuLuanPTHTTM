@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %}Chưa tải được dữ liệu thị trường{% endblock %}
+{% block content %}
+<div class="container"><div class="custom-card p-4 mx-auto" style="max-width:800px">
+    <h2>Chưa tải được dữ liệu thị trường</h2>
+    <p>{{ message }}</p>
+    <a class="btn btn-primary-custom" href="{{ url_for('timeseries.index') }}">Thử tải lại</a>
+    <a class="btn btn-outline-primary" href="{{ url_for('timeseries.index',source='amzn_csv',symbol='AMZN') }}">Xem AMZN.csv (dữ liệu lịch sử)</a>
+</div></div>
+{% endblock %}

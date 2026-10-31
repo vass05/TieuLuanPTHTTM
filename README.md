@@ -212,6 +212,15 @@ Các trang cũ `/housing`, `/vision`, `/timeseries`, `/rag` và API cũ được
 Trang `/timeseries` nạp trực tiếp `model/amzn_lstm_model.keras` và
 `model/time_series_scaler.pkl`. Keras tự chọn PyTorch nếu không có TensorFlow;
 `requirements.txt` đã bao gồm Keras và h5py. Không huấn luyện lại hoặc đổi trọng số.
+Nguồn mặc định lấy **giá đóng cửa AMZN của phiên hoàn tất gần nhất từ Yahoo Finance**,
+qua [yfinance](https://ranaroussi.github.io/yfinance/reference/api/yfinance.Ticker.history.html),
+không cần API key. Đây là dữ liệu theo phiên, có thể trễ từ nhà cung cấp, không phải giá khớp lệnh trực tiếp.
+Server giữ bộ nhớ đệm tối đa 5 phút; giao diện ghi nguồn, ngày phiên và thời điểm lấy dữ liệu.
+Chỉ dùng phiên đã đóng cửa theo lịch sàn, dự báo bỏ cuối tuần và ngày nghỉ giao dịch.
+Không lấy được đúng phiên gần nhất thì trang/API trả 503 và cho phép chọn CSV rõ ràng;
+không thay ngầm bằng CSV năm 2023. `source=dataset` của client cũ cũng chuyển sang nguồn trực tuyến.
+Chọn `source=amzn_csv` để đối chiếu dữ liệu lịch sử; `source=aep_csv&symbol=AEP`
+là bộ phụ tải điện ngoại tuyến, không phải giá cổ phiếu AEP trực tuyến.
 Nếu đã mở server trước khi cập nhật, dừng server và chạy lại `python app.py` sau khi
 cài `python -m pip install -r requirements.txt`. Backend cấu hình rõ qua
 `KERAS_BACKEND` sẽ được giữ nguyên. Chi tiết: [cấu hình backend Keras](https://keras.io/getting_started/).
@@ -224,7 +233,7 @@ thích lúc nạp; chúng không tham gia luồng trợ lý tiểu đường.
 
 ```powershell
 python -m pip install -r requirements-dev.txt
-python -m pytest tests/test_agents_project.py tests/test_diabetes_extension.py tests/test_prediction_chat.py tests/test_corpus_expansion.py tests/test_timeseries_runtime.py -q
+python -m pytest tests/test_agents_project.py tests/test_diabetes_extension.py tests/test_prediction_chat.py tests/test_corpus_expansion.py tests/test_timeseries_runtime.py tests/test_market_data.py -q
 node --check mvc/static/js/agents.js
 ```
 

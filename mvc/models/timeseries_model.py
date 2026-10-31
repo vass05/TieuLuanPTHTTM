@@ -95,7 +95,7 @@ class TimeSeriesModel:
             "last_price": prices[-1]
         }
 
-    def predict_future(self, history_prices, steps=7, last_date_str="2026-10-07"):
+    def predict_future(self, history_prices, steps=7, last_date_str=None):
         """
         Dự báo tương lai đa bước (Multi-step autoregressive forecast)
         với cửa sổ trượt 30 phiên.
@@ -165,16 +165,10 @@ class TimeSeriesModel:
         }
 
     def _generate_future_dates(self, last_date_str, steps):
-        """Tạo danh sách các ngày làm việc tiếp theo"""
-        try:
-            curr = datetime.strptime(last_date_str[:10], "%Y-%m-%d")
-        except Exception:
-            curr = datetime.now()
-            
-        future_dates = []
-        while len(future_dates) < steps:
-            curr += timedelta(days=1)
-            if curr.weekday() < 5:  # Thứ 2 đến Thứ 6
-                future_dates.append(curr.strftime("%Y-%m-%d"))
-        return future_dates
+        """US stock-market sessions, excluding weekends and exchange holidays."""
+        import exchange_calendars as xcals
+        curr=pd.Timestamp(last_date_str[:10] if last_date_str else datetime.now().date())
+        calendar=xcals.get_calendar('XNYS')
+        sessions=calendar.sessions_in_range(curr+timedelta(days=1),curr+timedelta(days=steps*3+14))
+        return sessions[:steps].strftime('%Y-%m-%d').tolist()
 
