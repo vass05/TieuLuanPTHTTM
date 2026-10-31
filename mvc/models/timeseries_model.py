@@ -7,17 +7,15 @@ Quản lý việc nạp mô hình Keras LSTM tối ưu, bộ chuẩn hóa Scaler
 """
 
 import os
+import importlib.util
+import logging
 import numpy as np
 import pandas as pd
 import joblib
 from datetime import datetime, timedelta
 from mvc.models.model_errors import ModelUnavailableError
 
-# TensorFlow / Keras (safe import)
-try:
-    import tensorflow as tf
-except ImportError:
-    tf = None
+LOGGER = logging.getLogger(__name__)
 
 class TimeSeriesModel:
     def __init__(self, workspace_dir=None):
@@ -29,6 +27,7 @@ class TimeSeriesModel:
         
         self.lstm_model = None
         self.scaler = None
+        self.inference_backend = None
         self._load_artifacts()
         
     def _load_artifacts(self):
@@ -36,17 +35,25 @@ class TimeSeriesModel:
         lstm_path = os.path.join(self.model_dir, "amzn_lstm_model.keras")
         scaler_path = os.path.join(self.model_dir, "time_series_scaler.pkl")
         
-        if os.path.exists(scaler_path):
-            self.scaler = joblib.load(scaler_path)
-            print(f"[Model Layer] Đã nạp Scaler từ: {scaler_path}")
-        else:
-            print(f"[Model Layer] CẢNH BÁO: Không tìm thấy Scaler tại {scaler_path}")
-            
-        if os.path.exists(lstm_path) and tf is not None:
-            self.lstm_model = tf.keras.models.load_model(lstm_path)
-            print(f"[Model Layer] Đã nạp Keras LSTM từ: {lstm_path}")
-        else:
-            print(f"[Model Layer] CẢNH BÁO: Không tìm thấy mô hình LSTM hoặc thiếu TensorFlow tại {lstm_path}")
+        try:
+            for path in (lstm_path, scaler_path):
+                if not os.path.isfile(path):
+                    raise FileNotFoundError(path)
+            # Keras must choose its backend before the first import. Preserve
+            # explicit settings; PyTorch also runs the saved Keras LSTM weights.
+            os.environ.setdefault('KERAS_BACKEND',
+                'tensorflow' if importlib.util.find_spec('tensorflow') is not None else 'torch')
+            import keras
+            scaler = joblib.load(scaler_path)
+            model = keras.models.load_model(lstm_path, compile=False)
+            if model.input_shape != (None, 30, 1) or model.output_shape != (None, 1):
+                raise ValueError('LSTM artifact has an incompatible input/output shape')
+            self.scaler, self.lstm_model = scaler, model
+            self.inference_backend = keras.backend.backend()
+            LOGGER.info('Loaded saved LSTM with Keras backend %s', self.inference_backend)
+        except Exception as error:
+            self.lstm_model, self.scaler = None, None
+            LOGGER.warning('Cannot load time-series artifacts: %s: %s', type(error).__name__, error)
 
     def get_historical_data(self, symbol="AMZN", limit=60):
         """
@@ -94,7 +101,7 @@ class TimeSeriesModel:
         với cửa sổ trượt 30 phiên.
         """
         if self.lstm_model is None or self.scaler is None:
-            raise ModelUnavailableError('Mô hình chuỗi thời gian chưa sẵn sàng. Cần TensorFlow, trọng số LSTM và bộ chuẩn hóa.')
+            raise ModelUnavailableError('Mô hình chuỗi thời gian chưa sẵn sàng. Cần cài đủ thư viện trong requirements.txt và có trọng số LSTM, bộ chuẩn hóa trong thư mục model/.')
         if len(history_prices) < 30:
             raise ValueError("Cần tối thiểu 30 giá trị lịch sử gần nhất để khởi tạo cửa sổ trượt.")
         

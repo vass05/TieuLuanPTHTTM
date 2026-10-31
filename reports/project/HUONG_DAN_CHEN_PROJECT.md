@@ -101,7 +101,8 @@ một dịch vụ từ xa bị treo. Không mô tả bản demo này như hệ t
 
 Các kiểm tra project đã đạt:
 
-- 185 ca kiểm thử backend/API, gồm giải thích nhóm phân loại và hỏi tiếp không thu thập lại hồ sơ,
+- 196 ca kiểm thử backend/API, gồm nạp LSTM bằng Keras/PyTorch, đối chiếu suy luận với trọng số gốc,
+  trang dự báo và API 1/7/14/30 bước, giải thích nhóm phân loại và hỏi tiếp không thu thập lại hồ sơ,
   đọc hồ sơ nhiều dòng có tên viết tắt trong ngoặc, nạp artifact,
   đối chiếu chỉ mục gốc với notebook, chat nhiều lượt, ngữ cảnh,
   thiếu bằng chứng, lỗi công cụ, dữ liệu bị sửa, tách biệt phiên và lưu trữ tác vụ.
@@ -112,6 +113,9 @@ Các kiểm tra project đã đạt:
   kéo giãn bằng chuột/phím và lưu tỉ lệ, đúng bố cục trái/phải, màu sắc thống nhất,
   chat dinh dưỡng, chuyển chủ đề, lời chào không gọi công cụ, xem/xóa lịch sử, không tràn ngang và không có
   lỗi JavaScript được quan sát.
+- 8 kiểm tra riêng cho trang dự báo chuỗi thời gian: trả HTTP 200, vẽ Chart.js từ kết quả mô hình,
+  bảng 7 bước, cập nhật 14 bước bằng AJAX, desktop/mobile và lỗi JavaScript.
+  Ảnh: `reports/project/timeseries_fixed.png`; báo cáo: `reports/project/timeseries_browser_checks.json`.
 
 Các số này là kiểm tra phần mềm trên dữ liệu và kịch bản nghiên cứu; không phải
 kết quả đánh giá lâm sàng hoặc tỷ lệ xử lý thành công trên bệnh nhân thực tế.

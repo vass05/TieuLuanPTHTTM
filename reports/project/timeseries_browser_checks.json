@@ -1,0 +1,14 @@
+{
+  "checks": [
+    "timeseries_returns_200",
+    "real_chart_renders",
+    "initial_table_has_seven_predictions",
+    "chart_has_saved_model_prediction",
+    "ajax_updates_to_fourteen_predictions",
+    "desktop_has_no_horizontal_overflow",
+    "mobile_has_no_horizontal_overflow",
+    "no_browser_javascript_exceptions"
+  ],
+  "passed": 8,
+  "exceptions": []
+}

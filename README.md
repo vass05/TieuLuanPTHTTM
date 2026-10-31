@@ -209,8 +209,13 @@ Q-learning chỉ lựa chọn bước gọi công cụ trong nhánh phân
 tích chỉ số, không học ngôn ngữ hay tự tạo kiến thức y khoa.
 
 Các trang cũ `/housing`, `/vision`, `/timeseries`, `/rag` và API cũ được giữ lại.
-CNN/LSTM cần TensorFlow và trọng số tương ứng; môi trường hiện kiểm tra không
-có TensorFlow. Khi thiếu thành phần, API trả 503/trang thông báo phù hợp, thay
+Trang `/timeseries` nạp trực tiếp `model/amzn_lstm_model.keras` và
+`model/time_series_scaler.pkl`. Keras tự chọn PyTorch nếu không có TensorFlow;
+`requirements.txt` đã bao gồm Keras và h5py. Không huấn luyện lại hoặc đổi trọng số.
+Nếu đã mở server trước khi cập nhật, dừng server và chạy lại `python app.py` sau khi
+cài `python -m pip install -r requirements.txt`. Backend cấu hình rõ qua
+`KERAS_BACKEND` sẽ được giữ nguyên. Chi tiết: [cấu hình backend Keras](https://keras.io/getting_started/).
+Trang CNN vẫn cần TensorFlow và trọng số tương ứng. Khi thiếu thành phần, API trả 503/trang thông báo phù hợp, thay
 cho xác suất ngẫu nhiên hay dự báo giả lập. Hai bộ artifact cũ của XGBoost và
 MinMaxScaler được tạo bằng phiên bản thư viện khác nên vẫn có cảnh báo tương
 thích lúc nạp; chúng không tham gia luồng trợ lý tiểu đường.
@@ -219,7 +224,7 @@ thích lúc nạp; chúng không tham gia luồng trợ lý tiểu đường.
 
 ```powershell
 python -m pip install -r requirements-dev.txt
-python -m pytest tests/test_agents_project.py tests/test_diabetes_extension.py tests/test_prediction_chat.py tests/test_corpus_expansion.py -q
+python -m pytest tests/test_agents_project.py tests/test_diabetes_extension.py tests/test_prediction_chat.py tests/test_corpus_expansion.py tests/test_timeseries_runtime.py -q
 node --check mvc/static/js/agents.js
 ```
 
@@ -228,6 +233,7 @@ cổng 5000 trước):
 
 ```powershell
 python scripts/check_agents_browser.py
+python scripts/check_timeseries_browser.py
 ```
 
 Script dùng profile trình duyệt tạm riêng trong `.ipynb_checkpoints/`, chỉ thao
