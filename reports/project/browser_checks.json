@@ -25,11 +25,19 @@
     "prediction_intent_requests_missing_fields_without_call",
     "prediction_partial_data_remains_in_conversation",
     "complete_chat_inputs_call_prediction_and_show_actual_score",
+    "negative_prediction_has_clear_heading",
     "prediction_trace_shows_real_call_and_cited_explanation",
     "prediction_result_and_flow_restore_after_reload",
     "explicit_demo_uses_model_and_identifies_sample",
     "pasted_profile_with_parenthesized_dpf_runs_prediction",
     "pasted_profile_after_demo_is_not_labelled_as_sample",
+    "positive_prediction_leads_with_plain_result",
+    "positive_prediction_has_clear_heading",
+    "legacy_reply_still_gets_a_clear_prediction_heading",
+    "result_followup_does_not_collect_or_run_model_again",
+    "result_followup_trace_explains_reuse",
+    "result_explanation_survives_reload",
+    "prediction_headings_survive_history_reload",
     "expanded_corpus_answers_banana_with_specific_clickable_source",
     "expanded_corpus_count_is_visible",
     "new_conversation_resets_ui_without_deleting_history",
@@ -37,6 +45,6 @@
     "clear_own_conversation_history",
     "no_browser_javascript_exceptions"
   ],
-  "passed": 36,
+  "passed": 44,
   "exceptions": []
 }

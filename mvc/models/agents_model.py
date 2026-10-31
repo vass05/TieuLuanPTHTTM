@@ -12,7 +12,7 @@ from mvc.models.agent_store import AgentStore, utc_now
 from mvc.models.artifact_utils import artifact_digest
 from mvc.models.model_errors import ModelUnavailableError, TaskConflictError
 from mvc.models.assistant_synthesis import AssistantSynthesis
-from mvc.models.prediction_dialogue import prediction_request, prediction_reply
+from mvc.models.prediction_dialogue import prediction_request, prediction_reply, prediction_followup
 from mvc.models.diabetes_dialogue import DiabetesDialogue, load_conversation_documents, load_extended_documents, normalize_question
 
 LOGGER = logging.getLogger(__name__)
@@ -192,6 +192,17 @@ class AgentsModel:
             else:
                 conversation_id=uuid.uuid4().hex
             tick=time.perf_counter()
+            completed=prediction_followup(message,previous)
+            if completed is not None:
+                plan=dict(route='prediction_result',topics=['prediction'],uses_context=True,
+                    prediction_required=False,tools=[],
+                    steps=['Tìm kết quả đã chạy trong cuộc trò chuyện','Kiểm tra yêu cầu','Giải thích nhóm dự đoán'],
+                    reason='Giải thích kết quả đã có; không thu thập lại chỉ số và không gọi lại mô hình.')
+                return self.execute(owner_id,dict(query=message,mode='knowledge',policy='rule',
+                    conversation_id=conversation_id,conversation_turn=len(previous)+1,plan=plan,
+                    prediction_reference=completed['task_id'],
+                    conversation_reply=prediction_reply(completed['prediction'],
+                        completed['_prediction_dialogue'].get('demo',False),followup=True)))
             request=prediction_request(message,previous,self.examples)
             if request is not None:
                 plan=dict(route='prediction',topics=['prediction'],uses_context=bool(previous and
@@ -352,6 +363,10 @@ class AgentsModel:
                     task.update(status='AWAITING_INPUT' if outcome=='REQUEST_INFO' else 'COMPLETED',
                                 outcome=outcome,reply=payload['conversation_reply'],reasons=[],
                                 safety_status='REQUEST_INFO' if outcome!='ANSWERED' else 'ALLOW')
+                    if payload.get('prediction_reference'):
+                        task['prediction_reference']=payload['prediction_reference']
+                        event('Coordinator','EXPLAIN_PREDICTION_RESULT',0,details=dict(
+                            source_task_id=payload['prediction_reference']))
                     event('Coordinator','RESPOND_CONVERSATION',0)
                 else:
                     while True:

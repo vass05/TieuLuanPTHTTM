@@ -89,6 +89,13 @@ Có thể dán hồ sơ có nhãn trực tiếp vào chat, kể cả sau khi th�
 Nhãn đầy đủ như `Chỉ số phả hệ tiểu đường (DPF): 1.080` được đọc là DPF=1.08;
 ngoặc chứa tên viết tắt và dấu phẩy thập phân cũng được hỗ trợ. Hồ sơ mới sau
 lượt demo không kế thừa các chỉ số của mẫu.
+Kết quả mở đầu bằng nhóm mô hình phân loại: “có tiểu đường” (nhãn 1) hoặc
+“không tiểu đường” (nhãn 0), kèm giới hạn của kết quả nghiên cứu. Sau đó có thể hỏi
+**Vậy tôi có bị tiểu đường không?** hoặc **Kết quả này là sao?** để giải thích kết quả
+đã lưu trong cùng cuộc trò chuyện; không nhập lại hồ sơ và không chạy lại mô hình.
+Kết quả dữ liệu mẫu luôn được phân biệt với hồ sơ cá nhân, kể cả khi hỏi tiếp.
+Giao diện hiển thị nhóm phân loại bằng tiêu đề nổi bật từ nhãn mô hình đã lưu,
+kể cả khi mở lại câu trả lời cũ chỉ ghi “nhãn nghiên cứu: 0/1”.
 
 Bạn có thể gửi nhiều chỉ số trong một tin nhắn có nhãn, ví dụ `Tôi là nữ, 47 tuổi;
 BMI=35,5`. Đơn vị không khớp phải được làm rõ. Gõ **Hủy dự đoán** để dừng thu thập,

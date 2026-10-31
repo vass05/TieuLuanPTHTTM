@@ -177,11 +177,46 @@ def prediction_request(message,previous,examples):
     return dict(state=state,ready=ready,outcome='ANSWERED' if ready else 'REQUEST_INFO',missing=missing,issues=issues,reply=reply)
 
 
-def prediction_reply(prediction,demo):
-    return ('Kết quả chạy thử trên dữ liệu mẫu nghiên cứu.\n' if demo else 'Đã nhận đủ 8 chỉ số và chạy mô hình với hồ sơ bạn vừa gửi.\n')+(
+def prediction_followup(message,previous):
+    """Explain the latest completed classification without collecting inputs again."""
+    normalized=normalize_question(message)
+    parsed=parse_inputs(message)
+    if (parsed['values'] or parsed['units'] or parsed['sex'] or parsed['sex_unknown']
+        or parsed['invalid'] or parsed['ogtt'] or parsed['fasting']):
+        return None
+    if any(p in normalized for p in ('du lieu mau','ho so mau','du doan moi','chay lai',
+        'du doan lai','huy du doan','ngung du doan','me toi','bo toi','con toi')):
+        return None
+    if any(p in normalized for p in ('hba1c','a1c','xet nghiem','luc doi','an duoc','uong duoc')):
+        return None
+    result_question=any(p in normalized for p in ('ket qua','nhan 0','nhan 1','diem mo hinh',
+        'toi bi tieu duong','co bi tieu duong khong','co bi dai thao duong khong',
+        'co mac tieu duong khong','co bi khong','bi hay khong','bi hay k')) or bool(re.search(
+            r'\b(?:toi|minh|em)\s+(?:co\s+)?(?:bi|mac)\s+(?:(?:tieu duong|dai thao duong|benh)\s+)?(?:hay\s+)?(?:khong|k|chua)\b',normalized))
+    if not result_question:
+        return None
+    for task in reversed(previous):
+        state=task.get('_prediction_dialogue')
+        if state is not None:
+            if state.get('active') or task.get('outcome')!='ANSWERED' or not task.get('prediction'):
+                return None
+            return task
+    return None
+
+
+def prediction_reply(prediction,demo,followup=False):
+    group='có tiểu đường' if prediction['label'] else 'không tiểu đường'
+    conclusion=f'Mô hình xếp hồ sơ vào nhóm “{group}” (nhãn {prediction["label"]}).'
+    context=('Kết quả chạy thử trên dữ liệu mẫu nghiên cứu; đây không phải hồ sơ của bạn.' if demo
+        else 'Đã nhận đủ 8 chỉ số và chạy mô hình với hồ sơ bạn vừa gửi.')
+    if followup:
+        context=('Đây là kết quả dữ liệu mẫu nghiên cứu, không phải kết quả của bạn.' if demo else
+            'Tôi đang giải thích kết quả đã chạy ở trên. Bạn không cần nhập lại các chỉ số.')
+    return conclusion+'\n\n'+context+'\n\n'+(
+        'Đây là phân loại tham khảo của mô hình nghiên cứu, chưa phải chẩn đoán xác nhận. '
+        +('Bạn nên mang kết quả xét nghiệm đến cơ sở y tế để được đánh giá và xác nhận.' if prediction['label'] else
+          'Kết quả này không loại trừ bệnh; nếu có triệu chứng hoặc xét nghiệm bất thường, bạn vẫn cần được khám và đánh giá.')
+        +'\n\n'
         f"Điểm mô hình: {prediction['score']:.4f} trên thang 0–1. "
         f"Ngưỡng phân loại: {prediction['threshold']:.2f}. "
-        f"Nhãn nghiên cứu: {prediction['label']} "
-        f"({'đạt hoặc vượt' if prediction['label'] else 'dưới'} ngưỡng phân loại).\n"
-        'Điểm này không phải xác suất chẩn đoán cá nhân và không xác nhận bạn có hay không mắc tiểu đường. '
-        'Phần dưới là thông tin xét nghiệm để tham khảo.')
+        'Điểm này không phải xác suất chẩn đoán cá nhân.')

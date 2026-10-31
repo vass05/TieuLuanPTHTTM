@@ -101,10 +101,13 @@ một dịch vụ từ xa bị treo. Không mô tả bản demo này như hệ t
 
 Các kiểm tra project đã đạt:
 
-- 171 ca kiểm thử backend/API, gồm đọc hồ sơ nhiều dòng có tên viết tắt trong ngoặc, nạp artifact,
+- 185 ca kiểm thử backend/API, gồm giải thích nhóm phân loại và hỏi tiếp không thu thập lại hồ sơ,
+  đọc hồ sơ nhiều dòng có tên viết tắt trong ngoặc, nạp artifact,
   đối chiếu chỉ mục gốc với notebook, chat nhiều lượt, ngữ cảnh,
   thiếu bằng chứng, lỗi công cụ, dữ liệu bị sửa, tách biệt phiên và lưu trữ tác vụ.
-- 36 kiểm tra trình duyệt trên desktop/mobile, gồm trả lời câu hỏi chuối từ kho mới, hồ sơ dán sau lượt demo, thu thập chỉ số,
+- 44 kiểm tra trình duyệt trên desktop/mobile, gồm tiêu đề phân loại rõ ràng cho cả câu trả lời lịch sử cũ,
+  hỏi tiếp kết quả dự đoán và khôi phục phần giải thích,
+  trả lời câu hỏi chuối từ kho mới, hồ sơ dán sau lượt demo, thu thập chỉ số,
   chạy MLP thật, khôi phục kết quả dự đoán,
   kéo giãn bằng chuột/phím và lưu tỉ lệ, đúng bố cục trái/phải, màu sắc thống nhất,
   chat dinh dưỡng, chuyển chủ đề, lời chào không gọi công cụ, xem/xóa lịch sử, không tràn ngang và không có

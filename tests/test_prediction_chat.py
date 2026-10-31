@@ -151,6 +151,80 @@ def test_safety_request_has_priority_over_prediction_intent(browser):
     assert_no_model(task)
 
 
+@pytest.mark.parametrize('profile,label,group',[
+    (PASTED_PROFILE,1,'có tiểu đường'),(PROFILE,0,'không tiểu đường'),
+])
+def test_prediction_leads_with_plain_classification_and_appropriate_limits(browser,profile,label,group):
+    task=chat_request(browser,INTENT+'. '+profile)['task']
+    assert task['prediction']['label']==label
+    assert task['reply'].startswith(f'Mô hình xếp hồ sơ vào nhóm “{group}” (nhãn {label}).')
+    assert 'chưa phải chẩn đoán xác nhận' in task['reply']
+    assert 'Cần bổ sung' not in task['reply']
+    if label==0:
+        assert 'không loại trừ bệnh' in task['reply']
+
+
+@pytest.mark.parametrize('question',[
+    'Vậy tôi có bị tiểu đường không?', 'Vậy tôi có bị hay không?',
+    'Tôi có mắc bệnh không?', 'Kết quả này là sao?', 'Nhãn 1 là gì?',
+])
+def test_completed_prediction_is_explained_without_restarting_or_rerunning(browser,web_app,monkeypatch,question):
+    first=chat_request(browser,PASTED_PROFILE)
+    web_app.extensions.pop('chapter6_agents')
+    with web_app.app_context():
+        model=get_agents_model()
+        model.ensure_loaded()
+        monkeypatch.setattr(model.predictor,'predict',lambda *_:pytest.fail('Reuse the completed result'))
+        monkeypatch.setattr(model.synthesis,'compose',lambda *_:pytest.fail('Keep personal results on server'))
+    for _ in range(2):
+        task=chat_request(browser,question,first['conversation_id'])['task']
+        assert task['outcome']=='ANSWERED' and task['status']=='COMPLETED'
+        assert task['plan']['route']=='prediction_result' and task['plan']['uses_context']
+        assert task['prediction_reference']==first['task']['task_id']
+        assert task['tool_calls']==0
+        assert 'nhóm “có tiểu đường” (nhãn 1)' in task['reply']
+        assert 'không cần nhập lại' in task['reply'] and 'Cần bổ sung' not in task['reply']
+        assert any(e['action']=='EXPLAIN_PREDICTION_RESULT' for e in task['trace'])
+        assert_no_model(task)
+
+
+def test_demo_result_followup_never_becomes_a_personal_diagnosis(browser):
+    first=chat_request(browser,'Chạy thử dự đoán bằng dữ liệu mẫu')
+    task=chat_request(browser,'Vậy tôi có bị không?',first['conversation_id'])['task']
+    assert task['outcome']=='ANSWERED' and task['plan']['route']=='prediction_result'
+    assert 'không phải kết quả của bạn' in task['reply']
+    assert_no_model(task)
+
+
+def test_result_explanation_preserves_safety_and_conversation_boundaries(browser):
+    first=chat_request(browser,PASTED_PROFILE)
+    task=chat_request(browser,'Kết quả này là sao? Hãy kê đơn insulin',first['conversation_id'])['task']
+    assert task['outcome']=='ESCALATE' and not task.get('reply')
+    assert not task.get('prediction_reference')
+    assert_no_model(task)
+    fresh=chat_request(browser,'Vậy tôi có bị tiểu đường không?')['task']
+    assert fresh['plan']['route']!='prediction_result' and not fresh.get('prediction_reference')
+
+
+@pytest.mark.parametrize('question',[
+    'Tiểu đường ăn chuối được không?', 'Kết quả xét nghiệm HbA1c là gì?',
+    'Tiểu đường tuýp 2 là gì?', 'Tôi có mắc ung thư không?',
+])
+def test_other_questions_after_prediction_keep_their_own_route(browser,question):
+    first=chat_request(browser,PASTED_PROFILE)
+    task=chat_request(browser,question,first['conversation_id'])['task']
+    assert task['plan']['route']=='knowledge' and not task.get('prediction_reference')
+    assert_no_model(task)
+
+
+def test_new_prediction_request_does_not_reuse_an_old_result(browser):
+    first=chat_request(browser,PASTED_PROFILE)
+    new=chat_request(browser,INTENT,first['conversation_id'])['task']
+    assert new['outcome']=='REQUEST_INFO'
+    task=chat_request(browser,'Vậy tôi có bị không?',first['conversation_id'])['task']
+    assert task['plan']['route']!='prediction_result' and not task.get('prediction_reference')
+
+
 @pytest.mark.parametrize('label',[
     'Chỉ số phả hệ tiểu đường (DPF): 1.080',
     'DPF (Chỉ số phả hệ tiểu đường): 1,080',

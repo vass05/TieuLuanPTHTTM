@@ -91,6 +91,12 @@ def main():
         else:raise RuntimeError('Chrome did not start')
         browser=Browser(tab['webSocketDebuggerUrl'])
         browser.call('Runtime.enable');browser.call('Page.enable')
+        # This page uses native DOM/SVG; unrelated CDN scripts can stall the
+        # parser on machines without Internet access during the local check.
+        browser.call('Network.enable')
+        browser.call('Network.setBlockedURLs',{'urls':['https://cdn.jsdelivr.net/npm/chart.js*',
+            'https://cdn.jsdelivr.net/npm/bootstrap@*/dist/js/*']})
+        browser.call('Page.navigate',{'url':'http://127.0.0.1:'+str(APP_PORT)+'/agents'})
         browser.wait("document.getElementById('sendMessage') && !document.getElementById('sendMessage').disabled")
         check('chat_only_no_numeric_form_or_mode_selector',browser.js("!document.querySelector('#agentsApp input[type=number]') && !document.getElementById('agentPolicy') && !document.querySelector('[data-mode]')"))
         check('desktop_chat_left_orchestration_right',browser.js("document.querySelector('.chat-panel').getBoundingClientRect().right < document.querySelector('.orchestration-panel').getBoundingClientRect().left"))
@@ -162,6 +168,7 @@ def main():
         check('prediction_partial_data_remains_in_conversation',browser.js("[...document.querySelectorAll('.assistant-message[data-task-id]')].at(-1).textContent.includes('Tuổi=47') && !document.getElementById('flow-model').classList.contains('is-active')"))
         send_message('Số lần mang thai=10; Glucose=68 mg/dL sau 2 giờ OGTT; huyết áp tâm trương=106 mmHg; nếp gấp da=23 mm; insulin huyết thanh sau 2 giờ=49 µU/mL; DPF=0,285')
         check('complete_chat_inputs_call_prediction_and_show_actual_score',browser.js("document.getElementById('flow-model').classList.contains('is-active') && document.getElementById('edge-model').classList.contains('is-active') && [...document.querySelectorAll('.assistant-message[data-task-id]')].at(-1).textContent.includes('Điểm mô hình: 0.1314')"))
+        check('negative_prediction_has_clear_heading',browser.js("[...document.querySelectorAll('.assistant-message[data-task-id]')].at(-1).querySelector('.message-prediction-verdict').textContent==='Không tiểu đường'"))
         check('prediction_trace_shows_real_call_and_cited_explanation',browser.js("document.getElementById('executionTrace').textContent.includes('Gọi mô hình dự đoán') && [...document.querySelectorAll('.assistant-message[data-task-id]')].at(-1).querySelector('.message-citation')!==null"))
         browser.call('Page.reload')
         browser.wait("document.getElementById('chatStatus')?.textContent==='Đã mở lại' && !document.getElementById('sendMessage').disabled")
@@ -181,6 +188,34 @@ def main():
         browser.call('Emulation.setDeviceMetricsOverride',dict(width=1440,height=1100,deviceScaleFactor=1,mobile=False))
         browser.js("(()=>{const n=document.getElementById('chatMessages');n.style.scrollBehavior='auto';n.scrollTop=n.scrollHeight;})()")
         browser.screenshot('pasted_profile_fixed.png')
+        check('positive_prediction_leads_with_plain_result',browser.js("[...document.querySelectorAll('.assistant-message[data-task-id]')].at(-1).querySelector('p').textContent.startsWith('Mô hình xếp hồ sơ vào nhóm “có tiểu đường” (nhãn 1).')"))
+        check('positive_prediction_has_clear_heading',browser.js("[...document.querySelectorAll('.assistant-message[data-task-id]')].at(-1).querySelector('.message-prediction-verdict').textContent==='Có tiểu đường'"))
+        legacy=browser.call('Page.addScriptToEvaluateOnNewDocument',{'source':r'''
+            const originalFetch=window.fetch;
+            window.fetch=async (...args)=>{
+                const response=await originalFetch(...args);
+                if(response.ok && /^\/api\/v1\/assistant\/conversations\/[a-f0-9]+$/.test(String(args[0]))){
+                    const data=await response.clone().json();
+                    data.tasks.forEach(task=>{if(task.prediction)task.reply='Nhãn nghiên cứu: '+task.prediction.label+' (phân loại theo ngưỡng).';});
+                    return new Response(JSON.stringify(data),{status:response.status,headers:response.headers});
+                }
+                return response;
+            }'''})
+        browser.call('Page.reload')
+        browser.wait("document.getElementById('chatStatus')?.textContent==='Đã mở lại' && !document.getElementById('sendMessage').disabled")
+        check('legacy_reply_still_gets_a_clear_prediction_heading',browser.js("(()=>{const n=[...document.querySelectorAll('.assistant-message[data-task-id]')].at(-1);return n.textContent.includes('Nhãn nghiên cứu: 1') && !n.textContent.includes('Mô hình xếp hồ sơ') && n.querySelector('.message-prediction-verdict').textContent==='Có tiểu đường'})()"))
+        browser.call('Page.removeScriptToEvaluateOnNewDocument',{'identifier':legacy['identifier']})
+        browser.call('Page.reload')
+        browser.wait("document.getElementById('chatStatus')?.textContent==='Đã mở lại' && !document.getElementById('sendMessage').disabled")
+        send_message('Vậy tôi có bị tiểu đường không?')
+        check('result_followup_does_not_collect_or_run_model_again',browser.js("(()=>{const n=[...document.querySelectorAll('.assistant-message[data-task-id]')].at(-1);return n.textContent.includes('nhóm “có tiểu đường”') && n.textContent.includes('không cần nhập lại') && !n.querySelector('.message-notice') && !document.getElementById('flow-model').classList.contains('is-active') && document.getElementById('callsMetric').textContent.includes('0')})()"))
+        check('result_followup_trace_explains_reuse',browser.js("document.getElementById('executionTrace').textContent.includes('Giải thích kết quả dự đoán đã có')"))
+        browser.call('Page.reload')
+        browser.wait("document.getElementById('chatStatus')?.textContent==='Đã mở lại' && !document.getElementById('sendMessage').disabled")
+        check('result_explanation_survives_reload',browser.js("[...document.querySelectorAll('.assistant-message[data-task-id]')].at(-1).textContent.includes('không cần nhập lại')"))
+        check('prediction_headings_survive_history_reload',browser.js("document.querySelectorAll('.message-prediction-verdict').length===2 && [...document.querySelectorAll('.message-prediction-verdict')].at(-1).textContent==='Có tiểu đường'"))
+        browser.js("(()=>{const n=document.getElementById('chatMessages');n.style.scrollBehavior='auto';n.scrollTop=n.scrollHeight;})()")
+        browser.screenshot('prediction_result_followup.png')
         browser.js("document.getElementById('newConversation').click()")
         send_message('Tiểu đường tuýp 2 ăn chuối được không?')
         check('expanded_corpus_answers_banana_with_specific_clickable_source',browser.js("(()=>{const n=[...document.querySelectorAll('.assistant-message[data-task-id]')].at(-1);return n.textContent.includes('có thể ăn chuối') && n.querySelector('.message-citation').href.startsWith('https://www.diabetes.org.uk/') && !n.textContent.includes('[K01]')})()"))

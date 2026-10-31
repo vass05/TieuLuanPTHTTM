@@ -71,6 +71,15 @@
     function addAssistant(task){
         const r=row('assistant');r.wrapper.dataset.taskId=task.task_id;
         if(task.outcome!=='ANSWERED')r.bubble.append(el('div','message-notice '+(task.status==='FAILED'||task.outcome==='ESCALATE'?'is-error':''),outcomes[task.outcome]||task.status));
+        // Derive the heading from the stored classification, including older
+        // replies whose prose never explained what label 0/1 means.
+        if(task.outcome==='ANSWERED'&&task.prediction&&[0,1].includes(task.prediction.label)){
+            const result=el('div','message-prediction-result');
+            result.append(el('span','message-prediction-caption','Kết quả dự đoán của mô hình'),
+                el('strong','message-prediction-verdict',task.prediction.label===1?'Có tiểu đường':'Không tiểu đường'),
+                el('small','','Phân loại tham khảo trong nghiên cứu, chưa phải chẩn đoán xác nhận.'));
+            r.bubble.append(result);
+        }
         if(task.reply)r.bubble.append(el('p','',task.reply));
         const blocks=task.answer_blocks||task.blocks||[];
         blocks.forEach(block=>{
@@ -106,6 +115,7 @@
     topics.prediction='Phân loại bằng mô hình';
     outcomes.OUT_OF_SCOPE='Ngoài phạm vi mô hình';
     actions.COLLECT_PREDICTION_INPUTS='Thu thập và kiểm tra chỉ số';
+    actions.EXPLAIN_PREDICTION_RESULT='Giải thích kết quả dự đoán đã có';
     actions.COMPOSE_ASSISTED_RESPONSE='Diễn đạt câu trả lời từ bằng chứng';
     function renderFlow(task){
         const trace=task.trace||[],called=action=>trace.some(e=>e.action===action&&e.status!=='FAILED');
