@@ -4,6 +4,7 @@ import socket
 import subprocess
 import time
 import uuid
+import base64
 
 from check_agents_browser import Browser,CHROME,HTTP,OUT,ROOT,EXCEPTIONS
 
@@ -56,6 +57,25 @@ def main():
         browser.wait("visionResponses.length===2 && !document.getElementById('btnPredictUpload').disabled")
         check('upload_inference_matches_canvas',browser.js("visionResponses[1].status===200 && JSON.stringify(visionResponses[0].data.result)===JSON.stringify(visionResponses[1].data.result)"))
         browser.screenshot('vision_upload_fixed.png')
+        browser.js("document.getElementById('visionTask').value='digits';document.getElementById('visionTask').dispatchEvent(new Event('change'))")
+        check('digit_mode_has_its_own_hint_and_resets_fashion_result',browser.js("document.getElementById('topConfidence').textContent==='--%' && document.getElementById('drawHint').textContent.includes('0') && document.getElementById('visionAccuracy').textContent.includes('MNIST') && document.querySelectorAll('#probBarsContainer .progress-bar').length===0"))
+        browser.js("document.getElementById('tabDraw').click();const digitPen=document.getElementById('paintCanvas').getContext('2d');digitPen.fillStyle='white';digitPen.fillRect(0,0,280,280);digitPen.strokeStyle='black';digitPen.lineWidth=18;digitPen.lineCap='round';digitPen.beginPath();digitPen.moveTo(90,70);digitPen.bezierCurveTo(210,30,215,135,130,140);digitPen.bezierCurveTo(240,140,220,250,85,225);digitPen.stroke();document.getElementById('btnPredictCanvas').click()")
+        browser.wait("visionResponses.length===3 && !document.getElementById('btnPredictCanvas').disabled")
+        check('handwritten_three_uses_digit_model',browser.js("visionResponses[2].status===200 && visionResponses[2].data.result.task==='digits' && visionResponses[2].data.result.digit===3"))
+        check('digit_top_five_has_digit_labels',browser.js("document.getElementById('topLabelVi').textContent==='Số 3' && visionResponses[2].data.result.ranking.every(row=>row.label_en.startsWith('Digit '))"))
+        browser.wait("getComputedStyle(document.getElementById('paneDraw')).opacity==='1'")
+        browser.screenshot('vision_digit_canvas.png')
+        encoded=base64.b64encode((ROOT/'tests/fixtures/digits/7.png').read_bytes()).decode('ascii')
+        browser.js("document.getElementById('tabUpload').click();const digitBytes=Uint8Array.from(atob("+json.dumps(encoded)+"),c=>c.charCodeAt(0));const digitFiles=new DataTransfer();digitFiles.items.add(new File([digitBytes],'digit-7.png',{type:'image/png'}));document.getElementById('imageFileInput').files=digitFiles.files;document.getElementById('imageFileInput').dispatchEvent(new Event('change',{bubbles:true}));document.getElementById('btnPredictUpload').click()")
+        browser.wait("visionResponses.length===4 && !document.getElementById('btnPredictUpload').disabled")
+        check('uploaded_seven_uses_digit_model',browser.js("visionResponses[3].status===200 && visionResponses[3].data.result.digit===7 && document.getElementById('topLabelVi').textContent==='Số 7'"))
+        browser.wait("getComputedStyle(document.getElementById('paneUpload')).opacity==='1'")
+        browser.screenshot('vision_digit_upload.png')
+        browser.js("document.getElementById('tabDraw').click();document.getElementById('btnClearCanvas').click();document.getElementById('btnPredictCanvas').click()")
+        browser.wait("visionResponses.length===5 && !document.getElementById('btnPredictCanvas').disabled")
+        check('blank_digit_canvas_returns_input_error_without_a_prediction',browser.js("visionResponses[4].status===400 && !document.getElementById('visionError').hidden && document.getElementById('topConfidence').textContent==='--%'"))
+        browser.js("document.getElementById('visionTask').value='fashion';document.getElementById('visionTask').dispatchEvent(new Event('change'));document.getElementById('tabUpload').click()")
+        check('switching_back_restores_fashion_configuration',browser.js("document.getElementById('visionAccuracy').textContent.includes('91.67') && document.getElementById('topConfidence').textContent==='--%'"))
         browser.js("window.fetch=async()=>new Response(JSON.stringify({success:false,error:'Mô hình nhận diện chưa sẵn sàng. Hãy thử lại.'}),{status:503,headers:{'Content-Type':'application/json'}});document.getElementById('btnPredictUpload').click()")
         browser.wait("!document.getElementById('btnPredictUpload').disabled && !document.getElementById('visionError').hidden")
         check('model_error_is_explained_inline',browser.js("document.getElementById('visionError').textContent.includes('Mô hình nhận diện chưa sẵn sàng') && !document.getElementById('btnPredictCanvas').disabled"))

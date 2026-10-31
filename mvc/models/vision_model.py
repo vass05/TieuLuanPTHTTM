@@ -6,14 +6,12 @@ Quản lý việc nạp mô hình Squeeze-and-Excitation CNN (SE-Block), tiền 
 """
 
 import os
-import io
-import base64
-import binascii
 import logging
 import numpy as np
-from PIL import Image, ImageOps, UnidentifiedImageError
+from PIL import Image, ImageOps
 from mvc.models.model_errors import ModelUnavailableError
 from mvc.models.keras_runtime import load_inference_model
+from mvc.models.image_input import load_grayscale_image
 
 LOGGER = logging.getLogger(__name__)
 
@@ -59,22 +57,7 @@ class VisionModel:
         """
         if self.model is None:
             raise ModelUnavailableError('Mô hình thị giác chưa sẵn sàng. Cần cài đủ thư viện trong requirements.txt và có file model/fashion_se_model.keras.')
-        try:
-            if isinstance(image_input,str):
-                img_bytes=base64.b64decode(image_input.split(',',1)[-1],validate=True)
-            elif isinstance(image_input,(bytes,bytearray)):
-                img_bytes=image_input
-            else:
-                raise ValueError('Unsupported image input')
-            with Image.open(io.BytesIO(img_bytes)) as original:
-                original=ImageOps.exif_transpose(original)
-                # Transparent PNGs should have the same white background as the canvas.
-                if original.mode in ('RGBA','LA') or 'transparency' in original.info:
-                    rgba=original.convert('RGBA')
-                    original=Image.alpha_composite(Image.new('RGBA',rgba.size,'white'),rgba)
-                img=original.convert('L')
-        except (binascii.Error,UnidentifiedImageError,OSError,ValueError) as error:
-            raise ValueError('Không đọc được ảnh. Hãy chọn ảnh PNG/JPG hợp lệ hoặc vẽ lại trên bảng.') from error
+        img=load_grayscale_image(image_input)
         
         # Tự động đảo ngược màu nếu nền ảnh là màu sáng
         img_arr_raw = np.array(img, dtype=np.float32)

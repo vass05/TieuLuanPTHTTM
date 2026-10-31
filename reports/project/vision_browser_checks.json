@@ -7,6 +7,12 @@
     "upload_tab_opens",
     "uploaded_file_preview_is_visible",
     "upload_inference_matches_canvas",
+    "digit_mode_has_its_own_hint_and_resets_fashion_result",
+    "handwritten_three_uses_digit_model",
+    "digit_top_five_has_digit_labels",
+    "uploaded_seven_uses_digit_model",
+    "blank_digit_canvas_returns_input_error_without_a_prediction",
+    "switching_back_restores_fashion_configuration",
     "model_error_is_explained_inline",
     "missing_file_is_explained_inline",
     "no_error_popup_was_shown",
@@ -14,6 +20,6 @@
     "mobile_has_no_horizontal_overflow",
     "no_browser_javascript_exceptions"
   ],
-  "passed": 13,
+  "passed": 19,
   "exceptions": []
 }

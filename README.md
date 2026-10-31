@@ -229,6 +229,22 @@ Trang `/vision` cũng dùng bộ nạp Keras chung để chạy trực tiếp
 base64 và ảnh tải lên đều được đưa về ảnh xám 28×28; PNG trong suốt được ghép nền trắng.
 Trọng số SE-CNN giữ nguyên, không huấn luyện lại. Ảnh không đọc được trả JSON 400;
 lỗi mô hình trả 503 với thông báo cụ thể trên giao diện, không bật hộp thoại chỉ ghi mã lỗi.
+Trên trang thị giác, chọn **Chữ số viết tay (0–9)** tại **Bạn muốn nhận diện** để
+vẽ một chữ số hoặc tải ảnh chữ số lên. Chế độ này gọi CNN MNIST riêng; chế độ
+**Sản phẩm thời trang** tiếp tục dùng SE-CNN Fashion-MNIST. Chuyển chế độ sẽ xóa
+kết quả đang hiển thị và giữ ảnh/nét vẽ để bạn nhận diện lại.
+CNN chữ số đạt **99,03% trên 10.000 ảnh kiểm tra MNIST chính thức**, sau khi chọn
+checkpoint bằng tập validation 6.000 ảnh; tập train có 54.000 ảnh. Đây là số đo trên
+bộ kiểm tra MNIST. Mô hình, checksum và cấu hình nằm trong `model/vision/`;
+log huấn luyện và ma trận nhầm lẫn ở `reports/project/mnist_training.json`.
+Web chỉ nạp trọng số đã lưu; ảnh được xử lý cục bộ. Bảng trống được báo cần vẽ chữ.
+
+Có thể huấn luyện lại bằng `python scripts/train_digit_model.py` khi có
+`DATA/mnist_train.csv` gồm 60.000 hàng và 785 cột (nhãn ở cột đầu).
+Script tách train/validation theo seed 42, dùng cùng tiền xử lý với web, và tải
+bộ kiểm tra MNIST chính thức từ mirror được [Torchvision sử dụng](https://github.com/pytorch/vision/blob/main/torchvision/datasets/mnist.py).
+CSV lớn và cache dữ liệu không được đưa lên GitHub; trọng số nhỏ đã được kèm trong project.
+
 Khi thiếu thành phần, API trả 503/trang thông báo phù hợp, thay
 cho xác suất ngẫu nhiên hay dự báo giả lập. Hai bộ artifact cũ của XGBoost và
 MinMaxScaler được tạo bằng phiên bản thư viện khác nên vẫn có cảnh báo tương
@@ -238,7 +254,7 @@ thích lúc nạp; chúng không tham gia luồng trợ lý tiểu đường.
 
 ```powershell
 python -m pip install -r requirements-dev.txt
-python -m pytest tests/test_agents_project.py tests/test_diabetes_extension.py tests/test_prediction_chat.py tests/test_corpus_expansion.py tests/test_timeseries_runtime.py tests/test_market_data.py tests/test_vision_runtime.py -q
+python -m pytest tests/test_agents_project.py tests/test_diabetes_extension.py tests/test_prediction_chat.py tests/test_corpus_expansion.py tests/test_timeseries_runtime.py tests/test_market_data.py tests/test_vision_runtime.py tests/test_digit_model.py -q
 node --check mvc/static/js/agents.js
 ```
 

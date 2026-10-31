@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}Hệ Thống Thị Giác AI - SE-Block CNN (Fashion-MNIST){% endblock %}
+{% block title %}Thị Giác AI · Thời trang & Chữ số viết tay{% endblock %}
 
 {% block content %}
 <div class="container">
@@ -12,9 +12,17 @@
                     <h5 class="fw-bold mb-0 text-dark">
                         <i class="fa-solid fa-paintbrush text-primary me-2"></i>Vùng Nhập Ảnh Tương Tác
                     </h5>
-                    <span class="badge bg-success-subtle text-success border border-success-subtle">
+                    <span id="visionAccuracy" class="badge bg-success-subtle text-success border border-success-subtle">
                         Độ chính xác: 91.67%
                     </span>
+                </div>
+
+                <div class="mb-3">
+                    <label for="visionTask" class="form-label-custom">Bạn muốn nhận diện:</label>
+                    <select id="visionTask" class="form-select">
+                        <option value="fashion">Sản phẩm thời trang</option>
+                        <option value="digits">Chữ số viết tay (0–9)</option>
+                    </select>
                 </div>
 
                 <!-- Tabs: Vẽ tay vs Tải ảnh -->
@@ -34,7 +42,7 @@
                 <div class="tab-content">
                     <!-- Tab 1: Canvas vẽ tay -->
                     <div class="tab-pane fade show active text-center" id="paneDraw">
-                        <p class="text-muted small mb-2">Vẽ nét đơn giản của sản phẩm (Áo, quần, giày, túi xách, đầm...)</p>
+                        <p class="text-muted small mb-2" id="drawHint">Vẽ nét đơn giản của sản phẩm (Áo, quần, giày, túi xách, đầm...)</p>
                         <div class="d-inline-block position-relative mb-3">
                             <canvas id="paintCanvas" width="280" height="280"></canvas>
                         </div>
@@ -126,6 +134,22 @@
     const canvas = document.getElementById("paintCanvas");
     const ctx = canvas.getContext("2d");
     let isDrawing = false;
+    const visionTask=document.getElementById('visionTask');
+    const digitAccuracy={{ digit_accuracy | tojson }};
+    function resetVisionResult(){
+        document.getElementById('topLabelVi').textContent='Chờ nhận diện...';
+        document.getElementById('topLabelEn').textContent=visionTask.value==='digits'?'Vẽ hoặc tải ảnh một chữ số 0–9':'Vui lòng vẽ nét hoặc tải ảnh để bắt đầu';
+        document.getElementById('topConfidence').textContent='--%';
+        document.getElementById('probBarsContainer').replaceChildren();
+        showVisionError('');
+    }
+    visionTask.addEventListener('change',()=>{
+        const digits=visionTask.value==='digits';
+        document.getElementById('drawHint').textContent=digits?'Viết rõ một chữ số từ 0 đến 9 ở giữa bảng. Mỗi lần nhận diện một chữ số.':'Vẽ nét đơn giản của sản phẩm (Áo, quần, giày, túi xách, đầm...)';
+        document.getElementById('visionAccuracy').textContent=digits?
+            (digitAccuracy===null?'CNN · MNIST':'MNIST: '+(digitAccuracy*100).toFixed(2)+'%'):'Độ chính xác: 91.67%';
+        resetVisionResult();
+    });
 
     // Thiết lập bút vẽ
     ctx.fillStyle = "#ffffff";
@@ -139,7 +163,7 @@
         const rect = canvas.getBoundingClientRect();
         const clientX = e.touches ? e.touches[0].clientX : e.clientX;
         const clientY = e.touches ? e.touches[0].clientY : e.clientY;
-        return { x: clientX - rect.left, y: clientY - rect.top };
+        return { x: (clientX-rect.left)*canvas.width/rect.width, y: (clientY-rect.top)*canvas.height/rect.height };
     }
 
     function startDraw(e) {
@@ -174,6 +198,7 @@
     document.getElementById("btnClearCanvas").addEventListener("click", () => {
         ctx.fillStyle = "#ffffff";
         ctx.fillRect(0, 0, canvas.width, canvas.height);
+        resetVisionResult();
     });
 
     // Hàm hiển thị kết quả
@@ -212,6 +237,7 @@
     async function recognize(options){
         const buttons=['btnPredictCanvas','btnPredictUpload'].map(id=>document.getElementById(id));
         buttons.forEach(button=>{button.disabled=true;button.setAttribute('aria-busy','true');});
+        visionTask.disabled=true;
         showVisionError('');
         try{
             const resp=await fetch('/api/vision/predict',{method:'POST',...options});
@@ -223,11 +249,12 @@
             showVisionError(error.message);
         }finally{
             buttons.forEach(button=>{button.disabled=false;button.setAttribute('aria-busy','false');});
+            visionTask.disabled=false;
         }
     }
     document.getElementById("btnPredictCanvas").addEventListener("click", async () => {
         const b64 = canvas.toDataURL("image/png");
-        await recognize({headers:{'Content-Type':'application/json'},body:JSON.stringify({image_base64:b64})});
+        await recognize({headers:{'Content-Type':'application/json'},body:JSON.stringify({image_base64:b64,task:visionTask.value})});
     });
 
     // Xử lý xem trước ảnh khi chọn file (Image Preview)
@@ -303,6 +330,7 @@
         }
         const formData = new FormData();
         formData.append("image_file", fileInput.files[0]);
+        formData.append('task',visionTask.value);
 
         await recognize({body:formData});
     });

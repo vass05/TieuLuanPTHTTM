@@ -101,7 +101,8 @@ một dịch vụ từ xa bị treo. Không mô tả bản demo này như hệ t
 
 Các kiểm tra project đã đạt:
 
-- 239 ca kiểm thử backend/API, gồm suy luận SE-CNN đối chiếu trọng số gốc, nét vẽ, ảnh tải lên/PNG trong suốt,
+- 262 ca kiểm thử backend/API, gồm nhận diện chữ số 0–9, tách mô hình chữ số/thời trang, nét trống,
+  checksum trọng số chữ số, suy luận SE-CNN đối chiếu trọng số gốc, nét vẽ, ảnh tải lên/PNG trong suốt,
   ảnh không hợp lệ, nguồn thị trường mặc định, lỗi mạng/dữ liệu cũ, bộ đệm, phiên chưa đóng cửa,
   lịch nghỉ giao dịch, nạp LSTM bằng Keras/PyTorch, đối chiếu suy luận với trọng số gốc,
   trang dự báo và API 1/7/14/30 bước, giải thích nhóm phân loại và hỏi tiếp không thu thập lại hồ sơ,
@@ -120,10 +121,15 @@ Các kiểm tra project đã đạt:
   trả HTTP 200, vẽ Chart.js từ kết quả mô hình, bảng 7 bước, cập nhật 14 bước bằng AJAX,
   desktop/mobile và lỗi JavaScript.
   Ảnh: `reports/project/timeseries_fixed.png`; báo cáo: `reports/project/timeseries_browser_checks.json`.
-- 13 kiểm tra riêng cho trang thị giác: API nét vẽ hết lỗi 503, ảnh tải lên cho cùng kết quả,
+- 19 kiểm tra riêng cho trang thị giác: chuyển chế độ, nhận diện số 3 từ nét vẽ và số 7 từ ảnh,
+  bảng trống, API nét vẽ hết lỗi 503, ảnh tải lên cho cùng kết quả,
   xem trước ảnh, top-5, thông báo lỗi ngay trong trang và desktop/mobile.
   Ảnh: `reports/project/vision_canvas_fixed.png`, `reports/project/vision_upload_fixed.png`;
   báo cáo: `reports/project/vision_browser_checks.json`.
+  Ảnh chế độ chữ số: `reports/project/vision_digit_canvas.png`, `reports/project/vision_digit_upload.png`.
+  CNN MNIST mới của project đạt 99,03% trên 10.000 ảnh kiểm tra chính thức; báo cáo
+  `reports/project/mnist_training.json` có số mẫu train/validation/test, seed, lịch sử và ma trận nhầm lẫn.
+  Đây là đánh giá riêng cho mô hình bổ sung; không thay đổi kết quả thực nghiệm đã lưu trong notebook.
 
 Các số này là kiểm tra phần mềm trên dữ liệu và kịch bản nghiên cứu; không phải
 kết quả đánh giá lâm sàng hoặc tỷ lệ xử lý thành công trên bệnh nhân thực tế.
