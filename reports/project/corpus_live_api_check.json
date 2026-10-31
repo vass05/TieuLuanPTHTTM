@@ -1,0 +1,17 @@
+{
+  "http_status": 200,
+  "documents": 168,
+  "outcome": "ANSWERED",
+  "sources": [
+    "K33"
+  ],
+  "assisted_blocks": 3,
+  "mentions_banana": true,
+  "claims_missing_information": false,
+  "synthesis_events": [
+    {
+      "status": "COMPLETED",
+      "duration_ms": 2870.105900001363
+    }
+  ]
+}

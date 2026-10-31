@@ -28,11 +28,15 @@
     "prediction_trace_shows_real_call_and_cited_explanation",
     "prediction_result_and_flow_restore_after_reload",
     "explicit_demo_uses_model_and_identifies_sample",
+    "pasted_profile_with_parenthesized_dpf_runs_prediction",
+    "pasted_profile_after_demo_is_not_labelled_as_sample",
+    "expanded_corpus_answers_banana_with_specific_clickable_source",
+    "expanded_corpus_count_is_visible",
     "new_conversation_resets_ui_without_deleting_history",
     "message_text_does_not_execute_html",
     "clear_own_conversation_history",
     "no_browser_javascript_exceptions"
   ],
-  "passed": 32,
+  "passed": 36,
   "exceptions": []
 }

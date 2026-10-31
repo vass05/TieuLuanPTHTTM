@@ -70,7 +70,10 @@ class AgentsModel:
                 self.documents = load_conversation_documents(experiment_documents,
                     self.root/'knowledge/diabetes_chat_documents.json')
                 extended = load_extended_documents(self.root/'knowledge/diabetes_extended.json')
+                extended += load_extended_documents(self.root/'knowledge/diabetes_expansion.json')
                 self.documents.extend(extended)
+                if len({d['doc_id'] for d in self.documents})!=len(self.documents):
+                    raise ValueError('Duplicate knowledge document ID')
                 self.examples = json.loads((agents / 'examples.json').read_text(encoding='utf-8'))
                 model = core.Ch6MLP()
                 model.load_state_dict(torch.load(model_root / 'diabetes/pima_mlp_state.pt', map_location='cpu', weights_only=True))

@@ -101,9 +101,11 @@ một dịch vụ từ xa bị treo. Không mô tả bản demo này như hệ t
 
 Các kiểm tra project đã đạt:
 
-- 134 ca kiểm thử backend/API, gồm nạp artifact, đối chiếu chỉ mục gốc với notebook, chat nhiều lượt, ngữ cảnh,
+- 171 ca kiểm thử backend/API, gồm đọc hồ sơ nhiều dòng có tên viết tắt trong ngoặc, nạp artifact,
+  đối chiếu chỉ mục gốc với notebook, chat nhiều lượt, ngữ cảnh,
   thiếu bằng chứng, lỗi công cụ, dữ liệu bị sửa, tách biệt phiên và lưu trữ tác vụ.
-- 32 kiểm tra trình duyệt trên desktop/mobile, gồm thu thập chỉ số, chạy MLP thật, khôi phục kết quả dự đoán,
+- 36 kiểm tra trình duyệt trên desktop/mobile, gồm trả lời câu hỏi chuối từ kho mới, hồ sơ dán sau lượt demo, thu thập chỉ số,
+  chạy MLP thật, khôi phục kết quả dự đoán,
   kéo giãn bằng chuột/phím và lưu tỉ lệ, đúng bố cục trái/phải, màu sắc thống nhất,
   chat dinh dưỡng, chuyển chủ đề, lời chào không gọi công cụ, xem/xóa lịch sử, không tràn ngang và không có
   lỗi JavaScript được quan sát.
@@ -113,10 +115,17 @@ kết quả đánh giá lâm sàng hoặc tỷ lệ xử lý thành công trên 
 
 Giữ các giới hạn từ notebook: đoàn hệ Pima hạn chế, TF-IDF/LSA và đồ thị cục bộ,
 chính sách RL học trong mô phỏng. Neo4j và transformer embedding chưa triển khai.
-Project bổ sung 42 tài liệu từ 37 trang nguồn, 195 thực thể và 140 quan hệ chuyên môn.
-Tổng 573 nút/485 cạnh có cả tài liệu, nguồn và bí danh; không gọi tất cả là thực thể y khoa.
-Dữ liệu và danh mục nguồn ở `knowledge/diabetes_extended.json` và
+Project có 168 tài liệu từ 163 trang nguồn, tăng bốn lần so với 42 tài liệu trước đó.
+Đồ thị có 593 thực thể và 410 quan hệ chuyên môn; tổng 1736 nút/1418 cạnh có cả tài liệu,
+nguồn và 812 bí danh, không gọi tất cả là thực thể y khoa. Thêm 126 tài liệu từ 126 URL
+riêng biệt, có hash trang và trích đoạn nguồn, qua soạn thảo hỗ trợ bằng API, đối chiếu nguồn
+ở lượt riêng và chỉnh sửa biên tập; chưa phải thẩm định lâm sàng.
+Dữ liệu và danh mục nguồn ở `knowledge/diabetes_expansion.json`, `knowledge/diabetes_extended.json` và
 `reports/project/knowledge_summary.json`.
+
+Ảnh minh họa kho mới trả lời đúng trọng tâm câu “Tiểu đường tuýp 2 ăn chuối được không?”:
+`corpus_expansion_chat.png`. Nguồn chọn là tài liệu trái cây cụ thể, không kèm tài liệu
+định nghĩa tuýp 2 khi không cần thiết.
 
 API tổng hợp Gemini được tích hợp ở server, dùng khóa môi trường/`.env`;
 giao diện không hiển thị khóa hoặc tùy chọn nhà cung cấp. API chỉ nhận câu hỏi

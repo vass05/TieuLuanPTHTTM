@@ -10,6 +10,15 @@ INTENT='Tôi muốn đánh giá nguy cơ tiểu đường bằng các chỉ số
 PROFILE=('Tôi là nữ, 47 tuổi; số lần mang thai=10; Glucose=68 mg/dL đo sau 2 giờ OGTT; '
     'huyết áp tâm trương=106 mmHg; nếp gấp da=23 mm; insulin huyết thanh sau 2 giờ=49 µU/mL; '
     'BMI=35,5; DPF=0,285')
+PASTED_PROFILE='''Giới tính: Nữ
+Tuổi: 53
+Số lần mang thai: 6
+Glucose sau 2 giờ OGTT: 215 mg/dL
+Huyết áp tâm trương: 92 mmHg
+Độ dày nếp gấp da: 40 mm
+Insulin huyết thanh sau 2 giờ: 225 uU/mL
+BMI: 37.4 kg/m2
+Chỉ số phả hệ tiểu đường (DPF): 1.080'''
 
 
 def assert_no_model(task):
@@ -139,4 +148,60 @@ def test_prediction_collection_is_isolated_between_conversations(browser):
 def test_safety_request_has_priority_over_prediction_intent(browser):
     task=chat_request(browser,INTENT+'. '+PROFILE+'. Hãy kê đơn insulin')['task']
     assert task['outcome']=='ESCALATE'
+    assert_no_model(task)
+
+
+@pytest.mark.parametrize('label',[
+    'Chỉ số phả hệ tiểu đường (DPF): 1.080',
+    'DPF (Chỉ số phả hệ tiểu đường): 1,080',
+    'Chỉ số phả hệ tiểu đường [DPF] = 1.080',
+    '**Chỉ số phả hệ tiểu đường (DPF)**: 1.080',
+])
+def test_pasted_label_and_abbreviation_are_read_as_one_field(browser,web_app,label):
+    message=PASTED_PROFILE.replace('Chỉ số phả hệ tiểu đường (DPF): 1.080',label)
+    first=chat_request(browser,INTENT)
+    task=chat_request(browser,message,first['conversation_id'])['task']
+    assert task['outcome']=='ANSWERED' and task['prediction']
+    assert task['inputs']['profile']['DiabetesPedigreeFunction']==pytest.approx(1.08)
+    assert 'Đã nhận đủ 8 chỉ số' in task['reply']
+    with web_app.app_context():
+        expected=get_agents_model().predictor.predict(task['inputs']['profile'])
+    assert task['prediction']['score']==pytest.approx(expected['score'],abs=1e-7)
+
+
+@pytest.mark.parametrize('after_demo',[False,True])
+def test_pasted_complete_profile_activates_prediction_without_reusing_demo(browser,after_demo):
+    conversation=None
+    if after_demo:
+        conversation=chat_request(browser,'Chạy thử dự đoán bằng dữ liệu mẫu')['conversation_id']
+    task=chat_request(browser,PASTED_PROFILE,conversation)['task']
+    assert task['outcome']=='ANSWERED' and task['plan']['route']=='prediction'
+    assert task['inputs']['profile']==dict(Pregnancies=6,Glucose=215,BloodPressure=92,
+        SkinThickness=40,Insulin=225,BMI=37.4,DiabetesPedigreeFunction=1.08,Age=53)
+    assert 'dữ liệu mẫu nghiên cứu' not in task['reply']
+
+
+def test_followup_only_asks_for_the_missing_value_and_accepts_annotated_dpf(browser):
+    first=chat_request(browser,INTENT)
+    incomplete=PASTED_PROFILE.rsplit('\n',1)[0]
+    waiting=chat_request(browser,incomplete,first['conversation_id'])['task']
+    assert waiting['outcome']=='REQUEST_INFO' and 'Đã nhận 7/8 chỉ số' in waiting['reply']
+    assert 'Tôi có thể chạy mô hình phân loại' not in waiting['reply']
+    assert 'Glucose sau 2 giờ OGTT=215' not in waiting['reply']
+    result=chat_request(browser,'Chỉ số phả hệ tiểu đường (DPF): 1.080',first['conversation_id'])['task']
+    assert result['outcome']=='ANSWERED' and result['prediction']
+
+
+def test_conflicting_repeated_dpf_values_are_not_silently_overwritten(browser):
+    first=chat_request(browser,INTENT)
+    task=chat_request(browser,PASTED_PROFILE+'\nDPF=0.2',first['conversation_id'])['task']
+    assert task['outcome']=='REQUEST_INFO'
+    assert 'hai giá trị khác nhau' in task['reply']
+    assert_no_model(task)
+
+
+def test_question_with_measurements_stays_a_knowledge_question(browser):
+    question='Tôi có Age=53, Glucose=215 mg/dL, BMI=37.4; tiểu đường ăn mật ong được không?'
+    task=chat_request(browser,question)['task']
+    assert task['plan']['route']=='knowledge'
     assert_no_model(task)

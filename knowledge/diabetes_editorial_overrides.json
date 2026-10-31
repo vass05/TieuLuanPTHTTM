@@ -1,0 +1,328 @@
+{
+  "description": "Editorial corrections to source-backed expansion summaries and graph triples. Applied by the build script after the automated source check; not clinical validation.",
+  "documents": {
+    "K33": {
+      "title": "Tiểu đường có ăn chuối được không?",
+      "aliases": [
+        "ăn chuối",
+        "chuối được không",
+        "khẩu phần chuối",
+        "lượng carbohydrate trong trái cây"
+      ],
+      "summary_vi": "Người tiểu đường có thể ăn chuối trong kế hoạch ăn phù hợp, không cần kiêng chuối chỉ vì có vị ngọt. Chuối vẫn cung cấp carbohydrate nên cần tính lượng ăn cùng các thực phẩm khác trong bữa. Nguồn Diabetes UK nêu chuối là một ví dụ về trái cây và nhấn mạnh kiểm soát khẩu phần, phân bổ lượng trái cây trong ngày. Ưu tiên trái cây nguyên quả hơn việc uống nhiều nước ép."
+    },
+    "K35": {
+      "summary_vi": "Nhãn thực phẩm giúp xem thành phần dinh dưỡng và so sánh sản phẩm. Tại Anh, một số nhãn mặt trước dùng màu đèn giao thông để thể hiện chất béo, đường và muối; cách trình bày ở nơi khác có thể khác. Khi chọn thực phẩm, cần xem tổng carbohydrate, kích thước khẩu phần và danh sách nguyên liệu, thay vì chỉ nhìn lời quảng cáo hoặc lượng đường."
+    },
+    "K39": {
+      "facts": [
+        [
+          "Ăn uống lành mạnh",
+          "cần chú ý",
+          "Chất lượng và lượng ăn"
+        ],
+        [
+          "Gia đình",
+          "có thể hỗ trợ",
+          "Thói quen ăn uống"
+        ]
+      ]
+    },
+    "K40": {
+      "facts": [
+        [
+          "Chuẩn bị bữa ăn",
+          "có thể thực hiện bằng",
+          "Nấu theo mẻ"
+        ],
+        [
+          "Hạt không muối",
+          "là lựa chọn",
+          "Ăn nhẹ"
+        ]
+      ]
+    },
+    "K41": {
+      "summary_vi": "Duy trì đủ nước hỗ trợ điều hòa thân nhiệt, tiêu hóa và hoạt động của cơ thể. Nước cũng có thể đến từ rau và trái cây. Có thể tạo thói quen uống nước đều đặn hoặc thêm hương vị từ trái cây để dễ duy trì hơn. Khi thay đồ uống ngọt bằng nước, cần tiếp tục chú ý tổng thể chế độ ăn và kế hoạch chăm sóc của mình.",
+      "facts": [
+        [
+          "Đủ nước",
+          "hỗ trợ",
+          "Điều hòa thân nhiệt"
+        ],
+        [
+          "Rau và trái cây",
+          "cung cấp",
+          "Một phần nước cho cơ thể"
+        ]
+      ]
+    },
+    "K42": {
+      "facts": [
+        [
+          "Ăn chay thuần thực vật",
+          "loại trừ",
+          "Thực phẩm từ động vật"
+        ],
+        [
+          "Ăn chay khi có bệnh thận",
+          "cần chú ý",
+          "Kali và phốt pho"
+        ]
+      ]
+    },
+    "K43": {
+      "facts": [
+        [
+          "Chất béo không bão hòa",
+          "hỗ trợ",
+          "Sức khỏe tim mạch"
+        ],
+        [
+          "Chất béo bão hòa",
+          "nên hạn chế trong",
+          "Chế độ ăn"
+        ]
+      ]
+    },
+    "K44": {
+      "facts": [
+        [
+          "Nhãn thực phẩm",
+          "cung cấp",
+          "Tổng carbohydrate"
+        ],
+        [
+          "Tổng carbohydrate",
+          "bao gồm",
+          "Đường, tinh bột và chất xơ"
+        ]
+      ]
+    },
+    "K49": {
+      "facts": [
+        [
+          "Carbohydrate",
+          "được phân hủy thành",
+          "Glucose"
+        ],
+        [
+          "Ngũ cốc nguyên hạt",
+          "cung cấp",
+          "Chất xơ"
+        ]
+      ]
+    },
+    "K63": {
+      "summary_vi": "Gliclazide là thuốc kê đơn điều trị tiểu đường tuýp 2, giúp tuyến tụy giải phóng thêm insulin để hạ đường huyết. Thuốc có dạng viên và có thể dùng cùng thuốc khác theo chỉ định. Hạ đường huyết là nguy cơ cần lưu ý, nhất là khi ăn uống không đều. Liều và lịch dùng cần theo đơn; nên báo bác sĩ hoặc dược sĩ nếu có tác dụng không mong muốn."
+    },
+    "K64": {
+      "summary_vi": "Sitagliptin là thuốc kê đơn dùng trong điều trị tiểu đường tuýp 2. Thuốc hỗ trợ cơ thể tăng lượng insulin để giảm đường huyết và có thể được phối hợp với các thuốc khác. Việc lựa chọn và dùng thuốc cần theo đánh giá của bác sĩ. Nếu có tác dụng phụ hoặc vấn đề khi dùng thuốc, hãy trao đổi với bác sĩ hoặc dược sĩ thay vì tự thay đổi đơn."
+    },
+    "K65": {
+      "summary_vi": "Linagliptin là thuốc kê đơn dùng để điều trị tiểu đường tuýp 2, hỗ trợ tăng insulin và giảm đường huyết. Thuốc có thể được dùng cùng những thuốc tiểu đường khác. Không phải ai cũng phù hợp với cùng một thuốc hoặc cách phối hợp, vì vậy cần tuân theo đơn và thông báo bệnh kèm cũng như tác dụng không mong muốn cho bác sĩ hoặc dược sĩ."
+    },
+    "K66": {
+      "summary_vi": "Alogliptin là thuốc kê đơn điều trị tiểu đường tuýp 2, giúp tăng insulin để làm giảm đường huyết. Thuốc có thể được kê phối hợp khi việc kiểm soát đường huyết cần thêm hỗ trợ. Người dùng cần theo đúng chỉ định và báo các tác dụng không mong muốn. Cách lựa chọn, phối hợp và liều dùng thuộc kế hoạch điều trị cá nhân do bác sĩ đánh giá."
+    },
+    "K67": {
+      "summary_vi": "Dapagliflozin là thuốc kê đơn giúp cơ thể đào thải bớt glucose qua nước tiểu. Thuốc được sử dụng trong tiểu đường tuýp 2 và trong một số trường hợp suy tim hoặc bệnh thận mạn tính. Việc có phù hợp hay không cần được bác sĩ đánh giá theo bệnh và thuốc đang dùng. Không tự bắt đầu hay thay đổi thuốc chỉ dựa trên thông tin chung."
+    },
+    "K68": {
+      "summary_vi": "Empagliflozin là thuốc kê đơn giúp giảm đường huyết bằng cách tăng đào thải glucose qua nước tiểu. Thuốc có thể được dùng cho tiểu đường tuýp 2, suy tim hoặc bệnh thận mạn tính theo chỉ định phù hợp. Cần dùng theo kế hoạch của bác sĩ, đồng thời báo tác dụng phụ và các bệnh kèm để được theo dõi an toàn."
+    },
+    "K69": {
+      "summary_vi": "Semaglutide thuộc nhóm thuốc tác động lên thụ thể GLP-1. Tùy sản phẩm và chỉ định, thuốc có thể được dùng để hỗ trợ quản lý tiểu đường tuýp 2 hoặc điều trị béo phì. Thuốc có tác dụng làm giảm cảm giác thèm ăn và hỗ trợ kiểm soát đường huyết. Đây là thuốc kê đơn, cần được lựa chọn và theo dõi bởi nhân viên y tế.",
+      "aliases": [
+        "semaglutide",
+        "Ozempic",
+        "Rybelsus",
+        "Wegovy"
+      ],
+      "title": "Semaglutide"
+    },
+    "K70": {
+      "summary_vi": "Liraglutide là thuốc thuộc nhóm tác động lên thụ thể GLP-1, được dùng theo chỉ định cho điều trị béo phì hoặc quản lý tiểu đường tuýp 2 tùy sản phẩm. Thuốc hỗ trợ giảm cảm giác thèm ăn và kiểm soát đường huyết. Không nên tự chọn thuốc chỉ vì muốn giảm cân; cách sử dụng và theo dõi phải theo kế hoạch điều trị của bác sĩ.",
+      "aliases": [
+        "liraglutide",
+        "Saxenda",
+        "thuoc liraglutide"
+      ],
+      "title": "Liraglutide"
+    },
+    "K71": {
+      "summary_vi": "Tirzepatide là thuốc tác động lên các thụ thể GIP và GLP-1. Thuốc được kê để quản lý tiểu đường tuýp 2 hoặc điều trị béo phì theo chỉ định phù hợp. Tác dụng gồm giảm cảm giác thèm ăn và hỗ trợ kiểm soát đường huyết. Thuốc cần đi cùng kế hoạch chăm sóc và theo dõi, thay vì tự sử dụng hoặc thay đổi liều.",
+      "aliases": [
+        "tirzepatide",
+        "Mounjaro",
+        "thuoc tirzepatide"
+      ],
+      "title": "Tirzepatide"
+    },
+    "K72": {
+      "summary_vi": "Insulin hai pha phối hợp insulin tác dụng ngắn hoặc nhanh với insulin tác dụng trung gian trong cùng chế phẩm. Sự phối hợp hỗ trợ kiểm soát đường huyết ở những khoảng thời gian khác nhau. Thuốc được kê tùy nhu cầu điều trị; loại insulin, thời điểm sử dụng và cách theo dõi cần theo hướng dẫn riêng của bác sĩ hoặc điều dưỡng tiểu đường.",
+      "aliases": [
+        "insulin hai pha",
+        "insulin tron san",
+        "biphasic insulin"
+      ],
+      "title": "Insulin hai pha"
+    },
+    "K73": {
+      "summary_vi": "Insulin tác dụng trung gian, còn gọi là isophane hoặc NPH, giúp cung cấp insulin trong một khoảng thời gian kéo dài hơn insulin tác dụng ngắn. Thuốc hỗ trợ cơ thể sử dụng glucose và quản lý đường huyết. Việc chọn loại insulin, phối hợp với các loại khác và lịch tiêm phải theo kế hoạch điều trị cá nhân, không tự suy ra từ mô tả chung.",
+      "aliases": [
+        "insulin tac dung trung gian",
+        "NPH insulin",
+        "isophane insulin"
+      ],
+      "title": "Insulin tác dụng trung gian"
+    },
+    "K74": {
+      "summary_vi": "Insulin tác dụng kéo dài cung cấp insulin nền để hỗ trợ kiểm soát đường huyết trong ngày và ban đêm. Thuốc có nhiều sản phẩm với đặc điểm sử dụng khác nhau. Nó có thể là một phần của phác đồ phối hợp insulin. Người bệnh cần làm theo loại thuốc, lịch dùng và hướng dẫn theo dõi đã được kê, không tự hoán đổi giữa các sản phẩm.",
+      "aliases": [
+        "insulin tac dung keo dai",
+        "insulin nen",
+        "basal insulin",
+        "Lantus",
+        "Tresiba"
+      ],
+      "title": "Insulin tác dụng kéo dài"
+    },
+    "K75": {
+      "summary_vi": "Insulin tác dụng nhanh giúp kiểm soát mức tăng đường huyết liên quan đến bữa ăn chứa carbohydrate. Thuốc bắt đầu hoạt động nhanh và có thể được sử dụng trong các kế hoạch điều trị tiểu đường khác nhau. Thời điểm dùng cụ thể phụ thuộc sản phẩm và kế hoạch của bác sĩ hoặc điều dưỡng; không áp dụng một lịch tiêm chung cho tất cả mọi người."
+    },
+    "K76": {
+      "summary_vi": "Insulin tác dụng ngắn hỗ trợ kiểm soát đường huyết quanh bữa ăn và có đặc điểm khởi phát, kéo dài khác với insulin tác dụng nhanh. Việc sử dụng cần phối hợp với thời điểm ăn và kế hoạch theo dõi đường huyết. Bác sĩ hoặc điều dưỡng tiểu đường hướng dẫn lịch dùng phù hợp với đúng chế phẩm; không tự thay thế giữa hai loại."
+    },
+    "K78": {
+      "summary_vi": "Một số thuốc có thể làm tăng hoặc giảm đường huyết khi dùng cùng insulin tác dụng kéo dài. Hãy cho bác sĩ hoặc dược sĩ biết các thuốc, thảo dược và thực phẩm bổ sung đang dùng. Nếu cần thay đổi kế hoạch insulin, nhân viên y tế sẽ hướng dẫn; không tự điều chỉnh liều chỉ vì bắt đầu hoặc ngừng một sản phẩm khác."
+    },
+    "K81": {
+      "summary_vi": "Cảm biến theo dõi glucose liên tục ghi nhận mức glucose trong ngày và đêm, giúp giảm số lần phải chích đầu ngón tay. Dữ liệu được gửi đến thiết bị nhận như điện thoại và có thể chia sẻ với đội ngũ chăm sóc. Cách kiểm tra đối chiếu và xử lý khi triệu chứng không phù hợp với số đo cần theo hướng dẫn thiết bị và nhân viên y tế."
+    },
+    "K84": {
+      "summary_vi": "Khi chọn CGM, cần phân biệt thiết bị gửi dữ liệu liên tục và thiết bị cần quét để đọc, đồng thời xem tính năng cảnh báo, chia sẻ dữ liệu và khả năng tương thích. Không phải mọi CGM đều có cùng tính năng hoặc loại bỏ mọi lần đo đầu ngón tay. Lựa chọn nên phù hợp nhu cầu và kế hoạch chăm sóc của người dùng."
+    },
+    "K87": {
+      "summary_vi": "Bút tiêm insulin thông minh có thể kết nối ứng dụng để lưu thời gian và lượng insulin đã dùng, nhắc lịch và hỗ trợ tính toán theo cài đặt điều trị. Thiết bị giúp tổ chức thông tin về bữa ăn, đường huyết và insulin còn hoạt động. Các phép tính hỗ trợ phải dựa trên cấu hình và hướng dẫn của đội ngũ chăm sóc, không mặc nhiên bảo đảm liều phù hợp trong mọi tình huống."
+    },
+    "K88": {
+      "summary_vi": "Máy bơm insulin là một lựa chọn hỗ trợ kiểm soát đường huyết, không phải lựa chọn bắt buộc cho mọi người. Người dùng hoặc người chăm sóc cần được hướng dẫn theo dõi glucose, vận hành thiết bị và nhận ra lỗi truyền insulin. Quyết định sử dụng cần cân nhắc sở thích, khả năng tự chăm sóc và kế hoạch với đội ngũ y tế."
+    },
+    "K93": {
+      "summary_vi": "Ceton là các chất được tạo ra khi cơ thể phân hủy chất béo. Ceton tích tụ ở mức cao có thể dẫn đến nhiễm toan ceton do tiểu đường, một tình trạng nguy hiểm. Việc kiểm tra ceton, khoảng mục tiêu và cách xử lý khi kết quả cao cần được đội ngũ y tế hướng dẫn. Nếu có dấu hiệu nghi ngờ nhiễm toan ceton, cần được đánh giá y tế kịp thời."
+    },
+    "K98": {
+      "summary_vi": "Người đã mắc tiểu đường thai kỳ cần kiểm tra lại tiểu đường sau sinh theo lịch của bác sĩ; nguồn NIDDK nhấn mạnh không muộn hơn 12 tuần. Dù đường huyết trở về bình thường, nguy cơ tiểu đường tuýp 2 về sau vẫn cao hơn. Duy trì theo dõi định kỳ và lối sống phù hợp giúp chăm sóc sức khỏe lâu dài."
+    },
+    "K103": {
+      "summary_vi": "Điều trị tiểu đường thai kỳ nhằm kiểm soát đường huyết để bảo vệ mẹ và thai nhi. Kế hoạch có thể gồm ăn uống, vận động phù hợp, theo dõi đường huyết và insulin nếu được chỉ định. Mục tiêu và cách xử lý phải được đội ngũ sản khoa, tiểu đường hướng dẫn cho từng thai phụ; không tự áp mục tiêu của người khác."
+    },
+    "K105": {
+      "summary_vi": "Nuôi con bằng sữa mẹ có lợi cho cả mẹ và bé và có thể hỗ trợ quá trình điều hòa glucose của mẹ sau thai kỳ. Việc cho con bú có thể làm đường huyết khó dự đoán hơn, nên cần kế hoạch theo dõi. Hãy rà soát từng thuốc tiểu đường với bác sĩ hoặc dược sĩ để chọn cách dùng phù hợp khi cho con bú."
+    },
+    "K109": {
+      "summary_vi": "Quản lý đường huyết trước và trong thai kỳ giúp giảm nguy cơ cho mẹ và thai nhi. Đường huyết cao trong những tuần đầu có thể ảnh hưởng các cơ quan đang hình thành của bé. Người đã có tiểu đường cần chuẩn bị kế hoạch mang thai, theo dõi sát và để đội ngũ y tế hướng dẫn mọi điều chỉnh thuốc theo giai đoạn."
+    },
+    "K112": {
+      "summary_vi": "Bệnh thần kinh ngoại biên do tiểu đường thường ảnh hưởng bàn chân và có thể gây đau, tê hoặc giảm khả năng cảm nhận tổn thương. Quản lý đường huyết và chăm sóc bàn chân hỗ trợ giảm nguy cơ tổn thương thêm. Không nên chờ đến khi đau rõ mới kiểm tra, vì mất cảm giác có thể khiến vết thương bị bỏ qua."
+    },
+    "K115": {
+      "summary_vi": "Hạ đường huyết có thể diễn biến nhanh, gây run, tim đập nhanh, lo lắng hoặc lú lẫn. Người còn tỉnh và nuốt an toàn cần xử trí sớm theo kế hoạch đã được hướng dẫn. Nếu người bệnh bất tỉnh, co giật hoặc không nuốt được, không cho ăn uống và cần hỗ trợ cấp cứu; người chăm sóc chỉ dùng glucagon theo hướng dẫn đã được đào tạo."
+    },
+    "K126": {
+      "summary_vi": "Hạ đường huyết nặng là tình trạng người bệnh cần người khác hỗ trợ, có thể gây lú lẫn, co giật hoặc bất tỉnh. Cần hỗ trợ cấp cứu, không cho ăn uống khi không thể nuốt an toàn. Người có nguy cơ nên cùng bác sĩ chuẩn bị kế hoạch xử trí và hướng dẫn người chăm sóc sử dụng glucagon đã được kê khi cần."
+    },
+    "K127": {
+      "summary_vi": "Hạ đường huyết có thể gây run, đổ mồ hôi, tim đập nhanh và khó tập trung. Người còn tỉnh, nuốt an toàn cần kiểm tra và dùng carbohydrate tác dụng nhanh theo kế hoạch xử trí đã được hướng dẫn, sau đó kiểm tra lại. Nếu bất tỉnh, co giật hoặc không nuốt được, không cho ăn uống; cần hỗ trợ cấp cứu và kế hoạch glucagon phù hợp."
+    },
+    "K129": {
+      "facts": [
+        [
+          "Đường huyết cao kéo dài",
+          "có thể gây",
+          "Tổn thương mạch máu và thần kinh"
+        ],
+        [
+          "Chăm sóc tiểu đường",
+          "hỗ trợ trì hoãn",
+          "Biến chứng"
+        ]
+      ]
+    },
+    "K130": {
+      "facts": [
+        [
+          "Bệnh võng mạc do tiểu đường",
+          "liên quan đến",
+          "Tổn thương mạch máu võng mạc"
+        ],
+        [
+          "Quản lý đường huyết",
+          "hỗ trợ giảm nguy cơ",
+          "Bệnh võng mạc"
+        ]
+      ]
+    },
+    "K131": {
+      "facts": [
+        [
+          "Tiểu đường",
+          "tăng nguy cơ",
+          "Bệnh tim mạch"
+        ],
+        [
+          "Tiểu đường",
+          "có thể gây",
+          "Bệnh thận mạn tính"
+        ]
+      ]
+    },
+    "K132": {
+      "summary_vi": "Đường huyết dưới 70 mg/dL thường được xem là thấp và cần chú ý xử trí. Carbohydrate tác dụng nhanh được dùng khi người bệnh còn tỉnh và nuốt an toàn, theo kế hoạch đã được hướng dẫn. Không cho ăn uống nếu người bệnh bất tỉnh hoặc không nuốt được; hạ đường huyết nặng cần hỗ trợ khẩn cấp.",
+      "facts": [
+        [
+          "Hạ đường huyết",
+          "có thể xảy ra dưới",
+          "70 mg/dL"
+        ],
+        [
+          "Carbohydrate tác dụng nhanh",
+          "được dùng trong xử trí",
+          "Hạ đường huyết"
+        ]
+      ]
+    },
+    "K133": {
+      "facts": [
+        [
+          "Trẻ em",
+          "cũng có thể mắc",
+          "Tiểu đường tuýp 2"
+        ],
+        [
+          "Tiểu đường tuýp 2",
+          "liên quan đến",
+          "Insulin hoạt động kém hiệu quả"
+        ]
+      ]
+    },
+    "K134": {
+      "facts": [
+        [
+          "Bài tập kỵ khí",
+          "hỗ trợ",
+          "Sức khỏe tim mạch"
+        ],
+        [
+          "Nâng tạ",
+          "là một dạng",
+          "Bài tập kỵ khí"
+        ]
+      ]
+    },
+    "K135": {
+      "summary_vi": "Việc ăn quanh buổi tập cần cân nhắc mức đường huyết, thuốc đang dùng và kiểu vận động. Theo dõi đường huyết giúp hiểu phản ứng của cơ thể. Khi cần ăn trước tập, nguồn ADA gợi ý phối hợp thực phẩm chứa carbohydrate và protein, ưu tiên thực phẩm ít chế biến. Hãy xây dựng kế hoạch ăn và vận động phù hợp cùng đội ngũ chăm sóc."
+    }
+  }
+}

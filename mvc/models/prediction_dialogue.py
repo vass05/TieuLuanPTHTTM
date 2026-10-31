@@ -31,12 +31,16 @@ def fold(text):
 
 
 def parse_inputs(message):
-    text=fold(message)
+    text=fold(message).replace('**','').replace('`','')
     values,units,issues,invalid={}, {}, [], set()
     locations=[]
     glucose_segments=[]
     for key,(_,aliases,_) in FIELDS.items():
-        pattern=r'(?<!\w)(?:'+'|'.join(re.escape(a) for a in sorted(aliases,key=len,reverse=True))+r')(?!\w)'
+        names='|'.join(re.escape(a) for a in sorted(aliases,key=len,reverse=True))
+        # A label and its parenthesized abbreviation are one field token:
+        # "Chỉ số phả hệ tiểu đường (DPF): 1.080", not two unrelated labels.
+        annotation=r'(?:[ \t]*(?:\([ \t]*(?:'+names+r')[ \t]*\)|\[[ \t]*(?:'+names+r')[ \t]*\]))?'
+        pattern=r'(?<!\w)(?:'+names+r')(?!\w)'+annotation
         for match in re.finditer(pattern,text):
             locations.append((match.start(),match.end(),key))
     locations.sort()
@@ -97,9 +101,13 @@ def prediction_request(message,previous,examples):
     educational=any(p in normalized for p in ('mo hinh la gi','mo hinh du doan la gi','hoat dong the nao'))
     demo=explicit and any(p in normalized for p in ('du lieu mau','ho so mau','vi du mau'))
     parsed=parse_inputs(message)
+    # A pasted, labelled profile is itself a request to process those inputs.
+    # Start fresh after a completed demo, never inherit its sample measurements.
+    structured=(len(parsed['values'])>=3 and len(re.findall(r'[:=]',message))>=3
+        and not re.search(r'\?|\b(?:la gi|nen an|an duoc|duoc khong|tai sao|vi sao)\b',normalized+' '+message))
     continuation=pending and (bool(parsed['values'] or parsed['units'] or parsed['sex'] or parsed['sex_unknown'] or parsed['invalid'] or parsed['ogtt']) or
         any(p in normalized for p in ('khong biet','khong co chi so','khong co ket qua','tiep tuc','thu lai')))
-    if not (cancel and pending) and not (explicit and not educational) and not continuation:
+    if not (cancel and pending) and not (explicit and not educational) and not continuation and not structured:
         return None
     state=copy.deepcopy(last) if pending else dict(profile={},units={},sex=None,ogtt=False,active=True,demo=False)
     if cancel:
@@ -152,20 +160,25 @@ def prediction_request(message,previous,examples):
     if ready:
         reply=None
     else:
-        lines=['Tôi có thể chạy mô hình phân loại nghiên cứu khi có đủ dữ liệu phù hợp.']
+        lines=['Chưa thể chạy dự đoán: cần bổ sung hoặc làm rõ thông tin dưới đây.']
         if profile:
-            lines.append('Đã nhận: '+', '.join(FIELDS[k][0]+'='+format(v,'g') for k,v in profile.items())+'.')
-        if issues:lines.extend(issues)
+            received='Đã nhận '+str(len(profile))+'/8 chỉ số.'
+            if len(parsed['values'])<=3 and parsed['values']:
+                received+=' Vừa cập nhật: '+', '.join(FIELDS[k][0]+'='+format(v,'g') for k,v in parsed['values'].items() if k in profile)+'.'
+            lines.append(received)
+        if issues:lines.append('\n'.join('• '+item for item in dict.fromkeys(issues)))
         if missing:lines.append('Cần bổ sung hoặc xác nhận:\n'+'\n'.join('• '+item for item in missing))
-        lines.append('Bạn có thể gửi nhiều chỉ số trong một tin nhắn, ví dụ “Tôi là nữ, 47 tuổi, BMI=35,5”. '
-            'DPF là chỉ số phả hệ có trong dữ liệu nghiên cứu, không phải câu trả lời có/không về người thân mắc bệnh. '
-            'Không biết chỉ số nào thì không tự đoán; có thể gõ “Chạy thử dự đoán bằng dữ liệu mẫu”.')
+        if not profile:
+            lines.append('Bạn có thể gửi các chỉ số có nhãn trong một tin nhắn hoặc bổ sung từng phần.')
+        if 'DiabetesPedigreeFunction' not in profile:
+            lines.append('Nếu có chỉ số phả hệ trong hồ sơ, hãy gửi “DPF=giá trị của bạn”. Không biết chỉ số nào thì không tự đoán; '
+                'chỉ dùng “Thử dữ liệu mẫu” khi muốn xem ví dụ.')
         reply='\n\n'.join(lines)
     return dict(state=state,ready=ready,outcome='ANSWERED' if ready else 'REQUEST_INFO',missing=missing,issues=issues,reply=reply)
 
 
 def prediction_reply(prediction,demo):
-    return ('Kết quả chạy thử trên dữ liệu mẫu nghiên cứu.\n' if demo else 'Kết quả từ các chỉ số bạn cung cấp.\n')+(
+    return ('Kết quả chạy thử trên dữ liệu mẫu nghiên cứu.\n' if demo else 'Đã nhận đủ 8 chỉ số và chạy mô hình với hồ sơ bạn vừa gửi.\n')+(
         f"Điểm mô hình: {prediction['score']:.4f} trên thang 0–1. "
         f"Ngưỡng phân loại: {prediction['threshold']:.2f}. "
         f"Nhãn nghiên cứu: {prediction['label']} "

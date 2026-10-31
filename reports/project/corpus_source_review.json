@@ -1,0 +1,557 @@
+{
+  "documents": 126,
+  "unique_source_pages": 126,
+  "method": "Two-pass model-assisted drafting and source checking; exact supporting quotations and metadata validated in code; not clinical validation.",
+  "editorial_corrections": [
+    "K103",
+    "K105",
+    "K109",
+    "K112",
+    "K115",
+    "K126",
+    "K127",
+    "K129",
+    "K130",
+    "K131",
+    "K132",
+    "K133",
+    "K134",
+    "K135",
+    "K33",
+    "K35",
+    "K39",
+    "K40",
+    "K41",
+    "K42",
+    "K43",
+    "K44",
+    "K49",
+    "K63",
+    "K64",
+    "K65",
+    "K66",
+    "K67",
+    "K68",
+    "K69",
+    "K70",
+    "K71",
+    "K72",
+    "K73",
+    "K74",
+    "K75",
+    "K76",
+    "K78",
+    "K81",
+    "K84",
+    "K87",
+    "K88",
+    "K93",
+    "K98"
+  ],
+  "review": [
+    {
+      "doc_id": "K33",
+      "changed": true
+    },
+    {
+      "doc_id": "K34",
+      "changed": true
+    },
+    {
+      "doc_id": "K35",
+      "changed": true
+    },
+    {
+      "doc_id": "K36",
+      "changed": true
+    },
+    {
+      "doc_id": "K37",
+      "changed": true
+    },
+    {
+      "doc_id": "K38",
+      "changed": true
+    },
+    {
+      "doc_id": "K39",
+      "changed": true
+    },
+    {
+      "doc_id": "K40",
+      "changed": true
+    },
+    {
+      "doc_id": "K41",
+      "changed": true
+    },
+    {
+      "doc_id": "K42",
+      "changed": true
+    },
+    {
+      "doc_id": "K43",
+      "changed": true
+    },
+    {
+      "doc_id": "K44",
+      "changed": true
+    },
+    {
+      "doc_id": "K45",
+      "changed": false
+    },
+    {
+      "doc_id": "K46",
+      "changed": false
+    },
+    {
+      "doc_id": "K47",
+      "changed": false
+    },
+    {
+      "doc_id": "K48",
+      "changed": false
+    },
+    {
+      "doc_id": "K49",
+      "changed": false
+    },
+    {
+      "doc_id": "K50",
+      "changed": false
+    },
+    {
+      "doc_id": "K51",
+      "changed": true
+    },
+    {
+      "doc_id": "K52",
+      "changed": true
+    },
+    {
+      "doc_id": "K53",
+      "changed": true
+    },
+    {
+      "doc_id": "K54",
+      "changed": true
+    },
+    {
+      "doc_id": "K55",
+      "changed": true
+    },
+    {
+      "doc_id": "K56",
+      "changed": true
+    },
+    {
+      "doc_id": "K57",
+      "changed": false
+    },
+    {
+      "doc_id": "K58",
+      "changed": false
+    },
+    {
+      "doc_id": "K59",
+      "changed": false
+    },
+    {
+      "doc_id": "K60",
+      "changed": false
+    },
+    {
+      "doc_id": "K61",
+      "changed": false
+    },
+    {
+      "doc_id": "K62",
+      "changed": false
+    },
+    {
+      "doc_id": "K63",
+      "changed": true
+    },
+    {
+      "doc_id": "K64",
+      "changed": true
+    },
+    {
+      "doc_id": "K65",
+      "changed": true
+    },
+    {
+      "doc_id": "K66",
+      "changed": true
+    },
+    {
+      "doc_id": "K67",
+      "changed": true
+    },
+    {
+      "doc_id": "K68",
+      "changed": true
+    },
+    {
+      "doc_id": "K69",
+      "changed": true
+    },
+    {
+      "doc_id": "K70",
+      "changed": true
+    },
+    {
+      "doc_id": "K71",
+      "changed": true
+    },
+    {
+      "doc_id": "K72",
+      "changed": true
+    },
+    {
+      "doc_id": "K73",
+      "changed": true
+    },
+    {
+      "doc_id": "K74",
+      "changed": true
+    },
+    {
+      "doc_id": "K75",
+      "changed": true
+    },
+    {
+      "doc_id": "K76",
+      "changed": true
+    },
+    {
+      "doc_id": "K77",
+      "changed": true
+    },
+    {
+      "doc_id": "K78",
+      "changed": false
+    },
+    {
+      "doc_id": "K79",
+      "changed": false
+    },
+    {
+      "doc_id": "K80",
+      "changed": false
+    },
+    {
+      "doc_id": "K81",
+      "changed": true
+    },
+    {
+      "doc_id": "K82",
+      "changed": true
+    },
+    {
+      "doc_id": "K83",
+      "changed": true
+    },
+    {
+      "doc_id": "K84",
+      "changed": true
+    },
+    {
+      "doc_id": "K85",
+      "changed": true
+    },
+    {
+      "doc_id": "K86",
+      "changed": true
+    },
+    {
+      "doc_id": "K87",
+      "changed": true
+    },
+    {
+      "doc_id": "K88",
+      "changed": true
+    },
+    {
+      "doc_id": "K89",
+      "changed": true
+    },
+    {
+      "doc_id": "K90",
+      "changed": true
+    },
+    {
+      "doc_id": "K91",
+      "changed": true
+    },
+    {
+      "doc_id": "K92",
+      "changed": true
+    },
+    {
+      "doc_id": "K93",
+      "changed": false
+    },
+    {
+      "doc_id": "K94",
+      "changed": false
+    },
+    {
+      "doc_id": "K95",
+      "changed": false
+    },
+    {
+      "doc_id": "K96",
+      "changed": true
+    },
+    {
+      "doc_id": "K97",
+      "changed": false
+    },
+    {
+      "doc_id": "K98",
+      "changed": false
+    },
+    {
+      "doc_id": "K99",
+      "changed": false
+    },
+    {
+      "doc_id": "K100",
+      "changed": false
+    },
+    {
+      "doc_id": "K101",
+      "changed": false
+    },
+    {
+      "doc_id": "K102",
+      "changed": false
+    },
+    {
+      "doc_id": "K103",
+      "changed": false
+    },
+    {
+      "doc_id": "K104",
+      "changed": false
+    },
+    {
+      "doc_id": "K105",
+      "changed": true
+    },
+    {
+      "doc_id": "K106",
+      "changed": true
+    },
+    {
+      "doc_id": "K107",
+      "changed": true
+    },
+    {
+      "doc_id": "K108",
+      "changed": true
+    },
+    {
+      "doc_id": "K109",
+      "changed": true
+    },
+    {
+      "doc_id": "K110",
+      "changed": true
+    },
+    {
+      "doc_id": "K111",
+      "changed": true
+    },
+    {
+      "doc_id": "K112",
+      "changed": true
+    },
+    {
+      "doc_id": "K113",
+      "changed": false
+    },
+    {
+      "doc_id": "K114",
+      "changed": false
+    },
+    {
+      "doc_id": "K115",
+      "changed": false
+    },
+    {
+      "doc_id": "K116",
+      "changed": false
+    },
+    {
+      "doc_id": "K117",
+      "changed": true
+    },
+    {
+      "doc_id": "K118",
+      "changed": true
+    },
+    {
+      "doc_id": "K119",
+      "changed": true
+    },
+    {
+      "doc_id": "K120",
+      "changed": true
+    },
+    {
+      "doc_id": "K121",
+      "changed": true
+    },
+    {
+      "doc_id": "K122",
+      "changed": true
+    },
+    {
+      "doc_id": "K123",
+      "changed": true
+    },
+    {
+      "doc_id": "K124",
+      "changed": true
+    },
+    {
+      "doc_id": "K125",
+      "changed": true
+    },
+    {
+      "doc_id": "K126",
+      "changed": true
+    },
+    {
+      "doc_id": "K127",
+      "changed": true
+    },
+    {
+      "doc_id": "K128",
+      "changed": true
+    },
+    {
+      "doc_id": "K129",
+      "changed": true
+    },
+    {
+      "doc_id": "K130",
+      "changed": true
+    },
+    {
+      "doc_id": "K131",
+      "changed": true
+    },
+    {
+      "doc_id": "K132",
+      "changed": true
+    },
+    {
+      "doc_id": "K133",
+      "changed": true
+    },
+    {
+      "doc_id": "K134",
+      "changed": true
+    },
+    {
+      "doc_id": "K135",
+      "changed": true
+    },
+    {
+      "doc_id": "K136",
+      "changed": true
+    },
+    {
+      "doc_id": "K137",
+      "changed": true
+    },
+    {
+      "doc_id": "K138",
+      "changed": true
+    },
+    {
+      "doc_id": "K139",
+      "changed": true
+    },
+    {
+      "doc_id": "K140",
+      "changed": true
+    },
+    {
+      "doc_id": "K141",
+      "changed": true
+    },
+    {
+      "doc_id": "K142",
+      "changed": true
+    },
+    {
+      "doc_id": "K143",
+      "changed": true
+    },
+    {
+      "doc_id": "K144",
+      "changed": true
+    },
+    {
+      "doc_id": "K145",
+      "changed": true
+    },
+    {
+      "doc_id": "K146",
+      "changed": true
+    },
+    {
+      "doc_id": "K147",
+      "changed": true
+    },
+    {
+      "doc_id": "K148",
+      "changed": true
+    },
+    {
+      "doc_id": "K149",
+      "changed": true
+    },
+    {
+      "doc_id": "K150",
+      "changed": true
+    },
+    {
+      "doc_id": "K151",
+      "changed": true
+    },
+    {
+      "doc_id": "K152",
+      "changed": true
+    },
+    {
+      "doc_id": "K153",
+      "changed": false
+    },
+    {
+      "doc_id": "K154",
+      "changed": false
+    },
+    {
+      "doc_id": "K155",
+      "changed": false
+    },
+    {
+      "doc_id": "K156",
+      "changed": false
+    },
+    {
+      "doc_id": "K157",
+      "changed": false
+    },
+    {
+      "doc_id": "K158",
+      "changed": false
+    }
+  ]
+}

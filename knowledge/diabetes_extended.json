@@ -111,7 +111,7 @@
     {
       "doc_id": "K16", "topic": "dka", "title": "Nhiễm toan ceton và dấu hiệu nguy hiểm",
       "source_url": "https://www.cdc.gov/diabetes/about/diabetic-ketoacidosis.html",
-      "aliases": ["toan ceton", "toan ketone", "ketone", "ceton", "dka", "hơi thở mùi trái cây", "thở nhanh", "đau bụng"],
+      "aliases": ["nhiễm toan ceton", "toan ceton", "toan ketone", "ketone", "ceton", "dka", "hơi thở mùi trái cây", "thở nhanh", "đau bụng"],
       "summary_vi": "Nhiễm toan ceton là biến chứng nguy hiểm khi cơ thể thiếu insulin và tạo quá nhiều ketone. Thường gặp ở tuýp 1 nhưng tuýp 2 cũng có thể mắc. Biểu hiện có thể gồm khát và tiểu nhiều, rồi buồn nôn, đau bụng, thở nhanh sâu hoặc hơi thở mùi trái cây.\nNếu đang có những dấu hiệu nghi ngờ này, cần được cấp cứu hoặc đánh giá y tế ngay; không chờ chatbot chẩn đoán và không tự điều chỉnh liều insulin để xử lý.",
       "facts": [["Thiếu insulin","có thể dẫn đến","Nhiễm toan ceton"],["Nhiễm toan ceton","liên quan đến","Tích tụ ketone"],["Nhiễm toan ceton","có thể gây","Thở nhanh sâu"],["Nhiễm toan ceton","cần","Đánh giá cấp cứu"]]
     },

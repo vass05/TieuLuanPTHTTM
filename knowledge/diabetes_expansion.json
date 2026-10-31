@@ -1,0 +1,4675 @@
+{
+  "format_version": 1,
+  "reviewed_on": "2026-10-31",
+  "description": "126 additional educational summaries from distinct verified public pages. Automated source checks are not clinical validation.",
+  "documents": [
+    {
+      "doc_id": "K33",
+      "title": "Tiểu đường có ăn chuối được không?",
+      "topic": "fruit_and_diabetes",
+      "summary_vi": "Người tiểu đường có thể ăn chuối trong kế hoạch ăn phù hợp, không cần kiêng chuối chỉ vì có vị ngọt. Chuối vẫn cung cấp carbohydrate nên cần tính lượng ăn cùng các thực phẩm khác trong bữa. Nguồn Diabetes UK nêu chuối là một ví dụ về trái cây và nhấn mạnh kiểm soát khẩu phần, phân bổ lượng trái cây trong ngày. Ưu tiên trái cây nguyên quả hơn việc uống nhiều nước ép.",
+      "aliases": [
+        "ăn chuối",
+        "chuối được không",
+        "khẩu phần chuối",
+        "lượng carbohydrate trong trái cây"
+      ],
+      "facts": [
+        [
+          "chuối lớn",
+          "chứa",
+          "khoảng 30g carbs"
+        ],
+        [
+          "chuối lớn",
+          "tính là",
+          "một phần rưỡi trái cây"
+        ]
+      ],
+      "support_quotes": [
+        "a large banana counts for one and half"
+      ],
+      "source_url": "https://www.diabetes.org.uk/living-with-diabetes/eating/fruit-and-diabetes",
+      "source_title": "Fruit, vegetables and diabetes",
+      "category": "nutrition",
+      "source_sha256": "7f7666e35c98a0852d05b258e6ab5f62a20da0f844b083fa6caf64be37b993a2",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K34",
+      "title": "Chỉ số đường huyết và bệnh tiểu đường",
+      "topic": "glycaemic_index_and_diabetes",
+      "summary_vi": "Chỉ số đường huyết GI thể hiện mức độ làm tăng đường huyết nhanh hay chậm của thực phẩm chứa carbohydrate. Việc lựa chọn thực phẩm có chỉ số GI thấp giúp quản lý ổn định lượng đường trong máu sau khi ăn và hỗ trợ kiểm soát lâu dài. Tổng lượng carbohydrate và kích thước khẩu phần thực tế cũng đóng vai trò quan trọng đối với mức đường huyết.",
+      "aliases": [
+        "chỉ số GI là gì",
+        "thực phẩm chỉ số đường huyết thấp",
+        "cách quản lý đường huyết qua GI",
+        "carb giải phóng chậm",
+        "chỉ số GI và bệnh tiểu đường"
+      ],
+      "facts": [
+        [
+          "chỉ số đường huyết",
+          "đo lường",
+          "tốc độ tăng đường huyết"
+        ],
+        [
+          "thực phẩm GI thấp",
+          "hỗ trợ",
+          "quản lý đường huyết"
+        ]
+      ],
+      "support_quotes": [
+        "The glycaemic index (GI) tells us whether a"
+      ],
+      "source_url": "https://www.diabetes.org.uk/living-with-diabetes/eating/carbohydrates-and-diabetes/glycaemic-index-and-diabetes",
+      "source_title": "Glycaemic index and diabetes",
+      "category": "nutrition",
+      "source_sha256": "6981a4c4f79840240175e21ad773a62d5cdf951bdd073e99057416727b57e326",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K35",
+      "title": "Hiểu nhãn thực phẩm để chọn lựa tốt hơn",
+      "topic": "understanding_food_labels",
+      "summary_vi": "Nhãn thực phẩm giúp xem thành phần dinh dưỡng và so sánh sản phẩm. Tại Anh, một số nhãn mặt trước dùng màu đèn giao thông để thể hiện chất béo, đường và muối; cách trình bày ở nơi khác có thể khác. Khi chọn thực phẩm, cần xem tổng carbohydrate, kích thước khẩu phần và danh sách nguyên liệu, thay vì chỉ nhìn lời quảng cáo hoặc lượng đường.",
+      "aliases": [
+        "đọc nhãn dinh dưỡng",
+        "hệ thống đèn giao thông nhãn thực phẩm",
+        "thông tin carbohydrate trên nhãn",
+        "kiểm tra hàm lượng đường",
+        "hiểu nhãn thực phẩm"
+      ],
+      "facts": [
+        [
+          "nhãn mặt sau",
+          "cung cấp",
+          "thông tin chi tiết carbohydrate"
+        ],
+        [
+          "hệ thống đèn giao thông",
+          "hiển thị",
+          "mức độ chất béo đường muối"
+        ]
+      ],
+      "support_quotes": [
+        "Labels on foods and drinks give essential information,"
+      ],
+      "source_url": "https://www.diabetes.org.uk/living-with-diabetes/eating/food-shopping-for-diabetes/understanding-food-labels",
+      "source_title": "Understanding food labels",
+      "category": "nutrition",
+      "source_sha256": "90702c7bf83f902660daa323006e55724495459308fdaa9bc9046f0ed2f1b69b",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K36",
+      "title": "Bệnh celiac và bệnh tiểu đường",
+      "topic": "coeliac_disease_and_diabetes",
+      "summary_vi": "Bệnh celiac là tình trạng hệ miễn dịch phản ứng với gluten có trong lúa mì, lúa mạch đen và lúa mạch, gây tổn thương niêm mạc ruột non. Bệnh này phổ biến ở người mắc tiểu đường tuýp 1 do cùng cơ chế tự miễn. Phương pháp điều trị là loại bỏ hoàn toàn gluten khỏi chế độ ăn, việc này có thể cải thiện khả năng hấp thụ dưỡng chất và ảnh hưởng đến mức đường huyết.",
+      "aliases": [
+        "bệnh celiac và tiểu đường tuýp 1",
+        "chế độ ăn không có gluten",
+        "triệu chứng bệnh celiac",
+        "chẩn đoán bệnh celiac",
+        "bệnh celiac là gì"
+      ],
+      "facts": [
+        [
+          "bệnh celiac",
+          "gây tổn thương",
+          "niêm mạc ruột non"
+        ],
+        [
+          "chế độ ăn không chứa gluten",
+          "là",
+          "phương pháp điều trị bệnh celiac"
+        ]
+      ],
+      "support_quotes": [
+        "Coeliac disease is a lifelong condition where your"
+      ],
+      "source_url": "https://www.diabetes.org.uk/living-with-diabetes/eating/managing-other-medical-conditions/coeliac-disease-diabetes",
+      "source_title": "Coeliac disease and diabetes",
+      "category": "nutrition",
+      "source_sha256": "b197cb31820b1b7d398dd88f1373503cd2fa99bb52e1909d074faac31e84ca61",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K37",
+      "title": "Chế độ ăn ít carbohydrate và thực đơn",
+      "topic": "low_carb_diet_and_meal_plan",
+      "summary_vi": "Chế độ ăn ít carbohydrate là việc giảm tổng lượng carb tiêu thụ xuống dưới 130g mỗi ngày, có thể hỗ trợ giảm cân và cải thiện đường huyết ngắn hạn ở người tiểu đường tuýp 2. Tuy nhiên, việc cắt giảm này có thể làm tăng nguy cơ hạ đường huyết nếu dùng chung một số loại thuốc, vì vậy cần trao đổi với đội ngũ y tế trước khi thực hiện.",
+      "aliases": [
+        "chế độ ăn ít carb cho tiểu đường",
+        "lợi ích giảm carbohydrate",
+        "thực đơn ít carb",
+        "giảm cân và tiểu đường tuýp 2",
+        "chế độ ăn ít carb là gì"
+      ],
+      "facts": [
+        [
+          "chế độ ăn ít carb",
+          "giới hạn carb",
+          "dưới 130g một ngày"
+        ],
+        [
+          "chế độ ăn ít carb",
+          "hỗ trợ",
+          "giảm cân ở tuýp 2"
+        ]
+      ],
+      "support_quotes": [
+        "Eating a low-carb diet means cutting down on"
+      ],
+      "source_url": "https://www.diabetes.org.uk/living-with-diabetes/eating/meal-plans/low-carb",
+      "source_title": "Low-carb diet and meal plan",
+      "category": "nutrition",
+      "source_sha256": "bf797936c011b57fcf47ddc07532639846fe1e51b12129dee48120c4998c50e8",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K38",
+      "title": "Thực phẩm chế biến sẵn và bệnh tiểu đường",
+      "topic": "processed_foods_and_diabetes",
+      "summary_vi": "Thực phẩm chế biến bao gồm nhiều mức độ khác nhau từ sơ chế tối thiểu đến siêu chế biến theo hệ thống NOVA. Một số thực phẩm siêu chế biến chứa nhiều calo, đường tự do và muối có liên quan đến nguy cơ sức khỏe nếu tiêu thụ nhiều. Dù vậy, cần tập trung vào giá trị dinh dưỡng tổng thể của thực phẩm thay vì chỉ dựa vào phân loại chế biến.",
+      "aliases": [
+        "thực phẩm siêu chế biến",
+        "hệ thống phân loại thực phẩm NOVA",
+        "ảnh hưởng của thực phẩm chế biến",
+        "lựa chọn thực phẩm lành mạnh",
+        "thực phẩm chế biến và tiểu đường"
+      ],
+      "facts": [
+        [
+          "hệ thống NOVA",
+          "phân loại thực phẩm",
+          "theo mức độ chế biến"
+        ],
+        [
+          "thực phẩm siêu chế biến",
+          "thường chứa",
+          "nhiều calo đường muối"
+        ]
+      ],
+      "support_quotes": [
+        "The term processed food does not have a"
+      ],
+      "source_url": "https://www.diabetes.org.uk/living-with-diabetes/eating/what-is-a-healthy-balanced-diet/processed-foods",
+      "source_title": "Processed foods and diabetes",
+      "category": "nutrition",
+      "source_sha256": "8cabff1af906d5d2d5f03483e10151062ca3d74ff4339955af0aae225dabc0f4",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K39",
+      "title": "Gia đình cùng ăn uống lành mạnh",
+      "topic": "family_healthy_eating",
+      "summary_vi": "Xây dựng thói quen ăn uống lành mạnh cùng gia đình giúp tạo sự hỗ trợ lớn khi sống chung với bệnh tiểu đường. Ăn uống lành mạnh cần đầy đủ về số lượng và chất lượng, phù hợp với nhu cầu cá nhân và mang tính đa dạng. Bạn có thể lôi kéo người thân bằng cách chia sẻ tác động tích cực của việc ăn uống lành mạnh, cùng nhau nấu ăn, đi mua sắm và đọc nhãn thực phẩm để chọn lựa tốt hơn.",
+      "aliases": [
+        "gia đình ăn uống lành mạnh",
+        "cùng gia đình ăn uống",
+        "lôi kéo gia đình ăn uống lành mạnh",
+        "ăn uống lành mạnh với gia đình",
+        "hỗ trợ ăn uống gia đình"
+      ],
+      "facts": [
+        [
+          "Ăn uống lành mạnh",
+          "cần chú ý",
+          "Chất lượng và lượng ăn"
+        ],
+        [
+          "Gia đình",
+          "có thể hỗ trợ",
+          "Thói quen ăn uống"
+        ]
+      ],
+      "support_quotes": [
+        "“Healthy eating” is a frequently used term but",
+        "Healthy eating has to be sufficient in both"
+      ],
+      "source_url": "https://diabetes.org/food-nutrition/eating-healthy/get-family-involved-healthy-eating",
+      "source_title": "How to Get Your Family Involved with Healthy…",
+      "category": "nutrition",
+      "source_sha256": "b77ea3def6549c23ca7c84cc910babfab3b04a2eac7725f87c76257e59c3da95",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K40",
+      "title": "Mẹo ăn uống lành mạnh khi bận rộn",
+      "topic": "healthy_eating_on_the_go",
+      "summary_vi": "Dù lịch trình bận rộn, bạn vẫn có thể duy trì việc ăn uống lành mạnh thông qua các chiến lược thiết thực. Trước tiên hãy trung thực về thời gian và mục tiêu cá nhân để nhận biết thời điểm bận rộn. Kế đến, hãy áp dụng việc chuẩn bị bữa ăn sẵn, chọn lựa đồ ăn nhẹ thông minh, đưa ra lựa chọn thức ăn nhanh tốt hơn, sử dụng ứng dụng lập lịch ăn uống và trang bị các dụng cụ cần thiết để duy trì sự nhất quán.",
+      "aliases": [
+        "ăn uống khi bận rộn",
+        "mẹo ăn nhanh lành mạnh",
+        "chuẩn bị bữa ăn bận rộn",
+        "ăn uống lành mạnh khi bận",
+        "chiến lược ăn uống bận rộn"
+      ],
+      "facts": [
+        [
+          "Chuẩn bị bữa ăn",
+          "có thể thực hiện bằng",
+          "Nấu theo mẻ"
+        ],
+        [
+          "Hạt không muối",
+          "là lựa chọn",
+          "Ăn nhẹ"
+        ]
+      ],
+      "support_quotes": [
+        "Everyone is busy, and let’s face it, not",
+        "Here are six ways to eat healthy on"
+      ],
+      "source_url": "https://diabetes.org/food-nutrition/eating-healthy/tips-eating-healthy-on-go",
+      "source_title": "Tips for Eating Healthy on the Go",
+      "category": "nutrition",
+      "source_sha256": "ad267cf3c076ab9c13bba9a8aede70ee29ced1b05b66278a42fcdf63f10e4cf2",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K41",
+      "title": "Lợi ích của việc uống nhiều nước",
+      "topic": "drinking_more_water",
+      "summary_vi": "Duy trì đủ nước hỗ trợ điều hòa thân nhiệt, tiêu hóa và hoạt động của cơ thể. Nước cũng có thể đến từ rau và trái cây. Có thể tạo thói quen uống nước đều đặn hoặc thêm hương vị từ trái cây để dễ duy trì hơn. Khi thay đồ uống ngọt bằng nước, cần tiếp tục chú ý tổng thể chế độ ăn và kế hoạch chăm sóc của mình.",
+      "aliases": [
+        "lợi ích uống nước",
+        "uống đủ nước mỗi ngày",
+        "cách uống đủ nước",
+        "tầm quan trọng của nước",
+        "duy trì cơ thể đủ nước"
+      ],
+      "facts": [
+        [
+          "Đủ nước",
+          "hỗ trợ",
+          "Điều hòa thân nhiệt"
+        ],
+        [
+          "Rau và trái cây",
+          "cung cấp",
+          "Một phần nước cho cơ thể"
+        ]
+      ],
+      "support_quotes": [
+        "Staying hydrated carries a host of health benefits—it",
+        "About 20% of the fluid we need comes"
+      ],
+      "source_url": "https://diabetes.org/food-nutrition/eating-healthy/why-drink-more-water",
+      "source_title": "Why You Should Drink More Water",
+      "category": "nutrition",
+      "source_sha256": "d5e635f8a90dec36479c4412cf5fe31463737fc9afd9b1c976bb8357c493748a",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K42",
+      "title": "Lập kế hoạch bữa ăn chay thuần thực vật",
+      "topic": "vegan_meal_planning",
+      "summary_vi": "Chế độ ăn chay thuần thực vật không chứa thịt và sản phẩm từ động vật, mang lại nhiều lợi ích sức khỏe và giảm nguy cơ mắc bệnh mạn tính. Khi áp dụng cho người mắc bệnh tiểu đường hoặc thận, cần chú ý các nguồn đạm thực vật có thể chứa nhiều kali, phốt pho và carbohydrate. Người bệnh nên trao đổi với chuyên gia dinh dưỡng để cân bằng lượng đạm, chất xơ và kiểm soát đường huyết phù hợp.",
+      "aliases": [
+        "thực đơn ăn chay thuần",
+        "chế độ ăn thực vật",
+        "ăn chay cho người tiểu đường",
+        "lập kế hoạch ăn chay",
+        "chế độ ăn thuần thực vật"
+      ],
+      "facts": [
+        [
+          "Ăn chay thuần thực vật",
+          "loại trừ",
+          "Thực phẩm từ động vật"
+        ],
+        [
+          "Ăn chay khi có bệnh thận",
+          "cần chú ý",
+          "Kali và phốt pho"
+        ]
+      ],
+      "support_quotes": [
+        "The vegan diet is a plants-only diet that",
+        "Specifically, plant-based diets have been linked to a"
+      ],
+      "source_url": "https://diabetes.org/food-nutrition/meal-planning/vegan-meal-planning-tips",
+      "source_title": "Vegan Meal Planning",
+      "category": "nutrition",
+      "source_sha256": "71256913e689fc2fef5147fd463a94d9124eb3687c57f487024e4f2ad850d4a7",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K43",
+      "title": "Chất béo trong quản lý tiểu đường",
+      "topic": "fats_in_diabetes",
+      "summary_vi": "Bên cạnh carbohydrate, chất béo là chất dinh dưỡng quan trọng trong chế độ ăn cân bằng giúp hỗ trợ cơ thể và tế bào. Có bốn loại chất béo chính gồm bão hòa, chuyển hóa, không bão hòa đơn và không bão hòa đa. Hiệp hội Tiểu đường Hoa Kỳ khuyến nghị ưu tiên chất béo không bão hòa đơn và đa để bảo vệ tim mạch, đồng thời nên hạn chế chất béo bão hòa và chất béo chuyển hóa có trong thực phẩm chế biến sẵn.",
+      "aliases": [
+        "các loại chất béo",
+        "chất béo tốt cho tim mạch",
+        "hạn chế chất béo bão hòa",
+        "chất béo trong tiểu đường",
+        "chất béo bão hòa và chưa bão hòa"
+      ],
+      "facts": [
+        [
+          "Chất béo không bão hòa",
+          "hỗ trợ",
+          "Sức khỏe tim mạch"
+        ],
+        [
+          "Chất béo bão hòa",
+          "nên hạn chế trong",
+          "Chế độ ăn"
+        ]
+      ],
+      "support_quotes": [
+        "There are four main types of fat: saturated,",
+        "Monounsaturated fats are considered part of a healthy,"
+      ],
+      "source_url": "https://diabetes.org/food-nutrition/reading-food-labels/fats",
+      "source_title": "Fats",
+      "category": "nutrition",
+      "source_sha256": "f91ef2647f701c85601d93216b2ff6e8055cb8427268ec59ad1cbf780872b6ea",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K44",
+      "title": "Đọc và hiểu nhãn thực phẩm",
+      "topic": "reading_food_labels",
+      "summary_vi": "Hiểu rõ nhãn thông tin dinh dưỡng trên thực phẩm đóng gói là kỹ năng cốt lõi giúp đưa ra lựa chọn ăn uống thông minh cho người tiểu đường. Nhãn cung cấp kích cỡ khẩu phần, lượng calo, tổng carbohydrate, chất xơ, đạm, đường bổ sung, tổng chất béo và natri dựa trên chế độ ăn hai nghìn calo. Người bệnh cần chú ý đọc kỹ danh sách thành phần và hàm lượng các chất dinh dưỡng để kiểm soát đường huyết và bảo vệ tim mạch hiệu quả.",
+      "aliases": [
+        "đọc nhãn dinh dưỡng",
+        "hiểu nhãn thực phẩm",
+        "thông tin dinh dưỡng gói hàng",
+        "nhãn thực phẩm đóng gói",
+        "hướng dẫn đọc nhãn"
+      ],
+      "facts": [
+        [
+          "Nhãn thực phẩm",
+          "cung cấp",
+          "Tổng carbohydrate"
+        ],
+        [
+          "Tổng carbohydrate",
+          "bao gồm",
+          "Đường, tinh bột và chất xơ"
+        ]
+      ],
+      "support_quotes": [
+        "Informed food choices are essential to preventing and",
+        "The general recommendation is to keep sodium intake"
+      ],
+      "source_url": "https://diabetes.org/food-nutrition/reading-food-labels/making-sense-food-labels",
+      "source_title": "Reading Food Labels",
+      "category": "nutrition",
+      "source_sha256": "2188efebbf11eca2e7f24cacbfaea173a11f5e5ec4cbe4b0bc751b61c2e0da08",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K45",
+      "title": "Rau củ không chứa tinh bột cho việc kiểm soát đường huyết",
+      "topic": "non_starchy_vegetables_blood_glucose",
+      "summary_vi": "Rau củ không chứa tinh bột là nhóm thực phẩm chứa ít calo và carbohydrate, cung cấp nhiều vitamin, khoáng chất, chất xơ và phytochemical giúp bạn thỏa mãn cơn thèm ăn. Bạn nên cố gắng ăn ít nhất sáu khẩu phần rau củ mỗi ngày để duy trì sức khỏe tốt và kiểm soát đường huyết.",
+      "aliases": [
+        "rau củ không tinh bột",
+        "rau xanh kiểm soát đường huyết",
+        "khẩu phần rau hàng ngày"
+      ],
+      "facts": [
+        [
+          "rau củ không chứa tinh bột",
+          "cung cấp",
+          "vitamin, khoáng chất, chất xơ"
+        ],
+        [
+          "khẩu phần rau",
+          "được khuyến nghị ít nhất",
+          "sáu khẩu phần mỗi ngày"
+        ]
+      ],
+      "support_quotes": [
+        "non-starchy vegetables are one food group where you",
+        "try to eat at least six servings of"
+      ],
+      "source_url": "https://diabetes.org/food-nutrition/reading-food-labels/non-starchy-vegetables",
+      "source_title": "Non-Starchy Vegetables for Blood Glucose Control",
+      "category": "nutrition",
+      "source_sha256": "7f10ed8914fd759722808d2b397a55ba35a622345d0e7ca6e6d2fd39d81f9250",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K46",
+      "title": "Thực phẩm giàu protein cho bệnh tiểu đường",
+      "topic": "protein_foods_diabetes",
+      "summary_vi": "Các thực phẩm giàu protein như cá, thịt, sản phẩm từ đậu nành và phô mai còn được gọi là thực phẩm protein hoặc chất thay thế thịt. Protein thực vật cung cấp chất xơ và chất béo lành mạnh, trong khi bạn nên chọn thịt nạc và hạn chế thịt đỏ hoặc thịt chế biến sẵn để quản lý tốt tình trạng bệnh.",
+      "aliases": [
+        "nguồn protein cho tiểu đường",
+        "thực phẩm giàu protein",
+        "protein thực vật và động vật"
+      ],
+      "facts": [
+        [
+          "thực phẩm giàu protein",
+          "bao gồm",
+          "cá, gà, thịt, sản phẩm từ đậu nành và phô mai"
+        ],
+        [
+          "thịt đỏ và thịt chế biến",
+          "nên được",
+          "hạn chế trong chế độ ăn"
+        ]
+      ],
+      "support_quotes": [
+        "Foods high in protein such as fish, chicken,",
+        "It’s best to limit your intake of red"
+      ],
+      "source_url": "https://diabetes.org/food-nutrition/reading-food-labels/protein",
+      "source_title": "Protein Food for Diabetes",
+      "category": "nutrition",
+      "source_sha256": "d1b50489cafa6184b288d79ec11856a4bdd450f3c3c9e20e9ca8b6ef6d814b40",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K47",
+      "title": "Đếm carbohydrate và bệnh tiểu đường",
+      "topic": "carb_counting_diabetes",
+      "summary_vi": "Đếm carbohydrate là một công cụ hiệu quả giúp quản lý lượng đường trong máu khi kết hợp với kế hoạch điều trị phù hợp. Việc này bao gồm đếm số gam carbohydrate trong bữa ăn và điều chỉnh liều lượng insulin phù hợp, hoặc sử dụng các phương pháp cơ bản như đếm lựa chọn carbohydrate và phương pháp đĩa thức ăn.",
+      "aliases": [
+        "đếm carb quản lý đường huyết",
+        "cách đếm carbohydrate",
+        "lượng carb trong bữa ăn"
+      ],
+      "facts": [
+        [
+          "carbohydrate",
+          "khi được tiêu hóa",
+          "chuyển hóa thành glucose"
+        ],
+        [
+          "đếm carbohydrate",
+          "giúp quản lý",
+          "nồng độ đường trong máu"
+        ]
+      ],
+      "support_quotes": [
+        "Learning how to count carbs can be an",
+        "Carb counting at its most basic level involves"
+      ],
+      "source_url": "https://diabetes.org/food-nutrition/understanding-carbs/carb-counting-and-diabetes",
+      "source_title": "Carb Counting and Diabetes",
+      "category": "nutrition",
+      "source_sha256": "81dd21306d518e6cfc80ceb84b551407a3c1ecf560f666ef4f744f2220f49993",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K48",
+      "title": "Các loại carbohydrate trong thực phẩm",
+      "topic": "types_of_carbohydrates",
+      "summary_vi": "Có ba loại carbohydrate chính trong thực phẩm bao gồm tinh bột, đường và chất xơ. Tinh bột cung cấp năng lượng, đường có thể tự nhiên hoặc bổ sung, còn chất xơ là phần không thể tiêu hóa từ thực vật giúp hỗ trợ sức khỏe tiêu hóa và kiểm soát mức cholesterol.",
+      "aliases": [
+        "phân loại carbohydrate",
+        "tinh bột đường và chất xơ",
+        "nguồn chất xơ tự nhiên"
+      ],
+      "facts": [
+        [
+          "ba loại carbohydrate",
+          "gồm",
+          "tinh bột, đường và chất xơ"
+        ],
+        [
+          "chất xơ",
+          "đến từ",
+          "thực phẩm thực vật"
+        ]
+      ],
+      "support_quotes": [
+        "Did you know there are three main types",
+        "Fiber comes from plant foods so there is"
+      ],
+      "source_url": "https://diabetes.org/food-nutrition/understanding-carbs/types-carbohydrates",
+      "source_title": "Types of Carbohydrates",
+      "category": "nutrition",
+      "source_sha256": "c3031972bec41ad4e7e9edfec1fcfebf0a04d099cef8732026deade0ff7bc508",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K49",
+      "title": "Carbohydrate và bệnh tiểu đường: Những điều cần biết",
+      "topic": "carbohydrates_and_diabetes_uk",
+      "summary_vi": "Carbohydrate là nguồn năng lượng quan trọng nhưng loại và lượng tiêu thụ ảnh hưởng trực tiếp đến mức đường huyết. Thực phẩm chứa carbohydrate chuyển hóa thành glucose, do đó việc hiểu rõ chất lượng carbohydrate, ưu tiên ngũ cốc nguyên hạt và chất xơ đóng vai trò thiết yếu trong việc quản lý tiểu đường hiệu quả.",
+      "aliases": [
+        "carbohydrate và quản lý đường huyết",
+        "chất lượng carbohydrate",
+        "ngũ cốc nguyên hạt và tiểu đường"
+      ],
+      "facts": [
+        [
+          "Carbohydrate",
+          "được phân hủy thành",
+          "Glucose"
+        ],
+        [
+          "Ngũ cốc nguyên hạt",
+          "cung cấp",
+          "Chất xơ"
+        ]
+      ],
+      "support_quotes": [
+        "All the carbohydrates you eat and drink are",
+        "Wholegrains are a smart choice, not just for"
+      ],
+      "source_url": "https://www.diabetes.org.uk/living-with-diabetes/eating/carbohydrates-and-diabetes",
+      "source_title": "Carbohydrates and diabetes: What you need to know",
+      "category": "nutrition",
+      "source_sha256": "b7f549a02686c3b948b05a9e19f9c1cb3cc282315e891cc4b7b77908b5f8cfc2",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K50",
+      "title": "Chế độ ăn khi mang thai mắc tiểu đường thai kỳ",
+      "topic": "gestational_diabetes_diet",
+      "summary_vi": "Hiểu rõ chế độ ăn uống lành mạnh giúp giữ lượng đường trong máu ở mức an toàn khi mang thai mắc tiểu đường thai kỳ. Bạn nên chọn carbohydrate lành mạnh, cắt giảm lượng đường và muối dư thừa, hoàn thiện kích thước khẩu phần và ăn nhiều trái cây cùng rau củ để đảm bảo sức khỏe cho cả mẹ và bé.",
+      "aliases": [
+        "thực đơn tiểu đường thai kỳ",
+        "chế độ ăn tiểu đường khi mang thai",
+        "carbohydrate lành mạnh cho thai kỳ"
+      ],
+      "facts": [
+        [
+          "tất cả các loại carb",
+          "đều ảnh hưởng đến",
+          "mức đường trong máu"
+        ],
+        [
+          "chế độ ăn uống lành mạnh",
+          "giúp giữ lượng đường",
+          "trong phạm vi an toàn"
+        ]
+      ],
+      "support_quotes": [
+        "All carbs affect your blood sugar levels",
+        "Understanding your diet and eating healthily is an"
+      ],
+      "source_url": "https://www.diabetes.org.uk/living-with-diabetes/eating/gestational-diabetes",
+      "source_title": "What can I eat with gestational diabetes?",
+      "category": "nutrition",
+      "source_sha256": "286ea949691eca1d4f07d1915ae1b542b85074133d41a63942672c756b4f7dad",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K51",
+      "title": "Chế độ ăn uống cho người tiểu đường type 1",
+      "topic": "type_1_diabetes_diet",
+      "summary_vi": "Người mắc tiểu đường type 1 có thể ăn uống đa dạng các loại thực phẩm mà không phải kiêng khem nghiêm ngặt. Việc lựa chọn các nguồn carbohydrate lành mạnh kết hợp với đếm lượng carbohydrate giúp kiểm soát đường huyết ổn định và linh hoạt hơn trong sinh hoạt.",
+      "aliases": [
+        "người type 1 ăn gì",
+        "chế độ ăn tiểu đường type 1",
+        "thực phẩm cho type 1",
+        "chế độ ăn uống type 1",
+        "kiểm soát carbohydrate type 1"
+      ],
+      "facts": [
+        [
+          "người tiểu đường type 1",
+          "có thể ăn",
+          "mọi loại thực phẩm"
+        ],
+        [
+          "đếm carbohydrate",
+          "giúp duy trì",
+          "mức đường huyết ổn định"
+        ]
+      ],
+      "support_quotes": [
+        "What can I eat with type 1?",
+        "It may come as a surprise, but all"
+      ],
+      "source_url": "https://www.diabetes.org.uk/living-with-diabetes/eating/i-have-type-1-diabetes",
+      "source_title": "I have type 1 diabetes - what can…",
+      "category": "nutrition",
+      "source_sha256": "74902aa144411e75e4baff77e45f083314b6a1df5fb29bfeb920336a5c5f5b44",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K52",
+      "title": "Lựa chọn thực phẩm cho người tiểu đường type 2",
+      "topic": "type_2_diabetes_diet",
+      "summary_vi": "Người mắc tiểu đường type 2 không cần áp dụng một chế độ ăn đặc biệt duy nhất mà nên ưu tiên các lựa chọn thực phẩm lành mạnh và linh hoạt. Việc tiêu thụ trái cây tươi nguyên quả mang lại nhiều lợi ích sức khỏe và không làm tăng lượng đường tự do như các loại đồ uống ngọt.",
+      "aliases": [
+        "người type 2 ăn gì",
+        "chế độ ăn tiểu đường type 2",
+        "thực phẩm tiểu đường type 2",
+        "chế độ ăn uống type 2",
+        "thực phẩm lành mạnh type 2"
+      ],
+      "facts": [
+        [
+          "trái cây nguyên quả",
+          "tốt cho",
+          "tất cả mọi người"
+        ],
+        [
+          "chế độ ăn ít carbohydrate",
+          "giúp một số người",
+          "giảm cân và quản lý đường huyết"
+        ]
+      ],
+      "support_quotes": [
+        "There is no such thing as a special",
+        "So there isn’t a one-size-fits-all way of eating"
+      ],
+      "source_url": "https://www.diabetes.org.uk/living-with-diabetes/eating/i-have-type-2-diabetes",
+      "source_title": "I have type 2 diabetes – what can…",
+      "category": "nutrition",
+      "source_sha256": "4b95955250e7ba2fc153bde1475376e516758e8f9ad8a3ced2003ad05b17358d",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K53",
+      "title": "Khẩu phần ăn và bệnh tiểu đường",
+      "topic": "portion_sizes_diabetes",
+      "summary_vi": "Kiểm soát khẩu phần ăn đóng vai trò quan trọng trong việc duy trì cân nặng và quản lý lượng đường huyết cho người tiểu đường. Người bệnh có thể ước lượng khẩu phần thực phẩm bằng các vật dụng quen thuộc hoặc đo lường chính xác để đảm bảo cân đối dinh dưỡng.",
+      "aliases": [
+        "kích thước khẩu phần ăn",
+        "đo lường khẩu phần",
+        "khẩu phần cho người tiểu đường",
+        "quản lý khẩu phần ăn",
+        "khẩu phần thực phẩm"
+      ],
+      "facts": [
+        [
+          "khẩu phần ăn lớn",
+          "có thể làm cho việc quản lý đường huyết",
+          "trở nên khó khăn hơn"
+        ],
+        [
+          "cân thực phẩm",
+          "là cách tốt nhất để",
+          "đo lường khẩu phần chính xác"
+        ]
+      ],
+      "support_quotes": [
+        "Larger portion sizes can mean more calories, carbs,",
+        "This can make managing blood sugar levels and"
+      ],
+      "source_url": "https://www.diabetes.org.uk/living-with-diabetes/eating/portion-sizes",
+      "source_title": "Portion sizes and diabetes",
+      "category": "nutrition",
+      "source_sha256": "28ca880941e5a79afa752b9783b1e797a7a031882ce19b62aa6a996c510ab6c9",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K54",
+      "title": "Đường và bệnh tiểu đường",
+      "topic": "sugar_and_diabetes",
+      "summary_vi": "Người mắc tiểu đường không bắt buộc phải loại bỏ hoàn toàn đường ra khỏi chế độ ăn uống hằng ngày. Vấn đề cần quan tâm chủ yếu là lượng đường tự do có trong thực phẩm chế biến sẵn và đồ uống ngọt, do đó việc đọc nhãn thực phẩm giúp quản lý lượng đường tiêu thụ tốt hơn.",
+      "aliases": [
+        "đường trong tiểu đường",
+        "cách cắt giảm đường",
+        "nhãn thực phẩm đường",
+        "đường tự do trong thực phẩm",
+        "tiêu thụ đường tiểu đường"
+      ],
+      "facts": [
+        [
+          "đường",
+          "không gây ra",
+          "tiểu đường type 1"
+        ],
+        [
+          "nhãn thực phẩm",
+          "là cách tốt nhất để",
+          "xác định lượng đường"
+        ]
+      ],
+      "support_quotes": [
+        "You don’t need to cut out sugar from",
+        "We know that sugar does not cause type"
+      ],
+      "source_url": "https://www.diabetes.org.uk/living-with-diabetes/eating/sugar-and-diabetes",
+      "source_title": "Sugar and diabetes",
+      "category": "nutrition",
+      "source_sha256": "7fde95b555803796e65e9777bdb9d2573719050b374387007f09034bd9791eae",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K55",
+      "title": "Chế độ ăn uống cân bằng cho bệnh tiểu đường",
+      "topic": "balanced_diet_diabetes",
+      "summary_vi": "Xây dựng chế độ ăn cân bằng cho người tiểu đường bao gồm việc kết hợp đa dạng các nhóm thực phẩm thiết yếu mỗi ngày. Trái cây và rau xanh cung cấp nhiều vitamin, chất xơ và khoáng chất quan trọng giúp bảo vệ sức khỏe tim mạch và hệ tiêu hóa.",
+      "aliases": [
+        "chế độ ăn cân bằng tiểu đường",
+        "nhóm thực phẩm chính",
+        "dinh dưỡng tiểu đường",
+        "chế độ ăn uống cân bằng",
+        "thực phẩm cho người tiểu đường"
+      ],
+      "facts": [
+        [
+          "chế độ ăn tiểu đường",
+          "đòi hỏi sự đa dạng và",
+          "lựa chọn từ các nhóm thực phẩm chính"
+        ],
+        [
+          "trái cây và rau quả",
+          "giúp bảo vệ chống lại",
+          "đột quỵ và bệnh tim"
+        ]
+      ],
+      "support_quotes": [
+        "A healthy diabetes diet is all about variety",
+        "Fruit and vegetables can help protect against stroke,"
+      ],
+      "source_url": "https://www.diabetes.org.uk/living-with-diabetes/eating/what-is-a-healthy-balanced-diet",
+      "source_title": "Diabetes diet: a healthy, balanced diet for diabetes",
+      "category": "nutrition",
+      "source_sha256": "5027f6f253eb424685012df59fb9437a27cb05463d5fced4733e9fb69f3e7bf8",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K56",
+      "title": "Cân nặng lành mạnh cho bệnh tiểu đường",
+      "topic": "healthy_weight_diabetes",
+      "summary_vi": "Duy trì một cân nặng lành mạnh giúp cơ thể sử dụng insulin hiệu quả hơn để kiểm soát đường huyết ở người bệnh tiểu đường. Chỉ số khối cơ thể và kích thước vòng eo là những thước đo quan trọng giúp đánh giá nguy cơ sức khỏe và định hướng giảm cân.",
+      "aliases": [
+        "cân nặng lành mạnh tiểu đường",
+        "chỉ số BMI tiểu đường",
+        "kích thước vòng eo tiểu đường",
+        "duy trì cân nặng tiểu đường",
+        "quản lý cân nặng tiểu đường"
+      ],
+      "facts": [
+        [
+          "cân nặng lành mạnh",
+          "giúp insulin hoạt động tốt",
+          "trong cơ thể"
+        ],
+        [
+          "vòng eo lớn",
+          "có thể làm tăng nguy cơ",
+          "bệnh tim mạch"
+        ]
+      ],
+      "support_quotes": [
+        "A healthy weight helps insulin work well in",
+        "And it increases your risk of high blood"
+      ],
+      "source_url": "https://www.diabetes.org.uk/living-with-diabetes/eating/whats-your-healthy-weight",
+      "source_title": "What's a healthy weight for diabetes?",
+      "category": "nutrition",
+      "source_sha256": "41760851bad35422a775f229e44493a5b8f6fcddc9db1858f42998d6d52e6a77",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K57",
+      "title": "Quản lý bệnh tiểu đường qua chế độ ăn",
+      "topic": "diabetes_nutrition_management",
+      "summary_vi": "Kiến thức về các mô hình bữa ăn dựa trên khoa học giúp quản lý bệnh tiểu đường hiệu quả hơn. Báo cáo Đồng thuận Dinh dưỡng xác định các chiến lược dinh dưỡng giúp đạt mục tiêu đường huyết, quản lý cân nặng và giảm nguy cơ biến chứng dựa trên nhu cầu cá nhân.",
+      "aliases": [
+        "chế độ ăn tiểu đường",
+        "mô hình bữa ăn tiểu đường",
+        "thực đơn tiểu đường",
+        "dinh dưỡng tiểu đường"
+      ],
+      "facts": [
+        [
+          "Báo cáo Đồng thuận Dinh dưỡng",
+          "xác định",
+          "chiến lược dinh dưỡng"
+        ],
+        [
+          "Hiệp hội Tiểu đường Hoa Kỳ",
+          "xuất bản",
+          "Tiêu chuẩn Chăm sóc"
+        ],
+        [
+          "mô hình Địa Trung Hải",
+          "giảm",
+          "nguy cơ tim mạch"
+        ]
+      ],
+      "support_quotes": [
+        "Learning about meal patterns that have been proven",
+        "The Nutrition Consensus Report identifies nutrition strategies that"
+      ],
+      "source_url": "https://diabetes.org/food-nutrition/eating-for-diabetes-management",
+      "source_title": "Eating for Diabetes Management",
+      "category": "nutrition",
+      "source_sha256": "729dfb0501344d76deb2c64ccc237c36d6accfe7f1d00ee345fe76bf11125058",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K58",
+      "title": "Mẹo ăn uống lành mạnh",
+      "topic": "healthy_eating_tips",
+      "summary_vi": "Ăn uống lành mạnh không phức tạp và giúp quản lý lượng đường trong máu tốt hơn. Các kế hoạch ăn uống lành mạnh đều có chung nền tảng là rau không chứa tinh bột, protein nạc, carbohydrate chất lượng, ít thực phẩm chế biến và nước lọc.",
+      "aliases": [
+        "mẹo ăn uống lành mạnh",
+        "ăn uống tiểu đường",
+        "lựa chọn thực phẩm lành mạnh",
+        "chọn món ăn tốt"
+      ],
+      "facts": [
+        [
+          "chế độ ăn lành mạnh",
+          "quản lý",
+          "đường huyết"
+        ],
+        [
+          "rau không chứa tinh bột",
+          "làm nền tảng cho",
+          "đĩa ăn"
+        ],
+        [
+          "chất béo lành mạnh",
+          "giúp",
+          "giảm cholesterol"
+        ]
+      ],
+      "support_quotes": [
+        "Eating healthy doesn’t have to be complicated.",
+        "Healthy eating for prediabetes and diabetes not only"
+      ],
+      "source_url": "https://diabetes.org/food-nutrition/eating-healthy",
+      "source_title": "Tips for Eating Well",
+      "category": "nutrition",
+      "source_sha256": "4298e1c2f56e920f792abe84ddcf3f88a77490e9d422839c9714328951280910",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K59",
+      "title": "Ăn uống tốt với bệnh tiểu đường",
+      "topic": "eating_well_with_diabetes",
+      "summary_vi": "Khi sống chung với bệnh tiểu đường, thực phẩm đóng vai trò như thuốc giúp hỗ trợ quản lý sức khỏe. Áp dụng kiến thức dinh dưỡng và tạo thói quen hàng ngày là bước đầu tiên để thực hiện kế hoạch ăn uống và kiểm soát lượng đường trong máu.",
+      "aliases": [
+        "ăn uống tốt tiểu đường",
+        "thực phẩm và tiểu đường",
+        "kiểm soát đường huyết qua ăn uống",
+        "quản lý dinh dưỡng tiểu đường"
+      ],
+      "facts": [
+        [
+          "thực phẩm",
+          "đóng vai trò như",
+          "thuốc"
+        ],
+        [
+          "thực phẩm bạn ăn",
+          "ảnh hưởng đến",
+          "mức đường huyết"
+        ],
+        [
+          "carbohydrate",
+          "cung cấp",
+          "năng lượng"
+        ]
+      ],
+      "support_quotes": [
+        "When you live with diabetes, food is medicine.",
+        "With diabetes, what you eat affects your blood"
+      ],
+      "source_url": "https://diabetes.org/food-nutrition/food-and-diabetes",
+      "source_title": "Eating Well with Diabetes",
+      "category": "nutrition",
+      "source_sha256": "ee0734082a76d4b38a0b2443c386f9a7b8e98f29124a2cda77bccb4d4deef1ec",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K60",
+      "title": "Các loại insulin",
+      "topic": "types_of_insulin",
+      "summary_vi": "Hầu hết người mắc tiểu đường tuýp 1 và một số người tuýp 2 được kê đơn hai loại insulin gồm insulin tác dụng nhanh dùng trong bữa ăn và insulin tác dụng chậm dùng một hoặc hai lần mỗi ngày để duy trì ổn định đường huyết.",
+      "aliases": [
+        "các loại insulin",
+        "insulin tác dụng nhanh",
+        "insulin nền",
+        "insulin hỗn hợp"
+      ],
+      "facts": [
+        [
+          "hầu hết người mắc tiểu đường tuýp 1",
+          "được kê đơn",
+          "hai loại insulin"
+        ],
+        [
+          "insulin tác dụng nhanh",
+          "cung cấp",
+          "lượng insulin nhanh chóng"
+        ],
+        [
+          "insulin tác dụng kéo dài",
+          "giảm nguy cơ",
+          "hạ đường huyết"
+        ]
+      ],
+      "support_quotes": [
+        "Most people with type 1 diabetes and some",
+        "It’s been shown to reduce the risk of"
+      ],
+      "source_url": "https://www.diabetes.org.uk/about-diabetes/looking-after-diabetes/treatments/insulin/types",
+      "source_title": "Types of insulin",
+      "category": "medicines",
+      "source_sha256": "13e1187d0be11c34fca5fa043a9cb9f1f0be34309517b35b881ce599d62fb69e",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K61",
+      "title": "Insulin là gì",
+      "topic": "what_is_insulin",
+      "summary_vi": "Insulin là một hormone do cơ thể sản xuất giúp quản lý mức đường huyết. Insulin cũng được sử dụng như một loại thuốc điều trị cho người bệnh tiểu đường khi cơ thể không tự sản xuất hoặc không hoạt động hiệu quả.",
+      "aliases": [
+        "khái niệm insulin",
+        "insulin là gì",
+        "tác dụng của insulin",
+        "hormone insulin"
+      ],
+      "facts": [
+        [
+          "insulin",
+          "là một hormone",
+          "được tạo ra trong cơ thể"
+        ],
+        [
+          "mọi người mắc tiểu đường tuýp 1",
+          "dùng",
+          "insulin như một loại thuốc"
+        ],
+        [
+          "insulin",
+          "là một trong những phương pháp điều trị chính",
+          "giúp quản lý lượng đường trong máu"
+        ]
+      ],
+      "support_quotes": [
+        "It’s a hormone (chemical) made in your body",
+        "Everyone with type 1 diabetes takes insulin as"
+      ],
+      "source_url": "https://www.diabetes.org.uk/about-diabetes/looking-after-diabetes/treatments/insulin/what-is-insulin",
+      "source_title": "What is insulin?",
+      "category": "medicines",
+      "source_sha256": "82a50436e34d652270e22ab0f9517610c319375cc5668be7717d7620dbab842a",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K62",
+      "title": "Thuốc Sulphonylurea",
+      "topic": "sulphonylureas_medication",
+      "summary_vi": "Sulphonylurea là một loại thuốc uống giúp tuyến tụy sản xuất nhiều insulin hơn và hỗ trợ insulin hoạt động hiệu quả để làm giảm lượng đường trong máu cho người bệnh tiểu đường tuýp 2. Tác dụng phụ thường gặp là tăng cân và nguy cơ hạ đường huyết.",
+      "aliases": [
+        "thuốc sulphonylurea",
+        "sulphonylurea tiểu đường",
+        "tác dụng thuốc sulphonylurea",
+        "thuốc hạ đường huyết tuýp 2"
+      ],
+      "facts": [
+        [
+          "sulphonylurea",
+          "là một loại thuốc cho",
+          "bệnh tiểu đường tuýp 2"
+        ],
+        [
+          "sulphonylurea",
+          "giúp",
+          "tuyến tụy sản xuất nhiều insulin hơn"
+        ],
+        [
+          "tác dụng phụ phổ biến nhất của sulphonylurea",
+          "là",
+          "lượng đường trong máu thấp"
+        ]
+      ],
+      "support_quotes": [
+        "Sulphonylureas are a type of medication you might",
+        "Sulphonylureas work by helping your pancreas to make"
+      ],
+      "source_url": "https://www.diabetes.org.uk/about-diabetes/looking-after-diabetes/treatments/tablets-and-medication/sulphonylureas",
+      "source_title": "Sulphonylureas - Uses, How it Works and Side…",
+      "category": "medicines",
+      "source_sha256": "c25cbe1c9da3e7eb99823c11a042d836550c8719656a5f2ab4e3171306b6ee03",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K63",
+      "title": "Gliclazide và điều trị tiểu đường",
+      "topic": "gliclazide_treatment",
+      "summary_vi": "Gliclazide là thuốc kê đơn điều trị tiểu đường tuýp 2, giúp tuyến tụy giải phóng thêm insulin để hạ đường huyết. Thuốc có dạng viên và có thể dùng cùng thuốc khác theo chỉ định. Hạ đường huyết là nguy cơ cần lưu ý, nhất là khi ăn uống không đều. Liều và lịch dùng cần theo đơn; nên báo bác sĩ hoặc dược sĩ nếu có tác dụng không mong muốn.",
+      "aliases": [
+        "thuốc hạ đường huyết gliclazide",
+        "cách dùng gliclazide",
+        "tác dụng phụ của gliclazide",
+        "gliclazide týp 2",
+        "điều trị tiểu đường gliclazide"
+      ],
+      "facts": [
+        [
+          "Gliclazide",
+          "được sử dụng cho",
+          "bệnh tiểu đường týp 2"
+        ],
+        [
+          "Gliclazide",
+          "làm giảm",
+          "lượng đường trong máu"
+        ]
+      ],
+      "support_quotes": [
+        "Gliclazide is a medicine used to lower high",
+        "Gliclazide is used as a treatment for type"
+      ],
+      "source_url": "https://www.nhs.uk/medicines/gliclazide/",
+      "source_title": "Gliclazide",
+      "category": "medicines",
+      "source_sha256": "138690a36913304aa4d3fa4646eb38adc95e7f41b093167a5d068c1f5c52f78e",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K64",
+      "title": "Sitagliptin trong điều trị tiểu đường",
+      "topic": "sitagliptin_treatment",
+      "summary_vi": "Sitagliptin là thuốc kê đơn dùng trong điều trị tiểu đường tuýp 2. Thuốc hỗ trợ cơ thể tăng lượng insulin để giảm đường huyết và có thể được phối hợp với các thuốc khác. Việc lựa chọn và dùng thuốc cần theo đánh giá của bác sĩ. Nếu có tác dụng phụ hoặc vấn đề khi dùng thuốc, hãy trao đổi với bác sĩ hoặc dược sĩ thay vì tự thay đổi đơn.",
+      "aliases": [
+        "thuốc januvia",
+        "cách sử dụng sitagliptin",
+        "tác dụng phụ sitagliptin",
+        "sitagliptin týp 2",
+        "điều trị tiểu đường sitagliptin"
+      ],
+      "facts": [
+        [
+          "Sitagliptin",
+          "được sử dụng để điều trị",
+          "bệnh tiểu đường týp 2"
+        ],
+        [
+          "Sitagliptin",
+          "làm giảm",
+          "lượng đường trong máu"
+        ]
+      ],
+      "support_quotes": [
+        "Sitagliptin is a medicine used to treat type",
+        "Sitagliptin works by increasing insulin in your body"
+      ],
+      "source_url": "https://www.nhs.uk/medicines/sitagliptin/",
+      "source_title": "Sitagliptin",
+      "category": "medicines",
+      "source_sha256": "6ec91624897e5f3b0ae4c4d3dcb399cd0cf5207dfbef069bf9d127a7dade27cd",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K65",
+      "title": "Linagliptin điều trị tiểu đường týp 2",
+      "topic": "linagliptin_treatment",
+      "summary_vi": "Linagliptin là thuốc kê đơn dùng để điều trị tiểu đường tuýp 2, hỗ trợ tăng insulin và giảm đường huyết. Thuốc có thể được dùng cùng những thuốc tiểu đường khác. Không phải ai cũng phù hợp với cùng một thuốc hoặc cách phối hợp, vì vậy cần tuân theo đơn và thông báo bệnh kèm cũng như tác dụng không mong muốn cho bác sĩ hoặc dược sĩ.",
+      "aliases": [
+        "thuốc linagliptin",
+        "cách dùng linagliptin",
+        "tác dụng phụ linagliptin",
+        "linagliptin tiểu đường",
+        "điều trị tiểu đường linagliptin"
+      ],
+      "facts": [
+        [
+          "Linagliptin",
+          "dùng để điều trị",
+          "bệnh tiểu đường týp 2"
+        ],
+        [
+          "Linagliptin",
+          "làm giảm",
+          "lượng đường trong máu"
+        ]
+      ],
+      "support_quotes": [
+        "Linagliptin is a medicine used to treat type",
+        "Linagliptin works by increasing the amount of insulin"
+      ],
+      "source_url": "https://www.nhs.uk/medicines/linagliptin/",
+      "source_title": "Linagliptin",
+      "category": "medicines",
+      "source_sha256": "9d115f744c79a7baa730de1302bf5cafaaece182149195dfefcbe63189bb83ff",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K66",
+      "title": "Alogliptin trong kiểm soát đường huyết",
+      "topic": "alogliptin_treatment",
+      "summary_vi": "Alogliptin là thuốc kê đơn điều trị tiểu đường tuýp 2, giúp tăng insulin để làm giảm đường huyết. Thuốc có thể được kê phối hợp khi việc kiểm soát đường huyết cần thêm hỗ trợ. Người dùng cần theo đúng chỉ định và báo các tác dụng không mong muốn. Cách lựa chọn, phối hợp và liều dùng thuộc kế hoạch điều trị cá nhân do bác sĩ đánh giá.",
+      "aliases": [
+        "thuốc alogliptin",
+        "cách dùng alogliptin",
+        "tác dụng phụ alogliptin",
+        "alogliptin týp 2",
+        "kiểm soát đường huyết alogliptin"
+      ],
+      "facts": [
+        [
+          "Alogliptin",
+          "được sử dụng để điều trị",
+          "bệnh tiểu đường týp 2"
+        ],
+        [
+          "Alogliptin",
+          "làm giảm",
+          "lượng đường trong máu"
+        ]
+      ],
+      "support_quotes": [
+        "Alogliptin is a medicine used to treat type",
+        "Alogliptin works by increasing the amount of insulin"
+      ],
+      "source_url": "https://www.nhs.uk/medicines/alogliptin/",
+      "source_title": "Alogliptin",
+      "category": "medicines",
+      "source_sha256": "7d0423701924001e157911119528bbd6965e6bdbb16de8dd649b3540545dfd77",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K67",
+      "title": "Dapagliflozin điều trị tiểu đường",
+      "topic": "dapagliflozin_treatment",
+      "summary_vi": "Dapagliflozin là thuốc kê đơn giúp cơ thể đào thải bớt glucose qua nước tiểu. Thuốc được sử dụng trong tiểu đường tuýp 2 và trong một số trường hợp suy tim hoặc bệnh thận mạn tính. Việc có phù hợp hay không cần được bác sĩ đánh giá theo bệnh và thuốc đang dùng. Không tự bắt đầu hay thay đổi thuốc chỉ dựa trên thông tin chung.",
+      "aliases": [
+        "thuốc forxiga",
+        "cách dùng dapagliflozin",
+        "tác dụng phụ dapagliflozin",
+        "dapagliflozin thận mạn tính",
+        "điều trị tiểu đường dapagliflozin"
+      ],
+      "facts": [
+        [
+          "Dapagliflozin",
+          "được sử dụng để điều trị",
+          "bệnh tiểu đường týp 2"
+        ],
+        [
+          "Dapagliflozin",
+          "làm giảm",
+          "lượng đường trong cơ thể"
+        ]
+      ],
+      "support_quotes": [
+        "Dapagliflozin is a medicine used to treat type",
+        "Dapagliflozin works by reducing the amount of sugar"
+      ],
+      "source_url": "https://www.nhs.uk/medicines/dapagliflozin/",
+      "source_title": "Dapagliflozin",
+      "category": "medicines",
+      "source_sha256": "2e7022a2d5b9b5e8c203acf7bbadef22c269118835c0d1d12e92ae21cb3cac29",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K68",
+      "title": "Empagliflozin điều trị tiểu đường týp 2",
+      "topic": "empagliflozin_treatment",
+      "summary_vi": "Empagliflozin là thuốc kê đơn giúp giảm đường huyết bằng cách tăng đào thải glucose qua nước tiểu. Thuốc có thể được dùng cho tiểu đường tuýp 2, suy tim hoặc bệnh thận mạn tính theo chỉ định phù hợp. Cần dùng theo kế hoạch của bác sĩ, đồng thời báo tác dụng phụ và các bệnh kèm để được theo dõi an toàn.",
+      "aliases": [
+        "thuốc empagliflozin",
+        "cách dùng empagliflozin",
+        "tác dụng phụ empagliflozin",
+        "empagliflozin suy tim",
+        "điều trị tiểu đường empagliflozin"
+      ],
+      "facts": [
+        [
+          "Empagliflozin",
+          "được sử dụng để điều trị",
+          "bệnh tiểu đường týp 2"
+        ],
+        [
+          "Empagliflozin",
+          "loại bỏ",
+          "lượng đường dư thừa"
+        ]
+      ],
+      "support_quotes": [
+        "Empagliflozin is a medicine used to treat type",
+        "If you have too much sugar (glucose) in"
+      ],
+      "source_url": "https://www.nhs.uk/medicines/empagliflozin/",
+      "source_title": "Empagliflozin",
+      "category": "medicines",
+      "source_sha256": "9192bb343bad4c042ba9fe82347bac7fbddbdeb3a0b220b44118212da4f3e751",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K69",
+      "title": "Semaglutide",
+      "topic": "semaglutide_management",
+      "summary_vi": "Semaglutide thuộc nhóm thuốc tác động lên thụ thể GLP-1. Tùy sản phẩm và chỉ định, thuốc có thể được dùng để hỗ trợ quản lý tiểu đường tuýp 2 hoặc điều trị béo phì. Thuốc có tác dụng làm giảm cảm giác thèm ăn và hỗ trợ kiểm soát đường huyết. Đây là thuốc kê đơn, cần được lựa chọn và theo dõi bởi nhân viên y tế.",
+      "aliases": [
+        "semaglutide",
+        "Ozempic",
+        "Rybelsus",
+        "Wegovy"
+      ],
+      "facts": [
+        [
+          "Semaglutide",
+          "la loai thuoc",
+          "GLP-1 agonist"
+        ],
+        [
+          "Semaglutide",
+          "dieu tri",
+          "obesity"
+        ]
+      ],
+      "support_quotes": [
+        "Semaglutide is a type of medicine called a",
+        "Semaglutide is a medicine used to treat obesity"
+      ],
+      "source_url": "https://www.nhs.uk/medicines/semaglutide/",
+      "source_title": "Semaglutide",
+      "category": "medicines",
+      "source_sha256": "26d90ca2e7ac6626594173af7b5f3bf01bb0c8f4d505ec1899a5b118a61f6efd",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K70",
+      "title": "Liraglutide",
+      "topic": "liraglutide_management",
+      "summary_vi": "Liraglutide là thuốc thuộc nhóm tác động lên thụ thể GLP-1, được dùng theo chỉ định cho điều trị béo phì hoặc quản lý tiểu đường tuýp 2 tùy sản phẩm. Thuốc hỗ trợ giảm cảm giác thèm ăn và kiểm soát đường huyết. Không nên tự chọn thuốc chỉ vì muốn giảm cân; cách sử dụng và theo dõi phải theo kế hoạch điều trị của bác sĩ.",
+      "aliases": [
+        "liraglutide",
+        "Saxenda",
+        "thuoc liraglutide"
+      ],
+      "facts": [
+        [
+          "Liraglutide",
+          "la loai thuoc",
+          "GLP-1 agonist"
+        ],
+        [
+          "Liraglutide",
+          "dieu tri",
+          "obesity"
+        ]
+      ],
+      "support_quotes": [
+        "Liraglutide is a type of medicine called a",
+        "Liraglutide is a medicine used to treat obesity"
+      ],
+      "source_url": "https://www.nhs.uk/medicines/liraglutide/",
+      "source_title": "Liraglutide",
+      "category": "medicines",
+      "source_sha256": "cb891a09c13e612272c5a0f66db274ac4c83e1f7941e9dfee75f313a466e3d35",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K71",
+      "title": "Tirzepatide",
+      "topic": "tirzepatide_management",
+      "summary_vi": "Tirzepatide là thuốc tác động lên các thụ thể GIP và GLP-1. Thuốc được kê để quản lý tiểu đường tuýp 2 hoặc điều trị béo phì theo chỉ định phù hợp. Tác dụng gồm giảm cảm giác thèm ăn và hỗ trợ kiểm soát đường huyết. Thuốc cần đi cùng kế hoạch chăm sóc và theo dõi, thay vì tự sử dụng hoặc thay đổi liều.",
+      "aliases": [
+        "tirzepatide",
+        "Mounjaro",
+        "thuoc tirzepatide"
+      ],
+      "facts": [
+        [
+          "Tirzepatide",
+          "la thuoc",
+          "GLP-1/GIP agonist"
+        ],
+        [
+          "Tirzepatide",
+          "quan ly",
+          "type 2 diabetes"
+        ]
+      ],
+      "support_quotes": [
+        "Tirzepatide is a type of medicine called a",
+        "Tirzepatide is medicine used to manage type 2"
+      ],
+      "source_url": "https://www.nhs.uk/medicines/tirzepatide/",
+      "source_title": "Tirzepatide",
+      "category": "medicines",
+      "source_sha256": "9700d1be64e6c49d975b90a39633898bb475f699a96f24f902794876bfeab991",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K72",
+      "title": "Insulin hai pha",
+      "topic": "biphasic_insulin_overview",
+      "summary_vi": "Insulin hai pha phối hợp insulin tác dụng ngắn hoặc nhanh với insulin tác dụng trung gian trong cùng chế phẩm. Sự phối hợp hỗ trợ kiểm soát đường huyết ở những khoảng thời gian khác nhau. Thuốc được kê tùy nhu cầu điều trị; loại insulin, thời điểm sử dụng và cách theo dõi cần theo hướng dẫn riêng của bác sĩ hoặc điều dưỡng tiểu đường.",
+      "aliases": [
+        "insulin hai pha",
+        "insulin tron san",
+        "biphasic insulin"
+      ],
+      "facts": [
+        [
+          "Insulin",
+          "la hormone",
+          "pancreas"
+        ],
+        [
+          "Biphasic insulin",
+          "la hon hop",
+          "short-acting or rapid-acting insulin and intermediate-acting insulin"
+        ]
+      ],
+      "support_quotes": [
+        "Insulin is a hormone made in your pancreas,",
+        "Biphasic insulin is a mixture of short-acting or"
+      ],
+      "source_url": "https://www.nhs.uk/medicines/insulin/biphasic-insulin/about-biphasic-insulin/",
+      "source_title": "About biphasic insulin",
+      "category": "medicines",
+      "source_sha256": "0c2f73fbfb6c2164028b433a9c2979fbe83a48b250a9cc1d9dafcedc19d91859",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K73",
+      "title": "Insulin tác dụng trung gian",
+      "topic": "intermediate_acting_insulin",
+      "summary_vi": "Insulin tác dụng trung gian, còn gọi là isophane hoặc NPH, giúp cung cấp insulin trong một khoảng thời gian kéo dài hơn insulin tác dụng ngắn. Thuốc hỗ trợ cơ thể sử dụng glucose và quản lý đường huyết. Việc chọn loại insulin, phối hợp với các loại khác và lịch tiêm phải theo kế hoạch điều trị cá nhân, không tự suy ra từ mô tả chung.",
+      "aliases": [
+        "insulin tac dung trung gian",
+        "NPH insulin",
+        "isophane insulin"
+      ],
+      "facts": [
+        [
+          "Insulin",
+          "giup co the su dung",
+          "glucose"
+        ],
+        [
+          "Intermediate-acting insulin",
+          "con goi la",
+          "isophane insulin"
+        ]
+      ],
+      "support_quotes": [
+        "It helps your body use glucose (sugar) for",
+        "Intermediate-acting insulin, also called isophane insulin, is a"
+      ],
+      "source_url": "https://www.nhs.uk/medicines/insulin/intermediate-acting-insulin/about-intermediate-acting-insulin/",
+      "source_title": "About intermediate-acting insulin",
+      "category": "medicines",
+      "source_sha256": "16ac3cbbfe15874ce74c80026457c54fd2e6f57984c28ade656e3223382146aa",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K74",
+      "title": "Insulin tác dụng kéo dài",
+      "topic": "long_acting_insulin",
+      "summary_vi": "Insulin tác dụng kéo dài cung cấp insulin nền để hỗ trợ kiểm soát đường huyết trong ngày và ban đêm. Thuốc có nhiều sản phẩm với đặc điểm sử dụng khác nhau. Nó có thể là một phần của phác đồ phối hợp insulin. Người bệnh cần làm theo loại thuốc, lịch dùng và hướng dẫn theo dõi đã được kê, không tự hoán đổi giữa các sản phẩm.",
+      "aliases": [
+        "insulin tac dung keo dai",
+        "insulin nen",
+        "basal insulin",
+        "Lantus",
+        "Tresiba"
+      ],
+      "facts": [
+        [
+          "Insulin",
+          "la hormone",
+          "pancreas"
+        ],
+        [
+          "Long-acting insulin",
+          "còn được gọi là",
+          "basal insulin"
+        ]
+      ],
+      "support_quotes": [
+        "Insulin is a hormone made in your pancreas,",
+        "Long-acting insulin is sometimes also known as basal"
+      ],
+      "source_url": "https://www.nhs.uk/medicines/insulin/long-acting-insulin/about-long-acting-insulin/",
+      "source_title": "About long-acting insulin",
+      "category": "medicines",
+      "source_sha256": "2373f452ebb25930f8443e7950b480addbda59f7d0afa8f06067d5829061135e",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K75",
+      "title": "Thông tin về insulin tác dụng nhanh",
+      "topic": "rapid_acting_insulin",
+      "summary_vi": "Insulin tác dụng nhanh giúp kiểm soát mức tăng đường huyết liên quan đến bữa ăn chứa carbohydrate. Thuốc bắt đầu hoạt động nhanh và có thể được sử dụng trong các kế hoạch điều trị tiểu đường khác nhau. Thời điểm dùng cụ thể phụ thuộc sản phẩm và kế hoạch của bác sĩ hoặc điều dưỡng; không áp dụng một lịch tiêm chung cho tất cả mọi người.",
+      "aliases": [
+        "insulin tác dụng nhanh",
+        "insulin dùng trước bữa ăn",
+        "tiêm insulin nhanh",
+        "bút tiêm insulin nhanh",
+        "insulin bolus"
+      ],
+      "facts": [
+        [
+          "insulin tác dụng nhanh",
+          "bắt đầu hoạt động sau",
+          "10 đến 20 phút"
+        ],
+        [
+          "insulin tác dụng nhanh",
+          "kéo dài đến",
+          "5 giờ"
+        ]
+      ],
+      "support_quotes": [
+        "Rapid-acting insulin is a type of very fast-acting",
+        "Rapid-acting insulin starts to work after about 10"
+      ],
+      "source_url": "https://www.nhs.uk/medicines/insulin/rapid-acting-insulin/about-rapid-acting-insulin/",
+      "source_title": "About rapid-acting insulin",
+      "category": "medicines",
+      "source_sha256": "360f32d704ddf57d2c0b76d810f60030983b6c095d6ebd45e9b8d25e2c907523",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K76",
+      "title": "Thông tin về insulin tác dụng ngắn",
+      "topic": "short_acting_insulin",
+      "summary_vi": "Insulin tác dụng ngắn hỗ trợ kiểm soát đường huyết quanh bữa ăn và có đặc điểm khởi phát, kéo dài khác với insulin tác dụng nhanh. Việc sử dụng cần phối hợp với thời điểm ăn và kế hoạch theo dõi đường huyết. Bác sĩ hoặc điều dưỡng tiểu đường hướng dẫn lịch dùng phù hợp với đúng chế phẩm; không tự thay thế giữa hai loại.",
+      "aliases": [
+        "insulin tác dụng ngắn",
+        "insulin hòa tan",
+        "insulin thường",
+        "tiêm insulin ngắn",
+        "insulin trung tính"
+      ],
+      "facts": [
+        [
+          "insulin tác dụng ngắn",
+          "bắt đầu hoạt động sau",
+          "30 đến 60 phút"
+        ],
+        [
+          "insulin tác dụng ngắn",
+          "kéo dài đến",
+          "8 giờ"
+        ]
+      ],
+      "support_quotes": [
+        "Short-acting insulin (sometimes called regular insulin, soluble insulin",
+        "Short-acting insulin starts to work after about 30"
+      ],
+      "source_url": "https://www.nhs.uk/medicines/insulin/short-acting-insulin/about-short-acting-insulin/",
+      "source_title": "About short-acting insulin",
+      "category": "medicines",
+      "source_sha256": "67be2376f0aa496bccce05b4545e049bf982f8158ad7f911e11ddc021d5b3205",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K77",
+      "title": "Bảo quản và du lịch với insulin tác dụng kéo dài",
+      "topic": "storing_travelling_long_acting_insulin",
+      "summary_vi": "Bạn nên giữ các bút tiêm hoặc ống tiêm insulin dùng một lần trong tủ lạnh và tránh xa ngăn đông đá để đảm bảo thuốc không bị hỏng do đóng băng. Khi bắt đầu dùng bút mới, bạn có thể để ở nhiệt độ phòng trong thời gian quy định tùy theo nhãn hiệu, đồng thời cần lên kế hoạch mang theo lượng thuốc dự trữ và giữ trong túi làm mát khi đi du lịch.",
+      "aliases": [
+        "bảo quản insulin",
+        "để insulin trong tủ lạnh",
+        "mang insulin khi đi du lịch",
+        "nhiệt độ phòng cho insulin",
+        "bút tiêm insulin dự trữ"
+      ],
+      "facts": [
+        [
+          "bút tiêm insulin hoặc ống tiêm",
+          "giữ trong",
+          "tủ lạnh"
+        ],
+        [
+          "insulin bị đóng băng",
+          "cần phải",
+          "vứt bỏ"
+        ]
+      ],
+      "support_quotes": [
+        "Keep your disposable insulin pens or cartridges in",
+        "If the insulin freezes you'll need to throw"
+      ],
+      "source_url": "https://www.nhs.uk/medicines/insulin/long-acting-insulin/storing-and-travelling-with-long-acting-insulin/",
+      "source_title": "Storing and travelling with long-acting insulin",
+      "category": "medicines",
+      "source_sha256": "a32818468be04fc99f7679dcafb0957e0c05fecd8809ff26506a260882660d84",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K78",
+      "title": "Dùng insulin tác dụng kéo dài với thuốc và thảo dược",
+      "topic": "long_acting_insulin_interactions",
+      "summary_vi": "Một số thuốc có thể làm tăng hoặc giảm đường huyết khi dùng cùng insulin tác dụng kéo dài. Hãy cho bác sĩ hoặc dược sĩ biết các thuốc, thảo dược và thực phẩm bổ sung đang dùng. Nếu cần thay đổi kế hoạch insulin, nhân viên y tế sẽ hướng dẫn; không tự điều chỉnh liều chỉ vì bắt đầu hoặc ngừng một sản phẩm khác.",
+      "aliases": [
+        "tương tác thuốc insulin",
+        "thuốc làm tăng đường huyết",
+        "thảo dược và tiểu đường",
+        "dùng chung thuốc với insulin",
+        "thảo dược bổ sung"
+      ],
+      "facts": [
+        [
+          "một số thuốc",
+          "có thể làm tăng",
+          "lượng đường trong máu"
+        ],
+        [
+          "một số thuốc",
+          "có thể làm giảm",
+          "lượng đường trong máu"
+        ]
+      ],
+      "support_quotes": [
+        "Some medicines can increase your blood glucose levels",
+        "Medicines that can reduce your blood glucose levels"
+      ],
+      "source_url": "https://www.nhs.uk/medicines/insulin/long-acting-insulin/taking-long-acting-insulin-with-other-medicines-and-herbal-supplements/",
+      "source_title": "Taking long-acting insulin with other medicines and herbal…",
+      "category": "medicines",
+      "source_sha256": "dc461dfbcedb8223bd9b96d3655600715a06ecd67db7ee72ea23c6712bfa57d7",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K79",
+      "title": "Thai kỳ, cho con bú và khả năng sinh sản với insulin kéo dài",
+      "topic": "long_acting_insulin_pregnancy",
+      "summary_vi": "Bạn có thể tiếp tục sử dụng insulin tác dụng kéo dài trong thời gian mang thai và cho con bú khi được điều trị bệnh tiểu đường tốt. Quá trình cho con bú làm mất đường qua sữa mẹ nên có thể cần thêm bữa ăn nhẹ để tránh hạ đường huyết, trong khi không có bằng chứng nào cho thấy loại insulin này ảnh hưởng đến khả năng sinh sản của nam hay nữ.",
+      "aliases": [
+        "insulin khi mang thai",
+        "cho con bú khi dùng insulin",
+        "sinh sản và insulin",
+        "tiểu đường thai kỳ và insulin",
+        "sữa mẹ và insulin"
+      ],
+      "facts": [
+        [
+          "insulin tác dụng kéo dài",
+          "có thể dùng khi",
+          "mang thai"
+        ],
+        [
+          "insulin tác dụng kéo dài",
+          "có thể dùng khi",
+          "cho con bú"
+        ]
+      ],
+      "support_quotes": [
+        "You can take long-acting insulin while you're pregnant.",
+        "You can take long-acting insulin while you're breastfeeding"
+      ],
+      "source_url": "https://www.nhs.uk/medicines/insulin/long-acting-insulin/pregnancy-breastfeeding-and-fertility-while-taking-long-acting-insulin/",
+      "source_title": "Pregnancy, breastfeeding and fertility while taking long-acting insulin",
+      "category": "medicines",
+      "source_sha256": "af2c1ee1e79b70287cf1e8e7b140ff52773cca2f2ebcb07e4467c0035df9497f",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K80",
+      "title": "Xét nghiệm và chẩn đoán tiểu đường thai kỳ",
+      "topic": "gestational_diabetes_tests",
+      "summary_vi": "Việc xét nghiệm tiểu đường thai kỳ thường diễn ra từ tuần thứ hai mươi bốn đến tuần thứ hai mươi tám của thai kỳ để kiểm tra cách cơ thể sử dụng glucose. Các bác sĩ sử dụng xét nghiệm máu bao gồm trắc nghiệm thách thức glucose hoặc trắc nghiệm dung nạp glucose bằng đường uống để chẩn đoán chính xác tình trạng bệnh dựa trên kết quả đo lường.",
+      "aliases": [
+        "xét nghiệm tiểu đường thai kỳ",
+        "chẩn đoán tiểu đường thai kỳ",
+        "trắc nghiệm thách thức glucose",
+        "dung nạp glucose đường uống",
+        "xét nghiệm máu tiểu đường"
+      ],
+      "facts": [
+        [
+          "xét nghiệm tiểu đường thai kỳ",
+          "thường diễn ra giữa",
+          "24 và 28 tuần"
+        ],
+        [
+          "bác sĩ dùng xét nghiệm máu",
+          "để chẩn đoán",
+          "tiểu đường thai kỳ"
+        ]
+      ],
+      "support_quotes": [
+        "Testing for gestational diabetes usually occurs between 24",
+        "Doctors use blood tests to diagnose gestational diabetes."
+      ],
+      "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/what-is-diabetes/gestational/tests-diagnosis",
+      "source_title": "Tests & Diagnosis for Gestational Diabetes",
+      "category": "monitoring",
+      "source_sha256": "bf5f20af8c3f248ccd28b2acb228473ed99d37d5f9f4e5c4ef9c23da11929fb0",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K81",
+      "title": "Thiết bị theo dõi đường huyết liên tục",
+      "topic": "continuous_glucose_monitors",
+      "summary_vi": "Cảm biến theo dõi glucose liên tục ghi nhận mức glucose trong ngày và đêm, giúp giảm số lần phải chích đầu ngón tay. Dữ liệu được gửi đến thiết bị nhận như điện thoại và có thể chia sẻ với đội ngũ chăm sóc. Cách kiểm tra đối chiếu và xử lý khi triệu chứng không phù hợp với số đo cần theo hướng dẫn thiết bị và nhân viên y tế.",
+      "aliases": [
+        "thiết bị theo dõi đường huyết",
+        "cảm biến đo đường huyết",
+        "máy đo đường huyết liên tục",
+        "thiết bị cgm"
+      ],
+      "facts": [
+        [
+          "cảm biến CGM",
+          "đặt dưới",
+          "da"
+        ],
+        [
+          "CGM",
+          "gửi dữ liệu",
+          "điện thoại"
+        ]
+      ],
+      "support_quotes": [
+        "Continuous glucose monitors, also called CGMs, let you",
+        "A CGM continuously sends your glucose readings to"
+      ],
+      "source_url": "https://www.diabetes.org.uk/about-diabetes/looking-after-diabetes/technology/continuous-glucose-monitors",
+      "source_title": "Continuous glucose monitors",
+      "category": "monitoring",
+      "source_sha256": "96b9df431a7b389c731bf3f92479b2d805dcd4f621230759c1887ba87c9477ad",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K82",
+      "title": "Máy đo đường huyết cầm tay",
+      "topic": "blood_glucose_meters",
+      "summary_vi": "Máy đo đường huyết cầm tay là thiết bị nhỏ gọn hiển thị kết quả trong vài giây bằng máu toàn phần và que thử, đóng vai trò quan trọng trong việc quản lý và phòng ngừa biến chứng. Thiết bị này cũng được dùng làm phương án dự phòng để xác nhận kết quả đường huyết thấp từ cảm biến liên tục.",
+      "aliases": [
+        "máy đo đường huyết",
+        "máy thử đường huyết ngón tay",
+        "thiết bị đo đường huyết cầm tay",
+        "máy bgm"
+      ],
+      "facts": [
+        [
+          "máy đo đường huyết",
+          "đo bằng",
+          "máu toàn phần và que thử"
+        ],
+        [
+          "máy đo đường huyết",
+          "xác nhận",
+          "kết quả đường huyết từ CGM"
+        ]
+      ],
+      "support_quotes": [
+        "BGMs provide accurate blood glucose (blood sugar) readings.",
+        "For example, a BGM can be used to"
+      ],
+      "source_url": "https://diabetes.org/about-diabetes/devices-technology/blood-glucose-meters-important-role-in-diabetes-care",
+      "source_title": "Blood Glucose Meters Can Play an Important Role…",
+      "category": "monitoring",
+      "source_sha256": "a0fb960ccc3c180ca22a25948217e77f4ee271f3c1bb63de51c306faf77c7b1d",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K83",
+      "title": "Thời gian trong khoảng mục tiêu",
+      "topic": "cgm_time_in_range",
+      "summary_vi": "Thời gian trong khoảng mục tiêu là khoảng thời gian lượng đường huyết nằm trong ngưỡng mục tiêu, thường từ 70 đến 180 mg/dL cho đa số người. Phương pháp này sử dụng dữ liệu từ thiết bị theo dõi liên tục để phân tích thời gian đường huyết ở mức cao hoặc thấp, giúp người bệnh hạn chế nguy cơ biến chứng.",
+      "aliases": [
+        "thời gian trong khoảng mục tiêu",
+        "chỉ số thời gian trong khoảng",
+        "khoảng mục tiêu đường huyết",
+        "time in range"
+      ],
+      "facts": [
+        [
+          "thời gian trong khoảng mục tiêu",
+          "là khoảng thời gian đường huyết trong",
+          "ngưỡng mục tiêu"
+        ],
+        [
+          "người bệnh",
+          "nên đạt mục tiêu thời gian trong khoảng",
+          "ít nhất 70 phần trăm"
+        ]
+      ],
+      "support_quotes": [
+        "Time in range is the amount of time",
+        "Most people should aim for a time in"
+      ],
+      "source_url": "https://diabetes.org/about-diabetes/devices-technology/cgm-time-in-range",
+      "source_title": "CGM & Time in Range",
+      "category": "monitoring",
+      "source_sha256": "c7c7cd94ade639ba7887567e2b9840a35dffef0d613f11774f44c30d9b41fb62",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K84",
+      "title": "Lựa chọn thiết bị theo dõi đường huyết liên tục",
+      "topic": "choosing_cgm",
+      "summary_vi": "Khi chọn CGM, cần phân biệt thiết bị gửi dữ liệu liên tục và thiết bị cần quét để đọc, đồng thời xem tính năng cảnh báo, chia sẻ dữ liệu và khả năng tương thích. Không phải mọi CGM đều có cùng tính năng hoặc loại bỏ mọi lần đo đầu ngón tay. Lựa chọn nên phù hợp nhu cầu và kế hoạch chăm sóc của người dùng.",
+      "aliases": [
+        "chọn thiết bị theo dõi liên tục",
+        "phân loại cảm biến đo đường huyết",
+        "so sánh các loại CGM",
+        "cgm thời gian thực và quét gián đoạn"
+      ],
+      "facts": [
+        [
+          "thiết bị thời gian thực",
+          "cung cấp",
+          "cảnh báo âm thanh"
+        ],
+        [
+          "thiết bị quét gián đoạn",
+          "cần",
+          "quét thiết bị để nhận dữ liệu"
+        ]
+      ],
+      "support_quotes": [
+        "The most significant benefit of all real-time CGM",
+        "This system requires you to scan the device"
+      ],
+      "source_url": "https://diabetes.org/about-diabetes/devices-technology/choosing-cgm",
+      "source_title": "Choosing a CGM",
+      "category": "monitoring",
+      "source_sha256": "d34fc43fcd7db1006382065d1d326eb85e34339763a2acc8d3abff136270a1b6",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K85",
+      "title": "Bút tiêm insulin tiện lợi",
+      "topic": "insulin_pens",
+      "summary_vi": "Bút tiêm insulin là dụng cụ tích hợp sẵn thuốc và ống tiêm trong một thiết bị cầm tay tiện lợi giúp đưa insulin vào cơ thể nhanh chóng. Thiết bị này có các loại dùng một lần hoặc dùng lại với ống chứa thay thế, cung cấp giải pháp kín đáo và dễ mang theo khi di chuyển so với bơm tiêm truyền thống.",
+      "aliases": [
+        "bút tiêm insulin",
+        "các loại bút tiêm",
+        "sử dụng bút tiêm tiểu đường",
+        "bút tiêm"
+      ],
+      "facts": [
+        [
+          "bút tiêm insulin",
+          "kết hợp",
+          "thuốc và ống tiêm"
+        ],
+        [
+          "bút tiêm",
+          "có hai loại cơ bản là",
+          "dùng một lần và dùng lại"
+        ]
+      ],
+      "support_quotes": [
+        "Insulin pens can make taking insulin more convenient",
+        "Pens come in two basic types: disposable and"
+      ],
+      "source_url": "https://diabetes.org/about-diabetes/devices-technology/insulin-pens",
+      "source_title": "Insulin Pens",
+      "category": "monitoring",
+      "source_sha256": "0d20e43f7d25891e5b8b1791c4c19b4f75d10aae7d2c3802b03c9e4a32c84bcd",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K86",
+      "title": "Máy bơm insulin mang lại sự lựa chọn",
+      "topic": "insulin_pumps",
+      "summary_vi": "Máy bơm insulin là thiết bị vi tính hóa nhỏ gọn truyền insulin liên tục theo liều nền ổn định hoặc liều bổ sung theo hướng dẫn quanh bữa ăn qua ống thông dẻo dưới da. Thiết bị này giúp mô phỏng quá trình giải phóng insulin tự nhiên của cơ thể và có thể tích hợp với cảm biến để hỗ trợ kiểm soát đường huyết.",
+      "aliases": [
+        "máy bơm insulin",
+        "bơm truyền insulin",
+        "thiết bị bơm insulin tự động",
+        "bơm insulin"
+      ],
+      "facts": [
+        [
+          "máy bơm insulin",
+          "truyền insulin qua",
+          "ống thông dẻo"
+        ],
+        [
+          "máy bơm insulin",
+          "đưa insulin dưới dạng",
+          "liều nền hoặc liều bổ sung"
+        ]
+      ],
+      "support_quotes": [
+        "Insulin pumps are small, computerized devices that deliver",
+        "Doses are delivered through a flexible plastic tube"
+      ],
+      "source_url": "https://diabetes.org/about-diabetes/devices-technology/insulin-pumps-relief-and-choice",
+      "source_title": "Insulin Pumps: Relief and Choice",
+      "category": "monitoring",
+      "source_sha256": "e8899dcb08ac9adc554a131270464a9c44825adec34255644efaa8de6560106e",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K87",
+      "title": "Bút tiêm thông minh quản lý bệnh tiểu đường",
+      "topic": "smart_insulin_pen",
+      "summary_vi": "Bút tiêm insulin thông minh có thể kết nối ứng dụng để lưu thời gian và lượng insulin đã dùng, nhắc lịch và hỗ trợ tính toán theo cài đặt điều trị. Thiết bị giúp tổ chức thông tin về bữa ăn, đường huyết và insulin còn hoạt động. Các phép tính hỗ trợ phải dựa trên cấu hình và hướng dẫn của đội ngũ chăm sóc, không mặc nhiên bảo đảm liều phù hợp trong mọi tình huống.",
+      "aliases": [
+        "bút tiêm thông minh",
+        "bút tiêm insulin thông minh",
+        "thiết bị tiêm insulin",
+        "bút tiêm kết nối ứng dụng",
+        "bút tiêm điện tử"
+      ],
+      "facts": [
+        [
+          "bút tiêm thông minh",
+          "tính toán và theo dõi",
+          "liều lượng"
+        ],
+        [
+          "bút tiêm thông minh",
+          "hỗ trợ",
+          "quản lý insulin"
+        ],
+        [
+          "bút tiêm thông minh",
+          "gửi dữ liệu",
+          "ứng dụng"
+        ]
+      ],
+      "support_quotes": [
+        "A smart insulin pen is a reusable injector",
+        "This smart system calculates and tracks doses and"
+      ],
+      "source_url": "https://diabetes.org/about-diabetes/devices-technology/smart-insulin-pen",
+      "source_title": "What is a smart insulin pen?",
+      "category": "monitoring",
+      "source_sha256": "aa1349190dd673f5833fd8a1fe94d076005b135b20f026a031e59e5b4dc21d58",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K88",
+      "title": "Sử dụng máy bơm insulin trong quản lý tiểu đường",
+      "topic": "insulin_pump_usage",
+      "summary_vi": "Máy bơm insulin là một lựa chọn hỗ trợ kiểm soát đường huyết, không phải lựa chọn bắt buộc cho mọi người. Người dùng hoặc người chăm sóc cần được hướng dẫn theo dõi glucose, vận hành thiết bị và nhận ra lỗi truyền insulin. Quyết định sử dụng cần cân nhắc sở thích, khả năng tự chăm sóc và kế hoạch với đội ngũ y tế.",
+      "aliases": [
+        "máy bơm insulin",
+        "sử dụng máy bơm insulin",
+        "thiết bị bơm insulin",
+        "bơm insulin",
+        "quản lý bằng máy bơm"
+      ],
+      "facts": [
+        [
+          "máy bơm insulin",
+          "là",
+          "công cụ hỗ trợ"
+        ],
+        [
+          "người sử dụng máy bơm",
+          "cần kiểm tra",
+          "đường huyết"
+        ],
+        [
+          "máy bơm insulin",
+          "cung cấp",
+          "insulin tác dụng ngắn"
+        ]
+      ],
+      "support_quotes": [
+        "Insulin pumps have been used successfully across the",
+        "The one absolute requirement for using a pump"
+      ],
+      "source_url": "https://diabetes.org/about-diabetes/devices-technology/who-should-use-a-pump",
+      "source_title": "Who Should Use a Pump?",
+      "category": "monitoring",
+      "source_sha256": "2d0af6d89d05199a67886d202190a9b2ebcab04f9f3dff8ead257566ec3c6a55",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K89",
+      "title": "Ảnh hưởng của vận động và tập luyện đến đường huyết",
+      "topic": "exercise_and_blood_glucose",
+      "summary_vi": "Vận động thể chất giúp giảm nguy cơ sức khỏe dài hạn và cải thiện độ nhạy insulin. Mặc dù tập luyện thường làm giảm lượng đường huyết, một số bài tập cường độ cao có thể làm tăng đường huyết do cơ thể sản xuất hormone căng thẳng như adrenaline kích thích gan giải phóng glucose.",
+      "aliases": [
+        "vận động và đường huyết",
+        "tập thể dục tiểu đường",
+        "hoạt động thể chất",
+        "ảnh hưởng của tập luyện",
+        "vận động khi mắc tiểu đường"
+      ],
+      "facts": [
+        [
+          "vận động thể chất",
+          "cải thiện",
+          "độ nhạy insulin"
+        ],
+        [
+          "adrenaline",
+          "làm tăng",
+          "mức đường huyết"
+        ],
+        [
+          "tập luyện cường độ cao",
+          "có thể làm tăng",
+          "đường huyết"
+        ]
+      ],
+      "support_quotes": [
+        "Exercise is essential for everyone—especially for people with",
+        "Adrenaline raises blood glucose levels by stimulating your"
+      ],
+      "source_url": "https://diabetes.org/health-wellness/fitness/why-does-exercise-sometimes-raise-blood-sugar",
+      "source_title": "Exercise and Blood Glucose Levels in Diabetes",
+      "category": "monitoring",
+      "source_sha256": "34888ee874b2179e5600ca1be08d7e2642fdc2af0c6e8b71eab37eb64ec0d705",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K90",
+      "title": "Kiểm tra đường huyết và theo dõi mục tiêu",
+      "topic": "checking_blood_glucose",
+      "summary_vi": "Theo dõi đường huyết là công cụ chính giúp xác định mức đường huyết có nằm trong khoảng mục tiêu hay không. Người bệnh tiểu đường có thể kiểm tra bằng cách chích đầu ngón tay kết hợp máy đo hoặc thiết bị theo dõi liên tục để ghi nhận kết quả và đánh giá phản ứng cơ thể.",
+      "aliases": [
+        "kiểm tra đường huyết",
+        "theo dõi đường huyết",
+        "mục tiêu đường huyết",
+        "đo đường huyết",
+        "kiểm tra lượng đường"
+      ],
+      "facts": [
+        [
+          "theo dõi đường huyết",
+          "là",
+          "công cụ chính"
+        ],
+        [
+          "mục tiêu đường huyết",
+          "được cá nhân hóa dựa trên",
+          "tình trạng bệnh nhân"
+        ],
+        [
+          "ghi chép kết quả",
+          "giúp đánh giá",
+          "kế hoạch chăm sóc"
+        ]
+      ],
+      "support_quotes": [
+        "Blood glucose (blood sugar) monitoring is the primary",
+        "Blood glucose targets are individualized based on:"
+      ],
+      "source_url": "https://diabetes.org/living-with-diabetes/treatment-care/checking-your-blood-sugar",
+      "source_title": "Check Your Blood Glucose | Diabetes Testing &…",
+      "category": "monitoring",
+      "source_sha256": "8e719a0a58c8fa76141ead1aaad622f9fa9244f6360e445f36e224d95318bb51",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K91",
+      "title": "Hướng dẫn các bước kiểm tra đường huyết tại nhà",
+      "topic": "how_to_check_blood_sugar",
+      "summary_vi": "Biết rõ chỉ số đường huyết giúp người bệnh quản lý tiểu đường và giảm nguy cơ biến chứng nghiêm trọng. Người bệnh có thể tự kiểm tra bằng phương pháp chích máu đầu ngón tay sử dụng máy đo hoặc đeo cảm biến theo dõi đường huyết liên tục để đọc kết quả.",
+      "aliases": [
+        "cách kiểm tra đường huyết",
+        "thử đường huyết tại nhà",
+        "đo đường huyết đầu ngón tay",
+        "kiểm tra đường huyết ngón tay",
+        "đọc chỉ số đường huyết"
+      ],
+      "facts": [
+        [
+          "chỉ số đường huyết",
+          "giúp quản lý",
+          "bệnh tiểu đường"
+        ],
+        [
+          "kiểm tra đường huyết",
+          "có thể thực hiện bằng",
+          "phương pháp chích ngón tay"
+        ],
+        [
+          "thiết bị theo dõi liên tục",
+          "đo lượng đường trong",
+          "dịch kẽ"
+        ]
+      ],
+      "support_quotes": [
+        "Knowing your blood sugar levels helps you manage",
+        "There are two main ways to check your"
+      ],
+      "source_url": "https://www.diabetes.org.uk/about-diabetes/looking-after-diabetes/blood-sugar-levels",
+      "source_title": "How to check your blood sugar levels",
+      "category": "monitoring",
+      "source_sha256": "cbacd93edbfc294117fe20c3157d415529e08d016c47f878eb9a88216f7aa9f6",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K92",
+      "title": "Hiểu về xét nghiệm HbA1c trong bệnh tiểu đường",
+      "topic": "understanding_hba1c",
+      "summary_vi": "Xét nghiệm HbA1c đo lượng đường huyết trung bình trong vòng hai đến ba tháng qua, phản ánh mức độ gắn kết giữa glucose và tế bào hồng cầu. Chỉ số này đóng vai trò quan trọng giúp đội ngũ y tế đánh giá mức độ kiểm soát bệnh và định hướng kế hoạch điều trị.",
+      "aliases": [
+        "xét nghiệm hba1c",
+        "chỉ số hba1c",
+        "đường huyết trung bình",
+        "xét nghiệm hemoglobin a1c",
+        "chỉ số hba1c trung bình"
+      ],
+      "facts": [
+        [
+          "xét nghiệm hba1c",
+          "đo lượng đường huyết trung bình trong",
+          "hai đến ba tháng"
+        ],
+        [
+          "hba1c",
+          "là hemoglobin được",
+          "glycat hóa"
+        ],
+        [
+          "mức hba1c lý tưởng",
+          "giúp đánh giá",
+          "kiểm soát bệnh tiểu đường"
+        ]
+      ],
+      "support_quotes": [
+        "HbA1c is your average blood glucose (sugar) levels",
+        "The haemoglobin A1c (HbA1c) test measures the amount"
+      ],
+      "source_url": "https://www.diabetes.org.uk/about-diabetes/looking-after-diabetes/hba1c",
+      "source_title": "What is HbA1c?",
+      "category": "monitoring",
+      "source_sha256": "c3ec9c1dc4b78fab6b615856e79a2a09e6e1a73261226e3535ed5faa8b03a517",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K93",
+      "title": "Thể ceton và bệnh tiểu đường",
+      "topic": "ketones_and_diabetes",
+      "summary_vi": "Ceton là các chất được tạo ra khi cơ thể phân hủy chất béo. Ceton tích tụ ở mức cao có thể dẫn đến nhiễm toan ceton do tiểu đường, một tình trạng nguy hiểm. Việc kiểm tra ceton, khoảng mục tiêu và cách xử lý khi kết quả cao cần được đội ngũ y tế hướng dẫn. Nếu có dấu hiệu nghi ngờ nhiễm toan ceton, cần được đánh giá y tế kịp thời.",
+      "aliases": [
+        "thể ceton cao",
+        "nhiễm toan ceton dka",
+        "xét nghiệm ceton",
+        "triệu chứng ceton cao",
+        "ketone trong máu"
+      ],
+      "facts": [
+        [
+          "gan",
+          "sản xuất",
+          "thể ceton"
+        ],
+        [
+          "thể ceton",
+          "dẫn đến",
+          "nhiễm toan ceton do đái tháo đường"
+        ]
+      ],
+      "support_quotes": [
+        "Ketones are a type of chemical that your",
+        "When ketones build-up in the blood, they can"
+      ],
+      "source_url": "https://www.diabetes.org.uk/about-diabetes/looking-after-diabetes/ketones-and-diabetes",
+      "source_title": "Ketones and diabetes",
+      "category": "monitoring",
+      "source_sha256": "d24e18c229562e1aaef74015c57c1977e505c2d921521bea9040224415c7121e",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K94",
+      "title": "Thời gian trong khoảng mục tiêu",
+      "topic": "time_in_range",
+      "summary_vi": "Thời gian trong khoảng mục tiêu là tỷ lệ phần trăm thời gian đường huyết nằm trong ngưỡng an toàn do đội ngũ y tế quyết định. Công nghệ tiểu đường có thể giúp người bệnh theo dõi và tăng thời gian này một cách hiệu quả.",
+      "aliases": [
+        "thời gian trong khoảng mục tiêu",
+        "chỉ số tir",
+        "đường huyết trong khoảng",
+        "tăng thời gian trong khoảng",
+        "thời gian mục tiêu"
+      ],
+      "facts": [
+        [
+          "thời gian trong khoảng mục tiêu",
+          "đo lường",
+          "tỷ lệ phần trăm thời gian đường huyết trong ngưỡng"
+        ],
+        [
+          "công nghệ tiểu đường",
+          "hỗ trợ",
+          "tăng thời gian trong khoảng mục tiêu"
+        ]
+      ],
+      "support_quotes": [
+        "Time in range is the percentage of time",
+        "Diabetes technology , such as insulin pumps, continuous"
+      ],
+      "source_url": "https://www.diabetes.org.uk/about-diabetes/looking-after-diabetes/time-in-range",
+      "source_title": "Time in range for diabetes",
+      "category": "monitoring",
+      "source_sha256": "a7f20fe8d8276cba9b4e3a041519a2cc54b41929f6d2302cc316af28eab73e27",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K95",
+      "title": "Đường huyết cao tăng đường huyết",
+      "topic": "high_blood_sugar",
+      "summary_vi": "Đường huyết cao xảy ra khi nồng độ đường trong máu quá cao, chủ yếu ảnh hưởng đến người mắc tiểu đường. Tình trạng này có thể gây ra các tổn thương thần kinh và biến chứng nghiêm trọng nếu không được điều trị đúng cách.",
+      "aliases": [
+        "đường huyết cao",
+        "tăng đường huyết",
+        "triệu chứng đường huyết cao",
+        "nguyên nhân đường huyết cao",
+        "hyperglycaemia"
+      ],
+      "facts": [
+        [
+          "đường huyết cao",
+          "ảnh hưởng",
+          "người mắc tiểu đường"
+        ],
+        [
+          "đường huyết cao",
+          "gây ra",
+          "tổn thương thần kinh"
+        ]
+      ],
+      "support_quotes": [
+        "High blood sugar (hyperglycaemia) is where the level",
+        "permanent damage to the nerves in your hands"
+      ],
+      "source_url": "https://www.nhs.uk/conditions/high-blood-sugar-hyperglycaemia/",
+      "source_title": "High blood sugar (hyperglycaemia)",
+      "category": "monitoring",
+      "source_sha256": "313b1b6edeec6206bbc8029770a0be1838c6cf759c8cd4a690d48bbf8ceae04d",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K96",
+      "title": "Đường huyết thấp hạ đường huyết",
+      "topic": "low_blood_sugar",
+      "summary_vi": "Đường huyết thấp là tình trạng lượng đường trong máu dưới 4mmol/L và cần được xử lý nhanh chóng. Các loại thuốc điều trị tiểu đường đôi khi có thể làm hạ đường huyết quá mức và gây ra các triệu chứng mệt mỏi.",
+      "aliases": [
+        "đường huyết thấp",
+        "hạ đường huyết",
+        "triệu chứng hạ đường huyết",
+        "xử lý hạ đường huyết",
+        "hypoglycaemia"
+      ],
+      "facts": [
+        [
+          "đường huyết thấp",
+          "dưới",
+          "4mmol/L"
+        ],
+        [
+          "thuốc tiểu đường",
+          "hạ",
+          "đường huyết"
+        ]
+      ],
+      "support_quotes": [
+        "Low blood sugar (hypoglycaemia or a hypo) is",
+        "Diabetes medicines treat your condition by lowering your"
+      ],
+      "source_url": "https://www.nhs.uk/conditions/low-blood-sugar-hypoglycaemia/",
+      "source_title": "Low blood sugar (hypoglycaemia)",
+      "category": "monitoring",
+      "source_sha256": "91161289f5c7c6921f976b87b30adb66e939c6cadd39f52b173e2d4a90222fdc",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K97",
+      "title": "Hiểu về chỉ số A1C",
+      "topic": "understanding_a1c",
+      "summary_vi": "Xét nghiệm A1C cung cấp bức tranh tổng quan về mức đường huyết trung bình trong vòng 2 đến 3 tháng qua. Đạt được mục tiêu A1C là một cách giúp người bệnh giảm nguy cơ phát triển các biến chứng tiểu đường lâu dài.",
+      "aliases": [
+        "xét nghiệm a1c",
+        "chỉ số hba1c",
+        "mục tiêu a1c",
+        "đường huyết trung bình",
+        "xét nghiệm hemoglobin a1c"
+      ],
+      "facts": [
+        [
+          "xét nghiệm a1c",
+          "đo lường",
+          "đường huyết trung bình trong 2 đến 3 tháng"
+        ],
+        [
+          "đạt mục tiêu a1c",
+          "giảm",
+          "nguy cơ biến chứng tiểu đường"
+        ]
+      ],
+      "support_quotes": [
+        "The A1C test gives you a picture of",
+        "Reaching your A1C targets is one way to"
+      ],
+      "source_url": "https://diabetes.org/about-diabetes/a1c",
+      "source_title": "Understanding A1C",
+      "category": "monitoring",
+      "source_sha256": "f408cf4758ca2693064a0db297217278b2394170d83a12f25a462dc110c7e3fe",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K98",
+      "title": "Sau khi sinh con",
+      "topic": "after_pregnancy_diabetes",
+      "summary_vi": "Người đã mắc tiểu đường thai kỳ cần kiểm tra lại tiểu đường sau sinh theo lịch của bác sĩ; nguồn NIDDK nhấn mạnh không muộn hơn 12 tuần. Dù đường huyết trở về bình thường, nguy cơ tiểu đường tuýp 2 về sau vẫn cao hơn. Duy trì theo dõi định kỳ và lối sống phù hợp giúp chăm sóc sức khỏe lâu dài.",
+      "aliases": [
+        "sau khi sinh con tiểu đường",
+        "kiểm tra tiểu đường sau sinh",
+        "ngừa tiểu đường tuýp 2 sau sinh",
+        "xét nghiệm tiểu đường sau sinh",
+        "tiểu đường thai kỳ sau sinh"
+      ],
+      "facts": [
+        [
+          "phụ nữ sau sinh",
+          "kiểm tra",
+          "tiểu đường"
+        ],
+        [
+          "đường huyết bình thường",
+          "vẫn có nguy cơ",
+          "tiểu đường tuýp 2"
+        ]
+      ],
+      "support_quotes": [
+        "You should get tested for diabetes no later",
+        "Even if your blood glucose is normal, you"
+      ],
+      "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/what-is-diabetes/gestational/after-your-baby-is-born",
+      "source_title": "After Your Baby is Born",
+      "category": "pregnancy",
+      "source_sha256": "c7a722b0d052f1e1e80c56de998658d08dab274914f4ae9bb739f548143bcb47",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K99",
+      "title": "Quản lý và điều trị đái tháo đường thai kỳ",
+      "topic": "gestational_diabetes_management",
+      "summary_vi": "Nhiều phụ nữ bị đái tháo đường thai kỳ có thể kiểm soát lượng đường huyết thông qua kế hoạch ăn uống lành mạnh và hoạt động thể chất đều đặn. Ngoài ra, một số trường hợp có thể cần dùng thuốc để đạt mục tiêu đường huyết an toàn cho cả mẹ và bé.",
+      "aliases": [
+        "quản lý đái tháo đường thai kỳ",
+        "điều trị đái tháo đường thai kỳ",
+        "kiểm soát đường huyết khi mang thai"
+      ],
+      "facts": [
+        [
+          "chế độ ăn và vận động",
+          "giúp quản lý",
+          "đường huyết"
+        ],
+        [
+          "hoạt động thể chất",
+          "hỗ trợ đạt",
+          "mục tiêu đường huyết"
+        ]
+      ],
+      "support_quotes": [
+        "Many women with gestational diabetes can manage their",
+        "Physical activity can help you reach your target"
+      ],
+      "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/what-is-diabetes/gestational/management-treatment",
+      "source_title": "Managing & Treating Gestational Diabetes",
+      "category": "pregnancy",
+      "source_sha256": "1ebaf76e507d92ed768c46547d5b36d25a955c77538369164c2e6a29531ef969",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K100",
+      "title": "Phòng ngừa đái tháo đường thai kỳ",
+      "topic": "gestational_diabetes_prevention",
+      "summary_vi": "Nguy cơ mắc đái tháo đường thai kỳ tăng lên nếu phụ nữ từng mắc bệnh trước đây, có tiền sử gia đình bị đái tháo đường tuýp 2, bị tiền đái tháo đường hoặc hội chứng buồng trứng đa nang. Phụ nữ thừa cân dự định mang thai có thể giảm nguy cơ bằng cách giảm cân và tăng cường vận động.",
+      "aliases": [
+        "ngừa đái tháo đường thai kỳ",
+        "nguy cơ đái tháo đường thai kỳ",
+        "giảm nguy cơ đái tháo đường khi mang thai"
+      ],
+      "facts": [
+        [
+          "tiền sử gia đình",
+          "làm tăng nguy cơ",
+          "đái tháo đường thai kỳ"
+        ],
+        [
+          "giảm cân thừa",
+          "giúp giảm",
+          "nguy cơ đái tháo đường thai kỳ"
+        ]
+      ],
+      "support_quotes": [
+        "Your chance of developing gestational diabetes are higher",
+        "If you are thinking about becoming pregnant and"
+      ],
+      "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/what-is-diabetes/gestational/prevention",
+      "source_title": "Preventing Gestational Diabetes",
+      "category": "pregnancy",
+      "source_sha256": "60c01bfd56c7b1a251eaa77ef7b9ae19049426f1f6715d176ad110007e5c7c6f",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K101",
+      "title": "Triệu chứng và nguyên nhân đái tháo đường thai kỳ",
+      "topic": "gestational_diabetes_causes",
+      "summary_vi": "Đái tháo đường thai kỳ thường không có triệu chứng hoặc có các dấu hiệu nhẹ như khát nước và đi tiểu nhiều hơn bình thường. Nguyên nhân là do cơ thể không thể sản xuất đủ lượng insulin bổ sung cần thiết trong giai đoạn thai kỳ để vượt qua tình trạng kháng insulin.",
+      "aliases": [
+        "triệu chứng đái tháo đường thai kỳ",
+        "nguyên nhân đái tháo đường thai kỳ",
+        "dấu hiệu đái tháo đường thai kỳ"
+      ],
+      "facts": [
+        [
+          "đái tháo đường thai kỳ",
+          "thường có triệu chứng",
+          "nhẹ hoặc không có"
+        ],
+        [
+          "tình trạng kháng insulin",
+          "gây ra",
+          "đái tháo đường thai kỳ"
+        ]
+      ],
+      "support_quotes": [
+        "If you do have symptoms, they may be",
+        "Gestational diabetes occurs when your body can’t make"
+      ],
+      "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/what-is-diabetes/gestational/symptoms-causes",
+      "source_title": "Symptoms & Causes of Gestational Diabetes",
+      "category": "pregnancy",
+      "source_sha256": "2c7d70a445e608941532f7b20ee7d06c007bb0d7abda51bcd901a4ce06aacbc5",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K102",
+      "title": "Tổng quan về đái tháo đường thai kỳ",
+      "topic": "gestational_diabetes_overview",
+      "summary_vi": "Đái tháo đường thai kỳ là dạng bệnh chỉ xảy ra trong thời kỳ mang thai và có thể gây ra các vấn đề sức khỏe cho cả mẹ lẫn con. Quản lý tốt lượng đường huyết thông qua chế độ ăn uống và vận động giúp bảo vệ sức khỏe cho cả hai mẹ con.",
+      "aliases": [
+        "tổng quan đái tháo đường thai kỳ",
+        "định nghĩa đái tháo đường thai kỳ",
+        "kiểm soát tiểu đường thai kỳ"
+      ],
+      "facts": [
+        [
+          "đái tháo đường thai kỳ",
+          "xảy ra trong",
+          "thai kỳ"
+        ],
+        [
+          "quản lý tiểu đường",
+          "giúp bảo vệ",
+          "mẹ và bé"
+        ]
+      ],
+      "support_quotes": [
+        "Gestational diabetes is a type of diabetes that",
+        "Managing your diabetes can help protect you and"
+      ],
+      "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/what-is-diabetes/gestational",
+      "source_title": "Gestational Diabetes",
+      "category": "pregnancy",
+      "source_sha256": "1841d78cf7d6313e8d45385c1bbec6ee62a83095a5dfc71de54228f8f11e02de",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K103",
+      "title": "Cách điều trị đái tháo đường thai kỳ",
+      "topic": "gestational_diabetes_treatment",
+      "summary_vi": "Điều trị tiểu đường thai kỳ nhằm kiểm soát đường huyết để bảo vệ mẹ và thai nhi. Kế hoạch có thể gồm ăn uống, vận động phù hợp, theo dõi đường huyết và insulin nếu được chỉ định. Mục tiêu và cách xử lý phải được đội ngũ sản khoa, tiểu đường hướng dẫn cho từng thai phụ; không tự áp mục tiêu của người khác.",
+      "aliases": [
+        "cách điều trị đái tháo đường thai kỳ",
+        "phương pháp trị đái tháo đường thai kỳ",
+        "mục tiêu đường huyết thai kỳ"
+      ],
+      "facts": [
+        [
+          "điều trị đái tháo đường thai kỳ",
+          "nhằm mục đích",
+          "quản lý đường huyết"
+        ],
+        [
+          "kế hoạch điều trị",
+          "bao gồm",
+          "chế độ ăn và tập thể dục"
+        ]
+      ],
+      "support_quotes": [
+        "Treatment for gestational diabetes (GDM) aims to manage",
+        "Your treatment will include an eating plan and"
+      ],
+      "source_url": "https://diabetes.org/living-with-diabetes/pregnancy/gestational-diabetes/how-to-treat-gestational-diabetes",
+      "source_title": "How to Treat Gestational Diabetes",
+      "category": "pregnancy",
+      "source_sha256": "ee7e6e62c419fc04a609cbcf632b6474407d5be4bafa8c6c8bfb9f7e83c5ddd3",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K104",
+      "title": "Điều trị đái tháo đường thai kỳ theo dịch vụ y tế",
+      "topic": "gestational_diabetes_nhs_treatment",
+      "summary_vi": "Kiểm soát lượng đường trong máu giúp giảm thiểu các vấn đề rủi ro trong thai kỳ đối với phụ nữ bị đái tháo đường thai kỳ. Bệnh nhân được cung cấp thiết bị thử đường huyết, tư vấn dinh dưỡng từ chuyên gia và hướng dẫn duy trì hoạt động thể chất đều đặn hàng tuần.",
+      "aliases": [
+        "chăm sóc đái tháo đường thai kỳ",
+        "kiểm tra đường huyết thai kỳ",
+        "thay đổi chế độ ăn tiểu đường thai kỳ"
+      ],
+      "facts": [
+        [
+          "kiểm soát đường máu",
+          "làm giảm",
+          "vấn đề thai kỳ"
+        ],
+        [
+          "hoạt động thể chất",
+          "làm giảm",
+          "lượng glucose trong máu"
+        ]
+      ],
+      "support_quotes": [
+        "If you have gestational diabetes, the chances of",
+        "Physical activity lowers your blood glucose level, so"
+      ],
+      "source_url": "https://www.nhs.uk/conditions/gestational-diabetes/treatment/",
+      "source_title": "Treatment - Gestational diabetes",
+      "category": "pregnancy",
+      "source_sha256": "025e10a5aabfc2359d085acab29bf58164291480659d37fd875b91790cb43e5e",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K105",
+      "title": "Nuôi con bằng sữa mẹ và bệnh tiểu đường",
+      "topic": "breastfeeding_and_diabetes",
+      "summary_vi": "Nuôi con bằng sữa mẹ có lợi cho cả mẹ và bé và có thể hỗ trợ quá trình điều hòa glucose của mẹ sau thai kỳ. Việc cho con bú có thể làm đường huyết khó dự đoán hơn, nên cần kế hoạch theo dõi. Hãy rà soát từng thuốc tiểu đường với bác sĩ hoặc dược sĩ để chọn cách dùng phù hợp khi cho con bú.",
+      "aliases": [
+        "cho con bú khi bị tiểu đường",
+        "lợi ích việc cho con bú",
+        "tiểu đường loại 2 sau sinh",
+        "thuốc trị tiểu đường khi cho con bú",
+        "nuôi con bằng sữa mẹ"
+      ],
+      "facts": [
+        [
+          "Nuôi con bằng sữa mẹ",
+          "giảm nguy cơ",
+          "tiểu đường loại 2"
+        ],
+        [
+          "Đa số thuốc tiểu đường",
+          "an toàn khi",
+          "cho con bú"
+        ]
+      ],
+      "support_quotes": [
+        "Breastfeeding has many proven health benefits for you",
+        "Most diabetes medications are safe to use while"
+      ],
+      "source_url": "https://diabetes.org/living-with-diabetes/pregnancy/diabetes-breastfeeding",
+      "source_title": "Breastfeeding and Diabetes",
+      "category": "pregnancy",
+      "source_sha256": "454cba2aa8b946a3743c7ef71f78822da5deca325ade209ca2156933abb4845e",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K106",
+      "title": "Bệnh tiểu đường thai kỳ",
+      "topic": "gestational_diabetes",
+      "summary_vi": "Tiểu đường thai kỳ là tình trạng bệnh tiểu đường được chẩn đoán trong thời gian mang thai khi các hormone từ nhau thai chặn insulin của người mẹ, gây ra tình trạng kháng insulin. Việc kiểm soát bao gồm xây dựng kế hoạch ăn uống, duy trì hoạt động thể chất và kiểm tra lượng đường trong máu thường xuyên. Khoảng một nửa số phụ nữ mắc bệnh này có nguy cơ phát triển thành tiểu đường loại 2 về sau.",
+      "aliases": [
+        "tiểu đường thai kỳ là gì",
+        "nguyên nhân tiểu đường thai kỳ",
+        "kiểm soát đường huyết khi mang thai",
+        "nguy cơ tiểu đường loại 2 sau sinh",
+        "đái tháo đường thai kỳ"
+      ],
+      "facts": [
+        [
+          "Hormone nhau thai",
+          "gây ra",
+          "kháng insulin"
+        ],
+        [
+          "Phụ nữ mắc tiểu đường thai kỳ",
+          "có nguy cơ mắc",
+          "tiểu đường loại 2"
+        ]
+      ],
+      "support_quotes": [
+        "Gestational diabetes (GDM)—diabetes diagnosed during pregnancy—affects up to",
+        "Did you know that about 50% of women"
+      ],
+      "source_url": "https://diabetes.org/living-with-diabetes/pregnancy/gestational-diabetes",
+      "source_title": "Gestational Diabetes",
+      "category": "pregnancy",
+      "source_sha256": "ed9f4bb71153bcd1662c0698f364af7adb3b6707e702c458fe99c66320e8b3d1",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K107",
+      "title": "Lên kế hoạch mang thai khi mắc bệnh tiểu đường",
+      "topic": "planning_pregnancy_diabetes",
+      "summary_vi": "Lên kế hoạch mang thai từ trước đóng vai trò rất quan trọng đối với phụ nữ mắc bệnh tiểu đường nhằm giảm thiểu các rủi ro biến chứng cho cả mẹ và bé. Việc chuẩn bị bao gồm việc giữ đường huyết và chỉ số HbA1c ở mức an toàn, kiểm tra các loại thuốc đang sử dụng, và uống bổ sung axit folic theo đúng hướng dẫn của đội ngũ y tế.",
+      "aliases": [
+        "chuẩn bị mang thai khi bị tiểu đường",
+        "chỉ số HbA1c an toàn mang thai",
+        "thuốc tiểu đường an toàn khi mang thai",
+        "uống axit folic trước khi mang thai",
+        "lên kế hoạch mang thai"
+      ],
+      "facts": [
+        [
+          "Lên kế hoạch mang thai",
+          "giảm rủi ro",
+          "biến chứng thai kỳ"
+        ],
+        [
+          "Metformin và insulin",
+          "an toàn",
+          "khi mang thai"
+        ]
+      ],
+      "support_quotes": [
+        "But planning for pregnancy when you have diabetes",
+        "Metformin and insulin are safe to take."
+      ],
+      "source_url": "https://www.diabetes.org.uk/about-diabetes/looking-after-diabetes/planning-for-pregnancy",
+      "source_title": "Planning for a pregnancy when you have diabetes",
+      "category": "pregnancy",
+      "source_sha256": "4846c304b88f72a520f5be129fcc9f26845826027a10e5fa20ce62ae33c616c6",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K108",
+      "title": "Tổng quan về bệnh tiểu đường thai kỳ",
+      "topic": "overview_gestational_diabetes",
+      "summary_vi": "Tiểu đường thai kỳ là tình trạng lượng đường trong máu tăng cao phát triển trong thời kỳ mang thai và thường biến mất sau khi sinh nở. Bệnh xảy ra khi cơ thể không thể sản xuất đủ lượng insulin cần thiết để đáp ứng nhu cầu gia tăng trong thai kỳ. Phụ nữ có chỉ số BMI trên 30 hoặc có tiền sử gia đình mắc bệnh nằm trong nhóm có nguy cơ cao.",
+      "aliases": [
+        "tổng quan tiểu đường thai kỳ",
+        "triệu chứng đường huyết cao khi mang thai",
+        "xét nghiệm dung nạp glucose thai kỳ",
+        "yếu tố nguy cơ tiểu đường thai kỳ",
+        "đái tháo đường thai kỳ"
+      ],
+      "facts": [
+        [
+          "Cơ thể không đủ insulin",
+          "gây ra",
+          "tiểu đường thai kỳ"
+        ],
+        [
+          "Chỉ số BMI trên 30",
+          "tăng nguy cơ",
+          "tiểu đường thai kỳ"
+        ]
+      ],
+      "support_quotes": [
+        "Gestational diabetes is high blood sugar (glucose) that",
+        "your body mass index (BMI) is above 30"
+      ],
+      "source_url": "https://www.nhs.uk/conditions/gestational-diabetes/",
+      "source_title": "Overview - Gestational diabetes",
+      "category": "pregnancy",
+      "source_sha256": "7e77cd5798dfcfdde4b07f9bc5fc9dec2270223b3debd52f6d6a15c770c33f8f",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K109",
+      "title": "Mang thai khi bạn mắc bệnh tiểu đường",
+      "topic": "pregnancy_with_diabetes",
+      "summary_vi": "Quản lý đường huyết trước và trong thai kỳ giúp giảm nguy cơ cho mẹ và thai nhi. Đường huyết cao trong những tuần đầu có thể ảnh hưởng các cơ quan đang hình thành của bé. Người đã có tiểu đường cần chuẩn bị kế hoạch mang thai, theo dõi sát và để đội ngũ y tế hướng dẫn mọi điều chỉnh thuốc theo giai đoạn.",
+      "aliases": [
+        "quản lý đường huyết khi mang thai",
+        "mục tiêu đường huyết thai kỳ",
+        "ảnh hưởng tiểu đường đến thai nhi",
+        "sử dụng insulin khi mang thai",
+        "mang thai bị tiểu đường"
+      ],
+      "facts": [
+        [
+          "Đường huyết cao",
+          "gây hại",
+          "thai nhi trong giai đoạn đầu"
+        ],
+        [
+          "Quản lý đường huyết",
+          "giúp ngăn ngừa",
+          "biến chứng thai kỳ"
+        ]
+      ],
+      "support_quotes": [
+        "High blood glucose levels can harm your baby",
+        "Working with your health care team and following"
+      ],
+      "source_url": "https://www.niddk.nih.gov/health-information/diabetes/diabetes-pregnancy",
+      "source_title": "Pregnancy if You Have Diabetes",
+      "category": "pregnancy",
+      "source_sha256": "9070ee61e35d224bd11e994a23554f8e06b469aab306ef8c075a7145f659e847",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K110",
+      "title": "Ghép tế bào đảo tụy",
+      "topic": "pancreatic_islet_transplantation",
+      "summary_vi": "Ghép tế bào đảo tụy là phương pháp lấy các tế bào đảo tụy khỏe mạnh từ người hiến tạng đã qua đời để tiêm vào mạch máu đến gan của người mắc bệnh tiểu đường loại 1, giúp cơ thể người bệnh tự sản xuất insulin trở lại. Người nhận ghép tế bào này phải sử dụng thuốc ức chế miễn dịch lâu dài nhằm ngăn chặn cơ thể đào thải tế bào mới.",
+      "aliases": [
+        "phương pháp ghép đảo tụy",
+        "ghép tế bào đảo tụy tiểu đường loại 1",
+        "thuốc ức chế miễn dịch sau ghép",
+        "chức năng tế bào đảo tụy",
+        "ghép đảo tụy"
+      ],
+      "facts": [
+        [
+          "Tế bào đảo tụy",
+          "sản xuất",
+          "hormone insulin"
+        ],
+        [
+          "Người nhận ghép đảo tụy",
+          "phải dùng",
+          "thuốc ức chế miễn dịch"
+        ]
+      ],
+      "support_quotes": [
+        "Islets contain several types of cells, including beta",
+        "After an islet transplant, recipients will take medicines,"
+      ],
+      "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/insulin-medicines-treatments/pancreatic-islet-transplantation",
+      "source_title": "Pancreatic Islet Transplantation",
+      "category": "complications",
+      "source_sha256": "761bf5fc566874d5a61b1f0695bdb2e8dbc2f179c21b71424dc3c5b768f0380c",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K111",
+      "title": "Bệnh tiểu đường và tình trạng giảm thính lực",
+      "topic": "diabetes_and_hearing_loss",
+      "summary_vi": "Người mắc bệnh tiểu đường có khả năng bị giảm thính lực cao gấp đôi so với người không mắc bệnh. Nguyên nhân chính xác hiện chưa rõ, nhưng lượng đường trong máu cao có thể gây tổn hại các mạch máu nhỏ ở tai trong tương tự như tổn thương ở mắt và thận.",
+      "aliases": [
+        "giảm thính lực tiểu đường",
+        "nghe kém ở người tiểu đường",
+        "ảnh hưởng thính giác",
+        "thính lực và tiểu đường"
+      ],
+      "facts": [
+        [
+          "người mắc bệnh tiểu đường",
+          "có khả năng cao gấp đôi",
+          "giảm thính lực"
+        ],
+        [
+          "lượng đường trong máu cao",
+          "có thể gây tổn hại",
+          "mạch máu nhỏ ở tai trong"
+        ]
+      ],
+      "support_quotes": [
+        "If you live with diabetes, you are twice",
+        "It's possible that the high blood glucose levels"
+      ],
+      "source_url": "https://diabetes.org/about-diabetes/complications/hearing-loss/diabetes-and-hearing-loss",
+      "source_title": "Diabetes and Hearing Loss",
+      "category": "complications",
+      "source_sha256": "3309454583884e293276539a6c7a377130bf055247ce43b4deb28ffa2c2fb9d2",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K112",
+      "title": "Bệnh thần kinh ngoại biên",
+      "topic": "peripheral_neuropathy",
+      "summary_vi": "Bệnh thần kinh ngoại biên do tiểu đường thường ảnh hưởng bàn chân và có thể gây đau, tê hoặc giảm khả năng cảm nhận tổn thương. Quản lý đường huyết và chăm sóc bàn chân hỗ trợ giảm nguy cơ tổn thương thêm. Không nên chờ đến khi đau rõ mới kiểm tra, vì mất cảm giác có thể khiến vết thương bị bỏ qua.",
+      "aliases": [
+        "bệnh thần kinh ngoại biên",
+        "tổn thương thần kinh bàn chân",
+        "biến chứng thần kinh tiểu đường",
+        "bệnh thần kinh tiểu đường"
+      ],
+      "facts": [
+        [
+          "bệnh thần kinh ngoại biên",
+          "là loại phổ biến nhất",
+          "ảnh hưởng đến tay và chân"
+        ],
+        [
+          "giữ lượng đường trong máu",
+          "có thể ngăn ngừa",
+          "bệnh thần kinh ngoại biên"
+        ]
+      ],
+      "support_quotes": [
+        "The most common type of neuropathy is peripheral",
+        "While keeping blood glucose levels in goal range"
+      ],
+      "source_url": "https://diabetes.org/about-diabetes/complications/neuropathy/peripheral-neuropathy",
+      "source_title": "Peripheral Neuropathy",
+      "category": "complications",
+      "source_sha256": "78887ad996f930bf5a0dd74755baf8c54cb721c5f97374f469c3131b689a5de4",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K113",
+      "title": "Bệnh tiểu đường và bệnh tim",
+      "topic": "diabetes_and_heart_disease",
+      "summary_vi": "Người mắc bệnh tiểu đường có nguy cơ cao mắc bệnh tim mạch do lượng đường trong máu cao kéo dài làm tổn thương mạch máu. Quá trình tích tụ chất béo gọi là mảng xơ vữa có thể làm hẹp động mạch và dẫn đến đau tim hoặc đột quỵ.",
+      "aliases": [
+        "bệnh tim mạch tiểu đường",
+        "nguy cơ đau tim",
+        "xơ vữa động mạch",
+        "bệnh tim và tiểu đường"
+      ],
+      "facts": [
+        [
+          "mức đường huyết cao trong thời gian dài",
+          "có thể làm hẹp",
+          "động mạch"
+        ],
+        [
+          "chất béo tích tụ",
+          "được gọi là",
+          "mảng xơ vữa"
+        ]
+      ],
+      "support_quotes": [
+        "If you have high blood sugar levels for",
+        "This fatty material, called atheroma, can build up"
+      ],
+      "source_url": "https://www.diabetes.org.uk/about-diabetes/looking-after-diabetes/complications/cardiovascular-disease",
+      "source_title": "Diabetes and heart disease",
+      "category": "complications",
+      "source_sha256": "8ac36baaf5bcac3ebbfce87635035f809a9fffbaca57a2a3ae90ffe6a46802fc",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K114",
+      "title": "Tăng đường huyết ở người tiểu đường",
+      "topic": "hyperglycaemia",
+      "summary_vi": "Tăng đường huyết xảy ra khi lượng đường trong máu quá cao do cơ thể thiếu insulin hoặc insulin không hoạt động hiệu quả. Các triệu chứng bao gồm khát nước nhiều, đi tiểu thường xuyên và mệt mỏi. Việc chọn thực phẩm có chỉ số đường huyết thấp giúp quản lý tình trạng này.",
+      "aliases": [
+        "tăng đường huyết",
+        "đường huyết cao",
+        "hiện tượng hyper",
+        "tình trạng tăng đường huyết"
+      ],
+      "facts": [
+        [
+          "tăng đường huyết",
+          "xảy ra khi",
+          "lượng đường trong máu quá cao"
+        ],
+        [
+          "thực phẩm có chỉ số đường huyết thấp",
+          "hữu ích cho việc",
+          "quản lý lượng đường trong máu"
+        ]
+      ],
+      "support_quotes": [
+        "Hyperglycaemia, or a hyper, is when your blood",
+        "Choosing foods lower on the Glycaemic Index ("
+      ],
+      "source_url": "https://www.diabetes.org.uk/about-diabetes/looking-after-diabetes/complications/hypers",
+      "source_title": "Hyperglycaemia (Hyper)",
+      "category": "complications",
+      "source_sha256": "110e85ab18b37a39528ad981cb833a0a85cb12569adcf29a9e253311a9e3efc7",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K115",
+      "title": "Hạ đường huyết ở người tiểu đường",
+      "topic": "hypoglycaemia",
+      "summary_vi": "Hạ đường huyết có thể diễn biến nhanh, gây run, tim đập nhanh, lo lắng hoặc lú lẫn. Người còn tỉnh và nuốt an toàn cần xử trí sớm theo kế hoạch đã được hướng dẫn. Nếu người bệnh bất tỉnh, co giật hoặc không nuốt được, không cho ăn uống và cần hỗ trợ cấp cứu; người chăm sóc chỉ dùng glucagon theo hướng dẫn đã được đào tạo.",
+      "aliases": [
+        "hạ đường huyết",
+        "đường huyết thấp",
+        "hiện tượng hypo",
+        "tình trạng hạ đường huyết"
+      ],
+      "facts": [
+        [
+          "hạ đường huyết",
+          "còn được gọi là",
+          "hypoglycaemia"
+        ],
+        [
+          "xử lý hạ đường huyết",
+          "bằng cách tiêu thụ",
+          "15 đến 20g carbohydrate tác dụng nhanh"
+        ]
+      ],
+      "support_quotes": [
+        "A hypo, also called hypoglycaemia, can happen quickly.",
+        "You can do this by eating or drinking"
+      ],
+      "source_url": "https://www.diabetes.org.uk/about-diabetes/looking-after-diabetes/complications/hypos",
+      "source_title": "What is a hypo (hypoglycaemia)?",
+      "category": "complications",
+      "source_sha256": "76ca0901fd9674ae534f9f91650fd10ba893179ab3d8df6dc4426e076fa8d1ca",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K116",
+      "title": "Bệnh võng mạc tiểu đường và vấn đề về mắt",
+      "topic": "diabetic_retinopathy",
+      "summary_vi": "Bệnh võng mạc tiểu đường là biến chứng do lượng đường huyết cao làm hỏng võng mạc phía sau mắt, có thể dẫn đến mù lòa nếu không điều trị. Việc khám mắt định kỳ và duy trì đường huyết trong khoảng mục tiêu giúp phòng ngừa tổn thương thị lực.",
+      "aliases": [
+        "bệnh võng mạc tiểu đường",
+        "biến chứng mắt tiểu đường",
+        "tổn thương thị lực",
+        "bệnh mắt tiểu đường"
+      ],
+      "facts": [
+        [
+          "bệnh võng mạc tiểu đường",
+          "xảy ra khi",
+          "lượng đường huyết cao làm hỏng võng mạc"
+        ],
+        [
+          "khám mắt định kỳ",
+          "giúp phòng ngừa",
+          "mất thị lực"
+        ]
+      ],
+      "support_quotes": [
+        "Sometimes called diabetic eye disease, it occurs when",
+        "So it’s important to go to your diabetic"
+      ],
+      "source_url": "https://www.diabetes.org.uk/about-diabetes/looking-after-diabetes/complications/retinopathy",
+      "source_title": "Diabetic retinopathy — diabetes and eye problems",
+      "category": "complications",
+      "source_sha256": "1d51609bd9c01d3fa88f7ba282f70b1bb9f4fc18890476cc379b19833b7df1e7",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K117",
+      "title": "Biến chứng của tiểu đường tuýp 2",
+      "topic": "complications_type_2_diabetes",
+      "summary_vi": "Tiểu đường tuýp 2 làm tăng nguy cơ mắc các vấn đề sức khỏe lâu dài như tổn thương mạch máu dẫn đến bệnh tim mạch và đột quỵ, các vấn đề về chân và các vấn đề về thị lực. Quản lý tốt lượng đường trong máu và thay đổi lối sống lành mạnh giúp giảm cơ hội gặp phải các biến chứng này.",
+      "aliases": [
+        "biến chứng tiểu đường tuýp 2",
+        "hậu quả tiểu đường tuýp 2",
+        "tổn thương do tiểu đường tuýp 2",
+        "nguy cơ sức khỏe tiểu đường tuýp 2",
+        "biến chứng lâu dài tiểu đường tuýp 2"
+      ],
+      "facts": [
+        [
+          "Tiểu đường tuýp 2",
+          "làm tăng nguy cơ",
+          "mắc các vấn đề sức khỏe lâu dài"
+        ],
+        [
+          "Bạn",
+          "có thể giảm cơ hội",
+          "gặp phải các biến chứng"
+        ]
+      ],
+      "support_quotes": [
+        "Having type 2 diabetes increases your chance of",
+        "You can lower your chances of complications by"
+      ],
+      "source_url": "https://www.nhs.uk/conditions/type-2-diabetes/complications/",
+      "source_title": "Complications of type 2 diabetes",
+      "category": "complications",
+      "source_sha256": "c90c9f1dad90685912c680209698e85d14df33ef6c485cc379f0e6f403ca650f",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K118",
+      "title": "Bệnh tim mạch và tiểu đường",
+      "topic": "cardiovascular_disease_diabetes",
+      "summary_vi": "Bệnh tim mạch ảnh hưởng đến tim và mạch máu, là nguyên nhân hàng đầu gây tử vong ở người mắc tiểu đường. Người bệnh có nguy cơ mắc bệnh tim hoặc đột quỵ cao gấp đôi người bình thường. Việc tập thể dục, ăn uống lành mạnh và quản lý tiểu đường giúp giảm rủi ro này.",
+      "aliases": [
+        "bệnh tim mạch tiểu đường",
+        "nguy cơ đau tim đột quỵ tiểu đường",
+        "bảo vệ tim mạch khi bị tiểu đường",
+        "biến chứng tim mạch tiểu đường"
+      ],
+      "facts": [
+        [
+          "Người mắc tiểu đường",
+          "có nguy cơ mắc",
+          "bệnh tim hoặc đột quỵ cao gấp đôi"
+        ],
+        [
+          "Bệnh tim mạch (CVD)",
+          "ảnh hưởng đến",
+          "tim và mạch máu"
+        ]
+      ],
+      "support_quotes": [
+        "People with diabetes are twice as likely to",
+        "Cardiovascular disease (CVD) affects your heart and blood"
+      ],
+      "source_url": "https://diabetes.org/about-diabetes/complications/cardiovascular-disease",
+      "source_title": "Cardiovascular Disease",
+      "category": "complications",
+      "source_sha256": "9ce7f7d411103fccf82f2f6f77b1cb678074ff842a12ea25c7c02b6637b41466",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K119",
+      "title": "Bệnh thận mạn tính do tiểu đường",
+      "topic": "chronic_kidney_disease_diabetes",
+      "summary_vi": "Tiểu đường có thể làm hỏng hệ thống lọc của thận, khiến thận mất khả năng lọc chất thải và gây rò rỉ protein ra nước tiểu. Quản lý tốt đường huyết và huyết áp giúp giảm nguy cơ hoặc làm chậm sự tiến triển của bệnh thận mạn tính.",
+      "aliases": [
+        "bệnh thận do tiểu đường",
+        "biến chứng thận tiểu đường",
+        "suy thận do tiểu đường",
+        "bảo vệ thận khi mắc tiểu đường",
+        "bệnh thận mạn tính tiểu đường"
+      ],
+      "facts": [
+        [
+          "Tiểu đường",
+          "đặt sức khỏe thận vào",
+          "nguy cơ"
+        ],
+        [
+          "Mức độ đường huyết cao",
+          "làm cho thận",
+          "lọc quá nhiều máu"
+        ]
+      ],
+      "support_quotes": [
+        "Having diabetes puts your kidney health at risk.",
+        "High levels of blood glucose (blood sugar) make"
+      ],
+      "source_url": "https://diabetes.org/about-diabetes/complications/chronic-kidney-disease",
+      "source_title": "Chronic Kidney Disease (Nephropathy)",
+      "category": "complications",
+      "source_sha256": "158f4517dc329fc5efcb9c5381d40cf39fa3108a6d4d83d2c3b00d099cea9482",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K120",
+      "title": "Biến chứng ở chân do tiểu đường",
+      "topic": "foot_complications_diabetes",
+      "summary_vi": "Tổn thương thần kinh và lưu thông máu kém do tiểu đường có thể gây ra nhiều vấn đề ở chân như mất cảm giác, chai chân, vết loét và nhiễm trùng. Chăm sóc chân hàng ngày, kiểm tra chân và đi giày phù hợp giúp phòng ngừa các biến chứng nghiêm trọng.",
+      "aliases": [
+        "biến chứng bàn chân tiểu đường",
+        "vấn đề về chân do tiểu đường",
+        "loét chân tiểu đường",
+        "chăm sóc chân tiểu đường"
+      ],
+      "facts": [
+        [
+          "Tổn thương thần kinh",
+          "có thể gây ra",
+          "mất cảm giác ở chân"
+        ],
+        [
+          "Lưu thông máu kém",
+          "có thể làm cho chân",
+          "ít khả năng chống nhiễm trùng và lành lại"
+        ]
+      ],
+      "support_quotes": [
+        "It can also cause loss of feeling in",
+        "Poor circulation (blood flow) can make your foot"
+      ],
+      "source_url": "https://diabetes.org/about-diabetes/complications/foot-complications",
+      "source_title": "Foot Complications",
+      "category": "complications",
+      "source_sha256": "cf0a1c3678431344de1c0a23378bd147ea24d9258e4e3080f229efd6a7b53ba4",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K121",
+      "title": "Bệnh thần kinh do tiểu đường",
+      "topic": "diabetic_neuropathy",
+      "summary_vi": "Bệnh thần kinh do tiểu đường là tổn thương thần kinh ảnh hưởng đến khoảng một nửa số người mắc tiểu đường. Giữ lượng đường trong máu ở mức mục tiêu cùng với chế độ ăn uống lành mạnh và tập thể dục là cách tốt nhất để phòng ngừa hoặc trì hoãn tình trạng này.",
+      "aliases": [
+        "tổn thương thần kinh tiểu đường",
+        "bệnh lý thần kinh tiểu đường",
+        "triệu chứng thần kinh tiểu đường",
+        "phòng ngừa bệnh thần kinh tiểu đường"
+      ],
+      "facts": [
+        [
+          "Tổn thương thần kinh từ tiểu đường",
+          "được gọi là",
+          "bệnh thần kinh do tiểu đường"
+        ],
+        [
+          "Khoảng một nửa số người mắc tiểu đường",
+          "có",
+          "một số dạng tổn thương thần kinh"
+        ]
+      ],
+      "support_quotes": [
+        "Nerve damage from diabetes is called diabetic neuropathy,",
+        "About half of all people with diabetes have"
+      ],
+      "source_url": "https://diabetes.org/about-diabetes/complications/neuropathy",
+      "source_title": "Understanding Neuropathy and Your Diabetes",
+      "category": "complications",
+      "source_sha256": "659720e12d56a31afbea4c87b6939cbd1af95c3321460b24871ad56e6c500f68",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K122",
+      "title": "Bệnh nướu răng và tiểu đường",
+      "topic": "gum_disease_diabetes",
+      "summary_vi": "Tiểu đường làm giảm lượng nước bọt và tăng lượng đường trong nước bọt, tạo điều kiện cho vi khuẩn phát triển và dẫn đến bệnh nướu răng. Quản lý đường huyết, vệ sinh răng miệng hàng ngày và đi khám nha sĩ định kỳ giúp giảm nguy cơ các biến chứng răng miệng.",
+      "aliases": [
+        "bệnh nha chu tiểu đường",
+        "vấn đề răng miệng tiểu đường",
+        "viêm nướu tiểu đường",
+        "chăm sóc răng miệng khi bị tiểu đường"
+      ],
+      "facts": [
+        [
+          "Khi bạn mắc tiểu đường",
+          "cơ thể có xu hướng tạo ra",
+          "ít nước bọt hơn"
+        ],
+        [
+          "Mức đường huyết cao trong thời gian dài",
+          "có thể dẫn đến",
+          "bệnh nướu răng"
+        ]
+      ],
+      "support_quotes": [
+        "When you have diabetes, your body tends to",
+        "Over time, high blood glucose levels can lead"
+      ],
+      "source_url": "https://diabetes.org/about-diabetes/complications/oral-gum-disease",
+      "source_title": "Diabetes and Gum Disease",
+      "category": "complications",
+      "source_sha256": "643b31723c476e0c7a1bbbd77d3a79490ed733734f2b8ca0b7261dffdf5b9c7a",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K123",
+      "title": "Biến chứng da và chăm sóc da",
+      "topic": "skin_complications",
+      "summary_vi": "Bệnh đái tháo đường có thể ảnh hưởng đến làn da và gây ra nhiều vấn đề như nhiễm trùng vi khuẩn, nấm hoặc ngứa ngáy. Việc giữ gìn vệ sinh cơ thể tốt và kiểm soát đường huyết ổn định giúp giảm thiểu nguy cơ mắc các tình trạng này.",
+      "aliases": [
+        "vấn đề về da",
+        "nhiễm trùng da",
+        "chăm sóc da",
+        "bệnh ngoài da",
+        "biến chứng da"
+      ],
+      "facts": [
+        [
+          "Bệnh đái tháo đường",
+          "ảnh hưởng đến",
+          "da"
+        ],
+        [
+          "Nhiễm trùng vi khuẩn",
+          "xảy ra ở",
+          "người đái tháo đường"
+        ],
+        [
+          "Việc kiểm soát đường huyết",
+          "giúp giảm",
+          "nguy cơ nhiễm trùng"
+        ]
+      ],
+      "support_quotes": [
+        "Skin—our largest organ—can experience complications from diabetes, too.",
+        "There are several things you can do to"
+      ],
+      "source_url": "https://diabetes.org/about-diabetes/complications/skin-complications",
+      "source_title": "Diabetes and Skin Complications",
+      "category": "complications",
+      "source_sha256": "7b6ce30631911dad322b61d8083dd6fe76875c42453920bd23ccba77a5b43662",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K124",
+      "title": "Phòng ngừa đột quỵ và các yếu tố nguy cơ",
+      "topic": "stroke_prevention",
+      "summary_vi": "Người mắc đái tháo đường có nguy cơ bị đột quỵ cao hơn hẳn so với người bình thường. Hiểu rõ các yếu tố nguy cơ, duy trì lối sống lành mạnh và kiểm soát chặt chẽ đường huyết cùng huyết áp sẽ giúp làm giảm khả năng xảy ra biến chứng nguy hiểm này.",
+      "aliases": [
+        "nguy cơ đột quỵ",
+        "phòng ngừa đột quỵ",
+        "dấu hiệu đột quỵ",
+        "tai biến mạch máu não",
+        "đột quỵ do đái tháo đường"
+      ],
+      "facts": [
+        [
+          "Đái tháo đường",
+          "làm tăng nguy cơ",
+          "đột quỵ"
+        ],
+        [
+          "Cục máu đông",
+          "gây ra",
+          "phần lớn các ca đột quỵ"
+        ],
+        [
+          "Việc kiểm soát đường huyết",
+          "giúp giảm",
+          "nguy cơ đột quỵ"
+        ]
+      ],
+      "support_quotes": [
+        "If you have diabetes, your chances of having",
+        "Lower your risk by keeping your blood glucose,"
+      ],
+      "source_url": "https://diabetes.org/about-diabetes/complications/stroke",
+      "source_title": "Get serious about stroke prevention.",
+      "category": "complications",
+      "source_sha256": "b85c885b9ec00920f870308a54cd63dabf34403298520b36f959a7a1c3f14ea3",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K125",
+      "title": "Bệnh võng mạc và các vấn đề về mắt",
+      "topic": "diabetic_retinopathy",
+      "summary_vi": "Bệnh võng mạc là một biến chứng mắt phổ biến do đái tháo đường và là nguyên nhân hàng đầu gây mất thị lực. Khám mắt định kỳ hàng năm cùng việc giữ mức đường huyết ổn định đóng vai trò quan trọng giúp phát hiện sớm và phòng ngừa tổn thương thị lực.",
+      "aliases": [
+        "bệnh võng mạc",
+        "biến chứng về mắt",
+        "mất thị lực",
+        "khám mắt định kỳ",
+        "bệnh võng mạc đái tháo đường"
+      ],
+      "facts": [
+        [
+          "Bệnh võng mạc",
+          "ảnh hưởng đến",
+          "mạch máu trong võng mạc"
+        ],
+        [
+          "Đường huyết cao",
+          "gây tổn thương",
+          "mạch máu nhỏ ở mắt"
+        ],
+        [
+          "Khám mắt toàn diện hàng năm",
+          "giúp phát hiện",
+          "bệnh võng mạc"
+        ]
+      ],
+      "support_quotes": [
+        "Retinopathy is an eye disease often caused by",
+        "Getting your yearly dilated and comprehensive eye exam"
+      ],
+      "source_url": "https://diabetes.org/health-wellness/eye-health/what-is-retinopathy",
+      "source_title": "Diabetes-Related Retinopathy",
+      "category": "complications",
+      "source_sha256": "f70015ba22483d025f7dd7fc077b782288cd232ed547ca2d2668069a326f0a9b",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K126",
+      "title": "Hạ đường huyết nặng và cách xử lý",
+      "topic": "severe_hypoglycemia",
+      "summary_vi": "Hạ đường huyết nặng là tình trạng người bệnh cần người khác hỗ trợ, có thể gây lú lẫn, co giật hoặc bất tỉnh. Cần hỗ trợ cấp cứu, không cho ăn uống khi không thể nuốt an toàn. Người có nguy cơ nên cùng bác sĩ chuẩn bị kế hoạch xử trí và hướng dẫn người chăm sóc sử dụng glucagon đã được kê khi cần.",
+      "aliases": [
+        "hạ đường huyết nặng",
+        "tụt đường huyết khẩn cấp",
+        "sốc hạ đường huyết",
+        "cấp cứu hạ đường huyết",
+        "hạ đường huyết nghiêm trọng"
+      ],
+      "facts": [
+        [
+          "Hạ đường huyết nặng",
+          "được coi là",
+          "tình trạng cấp cứu"
+        ],
+        [
+          "Glucagon",
+          "giúp tăng nhanh",
+          "nồng độ đường trong máu"
+        ],
+        [
+          "Hạ đường huyết nặng",
+          "làm tăng nguy cơ",
+          "tử vong"
+        ]
+      ],
+      "support_quotes": [
+        "Severe hypoglycemia should be considered an emergency.",
+        "Glucagon, preferably ready-to-use, should be used to treat"
+      ],
+      "source_url": "https://diabetes.org/living-with-diabetes/hypoglycemia-low-blood-glucose/severe",
+      "source_title": "Severe Hypoglycemia (Severe Low Blood Glucose)",
+      "category": "complications",
+      "source_sha256": "101e50733914c9b164ba1d31b2d78f4d5993648de16e5906da4fa64dc730a078",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K127",
+      "title": "Dấu hiệu nhận biết và cách xử lý hạ đường huyết",
+      "topic": "hypoglycemia_management",
+      "summary_vi": "Hạ đường huyết có thể gây run, đổ mồ hôi, tim đập nhanh và khó tập trung. Người còn tỉnh, nuốt an toàn cần kiểm tra và dùng carbohydrate tác dụng nhanh theo kế hoạch xử trí đã được hướng dẫn, sau đó kiểm tra lại. Nếu bất tỉnh, co giật hoặc không nuốt được, không cho ăn uống; cần hỗ trợ cấp cứu và kế hoạch glucagon phù hợp.",
+      "aliases": [
+        "nhận biết hạ đường huyết",
+        "triệu chứng tụt đường huyết",
+        "quy tắc 15-15",
+        "xử lý hạ đường huyết",
+        "hạ đường huyết"
+      ],
+      "facts": [
+        [
+          "Sự giải phóng adrenaline",
+          "gây ra",
+          "triệu chứng hạ đường huyết"
+        ],
+        [
+          "Quy tắc 15-15",
+          "được dùng để",
+          "điều trị hạ đường huyết"
+        ],
+        [
+          "Carbohydrate tác dụng nhanh",
+          "giúp nâng cao",
+          "nồng độ đường huyết"
+        ]
+      ],
+      "support_quotes": [
+        "These symptoms are caused by the release of",
+        "Consume 15 grams of fast-acting carbohydrates (carbs) to"
+      ],
+      "source_url": "https://diabetes.org/living-with-diabetes/hypoglycemia-low-blood-glucose/symptoms-treatment",
+      "source_title": "Signs, Symptoms, and Treatment for Hypoglycemia (Low Blood…",
+      "category": "complications",
+      "source_sha256": "ae8597950b336bb886e7d4b100b4050f2b5cf0775b7afdc04e7460337e8f3891",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K128",
+      "title": "Tăng đường huyết và các biến chứng",
+      "topic": "hyperglycemia_management",
+      "summary_vi": "Tăng đường huyết xảy ra khi cơ thể có quá ít insulin hoặc không thể sử dụng insulin hiệu quả, dẫn đến lượng đường trong máu và nước tiểu tăng cao. Nếu không được điều trị kịp thời, tình trạng này có thể tiến triển thành nhiễm toan ceton đái tháo đường.",
+      "aliases": [
+        "tăng đường huyết",
+        "đường huyết cao",
+        "nhiễm toan ceton",
+        "triệu chứng tăng đường huyết",
+        "tăng đường huyết ác tính"
+      ],
+      "facts": [
+        [
+          "Tăng đường huyết",
+          "xảy ra khi",
+          "cơ thể thiếu insulin"
+        ],
+        [
+          "Tăng đường huyết",
+          "dẫn đến",
+          "nhiều glucose trong nước tiểu"
+        ],
+        [
+          "Nhiễm toan ceton",
+          "là hậu quả của việc",
+          "không điều trị tăng đường huyết"
+        ]
+      ],
+      "support_quotes": [
+        "High blood glucose happens when the body has",
+        "If you fail to treat hyperglycemia, a condition"
+      ],
+      "source_url": "https://diabetes.org/living-with-diabetes/treatment-care/hyperglycemia",
+      "source_title": "Hyperglycemia (High Blood Glucose)",
+      "category": "complications",
+      "source_sha256": "047a319e54387aa80194e4bd756db8fa2788de4457e96ed3d3693e6321d5e1f1",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K129",
+      "title": "Biến chứng của bệnh tiểu đường",
+      "topic": "diabetes_complications",
+      "summary_vi": "Biến chứng của đái tháo đường bao gồm các vấn đề cấp tính và mạn tính do đường huyết cao kéo dài gây tổn thương mạch máu cùng dây thần kinh. Người bệnh có thể thực hiện một số việc để giúp ngăn ngừa hoặc trì hoãn các biến chứng.",
+      "aliases": [
+        "biến chứng đái tháo đường",
+        "giảm nguy cơ biến chứng",
+        "kiểm tra đường huyết",
+        "biến chứng mạn tính"
+      ],
+      "facts": [
+        [
+          "Đường huyết cao kéo dài",
+          "có thể gây",
+          "Tổn thương mạch máu và thần kinh"
+        ],
+        [
+          "Chăm sóc tiểu đường",
+          "hỗ trợ trì hoãn",
+          "Biến chứng"
+        ]
+      ],
+      "support_quotes": [
+        "Long-term complications are caused by high blood sugar",
+        "Things you can do to help prevent or"
+      ],
+      "source_url": "https://www.diabetes.org.uk/about-diabetes/looking-after-diabetes/complications",
+      "source_title": "Complications of diabetes",
+      "category": "complications",
+      "source_sha256": "ee6d8e40700edbb9604349f0ef4bc4875d431c3d371154d3bb011f1319dd3241",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K130",
+      "title": "Bệnh võng mạc đái tháo đường",
+      "topic": "diabetic_retinopathy",
+      "summary_vi": "Bệnh võng mạc đái tháo đường là tình trạng tổn thương mạch máu ở võng mạc do đường huyết cao. Người bệnh có thể giảm nguy cơ mắc bệnh võng mạc đái tháo đường bằng cách quản lý lượng đường trong máu tốt nhất có thể.",
+      "aliases": [
+        "bệnh võng mạc tiểu đường",
+        "tổn thương mắt do đái tháo đường",
+        "sàng lọc mắt đái tháo đường",
+        "giảm nguy cơ võng mạc"
+      ],
+      "facts": [
+        [
+          "Bệnh võng mạc do tiểu đường",
+          "liên quan đến",
+          "Tổn thương mạch máu võng mạc"
+        ],
+        [
+          "Quản lý đường huyết",
+          "hỗ trợ giảm nguy cơ",
+          "Bệnh võng mạc"
+        ]
+      ],
+      "support_quotes": [
+        "Diabetic retinopathy happens when high blood glucose (sugar)",
+        "If you have diabetes, you can reduce the"
+      ],
+      "source_url": "https://www.nhs.uk/conditions/diabetic-retinopathy/",
+      "source_title": "Diabetic retinopathy",
+      "category": "complications",
+      "source_sha256": "5f470d41cf4b3501709164a74e6419c8a101460fe4b6513eed81fdd7c9326059",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K131",
+      "title": "Các biến chứng của bệnh tiểu đường",
+      "topic": "diabetes_complications_overview",
+      "summary_vi": "Bệnh đái tháo đường có thể dẫn đến các biến chứng nghiêm trọng đe dọa tính mạng. Bệnh tim mạch là nguyên nhân hàng đầu gây tử vong ở người sống chung với đái tháo đường, trong khi đái tháo đường là nguyên nhân hàng đầu gây bệnh thận mạn tính.",
+      "aliases": [
+        "biến chứng nghiêm trọng đái tháo đường",
+        "bệnh thận mạn tính tiểu đường",
+        "bệnh tim mạch đái tháo đường",
+        "phòng ngừa biến chứng"
+      ],
+      "facts": [
+        [
+          "Tiểu đường",
+          "tăng nguy cơ",
+          "Bệnh tim mạch"
+        ],
+        [
+          "Tiểu đường",
+          "có thể gây",
+          "Bệnh thận mạn tính"
+        ]
+      ],
+      "support_quotes": [
+        "Cardiovascular disease (CVD) is the leading cause of",
+        "Diabetes is the leading cause of chronic kidney"
+      ],
+      "source_url": "https://diabetes.org/about-diabetes/complications",
+      "source_title": "Diabetes Complications",
+      "category": "complications",
+      "source_sha256": "0dc3ffd52d9428dfcd040907770e09fa65cb073e24678c30469820588689f93b",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K132",
+      "title": "Đường huyết thấp (Hạ đường huyết)",
+      "topic": "hypoglycemia_low_blood_glucose",
+      "summary_vi": "Đường huyết dưới 70 mg/dL thường được xem là thấp và cần chú ý xử trí. Carbohydrate tác dụng nhanh được dùng khi người bệnh còn tỉnh và nuốt an toàn, theo kế hoạch đã được hướng dẫn. Không cho ăn uống nếu người bệnh bất tỉnh hoặc không nuốt được; hạ đường huyết nặng cần hỗ trợ khẩn cấp.",
+      "aliases": [
+        "hạ đường huyết tiểu đường",
+        "đường huyết thấp dưới bảy mươi",
+        "quy tắc mười lăm carbohydrate",
+        "triệu chứng hạ đường huyết"
+      ],
+      "facts": [
+        [
+          "Hạ đường huyết",
+          "có thể xảy ra dưới",
+          "70 mg/dL"
+        ],
+        [
+          "Carbohydrate tác dụng nhanh",
+          "được dùng trong xử trí",
+          "Hạ đường huyết"
+        ]
+      ],
+      "support_quotes": [
+        "Low blood glucose is when your levels fall",
+        "Fast-acting carbs are the best choice to treat"
+      ],
+      "source_url": "https://diabetes.org/living-with-diabetes/hypoglycemia-low-blood-glucose",
+      "source_title": "Low Blood Glucose (Hypoglycemia)",
+      "category": "complications",
+      "source_sha256": "f32851c0de0819429253d9c690a799617c6a93d199687a3cdfd3351c39809d26",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K133",
+      "title": "Trẻ em và bệnh đái tháo đường tuýp 2",
+      "topic": "children_type_2_diabetes",
+      "summary_vi": "Đái tháo đường tuýp 2 là một tình trạng nghiêm trọng khi insulin mà tuyến tụy tạo ra không thể hoạt động bình thường. Nếu trẻ đã được chẩn đoán mắc đái tháo đường tuýp 2, việc điều trị và hỗ trợ từ chuyên gia giúp trẻ sống tốt.",
+      "aliases": [
+        "đái tháo đường tuýp 2 ở trẻ em",
+        "triệu chứng tiểu đường tuýp 2 trẻ em",
+        "yếu tố nguy cơ tuýp 2 trẻ em",
+        "quản lý đái tháo đường trẻ em"
+      ],
+      "facts": [
+        [
+          "Trẻ em",
+          "cũng có thể mắc",
+          "Tiểu đường tuýp 2"
+        ],
+        [
+          "Tiểu đường tuýp 2",
+          "liên quan đến",
+          "Insulin hoạt động kém hiệu quả"
+        ]
+      ],
+      "support_quotes": [
+        "Type 2 diabetes is a serious condition where",
+        "If your child has been diagnosed with type"
+      ],
+      "source_url": "https://www.diabetes.org.uk/living-with-diabetes/life-with-diabetes/children-and-diabetes/type-2",
+      "source_title": "Children and type 2 diabetes",
+      "category": "lifestyle",
+      "source_sha256": "bae4ebeae1cd786c2d48d66ef46d0a79f0231124a52f22387718239a034657db",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K134",
+      "title": "Tập thể dục kỵ khí và bệnh tiểu đường",
+      "topic": "anaerobic_exercise_diabetes",
+      "summary_vi": "Giống như bài tập aerobic, bài tập kỵ khí đốt cháy calo và cải thiện hệ tim mạch của bạn. Nâng tạ là một cách thông minh để những người ở bất kỳ mức thể lực nào đưa bài tập kỵ khí vào thói quen của họ.",
+      "aliases": [
+        "tập kỵ khí đái tháo đường",
+        "nâng tạ và tiểu đường",
+        "bài tập cường độ cao ngắt quãng",
+        "cải thiện độ nhạy insulin"
+      ],
+      "facts": [
+        [
+          "Bài tập kỵ khí",
+          "hỗ trợ",
+          "Sức khỏe tim mạch"
+        ],
+        [
+          "Nâng tạ",
+          "là một dạng",
+          "Bài tập kỵ khí"
+        ]
+      ],
+      "support_quotes": [
+        "Like aerobic exercise, anaerobic burns calories and improves",
+        "Weight lifting is a smart way for people"
+      ],
+      "source_url": "https://diabetes.org/health-wellness/fitness/anaerobic-exercise-diabetes",
+      "source_title": "Anaerobic Exercise and Diabetes",
+      "category": "lifestyle",
+      "source_sha256": "64d399f90db6206146c93c4c40f7d07180dd1404b16f5bb417b011f9b7b1779b",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K135",
+      "title": "Mẹo ăn uống trước và sau khi tập luyện",
+      "topic": "fitness_nutrition",
+      "summary_vi": "Việc ăn quanh buổi tập cần cân nhắc mức đường huyết, thuốc đang dùng và kiểu vận động. Theo dõi đường huyết giúp hiểu phản ứng của cơ thể. Khi cần ăn trước tập, nguồn ADA gợi ý phối hợp thực phẩm chứa carbohydrate và protein, ưu tiên thực phẩm ít chế biến. Hãy xây dựng kế hoạch ăn và vận động phù hợp cùng đội ngũ chăm sóc.",
+      "aliases": [
+        "ăn uống trước khi tập",
+        "dinh dưỡng sau khi tập",
+        "tập thể dục giảm cân",
+        "thực phẩm trước khi tập",
+        "dinh dưỡng tập luyện"
+      ],
+      "facts": [
+        [
+          "tập thể dục khi đói",
+          "có thể giúp bạn đốt cháy nhiều hơn",
+          "mỡ cơ thể"
+        ],
+        [
+          "thực phẩm trước khi tập",
+          "kết hợp carbohydrate với",
+          "nguồn protein"
+        ]
+      ],
+      "support_quotes": [
+        "Deciding whether to exercise before or after eating",
+        "Exercising on an empty stomach can help you"
+      ],
+      "source_url": "https://diabetes.org/health-wellness/fitness/eating-tips-before-after-exercise",
+      "source_title": "Eating Tips Before and After Exercise",
+      "category": "lifestyle",
+      "source_sha256": "21b195d7bcd6248abb1c41ea10fb782e82a5c25edf28435d7ceb9a14871a9c79",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K136",
+      "title": "Tập thể dục và đái tháo đường típ 1",
+      "topic": "type_1_exercise",
+      "summary_vi": "Hoạt động thể chất đều đặn rất quan trọng cho sức khỏe. Ở người đái tháo đường típ 1, việc cân bằng liều lượng insulin với thức ăn và hoạt động là rất quan trọng. Phản ứng đường huyết khi vận động sẽ thay đổi tùy theo mức đường huyết ban đầu và cường độ.",
+      "aliases": [
+        "vận động típ 1",
+        "quản lý đường huyết khi tập",
+        "phòng ngừa hạ đường huyết khi tập",
+        "hoạt động thể chất típ 1",
+        "tập luyện đái tháo đường típ 1"
+      ],
+      "facts": [
+        [
+          "hoạt động thể chất đều đặn",
+          "quan trọng đối với",
+          "sức khỏe tổng thể"
+        ],
+        [
+          "phản ứng đường huyết với tập luyện",
+          "sẽ thay đổi tùy thuộc vào",
+          "mức đường huyết trước khi bắt đầu"
+        ]
+      ],
+      "support_quotes": [
+        "Regardless of the type of diabetes you have,",
+        "Your blood glucose response to exercise will vary"
+      ],
+      "source_url": "https://diabetes.org/health-wellness/fitness/exercise-and-type-1",
+      "source_title": "Exercise & Type 1",
+      "category": "lifestyle",
+      "source_sha256": "c802b482f223376c86a42c38266eeaf8012b97024564e735071f434f4b45370c",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K137",
+      "title": "Vượt qua rào cản để bắt đầu vận động",
+      "topic": "overcoming_exercise_roadblocks",
+      "summary_vi": "Rào cản là điều khiến bạn không thể làm việc khác. Nếu không hoạt động, bạn có thể có lý do hoặc sợ đường huyết giảm. Hãy suy nghĩ về những gì cản trở và xem xét các giải pháp cho các rào cản phổ biến đối với hoạt động thể chất.",
+      "aliases": [
+        "khắc phục rào cản tập luyện",
+        "sợ hạ đường huyết khi tập",
+        "bắt đầu tập thể dục",
+        "giải pháp lười vận động",
+        "rào cản hoạt động thể chất"
+      ],
+      "facts": [
+        [
+          "rào cản",
+          "là điều khiến bạn không thể làm",
+          "điều gì khác"
+        ],
+        [
+          "bắt đầu từ từ",
+          "là quan trọng cũng như",
+          "chọn các hoạt động bạn thích"
+        ]
+      ],
+      "support_quotes": [
+        "A roadblock is something that keeps you from",
+        "Starting slowly is important and so is choosing"
+      ],
+      "source_url": "https://diabetes.org/health-wellness/fitness/overcoming-roadblocks",
+      "source_title": "Overcome Roadblocks and Get Moving",
+      "category": "lifestyle",
+      "source_sha256": "9a4b550783d6d2e4f05728b613b13a6528ef2bfe92340bc1153d25b090a8bed4",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K138",
+      "title": "Bạn có đang trải qua trầm cảm không?",
+      "topic": "depression_awareness",
+      "summary_vi": "Tỷ lệ trầm cảm ở người mắc bệnh đái tháo đường cao hơn nhiều so với dân số chung. Phụ nữ trải nghiệm trầm cảm khoảng gấp đôi nam giới và nguy cơ này tăng lên ở phụ nữ mắc bệnh. Nhiều yếu tố nội tiết tố có thể đóng góp vào tỷ lệ này.",
+      "aliases": [
+        "trầm cảm và bệnh đái tháo đường",
+        "tỷ lệ trầm cảm ở phụ nữ",
+        "các loại trầm cảm",
+        "yếu tố nội tiết tố trầm cảm",
+        "triệu chứng trầm cảm"
+      ],
+      "facts": [
+        [
+          "tỷ lệ trầm cảm ở người mắc đái tháo đường",
+          "cao hơn nhiều so với",
+          "dân số chung"
+        ],
+        [
+          "phụ nữ",
+          "trải nghiệm trầm cảm khoảng gấp đôi",
+          "nam giới"
+        ]
+      ],
+      "support_quotes": [
+        "The rate of depression in people with diabetes",
+        "Women experience depression about twice as often as"
+      ],
+      "source_url": "https://diabetes.org/health-wellness/mental-health/are-you-experiencing-depression",
+      "source_title": "Are You Experiencing Depression?",
+      "category": "lifestyle",
+      "source_sha256": "771f67810444dcaa2586fd3a166ad23dc16e4dd9509bf788d72c13cc6a4b5d91",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K139",
+      "title": "10 mẹo giảm bớt căng thẳng do đái tháo đường",
+      "topic": "ease_diabetes_stress",
+      "summary_vi": "Căng thẳng quản lý bệnh có thể ảnh hưởng đến sức khỏe tinh thần. Biết cách làm dịu tâm trí và cơ thể trong lúc lo âu mang lại cảm giác an toàn. Hãy áp dụng các chiến lược để giúp bạn cảm thấy an toàn và tập trung khi mọi thứ quá tải.",
+      "aliases": [
+        "giảm căng thẳng đái tháo đường",
+        "mẹo giải tỏa lo âu",
+        "chiến lược thư giãn tinh thần",
+        "đối phó căng thẳng bệnh lý",
+        "căng thẳng sức khỏe tâm thần"
+      ],
+      "facts": [
+        [
+          "đái tháo đường",
+          "có thể khó khăn đối với",
+          "sức khỏe tinh thần"
+        ],
+        [
+          "tập thể dục",
+          "là một cách tuyệt vời để nhanh chóng tăng cường",
+          "tâm trạng của bạn"
+        ]
+      ],
+      "support_quotes": [
+        "Diabetes can be tough on mental health —and",
+        "Move Exercise is a great way to quickly"
+      ],
+      "source_url": "https://diabetes.org/health-wellness/mental-health/ease-diabetes-care-stress",
+      "source_title": "10 Tips to Ease Diabetes Stress",
+      "category": "lifestyle",
+      "source_sha256": "9c59d4d5eb96642b743b513ca77415a59bd17fbebb85dafa40eacc50857d4524",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K140",
+      "title": "Rối loạn cương dương",
+      "topic": "erectile_dysfunction",
+      "summary_vi": "Một số nam giới mắc bệnh đái tháo đường gặp tình trạng liệt dương, còn gọi là rối loạn cương dương. Theo thời gian, các mạch máu và dây thần kinh trong dương vật có thể bị tổn thương. Các lựa chọn lối sống cũng làm tăng khả năng mắc tình trạng này.",
+      "aliases": [
+        "liệt dương ở nam giới",
+        "rối loạn cương dương đái tháo đường",
+        "vấn đề mạch máu dương vật",
+        "lựa chọn lối sống gây liệt dương",
+        "sức khỏe tình dục nam giới"
+      ],
+      "facts": [
+        [
+          "một số nam giới mắc đái tháo đường",
+          "có",
+          "tình trạng liệt dương"
+        ],
+        [
+          "theo thời gian",
+          "mạch máu và dây thần kinh trong dương vật",
+          "có thể bị tổn thương"
+        ]
+      ],
+      "support_quotes": [
+        "Some men with diabetes have impotence, also called",
+        "Over time, blood vessels and nerves in the"
+      ],
+      "source_url": "https://diabetes.org/health-wellness/sexual-health/erectile-disfunction",
+      "source_title": "Erectile Dysfunction",
+      "category": "lifestyle",
+      "source_sha256": "63e71a50a3d90f9534ec5dcb5ff1d82bcefe0aad586903999ae68d06a5ffb4d6",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K141",
+      "title": "Testosterone Thấp",
+      "topic": "low_testosterone",
+      "summary_vi": "Testosterone thấp là tình trạng phổ biến nhưng hay bị bỏ sót do triệu chứng giống bệnh khác. Nam giới mắc bệnh đái tháo đường type 2 có nguy cơ gặp phải tình trạng này cao gấp đôi. Bác sĩ có thể kiểm tra nồng độ testosterone qua xét nghiệm máu đơn giản và điều trị bằng gel, miếng dán hoặc mũi tiêm.",
+      "aliases": [
+        "testosterone thấp",
+        "giảm testosterone",
+        "xét nghiệm testosterone",
+        "triệu chứng testosterone thấp"
+      ],
+      "facts": [
+        [
+          "Nam giới mắc type 2 đái tháo đường",
+          "có nguy cơ gấp đôi",
+          "testosterone thấp"
+        ],
+        [
+          "Bác sĩ",
+          "có thể kiểm tra",
+          "nồng độ testosterone"
+        ]
+      ],
+      "support_quotes": [
+        "If you have type 2 diabetes, you are",
+        "Your physician can check your testosterone levels with"
+      ],
+      "source_url": "https://diabetes.org/health-wellness/sexual-health/low-testosterone",
+      "source_title": "Low Testosterone",
+      "category": "lifestyle",
+      "source_sha256": "97d51840245e24cfd72f31e959746f6ae611a1c66673b92d6879090e35e74ed1",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K142",
+      "title": "Tình Dục Và Đái Tháo Đường",
+      "topic": "sex_and_diabetes",
+      "summary_vi": "Người mắc bệnh đái tháo đường có nguy cơ cao gặp các vấn đề về tình dục. Đường huyết cao mạn tính là nguyên nhân đằng sau nhiều vấn đề này. Các triệu chứng có thể bao gồm giảm ham muốn, khó khăn khi cương cứng ở nam giới hay khô âm đạo. Quản lý tốt đái tháo đường giúp cải thiện tình trạng.",
+      "aliases": [
+        "vấn đề tình dục đái tháo đường",
+        "giảm ham muốn",
+        "rối loạn cương dương",
+        "khô âm đạo",
+        "sức khỏe tình dục"
+      ],
+      "facts": [
+        [
+          "Người mắc bệnh đái tháo đường",
+          "có nguy cơ cao",
+          "vấn đề tình dục"
+        ],
+        [
+          "Nam giới đái tháo đường",
+          "có nguy cơ gấp đôi",
+          "testosterone thấp"
+        ]
+      ],
+      "support_quotes": [
+        "For people who already have diabetes, sexual problems",
+        "Studies have shown that men with diabetes, especially"
+      ],
+      "source_url": "https://diabetes.org/health-wellness/sexual-health/sex-diabetes",
+      "source_title": "Sex and Diabetes",
+      "category": "lifestyle",
+      "source_sha256": "8e45cbf09cf6c72917f21d4da7344c3116e6030d8555ea9bd3ecb32d63b27c51",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K143",
+      "title": "Ảnh Hưởng Của Sức Khỏe Cảm Xúc Đến Tình Dục",
+      "topic": "sexual_implications_emotional_health",
+      "summary_vi": "Các yếu tố cảm xúc có thể cản trở cảm giác tình dục và dẫn đến hoặc làm trầm trọng thêm tình trạng rối loạn chức năng tình dục. Giao tiếp kém hoặc mâu thuẫn với bạn đời gây ra những thử thách về lòng tin và sự thân mật. Người bệnh có thể cảm thấy xa cách hoặc rút lui do thiếu tận hưởng.",
+      "aliases": [
+        "cảm xúc và tình dục",
+        "ảnh hưởng tâm lý tình dục",
+        "mâu thuẫn với bạn đời",
+        "rối loạn chức năng tình dục"
+      ],
+      "facts": [
+        [
+          "Yếu tố cảm xúc",
+          "có thể cản trở",
+          "cảm giác tình dục"
+        ],
+        [
+          "Vấn đề tình dục và cảm xúc",
+          "ảnh hưởng đến",
+          "mối quan hệ cá nhân"
+        ]
+      ],
+      "support_quotes": [
+        "Emotional factors can interfere with sexual feelings and",
+        "Sexual and emotional issues don't just impact you;"
+      ],
+      "source_url": "https://diabetes.org/health-wellness/sexual-health/sexual-implications-emotional-health",
+      "source_title": "Sexual Implications of Emotional Health",
+      "category": "lifestyle",
+      "source_sha256": "3c7aa438e0d6a9a68e628fd478657c8ce1a26edd12596882354ff13ccd48cc76",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K144",
+      "title": "Cảm Xúc Và Việc Ăn Uống",
+      "topic": "emotions_and_eating",
+      "summary_vi": "Cảm xúc có thể ảnh hưởng đến loại thực phẩm, thời điểm và lượng thức ăn mà chúng ta tiêu thụ. Ăn uống dựa trên cảm xúc có thể cản trở nỗ lực giảm cân của bạn. Để kiểm soát, người bệnh có thể thực hiện kiểm tra cảm xúc nhanh, ghi lại các hoạt động thay thế hoặc theo dõi mức độ đói thực tế.",
+      "aliases": [
+        "ăn uống theo cảm xúc",
+        "cảm xúc ảnh hưởng ăn uống",
+        "kiểm soát ăn uống cảm xúc",
+        "mẹo ăn uống"
+      ],
+      "facts": [
+        [
+          "Cảm xúc",
+          "có thể ảnh hưởng đến",
+          "việc ăn uống"
+        ],
+        [
+          "Ăn uống theo cảm xúc",
+          "có thể cản trở",
+          "nỗ lực giảm cân"
+        ]
+      ],
+      "support_quotes": [
+        "Emotions can influence what, when and how much",
+        "When you eat based on your emotions, it"
+      ],
+      "source_url": "https://diabetes.org/health-wellness/weight-management/emotions-and-eating",
+      "source_title": "Take Charge: Emotions and Eating",
+      "category": "lifestyle",
+      "source_sha256": "97fbd5883348ed9e4a871f01697bd58f03a75544a8d45ebc569174530d2593dc",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K145",
+      "title": "Thừa Cân Và Nguy Cơ",
+      "topic": "extra_weight_extra_risk",
+      "summary_vi": "Thừa cân hoặc béo phì làm tăng nguy cơ mắc bệnh đái tháo đường type 2, bệnh tim và đột quỵ. Giảm cân giúp ngăn ngừa và quản lý các tình trạng này, đồng thời việc giảm một lượng nhỏ cũng có thể tạo ra sự khác biệt lớn. Người bệnh có thể bắt đầu bằng việc cắt giảm calo và duy trì vận động.",
+      "aliases": [
+        "thừa cân béo phì",
+        "nguy cơ thừa cân",
+        "giảm cân hiệu quả",
+        "kiểm soát cân nặng"
+      ],
+      "facts": [
+        [
+          "Thừa cân hoặc béo phì",
+          "làm tăng nguy cơ",
+          "đái tháo đường type 2"
+        ],
+        [
+          "Giảm cân",
+          "có thể giúp ngăn ngừa",
+          "các tình trạng bệnh"
+        ]
+      ],
+      "support_quotes": [
+        "Having overweight or obesity raises your risk for",
+        "If you are overweight, losing weight may help"
+      ],
+      "source_url": "https://diabetes.org/health-wellness/weight-management/extra-weight-extra-risk",
+      "source_title": "Extra Weight, Extra Risk",
+      "category": "lifestyle",
+      "source_sha256": "f8a45e01b9022875caba0ab70b0000c185e8d0d09724b039268edd0d7d4802ec",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K146",
+      "title": "Lắng Nghe Sự Thèm Ăn Của Bạn",
+      "topic": "get_in_touch_with_appetite",
+      "summary_vi": "Môi trường xung quanh có thể kích thích các giác quan khiến chúng ta tưởng rằng mình đang đói. Thang đo mức độ đói giúp người bệnh phân biệt giữa đói thể chất thực sự và ăn uống do cảm xúc. Mục tiêu lý tưởng là ăn khi đói ở mức độ vừa phải và dừng lại khi đã cảm thấy no thoải mái.",
+      "aliases": [
+        "lắng nghe sự thèm ăn",
+        "thang đo mức độ đói",
+        "phân biệt đói thật",
+        "kiểm soát cơn thèm ăn"
+      ],
+      "facts": [
+        [
+          "Yếu tố môi trường",
+          "có thể kích thích",
+          "cảm giác đói giả tạo"
+        ],
+        [
+          "Đói thể chất",
+          "thường phát triển",
+          "dần dần theo thời gian"
+        ]
+      ],
+      "support_quotes": [
+        "These factors in the environment trigger our senses",
+        "Remember that physical hunger builds gradually over time"
+      ],
+      "source_url": "https://diabetes.org/health-wellness/weight-management/get-touch-your-appetite",
+      "source_title": "Get In Touch With Your Appetite",
+      "category": "lifestyle",
+      "source_sha256": "b3b75780251079e280b35d4e7e05112043abccaf0a3253a2846c6b758eb1cdd9",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K147",
+      "title": "Sử dụng Độc thoại Nội tâm Tích cực",
+      "topic": "positive_self_talk",
+      "summary_vi": "Độc thoại nội tâm là cuộc trò chuyện bên trong mỗi người và có ảnh hưởng lớn đến cảm xúc cũng như hành động. Việc nhận thức các suy nghĩ về hoạt động thể chất giúp duy trì kế hoạch tập luyện. Bạn có thể thay đổi những suy nghĩ tiêu cực thành các câu nói tích cực thực tế để đạt hiệu quả tốt hơn.",
+      "aliases": [
+        "độc thoại nội tâm",
+        "suy nghĩ tích cực khi tập",
+        "cải thiện lời nói bản thân",
+        "nói chuyện với chính mình"
+      ],
+      "facts": [
+        [
+          "Độc thoại nội tâm",
+          "là",
+          "cuộc trò chuyện bên trong"
+        ],
+        [
+          "Suy nghĩ tiêu cực",
+          "có thể chuyển thành",
+          "suy nghĩ tích cực"
+        ]
+      ],
+      "support_quotes": [
+        "Self-talk is the internal conversation that you have",
+        "The good news is you can turn negative"
+      ],
+      "source_url": "https://diabetes.org/health-wellness/weight-management/positive-self-talk",
+      "source_title": "Make a Difference with Positive Self-Talk",
+      "category": "lifestyle",
+      "source_sha256": "4520e60b5a865ddcb5ff9179f8b6abb7c3fd464e943da103b07743988b8a45b2",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K148",
+      "title": "Giải quyết Vấn đề để Quản lý Tiểu đường",
+      "topic": "problem_solving_management",
+      "summary_vi": "Giải quyết vấn đề là một kỹ năng thiết yếu để thực hiện các thay đổi lối sống thành công. Khi gặp thử thách, bạn cần xác định vấn đề, tìm kiếm giải pháp tiềm năng, sau đó chọn giải pháp thực hiện và đánh giá lại kết quả để vượt qua khó khăn trong việc quản lý bệnh.",
+      "aliases": [
+        "kỹ năng giải quyết vấn đề",
+        "phương pháp vượt qua khó khăn",
+        "các bước giải quyết thử thách",
+        "giải quyết vấn đề tiểu đường"
+      ],
+      "facts": [
+        [
+          "Giải quyết vấn đề",
+          "là",
+          "kỹ năng thiết yếu"
+        ],
+        [
+          "Quy trình giải quyết vấn đề",
+          "gồm",
+          "ba bước cơ bản"
+        ]
+      ],
+      "support_quotes": [
+        "Problem solving is an essential skill for successfully",
+        "Problem solving is a process for finding a"
+      ],
+      "source_url": "https://diabetes.org/health-wellness/weight-management/problem-solving-improve-diabetes-management",
+      "source_title": "Problem Solving to Improve Diabetes Management",
+      "category": "lifestyle",
+      "source_sha256": "4fe309046469924596ab2c6aa6cf232e54009f97435f8bd86d008f37dcd1d541",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K149",
+      "title": "Thiết lập Mục tiêu Thực tế",
+      "topic": "setting_realistic_goals",
+      "summary_vi": "Việc kết hợp tập luyện, chọn thực phẩm phù hợp và giảm khẩu phần giúp giảm cân hiệu quả. Bạn nên đặt từng mục tiêu nhỏ cụ thể và thực tế thay vì thay đổi quá nhiều thứ cùng lúc, đồng thời cần kiên trì lập kế hoạch hành động để đạt được kết quả.",
+      "aliases": [
+        "đặt mục tiêu thực tế",
+        "xây dựng mục tiêu ăn uống",
+        "mục tiêu thay đổi thói quen",
+        "đặt mục tiêu nhỏ"
+      ],
+      "facts": [
+        [
+          "Mục tiêu nhỏ",
+          "giúp",
+          "xây dựng thói quen mới"
+        ],
+        [
+          "Mục tiêu",
+          "cần",
+          "cụ thể và thực tế"
+        ]
+      ],
+      "support_quotes": [
+        "Set a few smaller goals at a time",
+        "Don’t try to change too much at once."
+      ],
+      "source_url": "https://diabetes.org/health-wellness/weight-management/setting-realistic-goals",
+      "source_title": "Setting Realistic Goals",
+      "category": "lifestyle",
+      "source_sha256": "8edc58f5cca2c726e78ed053b79ed7206629abb7ffee9046b72d260bbc45eea9",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K150",
+      "title": "Trẻ em và Bệnh tiểu đường",
+      "topic": "children_and_diabetes",
+      "summary_vi": "Chăm sóc trẻ em mắc bệnh tiểu đường có thể gặp nhiều khó khăn và thử thách. Trẻ có thể cần phải sử dụng insulin để điều trị thông qua bút tiêm hoặc máy bơm, và dần dần có thể tự thực hiện việc này với sự hỗ trợ từ gia đình.",
+      "aliases": [
+        "trẻ em mắc tiểu đường",
+        "chăm sóc trẻ tiểu đường",
+        "trẻ tiểu đường dùng insulin",
+        "thiết bị insulin cho trẻ"
+      ],
+      "facts": [
+        [
+          "Trẻ em mắc tiểu đường",
+          "cần",
+          "dùng insulin để điều trị"
+        ],
+        [
+          "Thiết bị insulin",
+          "gồm",
+          "bút hoặc máy bơm"
+        ]
+      ],
+      "support_quotes": [
+        "Having a child who has diabetes can be",
+        "Your child will probably have to take insulin"
+      ],
+      "source_url": "https://www.diabetes.org.uk/living-with-diabetes/life-with-diabetes/children-and-diabetes",
+      "source_title": "Children and diabetes",
+      "category": "lifestyle",
+      "source_sha256": "8ce8824545bbc9b6f6ec557774d202a7236a7679e90d0646bc39e82ed0764b2f",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K151",
+      "title": "Thể lực và Vận động",
+      "topic": "fitness_and_management",
+      "summary_vi": "Hoạt động thể chất thường xuyên đóng vai trò quan trọng trong việc quản lý tiểu đường, giúp các tế bào nhạy cảm hơn với insulin để hạ đường huyết hiệu quả. Ngay cả những thay đổi nhỏ trong việc tập luyện cũng tạo ra tác động lớn đến sức khỏe tổng thể.",
+      "aliases": [
+        "tập thể dục quản lý tiểu đường",
+        "hoạt động thể chất đều đặn",
+        "bắt đầu tập luyện an toàn",
+        "tập thể dục và tiểu đường"
+      ],
+      "facts": [
+        [
+          "Hoạt động thể chất",
+          "giúp tế bào",
+          "nhạy cảm hơn với insulin"
+        ],
+        [
+          "Thay đổi nhỏ",
+          "mang lại",
+          "tác động lớn"
+        ]
+      ],
+      "support_quotes": [
+        "But remember, along with your diet and medications,",
+        "Even little changes make a big difference"
+      ],
+      "source_url": "https://diabetes.org/health-wellness/fitness",
+      "source_title": "Fitness",
+      "category": "lifestyle",
+      "source_sha256": "4a0a076735d980b8720910ee604c65ce197acaff9afa8fa030ed8216537f7867",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K152",
+      "title": "Sức khỏe Tâm thần và Tiểu đường",
+      "topic": "mental_health_diabetes",
+      "summary_vi": "Bệnh tiểu đường không chỉ tác động đến cơ thể mà còn gây ra những căng thẳng cảm xúc và hiện tượng kiệt sức do tiểu đường. Việc nhận diện cảm xúc, tìm kiếm sự hỗ trợ từ các nhà cung cấp dịch vụ sức khỏe hành vi và chăm sóc sức khỏe tinh thần là rất quan trọng.",
+      "aliases": [
+        "sức khỏe tâm thần tiểu đường",
+        "căng thẳng cảm xúc",
+        "kiệt sức vì tiểu đường",
+        "chăm sóc sức khỏe hành vi"
+      ],
+      "facts": [
+        [
+          "Tiểu đường",
+          "gây ra",
+          "căng thẳng cảm xúc"
+        ],
+        [
+          "Chăm sóc sức khỏe hành vi",
+          "là",
+          "một phần quản lý bệnh"
+        ]
+      ],
+      "support_quotes": [
+        "Diabetes takes a toll on more than your",
+        "Behavioral healthcare is an integral part of diabetes"
+      ],
+      "source_url": "https://diabetes.org/health-wellness/mental-health",
+      "source_title": "Mental Health",
+      "category": "lifestyle",
+      "source_sha256": "9110153351e20ac53e1a11a87f44cf2af5462fee308c56c94ddf256a2eb69060",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K153",
+      "title": "Tụy nhân tạo",
+      "topic": "artificial_pancreas",
+      "summary_vi": "Tụy nhân tạo là hệ thống gồm ba bộ phận hoạt động cùng nhau để mô phỏng cách tuyến tụy khỏe mạnh kiểm soát lượng đường trong máu. Hệ thống này chủ yếu giúp người mắc bệnh tiểu đường tuýp 1 theo dõi liên tục mức đường huyết, tính toán lượng insulin cần thiết và tự động truyền insulin vào cơ thể nhằm duy trì mức đường huyết trong khoảng mục tiêu.",
+      "aliases": [
+        "hệ thống tụy nhân tạo",
+        "hệ thống phân phối insulin tự động",
+        "hệ thống vòng kín",
+        "hệ thống chỉ có insulin",
+        "hệ thống hai hormone"
+      ],
+      "facts": [
+        [
+          "tụy nhân tạo",
+          "là hệ thống gồm",
+          "ba phần"
+        ],
+        [
+          "tụy nhân tạo",
+          "được sử dụng chủ yếu để",
+          "giúp người mắc bệnh tiểu đường tuýp 1"
+        ]
+      ],
+      "support_quotes": [
+        "An artificial pancreas is a system made of",
+        "An artificial pancreas is mainly used to help"
+      ],
+      "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/managing-diabetes/artificial-pancreas",
+      "source_title": "Artificial Pancreas",
+      "category": "general",
+      "source_sha256": "f3c6e96d4de39dbb9c9a6f4ed0c247c0f8a8e8c70bdcf8fe3ece3a902b96f0a3",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K154",
+      "title": "Kế hoạch phòng ngừa bệnh tiểu đường tuýp 2",
+      "topic": "preventing_type_2_diabetes",
+      "summary_vi": "Phòng ngừa bệnh tiểu đường tuýp 2 là điều có thể thực hiện được thông qua việc giảm cân bằng cách chọn thực phẩm và đồ uống ít calo kết hợp với việc tăng cường vận động thể chất. Các bước quan trọng bao gồm đặt mục tiêu giảm cân, ăn khẩu phần nhỏ hơn, chọn thực phẩm lành mạnh và duy trì hoạt động thể chất đều đặn mỗi tuần.",
+      "aliases": [
+        "kế hoạch phòng ngừa tiểu đường tuýp 2",
+        "phòng ngừa tiểu đường tuýp 2",
+        "chế độ ăn để giảm cân",
+        "hoạt động thể chất để ngăn ngừa tiểu đường"
+      ],
+      "facts": [
+        [
+          "việc phòng ngừa bệnh tiểu đường tuýp 2",
+          "được chứng minh là",
+          "có thể thực hiện và hiệu quả"
+        ],
+        [
+          "chìa khóa để ngăn ngừa bệnh tiểu đường tuýp 2",
+          "là",
+          "giảm cân bằng cách chọn thực phẩm ít calo và năng động hơn"
+        ]
+      ],
+      "support_quotes": [
+        "Type 2 diabetes prevention is proven, possible, and",
+        "If you are overweight, the keys to preventing"
+      ],
+      "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/preventing-type-2-diabetes/game-plan",
+      "source_title": "Your Game Plan to Prevent Type 2 Diabetes",
+      "category": "general",
+      "source_sha256": "1d86df18f98d2aa1f7c3a1cb8d664e85a6506b5391e69035856a2740064b7f39",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K155",
+      "title": "Bệnh tiểu đường đơn gen",
+      "topic": "monogenic_diabetes",
+      "summary_vi": "Bệnh tiểu đường đơn gen là một nhóm các dạng tiểu đường không phổ biến do biến thể ở một gen duy nhất gây ra. Hai dạng chính của bệnh này là tiểu đường khởi phát ở người trẻ tuổi (MODY) và tiểu đường sơ sinh (NDM). Người bệnh có thể gặp các triệu chứng tăng đường huyết và cần được chẩn đoán, quản lý thông qua tư vấn di truyền hoặc dùng thuốc phù hợp.",
+      "aliases": [
+        "tiểu đường đơn gen",
+        "tiểu đường MODY",
+        "tiểu đường sơ sinh",
+        "tiểu đường không điển hình"
+      ],
+      "facts": [
+        [
+          "bệnh tiểu đường đơn gen",
+          "là một nhóm",
+          "các dạng tiểu đường không phổ biến"
+        ],
+        [
+          "tiểu đường khởi phát ở người trẻ tuổi (MODY) và tiểu đường sơ sinh (NDM)",
+          "là",
+          "hai dạng chính của bệnh tiểu đường đơn gen"
+        ]
+      ],
+      "support_quotes": [
+        "Monogenic diabetes is a group of uncommon forms",
+        "Maturity-onset diabetes of the young (MODY) and neonatal"
+      ],
+      "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/what-is-diabetes/monogenic-neonatal-mellitus-mody",
+      "source_title": "Monogenic Diabetes (MODY & Neonatal Diabetes Mellitus)",
+      "category": "general",
+      "source_sha256": "361d4f92f2a71095c2af71307adfabfa857620ccb64f991f4311f3fa8cb0e3a4",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K156",
+      "title": "Sống chung với bệnh tiểu đường tuýp 1",
+      "topic": "living_with_type_1_diabetes",
+      "summary_vi": "Sống chung với bệnh tiểu đường tuýp 1 đòi hỏi người bệnh phải thường xuyên kiểm tra lượng đường trong máu, tính toán lượng carbohydrate trong thức ăn, uống và tiêm insulin nhiều lần mỗi ngày. Việc theo dõi sát sao mức đường huyết, nhận biết dấu hiệu hạ đường huyết cùng với sự hỗ trợ điều trị đúng cách giúp giảm thiểu các biến chứng lâu dài và duy trì chất lượng cuộc sống tốt hơn.",
+      "aliases": [
+        "sống với tiểu đường tuýp 1",
+        "quản lý đường huyết tuýp 1",
+        "kiểm tra đường huyết tuýp 1",
+        "đếm carbohydrate tiểu đường tuýp 1"
+      ],
+      "facts": [
+        [
+          "người mắc bệnh tiểu đường tuýp 1",
+          "cần phải",
+          "kiểm tra đường huyết thường xuyên"
+        ],
+        [
+          "việc kiểm tra đường huyết",
+          "là",
+          "nhanh chóng và dễ dàng đối với hầu hết mọi người"
+        ]
+      ],
+      "support_quotes": [
+        "If you have type 1 diabetes, you'll need",
+        "Checking your blood glucose is quick and easy"
+      ],
+      "source_url": "https://www.nhs.uk/conditions/type-1-diabetes/living-with/",
+      "source_title": "Living with type 1 diabetes",
+      "category": "general",
+      "source_sha256": "dbda888c1543e4e5da48e8f8aaf1ceb5806503f193453f1845f504184481e95c",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K157",
+      "title": "Tổng quan về bệnh tiểu đường",
+      "topic": "diabetes_overview",
+      "summary_vi": "Bệnh tiểu đường xảy ra khi lượng đường trong máu quá cao, gây ra các vấn đề sức khỏe theo thời gian. Các dạng chính bao gồm tiểu đường tuýp 1, tuýp 2 và tiểu đường thai kỳ. Việc quản lý bệnh liên quan đến việc kiểm soát đường huyết, huyết áp, cholesterol, kết hợp lối sống lành mạnh, dinh dưỡng hợp lý và tuân thủ kế hoạch điều trị từ đội ngũ y tế.",
+      "aliases": [
+        "tổng quan về tiểu đường",
+        "các loại tiểu đường chính",
+        "quản lý bệnh tiểu đường",
+        "triệu chứng và nguyên nhân tiểu đường"
+      ],
+      "facts": [
+        [
+          "bệnh tiểu đường",
+          "xảy ra khi",
+          "đường huyết trong máu quá cao"
+        ],
+        [
+          "các loại tiểu đường chính",
+          "bao gồm",
+          "tuýp 1, tuýp 2 và thai kỳ"
+        ]
+      ],
+      "support_quotes": [
+        "Diabetes occurs when your blood glucose, also called",
+        "The main types of diabetes are type 1,"
+      ],
+      "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview",
+      "source_title": "Diabetes Overview",
+      "category": "general",
+      "source_sha256": "373e349926d481e88b093f9f70b73ab606809facdc1724048059a0c36bdb23e6",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    },
+    {
+      "doc_id": "K158",
+      "title": "Quản lý và phát triển cùng bệnh tiểu đường",
+      "topic": "managing_and_thriving_with_diabetes",
+      "summary_vi": "Chẩn đoán bệnh tiểu đường không định nghĩa con người bạn và có các nguồn lực giúp bạn sống một cuộc sống lành mạnh. Hoạt động thể chất thường xuyên, cân bằng giữa ăn uống lành mạnh và tập luyện đóng vai trò quan trọng trong việc quản lý cân nặng cũng như phòng ngừa các biến chứng liên quan như bệnh tim, thận và đột quỵ.",
+      "aliases": [
+        "sống khỏe với tiểu đường",
+        "quản lý cân nặng tiểu đường",
+        "hoạt động thể chất quản lý tiểu đường",
+        "nguồn lực hỗ trợ tiểu đường"
+      ],
+      "facts": [
+        [
+          "hoạt động thể chất thường xuyên",
+          "là",
+          "một phần quan trọng trong việc quản lý bệnh tiểu đường"
+        ],
+        [
+          "khi bạn bị tiểu đường",
+          "cân nặng của bạn có thể làm tăng",
+          "nguy cơ biến chứng"
+        ]
+      ],
+      "support_quotes": [
+        "Regular physical activity is an important part of",
+        "When you have diabetes, your weight can increase"
+      ],
+      "source_url": "https://diabetes.org/health-wellness",
+      "source_title": "You Can Manage and Thrive with Diabetes",
+      "category": "general",
+      "source_sha256": "ffbf0df2aa9e3cd84900c80323b200c3f4d39246629e00df838d73c92ddbe39d",
+      "retrieved_on": "2026-10-31",
+      "http_status": 200,
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "automated_draft_and_independent_source_check"
+    }
+  ]
+}

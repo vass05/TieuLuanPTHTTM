@@ -1,12 +1,12 @@
 {
   "statistics": {
-    "nodes": 573,
-    "relations": 485,
-    "clinical_entities": 195,
-    "clinical_relations": 140,
-    "aliases": 299,
-    "documents": 42,
-    "sources": 37
+    "nodes": 1736,
+    "relations": 1418,
+    "clinical_entities": 593,
+    "clinical_relations": 410,
+    "aliases": 812,
+    "documents": 168,
+    "sources": 163
   },
   "note": "Nodes include distinct concepts, query aliases, source pages and documents; aliases are not clinical entities.",
   "documents": [
@@ -302,6 +302,888 @@
       "title": "Tiểu đường có lây không?",
       "publisher": "Public Health Agency of Canada",
       "source_url": "https://www.canada.ca/en/public-health/services/diseases/diabetes.html",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K33",
+      "title": "Tiểu đường có ăn chuối được không?",
+      "publisher": "Diabetes UK",
+      "source_url": "https://www.diabetes.org.uk/living-with-diabetes/eating/fruit-and-diabetes",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K34",
+      "title": "Chỉ số đường huyết và bệnh tiểu đường",
+      "publisher": "Diabetes UK",
+      "source_url": "https://www.diabetes.org.uk/living-with-diabetes/eating/carbohydrates-and-diabetes/glycaemic-index-and-diabetes",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K35",
+      "title": "Hiểu nhãn thực phẩm để chọn lựa tốt hơn",
+      "publisher": "Diabetes UK",
+      "source_url": "https://www.diabetes.org.uk/living-with-diabetes/eating/food-shopping-for-diabetes/understanding-food-labels",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K36",
+      "title": "Bệnh celiac và bệnh tiểu đường",
+      "publisher": "Diabetes UK",
+      "source_url": "https://www.diabetes.org.uk/living-with-diabetes/eating/managing-other-medical-conditions/coeliac-disease-diabetes",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K37",
+      "title": "Chế độ ăn ít carbohydrate và thực đơn",
+      "publisher": "Diabetes UK",
+      "source_url": "https://www.diabetes.org.uk/living-with-diabetes/eating/meal-plans/low-carb",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K38",
+      "title": "Thực phẩm chế biến sẵn và bệnh tiểu đường",
+      "publisher": "Diabetes UK",
+      "source_url": "https://www.diabetes.org.uk/living-with-diabetes/eating/what-is-a-healthy-balanced-diet/processed-foods",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K39",
+      "title": "Gia đình cùng ăn uống lành mạnh",
+      "publisher": "ADA",
+      "source_url": "https://diabetes.org/food-nutrition/eating-healthy/get-family-involved-healthy-eating",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K40",
+      "title": "Mẹo ăn uống lành mạnh khi bận rộn",
+      "publisher": "ADA",
+      "source_url": "https://diabetes.org/food-nutrition/eating-healthy/tips-eating-healthy-on-go",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K41",
+      "title": "Lợi ích của việc uống nhiều nước",
+      "publisher": "ADA",
+      "source_url": "https://diabetes.org/food-nutrition/eating-healthy/why-drink-more-water",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K42",
+      "title": "Lập kế hoạch bữa ăn chay thuần thực vật",
+      "publisher": "ADA",
+      "source_url": "https://diabetes.org/food-nutrition/meal-planning/vegan-meal-planning-tips",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K43",
+      "title": "Chất béo trong quản lý tiểu đường",
+      "publisher": "ADA",
+      "source_url": "https://diabetes.org/food-nutrition/reading-food-labels/fats",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K44",
+      "title": "Đọc và hiểu nhãn thực phẩm",
+      "publisher": "ADA",
+      "source_url": "https://diabetes.org/food-nutrition/reading-food-labels/making-sense-food-labels",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K45",
+      "title": "Rau củ không chứa tinh bột cho việc kiểm soát đường huyết",
+      "publisher": "ADA",
+      "source_url": "https://diabetes.org/food-nutrition/reading-food-labels/non-starchy-vegetables",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K46",
+      "title": "Thực phẩm giàu protein cho bệnh tiểu đường",
+      "publisher": "ADA",
+      "source_url": "https://diabetes.org/food-nutrition/reading-food-labels/protein",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K47",
+      "title": "Đếm carbohydrate và bệnh tiểu đường",
+      "publisher": "ADA",
+      "source_url": "https://diabetes.org/food-nutrition/understanding-carbs/carb-counting-and-diabetes",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K48",
+      "title": "Các loại carbohydrate trong thực phẩm",
+      "publisher": "ADA",
+      "source_url": "https://diabetes.org/food-nutrition/understanding-carbs/types-carbohydrates",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K49",
+      "title": "Carbohydrate và bệnh tiểu đường: Những điều cần biết",
+      "publisher": "Diabetes UK",
+      "source_url": "https://www.diabetes.org.uk/living-with-diabetes/eating/carbohydrates-and-diabetes",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K50",
+      "title": "Chế độ ăn khi mang thai mắc tiểu đường thai kỳ",
+      "publisher": "Diabetes UK",
+      "source_url": "https://www.diabetes.org.uk/living-with-diabetes/eating/gestational-diabetes",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K51",
+      "title": "Chế độ ăn uống cho người tiểu đường type 1",
+      "publisher": "Diabetes UK",
+      "source_url": "https://www.diabetes.org.uk/living-with-diabetes/eating/i-have-type-1-diabetes",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K52",
+      "title": "Lựa chọn thực phẩm cho người tiểu đường type 2",
+      "publisher": "Diabetes UK",
+      "source_url": "https://www.diabetes.org.uk/living-with-diabetes/eating/i-have-type-2-diabetes",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K53",
+      "title": "Khẩu phần ăn và bệnh tiểu đường",
+      "publisher": "Diabetes UK",
+      "source_url": "https://www.diabetes.org.uk/living-with-diabetes/eating/portion-sizes",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K54",
+      "title": "Đường và bệnh tiểu đường",
+      "publisher": "Diabetes UK",
+      "source_url": "https://www.diabetes.org.uk/living-with-diabetes/eating/sugar-and-diabetes",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K55",
+      "title": "Chế độ ăn uống cân bằng cho bệnh tiểu đường",
+      "publisher": "Diabetes UK",
+      "source_url": "https://www.diabetes.org.uk/living-with-diabetes/eating/what-is-a-healthy-balanced-diet",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K56",
+      "title": "Cân nặng lành mạnh cho bệnh tiểu đường",
+      "publisher": "Diabetes UK",
+      "source_url": "https://www.diabetes.org.uk/living-with-diabetes/eating/whats-your-healthy-weight",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K57",
+      "title": "Quản lý bệnh tiểu đường qua chế độ ăn",
+      "publisher": "ADA",
+      "source_url": "https://diabetes.org/food-nutrition/eating-for-diabetes-management",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K58",
+      "title": "Mẹo ăn uống lành mạnh",
+      "publisher": "ADA",
+      "source_url": "https://diabetes.org/food-nutrition/eating-healthy",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K59",
+      "title": "Ăn uống tốt với bệnh tiểu đường",
+      "publisher": "ADA",
+      "source_url": "https://diabetes.org/food-nutrition/food-and-diabetes",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K60",
+      "title": "Các loại insulin",
+      "publisher": "Diabetes UK",
+      "source_url": "https://www.diabetes.org.uk/about-diabetes/looking-after-diabetes/treatments/insulin/types",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K61",
+      "title": "Insulin là gì",
+      "publisher": "Diabetes UK",
+      "source_url": "https://www.diabetes.org.uk/about-diabetes/looking-after-diabetes/treatments/insulin/what-is-insulin",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K62",
+      "title": "Thuốc Sulphonylurea",
+      "publisher": "Diabetes UK",
+      "source_url": "https://www.diabetes.org.uk/about-diabetes/looking-after-diabetes/treatments/tablets-and-medication/sulphonylureas",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K63",
+      "title": "Gliclazide và điều trị tiểu đường",
+      "publisher": "NHS",
+      "source_url": "https://www.nhs.uk/medicines/gliclazide/",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K64",
+      "title": "Sitagliptin trong điều trị tiểu đường",
+      "publisher": "NHS",
+      "source_url": "https://www.nhs.uk/medicines/sitagliptin/",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K65",
+      "title": "Linagliptin điều trị tiểu đường týp 2",
+      "publisher": "NHS",
+      "source_url": "https://www.nhs.uk/medicines/linagliptin/",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K66",
+      "title": "Alogliptin trong kiểm soát đường huyết",
+      "publisher": "NHS",
+      "source_url": "https://www.nhs.uk/medicines/alogliptin/",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K67",
+      "title": "Dapagliflozin điều trị tiểu đường",
+      "publisher": "NHS",
+      "source_url": "https://www.nhs.uk/medicines/dapagliflozin/",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K68",
+      "title": "Empagliflozin điều trị tiểu đường týp 2",
+      "publisher": "NHS",
+      "source_url": "https://www.nhs.uk/medicines/empagliflozin/",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K69",
+      "title": "Semaglutide",
+      "publisher": "NHS",
+      "source_url": "https://www.nhs.uk/medicines/semaglutide/",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K70",
+      "title": "Liraglutide",
+      "publisher": "NHS",
+      "source_url": "https://www.nhs.uk/medicines/liraglutide/",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K71",
+      "title": "Tirzepatide",
+      "publisher": "NHS",
+      "source_url": "https://www.nhs.uk/medicines/tirzepatide/",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K72",
+      "title": "Insulin hai pha",
+      "publisher": "NHS",
+      "source_url": "https://www.nhs.uk/medicines/insulin/biphasic-insulin/about-biphasic-insulin/",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K73",
+      "title": "Insulin tác dụng trung gian",
+      "publisher": "NHS",
+      "source_url": "https://www.nhs.uk/medicines/insulin/intermediate-acting-insulin/about-intermediate-acting-insulin/",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K74",
+      "title": "Insulin tác dụng kéo dài",
+      "publisher": "NHS",
+      "source_url": "https://www.nhs.uk/medicines/insulin/long-acting-insulin/about-long-acting-insulin/",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K75",
+      "title": "Thông tin về insulin tác dụng nhanh",
+      "publisher": "NHS",
+      "source_url": "https://www.nhs.uk/medicines/insulin/rapid-acting-insulin/about-rapid-acting-insulin/",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K76",
+      "title": "Thông tin về insulin tác dụng ngắn",
+      "publisher": "NHS",
+      "source_url": "https://www.nhs.uk/medicines/insulin/short-acting-insulin/about-short-acting-insulin/",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K77",
+      "title": "Bảo quản và du lịch với insulin tác dụng kéo dài",
+      "publisher": "NHS",
+      "source_url": "https://www.nhs.uk/medicines/insulin/long-acting-insulin/storing-and-travelling-with-long-acting-insulin/",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K78",
+      "title": "Dùng insulin tác dụng kéo dài với thuốc và thảo dược",
+      "publisher": "NHS",
+      "source_url": "https://www.nhs.uk/medicines/insulin/long-acting-insulin/taking-long-acting-insulin-with-other-medicines-and-herbal-supplements/",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K79",
+      "title": "Thai kỳ, cho con bú và khả năng sinh sản với insulin kéo dài",
+      "publisher": "NHS",
+      "source_url": "https://www.nhs.uk/medicines/insulin/long-acting-insulin/pregnancy-breastfeeding-and-fertility-while-taking-long-acting-insulin/",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K80",
+      "title": "Xét nghiệm và chẩn đoán tiểu đường thai kỳ",
+      "publisher": "NIDDK / NIH",
+      "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/what-is-diabetes/gestational/tests-diagnosis",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K81",
+      "title": "Thiết bị theo dõi đường huyết liên tục",
+      "publisher": "Diabetes UK",
+      "source_url": "https://www.diabetes.org.uk/about-diabetes/looking-after-diabetes/technology/continuous-glucose-monitors",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K82",
+      "title": "Máy đo đường huyết cầm tay",
+      "publisher": "ADA",
+      "source_url": "https://diabetes.org/about-diabetes/devices-technology/blood-glucose-meters-important-role-in-diabetes-care",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K83",
+      "title": "Thời gian trong khoảng mục tiêu",
+      "publisher": "ADA",
+      "source_url": "https://diabetes.org/about-diabetes/devices-technology/cgm-time-in-range",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K84",
+      "title": "Lựa chọn thiết bị theo dõi đường huyết liên tục",
+      "publisher": "ADA",
+      "source_url": "https://diabetes.org/about-diabetes/devices-technology/choosing-cgm",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K85",
+      "title": "Bút tiêm insulin tiện lợi",
+      "publisher": "ADA",
+      "source_url": "https://diabetes.org/about-diabetes/devices-technology/insulin-pens",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K86",
+      "title": "Máy bơm insulin mang lại sự lựa chọn",
+      "publisher": "ADA",
+      "source_url": "https://diabetes.org/about-diabetes/devices-technology/insulin-pumps-relief-and-choice",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K87",
+      "title": "Bút tiêm thông minh quản lý bệnh tiểu đường",
+      "publisher": "ADA",
+      "source_url": "https://diabetes.org/about-diabetes/devices-technology/smart-insulin-pen",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K88",
+      "title": "Sử dụng máy bơm insulin trong quản lý tiểu đường",
+      "publisher": "ADA",
+      "source_url": "https://diabetes.org/about-diabetes/devices-technology/who-should-use-a-pump",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K89",
+      "title": "Ảnh hưởng của vận động và tập luyện đến đường huyết",
+      "publisher": "ADA",
+      "source_url": "https://diabetes.org/health-wellness/fitness/why-does-exercise-sometimes-raise-blood-sugar",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K90",
+      "title": "Kiểm tra đường huyết và theo dõi mục tiêu",
+      "publisher": "ADA",
+      "source_url": "https://diabetes.org/living-with-diabetes/treatment-care/checking-your-blood-sugar",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K91",
+      "title": "Hướng dẫn các bước kiểm tra đường huyết tại nhà",
+      "publisher": "Diabetes UK",
+      "source_url": "https://www.diabetes.org.uk/about-diabetes/looking-after-diabetes/blood-sugar-levels",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K92",
+      "title": "Hiểu về xét nghiệm HbA1c trong bệnh tiểu đường",
+      "publisher": "Diabetes UK",
+      "source_url": "https://www.diabetes.org.uk/about-diabetes/looking-after-diabetes/hba1c",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K93",
+      "title": "Thể ceton và bệnh tiểu đường",
+      "publisher": "Diabetes UK",
+      "source_url": "https://www.diabetes.org.uk/about-diabetes/looking-after-diabetes/ketones-and-diabetes",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K94",
+      "title": "Thời gian trong khoảng mục tiêu",
+      "publisher": "Diabetes UK",
+      "source_url": "https://www.diabetes.org.uk/about-diabetes/looking-after-diabetes/time-in-range",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K95",
+      "title": "Đường huyết cao tăng đường huyết",
+      "publisher": "NHS",
+      "source_url": "https://www.nhs.uk/conditions/high-blood-sugar-hyperglycaemia/",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K96",
+      "title": "Đường huyết thấp hạ đường huyết",
+      "publisher": "NHS",
+      "source_url": "https://www.nhs.uk/conditions/low-blood-sugar-hypoglycaemia/",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K97",
+      "title": "Hiểu về chỉ số A1C",
+      "publisher": "ADA",
+      "source_url": "https://diabetes.org/about-diabetes/a1c",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K98",
+      "title": "Sau khi sinh con",
+      "publisher": "NIDDK / NIH",
+      "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/what-is-diabetes/gestational/after-your-baby-is-born",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K99",
+      "title": "Quản lý và điều trị đái tháo đường thai kỳ",
+      "publisher": "NIDDK / NIH",
+      "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/what-is-diabetes/gestational/management-treatment",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K100",
+      "title": "Phòng ngừa đái tháo đường thai kỳ",
+      "publisher": "NIDDK / NIH",
+      "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/what-is-diabetes/gestational/prevention",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K101",
+      "title": "Triệu chứng và nguyên nhân đái tháo đường thai kỳ",
+      "publisher": "NIDDK / NIH",
+      "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/what-is-diabetes/gestational/symptoms-causes",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K102",
+      "title": "Tổng quan về đái tháo đường thai kỳ",
+      "publisher": "NIDDK / NIH",
+      "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/what-is-diabetes/gestational",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K103",
+      "title": "Cách điều trị đái tháo đường thai kỳ",
+      "publisher": "ADA",
+      "source_url": "https://diabetes.org/living-with-diabetes/pregnancy/gestational-diabetes/how-to-treat-gestational-diabetes",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K104",
+      "title": "Điều trị đái tháo đường thai kỳ theo dịch vụ y tế",
+      "publisher": "NHS",
+      "source_url": "https://www.nhs.uk/conditions/gestational-diabetes/treatment/",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K105",
+      "title": "Nuôi con bằng sữa mẹ và bệnh tiểu đường",
+      "publisher": "ADA",
+      "source_url": "https://diabetes.org/living-with-diabetes/pregnancy/diabetes-breastfeeding",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K106",
+      "title": "Bệnh tiểu đường thai kỳ",
+      "publisher": "ADA",
+      "source_url": "https://diabetes.org/living-with-diabetes/pregnancy/gestational-diabetes",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K107",
+      "title": "Lên kế hoạch mang thai khi mắc bệnh tiểu đường",
+      "publisher": "Diabetes UK",
+      "source_url": "https://www.diabetes.org.uk/about-diabetes/looking-after-diabetes/planning-for-pregnancy",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K108",
+      "title": "Tổng quan về bệnh tiểu đường thai kỳ",
+      "publisher": "NHS",
+      "source_url": "https://www.nhs.uk/conditions/gestational-diabetes/",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K109",
+      "title": "Mang thai khi bạn mắc bệnh tiểu đường",
+      "publisher": "NIDDK / NIH",
+      "source_url": "https://www.niddk.nih.gov/health-information/diabetes/diabetes-pregnancy",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K110",
+      "title": "Ghép tế bào đảo tụy",
+      "publisher": "NIDDK / NIH",
+      "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/insulin-medicines-treatments/pancreatic-islet-transplantation",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K111",
+      "title": "Bệnh tiểu đường và tình trạng giảm thính lực",
+      "publisher": "ADA",
+      "source_url": "https://diabetes.org/about-diabetes/complications/hearing-loss/diabetes-and-hearing-loss",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K112",
+      "title": "Bệnh thần kinh ngoại biên",
+      "publisher": "ADA",
+      "source_url": "https://diabetes.org/about-diabetes/complications/neuropathy/peripheral-neuropathy",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K113",
+      "title": "Bệnh tiểu đường và bệnh tim",
+      "publisher": "Diabetes UK",
+      "source_url": "https://www.diabetes.org.uk/about-diabetes/looking-after-diabetes/complications/cardiovascular-disease",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K114",
+      "title": "Tăng đường huyết ở người tiểu đường",
+      "publisher": "Diabetes UK",
+      "source_url": "https://www.diabetes.org.uk/about-diabetes/looking-after-diabetes/complications/hypers",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K115",
+      "title": "Hạ đường huyết ở người tiểu đường",
+      "publisher": "Diabetes UK",
+      "source_url": "https://www.diabetes.org.uk/about-diabetes/looking-after-diabetes/complications/hypos",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K116",
+      "title": "Bệnh võng mạc tiểu đường và vấn đề về mắt",
+      "publisher": "Diabetes UK",
+      "source_url": "https://www.diabetes.org.uk/about-diabetes/looking-after-diabetes/complications/retinopathy",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K117",
+      "title": "Biến chứng của tiểu đường tuýp 2",
+      "publisher": "NHS",
+      "source_url": "https://www.nhs.uk/conditions/type-2-diabetes/complications/",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K118",
+      "title": "Bệnh tim mạch và tiểu đường",
+      "publisher": "ADA",
+      "source_url": "https://diabetes.org/about-diabetes/complications/cardiovascular-disease",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K119",
+      "title": "Bệnh thận mạn tính do tiểu đường",
+      "publisher": "ADA",
+      "source_url": "https://diabetes.org/about-diabetes/complications/chronic-kidney-disease",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K120",
+      "title": "Biến chứng ở chân do tiểu đường",
+      "publisher": "ADA",
+      "source_url": "https://diabetes.org/about-diabetes/complications/foot-complications",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K121",
+      "title": "Bệnh thần kinh do tiểu đường",
+      "publisher": "ADA",
+      "source_url": "https://diabetes.org/about-diabetes/complications/neuropathy",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K122",
+      "title": "Bệnh nướu răng và tiểu đường",
+      "publisher": "ADA",
+      "source_url": "https://diabetes.org/about-diabetes/complications/oral-gum-disease",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K123",
+      "title": "Biến chứng da và chăm sóc da",
+      "publisher": "ADA",
+      "source_url": "https://diabetes.org/about-diabetes/complications/skin-complications",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K124",
+      "title": "Phòng ngừa đột quỵ và các yếu tố nguy cơ",
+      "publisher": "ADA",
+      "source_url": "https://diabetes.org/about-diabetes/complications/stroke",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K125",
+      "title": "Bệnh võng mạc và các vấn đề về mắt",
+      "publisher": "ADA",
+      "source_url": "https://diabetes.org/health-wellness/eye-health/what-is-retinopathy",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K126",
+      "title": "Hạ đường huyết nặng và cách xử lý",
+      "publisher": "ADA",
+      "source_url": "https://diabetes.org/living-with-diabetes/hypoglycemia-low-blood-glucose/severe",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K127",
+      "title": "Dấu hiệu nhận biết và cách xử lý hạ đường huyết",
+      "publisher": "ADA",
+      "source_url": "https://diabetes.org/living-with-diabetes/hypoglycemia-low-blood-glucose/symptoms-treatment",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K128",
+      "title": "Tăng đường huyết và các biến chứng",
+      "publisher": "ADA",
+      "source_url": "https://diabetes.org/living-with-diabetes/treatment-care/hyperglycemia",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K129",
+      "title": "Biến chứng của bệnh tiểu đường",
+      "publisher": "Diabetes UK",
+      "source_url": "https://www.diabetes.org.uk/about-diabetes/looking-after-diabetes/complications",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K130",
+      "title": "Bệnh võng mạc đái tháo đường",
+      "publisher": "NHS",
+      "source_url": "https://www.nhs.uk/conditions/diabetic-retinopathy/",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K131",
+      "title": "Các biến chứng của bệnh tiểu đường",
+      "publisher": "ADA",
+      "source_url": "https://diabetes.org/about-diabetes/complications",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K132",
+      "title": "Đường huyết thấp (Hạ đường huyết)",
+      "publisher": "ADA",
+      "source_url": "https://diabetes.org/living-with-diabetes/hypoglycemia-low-blood-glucose",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K133",
+      "title": "Trẻ em và bệnh đái tháo đường tuýp 2",
+      "publisher": "Diabetes UK",
+      "source_url": "https://www.diabetes.org.uk/living-with-diabetes/life-with-diabetes/children-and-diabetes/type-2",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K134",
+      "title": "Tập thể dục kỵ khí và bệnh tiểu đường",
+      "publisher": "ADA",
+      "source_url": "https://diabetes.org/health-wellness/fitness/anaerobic-exercise-diabetes",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K135",
+      "title": "Mẹo ăn uống trước và sau khi tập luyện",
+      "publisher": "ADA",
+      "source_url": "https://diabetes.org/health-wellness/fitness/eating-tips-before-after-exercise",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K136",
+      "title": "Tập thể dục và đái tháo đường típ 1",
+      "publisher": "ADA",
+      "source_url": "https://diabetes.org/health-wellness/fitness/exercise-and-type-1",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K137",
+      "title": "Vượt qua rào cản để bắt đầu vận động",
+      "publisher": "ADA",
+      "source_url": "https://diabetes.org/health-wellness/fitness/overcoming-roadblocks",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K138",
+      "title": "Bạn có đang trải qua trầm cảm không?",
+      "publisher": "ADA",
+      "source_url": "https://diabetes.org/health-wellness/mental-health/are-you-experiencing-depression",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K139",
+      "title": "10 mẹo giảm bớt căng thẳng do đái tháo đường",
+      "publisher": "ADA",
+      "source_url": "https://diabetes.org/health-wellness/mental-health/ease-diabetes-care-stress",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K140",
+      "title": "Rối loạn cương dương",
+      "publisher": "ADA",
+      "source_url": "https://diabetes.org/health-wellness/sexual-health/erectile-disfunction",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K141",
+      "title": "Testosterone Thấp",
+      "publisher": "ADA",
+      "source_url": "https://diabetes.org/health-wellness/sexual-health/low-testosterone",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K142",
+      "title": "Tình Dục Và Đái Tháo Đường",
+      "publisher": "ADA",
+      "source_url": "https://diabetes.org/health-wellness/sexual-health/sex-diabetes",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K143",
+      "title": "Ảnh Hưởng Của Sức Khỏe Cảm Xúc Đến Tình Dục",
+      "publisher": "ADA",
+      "source_url": "https://diabetes.org/health-wellness/sexual-health/sexual-implications-emotional-health",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K144",
+      "title": "Cảm Xúc Và Việc Ăn Uống",
+      "publisher": "ADA",
+      "source_url": "https://diabetes.org/health-wellness/weight-management/emotions-and-eating",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K145",
+      "title": "Thừa Cân Và Nguy Cơ",
+      "publisher": "ADA",
+      "source_url": "https://diabetes.org/health-wellness/weight-management/extra-weight-extra-risk",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K146",
+      "title": "Lắng Nghe Sự Thèm Ăn Của Bạn",
+      "publisher": "ADA",
+      "source_url": "https://diabetes.org/health-wellness/weight-management/get-touch-your-appetite",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K147",
+      "title": "Sử dụng Độc thoại Nội tâm Tích cực",
+      "publisher": "ADA",
+      "source_url": "https://diabetes.org/health-wellness/weight-management/positive-self-talk",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K148",
+      "title": "Giải quyết Vấn đề để Quản lý Tiểu đường",
+      "publisher": "ADA",
+      "source_url": "https://diabetes.org/health-wellness/weight-management/problem-solving-improve-diabetes-management",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K149",
+      "title": "Thiết lập Mục tiêu Thực tế",
+      "publisher": "ADA",
+      "source_url": "https://diabetes.org/health-wellness/weight-management/setting-realistic-goals",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K150",
+      "title": "Trẻ em và Bệnh tiểu đường",
+      "publisher": "Diabetes UK",
+      "source_url": "https://www.diabetes.org.uk/living-with-diabetes/life-with-diabetes/children-and-diabetes",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K151",
+      "title": "Thể lực và Vận động",
+      "publisher": "ADA",
+      "source_url": "https://diabetes.org/health-wellness/fitness",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K152",
+      "title": "Sức khỏe Tâm thần và Tiểu đường",
+      "publisher": "ADA",
+      "source_url": "https://diabetes.org/health-wellness/mental-health",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K153",
+      "title": "Tụy nhân tạo",
+      "publisher": "NIDDK / NIH",
+      "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/managing-diabetes/artificial-pancreas",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K154",
+      "title": "Kế hoạch phòng ngừa bệnh tiểu đường tuýp 2",
+      "publisher": "NIDDK / NIH",
+      "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/preventing-type-2-diabetes/game-plan",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K155",
+      "title": "Bệnh tiểu đường đơn gen",
+      "publisher": "NIDDK / NIH",
+      "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/what-is-diabetes/monogenic-neonatal-mellitus-mody",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K156",
+      "title": "Sống chung với bệnh tiểu đường tuýp 1",
+      "publisher": "NHS",
+      "source_url": "https://www.nhs.uk/conditions/type-1-diabetes/living-with/",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K157",
+      "title": "Tổng quan về bệnh tiểu đường",
+      "publisher": "NIDDK / NIH",
+      "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K158",
+      "title": "Quản lý và phát triển cùng bệnh tiểu đường",
+      "publisher": "ADA",
+      "source_url": "https://diabetes.org/health-wellness",
       "reviewed_on": "2026-10-31"
     }
   ]

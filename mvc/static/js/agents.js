@@ -52,7 +52,7 @@
     }
     function sourceLink(url,label){
         const anchor=el('a','',label);
-        try{const parsed=new URL(url);if(parsed.protocol==='https:'&&['www.niddk.nih.gov','www.cdc.gov','www.medlineplus.gov','medlineplus.gov','diabetes.org','www.nhs.uk','www.canada.ca'].includes(parsed.hostname))anchor.href=parsed.href;}catch{}
+        try{const parsed=new URL(url);if(parsed.protocol==='https:'&&['www.niddk.nih.gov','www.cdc.gov','www.medlineplus.gov','medlineplus.gov','diabetes.org','www.nhs.uk','www.canada.ca','www.diabetes.org.uk','www.nccih.nih.gov'].includes(parsed.hostname))anchor.href=parsed.href;}catch{}
         anchor.target='_blank';anchor.rel='noopener noreferrer';return anchor;
     }
     function row(role){

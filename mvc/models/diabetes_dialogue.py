@@ -11,7 +11,7 @@ import unicodedata
 from pathlib import Path
 from urllib.parse import urlparse
 
-TRUSTED_HOSTS = {'www.niddk.nih.gov', 'www.cdc.gov', 'www.medlineplus.gov', 'medlineplus.gov', 'diabetes.org', 'www.nhs.uk', 'www.canada.ca'}
+TRUSTED_HOSTS = {'www.niddk.nih.gov', 'www.cdc.gov', 'www.medlineplus.gov', 'medlineplus.gov', 'diabetes.org', 'www.nhs.uk', 'www.canada.ca', 'www.diabetes.org.uk', 'www.nccih.nih.gov'}
 
 
 def load_extended_documents(path):
@@ -29,8 +29,10 @@ def load_extended_documents(path):
         seen.add(doc['doc_id'])
         doc.update(publisher=('CDC' if 'cdc.gov' in url.hostname else 'ADA' if url.hostname == 'diabetes.org'
             else 'MedlinePlus / NIH' if 'medlineplus' in url.hostname else 'NHS' if url.hostname=='www.nhs.uk'
-            else 'Public Health Agency of Canada' if url.hostname=='www.canada.ca' else 'NIDDK / NIH'),
-            reviewed_on=data['reviewed_on'], content_type='manually_reviewed_vietnamese_paraphrase', section=doc['title'])
+            else 'Public Health Agency of Canada' if url.hostname=='www.canada.ca'
+            else 'Diabetes UK' if url.hostname=='www.diabetes.org.uk'
+            else 'NCCIH / NIH' if url.hostname=='www.nccih.nih.gov' else 'NIDDK / NIH'),
+            reviewed_on=data['reviewed_on'],content_type=doc.get('content_type','manually_reviewed_vietnamese_paraphrase'), section=doc['title'])
     return documents
 
 
@@ -98,7 +100,29 @@ class DiabetesDialogue:
         self.retriever = retriever
         self.documents = {d['doc_id']:d for d in documents}
         self.extended = extended or []
-        self.aliases = {d['doc_id']:[normalize_question(a) for a in d['aliases']] for d in self.extended}
+        reserved={normalize_question(a) for d in documents if not d.get('review_method') for a in d.get('aliases',[])}
+        reserved.update(phrase for _,phrases,_,_ in TOPICS for phrase in phrases)
+        self.aliases={}
+        for doc in self.extended:
+            aliases=[]
+            for value in doc['aliases']:
+                alias=normalize_question(value)
+                if doc.get('review_method'):
+                    alias=re.sub(r'^(?:nguoi |benh nhan )?(?:tieu duong|dai thao duong)(?: tuyp [12])?\s+','',alias)
+                    alias=re.sub(r'\s+(?:khi|cho)(?: nguoi| benh nhan)?(?: bi| mac)? (?:tieu duong|dai thao duong)(?: tuyp [12])?$','',alias)
+                    alias=re.sub(r'\s+(?:duoc khong|la gi|nhu the nao)$','',alias)
+                    if alias in reserved:continue
+                if alias and alias not in aliases:aliases.append(alias)
+            if doc.get('review_method'):
+                parts=urlparse(doc['source_url']).path.strip('/').split('/')
+                if len(parts)>=2 and parts[0]=='medicines' and parts[1] not in {'insulin','metformin'}:
+                    # A verified medicine page must answer a question containing
+                    # its generic name even when the sentence differs from aliases.
+                    generic=parts[1].replace('-',' ')
+                    if generic not in aliases:aliases.append(generic)
+            self.aliases[doc['doc_id']]=aliases
+        self.alias_patterns={did:[(a,re.compile(r'\b'+re.escape(a)+r'\b')) for a in aliases]
+            for did,aliases in self.aliases.items()}
         self.lexical = TfidfVectorizer(preprocessor=normalize_question, ngram_range=(1,2), sublinear_tf=True)
         self.characters = TfidfVectorizer(preprocessor=normalize_question, analyzer='char_wb', ngram_range=(3,5))
         if self.extended:
@@ -115,7 +139,7 @@ class DiabetesDialogue:
             self.graph.add_node(did, kind='document', label=doc['title'])
             self.graph.add_node(doc['source_url'], kind='source', label=doc['publisher'])
             self.graph.add_edge(did, doc['source_url'], relation='cites', evidence_id=did)
-            for alias in {normalize_question(a) for a in doc.get('aliases',[])}:
+            for alias in self.aliases.get(did,{normalize_question(a) for a in doc.get('aliases',[])}):
                 aid = 'alias:'+alias
                 self.graph.add_node(aid, kind='alias', label=alias)
                 self.graph.add_edge(aid, did, relation='retrieves', evidence_id=did)
@@ -142,8 +166,8 @@ class DiabetesDialogue:
                 matched.append((name,expansion,doc_ids))
         specific = []
         for doc in self.extended:
-            spans = [(m.start(),m.end()) for a in self.aliases[doc['doc_id']]
-                for m in re.finditer(r'\b'+re.escape(a)+r'\b',text)
+            spans = [(m.start(),m.end()) for a,pattern in self.alias_patterns[doc['doc_id']]
+                for m in pattern.finditer(text)
                 if self.graph.has_edge('alias:'+a,doc['doc_id'])]
             if spans:
                 specific.append((spans,doc))
@@ -154,7 +178,28 @@ class DiabetesDialogue:
             specific = [(spans,d) for spans,d in specific if any(not any(
                 a<=start and end<=b and (a,b)!=(start,end) for a,b in all_spans) for start,end in spans)]
             background = {'type1','type2','prediabetes','pregnancy'}
-            specific.sort(key=lambda item:(item[1]['topic'] in background,-max(b-a for a,b in item[0])))
+            focused=[item for item in specific if item[1]['topic'] not in background]
+            if focused:specific=focused
+            def relevance(item):
+                spans,doc=item
+                title=normalize_question(doc['title'])
+                title_match=max((b-a for a,b in spans if text[a:b] in title),default=0)
+                return (doc['topic'] in background,-max(b-a for a,b in spans),-title_match)
+            specific.sort(key=relevance)
+            scores=self._context_scores(query)
+            if len(scores):
+                best=max(range(len(scores)),key=lambda i:scores[i])
+                best_doc=self.extended[best]
+                matched_ids={doc['doc_id'] for _,doc in specific}
+                best_matched=max((scores[i] for i,doc in enumerate(self.extended) if doc['doc_id'] in matched_ids),default=0)
+                generic={'tieu','duong','huyet','benh','va','cua','cho','co','gi','lam','the','nao','huong','tuyp'}
+                title_terms=set(normalize_question(best_doc['title']).split())-generic
+                focus_overlap=len(title_terms & (set(text.split())-generic))
+                if (best_doc['doc_id'] not in matched_ids and not re.search(r'\d',text) and focus_overlap>=2
+                    and scores[best]>=.28 and scores[best]>1.4*best_matched):
+                    return dict(topics=[best_doc['topic']],expanded_query=query,
+                        preferred_doc_ids=[best_doc['doc_id']],match_method='lexical_context',
+                        rank_scores={best_doc['doc_id']:float(scores[best])})
             chosen = [d for _,d in specific][:3]
             return dict(topics=list(dict.fromkeys(d['topic'] for d in chosen)),
                 expanded_query=query,preferred_doc_ids=[d['doc_id'] for d in chosen])
@@ -178,7 +223,8 @@ class DiabetesDialogue:
         preferred = set(intent['preferred_doc_ids'])
         extra_ids = {d['doc_id'] for d in self.extended}
         if preferred & extra_ids:
-            return [self._extended_hit(self.documents[did],1.0,'graph_alias') for did in intent['preferred_doc_ids'] if did in extra_ids][:k]
+            return [self._extended_hit(self.documents[did],intent.get('rank_scores',{}).get(did,1.0),
+                intent.get('match_method','graph_alias')) for did in intent['preferred_doc_ids'] if did in extra_ids][:k]
         if preferred:
             expanded = self.retriever.search(intent['expanded_query'],k=k,method=method)
             for hit in expanded:
@@ -211,3 +257,16 @@ class DiabetesDialogue:
         return dict(doc_id=doc['doc_id'],title=doc['title'],source_url=doc['source_url'],
             publisher=doc['publisher'],content=doc['summary_vi'],score=score,match_method=method,
             graph_paths=[dict(source=s,relation=r,target=o,evidence_id=doc['doc_id']) for s,r,o in doc['facts']])
+
+    def _context_scores(self,query):
+        if not self.extended:return []
+        text=normalize_question(query)
+        for phrase in ('dai thao duong','tieu duong','cho toi','cho minh','duoc khong','la gi'):
+            text=text.replace(phrase,' ')
+        words=[w for w in text.split() if w not in {'co','bi','benh','toi','minh','hoi','ve','thi','va','hay','khong',
+            'nhu','the','nao','gi','a','oi','lam','sao','vi','luc'}]
+        if not words:return []
+        clean=' '.join(words)
+        lexical=(self.lexical_matrix@self.lexical.transform([clean]).T).toarray().ravel()
+        chars=(self.character_matrix@self.characters.transform([clean]).T).toarray().ravel()
+        return .65*lexical+.35*chars

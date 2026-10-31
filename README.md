@@ -85,6 +85,10 @@ BMI và chỉ số phả hệ DPF. Cần xác nhận hồ sơ thuộc phụ nữ
 phù hợp sẽ không được chấm điểm. Glucose lúc đói không thay thế glucose OGTT.
 Không tự điền chỉ số thiếu hoặc đổi sang dữ liệu mẫu nếu người dùng chưa yêu cầu.
 DPF không phải một câu trả lời có/không về tiền sử gia đình.
+Có thể dán hồ sơ có nhãn trực tiếp vào chat, kể cả sau khi thử dữ liệu mẫu.
+Nhãn đầy đủ như `Chỉ số phả hệ tiểu đường (DPF): 1.080` được đọc là DPF=1.08;
+ngoặc chứa tên viết tắt và dấu phẩy thập phân cũng được hỗ trợ. Hồ sơ mới sau
+lượt demo không kế thừa các chỉ số của mẫu.
 
 Bạn có thể gửi nhiều chỉ số trong một tin nhắn có nhãn, ví dụ `Tôi là nữ, 47 tuổi;
 BMI=35,5`. Đơn vị không khớp phải được làm rõ. Gõ **Hủy dự đoán** để dừng thu thập,
@@ -163,10 +167,10 @@ cơ sở khám chữa bệnh hay quy trình triển khai dữ liệu bệnh nhâ
 glucose lúc đói. Điểm mô hình và nhãn nghiên cứu không được diễn giải thành
 chẩn đoán cá nhân.
 
-Kho hội thoại gồm **42 tài liệu từ 37 trang nguồn**: NIDDK/NIH, CDC, MedlinePlus,
-ADA, NHS và Public Health Agency of Canada. Đồ thị có **195 thực thể, 140 quan hệ
-chuyên môn có nguồn**. Tổng 573 nút và 485 cạnh còn có tài liệu, trang nguồn và
-299 bí danh truy xuất; bí danh không được tính là thực thể y khoa. Các số này là
+Kho hội thoại gồm **168 tài liệu từ 163 trang nguồn**, gấp bốn số tài liệu ban đầu:
+NIDDK/NIH, CDC, MedlinePlus, ADA, NHS, Diabetes UK và Public Health Agency of Canada.
+Đồ thị có **593 thực thể, 410 quan hệ chuyên môn có nguồn**. Tổng 1736 nút và 1418 cạnh
+còn có tài liệu, trang nguồn và 812 bí danh truy xuất; bí danh không được tính là thực thể y khoa. Các số này là
 kích thước dữ liệu, không phải điểm đánh giá chất lượng tư vấn.
 
 Lớp hội thoại của project nhận diện cách hỏi thông thường như “tiểu đường ăn được
@@ -174,6 +178,13 @@ gì”, “nên ăn gì”, “kiêng ăn gì”, kể cả khi không gõ dấu
 từ vựng của chủ đề trước khi truy xuất. Ngưỡng lọc bằng chứng vẫn được giữ; không
 trả lời bằng một tài liệu giả nếu truy xuất thất bại. Phần bổ sung nội dung đã
 đối chiếu nguồn nằm ở `knowledge/diabetes_chat_documents.json` và `knowledge/diabetes_extended.json`.
+Phần mở rộng thêm 126 trang nguồn riêng biệt nằm ở `knowledge/diabetes_expansion.json`;
+các chỉnh sửa nội dung và bộ ba đồ thị nằm ở `knowledge/diabetes_editorial_overrides.json`.
+Mỗi tài liệu mới có URL, ngày truy cập, hash trang gốc và trích đoạn hỗ trợ. Bản thảo
+được hỗ trợ bằng API, qua lượt đối chiếu riêng với nguồn rồi biên tập các điểm cần sửa;
+quy trình này chưa thay thế thẩm định lâm sàng. Chi tiết ở `reports/project/corpus_source_review.json`.
+Script `scripts/expand_diabetes_corpus.py` chỉ chạy khi xây dựng kho, không tự duyệt web
+trong mỗi lượt chat. Trang thô và phản hồi bản thảo nằm trong thư mục checkpoint được Git bỏ qua.
 Các nhóm bổ sung gồm tuýp 1/2, tiền tiểu đường, thai kỳ, rượu bia, nước ép,
 thực phẩm, thuốc, biến chứng mắt/thận/thần kinh/tim, bàn chân, răng miệng, CGM,
 ngày ốm, đi xa, giấc ngủ, tinh thần và các hiểu lầm thường gặp.
@@ -201,7 +212,7 @@ thích lúc nạp; chúng không tham gia luồng trợ lý tiểu đường.
 
 ```powershell
 python -m pip install -r requirements-dev.txt
-python -m pytest tests/test_agents_project.py tests/test_diabetes_extension.py tests/test_prediction_chat.py -q
+python -m pytest tests/test_agents_project.py tests/test_diabetes_extension.py tests/test_prediction_chat.py tests/test_corpus_expansion.py -q
 node --check mvc/static/js/agents.js
 ```
 

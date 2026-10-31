@@ -6,12 +6,14 @@ import sys
 import time
 import uuid
 import socket
+import os
 from pathlib import Path
 
 import requests
 import websocket
 
 ROOT = Path(__file__).resolve().parents[1]
+APP_PORT=int(os.environ.get('AGENTS_CHECK_PORT','5000'))
 OUT = ROOT / 'reports/project'
 OUT.mkdir(parents=True,exist_ok=True)
 PROFILE = ROOT / '.ipynb_checkpoints' / ('chrome-agents-'+uuid.uuid4().hex)
@@ -75,7 +77,7 @@ def main():
         debug_port=listener.getsockname()[1]
     process=subprocess.Popen([str(CHROME),'--headless=new','--disable-gpu','--no-first-run',
         '--no-default-browser-check','--remote-debugging-port='+str(debug_port),'--window-size=1440,1100',
-        '--user-data-dir='+str(PROFILE),'http://127.0.0.1:5000/agents'],
+        '--user-data-dir='+str(PROFILE),'http://127.0.0.1:'+str(APP_PORT)+'/agents'],
         stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL,creationflags=subprocess.CREATE_NO_WINDOW)
     browser=None
     try:
@@ -173,6 +175,18 @@ def main():
         browser.js("document.getElementById('newConversation').click()")
         send_message('Chạy thử dự đoán bằng dữ liệu mẫu')
         check('explicit_demo_uses_model_and_identifies_sample',browser.js("document.getElementById('flow-model').classList.contains('is-active') && [...document.querySelectorAll('.assistant-message[data-task-id]')].at(-1).textContent.includes('dữ liệu mẫu nghiên cứu')"))
+        send_message('Giới tính: Nữ\nTuổi: 53\nSố lần mang thai: 6\nGlucose sau 2 giờ OGTT: 215 mg/dL\nHuyết áp tâm trương: 92 mmHg\nĐộ dày nếp gấp da: 40 mm\nInsulin huyết thanh sau 2 giờ: 225 uU/mL\nBMI: 37.4 kg/m2\nChỉ số phả hệ tiểu đường (DPF): 1.080')
+        check('pasted_profile_with_parenthesized_dpf_runs_prediction',browser.js("(()=>{const n=[...document.querySelectorAll('.assistant-message[data-task-id]')].at(-1);return n.textContent.includes('Đã nhận đủ 8 chỉ số') && !n.querySelector('.message-notice') && document.getElementById('flow-model').classList.contains('is-active')})()"))
+        check('pasted_profile_after_demo_is_not_labelled_as_sample',browser.js("![...document.querySelectorAll('.assistant-message[data-task-id]')].at(-1).textContent.includes('dữ liệu mẫu nghiên cứu')"))
+        browser.call('Emulation.setDeviceMetricsOverride',dict(width=1440,height=1100,deviceScaleFactor=1,mobile=False))
+        browser.js("(()=>{const n=document.getElementById('chatMessages');n.style.scrollBehavior='auto';n.scrollTop=n.scrollHeight;})()")
+        browser.screenshot('pasted_profile_fixed.png')
+        browser.js("document.getElementById('newConversation').click()")
+        send_message('Tiểu đường tuýp 2 ăn chuối được không?')
+        check('expanded_corpus_answers_banana_with_specific_clickable_source',browser.js("(()=>{const n=[...document.querySelectorAll('.assistant-message[data-task-id]')].at(-1);return n.textContent.includes('có thể ăn chuối') && n.querySelector('.message-citation').href.startsWith('https://www.diabetes.org.uk/') && !n.textContent.includes('[K01]')})()"))
+        check('expanded_corpus_count_is_visible',browser.js("document.getElementById('knowledgeStats').textContent.includes('168 tài liệu')"))
+        browser.js("(()=>{const n=document.getElementById('chatMessages');n.style.scrollBehavior='auto';n.scrollTop=n.scrollHeight;})()")
+        browser.screenshot('corpus_expansion_chat.png')
         browser.js("document.getElementById('newConversation').click()")
         check('new_conversation_resets_ui_without_deleting_history',browser.js("document.querySelectorAll('.assistant-message.user').length===0 && document.getElementById('conversationSelect').options.length>1"))
         send_message('<img src=x onerror=\"window.assistantInjected=true\">')
