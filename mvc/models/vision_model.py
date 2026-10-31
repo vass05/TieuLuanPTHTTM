@@ -8,13 +8,14 @@ Quản lý việc nạp mô hình Squeeze-and-Excitation CNN (SE-Block), tiền 
 import os
 import io
 import base64
+import binascii
+import logging
 import numpy as np
-from PIL import Image, ImageOps
+from PIL import Image, ImageOps, UnidentifiedImageError
 from mvc.models.model_errors import ModelUnavailableError
-try:
-    import tensorflow as tf
-except ImportError:
-    tf = None
+from mvc.models.keras_runtime import load_inference_model
+
+LOGGER = logging.getLogger(__name__)
 
 class VisionModel:
     CLASSES = [
@@ -36,15 +37,20 @@ class VisionModel:
         self.workspace_dir = workspace_dir
         self.model_path = os.path.join(workspace_dir, "model", "fashion_se_model.keras")
         self.model = None
+        self.inference_backend = None
         self._load_model()
         
     def _load_model(self):
         """Tải mô hình Keras SE-Block CNN"""
-        if os.path.exists(self.model_path) and tf is not None:
-            self.model = tf.keras.models.load_model(self.model_path)
-            print(f"[Model Layer] Đã nạp Fashion SE-CNN Model từ: {self.model_path}")
-        else:
-            print(f"[Model Layer] CẢNH BÁO: Không tìm thấy mô hình hoặc thiếu TensorFlow tại {self.model_path}")
+        try:
+            model,backend=load_inference_model(self.model_path)
+            if model.input_shape!=(None,28,28,1) or model.output_shape!=(None,10):
+                raise ValueError('Fashion model has an incompatible input/output shape')
+            self.model,self.inference_backend=model,backend
+            LOGGER.info('Loaded Fashion SE-CNN with Keras backend %s',backend)
+        except Exception as error:
+            self.model=None
+            LOGGER.warning('Cannot load Fashion SE-CNN: %s: %s',type(error).__name__,error)
 
     def predict_image(self, image_input):
         """
@@ -52,16 +58,23 @@ class VisionModel:
         image_input có thể là chuỗi Base64 hoặc bytes nhị phân.
         """
         if self.model is None:
-            raise ModelUnavailableError('Mô hình thị giác chưa sẵn sàng. Cần TensorFlow và trọng số Fashion-MNIST.')
-        if isinstance(image_input, str):
-            if "," in image_input:
-                image_input = image_input.split(",")[1]
-            img_bytes = base64.b64decode(image_input)
-        else:
-            img_bytes = image_input
-
-        # Mở ảnh và chuyển sang thang độ xám 8-bit
-        img = Image.open(io.BytesIO(img_bytes)).convert("L")
+            raise ModelUnavailableError('Mô hình thị giác chưa sẵn sàng. Cần cài đủ thư viện trong requirements.txt và có file model/fashion_se_model.keras.')
+        try:
+            if isinstance(image_input,str):
+                img_bytes=base64.b64decode(image_input.split(',',1)[-1],validate=True)
+            elif isinstance(image_input,(bytes,bytearray)):
+                img_bytes=image_input
+            else:
+                raise ValueError('Unsupported image input')
+            with Image.open(io.BytesIO(img_bytes)) as original:
+                original=ImageOps.exif_transpose(original)
+                # Transparent PNGs should have the same white background as the canvas.
+                if original.mode in ('RGBA','LA') or 'transparency' in original.info:
+                    rgba=original.convert('RGBA')
+                    original=Image.alpha_composite(Image.new('RGBA',rgba.size,'white'),rgba)
+                img=original.convert('L')
+        except (binascii.Error,UnidentifiedImageError,OSError,ValueError) as error:
+            raise ValueError('Không đọc được ảnh. Hãy chọn ảnh PNG/JPG hợp lệ hoặc vẽ lại trên bảng.') from error
         
         # Tự động đảo ngược màu nếu nền ảnh là màu sáng
         img_arr_raw = np.array(img, dtype=np.float32)

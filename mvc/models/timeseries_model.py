@@ -7,13 +7,13 @@ Quản lý việc nạp mô hình Keras LSTM tối ưu, bộ chuẩn hóa Scaler
 """
 
 import os
-import importlib.util
 import logging
 import numpy as np
 import pandas as pd
 import joblib
 from datetime import datetime, timedelta
 from mvc.models.model_errors import ModelUnavailableError
+from mvc.models.keras_runtime import load_inference_model
 
 LOGGER = logging.getLogger(__name__)
 
@@ -39,17 +39,12 @@ class TimeSeriesModel:
             for path in (lstm_path, scaler_path):
                 if not os.path.isfile(path):
                     raise FileNotFoundError(path)
-            # Keras must choose its backend before the first import. Preserve
-            # explicit settings; PyTorch also runs the saved Keras LSTM weights.
-            os.environ.setdefault('KERAS_BACKEND',
-                'tensorflow' if importlib.util.find_spec('tensorflow') is not None else 'torch')
-            import keras
             scaler = joblib.load(scaler_path)
-            model = keras.models.load_model(lstm_path, compile=False)
+            model,backend = load_inference_model(lstm_path)
             if model.input_shape != (None, 30, 1) or model.output_shape != (None, 1):
                 raise ValueError('LSTM artifact has an incompatible input/output shape')
             self.scaler, self.lstm_model = scaler, model
-            self.inference_backend = keras.backend.backend()
+            self.inference_backend = backend
             LOGGER.info('Loaded saved LSTM with Keras backend %s', self.inference_backend)
         except Exception as error:
             self.lstm_model, self.scaler = None, None

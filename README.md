@@ -224,7 +224,12 @@ là bộ phụ tải điện ngoại tuyến, không phải giá cổ phiếu AE
 Nếu đã mở server trước khi cập nhật, dừng server và chạy lại `python app.py` sau khi
 cài `python -m pip install -r requirements.txt`. Backend cấu hình rõ qua
 `KERAS_BACKEND` sẽ được giữ nguyên. Chi tiết: [cấu hình backend Keras](https://keras.io/getting_started/).
-Trang CNN vẫn cần TensorFlow và trọng số tương ứng. Khi thiếu thành phần, API trả 503/trang thông báo phù hợp, thay
+Trang `/vision` cũng dùng bộ nạp Keras chung để chạy trực tiếp
+`model/fashion_se_model.keras` bằng PyTorch khi không có TensorFlow. Cả nét vẽ
+base64 và ảnh tải lên đều được đưa về ảnh xám 28×28; PNG trong suốt được ghép nền trắng.
+Trọng số SE-CNN giữ nguyên, không huấn luyện lại. Ảnh không đọc được trả JSON 400;
+lỗi mô hình trả 503 với thông báo cụ thể trên giao diện, không bật hộp thoại chỉ ghi mã lỗi.
+Khi thiếu thành phần, API trả 503/trang thông báo phù hợp, thay
 cho xác suất ngẫu nhiên hay dự báo giả lập. Hai bộ artifact cũ của XGBoost và
 MinMaxScaler được tạo bằng phiên bản thư viện khác nên vẫn có cảnh báo tương
 thích lúc nạp; chúng không tham gia luồng trợ lý tiểu đường.
@@ -233,7 +238,7 @@ thích lúc nạp; chúng không tham gia luồng trợ lý tiểu đường.
 
 ```powershell
 python -m pip install -r requirements-dev.txt
-python -m pytest tests/test_agents_project.py tests/test_diabetes_extension.py tests/test_prediction_chat.py tests/test_corpus_expansion.py tests/test_timeseries_runtime.py tests/test_market_data.py -q
+python -m pytest tests/test_agents_project.py tests/test_diabetes_extension.py tests/test_prediction_chat.py tests/test_corpus_expansion.py tests/test_timeseries_runtime.py tests/test_market_data.py tests/test_vision_runtime.py -q
 node --check mvc/static/js/agents.js
 ```
 
@@ -243,6 +248,7 @@ cổng 5000 trước):
 ```powershell
 python scripts/check_agents_browser.py
 python scripts/check_timeseries_browser.py
+python scripts/check_vision_browser.py
 ```
 
 Script dùng profile trình duyệt tạm riêng trong `.ipynb_checkpoints/`, chỉ thao

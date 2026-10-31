@@ -101,7 +101,8 @@ một dịch vụ từ xa bị treo. Không mô tả bản demo này như hệ t
 
 Các kiểm tra project đã đạt:
 
-- 224 ca kiểm thử backend/API, gồm nguồn thị trường mặc định, lỗi mạng/dữ liệu cũ, bộ đệm, phiên chưa đóng cửa,
+- 239 ca kiểm thử backend/API, gồm suy luận SE-CNN đối chiếu trọng số gốc, nét vẽ, ảnh tải lên/PNG trong suốt,
+  ảnh không hợp lệ, nguồn thị trường mặc định, lỗi mạng/dữ liệu cũ, bộ đệm, phiên chưa đóng cửa,
   lịch nghỉ giao dịch, nạp LSTM bằng Keras/PyTorch, đối chiếu suy luận với trọng số gốc,
   trang dự báo và API 1/7/14/30 bước, giải thích nhóm phân loại và hỏi tiếp không thu thập lại hồ sơ,
   đọc hồ sơ nhiều dòng có tên viết tắt trong ngoặc, nạp artifact,
@@ -119,6 +120,10 @@ Các kiểm tra project đã đạt:
   trả HTTP 200, vẽ Chart.js từ kết quả mô hình, bảng 7 bước, cập nhật 14 bước bằng AJAX,
   desktop/mobile và lỗi JavaScript.
   Ảnh: `reports/project/timeseries_fixed.png`; báo cáo: `reports/project/timeseries_browser_checks.json`.
+- 13 kiểm tra riêng cho trang thị giác: API nét vẽ hết lỗi 503, ảnh tải lên cho cùng kết quả,
+  xem trước ảnh, top-5, thông báo lỗi ngay trong trang và desktop/mobile.
+  Ảnh: `reports/project/vision_canvas_fixed.png`, `reports/project/vision_upload_fixed.png`;
+  báo cáo: `reports/project/vision_browser_checks.json`.
 
 Các số này là kiểm tra phần mềm trên dữ liệu và kịch bản nghiên cứu; không phải
 kết quả đánh giá lâm sàng hoặc tỷ lệ xử lý thành công trên bệnh nhân thực tế.

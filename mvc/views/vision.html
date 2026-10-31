@@ -85,6 +85,7 @@
                         </button>
                     </div>
                 </div>
+                <div id="visionError" class="alert alert-warning mt-3 mb-0" role="alert" hidden></div>
             </div>
         </div>
 
@@ -204,24 +205,29 @@
     }
 
     // Gửi nét vẽ Canvas
+    function showVisionError(message){
+        const error=document.getElementById('visionError');
+        error.textContent=message;error.hidden=!message;
+    }
+    async function recognize(options){
+        const buttons=['btnPredictCanvas','btnPredictUpload'].map(id=>document.getElementById(id));
+        buttons.forEach(button=>{button.disabled=true;button.setAttribute('aria-busy','true');});
+        showVisionError('');
+        try{
+            const resp=await fetch('/api/vision/predict',{method:'POST',...options});
+            let data;
+            try{data=await resp.json();}catch{throw new Error('Máy chủ chưa trả về kết quả hợp lệ. Hãy thử lại.');}
+            if(!resp.ok||!data.success)throw new Error(data.error||`Máy chủ phản hồi mã ${resp.status}`);
+            displayVisionResult(data.result);
+        }catch(error){
+            showVisionError(error.message);
+        }finally{
+            buttons.forEach(button=>{button.disabled=false;button.setAttribute('aria-busy','false');});
+        }
+    }
     document.getElementById("btnPredictCanvas").addEventListener("click", async () => {
         const b64 = canvas.toDataURL("image/png");
-        try {
-            const resp = await fetch("/api/vision/predict", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ image_base64: b64 })
-            });
-            if (!resp.ok) {
-                const errText = await resp.text();
-                throw new Error(`Máy chủ phản hồi mã ${resp.status}`);
-            }
-            const data = await resp.json();
-            if (data.success) displayVisionResult(data.result);
-            else alert("Lỗi xử lý: " + (data.error || "Không xác định"));
-        } catch (e) {
-            alert("Lỗi: " + e.message);
-        }
+        await recognize({headers:{'Content-Type':'application/json'},body:JSON.stringify({image_base64:b64})});
     });
 
     // Xử lý xem trước ảnh khi chọn file (Image Preview)
@@ -235,7 +241,7 @@
 
     function handleFileSelected(file) {
         if (!file || !file.type.startsWith("image/")) {
-            alert("Vui lòng chọn một tệp hình ảnh hợp lệ (PNG, JPG, JPEG)!");
+            showVisionError('Vui lòng chọn một tệp hình ảnh hợp lệ (PNG, JPG, JPEG).');
             return;
         }
         const reader = new FileReader();
@@ -292,27 +298,13 @@
     // Gửi file ảnh upload
     document.getElementById("btnPredictUpload").addEventListener("click", async () => {
         if (!fileInput.files || fileInput.files.length === 0) {
-            alert("Vui lòng chọn 1 tệp hình ảnh để nhận diện!");
+            showVisionError('Vui lòng chọn một tệp hình ảnh để nhận diện.');
             return;
         }
         const formData = new FormData();
         formData.append("image_file", fileInput.files[0]);
 
-        try {
-            const resp = await fetch("/api/vision/predict", {
-                method: "POST",
-                body: formData
-            });
-            if (!resp.ok) {
-                const errText = await resp.text();
-                throw new Error(`Máy chủ phản hồi mã ${resp.status}`);
-            }
-            const data = await resp.json();
-            if (data.success) displayVisionResult(data.result);
-            else alert("Lỗi xử lý: " + (data.error || "Không xác định"));
-        } catch (e) {
-            alert("Lỗi: " + e.message);
-        }
+        await recognize({body:formData});
     });
 </script>
 {% endblock %}

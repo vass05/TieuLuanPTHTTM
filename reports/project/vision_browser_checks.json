@@ -1,0 +1,19 @@
+{
+  "checks": [
+    "vision_page_returns_200",
+    "canvas_request_disables_buttons_while_running",
+    "canvas_inference_returns_200_instead_of_503",
+    "top_class_and_five_probabilities_are_rendered",
+    "upload_tab_opens",
+    "uploaded_file_preview_is_visible",
+    "upload_inference_matches_canvas",
+    "model_error_is_explained_inline",
+    "missing_file_is_explained_inline",
+    "no_error_popup_was_shown",
+    "desktop_has_no_horizontal_overflow",
+    "mobile_has_no_horizontal_overflow",
+    "no_browser_javascript_exceptions"
+  ],
+  "passed": 13,
+  "exceptions": []
+}

@@ -11,6 +11,11 @@ from mvc.models.vision_model import VisionModel
 vision_bp = Blueprint('vision', __name__, template_folder='../views')
 vision_model = VisionModel()
 
+
+@vision_bp.errorhandler(ValueError)
+def invalid_image(error):
+    return jsonify(success=False,error=str(error)),400
+
 @vision_bp.route('/vision')
 def index():
     """Giao diện nhận diện sản phẩm thời trang bằng SE-Block CNN"""
@@ -33,6 +38,8 @@ def api_predict():
             
     # 2. Kiểm tra nếu gửi chuỗi Base64 qua JSON
     data = request.get_json(silent=True) or {}
+    if not isinstance(data,dict):
+        return jsonify(success=False,error='Nội dung yêu cầu phải là một đối tượng JSON.'),400
     img_b64 = data.get('image_base64', '')
     if img_b64:
         res = vision_model.predict_image(img_b64)
