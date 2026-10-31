@@ -8,6 +8,7 @@ Quản lý việc nạp mô hình XGBoost Regressor tối ưu, chuẩn hóa đ�
 import os
 import numpy as np
 import joblib
+from mvc.models.model_errors import ModelUnavailableError
 
 class HousingModel:
     def __init__(self, workspace_dir=None):
@@ -31,6 +32,8 @@ class HousingModel:
         Dự báo giá nhà đất dựa trên các thông số kỹ thuật.
         Trả về kết quả chi tiết kèm phân khúc và đơn giá.
         """
+        if self.model is None:
+            raise ModelUnavailableError('Chưa nạp được mô hình định giá bất động sản.')
         area = max(10.0, float(area))
         bedroom = max(1.0, float(bedroom))
         toilet = max(1.0, float(toilet))
@@ -38,12 +41,8 @@ class HousingModel:
         
         feat = np.array([[area, bedroom, toilet, floors]], dtype=np.float32)
         
-        if self.model is not None:
-            pred_log = float(self.model.predict(feat)[0])
-            pred_price = float(np.expm1(pred_log))
-        else:
-            # Thuật toán heuristic ước lượng tạm thời nếu chưa nạp file
-            pred_price = 0.045 * area + 0.35 * toilet + 0.25 * floors
+        pred_log = float(self.model.predict(feat)[0])
+        pred_price = float(np.expm1(pred_log))
             
         pred_price = max(0.5, round(pred_price, 2))
         price_per_m2 = round((pred_price * 1000.0) / area, 1)

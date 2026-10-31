@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}Mô hình chưa sẵn sàng{% endblock %}
+{% block content %}
+<div class="container py-5">
+    <div class="custom-card p-4 mx-auto" style="max-width:640px">
+        <h1 class="h4">Mô hình chưa sẵn sàng</h1>
+        <p class="text-muted mt-3">{{ message }}</p>
+        <a class="btn btn-primary-custom" href="{{ url_for('agents.index') }}">Mở trợ lý tiểu đường</a>
+    </div>
+</div>
+{% endblock %}

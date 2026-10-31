@@ -1,0 +1,9 @@
+﻿feature,unit,zero_as_missing,missing_after_clean,min_observed,max_observed
+Pregnancies,count,False,0,0.0,17.0
+Glucose,mg/dL,True,5,44.0,199.0
+BloodPressure,mmHg,True,35,24.0,122.0
+SkinThickness,mm,True,227,7.0,99.0
+Insulin,uU/mL,True,374,14.0,846.0
+BMI,kg/m2,True,11,18.2,67.1
+DiabetesPedigreeFunction,score,False,0,0.078,2.42
+Age,years,False,0,21.0,81.0

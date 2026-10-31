@@ -1,0 +1,36 @@
+{
+  "format_version": 1,
+  "model_version": "pima-mlp-chapter6-v1",
+  "q_seed": 11,
+  "q_shape": [
+    32,
+    5
+  ],
+  "inference_core_sha256": "9f5b39fd89eae0cafbd7fd075d1ad1e01bfaf16e5e7e491cd621a9e699e435ac",
+  "digest_format": "normalized-text-v1",
+  "source": "reports/chapter6/artifacts",
+  "packages": {
+    "numpy": "2.5.1",
+    "pandas": "3.0.5",
+    "scikit-learn": "1.9.0",
+    "torch": "2.14.1+cpu",
+    "matplotlib": "3.11.1",
+    "networkx": "3.6.1",
+    "joblib": "1.5.3"
+  },
+  "thresholds": {
+    "TF-IDF": 0.25,
+    "LSA": 0.35,
+    "Hybrid": 0.25
+  },
+  "files": {
+    "diabetes/pima_mlp_state.pt": "2d6778ca749bb996aaa264137f050253d32a280d9903cc1eebb9e2ee181ae165",
+    "diabetes/pima_model_metadata.json": "0d1b34e77b7a7ba09217d2b6767116e65870e2ae294c75bf3d07e8b24c292138",
+    "diabetes/pima_preprocessor.joblib": "a99bcfd938dc5d3c041167c1b34023c037abf7e74ce358f645216ccd60e376a3",
+    "agents/examples.json": "01def46ced4a709326ec60452c3245669c18a9732e40dfdb050403b4a735623a",
+    "agents/knowledge_documents.json": "32abd1682d9ba5d017b71f194f5e0e27d350b141dca7a42ee5bbe6c039ab548c",
+    "agents/knowledge_graph.json": "1c39e14f10599c6a90356319a29e8a998351069c23de7359173948021ab2a328",
+    "agents/knowledge_index.joblib": "d89fece977c14a1c937868362c3aa5ff522ff8d14ee744539666e7a412af196c",
+    "agents/q_table.npy": "de016c5eaeba42ee7be0e4d283d12f1ffc42ecfbc147e3d71d0dd1fef0e914e0"
+  }
+}

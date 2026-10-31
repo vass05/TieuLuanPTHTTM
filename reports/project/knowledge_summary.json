@@ -1,0 +1,308 @@
+{
+  "statistics": {
+    "nodes": 573,
+    "relations": 485,
+    "clinical_entities": 195,
+    "clinical_relations": 140,
+    "aliases": 299,
+    "documents": 42,
+    "sources": 37
+  },
+  "note": "Nodes include distinct concepts, query aliases, source pages and documents; aliases are not clinical entities.",
+  "documents": [
+    {
+      "doc_id": "D01",
+      "title": "Bệnh tiểu đường là gì?",
+      "publisher": "NIDDK / NIH",
+      "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/what-is-diabetes",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "D02",
+      "title": "Triệu chứng và nguyên nhân",
+      "publisher": "NIDDK / NIH",
+      "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/symptoms-causes",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "D03",
+      "title": "Xét nghiệm và chẩn đoán",
+      "publisher": "NIDDK / NIH",
+      "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/tests-diagnosis",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "D04",
+      "title": "Theo dõi A1C và kế hoạch chăm sóc",
+      "publisher": "NIDDK / NIH",
+      "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/managing-diabetes",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "D05",
+      "title": "Lựa chọn thực phẩm",
+      "publisher": "NIDDK / NIH",
+      "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/healthy-living-with-diabetes",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "D06",
+      "title": "Vận động và lối sống",
+      "publisher": "NIDDK / NIH",
+      "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/healthy-living-with-diabetes",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "D07",
+      "title": "Phòng ngừa tiểu đường tuýp 2",
+      "publisher": "NIDDK / NIH",
+      "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/preventing-type-2-diabetes",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "D08",
+      "title": "Thông tin về hạ đường huyết",
+      "publisher": "NIDDK / NIH",
+      "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/preventing-problems/low-blood-glucose-hypoglycemia",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "D09",
+      "title": "Xét nghiệm theo dõi thận",
+      "publisher": "NIDDK / NIH",
+      "source_url": "https://www.niddk.nih.gov/health-information/kidney-disease/chronic-kidney-disease-ckd/tests-diagnosis",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "D10",
+      "title": "Thuốc và trao đổi với đội ngũ chăm sóc",
+      "publisher": "NIDDK / NIH",
+      "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/insulin-medicines-treatments",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K01",
+      "title": "Tiểu đường tuýp 2 là gì?",
+      "publisher": "NIDDK / NIH",
+      "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/what-is-diabetes/type-2-diabetes",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K02",
+      "title": "Tiểu đường tuýp 1 và sự khác biệt với tuýp 2",
+      "publisher": "NIDDK / NIH",
+      "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/what-is-diabetes/type-1-diabetes",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K03",
+      "title": "Tiền tiểu đường và kháng insulin",
+      "publisher": "NIDDK / NIH",
+      "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/what-is-diabetes/prediabetes-insulin-resistance",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K04",
+      "title": "Tiểu đường thai kỳ",
+      "publisher": "NIDDK / NIH",
+      "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/what-is-diabetes/gestational/definition-facts",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K05",
+      "title": "Người tiểu đường có uống rượu bia được không?",
+      "publisher": "MedlinePlus / NIH",
+      "source_url": "https://www.medlineplus.gov/ency/patientinstructions/000968.htm",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K06",
+      "title": "Nước cam, nước ép, mật ong và đồ uống ngọt",
+      "publisher": "CDC",
+      "source_url": "https://www.cdc.gov/diabetes/healthy-eating/choosing-healthy-carbs.html",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K07",
+      "title": "Cơm, bún, phở và carbohydrate",
+      "publisher": "CDC",
+      "source_url": "https://www.cdc.gov/diabetes/healthy-eating/choosing-healthy-carbs.html",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K08",
+      "title": "Trái cây, sữa, đậu và lựa chọn thực phẩm",
+      "publisher": "ADA",
+      "source_url": "https://diabetes.org/food-nutrition/food-and-blood-sugar/diabetes-superstar-foods",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K09",
+      "title": "Chăm sóc bàn chân và vết thương",
+      "publisher": "NIDDK / NIH",
+      "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/preventing-problems/foot-problems",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K10",
+      "title": "Biến chứng mắt và khám võng mạc",
+      "publisher": "NIDDK / NIH",
+      "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/preventing-problems/diabetic-eye-disease",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K11",
+      "title": "Tê bì, đau chân và thần kinh do tiểu đường",
+      "publisher": "NIDDK / NIH",
+      "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/preventing-problems/nerve-damage-diabetic-neuropathies",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K12",
+      "title": "Tim mạch, huyết áp và mỡ máu",
+      "publisher": "NIDDK / NIH",
+      "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/preventing-problems/heart-disease-stroke",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K13",
+      "title": "Sức khỏe răng miệng",
+      "publisher": "NIDDK / NIH",
+      "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/preventing-problems/gum-disease-dental-problems",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K14",
+      "title": "Máy đo đường huyết và cảm biến CGM",
+      "publisher": "NIDDK / NIH",
+      "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/managing-diabetes/continuous-glucose-monitoring",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K15",
+      "title": "Khi sốt, cảm cúm hoặc bị ốm",
+      "publisher": "CDC",
+      "source_url": "https://www.cdc.gov/diabetes/living-with/managing-sick-days.html",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K16",
+      "title": "Nhiễm toan ceton và dấu hiệu nguy hiểm",
+      "publisher": "CDC",
+      "source_url": "https://www.cdc.gov/diabetes/about/diabetic-ketoacidosis.html",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K17",
+      "title": "Du lịch và mang thuốc khi đi xa",
+      "publisher": "CDC",
+      "source_url": "https://www.cdc.gov/diabetes/about/tips-for-traveling-with-diabetes.html",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K18",
+      "title": "Căng thẳng và sức khỏe tinh thần",
+      "publisher": "CDC",
+      "source_url": "https://www.cdc.gov/diabetes/living-with/mental-health.html",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K19",
+      "title": "Nắng nóng và bảo quản dụng cụ",
+      "publisher": "CDC",
+      "source_url": "https://www.cdc.gov/diabetes/articles/managing-diabetes-in-the-heat.html",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K20",
+      "title": "Các nhóm thuốc và vai trò insulin",
+      "publisher": "NIDDK / NIH",
+      "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/insulin-medicines-treatments",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K21",
+      "title": "Giấc ngủ và làm ca đêm",
+      "publisher": "CDC",
+      "source_url": "https://www.cdc.gov/diabetes/articles/diabetes-shift-work.html",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K22",
+      "title": "Thực phẩm chức năng và thảo dược",
+      "publisher": "ADA",
+      "source_url": "https://diabetes.org/food-nutrition/diabetes-vitamins-supplements",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K23",
+      "title": "Sinh lý và bàng quang",
+      "publisher": "NIDDK / NIH",
+      "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/preventing-problems/sexual-bladder-problems",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K24",
+      "title": "Bảo vệ thận khi mắc tiểu đường",
+      "publisher": "NIDDK / NIH",
+      "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/preventing-problems/diabetic-kidney-disease",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K25",
+      "title": "Chia đĩa ăn và lập thực đơn",
+      "publisher": "CDC",
+      "source_url": "https://www.cdc.gov/diabetes/healthy-eating/diabetes-meal-planning.html",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K26",
+      "title": "Đếm carbohydrate và đọc nhãn thực phẩm",
+      "publisher": "CDC",
+      "source_url": "https://www.cdc.gov/diabetes/healthy-eating/carb-counting-manage-blood-sugar.html",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K27",
+      "title": "Bắt đầu vận động an toàn",
+      "publisher": "CDC",
+      "source_url": "https://www.cdc.gov/diabetes/living-with/physical-activity.html",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K28",
+      "title": "Các ngưỡng xét nghiệm và đơn vị đường huyết",
+      "publisher": "NIDDK / NIH",
+      "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/tests-diagnosis",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K29",
+      "title": "Tiểu đường có chữa khỏi hay thuyên giảm được không?",
+      "publisher": "NIDDK / NIH",
+      "source_url": "https://www.niddk.nih.gov/health-information/professionals/diabetes-discoveries-practice/achieving-type-2-diabetes-remission-through-weight-loss",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K30",
+      "title": "Di truyền và nguyên nhân mắc bệnh",
+      "publisher": "NIDDK / NIH",
+      "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/symptoms-causes",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K31",
+      "title": "Metformin dùng để làm gì?",
+      "publisher": "NHS",
+      "source_url": "https://www.nhs.uk/medicines/metformin/",
+      "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "K32",
+      "title": "Tiểu đường có lây không?",
+      "publisher": "Public Health Agency of Canada",
+      "source_url": "https://www.canada.ca/en/public-health/services/diseases/diabetes.html",
+      "reviewed_on": "2026-10-31"
+    }
+  ]
+}

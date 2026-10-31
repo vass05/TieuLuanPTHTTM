@@ -1,0 +1,144 @@
+{
+  "figures": [
+    {
+      "file": "figures/hinh_6_1.png",
+      "caption": "Hình 6.1. Chu trình hoạt động khép kín của AI Agent",
+      "section": "6.1.1",
+      "page": "150"
+    },
+    {
+      "file": "figures/hinh_6_2.png",
+      "caption": "Hình 6.2. Tương tác Agent–MDP; reward vận hành, không phải kết quả điều trị",
+      "section": "6.2.2",
+      "page": "154"
+    },
+    {
+      "file": "figures/hinh_6_3.png",
+      "caption": "Hình 6.3. Vòng lặp ReAct ở mức thao tác và quan sát; chưa triển khai LLM reasoning",
+      "section": "6.2.4",
+      "page": "156–157"
+    },
+    {
+      "file": "figures/hinh_6_4.png",
+      "caption": "Hình 6.4. Mô hình tập trung, phân cấp và cộng tác",
+      "section": "6.2.5",
+      "page": "157–158"
+    },
+    {
+      "file": "figures/hinh_6_5.png",
+      "caption": "Hình 6.5. Kiến trúc Multi-Agent thực nghiệm; API/Web là phần triển khai sau",
+      "section": "6.3.2",
+      "page": "159–160"
+    },
+    {
+      "file": "figures/hinh_6_6.png",
+      "caption": "Hình 6.6. Truy xuất lai cục bộ và kiểm chứng nguồn; không dùng Neo4j/LLM trong lần chạy này",
+      "section": "6.4.2",
+      "page": "165–166"
+    },
+    {
+      "file": "figures/hinh_6_7.png",
+      "caption": "Hình 6.7. Huấn luyện Q-learning và đánh giá không cập nhật Q",
+      "section": "6.5.5",
+      "page": "170–171"
+    },
+    {
+      "file": "figures/hinh_6_8.png",
+      "caption": "Hình 6.8. Reward trung bình trượt 200 episode, trung bình ±1 SD qua 5 seed",
+      "section": "6.7.1",
+      "page": "178"
+    },
+    {
+      "file": "figures/hinh_6_9.png",
+      "caption": "Hình 6.9. Reward và Task Success Rate của các chính sách; sai số giữa 5 seed",
+      "section": "6.7.2",
+      "page": "178"
+    },
+    {
+      "file": "figures/hinh_6_10.png",
+      "caption": "Hình 6.10. Ma trận nhầm lẫn của MLP đại diện chọn theo validation",
+      "section": "6.7.3",
+      "page": "178"
+    },
+    {
+      "file": "figures/hinh_6_11.png",
+      "caption": "Hình 6.11. ROC-AUC của ba mô hình đại diện, chọn seed theo validation",
+      "section": "6.7.4",
+      "page": "178"
+    },
+    {
+      "file": "figures/hinh_6_12.png",
+      "caption": "Hình 6.12. Độ trễ thực đo ở nhóm A; gồm công cụ, Safety và overhead điều phối",
+      "section": "6.7.5",
+      "page": "179"
+    },
+    {
+      "file": "figures/hinh_6_13.png",
+      "caption": "Hình 6.13. Độ nhạy α và epsilon decay trên validation mô phỏng, cùng ngân sách",
+      "section": "6.7.6",
+      "page": "179"
+    }
+  ],
+  "tables": [
+    {
+      "file": "tables/bang_6_01_du_lieu.csv",
+      "caption": "Bảng 6.1. Đặc trưng và dữ liệu thiếu của Pima",
+      "section": "6.4.1",
+      "page": "163–164"
+    },
+    {
+      "file": "tables/bang_6_02_chia_tap.csv",
+      "caption": "Bảng 6.2. Chia tập độc lập",
+      "section": "6.6.1",
+      "page": "171–172"
+    },
+    {
+      "file": "tables/bang_6_03_phan_loai.csv",
+      "caption": "Bảng 6.3. Phân loại trên test: trung bình và độ lệch chuẩn qua 5 seed",
+      "section": "6.6.2",
+      "page": "172–174"
+    },
+    {
+      "file": "tables/bang_6_04_truy_xuat.csv",
+      "caption": "Bảng 6.4. Truy xuất trên 20 câu hỏi có bằng chứng và 4 câu ngoài miền",
+      "section": "6.6.3",
+      "page": "174"
+    },
+    {
+      "file": "tables/bang_6_05_nguong_validation.csv",
+      "caption": "Bảng 6.5. Chọn ngưỡng truy xuất trên validation (10 câu có bằng chứng, 2 câu ngoài miền)",
+      "section": "6.4.2",
+      "page": "165–166"
+    },
+    {
+      "file": "tables/bang_6_06_chinh_sach.csv",
+      "caption": "Bảng 6.6. Đối sánh chính sách trên cùng 600 kịch bản test, 5 seed",
+      "section": "6.6.4",
+      "page": "175–176"
+    },
+    {
+      "file": "tables/bang_6_07_do_nhay.csv",
+      "caption": "Bảng 6.7. Độ nhạy siêu tham số trên validation mô phỏng",
+      "section": "6.7.6",
+      "page": "179"
+    },
+    {
+      "file": "tables/bang_6_08_kich_ban.csv",
+      "caption": "Bảng 6.8. Kịch bản chức năng A–F: 60 trường hợp cho mỗi chính sách",
+      "section": "6.6.5",
+      "page": "176–177"
+    },
+    {
+      "file": "tables/bang_6_09_ablation.csv",
+      "caption": "Bảng 6.9. Ablation theo phạm vi và chỉ số phù hợp với từng thành phần",
+      "section": "6.6.6",
+      "page": "177"
+    },
+    {
+      "file": "tables/bang_6_10_do_tre.csv",
+      "caption": "Bảng 6.10. Phân rã độ trễ thực đo (ms), môi trường CPU cục bộ",
+      "section": "6.7.5",
+      "page": "179"
+    }
+  ]
+}

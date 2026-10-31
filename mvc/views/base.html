@@ -25,10 +25,13 @@
             <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
                 <div class="d-flex align-items-center">
                     <span class="brand-badge"><i class="fa-solid fa-brain me-1"></i>AI</span>
-                    <a href="{{ url_for('timeseries.index') }}" class="brand-title">Hệ Thống Thông Minh AI</a>
+                    <a href="{{ url_for('agents.index') }}" class="brand-title">Hệ Thống Thông Minh AI</a>
                 </div>
                 
                 <div class="d-flex align-items-center gap-2 flex-wrap">
+                    <a href="{{ url_for('agents.index') }}" class="nav-pill-custom {% if active_tab == 'agents' %}active{% endif %}">
+                        <i class="fa-solid fa-comments me-1"></i> Trợ lý tiểu đường
+                    </a>
                     <a href="{{ url_for('timeseries.index') }}" class="nav-pill-custom {% if active_tab == 'market' %}active{% endif %}">
                         <i class="fa-solid fa-chart-line me-1"></i> Dự Báo Thị Trường
                     </a>
@@ -39,7 +42,7 @@
                         <i class="fa-solid fa-shirt me-1"></i> Thị Giác AI (SE-CNN)
                     </a>
                     <a href="{{ url_for('rag.index') }}" class="nav-pill-custom {% if active_tab == 'rag' %}active{% endif %}">
-                        <i class="fa-solid fa-project-diagram me-1"></i> Tri Thức RAG (Neo4j)
+                        <i class="fa-solid fa-project-diagram me-1"></i> Trợ Lý RAG
                     </a>
                 </div>
             </div>

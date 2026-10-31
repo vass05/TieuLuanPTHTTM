@@ -1,0 +1,12 @@
+{
+  "http_status": 200,
+  "outcome": "ANSWERED",
+  "demo": true,
+  "score": 0.13142792880535126,
+  "threshold": 0.38000000000000006,
+  "source_ids": [
+    "D03"
+  ],
+  "model_called": true,
+  "tool_calls": 2
+}

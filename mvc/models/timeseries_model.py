@@ -11,6 +11,7 @@ import numpy as np
 import pandas as pd
 import joblib
 from datetime import datetime, timedelta
+from mvc.models.model_errors import ModelUnavailableError
 
 # TensorFlow / Keras (safe import)
 try:
@@ -55,7 +56,7 @@ class TimeSeriesModel:
         if symbol.upper() == "AEP":
             csv_path = os.path.join(self.data_dir, "AEP_hourly.csv")
             if not os.path.exists(csv_path):
-                return self._generate_fallback_data(symbol, limit)
+                raise ModelUnavailableError('Chưa có dữ liệu lịch sử AEP_hourly.csv.')
             df = pd.read_csv(csv_path)
             df['Date'] = pd.to_datetime(df['Datetime'])
             df = df.sort_values('Date').reset_index(drop=True)
@@ -67,7 +68,7 @@ class TimeSeriesModel:
         else:
             csv_path = os.path.join(self.data_dir, "AMZN.csv")
             if not os.path.exists(csv_path):
-                return self._generate_fallback_data(symbol, limit)
+                raise ModelUnavailableError('Chưa có dữ liệu lịch sử AMZN.csv.')
             df = pd.read_csv(csv_path)
             df['Date'] = pd.to_datetime(df['Date'])
             df = df.sort_values('Date').reset_index(drop=True)
@@ -92,6 +93,8 @@ class TimeSeriesModel:
         Dự báo tương lai đa bước (Multi-step autoregressive forecast)
         với cửa sổ trượt 30 phiên.
         """
+        if self.lstm_model is None or self.scaler is None:
+            raise ModelUnavailableError('Mô hình chuỗi thời gian chưa sẵn sàng. Cần TensorFlow, trọng số LSTM và bộ chuẩn hóa.')
         if len(history_prices) < 30:
             raise ValueError("Cần tối thiểu 30 giá trị lịch sử gần nhất để khởi tạo cửa sổ trượt.")
         
@@ -109,11 +112,7 @@ class TimeSeriesModel:
         # Vòng lặp dự báo cuốn chiếu đa bước
         for _ in range(steps):
             inp = np.array(current_window[-30:], dtype=np.float32).reshape(1, 30, 1)
-            if self.lstm_model is not None:
-                next_val = float(self.lstm_model.predict(inp, verbose=0)[0, 0])
-            else:
-                # Fallback baseline nếu mô hình chưa sẵn sàng
-                next_val = current_window[-1] * (1.0 + np.random.normal(0.001, 0.005))
+            next_val = float(self.lstm_model.predict(inp, verbose=0)[0, 0])
                 
             predicted_scaled.append(next_val)
             current_window.append(next_val)
@@ -172,14 +171,3 @@ class TimeSeriesModel:
                 future_dates.append(curr.strftime("%Y-%m-%d"))
         return future_dates
 
-    def _generate_fallback_data(self, symbol, limit):
-        """Sinh chuỗi dữ liệu dự phòng chuẩn mực"""
-        now = datetime.now()
-        dates = [(now - timedelta(days=limit - i)).strftime("%Y-%m-%d") for i in range(limit)]
-        base = 180.0 if symbol == "AMZN" else 330.0
-        prices = [round(base + np.sin(i * 0.2) * 10 + i * 0.3, 2) for i in range(limit)]
-        return {
-            "dates": dates, "prices": prices, "unit": "USD",
-            "symbol": symbol.upper(), "company_name": f"{symbol} Stock",
-            "last_date": dates[-1], "last_price": prices[-1]
-        }

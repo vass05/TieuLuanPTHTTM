@@ -1,0 +1,6002 @@
+[
+  {
+    "case_id": "test_900001_00000",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00001",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00002",
+    "state": [
+      1,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00003",
+    "state": [
+      1,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00004",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00005",
+    "state": [
+      1,
+      0,
+      0,
+      1
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00006",
+    "state": [
+      1,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00007",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00008",
+    "state": [
+      1,
+      0,
+      0,
+      1
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00009",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00010",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00011",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00012",
+    "state": [
+      1,
+      0,
+      0,
+      1
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00013",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00014",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00015",
+    "state": [
+      0,
+      0,
+      0,
+      1
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00016",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00017",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00018",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00019",
+    "state": [
+      1,
+      1,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00020",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00021",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00022",
+    "state": [
+      1,
+      2,
+      0,
+      1
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00023",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00024",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00025",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00026",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00027",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00028",
+    "state": [
+      1,
+      0,
+      0,
+      1
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00029",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00030",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00031",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00032",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00033",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00034",
+    "state": [
+      1,
+      0,
+      0,
+      1
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00035",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00036",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00037",
+    "state": [
+      0,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00038",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00039",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00040",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00041",
+    "state": [
+      1,
+      1,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00042",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00043",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00044",
+    "state": [
+      1,
+      1,
+      1,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00045",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00046",
+    "state": [
+      0,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00047",
+    "state": [
+      1,
+      0,
+      0,
+      1
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00048",
+    "state": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00049",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00050",
+    "state": [
+      1,
+      1,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00051",
+    "state": [
+      1,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00052",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00053",
+    "state": [
+      1,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00054",
+    "state": [
+      1,
+      1,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00055",
+    "state": [
+      1,
+      1,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00056",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00057",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00058",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00059",
+    "state": [
+      1,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00060",
+    "state": [
+      1,
+      1,
+      1,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00061",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00062",
+    "state": [
+      1,
+      0,
+      0,
+      1
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00063",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00064",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00065",
+    "state": [
+      1,
+      1,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00066",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00067",
+    "state": [
+      1,
+      2,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00068",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00069",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00070",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00071",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00072",
+    "state": [
+      1,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00073",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00074",
+    "state": [
+      1,
+      0,
+      1,
+      1
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00075",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00076",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00077",
+    "state": [
+      1,
+      2,
+      1,
+      1
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00078",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00079",
+    "state": [
+      1,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00080",
+    "state": [
+      1,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00081",
+    "state": [
+      1,
+      1,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00082",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00083",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00084",
+    "state": [
+      1,
+      1,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00085",
+    "state": [
+      1,
+      1,
+      1,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00086",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00087",
+    "state": [
+      1,
+      1,
+      0,
+      1
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00088",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00089",
+    "state": [
+      1,
+      2,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00090",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00091",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00092",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00093",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00094",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00095",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00096",
+    "state": [
+      0,
+      0,
+      0,
+      1
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00097",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00098",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00099",
+    "state": [
+      0,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00100",
+    "state": [
+      1,
+      1,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00101",
+    "state": [
+      1,
+      1,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00102",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00103",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00104",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00105",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00106",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00107",
+    "state": [
+      1,
+      3,
+      0,
+      1
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00108",
+    "state": [
+      1,
+      2,
+      1,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00109",
+    "state": [
+      1,
+      1,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00110",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00111",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00112",
+    "state": [
+      1,
+      3,
+      0,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00113",
+    "state": [
+      1,
+      3,
+      0,
+      1
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00114",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00115",
+    "state": [
+      1,
+      0,
+      0,
+      1
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00116",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00117",
+    "state": [
+      1,
+      1,
+      1,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00118",
+    "state": [
+      1,
+      2,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00119",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00120",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00121",
+    "state": [
+      1,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00122",
+    "state": [
+      1,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00123",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00124",
+    "state": [
+      1,
+      3,
+      0,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00125",
+    "state": [
+      1,
+      2,
+      0,
+      1
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00126",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00127",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00128",
+    "state": [
+      0,
+      0,
+      1,
+      1
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00129",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00130",
+    "state": [
+      1,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00131",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00132",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00133",
+    "state": [
+      1,
+      0,
+      0,
+      1
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00134",
+    "state": [
+      1,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00135",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00136",
+    "state": [
+      1,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00137",
+    "state": [
+      1,
+      0,
+      0,
+      1
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00138",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00139",
+    "state": [
+      0,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00140",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00141",
+    "state": [
+      1,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00142",
+    "state": [
+      1,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00143",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00144",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00145",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00146",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00147",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00148",
+    "state": [
+      1,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00149",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00150",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00151",
+    "state": [
+      0,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00152",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00153",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00154",
+    "state": [
+      1,
+      1,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00155",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00156",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00157",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00158",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00159",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00160",
+    "state": [
+      1,
+      2,
+      1,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00161",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00162",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00163",
+    "state": [
+      1,
+      0,
+      0,
+      1
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00164",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00165",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00166",
+    "state": [
+      1,
+      0,
+      0,
+      1
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00167",
+    "state": [
+      1,
+      0,
+      1,
+      1
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00168",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00169",
+    "state": [
+      1,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00170",
+    "state": [
+      0,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00171",
+    "state": [
+      0,
+      0,
+      0,
+      1
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00172",
+    "state": [
+      1,
+      1,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00173",
+    "state": [
+      1,
+      0,
+      0,
+      1
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00174",
+    "state": [
+      1,
+      1,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00175",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00176",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00177",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00178",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00179",
+    "state": [
+      1,
+      2,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00180",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00181",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00182",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00183",
+    "state": [
+      1,
+      2,
+      1,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00184",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00185",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00186",
+    "state": [
+      1,
+      3,
+      0,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00187",
+    "state": [
+      1,
+      3,
+      1,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00188",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00189",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00190",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00191",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00192",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00193",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00194",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00195",
+    "state": [
+      1,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00196",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00197",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00198",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00199",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00200",
+    "state": [
+      1,
+      1,
+      0,
+      1
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00201",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00202",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00203",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00204",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00205",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00206",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00207",
+    "state": [
+      0,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00208",
+    "state": [
+      1,
+      1,
+      0,
+      1
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00209",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00210",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00211",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00212",
+    "state": [
+      1,
+      1,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00213",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00214",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00215",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00216",
+    "state": [
+      1,
+      1,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00217",
+    "state": [
+      1,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00218",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00219",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00220",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00221",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00222",
+    "state": [
+      1,
+      0,
+      0,
+      1
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00223",
+    "state": [
+      0,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00224",
+    "state": [
+      0,
+      0,
+      0,
+      1
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00225",
+    "state": [
+      1,
+      0,
+      0,
+      1
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00226",
+    "state": [
+      1,
+      3,
+      0,
+      1
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00227",
+    "state": [
+      1,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00228",
+    "state": [
+      1,
+      3,
+      0,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00229",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00230",
+    "state": [
+      0,
+      0,
+      0,
+      1
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00231",
+    "state": [
+      1,
+      0,
+      0,
+      1
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00232",
+    "state": [
+      1,
+      0,
+      0,
+      1
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00233",
+    "state": [
+      1,
+      0,
+      0,
+      1
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00234",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00235",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00236",
+    "state": [
+      1,
+      1,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00237",
+    "state": [
+      1,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00238",
+    "state": [
+      1,
+      0,
+      1,
+      1
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00239",
+    "state": [
+      0,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00240",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00241",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00242",
+    "state": [
+      1,
+      0,
+      1,
+      1
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00243",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00244",
+    "state": [
+      1,
+      0,
+      0,
+      1
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00245",
+    "state": [
+      1,
+      1,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00246",
+    "state": [
+      1,
+      3,
+      0,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00247",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00248",
+    "state": [
+      1,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00249",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00250",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00251",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00252",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00253",
+    "state": [
+      1,
+      0,
+      0,
+      1
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00254",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00255",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00256",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00257",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00258",
+    "state": [
+      0,
+      0,
+      0,
+      1
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00259",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00260",
+    "state": [
+      1,
+      0,
+      0,
+      1
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00261",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00262",
+    "state": [
+      1,
+      0,
+      1,
+      1
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00263",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00264",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00265",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00266",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00267",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00268",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00269",
+    "state": [
+      1,
+      1,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00270",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00271",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00272",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00273",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00274",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00275",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00276",
+    "state": [
+      0,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00277",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00278",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00279",
+    "state": [
+      1,
+      2,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00280",
+    "state": [
+      1,
+      0,
+      1,
+      1
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00281",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00282",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00283",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00284",
+    "state": [
+      1,
+      2,
+      1,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00285",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00286",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00287",
+    "state": [
+      0,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00288",
+    "state": [
+      1,
+      0,
+      0,
+      1
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00289",
+    "state": [
+      0,
+      0,
+      1,
+      1
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00290",
+    "state": [
+      1,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00291",
+    "state": [
+      1,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00292",
+    "state": [
+      1,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00293",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00294",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00295",
+    "state": [
+      1,
+      1,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00296",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00297",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00298",
+    "state": [
+      1,
+      1,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00299",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00300",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00301",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00302",
+    "state": [
+      1,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00303",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00304",
+    "state": [
+      0,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00305",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00306",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00307",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00308",
+    "state": [
+      1,
+      1,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00309",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00310",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00311",
+    "state": [
+      1,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00312",
+    "state": [
+      1,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00313",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00314",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00315",
+    "state": [
+      1,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00316",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00317",
+    "state": [
+      1,
+      1,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00318",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00319",
+    "state": [
+      1,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00320",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00321",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00322",
+    "state": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00323",
+    "state": [
+      1,
+      0,
+      0,
+      1
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00324",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00325",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00326",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00327",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00328",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00329",
+    "state": [
+      1,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00330",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00331",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00332",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00333",
+    "state": [
+      1,
+      0,
+      0,
+      1
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00334",
+    "state": [
+      1,
+      0,
+      0,
+      1
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00335",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00336",
+    "state": [
+      0,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00337",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00338",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00339",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00340",
+    "state": [
+      1,
+      1,
+      1,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00341",
+    "state": [
+      0,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00342",
+    "state": [
+      1,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00343",
+    "state": [
+      1,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00344",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00345",
+    "state": [
+      1,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00346",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00347",
+    "state": [
+      1,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00348",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00349",
+    "state": [
+      1,
+      2,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00350",
+    "state": [
+      1,
+      0,
+      0,
+      1
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00351",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00352",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00353",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00354",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00355",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00356",
+    "state": [
+      1,
+      0,
+      0,
+      1
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00357",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00358",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00359",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00360",
+    "state": [
+      1,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00361",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00362",
+    "state": [
+      1,
+      0,
+      0,
+      1
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00363",
+    "state": [
+      1,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00364",
+    "state": [
+      1,
+      1,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00365",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00366",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00367",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00368",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00369",
+    "state": [
+      1,
+      1,
+      1,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00370",
+    "state": [
+      1,
+      1,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00371",
+    "state": [
+      1,
+      0,
+      0,
+      1
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00372",
+    "state": [
+      1,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00373",
+    "state": [
+      0,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00374",
+    "state": [
+      1,
+      1,
+      1,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00375",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00376",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00377",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00378",
+    "state": [
+      1,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00379",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00380",
+    "state": [
+      1,
+      0,
+      1,
+      1
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00381",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00382",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00383",
+    "state": [
+      1,
+      2,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00384",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00385",
+    "state": [
+      0,
+      0,
+      1,
+      1
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00386",
+    "state": [
+      1,
+      0,
+      1,
+      1
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00387",
+    "state": [
+      1,
+      0,
+      1,
+      1
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00388",
+    "state": [
+      1,
+      0,
+      0,
+      1
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00389",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00390",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00391",
+    "state": [
+      1,
+      1,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00392",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00393",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00394",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00395",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00396",
+    "state": [
+      0,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00397",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00398",
+    "state": [
+      1,
+      1,
+      1,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00399",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00400",
+    "state": [
+      1,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00401",
+    "state": [
+      1,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00402",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00403",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00404",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00405",
+    "state": [
+      1,
+      3,
+      0,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00406",
+    "state": [
+      1,
+      0,
+      0,
+      1
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00407",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00408",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00409",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00410",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00411",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00412",
+    "state": [
+      1,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00413",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00414",
+    "state": [
+      1,
+      0,
+      0,
+      1
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00415",
+    "state": [
+      1,
+      1,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00416",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00417",
+    "state": [
+      1,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00418",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00419",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00420",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00421",
+    "state": [
+      1,
+      3,
+      1,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00422",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00423",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00424",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00425",
+    "state": [
+      1,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00426",
+    "state": [
+      1,
+      0,
+      0,
+      1
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00427",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00428",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00429",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00430",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00431",
+    "state": [
+      1,
+      2,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00432",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00433",
+    "state": [
+      1,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00434",
+    "state": [
+      1,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00435",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00436",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00437",
+    "state": [
+      1,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00438",
+    "state": [
+      0,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00439",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00440",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00441",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00442",
+    "state": [
+      1,
+      1,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00443",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00444",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00445",
+    "state": [
+      1,
+      1,
+      0,
+      1
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00446",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00447",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00448",
+    "state": [
+      1,
+      3,
+      0,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00449",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00450",
+    "state": [
+      1,
+      1,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00451",
+    "state": [
+      1,
+      1,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00452",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00453",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00454",
+    "state": [
+      1,
+      0,
+      1,
+      1
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00455",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00456",
+    "state": [
+      1,
+      3,
+      0,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00457",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00458",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00459",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00460",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00461",
+    "state": [
+      1,
+      1,
+      1,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00462",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00463",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00464",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00465",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00466",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00467",
+    "state": [
+      0,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00468",
+    "state": [
+      1,
+      1,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00469",
+    "state": [
+      1,
+      0,
+      0,
+      1
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00470",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00471",
+    "state": [
+      0,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00472",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00473",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00474",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00475",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00476",
+    "state": [
+      1,
+      2,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00477",
+    "state": [
+      1,
+      0,
+      0,
+      1
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00478",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00479",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00480",
+    "state": [
+      1,
+      1,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00481",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00482",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00483",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00484",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00485",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00486",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00487",
+    "state": [
+      1,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00488",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00489",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00490",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00491",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00492",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00493",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00494",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00495",
+    "state": [
+      0,
+      0,
+      0,
+      1
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00496",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00497",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00498",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00499",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00500",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00501",
+    "state": [
+      1,
+      0,
+      0,
+      1
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00502",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00503",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00504",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00505",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00506",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00507",
+    "state": [
+      0,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00508",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00509",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00510",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00511",
+    "state": [
+      1,
+      0,
+      1,
+      1
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00512",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00513",
+    "state": [
+      1,
+      1,
+      1,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00514",
+    "state": [
+      0,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00515",
+    "state": [
+      0,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00516",
+    "state": [
+      1,
+      2,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00517",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00518",
+    "state": [
+      1,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00519",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00520",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00521",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00522",
+    "state": [
+      1,
+      3,
+      0,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00523",
+    "state": [
+      0,
+      0,
+      1,
+      1
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00524",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00525",
+    "state": [
+      0,
+      0,
+      0,
+      1
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00526",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00527",
+    "state": [
+      1,
+      3,
+      0,
+      1
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00528",
+    "state": [
+      0,
+      0,
+      1,
+      1
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00529",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00530",
+    "state": [
+      1,
+      0,
+      0,
+      1
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00531",
+    "state": [
+      1,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00532",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00533",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00534",
+    "state": [
+      1,
+      3,
+      0,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00535",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00536",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00537",
+    "state": [
+      1,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00538",
+    "state": [
+      0,
+      0,
+      0,
+      1
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00539",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00540",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00541",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00542",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00543",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00544",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00545",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00546",
+    "state": [
+      1,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00547",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00548",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00549",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00550",
+    "state": [
+      1,
+      2,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00551",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00552",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00553",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00554",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00555",
+    "state": [
+      1,
+      1,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00556",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00557",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00558",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00559",
+    "state": [
+      1,
+      2,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00560",
+    "state": [
+      1,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00561",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00562",
+    "state": [
+      1,
+      3,
+      1,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00563",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00564",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00565",
+    "state": [
+      1,
+      1,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00566",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00567",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00568",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00569",
+    "state": [
+      1,
+      1,
+      0,
+      1
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00570",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00571",
+    "state": [
+      1,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00572",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00573",
+    "state": [
+      1,
+      1,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00574",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00575",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00576",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00577",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00578",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00579",
+    "state": [
+      1,
+      0,
+      1,
+      1
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00580",
+    "state": [
+      1,
+      1,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00581",
+    "state": [
+      1,
+      0,
+      0,
+      1
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00582",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00583",
+    "state": [
+      1,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00584",
+    "state": [
+      1,
+      1,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00585",
+    "state": [
+      1,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00586",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00587",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00588",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00589",
+    "state": [
+      1,
+      1,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00590",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00591",
+    "state": [
+      1,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00592",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00593",
+    "state": [
+      1,
+      0,
+      1,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00594",
+    "state": [
+      1,
+      3,
+      0,
+      0
+    ],
+    "prediction_bucket": 3
+  },
+  {
+    "case_id": "test_900001_00595",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00596",
+    "state": [
+      1,
+      1,
+      1,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00597",
+    "state": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 1
+  },
+  {
+    "case_id": "test_900001_00598",
+    "state": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "prediction_bucket": 2
+  },
+  {
+    "case_id": "test_900001_00599",
+    "state": [
+      1,
+      0,
+      0,
+      1
+    ],
+    "prediction_bucket": 1
+  }
+]

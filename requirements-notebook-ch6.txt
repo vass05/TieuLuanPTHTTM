@@ -1,0 +1,11 @@
+# Only the independent Chapter 6 experiment. Existing project requirements are unchanged.
+numpy>=1.24,<3
+pandas>=2,<4
+scikit-learn>=1.3,<2
+torch>=2,<3
+matplotlib>=3.7,<4
+networkx>=3,<4
+joblib>=1.3,<2
+nbformat>=5.9,<6
+nbclient>=0.9,<1
+ipykernel>=6,<8

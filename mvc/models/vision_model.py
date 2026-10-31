@@ -10,6 +10,7 @@ import io
 import base64
 import numpy as np
 from PIL import Image, ImageOps
+from mvc.models.model_errors import ModelUnavailableError
 try:
     import tensorflow as tf
 except ImportError:
@@ -50,6 +51,8 @@ class VisionModel:
         Nhận diện ảnh sản phẩm thời trang.
         image_input có thể là chuỗi Base64 hoặc bytes nhị phân.
         """
+        if self.model is None:
+            raise ModelUnavailableError('Mô hình thị giác chưa sẵn sàng. Cần TensorFlow và trọng số Fashion-MNIST.')
         if isinstance(image_input, str):
             if "," in image_input:
                 image_input = image_input.split(",")[1]
@@ -70,11 +73,7 @@ class VisionModel:
         img_arr = np.array(img_resized, dtype=np.float32) / 255.0
         img_tensor = img_arr.reshape(1, 28, 28, 1)
 
-        if self.model is not None:
-            probs = self.model.predict(img_tensor, verbose=0)[0]
-        else:
-            # Giả lập xác suất ngẫu nhiên nếu mô hình chưa sẵn sàng
-            probs = np.random.dirichlet(np.ones(10))
+        probs = self.model.predict(img_tensor, verbose=0)[0]
 
         top_indices = np.argsort(probs)[::-1]
         top1_idx = int(top_indices[0])

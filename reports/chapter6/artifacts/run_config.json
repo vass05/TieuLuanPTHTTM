@@ -1,0 +1,37 @@
+{
+  "split_seed": 42,
+  "model_seeds": [
+    11,
+    23,
+    37,
+    53,
+    71
+  ],
+  "mlp_epochs": 250,
+  "mlp_patience": 25,
+  "mlp_lr": 0.001,
+  "batch_size": 64,
+  "rl_episodes": 6000,
+  "rl_max_steps": 12,
+  "rl_alpha": 0.15,
+  "rl_gamma": 0.95,
+  "rl_epsilon_decay": 0.995,
+  "rl_epsilon_min": 0.03,
+  "rl_eval_episodes": 600,
+  "sensitivity_episodes": 2500,
+  "sensitivity_seeds": [
+    11,
+    23,
+    37
+  ],
+  "sensitivity_alpha": [
+    0.05,
+    0.15,
+    0.4
+  ],
+  "sensitivity_decay": [
+    0.97,
+    0.995,
+    0.999
+  ]
+}

@@ -15,3 +15,6 @@ DATA/mnist_train.csv
 .env
 *.env
 
+# Local session signing key and research task history
+instance/
+

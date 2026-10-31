@@ -1,0 +1,15 @@
+{
+  "http_status": 200,
+  "outcome": "ANSWERED",
+  "sources": [
+    "K05"
+  ],
+  "assisted_blocks": 3,
+  "local_blocks": 1,
+  "synthesis_events": [
+    {
+      "status": "COMPLETED",
+      "duration_ms": 1704.9307999986922
+    }
+  ]
+}

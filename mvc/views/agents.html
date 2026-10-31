@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% block title %}Trợ lý tiểu đường · Hỏi đáp có nguồn{% endblock %}
+{% block extra_head %}<link rel="stylesheet" href="{{ url_for('static', filename='css/agents.css') }}">{% endblock %}
+{% block content %}
+<div class="assistant-page" id="agentsApp" data-csrf="{{ csrf_token }}">
+    <header class="assistant-banner custom-card">
+        <div class="assistant-brand"><span class="assistant-brand-icon"><i class="fa-solid fa-comments" aria-hidden="true"></i></span><div><h1>Trợ lý tiểu đường</h1><p>Hỏi đáp có nguồn · Theo dõi cách AI lựa chọn công cụ và kiểm chứng thông tin</p></div></div>
+        <div class="assistant-banner-actions"><span class="assistant-status" id="serviceBadge" role="status">Đang kết nối…</span><button type="button" class="assistant-button" id="newConversation"><i class="fa-solid fa-plus" aria-hidden="true"></i> Cuộc trò chuyện mới</button></div>
+    </header>
+    <div class="assistant-workspace" id="assistantWorkspace">
+        <div id="paneResize" class="assistant-resizer" role="separator" tabindex="0" aria-label="Điều chỉnh độ rộng chatbot" aria-orientation="vertical" aria-valuemin="30" aria-valuemax="70" aria-valuenow="55" aria-controls="chatPanel" title="Kéo hoặc dùng phím mũi tên để đổi độ rộng; nhấp đúp để đặt lại"><span></span></div>
+        <section class="assistant-card orchestration-panel" aria-labelledby="orchestrationTitle">
+            <div class="assistant-card-header"><div class="assistant-heading"><span class="assistant-heading-icon"><i class="fa-solid fa-diagram-project" aria-hidden="true"></i></span><div><h2 id="orchestrationTitle">Luồng điều phối AI</h2><p>Công cụ được chọn theo nội dung câu hỏi</p></div></div><span class="assistant-small-badge" id="runState">Chờ tin nhắn</span></div>
+            <div class="orchestration-content">
+                <div class="orchestration-graph" aria-label="Sơ đồ điều phối và kiểm chứng">
+                    <svg viewBox="0 0 620 405" role="img" aria-labelledby="flowDiagramTitle">
+                        <title id="flowDiagramTitle">Luồng xử lý thực tế của tin nhắn đang chọn</title>
+                        <defs><marker id="flowArrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="#cbd5e1"/></marker><marker id="flowArrowActive" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="#2563eb"/></marker></defs>
+                        <g class="flow-edges"><path id="edge-input" d="M310 58 V85"/><path id="edge-rag" d="M310 143 V163 H110 V185"/><path id="edge-graph" d="M310 143 V185"/><path id="edge-model" d="M310 143 V163 H510 V185"/><path id="edge-rag-check" d="M110 245 V268 H310 V289"/><path id="edge-graph-check" d="M310 245 V289"/><path id="edge-model-check" d="M510 245 V268 H310 V289"/><path id="edge-response" d="M310 339 V361"/></g>
+                        <g class="flow-node" id="flow-input"><rect x="225" y="10" width="170" height="48" rx="10"/><text x="310" y="39" class="flow-node-title">Tin nhắn của bạn</text></g>
+                        <g class="flow-node" id="flow-coordinator"><rect x="191" y="85" width="238" height="58" rx="11"/><text x="310" y="109" class="flow-node-title">Bộ điều phối</text><text x="310" y="128" class="flow-node-caption">Hiểu yêu cầu · Chọn công cụ</text></g>
+                        <g class="flow-node" id="flow-rag"><rect x="25" y="185" width="170" height="60" rx="10"/><text x="110" y="209" class="flow-node-title">Truy xuất RAG</text><text x="110" y="230" class="flow-node-caption">Tài liệu có nguồn</text></g>
+                        <g class="flow-node" id="flow-graph"><rect x="225" y="185" width="170" height="60" rx="10"/><text x="310" y="209" class="flow-node-title">Đồ thị tri thức</text><text x="310" y="230" class="flow-node-caption">Thực thể · Quan hệ</text></g>
+                        <g class="flow-node" id="flow-model"><rect x="425" y="185" width="170" height="60" rx="10"/><text x="510" y="209" class="flow-node-title">Mô hình dự đoán</text><text x="510" y="230" class="flow-node-caption">Chỉ gọi khi cần</text></g>
+                        <g class="flow-node" id="flow-safety"><rect x="198" y="289" width="224" height="50" rx="10"/><text x="310" y="319" class="flow-node-title">Kiểm chứng &amp; kiểm tra phạm vi</text></g>
+                        <g class="flow-node" id="flow-response"><rect x="225" y="361" width="170" height="36" rx="9"/><text x="310" y="384" class="flow-node-title">Phản hồi cho bạn</text></g>
+                    </svg>
+                    <div class="flow-legend"><span><i class="legend-dot active"></i>Đã thực thi</span><span><i class="legend-dot"></i>Chưa cần gọi</span><span>Hiển thị sau mỗi phản hồi</span></div>
+                </div>
+                <div class="orchestration-explanation" id="planReason">Gửi một tin nhắn để xem công cụ nào được chọn và lý do lựa chọn.</div>
+                <div class="orchestration-plan"><div class="assistant-subheading"><h3>Kế hoạch xử lý</h3><span id="contextBadge" class="assistant-small-badge" hidden>Có dùng ngữ cảnh</span></div><ol id="planSteps"><li class="plan-placeholder">Chưa có yêu cầu đang chọn.</li></ol></div>
+                <p id="knowledgeStats" class="knowledge-stats"></p>
+                <div class="orchestration-tools" id="toolSummary"><span data-tool="rag">RAG <b>Chưa gọi</b></span><span data-tool="graph">Đồ thị <b>Chưa gọi</b></span><span data-tool="model">Dự đoán <b>Chưa cần</b></span></div>
+                <details class="orchestration-trace"><summary>Nhật ký thực thi <span id="traceCount">0 sự kiện</span></summary><ol id="executionTrace"><li>Nhật ký xuất hiện khi yêu cầu được xử lý.</li></ol></details>
+            </div>
+            <div class="orchestration-footer"><span id="latencyMetric">Thời gian: —</span><span id="callsMetric">Công cụ: —</span><span id="sourcesMetric">Nguồn: —</span></div>
+        </section>
+        <section class="assistant-card chat-panel" aria-labelledby="chatTitle" id="chatPanel">
+            <div class="assistant-card-header"><div class="assistant-heading"><span class="assistant-heading-icon"><i class="fa-solid fa-stethoscope" aria-hidden="true"></i></span><div><h2 id="chatTitle">Chatbot hỗ trợ tiểu đường</h2><p>Đặt câu hỏi bằng ngôn ngữ tự nhiên</p></div></div><span class="assistant-small-badge" id="chatStatus">Sẵn sàng</span></div>
+            <div class="chat-history-toolbar"><label for="conversationSelect">Lịch sử</label><select id="conversationSelect" aria-label="Mở lại cuộc trò chuyện"><option value="">Cuộc trò chuyện mới</option></select><button type="button" id="clearHistory" class="assistant-icon-button" title="Xóa lịch sử trò chuyện của phiên này" aria-label="Xóa lịch sử trò chuyện" disabled><i class="fa-regular fa-trash-can" aria-hidden="true"></i></button></div>
+            <div class="chat-messages" id="chatMessages" role="log" aria-live="polite" aria-relevant="additions text"></div>
+            <div class="chat-quick-prompts" id="suggestedQueries" aria-label="Câu hỏi gợi ý"></div>
+            <form class="chat-composer" id="chatForm">
+                <label class="assistant-visually-hidden" for="chatInput">Tin nhắn cho trợ lý</label>
+                <textarea id="chatInput" rows="2" maxlength="2000" placeholder="Nhập câu hỏi về tiểu đường…" autocomplete="off" required></textarea>
+                <button type="submit" id="sendMessage" class="assistant-send" disabled aria-label="Gửi tin nhắn"><i class="fa-solid fa-paper-plane" aria-hidden="true"></i><span>Gửi</span></button>
+            </form>
+            <div id="chatError" class="chat-error" role="alert" hidden></div>
+            <p class="chat-disclaimer">Thông tin tham khảo có nguồn, hỗ trợ tìm hiểu; việc chẩn đoán và điều trị cần nhân viên y tế.</p>
+        </section>
+    </div>
+</div>
+{% endblock %}
+{% block extra_scripts %}<script src="{{ url_for('static', filename='js/agents.js') }}" defer></script>{% endblock %}

@@ -1,0 +1,25 @@
+{
+  "dataset": "Pima Indians Diabetes",
+  "canonical_dataset": "https://www.openml.org/d/37",
+  "download_url": "https://raw.githubusercontent.com/plotly/datasets/master/diabetes.csv",
+  "distributor": "Plotly public mirror",
+  "retrieved_at_utc": "2026-10-31T08:45:59.942387+00:00",
+  "rows": 768,
+  "features": [
+    "Pregnancies",
+    "Glucose",
+    "BloodPressure",
+    "SkinThickness",
+    "Insulin",
+    "BMI",
+    "DiabetesPedigreeFunction",
+    "Age"
+  ],
+  "target": "Outcome",
+  "class_counts": {
+    "0": 500,
+    "1": 268
+  },
+  "sha256": "123ce738f394095a201da0f65c5e174cdcb19cdf5ec1535aee65e2b0e1e2aae2",
+  "limitations": "Historical cohort of women aged at least 21 of Pima Indian heritage; research classification only; not a validated clinical diagnostic model."
+}

@@ -1,0 +1,68 @@
+[
+  {
+    "id": "pima-1",
+    "name": "Mẫu nghiên cứu 1",
+    "profile": {
+      "Pregnancies": 10.0,
+      "Glucose": 68.0,
+      "BloodPressure": 106.0,
+      "SkinThickness": 23.0,
+      "Insulin": 49.0,
+      "BMI": 35.5,
+      "DiabetesPedigreeFunction": 0.285,
+      "Age": 47.0
+    },
+    "query": "A1C cho biết điều gì trong kế hoạch chăm sóc?",
+    "expected_prediction": {
+      "score": 0.13142792880535126,
+      "label": 0,
+      "threshold": 0.38000000000000006,
+      "model_version": "pima-mlp-chapter6-v1",
+      "scope": "research_cohort"
+    }
+  },
+  {
+    "id": "pima-2",
+    "name": "Mẫu nghiên cứu 2",
+    "profile": {
+      "Pregnancies": 2.0,
+      "Glucose": 122.0,
+      "BloodPressure": 76.0,
+      "SkinThickness": 27.0,
+      "Insulin": 200.0,
+      "BMI": 35.9,
+      "DiabetesPedigreeFunction": 0.483,
+      "Age": 26.0
+    },
+    "query": "A1C cho biết điều gì trong kế hoạch chăm sóc?",
+    "expected_prediction": {
+      "score": 0.27889060974121094,
+      "label": 0,
+      "threshold": 0.38000000000000006,
+      "model_version": "pima-mlp-chapter6-v1",
+      "scope": "research_cohort"
+    }
+  },
+  {
+    "id": "pima-3",
+    "name": "Mẫu nghiên cứu 3",
+    "profile": {
+      "Pregnancies": 3.0,
+      "Glucose": 100.0,
+      "BloodPressure": 68.0,
+      "SkinThickness": 23.0,
+      "Insulin": 81.0,
+      "BMI": 31.6,
+      "DiabetesPedigreeFunction": 0.949,
+      "Age": 28.0
+    },
+    "query": "A1C cho biết điều gì trong kế hoạch chăm sóc?",
+    "expected_prediction": {
+      "score": 0.2086118906736374,
+      "label": 0,
+      "threshold": 0.38000000000000006,
+      "model_version": "pima-mlp-chapter6-v1",
+      "scope": "research_cohort"
+    }
+  }
+]

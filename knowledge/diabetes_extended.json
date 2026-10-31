@@ -1,0 +1,231 @@
+{
+  "format_version": 1,
+  "reviewed_on": "2026-10-31",
+  "description": "Vietnamese educational paraphrases of the linked public health pages. Facts are curated; aliases support retrieval and are not clinical entities.",
+  "documents": [
+    {
+      "doc_id": "K01", "topic": "type2", "title": "Tiểu đường tuýp 2 là gì?",
+      "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/what-is-diabetes/type-2-diabetes",
+      "aliases": ["tuýp 2", "type 2", "típ 2", "loại 2", "typ 2", "tuyp2", "đề kháng insulin", "kháng insulin"],
+      "summary_vi": "Tiểu đường tuýp 2 là tình trạng đường huyết cao vì cơ thể sử dụng insulin kém hiệu quả hoặc không tạo đủ insulin. Insulin giúp glucose vào tế bào để tạo năng lượng. Khi quá trình này bị rối loạn, glucose tích tụ trong máu.\nBệnh thường gặp ở người trưởng thành nhưng trẻ em cũng có thể mắc. Kiểm soát bệnh phối hợp ăn uống, vận động, quản lý cân nặng, theo dõi và thuốc khi được chỉ định. Cần xét nghiệm để xác định bệnh; không thể kết luận chỉ qua triệu chứng.",
+      "facts": [["Tiểu đường tuýp 2","có đặc điểm","Đề kháng insulin"],["Tiểu đường tuýp 2","có thể kèm","Thiếu insulin tương đối"],["Insulin","giúp tế bào sử dụng","Glucose"],["Tiểu đường tuýp 2","cần xác định bằng","Xét nghiệm đường huyết"]]
+    },
+    {
+      "doc_id": "K02", "topic": "type1", "title": "Tiểu đường tuýp 1 và sự khác biệt với tuýp 2",
+      "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/what-is-diabetes/type-1-diabetes",
+      "aliases": ["tuýp 1", "type 1", "típ 1", "loại 1", "tuyp1", "tự miễn", "phân biệt hai loại", "khác nhau giữa"],
+      "summary_vi": "Tiểu đường tuýp 1 xảy ra khi hệ miễn dịch phá hủy các tế bào tạo insulin của tụy, khiến cơ thể tạo rất ít hoặc không còn insulin. Người mắc thường cần insulin hằng ngày để sống và kiểm soát đường huyết.\nKhác với cơ chế đề kháng insulin thường gặp ở tuýp 2, tuýp 1 có cơ chế tự miễn. Chế độ ăn và vận động hỗ trợ chăm sóc nhưng không thay thế insulin đã được kê. Bác sĩ có thể cần thêm xét nghiệm để phân biệt loại bệnh.",
+      "facts": [["Tiểu đường tuýp 1","có cơ chế","Tự miễn"],["Tự miễn","phá hủy","Tế bào beta tụy"],["Tế bào beta tụy","sản xuất","Insulin"],["Tiểu đường tuýp 1","thường cần","Insulin hằng ngày"]]
+    },
+    {
+      "doc_id": "K03", "topic": "prediabetes", "title": "Tiền tiểu đường và kháng insulin",
+      "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/what-is-diabetes/prediabetes-insulin-resistance",
+      "aliases": ["tiền tiểu đường", "tiền đái tháo đường", "prediabetes", "kháng insulin là gì", "nguy cơ thành tiểu đường"],
+      "summary_vi": "Tiền tiểu đường nghĩa là đường huyết cao hơn bình thường nhưng chưa đến mức chẩn đoán tiểu đường tuýp 2. Kháng insulin là tình trạng cơ thể đáp ứng với insulin kém hơn bình thường.\nTiền tiểu đường làm tăng nguy cơ mắc tuýp 2, nhưng không phải ai cũng tiến triển thành bệnh. Ăn uống phù hợp, hoạt động thể chất và quản lý cân nặng cùng đội ngũ y tế có thể giúp giảm nguy cơ. Nhiều người không có triệu chứng rõ nên cần xét nghiệm và theo dõi.",
+      "facts": [["Tiền tiểu đường","tăng nguy cơ","Tiểu đường tuýp 2"],["Kháng insulin","làm giảm","Đáp ứng với insulin"],["Tiền tiểu đường","có thể không có","Triệu chứng rõ rệt"],["Hoạt động thể chất","hỗ trợ giảm nguy cơ","Tiểu đường tuýp 2"]]
+    },
+    {
+      "doc_id": "K04", "topic": "pregnancy", "title": "Tiểu đường thai kỳ",
+      "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/what-is-diabetes/gestational/definition-facts",
+      "aliases": ["thai kỳ", "mang thai", "bầu", "24 tuần", "28 tuần", "sau sinh", "ảnh hưởng em bé"],
+      "summary_vi": "Tiểu đường thai kỳ là tiểu đường xuất hiện trong thời gian mang thai, thường được phát hiện khoảng tuần 24–28. Đường huyết cao có thể ảnh hưởng mẹ và bé, như em bé quá lớn hoặc bị hạ đường huyết sau sinh.\nViệc theo dõi và kiểm soát đường huyết cần phối hợp với đội ngũ sản khoa và chuyên khoa tiểu đường. Không áp dụng máy móc chế độ ăn hoặc thuốc của người khác cho thai phụ.",
+      "facts": [["Tiểu đường thai kỳ","xuất hiện trong","Mang thai"],["Tiểu đường thai kỳ","thường phát hiện ở","Tuần thai 24–28"],["Đường huyết cao khi mang thai","tăng nguy cơ","Thai lớn"],["Tiểu đường thai kỳ","cần phối hợp","Chăm sóc sản khoa"]]
+    },
+    {
+      "doc_id": "K05", "topic": "alcohol", "title": "Người tiểu đường có uống rượu bia được không?",
+      "source_url": "https://www.medlineplus.gov/ency/patientinstructions/000968.htm",
+      "aliases": ["rượu", "rưởu", "rựu", "bia", "đồ uống có cồn", "alcohol", "uống cồn", "rượu vang", "nhậu"],
+      "summary_vi": "Người tiểu đường cần thận trọng với rượu bia; không thể khẳng định ai cũng uống được an toàn. Rượu có thể làm đường huyết tăng hoặc giảm và tương tác với thuốc. Nguy cơ hạ đường huyết đáng chú ý khi dùng insulin hoặc một số thuốc tiểu đường, nhất là uống lúc đói; nguy cơ có thể kéo dài nhiều giờ sau uống.\nHãy hỏi bác sĩ dựa trên thuốc đang dùng, mức kiểm soát đường huyết và bệnh kèm. Nếu được phép uống, không uống lúc đói và cần kế hoạch theo dõi đường huyết. Không coi biểu hiện lú lẫn hoặc buồn ngủ sau uống chỉ là say rượu.",
+      "facts": [["Rượu bia","có thể gây","Hạ đường huyết"],["Rượu bia","có thể tương tác với","Thuốc tiểu đường"],["Uống rượu lúc đói","làm tăng nguy cơ","Hạ đường huyết"],["Insulin","làm tăng nguy cơ hạ đường huyết khi dùng cùng","Rượu bia"]]
+    },
+    {
+      "doc_id": "K06", "topic": "juice", "title": "Nước cam, nước ép, mật ong và đồ uống ngọt",
+      "source_url": "https://www.cdc.gov/diabetes/healthy-eating/choosing-healthy-carbs.html",
+      "aliases": ["nước cam", "nước ép", "ép trái cây", "nước mía", "mật ong", "trà sữa", "nước ngọt", "nước trái cây", "đường tự nhiên"],
+      "summary_vi": "Nước cam và các nước ép vẫn có đường; không thêm đường không có nghĩa là không làm tăng đường huyết. Nước ép, mật ong và siro là nguồn carbohydrate đơn có thể làm đường huyết tăng nhanh. Hạn chế đồ uống ngọt trong chế độ ăn thường ngày, chú ý lượng carbohydrate và khẩu phần.\nTrái cây nguyên quả có chất xơ và dưỡng chất. Việc chọn đồ uống cần tính cả lượng uống và kế hoạch ăn của bạn.",
+      "facts": [["Nước ép trái cây","cung cấp","Carbohydrate đơn"],["Mật ong","cung cấp","Carbohydrate đơn"],["Carbohydrate đơn","có thể làm tăng nhanh","Đường huyết"],["Trái cây nguyên quả","cung cấp","Chất xơ"]]
+    },
+    {
+      "doc_id": "K07", "topic": "rice", "title": "Cơm, bún, phở và carbohydrate",
+      "source_url": "https://www.cdc.gov/diabetes/healthy-eating/choosing-healthy-carbs.html",
+      "aliases": ["cơm", "gạo", "bún", "phở", "bánh mì", "tinh bột", "carbohydrate", "carb", "yến mạch", "gạo lứt"],
+      "summary_vi": "Người tiểu đường không nhất thiết phải bỏ hết tinh bột. Cần lựa chọn nguồn carbohydrate và khẩu phần phù hợp. Gạo trắng, bánh mì trắng và ngũ cốc tinh chế có ít chất xơ hơn ngũ cốc nguyên hạt.\nKhi ăn cơm hoặc món tinh bột, hãy tính lượng carbohydrate của cả bữa. Không có một khẩu phần chung phù hợp cho tất cả mọi người.",
+      "facts": [["Gạo trắng","thuộc nhóm","Ngũ cốc tinh chế"],["Ngũ cốc nguyên hạt","cung cấp","Chất xơ"],["Kiểm soát carbohydrate","cần chú ý","Khẩu phần"],["Chế độ ăn tiểu đường","có thể bao gồm","Carbohydrate"]]
+    },
+    {
+      "doc_id": "K08", "topic": "fruit", "title": "Trái cây, sữa, đậu và lựa chọn thực phẩm",
+      "source_url": "https://diabetes.org/food-nutrition/food-and-blood-sugar/diabetes-superstar-foods",
+      "aliases": ["trái cây", "hoa quả", "cam", "bưởi", "chuối", "xoài", "sầu riêng", "sữa", "sữa chua", "các loại hạt", "đậu", "cá"],
+      "summary_vi": "Trái cây có thể là một phần của chế độ ăn cho người tiểu đường; vẫn cần tính khẩu phần và carbohydrate. ADA gợi ý nhóm thực phẩm giàu dưỡng chất như rau lá xanh, đậu, cá, các loại hạt, quả mọng, trái cây họ cam quýt, ngũ cốc nguyên hạt, sữa và sữa chua ít béo.\nMột thực phẩm được gọi là “siêu thực phẩm” không có nghĩa là chữa được tiểu đường. Lựa chọn cần phù hợp tổng thể bữa ăn và bệnh kèm; không suy ra rằng có thể ăn không giới hạn.",
+      "facts": [["Trái cây","cần kiểm soát","Khẩu phần"],["Rau lá xanh","thuộc nhóm","Rau ít tinh bột"],["Đậu","thuộc nhóm","Thực phẩm giàu dưỡng chất"],["Cá","cung cấp","Protein"],["Siêu thực phẩm","không đồng nghĩa với","Thuốc chữa tiểu đường"]]
+    },
+    {
+      "doc_id": "K09", "topic": "feet", "title": "Chăm sóc bàn chân và vết thương",
+      "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/preventing-problems/foot-problems",
+      "aliases": ["bàn chân", "loét chân", "vết thương", "chậm lành", "giày dép", "đi chân đất", "cắt móng", "nhiễm trùng chân"],
+      "summary_vi": "Tiểu đường có thể gây tổn thương thần kinh và giảm tuần hoàn ở chân, khiến vết thương khó lành hoặc khó được nhận ra. Kiểm tra bàn chân mỗi ngày, giữ sạch và khô, mang giày vừa chân và tránh đi chân đất.\nNếu có vết loét, sưng đỏ, nhiễm trùng hoặc vết thương không lành, cần liên hệ nhân viên y tế sớm. Không tự xử lý chai chân bằng hóa chất hoặc cắt sâu vào da.",
+      "facts": [["Tiểu đường","có thể gây","Giảm tuần hoàn chân"],["Tổn thương thần kinh","có thể gây","Mất cảm giác bàn chân"],["Giảm tuần hoàn chân","làm chậm","Lành vết thương"],["Chăm sóc bàn chân","bao gồm","Kiểm tra hằng ngày"]]
+    },
+    {
+      "doc_id": "K10", "topic": "eyes", "title": "Biến chứng mắt và khám võng mạc",
+      "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/preventing-problems/diabetic-eye-disease",
+      "aliases": ["mắt", "võng mạc", "mờ mắt", "thị lực", "mù", "đục thủy tinh thể", "glaucoma", "khám đáy mắt"],
+      "summary_vi": "Bệnh mắt do tiểu đường có thể gồm bệnh võng mạc, phù hoàng điểm, đục thủy tinh thể và tăng nhãn áp. Tổn thương ban đầu có thể chưa gây triệu chứng, vì vậy không nên chờ nhìn mờ mới khám.\nKhám mắt có giãn đồng tử giúp phát hiện sớm. Kiểm soát đường huyết, huyết áp và cholesterol hỗ trợ bảo vệ mắt; lịch khám cụ thể cần trao đổi với bác sĩ mắt.",
+      "facts": [["Bệnh mắt do tiểu đường","bao gồm","Bệnh võng mạc"],["Bệnh mắt do tiểu đường","bao gồm","Phù hoàng điểm"],["Bệnh mắt do tiểu đường","bao gồm","Đục thủy tinh thể"],["Khám mắt giãn đồng tử","giúp phát hiện","Bệnh mắt do tiểu đường"]]
+    },
+    {
+      "doc_id": "K11", "topic": "nerves", "title": "Tê bì, đau chân và thần kinh do tiểu đường",
+      "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/preventing-problems/nerve-damage-diabetic-neuropathies",
+      "aliases": ["tê chân", "tê tay", "tê bì", "đau rát", "thần kinh", "mất cảm giác", "châm chích", "neuropathy"],
+      "summary_vi": "Tổn thương thần kinh do tiểu đường có thể gây đau, tê hoặc mất cảm giác ở chân và tay. Tổn thương thần kinh tự chủ còn có thể ảnh hưởng tiêu hóa, bàng quang, nhịp tim và khả năng nhận biết hạ đường huyết.\nCác triệu chứng này cũng có thể do nguyên nhân khác. Cần thăm khám để xác định và chọn cách xử lý; kiểm soát đường huyết là một phần chăm sóc lâu dài.",
+      "facts": [["Bệnh thần kinh ngoại biên","có thể gây","Tê bì chân tay"],["Bệnh thần kinh ngoại biên","có thể gây","Đau rát"],["Bệnh thần kinh tự chủ","có thể ảnh hưởng","Tiêu hóa"],["Bệnh thần kinh tự chủ","có thể gây","Giảm nhận biết hạ đường huyết"]]
+    },
+    {
+      "doc_id": "K12", "topic": "heart", "title": "Tim mạch, huyết áp và mỡ máu",
+      "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/preventing-problems/heart-disease-stroke",
+      "aliases": ["tim mạch", "đột quỵ", "huyết áp", "mỡ máu", "cholesterol", "nhồi máu", "hút thuốc", "thuốc lá"],
+      "summary_vi": "Tiểu đường làm tăng nguy cơ bệnh tim mạch và đột quỵ. Đường huyết cao có thể làm tổn thương mạch máu; huyết áp cao, cholesterol bất lợi và hút thuốc làm nguy cơ tăng thêm.\nChăm sóc cần phối hợp kiểm soát đường huyết, huyết áp, mỡ máu, vận động và hỗ trợ bỏ thuốc lá. Mục tiêu và thuốc bảo vệ tim mạch phải được cá thể hóa cùng bác sĩ.",
+      "facts": [["Tiểu đường","tăng nguy cơ","Bệnh tim mạch"],["Tiểu đường","tăng nguy cơ","Đột quỵ"],["Hút thuốc lá","tăng nguy cơ","Bệnh tim mạch"],["Huyết áp cao","làm tăng","Nguy cơ tim mạch"]]
+    },
+    {
+      "doc_id": "K13", "topic": "dental", "title": "Sức khỏe răng miệng",
+      "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/preventing-problems/gum-disease-dental-problems",
+      "aliases": ["răng", "lợi", "nướu", "nha chu", "chảy máu chân răng", "khô miệng", "nha sĩ", "răng miệng"],
+      "summary_vi": "Tiểu đường làm tăng nguy cơ vấn đề răng miệng, gồm bệnh nướu. Đường huyết cao có thể tạo điều kiện cho nhiễm trùng và làm chậm lành. Đánh răng, vệ sinh kẽ răng và khám nha khoa định kỳ là những phần quan trọng của chăm sóc.\nBáo cho nha sĩ biết bạn mắc tiểu đường. Nếu nướu sưng, chảy máu, đau hoặc có dấu hiệu nhiễm trùng, nên khám sớm.",
+      "facts": [["Tiểu đường","tăng nguy cơ","Bệnh nướu"],["Đường huyết cao","có thể làm chậm","Lành vết thương"],["Chăm sóc răng miệng","bao gồm","Vệ sinh kẽ răng"],["Chăm sóc răng miệng","bao gồm","Khám nha khoa"]]
+    },
+    {
+      "doc_id": "K14", "topic": "cgm", "title": "Máy đo đường huyết và cảm biến CGM",
+      "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/managing-diabetes/continuous-glucose-monitoring",
+      "aliases": ["cgm", "cảm biến", "đo liên tục", "máy đo", "dịch kẽ", "đường huyết tại nhà", "theo dõi glucose"],
+      "summary_vi": "CGM là thiết bị ước tính glucose liên tục trong ngày và đêm qua cảm biến đo dịch giữa các tế bào. Thiết bị giúp quan sát xu hướng đường huyết và có thể có cảnh báo cao hoặc thấp.\nCGM khác với phép đo đường huyết mao mạch bằng đầu ngón tay. Việc dùng dữ liệu để điều chỉnh ăn uống, vận động hoặc thuốc cần theo hướng dẫn của đội ngũ chăm sóc và hướng dẫn thiết bị.",
+      "facts": [["CGM","ước tính glucose từ","Dịch kẽ"],["CGM","giúp theo dõi","Xu hướng đường huyết"],["CGM","có thể cung cấp","Cảnh báo đường huyết"],["Đo đường huyết mao mạch","thường lấy mẫu từ","Đầu ngón tay"]]
+    },
+    {
+      "doc_id": "K15", "topic": "sickdays", "title": "Khi sốt, cảm cúm hoặc bị ốm",
+      "source_url": "https://www.cdc.gov/diabetes/living-with/managing-sick-days.html",
+      "aliases": ["sốt", "ốm", "cảm cúm", "bị bệnh", "ngày ốm", "nôn", "tiêu chảy", "không ăn được", "sick day"],
+      "summary_vi": "Khi bị ốm, hormone chống bệnh có thể làm đường huyết tăng, còn việc ăn uống kém có thể khiến kiểm soát đường huyết khó hơn. Cần chuẩn bị kế hoạch ngày ốm với bác sĩ, theo dõi đường huyết thường xuyên theo hướng dẫn và duy trì nước.\nLiên hệ cơ sở y tế nếu không giữ được nước, có ketone, khó thở hoặc triệu chứng nặng. Không tự thay đổi thuốc chỉ theo lời tư vấn chung trên chatbot.",
+      "facts": [["Ngày ốm","có thể làm tăng","Đường huyết"],["Kế hoạch ngày ốm","bao gồm","Theo dõi đường huyết"],["Không giữ được nước","cần","Đánh giá y tế"],["Ketone khi bị ốm","cần","Đánh giá y tế"]]
+    },
+    {
+      "doc_id": "K16", "topic": "dka", "title": "Nhiễm toan ceton và dấu hiệu nguy hiểm",
+      "source_url": "https://www.cdc.gov/diabetes/about/diabetic-ketoacidosis.html",
+      "aliases": ["toan ceton", "toan ketone", "ketone", "ceton", "dka", "hơi thở mùi trái cây", "thở nhanh", "đau bụng"],
+      "summary_vi": "Nhiễm toan ceton là biến chứng nguy hiểm khi cơ thể thiếu insulin và tạo quá nhiều ketone. Thường gặp ở tuýp 1 nhưng tuýp 2 cũng có thể mắc. Biểu hiện có thể gồm khát và tiểu nhiều, rồi buồn nôn, đau bụng, thở nhanh sâu hoặc hơi thở mùi trái cây.\nNếu đang có những dấu hiệu nghi ngờ này, cần được cấp cứu hoặc đánh giá y tế ngay; không chờ chatbot chẩn đoán và không tự điều chỉnh liều insulin để xử lý.",
+      "facts": [["Thiếu insulin","có thể dẫn đến","Nhiễm toan ceton"],["Nhiễm toan ceton","liên quan đến","Tích tụ ketone"],["Nhiễm toan ceton","có thể gây","Thở nhanh sâu"],["Nhiễm toan ceton","cần","Đánh giá cấp cứu"]]
+    },
+    {
+      "doc_id": "K17", "topic": "travel", "title": "Du lịch và mang thuốc khi đi xa",
+      "source_url": "https://www.cdc.gov/diabetes/about/tips-for-traveling-with-diabetes.html",
+      "aliases": ["du lịch", "đi xa", "máy bay", "múi giờ", "hành lý", "đi công tác", "đi nước ngoài"],
+      "summary_vi": "Người tiểu đường có thể đi du lịch nếu chuẩn bị trước. Mang đủ thuốc, dụng cụ đo, nguồn đường xử trí hạ đường huyết theo kế hoạch và giấy tờ cần thiết. Nên để thuốc và dụng cụ quan trọng trong hành lý xách tay.\nThay đổi múi giờ, bữa ăn và hoạt động có thể ảnh hưởng đường huyết. Trao đổi trước với bác sĩ về lịch dùng thuốc và theo dõi; bảo quản insulin tránh nóng hoặc đông lạnh.",
+      "facts": [["Du lịch với tiểu đường","cần chuẩn bị","Thuốc và dụng cụ đo"],["Thay đổi múi giờ","có thể ảnh hưởng","Lịch dùng thuốc"],["Insulin","cần tránh","Nhiệt độ quá cao"],["Du lịch với tiểu đường","cần chuẩn bị","Nguồn đường xử trí hạ đường huyết"]]
+    },
+    {
+      "doc_id": "K18", "topic": "mental", "title": "Căng thẳng và sức khỏe tinh thần",
+      "source_url": "https://www.cdc.gov/diabetes/living-with/mental-health.html",
+      "aliases": ["stress", "căng thẳng", "lo lắng", "trầm cảm", "mệt mỏi vì bệnh", "áp lực", "tinh thần", "kiệt sức"],
+      "summary_vi": "Chăm sóc tiểu đường có thể gây căng thẳng và cảm giác quá tải. Sức khỏe tinh thần và sức khỏe thể chất ảnh hưởng lẫn nhau; khó khăn tinh thần có thể làm việc tự chăm sóc trở nên khó hơn.\nHãy chia sẻ với người thân và đội ngũ y tế, chia nhỏ mục tiêu và tìm hỗ trợ tâm lý khi cần. Nếu buồn bã, lo âu hoặc mất hứng thú kéo dài, nên được đánh giá chuyên môn.",
+      "facts": [["Tiểu đường","có thể đi kèm","Căng thẳng vì bệnh"],["Sức khỏe tinh thần","ảnh hưởng","Tự chăm sóc tiểu đường"],["Căng thẳng vì bệnh","cần","Hỗ trợ từ đội ngũ y tế"],["Triệu chứng trầm cảm kéo dài","cần","Đánh giá chuyên môn"]]
+    },
+    {
+      "doc_id": "K19", "topic": "heat", "title": "Nắng nóng và bảo quản dụng cụ",
+      "source_url": "https://www.cdc.gov/diabetes/articles/managing-diabetes-in-the-heat.html",
+      "aliases": ["nắng nóng", "trời nóng", "mất nước", "bảo quản insulin", "để thuốc", "tủ lạnh", "nhiệt độ"],
+      "summary_vi": "Nắng nóng có thể khiến người tiểu đường dễ mất nước và khó kiểm soát đường huyết hơn. Uống nước phù hợp, tránh hoạt động ngoài trời vào thời điểm quá nóng và theo dõi theo kế hoạch chăm sóc.\nNhiệt cao có thể làm hỏng insulin, máy đo và bơm insulin. Không để thuốc hoặc thiết bị trong xe nóng hay dưới nắng; tuân theo hướng dẫn bảo quản của từng sản phẩm.",
+      "facts": [["Nắng nóng","tăng nguy cơ","Mất nước"],["Nhiệt độ quá cao","có thể làm hỏng","Insulin"],["Nhiệt độ quá cao","có thể làm hỏng","Máy đo đường huyết"],["Bảo quản thuốc","cần tuân theo","Hướng dẫn sản phẩm"]]
+    },
+    {
+      "doc_id": "K20", "topic": "medicine_types", "title": "Các nhóm thuốc và vai trò insulin",
+      "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/insulin-medicines-treatments",
+      "aliases": ["insulin là gì", "thuốc uống", "thuốc tiêm", "glp 1", "sglt2", "sulfonylurea", "bơm insulin", "điều trị"],
+      "summary_vi": "Thuốc điều trị tiểu đường có thể gồm insulin, thuốc uống và các thuốc tiêm khác. Tuýp 1 thường cần insulin; tuýp 2 có nhiều lựa chọn tùy tình trạng. Một số nhóm thuốc còn được cân nhắc theo sức khỏe tim, thận, cân nặng và nguy cơ hạ đường huyết.\nBác sĩ lựa chọn thuốc và liều dựa trên từng người. Không dùng đơn của người khác hoặc tự đổi liều. Hãy báo tác dụng không mong muốn và mọi thuốc, thực phẩm bổ sung đang dùng.",
+      "facts": [["Điều trị tiểu đường","có thể dùng","Insulin"],["Điều trị tiểu đường","có thể dùng","Thuốc uống"],["Lựa chọn thuốc","cần cân nhắc","Chức năng thận"],["Lựa chọn thuốc","cần cân nhắc","Nguy cơ hạ đường huyết"]]
+    },
+    {
+      "doc_id": "K21", "topic": "sleep", "title": "Giấc ngủ và làm ca đêm",
+      "source_url": "https://www.cdc.gov/diabetes/articles/diabetes-shift-work.html",
+      "aliases": ["ngủ", "thức khuya", "ca đêm", "làm ca", "thiếu ngủ", "mất ngủ", "giấc ngủ", "đảo ca"],
+      "summary_vi": "Làm ca và ngủ không đều có thể làm việc kiểm soát tiểu đường khó hơn vì ảnh hưởng nhịp sinh học, bữa ăn và vận động. Thiếu ngủ cũng liên quan đến tăng nguy cơ tuýp 2.\nCố gắng giữ lịch ngủ ổn định, chuẩn bị bữa ăn phù hợp và trao đổi với đội ngũ y tế về lịch theo dõi, dùng thuốc khi đổi ca. Không tự đổi thời điểm hay liều thuốc chỉ vì chuyển ca.",
+      "facts": [["Làm ca đêm","có thể ảnh hưởng","Nhịp sinh học"],["Làm ca đêm","có thể ảnh hưởng","Giấc ngủ"],["Thiếu ngủ","liên quan tăng nguy cơ","Tiểu đường tuýp 2"],["Đổi ca làm việc","cần chú ý","Lịch bữa ăn"]]
+    },
+    {
+      "doc_id": "K22", "topic": "supplements", "title": "Thực phẩm chức năng và thảo dược",
+      "source_url": "https://diabetes.org/food-nutrition/diabetes-vitamins-supplements",
+      "aliases": ["thực phẩm chức năng", "thảo dược", "thuốc nam", "lá cây", "quế", "mướp đắng", "khổ qua", "vitamin", "bổ sung", "dây thìa canh"],
+      "summary_vi": "Không nên xem thực phẩm chức năng, vitamin hoặc thảo dược là cách thay thế điều trị tiểu đường. ADA cho biết chưa có bằng chứng để dùng thường quy các chất bổ sung nhằm hạ đường huyết khi không có thiếu hụt nền.\nMột số người có thể cần bổ sung vì thiếu chất hoặc hoàn cảnh đặc biệt, nhưng cần được đánh giá. Trao đổi với bác sĩ hoặc dược sĩ trước khi dùng vì nguy cơ tương tác, chất lượng sản phẩm và tác dụng không mong muốn.",
+      "facts": [["Thực phẩm chức năng","không thay thế","Điều trị tiểu đường"],["Bổ sung vitamin","cần cân nhắc","Thiếu hụt dinh dưỡng"],["Thảo dược","có thể gây","Tương tác thuốc"],["Lựa chọn chất bổ sung","cần trao đổi với","Bác sĩ hoặc dược sĩ"]]
+    },
+    {
+      "doc_id": "K23", "topic": "sexual", "title": "Sinh lý và bàng quang",
+      "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/preventing-problems/sexual-bladder-problems",
+      "aliases": ["sinh lý", "rối loạn cương", "cương dương", "tình dục", "khô âm đạo", "bàng quang", "tiểu són", "tiểu không tự chủ"],
+      "summary_vi": "Tiểu đường có thể ảnh hưởng mạch máu và thần kinh liên quan đến chức năng tình dục và bàng quang. Có thể gặp rối loạn cương, khô âm đạo hoặc rối loạn đi tiểu.\nNhững vấn đề này có nhiều nguyên nhân và có thể được hỗ trợ điều trị. Nên trao đổi với bác sĩ thay vì tự dùng thuốc tăng cường sinh lý; giữ kiểm soát tiểu đường và đánh giá thuốc đang dùng là một phần chăm sóc.",
+      "facts": [["Tiểu đường","có thể ảnh hưởng","Chức năng tình dục"],["Tổn thương thần kinh tự chủ","có thể ảnh hưởng","Bàng quang"],["Rối loạn cương","cần","Đánh giá chuyên môn"],["Rối loạn đi tiểu","cần","Đánh giá nguyên nhân"]]
+    },
+    {
+      "doc_id": "K24", "topic": "kidney_damage", "title": "Bảo vệ thận khi mắc tiểu đường",
+      "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/preventing-problems/diabetic-kidney-disease",
+      "aliases": ["biến chứng thận", "hại thận", "tổn thương thận", "bảo vệ thận", "suy thận", "đạm niệu", "chạy thận"],
+      "summary_vi": "Đường huyết cao và huyết áp cao có thể làm hỏng mạch máu ở thận. Bệnh thận do tiểu đường ban đầu có thể không có triệu chứng. Xét nghiệm máu đánh giá lọc cầu thận và xét nghiệm albumin niệu giúp phát hiện.\nKiểm soát đường huyết, huyết áp và dùng thuốc theo bác sĩ hỗ trợ bảo vệ thận. Nếu chức năng thận giảm, chế độ ăn và thuốc cần được điều chỉnh riêng; không tự áp dụng thực đơn giàu đạm hoặc chất bổ sung.",
+      "facts": [["Đường huyết cao","có thể gây","Tổn thương mạch máu thận"],["Huyết áp cao","có thể gây","Tổn thương thận"],["Bệnh thận do tiểu đường","theo dõi bằng","Albumin niệu"],["Bệnh thận do tiểu đường","theo dõi bằng","Mức lọc cầu thận"]]
+    },
+    {
+      "doc_id": "K25", "topic": "plate", "title": "Chia đĩa ăn và lập thực đơn",
+      "source_url": "https://www.cdc.gov/diabetes/healthy-eating/diabetes-meal-planning.html",
+      "aliases": ["chia đĩa", "đĩa ăn", "plate method", "một bữa", "lập thực đơn", "bữa sáng", "bữa trưa", "bữa tối", "ăn ngoài"],
+      "summary_vi": "Có thể dùng phương pháp đĩa ăn làm gợi ý cân bằng: nửa đĩa là rau ít tinh bột, một phần tư là đạm nạc và một phần tư là thực phẩm chứa carbohydrate. Kèm nước hoặc đồ uống ít năng lượng phù hợp.\nĂn đều bữa và kiểm soát khẩu phần giúp tránh ăn quá nhiều. Kế hoạch thực tế cần tính đến thuốc, mục tiêu sức khỏe và sở thích; đây không phải thực đơn điều trị cá nhân cố định.",
+      "facts": [["Phương pháp đĩa ăn","dành nửa đĩa cho","Rau ít tinh bột"],["Phương pháp đĩa ăn","dành một phần tư cho","Đạm nạc"],["Phương pháp đĩa ăn","dành một phần tư cho","Thực phẩm chứa carbohydrate"],["Kế hoạch bữa ăn","cần tính đến","Thuốc đang dùng"]]
+    },
+    {
+      "doc_id": "K26", "topic": "labels", "title": "Đếm carbohydrate và đọc nhãn thực phẩm",
+      "source_url": "https://www.cdc.gov/diabetes/healthy-eating/carb-counting-manage-blood-sugar.html",
+      "aliases": ["đếm carb", "đếm carbohydrate", "nhãn", "bao bì", "không đường", "tổng carbohydrate", "serving", "khẩu phần trên nhãn"],
+      "summary_vi": "Carbohydrate gồm đường, tinh bột và chất xơ. Khi đọc nhãn, xem kích thước khẩu phần và tổng carbohydrate, không chỉ dòng đường. Lượng ghi trên nhãn thường tính cho một khẩu phần; nếu ăn nhiều khẩu phần thì lượng thực tế cũng tăng.\nNhãn “không đường” không đảm bảo thực phẩm không có carbohydrate. Nếu dùng insulin theo bữa ăn, cách đếm carbohydrate và phối hợp thuốc phải được hướng dẫn riêng.",
+      "facts": [["Carbohydrate","bao gồm","Đường"],["Carbohydrate","bao gồm","Tinh bột"],["Carbohydrate","bao gồm","Chất xơ"],["Đọc nhãn thực phẩm","cần xem","Tổng carbohydrate"],["Đọc nhãn thực phẩm","cần xem","Kích thước khẩu phần"]]
+    },
+    {
+      "doc_id": "K27", "topic": "exercise_safety", "title": "Bắt đầu vận động an toàn",
+      "source_url": "https://www.cdc.gov/diabetes/living-with/physical-activity.html",
+      "aliases": ["bắt đầu tập", "tập bao lâu", "đi bộ sau ăn", "tập gym", "bơi", "đạp xe", "tập an toàn", "chạy bộ", "150 phút"],
+      "summary_vi": "Vận động thường xuyên giúp quản lý đường huyết, cân nặng, huyết áp và sức khỏe tinh thần. Có thể bắt đầu bằng mục tiêu nhỏ như đi bộ ngắn sau bữa ăn rồi tăng dần theo khả năng. Chọn hoạt động bạn có thể duy trì.\nTrao đổi với bác sĩ nếu có biến chứng hoặc chưa quen tập. Người dùng insulin hay thuốc dễ gây hạ đường huyết cần kế hoạch theo dõi và phòng hạ đường huyết khi vận động.",
+      "facts": [["Hoạt động thể chất","hỗ trợ","Quản lý đường huyết"],["Hoạt động thể chất","hỗ trợ","Quản lý cân nặng"],["Bắt đầu vận động","nên tăng dần theo","Khả năng cá nhân"],["Vận động khi dùng insulin","cần chú ý","Hạ đường huyết"]]
+    },
+    {
+      "doc_id": "K28", "topic": "diagnostic_thresholds", "title": "Các ngưỡng xét nghiệm và đơn vị đường huyết",
+      "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/tests-diagnosis",
+      "aliases": ["bao nhiêu là tiểu đường", "ngưỡng", "126", "6 5", "mg dl", "mmol l", "đường đói", "đường huyết 7", "hba1c 6"],
+      "summary_vi": "Trong xét nghiệm chẩn đoán, các ngưỡng thường dùng cho tiểu đường gồm HbA1c từ 6,5%, glucose huyết tương lúc đói từ 126 mg/dL, hoặc glucose sau 2 giờ nghiệm pháp dung nạp từ 200 mg/dL. Đây là các xét nghiệm khác nhau, không hoán đổi thời điểm đo.\nMột số trường hợp cần xét nghiệm xác nhận; thai kỳ có quy trình riêng. Kết quả máy đo tại nhà và một con số đơn lẻ chưa đủ để chatbot chẩn đoán. Cần biết rõ đơn vị, thời điểm lấy mẫu và được nhân viên y tế đánh giá.",
+      "facts": [["Xét nghiệm HbA1c","có ngưỡng chẩn đoán tiểu đường","Từ 6,5%"],["Glucose huyết tương lúc đói","có ngưỡng chẩn đoán tiểu đường","Từ 126 mg/dL"],["Glucose sau 2 giờ OGTT","có ngưỡng chẩn đoán tiểu đường","Từ 200 mg/dL"],["Chẩn đoán tiểu đường","có thể cần","Xét nghiệm xác nhận"]]
+    },
+    {
+      "doc_id": "K29", "topic": "remission", "title": "Tiểu đường có chữa khỏi hay thuyên giảm được không?",
+      "source_url": "https://www.niddk.nih.gov/health-information/professionals/diabetes-discoveries-practice/achieving-type-2-diabetes-remission-through-weight-loss",
+      "aliases": ["chữa khỏi", "thuyên giảm", "hết bệnh", "đảo ngược", "remission", "sống được bao lâu", "giảm cân", "béo phì"],
+      "summary_vi": "Một số người tiểu đường tuýp 2 có thể đạt thuyên giảm sau giảm cân đáng kể và duy trì thay đổi lối sống, dưới giám sát y tế. Thuyên giảm không đồng nghĩa chữa khỏi vĩnh viễn: đường huyết có thể tăng lại và vẫn cần theo dõi.\nKhông phải ai giảm cân cũng đạt thuyên giảm. Không tự dừng thuốc khi thấy kết quả tốt; bác sĩ cần đánh giá tình trạng, nguy cơ và kế hoạch chăm sóc tiếp tục.",
+      "facts": [["Tiểu đường tuýp 2","có thể đạt","Thuyên giảm"],["Thuyên giảm","không đồng nghĩa với","Chữa khỏi vĩnh viễn"],["Giảm cân duy trì","có thể hỗ trợ","Thuyên giảm"],["Thuyên giảm","vẫn cần","Theo dõi lâu dài"]]
+    },
+    {
+      "doc_id": "K30", "topic": "inheritance", "title": "Di truyền và nguyên nhân mắc bệnh",
+      "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/symptoms-causes",
+      "aliases": ["di truyền", "bố mẹ", "cha mẹ", "gia đình", "nguyên nhân", "vì sao mắc", "ăn đường nhiều", "ăn ngọt", "con có bị"],
+      "summary_vi": "Nguyên nhân tiểu đường phụ thuộc loại bệnh. Tuýp 1 liên quan tự miễn cùng yếu tố gene và môi trường. Tuýp 2 liên quan kháng insulin, khả năng tạo insulin và nhiều yếu tố như gene, cân nặng, mức vận động.\nCó người thân mắc bệnh có thể làm tăng nguy cơ, nhưng không có nghĩa chắc chắn bạn sẽ mắc. Không nên quy mọi trường hợp cho việc ăn ngọt; trao đổi về nguy cơ và xét nghiệm phù hợp hữu ích hơn tự kết luận.",
+      "facts": [["Nguy cơ tiểu đường","chịu ảnh hưởng của","Yếu tố di truyền"],["Tiểu đường tuýp 1","liên quan đến","Yếu tố môi trường"],["Tiểu đường tuýp 2","liên quan đến","Kháng insulin"],["Tiền sử gia đình","không đồng nghĩa với","Chắc chắn mắc bệnh"]]
+    },
+    {
+      "doc_id": "K31", "topic": "metformin", "title": "Metformin dùng để làm gì?",
+      "source_url": "https://www.nhs.uk/medicines/metformin/",
+      "aliases": ["metformin", "glucophage", "metformin tác dụng", "thuốc metformin", "uống metformin", "metformin tiêu chảy"],
+      "summary_vi": "Metformin là thuốc kê đơn được dùng để điều trị tiểu đường tuýp 2 và trong một số tình huống khác theo bác sĩ. Thuốc hỗ trợ kiểm soát đường huyết và cần được theo dõi trong quá trình điều trị.\nTác dụng không mong muốn thường gặp có thể là khó chịu tiêu hóa, buồn nôn hoặc tiêu chảy. Hỏi bác sĩ hoặc dược sĩ nếu có tác dụng phụ; không tự thay đổi liều hay tự dùng khi chưa được kê, đặc biệt nếu có vấn đề về thận.",
+      "facts": [["Metformin","được dùng trong","Tiểu đường tuýp 2"],["Metformin","có thể gây","Tác dụng phụ tiêu hóa"],["Metformin","là","Thuốc kê đơn"],["Sử dụng metformin","cần xem xét","Chức năng thận"]]
+    },
+    {
+      "doc_id": "K32", "topic": "contagion", "title": "Tiểu đường có lây không?",
+      "source_url": "https://www.canada.ca/en/public-health/services/diseases/diabetes.html",
+      "aliases": ["lây", "truyền nhiễm", "ăn chung", "tiếp xúc", "hôn", "sống chung", "lây qua"],
+      "summary_vi": "Tiểu đường không phải bệnh truyền nhiễm, nên không lây do ăn chung, tiếp xúc hoặc sống chung. Bệnh xảy ra khi cơ thể không tạo đủ insulin hoặc không sử dụng insulin hiệu quả.\nCác loại tiểu đường có nguyên nhân khác nhau. Gia đình có nhiều người mắc bệnh có thể liên quan nguy cơ chung hoặc yếu tố di truyền, không phải vì bệnh lây từ người này sang người khác.",
+      "facts": [["Tiểu đường","thuộc nhóm","Bệnh không lây nhiễm"],["Ăn chung","không làm lây","Tiểu đường"],["Tiếp xúc thông thường","không làm lây","Tiểu đường"],["Các loại tiểu đường","có thể khác nhau về","Nguyên nhân"]]
+    }
+  ]
+}

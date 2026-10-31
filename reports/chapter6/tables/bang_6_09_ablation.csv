@@ -1,0 +1,6 @@
+﻿configuration,evaluation_scope,metric,value,n
+Prediction Model,"Pima test / MLP, 5 seeds",ROC-AUC,0.8092962962962964,154
+Knowledge Retrieval,20 positive retrieval test queries,Recall@3,0.95,20
+Prediction + RAG (fixed pipeline),10 valid complete workflow cases (A),Workflow completion rate,1.0,10
+Multi-Agent Rule,60 functional scenarios A–F,Expected-outcome pass rate,1.0,60
+Multi-Agent RL,60 functional scenarios A–F,Expected-outcome pass rate,1.0,60

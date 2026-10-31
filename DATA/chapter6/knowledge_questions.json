@@ -1,0 +1,278 @@
+[
+  {
+    "query_id": "D01_Q0",
+    "split": "validation",
+    "query": "Khái niệm đái tháo đường là gì?",
+    "relevant_doc_ids": [
+      "D01"
+    ]
+  },
+  {
+    "query_id": "D01_Q1",
+    "split": "test",
+    "query": "Insulin có vai trò gì đối với glucose?",
+    "relevant_doc_ids": [
+      "D01"
+    ]
+  },
+  {
+    "query_id": "D01_Q2",
+    "split": "test",
+    "query": "Giải thích bệnh tiểu đường là gì cho người mới tìm hiểu.",
+    "relevant_doc_ids": [
+      "D01"
+    ]
+  },
+  {
+    "query_id": "D02_Q0",
+    "split": "validation",
+    "query": "Triệu chứng thường gặp của tiểu đường?",
+    "relevant_doc_ids": [
+      "D02"
+    ]
+  },
+  {
+    "query_id": "D02_Q1",
+    "split": "test",
+    "query": "Khát nhiều và tiểu nhiều có phải biểu hiện cần đi xét nghiệm?",
+    "relevant_doc_ids": [
+      "D02"
+    ]
+  },
+  {
+    "query_id": "D02_Q2",
+    "split": "test",
+    "query": "Nhìn mờ và vết thương chậm lành liên quan thế nào đến triệu chứng tiểu đường?",
+    "relevant_doc_ids": [
+      "D02"
+    ]
+  },
+  {
+    "query_id": "D03_Q0",
+    "split": "validation",
+    "query": "Có những xét nghiệm nào để chẩn đoán tiểu đường?",
+    "relevant_doc_ids": [
+      "D03"
+    ]
+  },
+  {
+    "query_id": "D03_Q1",
+    "split": "test",
+    "query": "Điểm AI hoặc máy đo tại nhà có đủ để chẩn đoán bệnh không?",
+    "relevant_doc_ids": [
+      "D03"
+    ]
+  },
+  {
+    "query_id": "D03_Q2",
+    "split": "test",
+    "query": "Glucose lúc đói và nghiệm pháp dung nạp glucose là xét nghiệm gì?",
+    "relevant_doc_ids": [
+      "D03"
+    ]
+  },
+  {
+    "query_id": "D04_Q0",
+    "split": "validation",
+    "query": "A1C cho biết điều gì trong kế hoạch chăm sóc?",
+    "relevant_doc_ids": [
+      "D04"
+    ]
+  },
+  {
+    "query_id": "D04_Q1",
+    "split": "test",
+    "query": "HbA1c phản ánh glucose trong khoảng thời gian bao lâu?",
+    "relevant_doc_ids": [
+      "D04"
+    ]
+  },
+  {
+    "query_id": "D04_Q2",
+    "split": "test",
+    "query": "Vì sao cần theo dõi huyết áp và cholesterol cùng đường huyết?",
+    "relevant_doc_ids": [
+      "D04"
+    ]
+  },
+  {
+    "query_id": "D05_Q0",
+    "split": "validation",
+    "query": "Làm sao lập kế hoạch bữa ăn khi có tiểu đường?",
+    "relevant_doc_ids": [
+      "D05"
+    ]
+  },
+  {
+    "query_id": "D05_Q1",
+    "split": "test",
+    "query": "Ai có thể hỗ trợ lựa chọn khẩu phần và thời điểm ăn?",
+    "relevant_doc_ids": [
+      "D05"
+    ]
+  },
+  {
+    "query_id": "D05_Q2",
+    "split": "test",
+    "query": "Tôi muốn tìm tài liệu về thực phẩm và đồ uống phù hợp.",
+    "relevant_doc_ids": [
+      "D05"
+    ]
+  },
+  {
+    "query_id": "D06_Q0",
+    "split": "validation",
+    "query": "Hoạt động thể chất có vai trò gì?",
+    "relevant_doc_ids": [
+      "D06"
+    ]
+  },
+  {
+    "query_id": "D06_Q1",
+    "split": "test",
+    "query": "Người bệnh nên trao đổi gì trước khi bắt đầu tập luyện?",
+    "relevant_doc_ids": [
+      "D06"
+    ]
+  },
+  {
+    "query_id": "D06_Q2",
+    "split": "test",
+    "query": "Đi bộ và vận động hỗ trợ quản lý tiểu đường như thế nào?",
+    "relevant_doc_ids": [
+      "D06"
+    ]
+  },
+  {
+    "query_id": "D07_Q0",
+    "split": "validation",
+    "query": "Có thể phòng ngừa tiểu đường tuýp 2 không?",
+    "relevant_doc_ids": [
+      "D07"
+    ]
+  },
+  {
+    "query_id": "D07_Q1",
+    "split": "test",
+    "query": "Thay đổi lối sống có giúp trì hoãn bệnh ở người có nguy cơ?",
+    "relevant_doc_ids": [
+      "D07"
+    ]
+  },
+  {
+    "query_id": "D07_Q2",
+    "split": "test",
+    "query": "Quản lý cân nặng có vai trò gì trong phòng ngừa tiểu đường?",
+    "relevant_doc_ids": [
+      "D07"
+    ]
+  },
+  {
+    "query_id": "D08_Q0",
+    "split": "validation",
+    "query": "Hạ đường huyết là gì?",
+    "relevant_doc_ids": [
+      "D08"
+    ]
+  },
+  {
+    "query_id": "D08_Q1",
+    "split": "test",
+    "query": "Run tay và chóng mặt có thể liên quan tới glucose thấp không?",
+    "relevant_doc_ids": [
+      "D08"
+    ]
+  },
+  {
+    "query_id": "D08_Q2",
+    "split": "test",
+    "query": "Lú lẫn do hạ đường huyết cần được trao đổi với nhân viên y tế thế nào?",
+    "relevant_doc_ids": [
+      "D08"
+    ]
+  },
+  {
+    "query_id": "D09_Q0",
+    "split": "validation",
+    "query": "Xét nghiệm nào theo dõi chức năng thận?",
+    "relevant_doc_ids": [
+      "D09"
+    ]
+  },
+  {
+    "query_id": "D09_Q1",
+    "split": "test",
+    "query": "GFR và albumin trong nước tiểu được dùng để đánh giá gì?",
+    "relevant_doc_ids": [
+      "D09"
+    ]
+  },
+  {
+    "query_id": "D09_Q2",
+    "split": "test",
+    "query": "Vì sao bệnh thận sớm có thể cần xét nghiệm dù chưa có triệu chứng?",
+    "relevant_doc_ids": [
+      "D09"
+    ]
+  },
+  {
+    "query_id": "D10_Q0",
+    "split": "validation",
+    "query": "Trao đổi với bác sĩ về thuốc điều trị thế nào?",
+    "relevant_doc_ids": [
+      "D10"
+    ]
+  },
+  {
+    "query_id": "D10_Q1",
+    "split": "test",
+    "query": "Lựa chọn thuốc và tác dụng phụ cần thảo luận với ai?",
+    "relevant_doc_ids": [
+      "D10"
+    ]
+  },
+  {
+    "query_id": "D10_Q2",
+    "split": "test",
+    "query": "Vì sao cách dùng insulin và thuốc cần được đội ngũ chăm sóc hướng dẫn?",
+    "relevant_doc_ids": [
+      "D10"
+    ]
+  },
+  {
+    "query_id": "OOD_Q0",
+    "split": "validation",
+    "query": "Dự báo thời tiết ngày mai",
+    "relevant_doc_ids": []
+  },
+  {
+    "query_id": "OOD_Q1",
+    "split": "validation",
+    "query": "Giải phương trình bậc hai",
+    "relevant_doc_ids": []
+  },
+  {
+    "query_id": "OOD_Q2",
+    "split": "test",
+    "query": "Quỹ đạo sao Hỏa dài bao nhiêu",
+    "relevant_doc_ids": []
+  },
+  {
+    "query_id": "OOD_Q3",
+    "split": "test",
+    "query": "Giá cổ phiếu AMZN hôm nay",
+    "relevant_doc_ids": []
+  },
+  {
+    "query_id": "OOD_Q4",
+    "split": "test",
+    "query": "Cách sửa động cơ xe máy",
+    "relevant_doc_ids": []
+  },
+  {
+    "query_id": "OOD_Q5",
+    "split": "test",
+    "query": "Đặt vé máy bay đi Đà Nẵng",
+    "relevant_doc_ids": []
+  }
+]

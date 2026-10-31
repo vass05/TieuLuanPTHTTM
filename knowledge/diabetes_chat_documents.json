@@ -1,0 +1,14 @@
+{
+  "format_version": 1,
+  "scope": "Project conversation content; frozen notebook experiments remain unchanged.",
+  "documents": [
+    {
+      "doc_id": "D05",
+      "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/healthy-living-with-diabetes",
+      "section": "How can I plan what to eat or drink when I have diabetes? / Choose healthy foods and drinks",
+      "reviewed_on": "2026-10-31",
+      "content_type": "manually_reviewed_vietnamese_paraphrase",
+      "summary_vi": "Các nhóm thực phẩm có thể đưa vào kế hoạch ăn cho người tiểu đường gồm:\n• Rau ít tinh bột, ngũ cốc nguyên hạt, đậu và trái cây với khẩu phần phù hợp.\n• Nguồn đạm như cá, thịt nạc, đậu phụ; sữa hoặc sản phẩm thay thế phù hợp.\n• Nước lọc và đồ uống ít hoặc không thêm đường.\nHạn chế đồ uống có đường, thực phẩm nhiều đường thêm, muối và chất béo bão hòa. Thực phẩm chứa carbohydrate vẫn cần tính đến lượng ăn. Khẩu phần nên được cá thể hóa cùng nhân viên y tế, nhất là khi có bệnh kèm."
+    }
+  ]
+}

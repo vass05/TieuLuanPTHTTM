@@ -1,0 +1,560 @@
+<!doctype html><html lang="vi"><meta charset="utf-8"><title>Bảng Chương 6</title>
+<style>body{font:12pt "Times New Roman",serif;max-width:1200px;margin:32px auto;padding:16px}table{border-collapse:collapse;margin:14px 0 30px;width:100%;font-size:10pt}td,th{border:1px solid #777;padding:7px;text-align:left}th{background:#edf2fa}h2{font-size:13pt;break-after:avoid}table{break-inside:avoid}</style>
+<h1>Bảng kết quả Chương 6</h1><p>Mở trong trình duyệt hoặc Word, sao chép bảng cần dùng. Giá trị ± là SD qua seed trên cùng split. Xem hướng dẫn chèn để giữ đúng phạm vi kết luận.</p>
+<h2>Bảng 6.1. Đặc trưng và dữ liệu thiếu của Pima</h2>
+<p>Mục 6.4.1, trang 163–164 của v3.</p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Đặc trưng</th>
+      <th>Đơn vị</th>
+      <th>0 là thiếu</th>
+      <th>Số giá trị thiếu</th>
+      <th>Nhỏ nhất</th>
+      <th>Lớn nhất</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Pregnancies</td>
+      <td>count</td>
+      <td>Không</td>
+      <td>0</td>
+      <td>0.0000</td>
+      <td>17.0000</td>
+    </tr>
+    <tr>
+      <td>Glucose</td>
+      <td>mg/dL</td>
+      <td>Có</td>
+      <td>5</td>
+      <td>44.0000</td>
+      <td>199.0000</td>
+    </tr>
+    <tr>
+      <td>BloodPressure</td>
+      <td>mmHg</td>
+      <td>Có</td>
+      <td>35</td>
+      <td>24.0000</td>
+      <td>122.0000</td>
+    </tr>
+    <tr>
+      <td>SkinThickness</td>
+      <td>mm</td>
+      <td>Có</td>
+      <td>227</td>
+      <td>7.0000</td>
+      <td>99.0000</td>
+    </tr>
+    <tr>
+      <td>Insulin</td>
+      <td>uU/mL</td>
+      <td>Có</td>
+      <td>374</td>
+      <td>14.0000</td>
+      <td>846.0000</td>
+    </tr>
+    <tr>
+      <td>BMI</td>
+      <td>kg/m2</td>
+      <td>Có</td>
+      <td>11</td>
+      <td>18.2000</td>
+      <td>67.1000</td>
+    </tr>
+    <tr>
+      <td>DiabetesPedigreeFunction</td>
+      <td>score</td>
+      <td>Không</td>
+      <td>0</td>
+      <td>0.0780</td>
+      <td>2.4200</td>
+    </tr>
+    <tr>
+      <td>Age</td>
+      <td>years</td>
+      <td>Không</td>
+      <td>0</td>
+      <td>21.0000</td>
+      <td>81.0000</td>
+    </tr>
+  </tbody>
+</table>
+<h2>Bảng 6.2. Chia tập độc lập</h2>
+<p>Mục 6.6.1, trang 171–172 của v3.</p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Tập</th>
+      <th>Số trường hợp</th>
+      <th>Nhãn 0</th>
+      <th>Nhãn 1</th>
+      <th>Tỷ lệ</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>train</td>
+      <td>491</td>
+      <td>320</td>
+      <td>171</td>
+      <td>0.6393</td>
+    </tr>
+    <tr>
+      <td>validation</td>
+      <td>123</td>
+      <td>80</td>
+      <td>43</td>
+      <td>0.1602</td>
+    </tr>
+    <tr>
+      <td>test</td>
+      <td>154</td>
+      <td>100</td>
+      <td>54</td>
+      <td>0.2005</td>
+    </tr>
+  </tbody>
+</table>
+<h2>Bảng 6.3. Phân loại trên test: trung bình và độ lệch chuẩn qua 5 seed</h2>
+<p>Mục 6.6.2, trang 172–174 của v3.</p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Mô hình</th>
+      <th>Accuracy</th>
+      <th>Precision</th>
+      <th>Recall</th>
+      <th>F1</th>
+      <th>ROC-AUC</th>
+      <th>AP / PR-AUC</th>
+      <th>Brier</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Logistic Regression</td>
+      <td>0.7143 ± 0.0000</td>
+      <td>0.5962 ± 0.0000</td>
+      <td>0.5741 ± 0.0000</td>
+      <td>0.5849 ± 0.0000</td>
+      <td>0.8161 ± 0.0000</td>
+      <td>0.6808 ± 0.0000</td>
+      <td>0.1747 ± 0.0000</td>
+    </tr>
+    <tr>
+      <td>MLP PyTorch</td>
+      <td>0.7429 ± 0.0149</td>
+      <td>0.6083 ± 0.0204</td>
+      <td>0.7519 ± 0.0248</td>
+      <td>0.6722 ± 0.0159</td>
+      <td>0.8093 ± 0.0058</td>
+      <td>0.6655 ± 0.0145</td>
+      <td>0.1715 ± 0.0022</td>
+    </tr>
+    <tr>
+      <td>Random Forest</td>
+      <td>0.7390 ± 0.0116</td>
+      <td>0.6189 ± 0.0199</td>
+      <td>0.6778 ± 0.1274</td>
+      <td>0.6408 ± 0.0553</td>
+      <td>0.8176 ± 0.0029</td>
+      <td>0.6745 ± 0.0137</td>
+      <td>0.1650 ± 0.0016</td>
+    </tr>
+  </tbody>
+</table>
+<h2>Bảng 6.4. Truy xuất trên 20 câu hỏi có bằng chứng và 4 câu ngoài miền</h2>
+<p>Mục 6.6.3, trang 174 của v3.</p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Phương pháp</th>
+      <th>Precision@3</th>
+      <th>Recall@3</th>
+      <th>Hit@3</th>
+      <th>Từ chối ngoài miền</th>
+      <th>Bao phủ dẫn nguồn</th>
+      <th>Hỗ trợ trích xuất</th>
+      <th>TB (ms)</th>
+      <th>P95 (ms)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Hybrid</td>
+      <td>0.3167</td>
+      <td>0.9500</td>
+      <td>0.9500</td>
+      <td>1.0000</td>
+      <td>1.0000</td>
+      <td>1.0000</td>
+      <td>0.9149</td>
+      <td>1.0983</td>
+    </tr>
+    <tr>
+      <td>LSA</td>
+      <td>0.3167</td>
+      <td>0.9500</td>
+      <td>0.9500</td>
+      <td>0.0000</td>
+      <td>1.0000</td>
+      <td>1.0000</td>
+      <td>1.3684</td>
+      <td>1.8099</td>
+    </tr>
+    <tr>
+      <td>TF-IDF</td>
+      <td>0.3000</td>
+      <td>0.9000</td>
+      <td>0.9000</td>
+      <td>1.0000</td>
+      <td>1.0000</td>
+      <td>1.0000</td>
+      <td>0.6320</td>
+      <td>1.0115</td>
+    </tr>
+  </tbody>
+</table>
+<h2>Bảng 6.5. Chọn ngưỡng truy xuất trên validation (10 câu có bằng chứng, 2 câu ngoài miền)</h2>
+<p>Mục 6.4.2, trang 165–166 của v3.</p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Phương pháp</th>
+      <th>Ngưỡng</th>
+      <th>Mục tiêu validation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>TF-IDF</td>
+      <td>0.0800</td>
+      <td>0.5972</td>
+    </tr>
+    <tr>
+      <td>TF-IDF</td>
+      <td>0.1500</td>
+      <td>0.8889</td>
+    </tr>
+    <tr>
+      <td>TF-IDF</td>
+      <td>0.2500</td>
+      <td>1.0000</td>
+    </tr>
+    <tr>
+      <td>TF-IDF</td>
+      <td>0.3500</td>
+      <td>0.6667</td>
+    </tr>
+    <tr>
+      <td>LSA</td>
+      <td>0.0800</td>
+      <td>0.4167</td>
+    </tr>
+    <tr>
+      <td>LSA</td>
+      <td>0.1500</td>
+      <td>0.4167</td>
+    </tr>
+    <tr>
+      <td>LSA</td>
+      <td>0.2500</td>
+      <td>0.4167</td>
+    </tr>
+    <tr>
+      <td>LSA</td>
+      <td>0.3500</td>
+      <td>0.4583</td>
+    </tr>
+    <tr>
+      <td>Hybrid</td>
+      <td>0.0800</td>
+      <td>0.7222</td>
+    </tr>
+    <tr>
+      <td>Hybrid</td>
+      <td>0.1500</td>
+      <td>0.9444</td>
+    </tr>
+    <tr>
+      <td>Hybrid</td>
+      <td>0.2500</td>
+      <td>1.0000</td>
+    </tr>
+    <tr>
+      <td>Hybrid</td>
+      <td>0.3500</td>
+      <td>0.8333</td>
+    </tr>
+  </tbody>
+</table>
+<h2>Bảng 6.6. Đối sánh chính sách trên cùng 600 kịch bản test, 5 seed</h2>
+<p>Mục 6.6.4, trang 175–176 của v3.</p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Chỉ số</th>
+      <th>Q-learning</th>
+      <th>Random(valid)</th>
+      <th>Rule-Based</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Reward (TB ± SD)</td>
+      <td>4.4519 ± 0.0000</td>
+      <td>2.1234 ± 0.0849</td>
+      <td>4.4519 ± 0.0000</td>
+    </tr>
+    <tr>
+      <td>Hoàn thành (%) (TB ± SD)</td>
+      <td>100.00 ± 0.00</td>
+      <td>98.23 ± 0.67</td>
+      <td>100.00 ± 0.00</td>
+    </tr>
+    <tr>
+      <td>Số bước trung bình</td>
+      <td>2.0200</td>
+      <td>3.8900</td>
+      <td>2.0200</td>
+    </tr>
+    <tr>
+      <td>Lần gọi công cụ trung bình</td>
+      <td>1.0200</td>
+      <td>2.9077</td>
+      <td>1.0200</td>
+    </tr>
+    <tr>
+      <td>Chi phí mô phỏng trung bình</td>
+      <td>2.0433</td>
+      <td>5.7937</td>
+      <td>2.0433</td>
+    </tr>
+    <tr>
+      <td>Vi phạm thực thi (%)</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+  </tbody>
+</table>
+<h2>Bảng 6.7. Độ nhạy siêu tham số trên validation mô phỏng</h2>
+<p>Mục 6.7.6, trang 179 của v3.</p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Learning rate α</th>
+      <th>Epsilon decay</th>
+      <th>Reward TB</th>
+      <th>Reward SD</th>
+      <th>Tỷ lệ hoàn thành</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0.0500</td>
+      <td>0.9700</td>
+      <td>4.4955</td>
+      <td>0.0000</td>
+      <td>1.0000</td>
+    </tr>
+    <tr>
+      <td>0.0500</td>
+      <td>0.9950</td>
+      <td>4.4955</td>
+      <td>0.0000</td>
+      <td>1.0000</td>
+    </tr>
+    <tr>
+      <td>0.0500</td>
+      <td>0.9990</td>
+      <td>4.4955</td>
+      <td>0.0000</td>
+      <td>1.0000</td>
+    </tr>
+    <tr>
+      <td>0.1500</td>
+      <td>0.9700</td>
+      <td>4.4955</td>
+      <td>0.0000</td>
+      <td>1.0000</td>
+    </tr>
+    <tr>
+      <td>0.1500</td>
+      <td>0.9950</td>
+      <td>4.4955</td>
+      <td>0.0000</td>
+      <td>1.0000</td>
+    </tr>
+    <tr>
+      <td>0.1500</td>
+      <td>0.9990</td>
+      <td>4.4955</td>
+      <td>0.0000</td>
+      <td>1.0000</td>
+    </tr>
+    <tr>
+      <td>0.4000</td>
+      <td>0.9700</td>
+      <td>4.4955</td>
+      <td>0.0000</td>
+      <td>1.0000</td>
+    </tr>
+    <tr>
+      <td>0.4000</td>
+      <td>0.9950</td>
+      <td>4.4955</td>
+      <td>0.0000</td>
+      <td>1.0000</td>
+    </tr>
+    <tr>
+      <td>0.4000</td>
+      <td>0.9990</td>
+      <td>4.4955</td>
+      <td>0.0000</td>
+      <td>1.0000</td>
+    </tr>
+  </tbody>
+</table>
+<h2>Bảng 6.8. Kịch bản chức năng A–F: 60 trường hợp cho mỗi chính sách</h2>
+<p>Mục 6.6.5, trang 176–177 của v3.</p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Nhóm</th>
+      <th>Rule-Based đạt/tổng</th>
+      <th>Rule-Based TB ms</th>
+      <th>Q-learning đạt/tổng</th>
+      <th>Q-learning TB ms</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>A</td>
+      <td>10/10</td>
+      <td>5.1205</td>
+      <td>10/10</td>
+      <td>3.7458</td>
+    </tr>
+    <tr>
+      <td>B</td>
+      <td>10/10</td>
+      <td>0.0429</td>
+      <td>10/10</td>
+      <td>0.0433</td>
+    </tr>
+    <tr>
+      <td>C</td>
+      <td>10/10</td>
+      <td>3.9066</td>
+      <td>10/10</td>
+      <td>0.6189</td>
+    </tr>
+    <tr>
+      <td>D</td>
+      <td>10/10</td>
+      <td>0.0248</td>
+      <td>10/10</td>
+      <td>0.0235</td>
+    </tr>
+    <tr>
+      <td>E</td>
+      <td>10/10</td>
+      <td>1.8049</td>
+      <td>10/10</td>
+      <td>0.4922</td>
+    </tr>
+    <tr>
+      <td>F</td>
+      <td>10/10</td>
+      <td>4.6022</td>
+      <td>10/10</td>
+      <td>4.0124</td>
+    </tr>
+  </tbody>
+</table>
+<h2>Bảng 6.9. Ablation theo phạm vi và chỉ số phù hợp với từng thành phần</h2>
+<p>Mục 6.6.6, trang 177 của v3.</p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Cấu hình</th>
+      <th>Phạm vi đánh giá</th>
+      <th>Chỉ số</th>
+      <th>Giá trị</th>
+      <th>Số trường hợp</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Prediction Model</td>
+      <td>Pima test / MLP, 5 seeds</td>
+      <td>ROC-AUC</td>
+      <td>0.8093</td>
+      <td>154</td>
+    </tr>
+    <tr>
+      <td>Knowledge Retrieval</td>
+      <td>20 positive retrieval test queries</td>
+      <td>Recall@3</td>
+      <td>0.9500</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <td>Prediction + RAG (fixed pipeline)</td>
+      <td>10 valid complete workflow cases (A)</td>
+      <td>Workflow completion rate</td>
+      <td>1.0000</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td>Multi-Agent Rule</td>
+      <td>60 functional scenarios A–F</td>
+      <td>Expected-outcome pass rate</td>
+      <td>1.0000</td>
+      <td>60</td>
+    </tr>
+    <tr>
+      <td>Multi-Agent RL</td>
+      <td>60 functional scenarios A–F</td>
+      <td>Expected-outcome pass rate</td>
+      <td>1.0000</td>
+      <td>60</td>
+    </tr>
+  </tbody>
+</table>
+<h2>Bảng 6.10. Phân rã độ trễ thực đo (ms), môi trường CPU cục bộ</h2>
+<p>Mục 6.7.5, trang 179 của v3.</p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>stage</th>
+      <th>Chính sách</th>
+      <th>Truy xuất / soạn phản hồi (ms)</th>
+      <th>Dự đoán (ms)</th>
+      <th>Kiểm tra (ms)</th>
+      <th>Điều phối (ms)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th></th>
+      <td>q_learning</td>
+      <td>0.7502</td>
+      <td>2.7634</td>
+      <td>0.0533</td>
+      <td>0.1788</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td>rule</td>
+      <td>0.9775</td>
+      <td>3.8234</td>
+      <td>0.0799</td>
+      <td>0.2398</td>
+    </tr>
+  </tbody>
+</table>
+</html>

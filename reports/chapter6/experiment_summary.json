@@ -1,0 +1,178 @@
+{
+  "classification": [
+    {
+      "model": "Logistic Regression",
+      "accuracy_mean": 0.7142857142857143,
+      "accuracy_std": 0.0,
+      "precision_mean": 0.5961538461538461,
+      "precision_std": 0.0,
+      "recall_mean": 0.5740740740740741,
+      "recall_std": 0.0,
+      "f1_mean": 0.5849056603773585,
+      "f1_std": 0.0,
+      "roc_auc_mean": 0.8161111111111111,
+      "roc_auc_std": 0.0,
+      "pr_auc_mean": 0.6807981862313316,
+      "pr_auc_std": 0.0,
+      "brier_mean": 0.17465505003929138,
+      "brier_std": 0.0
+    },
+    {
+      "model": "MLP PyTorch",
+      "accuracy_mean": 0.7428571428571429,
+      "accuracy_std": 0.014949174588599148,
+      "precision_mean": 0.60833373613889,
+      "precision_std": 0.020407043487540258,
+      "recall_mean": 0.7518518518518518,
+      "recall_std": 0.024845199749997684,
+      "f1_mean": 0.6722242389413846,
+      "f1_std": 0.015949243276624604,
+      "roc_auc_mean": 0.8092962962962963,
+      "roc_auc_std": 0.005787444430104742,
+      "pr_auc_mean": 0.6654780877346416,
+      "pr_auc_std": 0.014459681855165116,
+      "brier_mean": 0.171481254696846,
+      "brier_std": 0.002194260858935214
+    },
+    {
+      "model": "Random Forest",
+      "accuracy_mean": 0.7389610389610389,
+      "accuracy_std": 0.011615937545453434,
+      "precision_mean": 0.6189239151753057,
+      "precision_std": 0.019852254526135277,
+      "recall_mean": 0.6777777777777778,
+      "recall_std": 0.12736110269666223,
+      "f1_mean": 0.6407542666736541,
+      "f1_std": 0.05531996372895888,
+      "roc_auc_mean": 0.8176296296296297,
+      "roc_auc_std": 0.0029086456433772907,
+      "pr_auc_mean": 0.6744624863902573,
+      "pr_auc_std": 0.013685152136300314,
+      "brier_mean": 0.16498784712676282,
+      "brier_std": 0.0015514438879047265
+    }
+  ],
+  "retrieval": [
+    {
+      "method": "Hybrid",
+      "precision_at_3": 0.31666666666666665,
+      "recall_at_3": 0.95,
+      "hit_at_3": 0.95,
+      "ood_abstention": 1.0,
+      "citation_coverage": 1.0,
+      "extractive_support_rate": 1.0,
+      "latency_ms_mean": 0.914862503123004,
+      "latency_ms_p95": 1.0983349980961066
+    },
+    {
+      "method": "LSA",
+      "precision_at_3": 0.31666666666666665,
+      "recall_at_3": 0.95,
+      "hit_at_3": 0.95,
+      "ood_abstention": 0.0,
+      "citation_coverage": 1.0,
+      "extractive_support_rate": 1.0,
+      "latency_ms_mean": 1.3683958325903707,
+      "latency_ms_p95": 1.809925005363766
+    },
+    {
+      "method": "TF-IDF",
+      "precision_at_3": 0.3,
+      "recall_at_3": 0.9,
+      "hit_at_3": 0.9,
+      "ood_abstention": 1.0,
+      "citation_coverage": 1.0,
+      "extractive_support_rate": 1.0,
+      "latency_ms_mean": 0.6319791676408689,
+      "latency_ms_p95": 1.0114500051713546
+    }
+  ],
+  "policies": [
+    {
+      "policy": "Q-learning",
+      "reward_mean": 4.4518666666666675,
+      "reward_std": 0.0,
+      "success_mean": 1.0,
+      "success_std": 0.0,
+      "steps_mean": 2.02,
+      "tool_calls_mean": 1.02,
+      "simulated_cost_mean": 2.0433333333333334,
+      "safety_violation_rate": 0.0
+    },
+    {
+      "policy": "Random(valid)",
+      "reward_mean": 2.123356666666667,
+      "reward_std": 0.08485760180050661,
+      "success_mean": 0.9823333333333334,
+      "success_std": 0.006728876412728735,
+      "steps_mean": 3.8899999999999997,
+      "tool_calls_mean": 2.9076666666666666,
+      "simulated_cost_mean": 5.793666666666667,
+      "safety_violation_rate": 0.0
+    },
+    {
+      "policy": "Rule-Based",
+      "reward_mean": 4.4518666666666675,
+      "reward_std": 0.0,
+      "success_mean": 1.0,
+      "success_std": 0.0,
+      "steps_mean": 2.02,
+      "tool_calls_mean": 1.02,
+      "simulated_cost_mean": 2.0433333333333334,
+      "safety_violation_rate": 0.0
+    }
+  ],
+  "scenario_passed": 120,
+  "scenario_total": 120,
+  "verification_checks": 299,
+  "figures": 13,
+  "tables": 10,
+  "dataset_sha256": "123ce738f394095a201da0f65c5e174cdcb19cdf5ec1535aee65e2b0e1e2aae2",
+  "config": {
+    "split_seed": 42,
+    "model_seeds": [
+      11,
+      23,
+      37,
+      53,
+      71
+    ],
+    "mlp_epochs": 250,
+    "mlp_patience": 25,
+    "mlp_lr": 0.001,
+    "batch_size": 64,
+    "rl_episodes": 6000,
+    "rl_max_steps": 12,
+    "rl_alpha": 0.15,
+    "rl_gamma": 0.95,
+    "rl_epsilon_decay": 0.995,
+    "rl_epsilon_min": 0.03,
+    "rl_eval_episodes": 600,
+    "sensitivity_episodes": 2500,
+    "sensitivity_seeds": [
+      11,
+      23,
+      37
+    ],
+    "sensitivity_alpha": [
+      0.05,
+      0.15,
+      0.4
+    ],
+    "sensitivity_decay": [
+      0.97,
+      0.995,
+      0.999
+    ]
+  },
+  "limitations": [
+    "Single fixed split; seed SD is training randomness only",
+    "Historical restricted Pima cohort, not clinical validation",
+    "Small manually curated Vietnamese knowledge benchmark",
+    "TF-IDF/LSA and local NetworkX; not transformer embeddings or Neo4j",
+    "Extractive response support is not semantic faithfulness / LLM hallucination rate",
+    "RL is a fixed-task simulated workflow; simulated costs are not measured latency",
+    "Local synchronous deadline checked between calls; no remote request cancellation evaluated",
+    "Chapters 1–5 and project integration were not rerun or modified in this experiment"
+  ]
+}

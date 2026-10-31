@@ -1,0 +1,802 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "kind": "document",
+      "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/what-is-diabetes",
+      "id": "D01"
+    },
+    {
+      "kind": "concept",
+      "label": "tiểu đường là gì",
+      "id": "topic:tieu duong la gi"
+    },
+    {
+      "kind": "concept",
+      "label": "đái tháo đường là gì",
+      "id": "topic:dai thao duong la gi"
+    },
+    {
+      "kind": "concept",
+      "label": "insulin có vai trò",
+      "id": "topic:insulin co vai tro"
+    },
+    {
+      "kind": "concept",
+      "label": "khái niệm tiểu đường",
+      "id": "topic:khai niem tieu duong"
+    },
+    {
+      "kind": "document",
+      "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/symptoms-causes",
+      "id": "D02"
+    },
+    {
+      "kind": "concept",
+      "label": "triệu chứng",
+      "id": "topic:trieu chung"
+    },
+    {
+      "kind": "concept",
+      "label": "khát nhiều",
+      "id": "topic:khat nhieu"
+    },
+    {
+      "kind": "concept",
+      "label": "tiểu nhiều",
+      "id": "topic:tieu nhieu"
+    },
+    {
+      "kind": "concept",
+      "label": "nhìn mờ",
+      "id": "topic:nhin mo"
+    },
+    {
+      "kind": "concept",
+      "label": "vết thương",
+      "id": "topic:vet thuong"
+    },
+    {
+      "kind": "concept",
+      "label": "biểu hiện",
+      "id": "topic:bieu hien"
+    },
+    {
+      "kind": "document",
+      "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/tests-diagnosis",
+      "id": "D03"
+    },
+    {
+      "kind": "concept",
+      "label": "xét nghiệm",
+      "id": "topic:xet nghiem"
+    },
+    {
+      "kind": "concept",
+      "label": "chẩn đoán",
+      "id": "topic:chan doan"
+    },
+    {
+      "kind": "concept",
+      "label": "glucose lúc đói",
+      "id": "topic:glucose luc doi"
+    },
+    {
+      "kind": "concept",
+      "label": "dung nạp glucose",
+      "id": "topic:dung nap glucose"
+    },
+    {
+      "kind": "concept",
+      "label": "máy đo tại nhà",
+      "id": "topic:may do tai nha"
+    },
+    {
+      "kind": "document",
+      "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/managing-diabetes",
+      "id": "D04"
+    },
+    {
+      "kind": "concept",
+      "label": "a1c",
+      "id": "topic:a1c"
+    },
+    {
+      "kind": "concept",
+      "label": "hba1c",
+      "id": "topic:hba1c"
+    },
+    {
+      "kind": "concept",
+      "label": "ba tháng",
+      "id": "topic:ba thang"
+    },
+    {
+      "kind": "concept",
+      "label": "huyết áp",
+      "id": "topic:huyet ap"
+    },
+    {
+      "kind": "concept",
+      "label": "cholesterol",
+      "id": "topic:cholesterol"
+    },
+    {
+      "kind": "concept",
+      "label": "kế hoạch chăm sóc",
+      "id": "topic:ke hoach cham soc"
+    },
+    {
+      "kind": "document",
+      "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/healthy-living-with-diabetes",
+      "id": "D05"
+    },
+    {
+      "kind": "concept",
+      "label": "bữa ăn",
+      "id": "topic:bua an"
+    },
+    {
+      "kind": "concept",
+      "label": "dinh dưỡng",
+      "id": "topic:dinh duong"
+    },
+    {
+      "kind": "concept",
+      "label": "khẩu phần",
+      "id": "topic:khau phan"
+    },
+    {
+      "kind": "concept",
+      "label": "ăn uống",
+      "id": "topic:an uong"
+    },
+    {
+      "kind": "concept",
+      "label": "thực phẩm",
+      "id": "topic:thuc pham"
+    },
+    {
+      "kind": "concept",
+      "label": "đồ uống",
+      "id": "topic:do uong"
+    },
+    {
+      "kind": "document",
+      "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/healthy-living-with-diabetes",
+      "id": "D06"
+    },
+    {
+      "kind": "concept",
+      "label": "vận động",
+      "id": "topic:van dong"
+    },
+    {
+      "kind": "concept",
+      "label": "tập luyện",
+      "id": "topic:tap luyen"
+    },
+    {
+      "kind": "concept",
+      "label": "thể dục",
+      "id": "topic:the duc"
+    },
+    {
+      "kind": "concept",
+      "label": "đi bộ",
+      "id": "topic:di bo"
+    },
+    {
+      "kind": "concept",
+      "label": "hoạt động thể chất",
+      "id": "topic:hoat dong the chat"
+    },
+    {
+      "kind": "document",
+      "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/preventing-type-2-diabetes",
+      "id": "D07"
+    },
+    {
+      "kind": "concept",
+      "label": "phòng ngừa",
+      "id": "topic:phong ngua"
+    },
+    {
+      "kind": "concept",
+      "label": "trì hoãn",
+      "id": "topic:tri hoan"
+    },
+    {
+      "kind": "concept",
+      "label": "nguy cơ",
+      "id": "topic:nguy co"
+    },
+    {
+      "kind": "concept",
+      "label": "cân nặng",
+      "id": "topic:can nang"
+    },
+    {
+      "kind": "concept",
+      "label": "thừa cân",
+      "id": "topic:thua can"
+    },
+    {
+      "kind": "document",
+      "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/preventing-problems/low-blood-glucose-hypoglycemia",
+      "id": "D08"
+    },
+    {
+      "kind": "concept",
+      "label": "hạ đường huyết",
+      "id": "topic:ha duong huyet"
+    },
+    {
+      "kind": "concept",
+      "label": "glucose thấp",
+      "id": "topic:glucose thap"
+    },
+    {
+      "kind": "concept",
+      "label": "run tay",
+      "id": "topic:run tay"
+    },
+    {
+      "kind": "concept",
+      "label": "lú lẫn",
+      "id": "topic:lu lan"
+    },
+    {
+      "kind": "concept",
+      "label": "chóng mặt",
+      "id": "topic:chong mat"
+    },
+    {
+      "kind": "document",
+      "source_url": "https://www.niddk.nih.gov/health-information/kidney-disease/chronic-kidney-disease-ckd/tests-diagnosis",
+      "id": "D09"
+    },
+    {
+      "kind": "concept",
+      "label": "thận",
+      "id": "topic:than"
+    },
+    {
+      "kind": "concept",
+      "label": "egfr",
+      "id": "topic:egfr"
+    },
+    {
+      "kind": "concept",
+      "label": "gfr",
+      "id": "topic:gfr"
+    },
+    {
+      "kind": "concept",
+      "label": "albumin",
+      "id": "topic:albumin"
+    },
+    {
+      "kind": "concept",
+      "label": "nước tiểu",
+      "id": "topic:nuoc tieu"
+    },
+    {
+      "kind": "concept",
+      "label": "mức lọc cầu thận",
+      "id": "topic:muc loc cau than"
+    },
+    {
+      "kind": "document",
+      "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/insulin-medicines-treatments",
+      "id": "D10"
+    },
+    {
+      "kind": "concept",
+      "label": "thuốc",
+      "id": "topic:thuoc"
+    },
+    {
+      "kind": "concept",
+      "label": "insulin",
+      "id": "topic:insulin"
+    },
+    {
+      "kind": "concept",
+      "label": "điều trị",
+      "id": "topic:dieu tri"
+    },
+    {
+      "kind": "concept",
+      "label": "tác dụng phụ",
+      "id": "topic:tac dung phu"
+    },
+    {
+      "kind": "concept",
+      "label": "cách dùng",
+      "id": "topic:cach dung"
+    },
+    {
+      "kind": "medical_entity",
+      "entity_type": "Condition",
+      "id": "Condition:Diabetes"
+    },
+    {
+      "kind": "medical_entity",
+      "entity_type": "Biomarker",
+      "id": "Biomarker:Glucose"
+    },
+    {
+      "kind": "medical_entity",
+      "entity_type": "Symptom",
+      "id": "Symptom:Thirst"
+    },
+    {
+      "kind": "medical_entity",
+      "entity_type": "DiagnosticTest",
+      "id": "DiagnosticTest:BloodTests"
+    },
+    {
+      "kind": "medical_entity",
+      "entity_type": "Biomarker",
+      "id": "Biomarker:A1C"
+    },
+    {
+      "kind": "medical_entity",
+      "entity_type": "TimeWindow",
+      "id": "TimeWindow:ThreeMonths"
+    },
+    {
+      "kind": "medical_entity",
+      "entity_type": "Lifestyle",
+      "id": "Lifestyle:MealPlan"
+    },
+    {
+      "kind": "medical_entity",
+      "entity_type": "Lifestyle",
+      "id": "Lifestyle:PhysicalActivity"
+    },
+    {
+      "kind": "medical_entity",
+      "entity_type": "Lifestyle",
+      "id": "Lifestyle:Prevention"
+    },
+    {
+      "kind": "medical_entity",
+      "entity_type": "Condition",
+      "id": "Condition:Type2Diabetes"
+    },
+    {
+      "kind": "medical_entity",
+      "entity_type": "Condition",
+      "id": "Condition:Hypoglycemia"
+    },
+    {
+      "kind": "medical_entity",
+      "entity_type": "Symptom",
+      "id": "Symptom:Dizziness"
+    },
+    {
+      "kind": "medical_entity",
+      "entity_type": "Condition",
+      "id": "Condition:KidneyDisease"
+    },
+    {
+      "kind": "medical_entity",
+      "entity_type": "Biomarker",
+      "id": "Biomarker:GFR"
+    },
+    {
+      "kind": "medical_entity",
+      "entity_type": "Drug",
+      "id": "Drug:Insulin"
+    },
+    {
+      "kind": "medical_entity",
+      "entity_type": "Facility",
+      "id": "Facility:HealthCareTeam"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "SUPPORTED_BY",
+      "evidence_id": "D01",
+      "source": "D01",
+      "target": "topic:tieu duong la gi"
+    },
+    {
+      "relation": "SUPPORTED_BY",
+      "evidence_id": "D01",
+      "source": "D01",
+      "target": "topic:dai thao duong la gi"
+    },
+    {
+      "relation": "SUPPORTED_BY",
+      "evidence_id": "D01",
+      "source": "D01",
+      "target": "topic:insulin co vai tro"
+    },
+    {
+      "relation": "SUPPORTED_BY",
+      "evidence_id": "D01",
+      "source": "D01",
+      "target": "topic:khai niem tieu duong"
+    },
+    {
+      "relation": "SUPPORTED_BY",
+      "evidence_id": "D02",
+      "source": "D02",
+      "target": "topic:trieu chung"
+    },
+    {
+      "relation": "SUPPORTED_BY",
+      "evidence_id": "D02",
+      "source": "D02",
+      "target": "topic:khat nhieu"
+    },
+    {
+      "relation": "SUPPORTED_BY",
+      "evidence_id": "D02",
+      "source": "D02",
+      "target": "topic:tieu nhieu"
+    },
+    {
+      "relation": "SUPPORTED_BY",
+      "evidence_id": "D02",
+      "source": "D02",
+      "target": "topic:nhin mo"
+    },
+    {
+      "relation": "SUPPORTED_BY",
+      "evidence_id": "D02",
+      "source": "D02",
+      "target": "topic:vet thuong"
+    },
+    {
+      "relation": "SUPPORTED_BY",
+      "evidence_id": "D02",
+      "source": "D02",
+      "target": "topic:bieu hien"
+    },
+    {
+      "relation": "SUPPORTED_BY",
+      "evidence_id": "D03",
+      "source": "D03",
+      "target": "topic:xet nghiem"
+    },
+    {
+      "relation": "SUPPORTED_BY",
+      "evidence_id": "D03",
+      "source": "D03",
+      "target": "topic:chan doan"
+    },
+    {
+      "relation": "SUPPORTED_BY",
+      "evidence_id": "D03",
+      "source": "D03",
+      "target": "topic:glucose luc doi"
+    },
+    {
+      "relation": "SUPPORTED_BY",
+      "evidence_id": "D03",
+      "source": "D03",
+      "target": "topic:dung nap glucose"
+    },
+    {
+      "relation": "SUPPORTED_BY",
+      "evidence_id": "D03",
+      "source": "D03",
+      "target": "topic:may do tai nha"
+    },
+    {
+      "relation": "SUPPORTED_BY",
+      "evidence_id": "D04",
+      "source": "D04",
+      "target": "topic:a1c"
+    },
+    {
+      "relation": "SUPPORTED_BY",
+      "evidence_id": "D04",
+      "source": "D04",
+      "target": "topic:hba1c"
+    },
+    {
+      "relation": "SUPPORTED_BY",
+      "evidence_id": "D04",
+      "source": "D04",
+      "target": "topic:ba thang"
+    },
+    {
+      "relation": "SUPPORTED_BY",
+      "evidence_id": "D04",
+      "source": "D04",
+      "target": "topic:huyet ap"
+    },
+    {
+      "relation": "SUPPORTED_BY",
+      "evidence_id": "D04",
+      "source": "D04",
+      "target": "topic:cholesterol"
+    },
+    {
+      "relation": "SUPPORTED_BY",
+      "evidence_id": "D04",
+      "source": "D04",
+      "target": "topic:ke hoach cham soc"
+    },
+    {
+      "relation": "SUPPORTED_BY",
+      "evidence_id": "D05",
+      "source": "D05",
+      "target": "topic:bua an"
+    },
+    {
+      "relation": "SUPPORTED_BY",
+      "evidence_id": "D05",
+      "source": "D05",
+      "target": "topic:dinh duong"
+    },
+    {
+      "relation": "SUPPORTED_BY",
+      "evidence_id": "D05",
+      "source": "D05",
+      "target": "topic:khau phan"
+    },
+    {
+      "relation": "SUPPORTED_BY",
+      "evidence_id": "D05",
+      "source": "D05",
+      "target": "topic:an uong"
+    },
+    {
+      "relation": "SUPPORTED_BY",
+      "evidence_id": "D05",
+      "source": "D05",
+      "target": "topic:thuc pham"
+    },
+    {
+      "relation": "SUPPORTED_BY",
+      "evidence_id": "D05",
+      "source": "D05",
+      "target": "topic:do uong"
+    },
+    {
+      "relation": "SUPPORTED_BY",
+      "evidence_id": "D06",
+      "source": "D06",
+      "target": "topic:van dong"
+    },
+    {
+      "relation": "SUPPORTED_BY",
+      "evidence_id": "D06",
+      "source": "D06",
+      "target": "topic:tap luyen"
+    },
+    {
+      "relation": "SUPPORTED_BY",
+      "evidence_id": "D06",
+      "source": "D06",
+      "target": "topic:the duc"
+    },
+    {
+      "relation": "SUPPORTED_BY",
+      "evidence_id": "D06",
+      "source": "D06",
+      "target": "topic:di bo"
+    },
+    {
+      "relation": "SUPPORTED_BY",
+      "evidence_id": "D06",
+      "source": "D06",
+      "target": "topic:hoat dong the chat"
+    },
+    {
+      "relation": "SUPPORTED_BY",
+      "evidence_id": "D07",
+      "source": "D07",
+      "target": "topic:phong ngua"
+    },
+    {
+      "relation": "SUPPORTED_BY",
+      "evidence_id": "D07",
+      "source": "D07",
+      "target": "topic:tri hoan"
+    },
+    {
+      "relation": "SUPPORTED_BY",
+      "evidence_id": "D07",
+      "source": "D07",
+      "target": "topic:nguy co"
+    },
+    {
+      "relation": "SUPPORTED_BY",
+      "evidence_id": "D07",
+      "source": "D07",
+      "target": "topic:can nang"
+    },
+    {
+      "relation": "SUPPORTED_BY",
+      "evidence_id": "D07",
+      "source": "D07",
+      "target": "topic:thua can"
+    },
+    {
+      "relation": "SUPPORTED_BY",
+      "evidence_id": "D08",
+      "source": "D08",
+      "target": "topic:ha duong huyet"
+    },
+    {
+      "relation": "SUPPORTED_BY",
+      "evidence_id": "D08",
+      "source": "D08",
+      "target": "topic:glucose thap"
+    },
+    {
+      "relation": "SUPPORTED_BY",
+      "evidence_id": "D08",
+      "source": "D08",
+      "target": "topic:run tay"
+    },
+    {
+      "relation": "SUPPORTED_BY",
+      "evidence_id": "D08",
+      "source": "D08",
+      "target": "topic:lu lan"
+    },
+    {
+      "relation": "SUPPORTED_BY",
+      "evidence_id": "D08",
+      "source": "D08",
+      "target": "topic:chong mat"
+    },
+    {
+      "relation": "SUPPORTED_BY",
+      "evidence_id": "D09",
+      "source": "D09",
+      "target": "topic:than"
+    },
+    {
+      "relation": "SUPPORTED_BY",
+      "evidence_id": "D09",
+      "source": "D09",
+      "target": "topic:egfr"
+    },
+    {
+      "relation": "SUPPORTED_BY",
+      "evidence_id": "D09",
+      "source": "D09",
+      "target": "topic:gfr"
+    },
+    {
+      "relation": "SUPPORTED_BY",
+      "evidence_id": "D09",
+      "source": "D09",
+      "target": "topic:albumin"
+    },
+    {
+      "relation": "SUPPORTED_BY",
+      "evidence_id": "D09",
+      "source": "D09",
+      "target": "topic:nuoc tieu"
+    },
+    {
+      "relation": "SUPPORTED_BY",
+      "evidence_id": "D09",
+      "source": "D09",
+      "target": "topic:muc loc cau than"
+    },
+    {
+      "relation": "SUPPORTED_BY",
+      "evidence_id": "D10",
+      "source": "D10",
+      "target": "topic:thuoc"
+    },
+    {
+      "relation": "SUPPORTED_BY",
+      "evidence_id": "D10",
+      "source": "D10",
+      "target": "topic:insulin"
+    },
+    {
+      "relation": "SUPPORTED_BY",
+      "evidence_id": "D10",
+      "source": "D10",
+      "target": "topic:dieu tri"
+    },
+    {
+      "relation": "SUPPORTED_BY",
+      "evidence_id": "D10",
+      "source": "D10",
+      "target": "topic:tac dung phu"
+    },
+    {
+      "relation": "SUPPORTED_BY",
+      "evidence_id": "D10",
+      "source": "D10",
+      "target": "topic:cach dung"
+    },
+    {
+      "relation": "ASSOCIATED_WITH",
+      "evidence_id": "D01",
+      "subject": "Condition:Diabetes",
+      "object": "Biomarker:Glucose",
+      "source": "Condition:Diabetes",
+      "target": "Biomarker:Glucose"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "evidence_id": "D02",
+      "subject": "Condition:Diabetes",
+      "object": "Symptom:Thirst",
+      "source": "Condition:Diabetes",
+      "target": "Symptom:Thirst"
+    },
+    {
+      "relation": "EVALUATED_BY",
+      "evidence_id": "D03",
+      "subject": "Condition:Diabetes",
+      "object": "DiagnosticTest:BloodTests",
+      "source": "Condition:Diabetes",
+      "target": "DiagnosticTest:BloodTests"
+    },
+    {
+      "relation": "MANAGEMENT_COMPONENT",
+      "evidence_id": "D05",
+      "subject": "Condition:Diabetes",
+      "object": "Lifestyle:MealPlan",
+      "source": "Condition:Diabetes",
+      "target": "Lifestyle:MealPlan"
+    },
+    {
+      "relation": "MANAGEMENT_COMPONENT",
+      "evidence_id": "D06",
+      "subject": "Condition:Diabetes",
+      "object": "Lifestyle:PhysicalActivity",
+      "source": "Condition:Diabetes",
+      "target": "Lifestyle:PhysicalActivity"
+    },
+    {
+      "relation": "REFLECTS",
+      "evidence_id": "D04",
+      "subject": "Biomarker:A1C",
+      "object": "TimeWindow:ThreeMonths",
+      "source": "Biomarker:A1C",
+      "target": "TimeWindow:ThreeMonths"
+    },
+    {
+      "relation": "CAN_DELAY",
+      "evidence_id": "D07",
+      "subject": "Lifestyle:Prevention",
+      "object": "Condition:Type2Diabetes",
+      "source": "Lifestyle:Prevention",
+      "target": "Condition:Type2Diabetes"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "evidence_id": "D08",
+      "subject": "Condition:Hypoglycemia",
+      "object": "Symptom:Dizziness",
+      "source": "Condition:Hypoglycemia",
+      "target": "Symptom:Dizziness"
+    },
+    {
+      "relation": "MONITORED_BY",
+      "evidence_id": "D09",
+      "subject": "Condition:KidneyDisease",
+      "object": "Biomarker:GFR",
+      "source": "Condition:KidneyDisease",
+      "target": "Biomarker:GFR"
+    },
+    {
+      "relation": "GUIDANCE_FROM",
+      "evidence_id": "D10",
+      "subject": "Drug:Insulin",
+      "object": "Facility:HealthCareTeam",
+      "source": "Drug:Insulin",
+      "target": "Facility:HealthCareTeam"
+    }
+  ]
+}

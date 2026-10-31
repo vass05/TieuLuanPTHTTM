@@ -1,16 +1,19 @@
 # -*- coding: utf-8 -*-
 """
 app.py - Main Entrypoint cho Hệ thống Ứng dụng Thông minh theo Kiến trúc MVC
-Tích hợp trọn vẹn 3 mô hình học máy tối ưu:
+Tích hợp các mô hình học máy và trợ lý tiểu đường:
 1. Model Dự Báo Chuỗi Thời Gian (Keras LSTM - AMZN.csv / AEP_hourly.csv)
 2. Model Định Giá Bất Động Sản (XGBoost Regressor - Vietnam Housing)
 3. Model Thị Giác Máy Tính (SE-Block CNN - Fashion-MNIST)
+4. Trợ lý tiểu đường (MLP, tri thức có nguồn, Rule-Based/Q-learning)
 """
 
 import os
 import sys
 import socket
-from flask import Flask, jsonify, request
+import secrets
+from pathlib import Path
+from flask import Flask, jsonify, request, redirect, url_for
 
 try:
     if hasattr(sys.stdout, 'reconfigure'):
@@ -19,10 +22,12 @@ except Exception:
     pass
 
 # Import các tầng Controller (C)
-from mvc.controllers.timeseries_controller import timeseries_bp
-from mvc.controllers.housing_controller import housing_bp
-from mvc.controllers.vision_controller import vision_bp
+from mvc.controllers.timeseries_controller import timeseries_bp, ts_model
+from mvc.controllers.housing_controller import housing_bp, house_model
+from mvc.controllers.vision_controller import vision_bp, vision_model
 from mvc.controllers.rag_controller import rag_bp
+from mvc.controllers.agents_controller import agents_bp
+from mvc.models.model_errors import ModelUnavailableError
 
 # Khởi tạo ứng dụng Flask với đường dẫn MVC views và static
 app = Flask(
@@ -32,25 +37,48 @@ app = Flask(
 )
 app.config['JSON_AS_ASCII'] = False
 app.config['TEMPLATES_AUTO_RELOAD'] = True
+app.json.ensure_ascii = False
+# A local persistent signing key keeps task ownership valid across restarts.
+# The instance directory is excluded from version control.
+instance_dir = Path(app.instance_path)
+instance_dir.mkdir(parents=True, exist_ok=True)
+secret_file = instance_dir / 'session_secret.key'
+if os.environ.get('FLASK_SECRET_KEY'):
+    app.config['SECRET_KEY'] = os.environ['FLASK_SECRET_KEY']
+else:
+    try:
+        with secret_file.open('x', encoding='ascii') as secret_handle:
+            secret_handle.write(secrets.token_hex(32))
+    except FileExistsError:
+        pass
+    app.config['SECRET_KEY'] = secret_file.read_text(encoding='ascii').strip()
+app.config.update(SESSION_COOKIE_HTTPONLY=True, SESSION_COOKIE_SAMESITE='Lax',
+                  AGENTS_DATABASE=str(instance_dir / 'agents.sqlite3'))
 
 # Đăng ký các Blueprints
 app.register_blueprint(timeseries_bp)
 app.register_blueprint(housing_bp)
 app.register_blueprint(vision_bp)
 app.register_blueprint(rag_bp)
+app.register_blueprint(agents_bp)
+
+
+@app.route('/')
+def index():
+    return redirect(url_for('agents.index'))
 
 # Đồng bộ tương thích ngược với các endpoint cũ của 3 API đơn lẻ + RAG
-from mvc.models.housing_model import HousingModel
-from mvc.models.vision_model import VisionModel
-from mvc.models.timeseries_model import TimeSeriesModel
-from mvc.models.rag_model import RAGModel
+legacy_housing_model = house_model
+legacy_vision_model = vision_model
+legacy_ts_model = ts_model
 
-legacy_housing_model = HousingModel()
-legacy_vision_model = VisionModel()
-legacy_ts_model = TimeSeriesModel()
-legacy_rag_model = RAGModel()
-legacy_vision_model = VisionModel()
-legacy_ts_model = TimeSeriesModel()
+
+@app.errorhandler(ModelUnavailableError)
+def model_unavailable(error):
+    if request.path.startswith('/api/'):
+        return jsonify(success=False,error=str(error)),503
+    from flask import render_template
+    return render_template('model_unavailable.html',message=str(error)),503
 
 @app.route('/api/predict', methods=['POST'])
 def legacy_housing_predict():

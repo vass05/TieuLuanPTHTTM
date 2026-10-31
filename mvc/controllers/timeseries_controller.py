@@ -11,7 +11,6 @@ from mvc.models.timeseries_model import TimeSeriesModel
 timeseries_bp = Blueprint('timeseries', __name__, template_folder='../views')
 ts_model = TimeSeriesModel()
 
-@timeseries_bp.route('/')
 @timeseries_bp.route('/timeseries')
 def index():
     """Trang chủ hiển thị Bảng điều khiển dự báo giá cổ phiếu (Giao diện chuẩn tham khảo)"""

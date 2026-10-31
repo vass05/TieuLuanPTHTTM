@@ -1,0 +1,6549 @@
+{
+  "directed": true,
+  "multigraph": true,
+  "graph": {},
+  "nodes": [
+    {
+      "kind": "document",
+      "label": "Bệnh tiểu đường là gì?",
+      "id": "D01"
+    },
+    {
+      "kind": "source",
+      "label": "NIDDK / NIH",
+      "id": "https://www.niddk.nih.gov/health-information/diabetes/overview/what-is-diabetes"
+    },
+    {
+      "kind": "alias",
+      "label": "khai niem tieu duong",
+      "id": "alias:khai niem tieu duong"
+    },
+    {
+      "kind": "alias",
+      "label": "dai thao duong la gi",
+      "id": "alias:dai thao duong la gi"
+    },
+    {
+      "kind": "alias",
+      "label": "tieu duong la gi",
+      "id": "alias:tieu duong la gi"
+    },
+    {
+      "kind": "alias",
+      "label": "insulin co vai tro",
+      "id": "alias:insulin co vai tro"
+    },
+    {
+      "kind": "concept",
+      "label": "Condition:Diabetes",
+      "id": "concept:condition diabetes"
+    },
+    {
+      "kind": "concept",
+      "label": "Biomarker:Glucose",
+      "id": "concept:biomarker glucose"
+    },
+    {
+      "kind": "document",
+      "label": "Triệu chứng và nguyên nhân",
+      "id": "D02"
+    },
+    {
+      "kind": "source",
+      "label": "NIDDK / NIH",
+      "id": "https://www.niddk.nih.gov/health-information/diabetes/overview/symptoms-causes"
+    },
+    {
+      "kind": "alias",
+      "label": "vet thuong",
+      "id": "alias:vet thuong"
+    },
+    {
+      "kind": "alias",
+      "label": "bieu hien",
+      "id": "alias:bieu hien"
+    },
+    {
+      "kind": "alias",
+      "label": "nhin mo",
+      "id": "alias:nhin mo"
+    },
+    {
+      "kind": "alias",
+      "label": "khat nhieu",
+      "id": "alias:khat nhieu"
+    },
+    {
+      "kind": "alias",
+      "label": "trieu chung",
+      "id": "alias:trieu chung"
+    },
+    {
+      "kind": "alias",
+      "label": "tieu nhieu",
+      "id": "alias:tieu nhieu"
+    },
+    {
+      "kind": "concept",
+      "label": "Symptom:Thirst",
+      "id": "concept:symptom thirst"
+    },
+    {
+      "kind": "document",
+      "label": "Xét nghiệm và chẩn đoán",
+      "id": "D03"
+    },
+    {
+      "kind": "source",
+      "label": "NIDDK / NIH",
+      "id": "https://www.niddk.nih.gov/health-information/diabetes/overview/tests-diagnosis"
+    },
+    {
+      "kind": "alias",
+      "label": "xet nghiem",
+      "id": "alias:xet nghiem"
+    },
+    {
+      "kind": "alias",
+      "label": "glucose luc doi",
+      "id": "alias:glucose luc doi"
+    },
+    {
+      "kind": "alias",
+      "label": "may do tai nha",
+      "id": "alias:may do tai nha"
+    },
+    {
+      "kind": "alias",
+      "label": "chan doan",
+      "id": "alias:chan doan"
+    },
+    {
+      "kind": "alias",
+      "label": "dung nap glucose",
+      "id": "alias:dung nap glucose"
+    },
+    {
+      "kind": "concept",
+      "label": "DiagnosticTest:BloodTests",
+      "id": "concept:diagnostictest bloodtests"
+    },
+    {
+      "kind": "document",
+      "label": "Theo dõi A1C và kế hoạch chăm sóc",
+      "id": "D04"
+    },
+    {
+      "kind": "source",
+      "label": "NIDDK / NIH",
+      "id": "https://www.niddk.nih.gov/health-information/diabetes/overview/managing-diabetes"
+    },
+    {
+      "kind": "alias",
+      "label": "cholesterol",
+      "id": "alias:cholesterol"
+    },
+    {
+      "kind": "alias",
+      "label": "huyet ap",
+      "id": "alias:huyet ap"
+    },
+    {
+      "kind": "alias",
+      "label": "ke hoach cham soc",
+      "id": "alias:ke hoach cham soc"
+    },
+    {
+      "kind": "alias",
+      "label": "a1c",
+      "id": "alias:a1c"
+    },
+    {
+      "kind": "alias",
+      "label": "ba thang",
+      "id": "alias:ba thang"
+    },
+    {
+      "kind": "alias",
+      "label": "hba1c",
+      "id": "alias:hba1c"
+    },
+    {
+      "kind": "concept",
+      "label": "Biomarker:A1C",
+      "id": "concept:biomarker a1c"
+    },
+    {
+      "kind": "concept",
+      "label": "TimeWindow:ThreeMonths",
+      "id": "concept:timewindow threemonths"
+    },
+    {
+      "kind": "document",
+      "label": "Lựa chọn thực phẩm",
+      "id": "D05"
+    },
+    {
+      "kind": "source",
+      "label": "NIDDK / NIH",
+      "id": "https://www.niddk.nih.gov/health-information/diabetes/overview/healthy-living-with-diabetes"
+    },
+    {
+      "kind": "alias",
+      "label": "bua an",
+      "id": "alias:bua an"
+    },
+    {
+      "kind": "alias",
+      "label": "thuc pham",
+      "id": "alias:thuc pham"
+    },
+    {
+      "kind": "alias",
+      "label": "an uong",
+      "id": "alias:an uong"
+    },
+    {
+      "kind": "alias",
+      "label": "do uong",
+      "id": "alias:do uong"
+    },
+    {
+      "kind": "alias",
+      "label": "dinh duong",
+      "id": "alias:dinh duong"
+    },
+    {
+      "kind": "alias",
+      "label": "khau phan",
+      "id": "alias:khau phan"
+    },
+    {
+      "kind": "concept",
+      "label": "Lifestyle:MealPlan",
+      "id": "concept:lifestyle mealplan"
+    },
+    {
+      "kind": "document",
+      "label": "Vận động và lối sống",
+      "id": "D06"
+    },
+    {
+      "kind": "alias",
+      "label": "hoat dong the chat",
+      "id": "alias:hoat dong the chat"
+    },
+    {
+      "kind": "alias",
+      "label": "di bo",
+      "id": "alias:di bo"
+    },
+    {
+      "kind": "alias",
+      "label": "tap luyen",
+      "id": "alias:tap luyen"
+    },
+    {
+      "kind": "alias",
+      "label": "the duc",
+      "id": "alias:the duc"
+    },
+    {
+      "kind": "alias",
+      "label": "van dong",
+      "id": "alias:van dong"
+    },
+    {
+      "kind": "concept",
+      "label": "Lifestyle:PhysicalActivity",
+      "id": "concept:lifestyle physicalactivity"
+    },
+    {
+      "kind": "document",
+      "label": "Phòng ngừa tiểu đường tuýp 2",
+      "id": "D07"
+    },
+    {
+      "kind": "source",
+      "label": "NIDDK / NIH",
+      "id": "https://www.niddk.nih.gov/health-information/diabetes/overview/preventing-type-2-diabetes"
+    },
+    {
+      "kind": "alias",
+      "label": "tri hoan",
+      "id": "alias:tri hoan"
+    },
+    {
+      "kind": "alias",
+      "label": "can nang",
+      "id": "alias:can nang"
+    },
+    {
+      "kind": "alias",
+      "label": "nguy co",
+      "id": "alias:nguy co"
+    },
+    {
+      "kind": "alias",
+      "label": "phong ngua",
+      "id": "alias:phong ngua"
+    },
+    {
+      "kind": "alias",
+      "label": "thua can",
+      "id": "alias:thua can"
+    },
+    {
+      "kind": "concept",
+      "label": "Lifestyle:Prevention",
+      "id": "concept:lifestyle prevention"
+    },
+    {
+      "kind": "concept",
+      "label": "Condition:Type2Diabetes",
+      "id": "concept:condition type2diabetes"
+    },
+    {
+      "kind": "document",
+      "label": "Thông tin về hạ đường huyết",
+      "id": "D08"
+    },
+    {
+      "kind": "source",
+      "label": "NIDDK / NIH",
+      "id": "https://www.niddk.nih.gov/health-information/diabetes/overview/preventing-problems/low-blood-glucose-hypoglycemia"
+    },
+    {
+      "kind": "alias",
+      "label": "glucose thap",
+      "id": "alias:glucose thap"
+    },
+    {
+      "kind": "alias",
+      "label": "run tay",
+      "id": "alias:run tay"
+    },
+    {
+      "kind": "alias",
+      "label": "chong mat",
+      "id": "alias:chong mat"
+    },
+    {
+      "kind": "alias",
+      "label": "ha duong huyet",
+      "id": "alias:ha duong huyet"
+    },
+    {
+      "kind": "alias",
+      "label": "lu lan",
+      "id": "alias:lu lan"
+    },
+    {
+      "kind": "concept",
+      "label": "Condition:Hypoglycemia",
+      "id": "concept:condition hypoglycemia"
+    },
+    {
+      "kind": "concept",
+      "label": "Symptom:Dizziness",
+      "id": "concept:symptom dizziness"
+    },
+    {
+      "kind": "document",
+      "label": "Xét nghiệm theo dõi thận",
+      "id": "D09"
+    },
+    {
+      "kind": "source",
+      "label": "NIDDK / NIH",
+      "id": "https://www.niddk.nih.gov/health-information/kidney-disease/chronic-kidney-disease-ckd/tests-diagnosis"
+    },
+    {
+      "kind": "alias",
+      "label": "nuoc tieu",
+      "id": "alias:nuoc tieu"
+    },
+    {
+      "kind": "alias",
+      "label": "than",
+      "id": "alias:than"
+    },
+    {
+      "kind": "alias",
+      "label": "egfr",
+      "id": "alias:egfr"
+    },
+    {
+      "kind": "alias",
+      "label": "gfr",
+      "id": "alias:gfr"
+    },
+    {
+      "kind": "alias",
+      "label": "muc loc cau than",
+      "id": "alias:muc loc cau than"
+    },
+    {
+      "kind": "alias",
+      "label": "albumin",
+      "id": "alias:albumin"
+    },
+    {
+      "kind": "concept",
+      "label": "Condition:KidneyDisease",
+      "id": "concept:condition kidneydisease"
+    },
+    {
+      "kind": "concept",
+      "label": "Biomarker:GFR",
+      "id": "concept:biomarker gfr"
+    },
+    {
+      "kind": "document",
+      "label": "Thuốc và trao đổi với đội ngũ chăm sóc",
+      "id": "D10"
+    },
+    {
+      "kind": "source",
+      "label": "NIDDK / NIH",
+      "id": "https://www.niddk.nih.gov/health-information/diabetes/overview/insulin-medicines-treatments"
+    },
+    {
+      "kind": "alias",
+      "label": "insulin",
+      "id": "alias:insulin"
+    },
+    {
+      "kind": "alias",
+      "label": "thuoc",
+      "id": "alias:thuoc"
+    },
+    {
+      "kind": "alias",
+      "label": "tac dung phu",
+      "id": "alias:tac dung phu"
+    },
+    {
+      "kind": "alias",
+      "label": "dieu tri",
+      "id": "alias:dieu tri"
+    },
+    {
+      "kind": "alias",
+      "label": "cach dung",
+      "id": "alias:cach dung"
+    },
+    {
+      "kind": "concept",
+      "label": "Drug:Insulin",
+      "id": "concept:drug insulin"
+    },
+    {
+      "kind": "concept",
+      "label": "Facility:HealthCareTeam",
+      "id": "concept:facility healthcareteam"
+    },
+    {
+      "kind": "document",
+      "label": "Tiểu đường tuýp 2 là gì?",
+      "id": "K01"
+    },
+    {
+      "kind": "source",
+      "label": "NIDDK / NIH",
+      "id": "https://www.niddk.nih.gov/health-information/diabetes/overview/what-is-diabetes/type-2-diabetes"
+    },
+    {
+      "kind": "alias",
+      "label": "de khang insulin",
+      "id": "alias:de khang insulin"
+    },
+    {
+      "kind": "alias",
+      "label": "khang insulin",
+      "id": "alias:khang insulin"
+    },
+    {
+      "kind": "alias",
+      "label": "tuyp 2",
+      "id": "alias:tuyp 2"
+    },
+    {
+      "kind": "concept",
+      "label": "Tiểu đường tuýp 2",
+      "id": "concept:tieu duong tuyp 2"
+    },
+    {
+      "kind": "concept",
+      "label": "Đề kháng insulin",
+      "id": "concept:de khang insulin"
+    },
+    {
+      "kind": "concept",
+      "label": "Thiếu insulin tương đối",
+      "id": "concept:thieu insulin tuong doi"
+    },
+    {
+      "kind": "concept",
+      "label": "Insulin",
+      "id": "concept:insulin"
+    },
+    {
+      "kind": "concept",
+      "label": "Glucose",
+      "id": "concept:glucose"
+    },
+    {
+      "kind": "concept",
+      "label": "Xét nghiệm đường huyết",
+      "id": "concept:xet nghiem duong huyet"
+    },
+    {
+      "kind": "document",
+      "label": "Tiểu đường tuýp 1 và sự khác biệt với tuýp 2",
+      "id": "K02"
+    },
+    {
+      "kind": "source",
+      "label": "NIDDK / NIH",
+      "id": "https://www.niddk.nih.gov/health-information/diabetes/overview/what-is-diabetes/type-1-diabetes"
+    },
+    {
+      "kind": "alias",
+      "label": "khac nhau giua",
+      "id": "alias:khac nhau giua"
+    },
+    {
+      "kind": "alias",
+      "label": "tu mien",
+      "id": "alias:tu mien"
+    },
+    {
+      "kind": "alias",
+      "label": "phan biet hai loai",
+      "id": "alias:phan biet hai loai"
+    },
+    {
+      "kind": "alias",
+      "label": "tuyp 1",
+      "id": "alias:tuyp 1"
+    },
+    {
+      "kind": "concept",
+      "label": "Tiểu đường tuýp 1",
+      "id": "concept:tieu duong tuyp 1"
+    },
+    {
+      "kind": "concept",
+      "label": "Tự miễn",
+      "id": "concept:tu mien"
+    },
+    {
+      "kind": "concept",
+      "label": "Tế bào beta tụy",
+      "id": "concept:te bao beta tuy"
+    },
+    {
+      "kind": "concept",
+      "label": "Insulin hằng ngày",
+      "id": "concept:insulin hang ngay"
+    },
+    {
+      "kind": "document",
+      "label": "Tiền tiểu đường và kháng insulin",
+      "id": "K03"
+    },
+    {
+      "kind": "source",
+      "label": "NIDDK / NIH",
+      "id": "https://www.niddk.nih.gov/health-information/diabetes/overview/what-is-diabetes/prediabetes-insulin-resistance"
+    },
+    {
+      "kind": "alias",
+      "label": "nguy co thanh tieu duong",
+      "id": "alias:nguy co thanh tieu duong"
+    },
+    {
+      "kind": "alias",
+      "label": "khang insulin la gi",
+      "id": "alias:khang insulin la gi"
+    },
+    {
+      "kind": "alias",
+      "label": "tien tieu duong",
+      "id": "alias:tien tieu duong"
+    },
+    {
+      "kind": "alias",
+      "label": "prediabetes",
+      "id": "alias:prediabetes"
+    },
+    {
+      "kind": "alias",
+      "label": "tien dai thao duong",
+      "id": "alias:tien dai thao duong"
+    },
+    {
+      "kind": "concept",
+      "label": "Tiền tiểu đường",
+      "id": "concept:tien tieu duong"
+    },
+    {
+      "kind": "concept",
+      "label": "Kháng insulin",
+      "id": "concept:khang insulin"
+    },
+    {
+      "kind": "concept",
+      "label": "Đáp ứng với insulin",
+      "id": "concept:dap ung voi insulin"
+    },
+    {
+      "kind": "concept",
+      "label": "Triệu chứng rõ rệt",
+      "id": "concept:trieu chung ro ret"
+    },
+    {
+      "kind": "concept",
+      "label": "Hoạt động thể chất",
+      "id": "concept:hoat dong the chat"
+    },
+    {
+      "kind": "document",
+      "label": "Tiểu đường thai kỳ",
+      "id": "K04"
+    },
+    {
+      "kind": "source",
+      "label": "NIDDK / NIH",
+      "id": "https://www.niddk.nih.gov/health-information/diabetes/overview/what-is-diabetes/gestational/definition-facts"
+    },
+    {
+      "kind": "alias",
+      "label": "sau sinh",
+      "id": "alias:sau sinh"
+    },
+    {
+      "kind": "alias",
+      "label": "anh huong em be",
+      "id": "alias:anh huong em be"
+    },
+    {
+      "kind": "alias",
+      "label": "bau",
+      "id": "alias:bau"
+    },
+    {
+      "kind": "alias",
+      "label": "24 tuan",
+      "id": "alias:24 tuan"
+    },
+    {
+      "kind": "alias",
+      "label": "28 tuan",
+      "id": "alias:28 tuan"
+    },
+    {
+      "kind": "alias",
+      "label": "thai ky",
+      "id": "alias:thai ky"
+    },
+    {
+      "kind": "alias",
+      "label": "mang thai",
+      "id": "alias:mang thai"
+    },
+    {
+      "kind": "concept",
+      "label": "Tiểu đường thai kỳ",
+      "id": "concept:tieu duong thai ky"
+    },
+    {
+      "kind": "concept",
+      "label": "Mang thai",
+      "id": "concept:mang thai"
+    },
+    {
+      "kind": "concept",
+      "label": "Tuần thai 24–28",
+      "id": "concept:tuan thai 24 28"
+    },
+    {
+      "kind": "concept",
+      "label": "Đường huyết cao khi mang thai",
+      "id": "concept:duong huyet cao khi mang thai"
+    },
+    {
+      "kind": "concept",
+      "label": "Thai lớn",
+      "id": "concept:thai lon"
+    },
+    {
+      "kind": "concept",
+      "label": "Chăm sóc sản khoa",
+      "id": "concept:cham soc san khoa"
+    },
+    {
+      "kind": "document",
+      "label": "Người tiểu đường có uống rượu bia được không?",
+      "id": "K05"
+    },
+    {
+      "kind": "source",
+      "label": "MedlinePlus / NIH",
+      "id": "https://www.medlineplus.gov/ency/patientinstructions/000968.htm"
+    },
+    {
+      "kind": "alias",
+      "label": "ruou",
+      "id": "alias:ruou"
+    },
+    {
+      "kind": "alias",
+      "label": "bia",
+      "id": "alias:bia"
+    },
+    {
+      "kind": "alias",
+      "label": "uong con",
+      "id": "alias:uong con"
+    },
+    {
+      "kind": "alias",
+      "label": "alcohol",
+      "id": "alias:alcohol"
+    },
+    {
+      "kind": "alias",
+      "label": "ruu",
+      "id": "alias:ruu"
+    },
+    {
+      "kind": "alias",
+      "label": "nhau",
+      "id": "alias:nhau"
+    },
+    {
+      "kind": "alias",
+      "label": "ruou vang",
+      "id": "alias:ruou vang"
+    },
+    {
+      "kind": "alias",
+      "label": "do uong co con",
+      "id": "alias:do uong co con"
+    },
+    {
+      "kind": "concept",
+      "label": "Rượu bia",
+      "id": "concept:ruou bia"
+    },
+    {
+      "kind": "concept",
+      "label": "Hạ đường huyết",
+      "id": "concept:ha duong huyet"
+    },
+    {
+      "kind": "concept",
+      "label": "Thuốc tiểu đường",
+      "id": "concept:thuoc tieu duong"
+    },
+    {
+      "kind": "concept",
+      "label": "Uống rượu lúc đói",
+      "id": "concept:uong ruou luc doi"
+    },
+    {
+      "kind": "document",
+      "label": "Nước cam, nước ép, mật ong và đồ uống ngọt",
+      "id": "K06"
+    },
+    {
+      "kind": "source",
+      "label": "CDC",
+      "id": "https://www.cdc.gov/diabetes/healthy-eating/choosing-healthy-carbs.html"
+    },
+    {
+      "kind": "alias",
+      "label": "nuoc mia",
+      "id": "alias:nuoc mia"
+    },
+    {
+      "kind": "alias",
+      "label": "nuoc trai cay",
+      "id": "alias:nuoc trai cay"
+    },
+    {
+      "kind": "alias",
+      "label": "tra sua",
+      "id": "alias:tra sua"
+    },
+    {
+      "kind": "alias",
+      "label": "mat ong",
+      "id": "alias:mat ong"
+    },
+    {
+      "kind": "alias",
+      "label": "nuoc ngot",
+      "id": "alias:nuoc ngot"
+    },
+    {
+      "kind": "alias",
+      "label": "duong tu nhien",
+      "id": "alias:duong tu nhien"
+    },
+    {
+      "kind": "alias",
+      "label": "nuoc cam",
+      "id": "alias:nuoc cam"
+    },
+    {
+      "kind": "alias",
+      "label": "ep trai cay",
+      "id": "alias:ep trai cay"
+    },
+    {
+      "kind": "alias",
+      "label": "nuoc ep",
+      "id": "alias:nuoc ep"
+    },
+    {
+      "kind": "concept",
+      "label": "Nước ép trái cây",
+      "id": "concept:nuoc ep trai cay"
+    },
+    {
+      "kind": "concept",
+      "label": "Carbohydrate đơn",
+      "id": "concept:carbohydrate don"
+    },
+    {
+      "kind": "concept",
+      "label": "Mật ong",
+      "id": "concept:mat ong"
+    },
+    {
+      "kind": "concept",
+      "label": "Đường huyết",
+      "id": "concept:duong huyet"
+    },
+    {
+      "kind": "concept",
+      "label": "Trái cây nguyên quả",
+      "id": "concept:trai cay nguyen qua"
+    },
+    {
+      "kind": "concept",
+      "label": "Chất xơ",
+      "id": "concept:chat xo"
+    },
+    {
+      "kind": "document",
+      "label": "Cơm, bún, phở và carbohydrate",
+      "id": "K07"
+    },
+    {
+      "kind": "alias",
+      "label": "gao lut",
+      "id": "alias:gao lut"
+    },
+    {
+      "kind": "alias",
+      "label": "com",
+      "id": "alias:com"
+    },
+    {
+      "kind": "alias",
+      "label": "tinh bot",
+      "id": "alias:tinh bot"
+    },
+    {
+      "kind": "alias",
+      "label": "bun",
+      "id": "alias:bun"
+    },
+    {
+      "kind": "alias",
+      "label": "gao",
+      "id": "alias:gao"
+    },
+    {
+      "kind": "alias",
+      "label": "banh mi",
+      "id": "alias:banh mi"
+    },
+    {
+      "kind": "alias",
+      "label": "carb",
+      "id": "alias:carb"
+    },
+    {
+      "kind": "alias",
+      "label": "yen mach",
+      "id": "alias:yen mach"
+    },
+    {
+      "kind": "alias",
+      "label": "carbohydrate",
+      "id": "alias:carbohydrate"
+    },
+    {
+      "kind": "alias",
+      "label": "pho",
+      "id": "alias:pho"
+    },
+    {
+      "kind": "concept",
+      "label": "Gạo trắng",
+      "id": "concept:gao trang"
+    },
+    {
+      "kind": "concept",
+      "label": "Ngũ cốc tinh chế",
+      "id": "concept:ngu coc tinh che"
+    },
+    {
+      "kind": "concept",
+      "label": "Ngũ cốc nguyên hạt",
+      "id": "concept:ngu coc nguyen hat"
+    },
+    {
+      "kind": "concept",
+      "label": "Kiểm soát carbohydrate",
+      "id": "concept:kiem soat carbohydrate"
+    },
+    {
+      "kind": "concept",
+      "label": "Khẩu phần",
+      "id": "concept:khau phan"
+    },
+    {
+      "kind": "concept",
+      "label": "Chế độ ăn tiểu đường",
+      "id": "concept:che do an tieu duong"
+    },
+    {
+      "kind": "concept",
+      "label": "Carbohydrate",
+      "id": "concept:carbohydrate"
+    },
+    {
+      "kind": "document",
+      "label": "Trái cây, sữa, đậu và lựa chọn thực phẩm",
+      "id": "K08"
+    },
+    {
+      "kind": "source",
+      "label": "ADA",
+      "id": "https://diabetes.org/food-nutrition/food-and-blood-sugar/diabetes-superstar-foods"
+    },
+    {
+      "kind": "alias",
+      "label": "cam",
+      "id": "alias:cam"
+    },
+    {
+      "kind": "alias",
+      "label": "sua chua",
+      "id": "alias:sua chua"
+    },
+    {
+      "kind": "alias",
+      "label": "sua",
+      "id": "alias:sua"
+    },
+    {
+      "kind": "alias",
+      "label": "cac loai hat",
+      "id": "alias:cac loai hat"
+    },
+    {
+      "kind": "alias",
+      "label": "hoa qua",
+      "id": "alias:hoa qua"
+    },
+    {
+      "kind": "alias",
+      "label": "buoi",
+      "id": "alias:buoi"
+    },
+    {
+      "kind": "alias",
+      "label": "chuoi",
+      "id": "alias:chuoi"
+    },
+    {
+      "kind": "alias",
+      "label": "dau",
+      "id": "alias:dau"
+    },
+    {
+      "kind": "alias",
+      "label": "ca",
+      "id": "alias:ca"
+    },
+    {
+      "kind": "alias",
+      "label": "xoai",
+      "id": "alias:xoai"
+    },
+    {
+      "kind": "alias",
+      "label": "sau rieng",
+      "id": "alias:sau rieng"
+    },
+    {
+      "kind": "alias",
+      "label": "trai cay",
+      "id": "alias:trai cay"
+    },
+    {
+      "kind": "concept",
+      "label": "Trái cây",
+      "id": "concept:trai cay"
+    },
+    {
+      "kind": "concept",
+      "label": "Rau lá xanh",
+      "id": "concept:rau la xanh"
+    },
+    {
+      "kind": "concept",
+      "label": "Rau ít tinh bột",
+      "id": "concept:rau it tinh bot"
+    },
+    {
+      "kind": "concept",
+      "label": "Đậu",
+      "id": "concept:dau"
+    },
+    {
+      "kind": "concept",
+      "label": "Thực phẩm giàu dưỡng chất",
+      "id": "concept:thuc pham giau duong chat"
+    },
+    {
+      "kind": "concept",
+      "label": "Cá",
+      "id": "concept:ca"
+    },
+    {
+      "kind": "concept",
+      "label": "Protein",
+      "id": "concept:protein"
+    },
+    {
+      "kind": "concept",
+      "label": "Siêu thực phẩm",
+      "id": "concept:sieu thuc pham"
+    },
+    {
+      "kind": "concept",
+      "label": "Thuốc chữa tiểu đường",
+      "id": "concept:thuoc chua tieu duong"
+    },
+    {
+      "kind": "document",
+      "label": "Chăm sóc bàn chân và vết thương",
+      "id": "K09"
+    },
+    {
+      "kind": "source",
+      "label": "NIDDK / NIH",
+      "id": "https://www.niddk.nih.gov/health-information/diabetes/overview/preventing-problems/foot-problems"
+    },
+    {
+      "kind": "alias",
+      "label": "ban chan",
+      "id": "alias:ban chan"
+    },
+    {
+      "kind": "alias",
+      "label": "giay dep",
+      "id": "alias:giay dep"
+    },
+    {
+      "kind": "alias",
+      "label": "loet chan",
+      "id": "alias:loet chan"
+    },
+    {
+      "kind": "alias",
+      "label": "cham lanh",
+      "id": "alias:cham lanh"
+    },
+    {
+      "kind": "alias",
+      "label": "cat mong",
+      "id": "alias:cat mong"
+    },
+    {
+      "kind": "alias",
+      "label": "di chan dat",
+      "id": "alias:di chan dat"
+    },
+    {
+      "kind": "alias",
+      "label": "nhiem trung chan",
+      "id": "alias:nhiem trung chan"
+    },
+    {
+      "kind": "concept",
+      "label": "Tiểu đường",
+      "id": "concept:tieu duong"
+    },
+    {
+      "kind": "concept",
+      "label": "Giảm tuần hoàn chân",
+      "id": "concept:giam tuan hoan chan"
+    },
+    {
+      "kind": "concept",
+      "label": "Tổn thương thần kinh",
+      "id": "concept:ton thuong than kinh"
+    },
+    {
+      "kind": "concept",
+      "label": "Mất cảm giác bàn chân",
+      "id": "concept:mat cam giac ban chan"
+    },
+    {
+      "kind": "concept",
+      "label": "Lành vết thương",
+      "id": "concept:lanh vet thuong"
+    },
+    {
+      "kind": "concept",
+      "label": "Chăm sóc bàn chân",
+      "id": "concept:cham soc ban chan"
+    },
+    {
+      "kind": "concept",
+      "label": "Kiểm tra hằng ngày",
+      "id": "concept:kiem tra hang ngay"
+    },
+    {
+      "kind": "document",
+      "label": "Biến chứng mắt và khám võng mạc",
+      "id": "K10"
+    },
+    {
+      "kind": "source",
+      "label": "NIDDK / NIH",
+      "id": "https://www.niddk.nih.gov/health-information/diabetes/overview/preventing-problems/diabetic-eye-disease"
+    },
+    {
+      "kind": "alias",
+      "label": "glaucoma",
+      "id": "alias:glaucoma"
+    },
+    {
+      "kind": "alias",
+      "label": "kham day mat",
+      "id": "alias:kham day mat"
+    },
+    {
+      "kind": "alias",
+      "label": "mat",
+      "id": "alias:mat"
+    },
+    {
+      "kind": "alias",
+      "label": "mu",
+      "id": "alias:mu"
+    },
+    {
+      "kind": "alias",
+      "label": "duc thuy tinh the",
+      "id": "alias:duc thuy tinh the"
+    },
+    {
+      "kind": "alias",
+      "label": "vong mac",
+      "id": "alias:vong mac"
+    },
+    {
+      "kind": "alias",
+      "label": "thi luc",
+      "id": "alias:thi luc"
+    },
+    {
+      "kind": "alias",
+      "label": "mo mat",
+      "id": "alias:mo mat"
+    },
+    {
+      "kind": "concept",
+      "label": "Bệnh mắt do tiểu đường",
+      "id": "concept:benh mat do tieu duong"
+    },
+    {
+      "kind": "concept",
+      "label": "Bệnh võng mạc",
+      "id": "concept:benh vong mac"
+    },
+    {
+      "kind": "concept",
+      "label": "Phù hoàng điểm",
+      "id": "concept:phu hoang diem"
+    },
+    {
+      "kind": "concept",
+      "label": "Đục thủy tinh thể",
+      "id": "concept:duc thuy tinh the"
+    },
+    {
+      "kind": "concept",
+      "label": "Khám mắt giãn đồng tử",
+      "id": "concept:kham mat gian dong tu"
+    },
+    {
+      "kind": "document",
+      "label": "Tê bì, đau chân và thần kinh do tiểu đường",
+      "id": "K11"
+    },
+    {
+      "kind": "source",
+      "label": "NIDDK / NIH",
+      "id": "https://www.niddk.nih.gov/health-information/diabetes/overview/preventing-problems/nerve-damage-diabetic-neuropathies"
+    },
+    {
+      "kind": "alias",
+      "label": "dau rat",
+      "id": "alias:dau rat"
+    },
+    {
+      "kind": "alias",
+      "label": "te tay",
+      "id": "alias:te tay"
+    },
+    {
+      "kind": "alias",
+      "label": "mat cam giac",
+      "id": "alias:mat cam giac"
+    },
+    {
+      "kind": "alias",
+      "label": "neuropathy",
+      "id": "alias:neuropathy"
+    },
+    {
+      "kind": "alias",
+      "label": "than kinh",
+      "id": "alias:than kinh"
+    },
+    {
+      "kind": "alias",
+      "label": "cham chich",
+      "id": "alias:cham chich"
+    },
+    {
+      "kind": "alias",
+      "label": "te chan",
+      "id": "alias:te chan"
+    },
+    {
+      "kind": "alias",
+      "label": "te bi",
+      "id": "alias:te bi"
+    },
+    {
+      "kind": "concept",
+      "label": "Bệnh thần kinh ngoại biên",
+      "id": "concept:benh than kinh ngoai bien"
+    },
+    {
+      "kind": "concept",
+      "label": "Tê bì chân tay",
+      "id": "concept:te bi chan tay"
+    },
+    {
+      "kind": "concept",
+      "label": "Đau rát",
+      "id": "concept:dau rat"
+    },
+    {
+      "kind": "concept",
+      "label": "Bệnh thần kinh tự chủ",
+      "id": "concept:benh than kinh tu chu"
+    },
+    {
+      "kind": "concept",
+      "label": "Tiêu hóa",
+      "id": "concept:tieu hoa"
+    },
+    {
+      "kind": "concept",
+      "label": "Giảm nhận biết hạ đường huyết",
+      "id": "concept:giam nhan biet ha duong huyet"
+    },
+    {
+      "kind": "document",
+      "label": "Tim mạch, huyết áp và mỡ máu",
+      "id": "K12"
+    },
+    {
+      "kind": "source",
+      "label": "NIDDK / NIH",
+      "id": "https://www.niddk.nih.gov/health-information/diabetes/overview/preventing-problems/heart-disease-stroke"
+    },
+    {
+      "kind": "alias",
+      "label": "nhoi mau",
+      "id": "alias:nhoi mau"
+    },
+    {
+      "kind": "alias",
+      "label": "mo mau",
+      "id": "alias:mo mau"
+    },
+    {
+      "kind": "alias",
+      "label": "dot quy",
+      "id": "alias:dot quy"
+    },
+    {
+      "kind": "alias",
+      "label": "hut thuoc",
+      "id": "alias:hut thuoc"
+    },
+    {
+      "kind": "alias",
+      "label": "tim mach",
+      "id": "alias:tim mach"
+    },
+    {
+      "kind": "alias",
+      "label": "thuoc la",
+      "id": "alias:thuoc la"
+    },
+    {
+      "kind": "concept",
+      "label": "Bệnh tim mạch",
+      "id": "concept:benh tim mach"
+    },
+    {
+      "kind": "concept",
+      "label": "Đột quỵ",
+      "id": "concept:dot quy"
+    },
+    {
+      "kind": "concept",
+      "label": "Hút thuốc lá",
+      "id": "concept:hut thuoc la"
+    },
+    {
+      "kind": "concept",
+      "label": "Huyết áp cao",
+      "id": "concept:huyet ap cao"
+    },
+    {
+      "kind": "concept",
+      "label": "Nguy cơ tim mạch",
+      "id": "concept:nguy co tim mach"
+    },
+    {
+      "kind": "document",
+      "label": "Sức khỏe răng miệng",
+      "id": "K13"
+    },
+    {
+      "kind": "source",
+      "label": "NIDDK / NIH",
+      "id": "https://www.niddk.nih.gov/health-information/diabetes/overview/preventing-problems/gum-disease-dental-problems"
+    },
+    {
+      "kind": "alias",
+      "label": "chay mau chan rang",
+      "id": "alias:chay mau chan rang"
+    },
+    {
+      "kind": "alias",
+      "label": "rang",
+      "id": "alias:rang"
+    },
+    {
+      "kind": "alias",
+      "label": "rang mieng",
+      "id": "alias:rang mieng"
+    },
+    {
+      "kind": "alias",
+      "label": "kho mieng",
+      "id": "alias:kho mieng"
+    },
+    {
+      "kind": "alias",
+      "label": "loi",
+      "id": "alias:loi"
+    },
+    {
+      "kind": "alias",
+      "label": "nha si",
+      "id": "alias:nha si"
+    },
+    {
+      "kind": "alias",
+      "label": "nha chu",
+      "id": "alias:nha chu"
+    },
+    {
+      "kind": "alias",
+      "label": "nuou",
+      "id": "alias:nuou"
+    },
+    {
+      "kind": "concept",
+      "label": "Bệnh nướu",
+      "id": "concept:benh nuou"
+    },
+    {
+      "kind": "concept",
+      "label": "Đường huyết cao",
+      "id": "concept:duong huyet cao"
+    },
+    {
+      "kind": "concept",
+      "label": "Chăm sóc răng miệng",
+      "id": "concept:cham soc rang mieng"
+    },
+    {
+      "kind": "concept",
+      "label": "Vệ sinh kẽ răng",
+      "id": "concept:ve sinh ke rang"
+    },
+    {
+      "kind": "concept",
+      "label": "Khám nha khoa",
+      "id": "concept:kham nha khoa"
+    },
+    {
+      "kind": "document",
+      "label": "Máy đo đường huyết và cảm biến CGM",
+      "id": "K14"
+    },
+    {
+      "kind": "source",
+      "label": "NIDDK / NIH",
+      "id": "https://www.niddk.nih.gov/health-information/diabetes/overview/managing-diabetes/continuous-glucose-monitoring"
+    },
+    {
+      "kind": "alias",
+      "label": "may do",
+      "id": "alias:may do"
+    },
+    {
+      "kind": "alias",
+      "label": "theo doi glucose",
+      "id": "alias:theo doi glucose"
+    },
+    {
+      "kind": "alias",
+      "label": "dich ke",
+      "id": "alias:dich ke"
+    },
+    {
+      "kind": "alias",
+      "label": "duong huyet tai nha",
+      "id": "alias:duong huyet tai nha"
+    },
+    {
+      "kind": "alias",
+      "label": "cgm",
+      "id": "alias:cgm"
+    },
+    {
+      "kind": "alias",
+      "label": "do lien tuc",
+      "id": "alias:do lien tuc"
+    },
+    {
+      "kind": "alias",
+      "label": "cam bien",
+      "id": "alias:cam bien"
+    },
+    {
+      "kind": "concept",
+      "label": "CGM",
+      "id": "concept:cgm"
+    },
+    {
+      "kind": "concept",
+      "label": "Dịch kẽ",
+      "id": "concept:dich ke"
+    },
+    {
+      "kind": "concept",
+      "label": "Xu hướng đường huyết",
+      "id": "concept:xu huong duong huyet"
+    },
+    {
+      "kind": "concept",
+      "label": "Cảnh báo đường huyết",
+      "id": "concept:canh bao duong huyet"
+    },
+    {
+      "kind": "concept",
+      "label": "Đo đường huyết mao mạch",
+      "id": "concept:do duong huyet mao mach"
+    },
+    {
+      "kind": "concept",
+      "label": "Đầu ngón tay",
+      "id": "concept:dau ngon tay"
+    },
+    {
+      "kind": "document",
+      "label": "Khi sốt, cảm cúm hoặc bị ốm",
+      "id": "K15"
+    },
+    {
+      "kind": "source",
+      "label": "CDC",
+      "id": "https://www.cdc.gov/diabetes/living-with/managing-sick-days.html"
+    },
+    {
+      "kind": "alias",
+      "label": "om",
+      "id": "alias:om"
+    },
+    {
+      "kind": "alias",
+      "label": "sot",
+      "id": "alias:sot"
+    },
+    {
+      "kind": "alias",
+      "label": "bi benh",
+      "id": "alias:bi benh"
+    },
+    {
+      "kind": "alias",
+      "label": "khong an duoc",
+      "id": "alias:khong an duoc"
+    },
+    {
+      "kind": "alias",
+      "label": "non",
+      "id": "alias:non"
+    },
+    {
+      "kind": "alias",
+      "label": "sick day",
+      "id": "alias:sick day"
+    },
+    {
+      "kind": "alias",
+      "label": "cam cum",
+      "id": "alias:cam cum"
+    },
+    {
+      "kind": "alias",
+      "label": "ngay om",
+      "id": "alias:ngay om"
+    },
+    {
+      "kind": "alias",
+      "label": "tieu chay",
+      "id": "alias:tieu chay"
+    },
+    {
+      "kind": "concept",
+      "label": "Ngày ốm",
+      "id": "concept:ngay om"
+    },
+    {
+      "kind": "concept",
+      "label": "Kế hoạch ngày ốm",
+      "id": "concept:ke hoach ngay om"
+    },
+    {
+      "kind": "concept",
+      "label": "Theo dõi đường huyết",
+      "id": "concept:theo doi duong huyet"
+    },
+    {
+      "kind": "concept",
+      "label": "Không giữ được nước",
+      "id": "concept:khong giu duoc nuoc"
+    },
+    {
+      "kind": "concept",
+      "label": "Đánh giá y tế",
+      "id": "concept:danh gia y te"
+    },
+    {
+      "kind": "concept",
+      "label": "Ketone khi bị ốm",
+      "id": "concept:ketone khi bi om"
+    },
+    {
+      "kind": "document",
+      "label": "Nhiễm toan ceton và dấu hiệu nguy hiểm",
+      "id": "K16"
+    },
+    {
+      "kind": "source",
+      "label": "CDC",
+      "id": "https://www.cdc.gov/diabetes/about/diabetic-ketoacidosis.html"
+    },
+    {
+      "kind": "alias",
+      "label": "dau bung",
+      "id": "alias:dau bung"
+    },
+    {
+      "kind": "alias",
+      "label": "hoi tho mui trai cay",
+      "id": "alias:hoi tho mui trai cay"
+    },
+    {
+      "kind": "alias",
+      "label": "toan ketone",
+      "id": "alias:toan ketone"
+    },
+    {
+      "kind": "alias",
+      "label": "tho nhanh",
+      "id": "alias:tho nhanh"
+    },
+    {
+      "kind": "alias",
+      "label": "ceton",
+      "id": "alias:ceton"
+    },
+    {
+      "kind": "alias",
+      "label": "dka",
+      "id": "alias:dka"
+    },
+    {
+      "kind": "alias",
+      "label": "ketone",
+      "id": "alias:ketone"
+    },
+    {
+      "kind": "alias",
+      "label": "toan ceton",
+      "id": "alias:toan ceton"
+    },
+    {
+      "kind": "concept",
+      "label": "Thiếu insulin",
+      "id": "concept:thieu insulin"
+    },
+    {
+      "kind": "concept",
+      "label": "Nhiễm toan ceton",
+      "id": "concept:nhiem toan ceton"
+    },
+    {
+      "kind": "concept",
+      "label": "Tích tụ ketone",
+      "id": "concept:tich tu ketone"
+    },
+    {
+      "kind": "concept",
+      "label": "Thở nhanh sâu",
+      "id": "concept:tho nhanh sau"
+    },
+    {
+      "kind": "concept",
+      "label": "Đánh giá cấp cứu",
+      "id": "concept:danh gia cap cuu"
+    },
+    {
+      "kind": "document",
+      "label": "Du lịch và mang thuốc khi đi xa",
+      "id": "K17"
+    },
+    {
+      "kind": "source",
+      "label": "CDC",
+      "id": "https://www.cdc.gov/diabetes/about/tips-for-traveling-with-diabetes.html"
+    },
+    {
+      "kind": "alias",
+      "label": "di cong tac",
+      "id": "alias:di cong tac"
+    },
+    {
+      "kind": "alias",
+      "label": "di nuoc ngoai",
+      "id": "alias:di nuoc ngoai"
+    },
+    {
+      "kind": "alias",
+      "label": "mui gio",
+      "id": "alias:mui gio"
+    },
+    {
+      "kind": "alias",
+      "label": "du lich",
+      "id": "alias:du lich"
+    },
+    {
+      "kind": "alias",
+      "label": "may bay",
+      "id": "alias:may bay"
+    },
+    {
+      "kind": "alias",
+      "label": "di xa",
+      "id": "alias:di xa"
+    },
+    {
+      "kind": "alias",
+      "label": "hanh ly",
+      "id": "alias:hanh ly"
+    },
+    {
+      "kind": "concept",
+      "label": "Du lịch với tiểu đường",
+      "id": "concept:du lich voi tieu duong"
+    },
+    {
+      "kind": "concept",
+      "label": "Thuốc và dụng cụ đo",
+      "id": "concept:thuoc va dung cu do"
+    },
+    {
+      "kind": "concept",
+      "label": "Thay đổi múi giờ",
+      "id": "concept:thay doi mui gio"
+    },
+    {
+      "kind": "concept",
+      "label": "Lịch dùng thuốc",
+      "id": "concept:lich dung thuoc"
+    },
+    {
+      "kind": "concept",
+      "label": "Nhiệt độ quá cao",
+      "id": "concept:nhiet do qua cao"
+    },
+    {
+      "kind": "concept",
+      "label": "Nguồn đường xử trí hạ đường huyết",
+      "id": "concept:nguon duong xu tri ha duong huyet"
+    },
+    {
+      "kind": "document",
+      "label": "Căng thẳng và sức khỏe tinh thần",
+      "id": "K18"
+    },
+    {
+      "kind": "source",
+      "label": "CDC",
+      "id": "https://www.cdc.gov/diabetes/living-with/mental-health.html"
+    },
+    {
+      "kind": "alias",
+      "label": "cang thang",
+      "id": "alias:cang thang"
+    },
+    {
+      "kind": "alias",
+      "label": "lo lang",
+      "id": "alias:lo lang"
+    },
+    {
+      "kind": "alias",
+      "label": "kiet suc",
+      "id": "alias:kiet suc"
+    },
+    {
+      "kind": "alias",
+      "label": "tram cam",
+      "id": "alias:tram cam"
+    },
+    {
+      "kind": "alias",
+      "label": "stress",
+      "id": "alias:stress"
+    },
+    {
+      "kind": "alias",
+      "label": "ap luc",
+      "id": "alias:ap luc"
+    },
+    {
+      "kind": "alias",
+      "label": "tinh than",
+      "id": "alias:tinh than"
+    },
+    {
+      "kind": "alias",
+      "label": "met moi vi benh",
+      "id": "alias:met moi vi benh"
+    },
+    {
+      "kind": "concept",
+      "label": "Căng thẳng vì bệnh",
+      "id": "concept:cang thang vi benh"
+    },
+    {
+      "kind": "concept",
+      "label": "Sức khỏe tinh thần",
+      "id": "concept:suc khoe tinh than"
+    },
+    {
+      "kind": "concept",
+      "label": "Tự chăm sóc tiểu đường",
+      "id": "concept:tu cham soc tieu duong"
+    },
+    {
+      "kind": "concept",
+      "label": "Hỗ trợ từ đội ngũ y tế",
+      "id": "concept:ho tro tu doi ngu y te"
+    },
+    {
+      "kind": "concept",
+      "label": "Triệu chứng trầm cảm kéo dài",
+      "id": "concept:trieu chung tram cam keo dai"
+    },
+    {
+      "kind": "concept",
+      "label": "Đánh giá chuyên môn",
+      "id": "concept:danh gia chuyen mon"
+    },
+    {
+      "kind": "document",
+      "label": "Nắng nóng và bảo quản dụng cụ",
+      "id": "K19"
+    },
+    {
+      "kind": "source",
+      "label": "CDC",
+      "id": "https://www.cdc.gov/diabetes/articles/managing-diabetes-in-the-heat.html"
+    },
+    {
+      "kind": "alias",
+      "label": "tu lanh",
+      "id": "alias:tu lanh"
+    },
+    {
+      "kind": "alias",
+      "label": "bao quan insulin",
+      "id": "alias:bao quan insulin"
+    },
+    {
+      "kind": "alias",
+      "label": "de thuoc",
+      "id": "alias:de thuoc"
+    },
+    {
+      "kind": "alias",
+      "label": "troi nong",
+      "id": "alias:troi nong"
+    },
+    {
+      "kind": "alias",
+      "label": "nhiet do",
+      "id": "alias:nhiet do"
+    },
+    {
+      "kind": "alias",
+      "label": "mat nuoc",
+      "id": "alias:mat nuoc"
+    },
+    {
+      "kind": "alias",
+      "label": "nang nong",
+      "id": "alias:nang nong"
+    },
+    {
+      "kind": "concept",
+      "label": "Nắng nóng",
+      "id": "concept:nang nong"
+    },
+    {
+      "kind": "concept",
+      "label": "Mất nước",
+      "id": "concept:mat nuoc"
+    },
+    {
+      "kind": "concept",
+      "label": "Máy đo đường huyết",
+      "id": "concept:may do duong huyet"
+    },
+    {
+      "kind": "concept",
+      "label": "Bảo quản thuốc",
+      "id": "concept:bao quan thuoc"
+    },
+    {
+      "kind": "concept",
+      "label": "Hướng dẫn sản phẩm",
+      "id": "concept:huong dan san pham"
+    },
+    {
+      "kind": "document",
+      "label": "Các nhóm thuốc và vai trò insulin",
+      "id": "K20"
+    },
+    {
+      "kind": "alias",
+      "label": "glp 1",
+      "id": "alias:glp 1"
+    },
+    {
+      "kind": "alias",
+      "label": "thuoc tiem",
+      "id": "alias:thuoc tiem"
+    },
+    {
+      "kind": "alias",
+      "label": "sglt2",
+      "id": "alias:sglt2"
+    },
+    {
+      "kind": "alias",
+      "label": "insulin la gi",
+      "id": "alias:insulin la gi"
+    },
+    {
+      "kind": "alias",
+      "label": "sulfonylurea",
+      "id": "alias:sulfonylurea"
+    },
+    {
+      "kind": "alias",
+      "label": "thuoc uong",
+      "id": "alias:thuoc uong"
+    },
+    {
+      "kind": "alias",
+      "label": "bom insulin",
+      "id": "alias:bom insulin"
+    },
+    {
+      "kind": "concept",
+      "label": "Điều trị tiểu đường",
+      "id": "concept:dieu tri tieu duong"
+    },
+    {
+      "kind": "concept",
+      "label": "Thuốc uống",
+      "id": "concept:thuoc uong"
+    },
+    {
+      "kind": "concept",
+      "label": "Lựa chọn thuốc",
+      "id": "concept:lua chon thuoc"
+    },
+    {
+      "kind": "concept",
+      "label": "Chức năng thận",
+      "id": "concept:chuc nang than"
+    },
+    {
+      "kind": "concept",
+      "label": "Nguy cơ hạ đường huyết",
+      "id": "concept:nguy co ha duong huyet"
+    },
+    {
+      "kind": "document",
+      "label": "Giấc ngủ và làm ca đêm",
+      "id": "K21"
+    },
+    {
+      "kind": "source",
+      "label": "CDC",
+      "id": "https://www.cdc.gov/diabetes/articles/diabetes-shift-work.html"
+    },
+    {
+      "kind": "alias",
+      "label": "ca dem",
+      "id": "alias:ca dem"
+    },
+    {
+      "kind": "alias",
+      "label": "lam ca",
+      "id": "alias:lam ca"
+    },
+    {
+      "kind": "alias",
+      "label": "ngu",
+      "id": "alias:ngu"
+    },
+    {
+      "kind": "alias",
+      "label": "thuc khuya",
+      "id": "alias:thuc khuya"
+    },
+    {
+      "kind": "alias",
+      "label": "thieu ngu",
+      "id": "alias:thieu ngu"
+    },
+    {
+      "kind": "alias",
+      "label": "giac ngu",
+      "id": "alias:giac ngu"
+    },
+    {
+      "kind": "alias",
+      "label": "dao ca",
+      "id": "alias:dao ca"
+    },
+    {
+      "kind": "alias",
+      "label": "mat ngu",
+      "id": "alias:mat ngu"
+    },
+    {
+      "kind": "concept",
+      "label": "Làm ca đêm",
+      "id": "concept:lam ca dem"
+    },
+    {
+      "kind": "concept",
+      "label": "Nhịp sinh học",
+      "id": "concept:nhip sinh hoc"
+    },
+    {
+      "kind": "concept",
+      "label": "Giấc ngủ",
+      "id": "concept:giac ngu"
+    },
+    {
+      "kind": "concept",
+      "label": "Thiếu ngủ",
+      "id": "concept:thieu ngu"
+    },
+    {
+      "kind": "concept",
+      "label": "Đổi ca làm việc",
+      "id": "concept:doi ca lam viec"
+    },
+    {
+      "kind": "concept",
+      "label": "Lịch bữa ăn",
+      "id": "concept:lich bua an"
+    },
+    {
+      "kind": "document",
+      "label": "Thực phẩm chức năng và thảo dược",
+      "id": "K22"
+    },
+    {
+      "kind": "source",
+      "label": "ADA",
+      "id": "https://diabetes.org/food-nutrition/diabetes-vitamins-supplements"
+    },
+    {
+      "kind": "alias",
+      "label": "kho qua",
+      "id": "alias:kho qua"
+    },
+    {
+      "kind": "alias",
+      "label": "bo sung",
+      "id": "alias:bo sung"
+    },
+    {
+      "kind": "alias",
+      "label": "que",
+      "id": "alias:que"
+    },
+    {
+      "kind": "alias",
+      "label": "vitamin",
+      "id": "alias:vitamin"
+    },
+    {
+      "kind": "alias",
+      "label": "la cay",
+      "id": "alias:la cay"
+    },
+    {
+      "kind": "alias",
+      "label": "thuc pham chuc nang",
+      "id": "alias:thuc pham chuc nang"
+    },
+    {
+      "kind": "alias",
+      "label": "day thia canh",
+      "id": "alias:day thia canh"
+    },
+    {
+      "kind": "alias",
+      "label": "thao duoc",
+      "id": "alias:thao duoc"
+    },
+    {
+      "kind": "alias",
+      "label": "thuoc nam",
+      "id": "alias:thuoc nam"
+    },
+    {
+      "kind": "alias",
+      "label": "muop dang",
+      "id": "alias:muop dang"
+    },
+    {
+      "kind": "concept",
+      "label": "Thực phẩm chức năng",
+      "id": "concept:thuc pham chuc nang"
+    },
+    {
+      "kind": "concept",
+      "label": "Bổ sung vitamin",
+      "id": "concept:bo sung vitamin"
+    },
+    {
+      "kind": "concept",
+      "label": "Thiếu hụt dinh dưỡng",
+      "id": "concept:thieu hut dinh duong"
+    },
+    {
+      "kind": "concept",
+      "label": "Thảo dược",
+      "id": "concept:thao duoc"
+    },
+    {
+      "kind": "concept",
+      "label": "Tương tác thuốc",
+      "id": "concept:tuong tac thuoc"
+    },
+    {
+      "kind": "concept",
+      "label": "Lựa chọn chất bổ sung",
+      "id": "concept:lua chon chat bo sung"
+    },
+    {
+      "kind": "concept",
+      "label": "Bác sĩ hoặc dược sĩ",
+      "id": "concept:bac si hoac duoc si"
+    },
+    {
+      "kind": "document",
+      "label": "Sinh lý và bàng quang",
+      "id": "K23"
+    },
+    {
+      "kind": "source",
+      "label": "NIDDK / NIH",
+      "id": "https://www.niddk.nih.gov/health-information/diabetes/overview/preventing-problems/sexual-bladder-problems"
+    },
+    {
+      "kind": "alias",
+      "label": "cuong duong",
+      "id": "alias:cuong duong"
+    },
+    {
+      "kind": "alias",
+      "label": "kho am dao",
+      "id": "alias:kho am dao"
+    },
+    {
+      "kind": "alias",
+      "label": "tinh duc",
+      "id": "alias:tinh duc"
+    },
+    {
+      "kind": "alias",
+      "label": "bang quang",
+      "id": "alias:bang quang"
+    },
+    {
+      "kind": "alias",
+      "label": "sinh ly",
+      "id": "alias:sinh ly"
+    },
+    {
+      "kind": "alias",
+      "label": "tieu son",
+      "id": "alias:tieu son"
+    },
+    {
+      "kind": "alias",
+      "label": "roi loan cuong",
+      "id": "alias:roi loan cuong"
+    },
+    {
+      "kind": "alias",
+      "label": "tieu khong tu chu",
+      "id": "alias:tieu khong tu chu"
+    },
+    {
+      "kind": "concept",
+      "label": "Chức năng tình dục",
+      "id": "concept:chuc nang tinh duc"
+    },
+    {
+      "kind": "concept",
+      "label": "Tổn thương thần kinh tự chủ",
+      "id": "concept:ton thuong than kinh tu chu"
+    },
+    {
+      "kind": "concept",
+      "label": "Bàng quang",
+      "id": "concept:bang quang"
+    },
+    {
+      "kind": "concept",
+      "label": "Rối loạn cương",
+      "id": "concept:roi loan cuong"
+    },
+    {
+      "kind": "concept",
+      "label": "Rối loạn đi tiểu",
+      "id": "concept:roi loan di tieu"
+    },
+    {
+      "kind": "concept",
+      "label": "Đánh giá nguyên nhân",
+      "id": "concept:danh gia nguyen nhan"
+    },
+    {
+      "kind": "document",
+      "label": "Bảo vệ thận khi mắc tiểu đường",
+      "id": "K24"
+    },
+    {
+      "kind": "source",
+      "label": "NIDDK / NIH",
+      "id": "https://www.niddk.nih.gov/health-information/diabetes/overview/preventing-problems/diabetic-kidney-disease"
+    },
+    {
+      "kind": "alias",
+      "label": "hai than",
+      "id": "alias:hai than"
+    },
+    {
+      "kind": "alias",
+      "label": "bien chung than",
+      "id": "alias:bien chung than"
+    },
+    {
+      "kind": "alias",
+      "label": "bao ve than",
+      "id": "alias:bao ve than"
+    },
+    {
+      "kind": "alias",
+      "label": "ton thuong than",
+      "id": "alias:ton thuong than"
+    },
+    {
+      "kind": "alias",
+      "label": "dam nieu",
+      "id": "alias:dam nieu"
+    },
+    {
+      "kind": "alias",
+      "label": "suy than",
+      "id": "alias:suy than"
+    },
+    {
+      "kind": "alias",
+      "label": "chay than",
+      "id": "alias:chay than"
+    },
+    {
+      "kind": "concept",
+      "label": "Tổn thương mạch máu thận",
+      "id": "concept:ton thuong mach mau than"
+    },
+    {
+      "kind": "concept",
+      "label": "Tổn thương thận",
+      "id": "concept:ton thuong than"
+    },
+    {
+      "kind": "concept",
+      "label": "Bệnh thận do tiểu đường",
+      "id": "concept:benh than do tieu duong"
+    },
+    {
+      "kind": "concept",
+      "label": "Albumin niệu",
+      "id": "concept:albumin nieu"
+    },
+    {
+      "kind": "concept",
+      "label": "Mức lọc cầu thận",
+      "id": "concept:muc loc cau than"
+    },
+    {
+      "kind": "document",
+      "label": "Chia đĩa ăn và lập thực đơn",
+      "id": "K25"
+    },
+    {
+      "kind": "source",
+      "label": "CDC",
+      "id": "https://www.cdc.gov/diabetes/healthy-eating/diabetes-meal-planning.html"
+    },
+    {
+      "kind": "alias",
+      "label": "dia an",
+      "id": "alias:dia an"
+    },
+    {
+      "kind": "alias",
+      "label": "plate method",
+      "id": "alias:plate method"
+    },
+    {
+      "kind": "alias",
+      "label": "chia dia",
+      "id": "alias:chia dia"
+    },
+    {
+      "kind": "alias",
+      "label": "bua sang",
+      "id": "alias:bua sang"
+    },
+    {
+      "kind": "alias",
+      "label": "lap thuc don",
+      "id": "alias:lap thuc don"
+    },
+    {
+      "kind": "alias",
+      "label": "mot bua",
+      "id": "alias:mot bua"
+    },
+    {
+      "kind": "alias",
+      "label": "an ngoai",
+      "id": "alias:an ngoai"
+    },
+    {
+      "kind": "alias",
+      "label": "bua toi",
+      "id": "alias:bua toi"
+    },
+    {
+      "kind": "alias",
+      "label": "bua trua",
+      "id": "alias:bua trua"
+    },
+    {
+      "kind": "concept",
+      "label": "Phương pháp đĩa ăn",
+      "id": "concept:phuong phap dia an"
+    },
+    {
+      "kind": "concept",
+      "label": "Đạm nạc",
+      "id": "concept:dam nac"
+    },
+    {
+      "kind": "concept",
+      "label": "Thực phẩm chứa carbohydrate",
+      "id": "concept:thuc pham chua carbohydrate"
+    },
+    {
+      "kind": "concept",
+      "label": "Kế hoạch bữa ăn",
+      "id": "concept:ke hoach bua an"
+    },
+    {
+      "kind": "concept",
+      "label": "Thuốc đang dùng",
+      "id": "concept:thuoc dang dung"
+    },
+    {
+      "kind": "document",
+      "label": "Đếm carbohydrate và đọc nhãn thực phẩm",
+      "id": "K26"
+    },
+    {
+      "kind": "source",
+      "label": "CDC",
+      "id": "https://www.cdc.gov/diabetes/healthy-eating/carb-counting-manage-blood-sugar.html"
+    },
+    {
+      "kind": "alias",
+      "label": "khong duong",
+      "id": "alias:khong duong"
+    },
+    {
+      "kind": "alias",
+      "label": "nhan",
+      "id": "alias:nhan"
+    },
+    {
+      "kind": "alias",
+      "label": "dem carbohydrate",
+      "id": "alias:dem carbohydrate"
+    },
+    {
+      "kind": "alias",
+      "label": "serving",
+      "id": "alias:serving"
+    },
+    {
+      "kind": "alias",
+      "label": "khau phan tren nhan",
+      "id": "alias:khau phan tren nhan"
+    },
+    {
+      "kind": "alias",
+      "label": "dem carb",
+      "id": "alias:dem carb"
+    },
+    {
+      "kind": "alias",
+      "label": "tong carbohydrate",
+      "id": "alias:tong carbohydrate"
+    },
+    {
+      "kind": "alias",
+      "label": "bao bi",
+      "id": "alias:bao bi"
+    },
+    {
+      "kind": "concept",
+      "label": "Đường",
+      "id": "concept:duong"
+    },
+    {
+      "kind": "concept",
+      "label": "Tinh bột",
+      "id": "concept:tinh bot"
+    },
+    {
+      "kind": "concept",
+      "label": "Đọc nhãn thực phẩm",
+      "id": "concept:doc nhan thuc pham"
+    },
+    {
+      "kind": "concept",
+      "label": "Tổng carbohydrate",
+      "id": "concept:tong carbohydrate"
+    },
+    {
+      "kind": "concept",
+      "label": "Kích thước khẩu phần",
+      "id": "concept:kich thuoc khau phan"
+    },
+    {
+      "kind": "document",
+      "label": "Bắt đầu vận động an toàn",
+      "id": "K27"
+    },
+    {
+      "kind": "source",
+      "label": "CDC",
+      "id": "https://www.cdc.gov/diabetes/living-with/physical-activity.html"
+    },
+    {
+      "kind": "alias",
+      "label": "150 phut",
+      "id": "alias:150 phut"
+    },
+    {
+      "kind": "alias",
+      "label": "di bo sau an",
+      "id": "alias:di bo sau an"
+    },
+    {
+      "kind": "alias",
+      "label": "tap gym",
+      "id": "alias:tap gym"
+    },
+    {
+      "kind": "alias",
+      "label": "dap xe",
+      "id": "alias:dap xe"
+    },
+    {
+      "kind": "alias",
+      "label": "chay bo",
+      "id": "alias:chay bo"
+    },
+    {
+      "kind": "alias",
+      "label": "tap an toan",
+      "id": "alias:tap an toan"
+    },
+    {
+      "kind": "alias",
+      "label": "bat dau tap",
+      "id": "alias:bat dau tap"
+    },
+    {
+      "kind": "alias",
+      "label": "tap bao lau",
+      "id": "alias:tap bao lau"
+    },
+    {
+      "kind": "alias",
+      "label": "boi",
+      "id": "alias:boi"
+    },
+    {
+      "kind": "concept",
+      "label": "Quản lý đường huyết",
+      "id": "concept:quan ly duong huyet"
+    },
+    {
+      "kind": "concept",
+      "label": "Quản lý cân nặng",
+      "id": "concept:quan ly can nang"
+    },
+    {
+      "kind": "concept",
+      "label": "Bắt đầu vận động",
+      "id": "concept:bat dau van dong"
+    },
+    {
+      "kind": "concept",
+      "label": "Khả năng cá nhân",
+      "id": "concept:kha nang ca nhan"
+    },
+    {
+      "kind": "concept",
+      "label": "Vận động khi dùng insulin",
+      "id": "concept:van dong khi dung insulin"
+    },
+    {
+      "kind": "document",
+      "label": "Các ngưỡng xét nghiệm và đơn vị đường huyết",
+      "id": "K28"
+    },
+    {
+      "kind": "alias",
+      "label": "duong huyet 7",
+      "id": "alias:duong huyet 7"
+    },
+    {
+      "kind": "alias",
+      "label": "hba1c 6",
+      "id": "alias:hba1c 6"
+    },
+    {
+      "kind": "alias",
+      "label": "bao nhieu la tieu duong",
+      "id": "alias:bao nhieu la tieu duong"
+    },
+    {
+      "kind": "alias",
+      "label": "duong doi",
+      "id": "alias:duong doi"
+    },
+    {
+      "kind": "alias",
+      "label": "mg dl",
+      "id": "alias:mg dl"
+    },
+    {
+      "kind": "alias",
+      "label": "6 5",
+      "id": "alias:6 5"
+    },
+    {
+      "kind": "alias",
+      "label": "mmol l",
+      "id": "alias:mmol l"
+    },
+    {
+      "kind": "alias",
+      "label": "126",
+      "id": "alias:126"
+    },
+    {
+      "kind": "alias",
+      "label": "nguong",
+      "id": "alias:nguong"
+    },
+    {
+      "kind": "concept",
+      "label": "Xét nghiệm HbA1c",
+      "id": "concept:xet nghiem hba1c"
+    },
+    {
+      "kind": "concept",
+      "label": "Từ 6,5%",
+      "id": "concept:tu 6 5"
+    },
+    {
+      "kind": "concept",
+      "label": "Glucose huyết tương lúc đói",
+      "id": "concept:glucose huyet tuong luc doi"
+    },
+    {
+      "kind": "concept",
+      "label": "Từ 126 mg/dL",
+      "id": "concept:tu 126 mg dl"
+    },
+    {
+      "kind": "concept",
+      "label": "Glucose sau 2 giờ OGTT",
+      "id": "concept:glucose sau 2 gio ogtt"
+    },
+    {
+      "kind": "concept",
+      "label": "Từ 200 mg/dL",
+      "id": "concept:tu 200 mg dl"
+    },
+    {
+      "kind": "concept",
+      "label": "Chẩn đoán tiểu đường",
+      "id": "concept:chan doan tieu duong"
+    },
+    {
+      "kind": "concept",
+      "label": "Xét nghiệm xác nhận",
+      "id": "concept:xet nghiem xac nhan"
+    },
+    {
+      "kind": "document",
+      "label": "Tiểu đường có chữa khỏi hay thuyên giảm được không?",
+      "id": "K29"
+    },
+    {
+      "kind": "source",
+      "label": "NIDDK / NIH",
+      "id": "https://www.niddk.nih.gov/health-information/professionals/diabetes-discoveries-practice/achieving-type-2-diabetes-remission-through-weight-loss"
+    },
+    {
+      "kind": "alias",
+      "label": "chua khoi",
+      "id": "alias:chua khoi"
+    },
+    {
+      "kind": "alias",
+      "label": "dao nguoc",
+      "id": "alias:dao nguoc"
+    },
+    {
+      "kind": "alias",
+      "label": "beo phi",
+      "id": "alias:beo phi"
+    },
+    {
+      "kind": "alias",
+      "label": "thuyen giam",
+      "id": "alias:thuyen giam"
+    },
+    {
+      "kind": "alias",
+      "label": "het benh",
+      "id": "alias:het benh"
+    },
+    {
+      "kind": "alias",
+      "label": "song duoc bao lau",
+      "id": "alias:song duoc bao lau"
+    },
+    {
+      "kind": "alias",
+      "label": "giam can",
+      "id": "alias:giam can"
+    },
+    {
+      "kind": "alias",
+      "label": "remission",
+      "id": "alias:remission"
+    },
+    {
+      "kind": "concept",
+      "label": "Thuyên giảm",
+      "id": "concept:thuyen giam"
+    },
+    {
+      "kind": "concept",
+      "label": "Chữa khỏi vĩnh viễn",
+      "id": "concept:chua khoi vinh vien"
+    },
+    {
+      "kind": "concept",
+      "label": "Giảm cân duy trì",
+      "id": "concept:giam can duy tri"
+    },
+    {
+      "kind": "concept",
+      "label": "Theo dõi lâu dài",
+      "id": "concept:theo doi lau dai"
+    },
+    {
+      "kind": "document",
+      "label": "Di truyền và nguyên nhân mắc bệnh",
+      "id": "K30"
+    },
+    {
+      "kind": "alias",
+      "label": "cha me",
+      "id": "alias:cha me"
+    },
+    {
+      "kind": "alias",
+      "label": "gia dinh",
+      "id": "alias:gia dinh"
+    },
+    {
+      "kind": "alias",
+      "label": "nguyen nhan",
+      "id": "alias:nguyen nhan"
+    },
+    {
+      "kind": "alias",
+      "label": "di truyen",
+      "id": "alias:di truyen"
+    },
+    {
+      "kind": "alias",
+      "label": "con co bi",
+      "id": "alias:con co bi"
+    },
+    {
+      "kind": "alias",
+      "label": "vi sao mac",
+      "id": "alias:vi sao mac"
+    },
+    {
+      "kind": "alias",
+      "label": "bo me",
+      "id": "alias:bo me"
+    },
+    {
+      "kind": "alias",
+      "label": "an ngot",
+      "id": "alias:an ngot"
+    },
+    {
+      "kind": "alias",
+      "label": "an duong nhieu",
+      "id": "alias:an duong nhieu"
+    },
+    {
+      "kind": "concept",
+      "label": "Nguy cơ tiểu đường",
+      "id": "concept:nguy co tieu duong"
+    },
+    {
+      "kind": "concept",
+      "label": "Yếu tố di truyền",
+      "id": "concept:yeu to di truyen"
+    },
+    {
+      "kind": "concept",
+      "label": "Yếu tố môi trường",
+      "id": "concept:yeu to moi truong"
+    },
+    {
+      "kind": "concept",
+      "label": "Tiền sử gia đình",
+      "id": "concept:tien su gia dinh"
+    },
+    {
+      "kind": "concept",
+      "label": "Chắc chắn mắc bệnh",
+      "id": "concept:chac chan mac benh"
+    },
+    {
+      "kind": "document",
+      "label": "Metformin dùng để làm gì?",
+      "id": "K31"
+    },
+    {
+      "kind": "source",
+      "label": "NHS",
+      "id": "https://www.nhs.uk/medicines/metformin/"
+    },
+    {
+      "kind": "alias",
+      "label": "uong metformin",
+      "id": "alias:uong metformin"
+    },
+    {
+      "kind": "alias",
+      "label": "thuoc metformin",
+      "id": "alias:thuoc metformin"
+    },
+    {
+      "kind": "alias",
+      "label": "metformin tieu chay",
+      "id": "alias:metformin tieu chay"
+    },
+    {
+      "kind": "alias",
+      "label": "metformin",
+      "id": "alias:metformin"
+    },
+    {
+      "kind": "alias",
+      "label": "metformin tac dung",
+      "id": "alias:metformin tac dung"
+    },
+    {
+      "kind": "alias",
+      "label": "glucophage",
+      "id": "alias:glucophage"
+    },
+    {
+      "kind": "concept",
+      "label": "Metformin",
+      "id": "concept:metformin"
+    },
+    {
+      "kind": "concept",
+      "label": "Tác dụng phụ tiêu hóa",
+      "id": "concept:tac dung phu tieu hoa"
+    },
+    {
+      "kind": "concept",
+      "label": "Thuốc kê đơn",
+      "id": "concept:thuoc ke don"
+    },
+    {
+      "kind": "concept",
+      "label": "Sử dụng metformin",
+      "id": "concept:su dung metformin"
+    },
+    {
+      "kind": "document",
+      "label": "Tiểu đường có lây không?",
+      "id": "K32"
+    },
+    {
+      "kind": "source",
+      "label": "Public Health Agency of Canada",
+      "id": "https://www.canada.ca/en/public-health/services/diseases/diabetes.html"
+    },
+    {
+      "kind": "alias",
+      "label": "tiep xuc",
+      "id": "alias:tiep xuc"
+    },
+    {
+      "kind": "alias",
+      "label": "hon",
+      "id": "alias:hon"
+    },
+    {
+      "kind": "alias",
+      "label": "truyen nhiem",
+      "id": "alias:truyen nhiem"
+    },
+    {
+      "kind": "alias",
+      "label": "lay qua",
+      "id": "alias:lay qua"
+    },
+    {
+      "kind": "alias",
+      "label": "lay",
+      "id": "alias:lay"
+    },
+    {
+      "kind": "alias",
+      "label": "song chung",
+      "id": "alias:song chung"
+    },
+    {
+      "kind": "alias",
+      "label": "an chung",
+      "id": "alias:an chung"
+    },
+    {
+      "kind": "concept",
+      "label": "Bệnh không lây nhiễm",
+      "id": "concept:benh khong lay nhiem"
+    },
+    {
+      "kind": "concept",
+      "label": "Ăn chung",
+      "id": "concept:an chung"
+    },
+    {
+      "kind": "concept",
+      "label": "Tiếp xúc thông thường",
+      "id": "concept:tiep xuc thong thuong"
+    },
+    {
+      "kind": "concept",
+      "label": "Các loại tiểu đường",
+      "id": "concept:cac loai tieu duong"
+    },
+    {
+      "kind": "concept",
+      "label": "Nguyên nhân",
+      "id": "concept:nguyen nhan"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "cites",
+      "evidence_id": "D01",
+      "source": "D01",
+      "target": "https://www.niddk.nih.gov/health-information/diabetes/overview/what-is-diabetes",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "D01",
+      "source": "alias:khai niem tieu duong",
+      "target": "D01",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "D01",
+      "source": "alias:dai thao duong la gi",
+      "target": "D01",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "D01",
+      "source": "alias:tieu duong la gi",
+      "target": "D01",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "D01",
+      "source": "alias:insulin co vai tro",
+      "target": "D01",
+      "key": 0
+    },
+    {
+      "relation": "ASSOCIATED_WITH",
+      "evidence_id": "D01",
+      "subject": "Condition:Diabetes",
+      "object": "Biomarker:Glucose",
+      "source": "concept:condition diabetes",
+      "target": "concept:biomarker glucose",
+      "key": 0
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "evidence_id": "D02",
+      "subject": "Condition:Diabetes",
+      "object": "Symptom:Thirst",
+      "source": "concept:condition diabetes",
+      "target": "concept:symptom thirst",
+      "key": 0
+    },
+    {
+      "relation": "EVALUATED_BY",
+      "evidence_id": "D03",
+      "subject": "Condition:Diabetes",
+      "object": "DiagnosticTest:BloodTests",
+      "source": "concept:condition diabetes",
+      "target": "concept:diagnostictest bloodtests",
+      "key": 0
+    },
+    {
+      "relation": "MANAGEMENT_COMPONENT",
+      "evidence_id": "D05",
+      "subject": "Condition:Diabetes",
+      "object": "Lifestyle:MealPlan",
+      "source": "concept:condition diabetes",
+      "target": "concept:lifestyle mealplan",
+      "key": 0
+    },
+    {
+      "relation": "MANAGEMENT_COMPONENT",
+      "evidence_id": "D06",
+      "subject": "Condition:Diabetes",
+      "object": "Lifestyle:PhysicalActivity",
+      "source": "concept:condition diabetes",
+      "target": "concept:lifestyle physicalactivity",
+      "key": 0
+    },
+    {
+      "relation": "cites",
+      "evidence_id": "D02",
+      "source": "D02",
+      "target": "https://www.niddk.nih.gov/health-information/diabetes/overview/symptoms-causes",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "D02",
+      "source": "alias:vet thuong",
+      "target": "D02",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K09",
+      "source": "alias:vet thuong",
+      "target": "K09",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "D02",
+      "source": "alias:bieu hien",
+      "target": "D02",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "D02",
+      "source": "alias:nhin mo",
+      "target": "D02",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "D02",
+      "source": "alias:khat nhieu",
+      "target": "D02",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "D02",
+      "source": "alias:trieu chung",
+      "target": "D02",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "D02",
+      "source": "alias:tieu nhieu",
+      "target": "D02",
+      "key": 0
+    },
+    {
+      "relation": "cites",
+      "evidence_id": "D03",
+      "source": "D03",
+      "target": "https://www.niddk.nih.gov/health-information/diabetes/overview/tests-diagnosis",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "D03",
+      "source": "alias:xet nghiem",
+      "target": "D03",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "D03",
+      "source": "alias:glucose luc doi",
+      "target": "D03",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "D03",
+      "source": "alias:may do tai nha",
+      "target": "D03",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "D03",
+      "source": "alias:chan doan",
+      "target": "D03",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "D03",
+      "source": "alias:dung nap glucose",
+      "target": "D03",
+      "key": 0
+    },
+    {
+      "relation": "cites",
+      "evidence_id": "D04",
+      "source": "D04",
+      "target": "https://www.niddk.nih.gov/health-information/diabetes/overview/managing-diabetes",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "D04",
+      "source": "alias:cholesterol",
+      "target": "D04",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K12",
+      "source": "alias:cholesterol",
+      "target": "K12",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "D04",
+      "source": "alias:huyet ap",
+      "target": "D04",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K12",
+      "source": "alias:huyet ap",
+      "target": "K12",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "D04",
+      "source": "alias:ke hoach cham soc",
+      "target": "D04",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "D04",
+      "source": "alias:a1c",
+      "target": "D04",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "D04",
+      "source": "alias:ba thang",
+      "target": "D04",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "D04",
+      "source": "alias:hba1c",
+      "target": "D04",
+      "key": 0
+    },
+    {
+      "relation": "REFLECTS",
+      "evidence_id": "D04",
+      "subject": "Biomarker:A1C",
+      "object": "TimeWindow:ThreeMonths",
+      "source": "concept:biomarker a1c",
+      "target": "concept:timewindow threemonths",
+      "key": 0
+    },
+    {
+      "relation": "cites",
+      "evidence_id": "D05",
+      "source": "D05",
+      "target": "https://www.niddk.nih.gov/health-information/diabetes/overview/healthy-living-with-diabetes",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "D05",
+      "source": "alias:bua an",
+      "target": "D05",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "D05",
+      "source": "alias:thuc pham",
+      "target": "D05",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "D05",
+      "source": "alias:an uong",
+      "target": "D05",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "D05",
+      "source": "alias:do uong",
+      "target": "D05",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "D05",
+      "source": "alias:dinh duong",
+      "target": "D05",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "D05",
+      "source": "alias:khau phan",
+      "target": "D05",
+      "key": 0
+    },
+    {
+      "relation": "cites",
+      "evidence_id": "D06",
+      "source": "D06",
+      "target": "https://www.niddk.nih.gov/health-information/diabetes/overview/healthy-living-with-diabetes",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "D06",
+      "source": "alias:hoat dong the chat",
+      "target": "D06",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "D06",
+      "source": "alias:di bo",
+      "target": "D06",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "D06",
+      "source": "alias:tap luyen",
+      "target": "D06",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "D06",
+      "source": "alias:the duc",
+      "target": "D06",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "D06",
+      "source": "alias:van dong",
+      "target": "D06",
+      "key": 0
+    },
+    {
+      "relation": "cites",
+      "evidence_id": "D07",
+      "source": "D07",
+      "target": "https://www.niddk.nih.gov/health-information/diabetes/overview/preventing-type-2-diabetes",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "D07",
+      "source": "alias:tri hoan",
+      "target": "D07",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "D07",
+      "source": "alias:can nang",
+      "target": "D07",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "D07",
+      "source": "alias:nguy co",
+      "target": "D07",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "D07",
+      "source": "alias:phong ngua",
+      "target": "D07",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "D07",
+      "source": "alias:thua can",
+      "target": "D07",
+      "key": 0
+    },
+    {
+      "relation": "CAN_DELAY",
+      "evidence_id": "D07",
+      "subject": "Lifestyle:Prevention",
+      "object": "Condition:Type2Diabetes",
+      "source": "concept:lifestyle prevention",
+      "target": "concept:condition type2diabetes",
+      "key": 0
+    },
+    {
+      "relation": "cites",
+      "evidence_id": "D08",
+      "source": "D08",
+      "target": "https://www.niddk.nih.gov/health-information/diabetes/overview/preventing-problems/low-blood-glucose-hypoglycemia",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "D08",
+      "source": "alias:glucose thap",
+      "target": "D08",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "D08",
+      "source": "alias:run tay",
+      "target": "D08",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "D08",
+      "source": "alias:chong mat",
+      "target": "D08",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "D08",
+      "source": "alias:ha duong huyet",
+      "target": "D08",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "D08",
+      "source": "alias:lu lan",
+      "target": "D08",
+      "key": 0
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "evidence_id": "D08",
+      "subject": "Condition:Hypoglycemia",
+      "object": "Symptom:Dizziness",
+      "source": "concept:condition hypoglycemia",
+      "target": "concept:symptom dizziness",
+      "key": 0
+    },
+    {
+      "relation": "cites",
+      "evidence_id": "D09",
+      "source": "D09",
+      "target": "https://www.niddk.nih.gov/health-information/kidney-disease/chronic-kidney-disease-ckd/tests-diagnosis",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "D09",
+      "source": "alias:nuoc tieu",
+      "target": "D09",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "D09",
+      "source": "alias:than",
+      "target": "D09",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "D09",
+      "source": "alias:egfr",
+      "target": "D09",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "D09",
+      "source": "alias:gfr",
+      "target": "D09",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "D09",
+      "source": "alias:muc loc cau than",
+      "target": "D09",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "D09",
+      "source": "alias:albumin",
+      "target": "D09",
+      "key": 0
+    },
+    {
+      "relation": "MONITORED_BY",
+      "evidence_id": "D09",
+      "subject": "Condition:KidneyDisease",
+      "object": "Biomarker:GFR",
+      "source": "concept:condition kidneydisease",
+      "target": "concept:biomarker gfr",
+      "key": 0
+    },
+    {
+      "relation": "cites",
+      "evidence_id": "D10",
+      "source": "D10",
+      "target": "https://www.niddk.nih.gov/health-information/diabetes/overview/insulin-medicines-treatments",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "D10",
+      "source": "alias:insulin",
+      "target": "D10",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "D10",
+      "source": "alias:thuoc",
+      "target": "D10",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "D10",
+      "source": "alias:tac dung phu",
+      "target": "D10",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "D10",
+      "source": "alias:dieu tri",
+      "target": "D10",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K20",
+      "source": "alias:dieu tri",
+      "target": "K20",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "D10",
+      "source": "alias:cach dung",
+      "target": "D10",
+      "key": 0
+    },
+    {
+      "relation": "GUIDANCE_FROM",
+      "evidence_id": "D10",
+      "subject": "Drug:Insulin",
+      "object": "Facility:HealthCareTeam",
+      "source": "concept:drug insulin",
+      "target": "concept:facility healthcareteam",
+      "key": 0
+    },
+    {
+      "relation": "cites",
+      "evidence_id": "K01",
+      "source": "K01",
+      "target": "https://www.niddk.nih.gov/health-information/diabetes/overview/what-is-diabetes/type-2-diabetes",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K01",
+      "source": "alias:de khang insulin",
+      "target": "K01",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K01",
+      "source": "alias:khang insulin",
+      "target": "K01",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K01",
+      "source": "alias:tuyp 2",
+      "target": "K01",
+      "key": 0
+    },
+    {
+      "relation": "có đặc điểm",
+      "evidence_id": "K01",
+      "subject": "Tiểu đường tuýp 2",
+      "object": "Đề kháng insulin",
+      "source": "concept:tieu duong tuyp 2",
+      "target": "concept:de khang insulin",
+      "key": 0
+    },
+    {
+      "relation": "có thể kèm",
+      "evidence_id": "K01",
+      "subject": "Tiểu đường tuýp 2",
+      "object": "Thiếu insulin tương đối",
+      "source": "concept:tieu duong tuyp 2",
+      "target": "concept:thieu insulin tuong doi",
+      "key": 0
+    },
+    {
+      "relation": "cần xác định bằng",
+      "evidence_id": "K01",
+      "subject": "Tiểu đường tuýp 2",
+      "object": "Xét nghiệm đường huyết",
+      "source": "concept:tieu duong tuyp 2",
+      "target": "concept:xet nghiem duong huyet",
+      "key": 0
+    },
+    {
+      "relation": "có thể đạt",
+      "evidence_id": "K29",
+      "subject": "Tiểu đường tuýp 2",
+      "object": "Thuyên giảm",
+      "source": "concept:tieu duong tuyp 2",
+      "target": "concept:thuyen giam",
+      "key": 0
+    },
+    {
+      "relation": "liên quan đến",
+      "evidence_id": "K30",
+      "subject": "Tiểu đường tuýp 2",
+      "object": "Kháng insulin",
+      "source": "concept:tieu duong tuyp 2",
+      "target": "concept:khang insulin",
+      "key": 0
+    },
+    {
+      "relation": "giúp tế bào sử dụng",
+      "evidence_id": "K01",
+      "subject": "Insulin",
+      "object": "Glucose",
+      "source": "concept:insulin",
+      "target": "concept:glucose",
+      "key": 0
+    },
+    {
+      "relation": "làm tăng nguy cơ hạ đường huyết khi dùng cùng",
+      "evidence_id": "K05",
+      "subject": "Insulin",
+      "object": "Rượu bia",
+      "source": "concept:insulin",
+      "target": "concept:ruou bia",
+      "key": 0
+    },
+    {
+      "relation": "cần tránh",
+      "evidence_id": "K17",
+      "subject": "Insulin",
+      "object": "Nhiệt độ quá cao",
+      "source": "concept:insulin",
+      "target": "concept:nhiet do qua cao",
+      "key": 0
+    },
+    {
+      "relation": "cites",
+      "evidence_id": "K02",
+      "source": "K02",
+      "target": "https://www.niddk.nih.gov/health-information/diabetes/overview/what-is-diabetes/type-1-diabetes",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K02",
+      "source": "alias:khac nhau giua",
+      "target": "K02",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K02",
+      "source": "alias:tu mien",
+      "target": "K02",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K02",
+      "source": "alias:phan biet hai loai",
+      "target": "K02",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K02",
+      "source": "alias:tuyp 1",
+      "target": "K02",
+      "key": 0
+    },
+    {
+      "relation": "có cơ chế",
+      "evidence_id": "K02",
+      "subject": "Tiểu đường tuýp 1",
+      "object": "Tự miễn",
+      "source": "concept:tieu duong tuyp 1",
+      "target": "concept:tu mien",
+      "key": 0
+    },
+    {
+      "relation": "thường cần",
+      "evidence_id": "K02",
+      "subject": "Tiểu đường tuýp 1",
+      "object": "Insulin hằng ngày",
+      "source": "concept:tieu duong tuyp 1",
+      "target": "concept:insulin hang ngay",
+      "key": 0
+    },
+    {
+      "relation": "liên quan đến",
+      "evidence_id": "K30",
+      "subject": "Tiểu đường tuýp 1",
+      "object": "Yếu tố môi trường",
+      "source": "concept:tieu duong tuyp 1",
+      "target": "concept:yeu to moi truong",
+      "key": 0
+    },
+    {
+      "relation": "phá hủy",
+      "evidence_id": "K02",
+      "subject": "Tự miễn",
+      "object": "Tế bào beta tụy",
+      "source": "concept:tu mien",
+      "target": "concept:te bao beta tuy",
+      "key": 0
+    },
+    {
+      "relation": "sản xuất",
+      "evidence_id": "K02",
+      "subject": "Tế bào beta tụy",
+      "object": "Insulin",
+      "source": "concept:te bao beta tuy",
+      "target": "concept:insulin",
+      "key": 0
+    },
+    {
+      "relation": "cites",
+      "evidence_id": "K03",
+      "source": "K03",
+      "target": "https://www.niddk.nih.gov/health-information/diabetes/overview/what-is-diabetes/prediabetes-insulin-resistance",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K03",
+      "source": "alias:nguy co thanh tieu duong",
+      "target": "K03",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K03",
+      "source": "alias:khang insulin la gi",
+      "target": "K03",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K03",
+      "source": "alias:tien tieu duong",
+      "target": "K03",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K03",
+      "source": "alias:prediabetes",
+      "target": "K03",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K03",
+      "source": "alias:tien dai thao duong",
+      "target": "K03",
+      "key": 0
+    },
+    {
+      "relation": "tăng nguy cơ",
+      "evidence_id": "K03",
+      "subject": "Tiền tiểu đường",
+      "object": "Tiểu đường tuýp 2",
+      "source": "concept:tien tieu duong",
+      "target": "concept:tieu duong tuyp 2",
+      "key": 0
+    },
+    {
+      "relation": "có thể không có",
+      "evidence_id": "K03",
+      "subject": "Tiền tiểu đường",
+      "object": "Triệu chứng rõ rệt",
+      "source": "concept:tien tieu duong",
+      "target": "concept:trieu chung ro ret",
+      "key": 0
+    },
+    {
+      "relation": "làm giảm",
+      "evidence_id": "K03",
+      "subject": "Kháng insulin",
+      "object": "Đáp ứng với insulin",
+      "source": "concept:khang insulin",
+      "target": "concept:dap ung voi insulin",
+      "key": 0
+    },
+    {
+      "relation": "hỗ trợ giảm nguy cơ",
+      "evidence_id": "K03",
+      "subject": "Hoạt động thể chất",
+      "object": "Tiểu đường tuýp 2",
+      "source": "concept:hoat dong the chat",
+      "target": "concept:tieu duong tuyp 2",
+      "key": 0
+    },
+    {
+      "relation": "hỗ trợ",
+      "evidence_id": "K27",
+      "subject": "Hoạt động thể chất",
+      "object": "Quản lý đường huyết",
+      "source": "concept:hoat dong the chat",
+      "target": "concept:quan ly duong huyet",
+      "key": 0
+    },
+    {
+      "relation": "hỗ trợ",
+      "evidence_id": "K27",
+      "subject": "Hoạt động thể chất",
+      "object": "Quản lý cân nặng",
+      "source": "concept:hoat dong the chat",
+      "target": "concept:quan ly can nang",
+      "key": 0
+    },
+    {
+      "relation": "cites",
+      "evidence_id": "K04",
+      "source": "K04",
+      "target": "https://www.niddk.nih.gov/health-information/diabetes/overview/what-is-diabetes/gestational/definition-facts",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K04",
+      "source": "alias:sau sinh",
+      "target": "K04",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K04",
+      "source": "alias:anh huong em be",
+      "target": "K04",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K04",
+      "source": "alias:bau",
+      "target": "K04",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K04",
+      "source": "alias:24 tuan",
+      "target": "K04",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K04",
+      "source": "alias:28 tuan",
+      "target": "K04",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K04",
+      "source": "alias:thai ky",
+      "target": "K04",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K04",
+      "source": "alias:mang thai",
+      "target": "K04",
+      "key": 0
+    },
+    {
+      "relation": "xuất hiện trong",
+      "evidence_id": "K04",
+      "subject": "Tiểu đường thai kỳ",
+      "object": "Mang thai",
+      "source": "concept:tieu duong thai ky",
+      "target": "concept:mang thai",
+      "key": 0
+    },
+    {
+      "relation": "thường phát hiện ở",
+      "evidence_id": "K04",
+      "subject": "Tiểu đường thai kỳ",
+      "object": "Tuần thai 24–28",
+      "source": "concept:tieu duong thai ky",
+      "target": "concept:tuan thai 24 28",
+      "key": 0
+    },
+    {
+      "relation": "cần phối hợp",
+      "evidence_id": "K04",
+      "subject": "Tiểu đường thai kỳ",
+      "object": "Chăm sóc sản khoa",
+      "source": "concept:tieu duong thai ky",
+      "target": "concept:cham soc san khoa",
+      "key": 0
+    },
+    {
+      "relation": "tăng nguy cơ",
+      "evidence_id": "K04",
+      "subject": "Đường huyết cao khi mang thai",
+      "object": "Thai lớn",
+      "source": "concept:duong huyet cao khi mang thai",
+      "target": "concept:thai lon",
+      "key": 0
+    },
+    {
+      "relation": "cites",
+      "evidence_id": "K05",
+      "source": "K05",
+      "target": "https://www.medlineplus.gov/ency/patientinstructions/000968.htm",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K05",
+      "source": "alias:ruou",
+      "target": "K05",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K05",
+      "source": "alias:bia",
+      "target": "K05",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K05",
+      "source": "alias:uong con",
+      "target": "K05",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K05",
+      "source": "alias:alcohol",
+      "target": "K05",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K05",
+      "source": "alias:ruu",
+      "target": "K05",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K05",
+      "source": "alias:nhau",
+      "target": "K05",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K05",
+      "source": "alias:ruou vang",
+      "target": "K05",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K05",
+      "source": "alias:do uong co con",
+      "target": "K05",
+      "key": 0
+    },
+    {
+      "relation": "có thể gây",
+      "evidence_id": "K05",
+      "subject": "Rượu bia",
+      "object": "Hạ đường huyết",
+      "source": "concept:ruou bia",
+      "target": "concept:ha duong huyet",
+      "key": 0
+    },
+    {
+      "relation": "có thể tương tác với",
+      "evidence_id": "K05",
+      "subject": "Rượu bia",
+      "object": "Thuốc tiểu đường",
+      "source": "concept:ruou bia",
+      "target": "concept:thuoc tieu duong",
+      "key": 0
+    },
+    {
+      "relation": "làm tăng nguy cơ",
+      "evidence_id": "K05",
+      "subject": "Uống rượu lúc đói",
+      "object": "Hạ đường huyết",
+      "source": "concept:uong ruou luc doi",
+      "target": "concept:ha duong huyet",
+      "key": 0
+    },
+    {
+      "relation": "cites",
+      "evidence_id": "K06",
+      "source": "K06",
+      "target": "https://www.cdc.gov/diabetes/healthy-eating/choosing-healthy-carbs.html",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K06",
+      "source": "alias:nuoc mia",
+      "target": "K06",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K06",
+      "source": "alias:nuoc trai cay",
+      "target": "K06",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K06",
+      "source": "alias:tra sua",
+      "target": "K06",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K06",
+      "source": "alias:mat ong",
+      "target": "K06",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K06",
+      "source": "alias:nuoc ngot",
+      "target": "K06",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K06",
+      "source": "alias:duong tu nhien",
+      "target": "K06",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K06",
+      "source": "alias:nuoc cam",
+      "target": "K06",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K06",
+      "source": "alias:ep trai cay",
+      "target": "K06",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K06",
+      "source": "alias:nuoc ep",
+      "target": "K06",
+      "key": 0
+    },
+    {
+      "relation": "cung cấp",
+      "evidence_id": "K06",
+      "subject": "Nước ép trái cây",
+      "object": "Carbohydrate đơn",
+      "source": "concept:nuoc ep trai cay",
+      "target": "concept:carbohydrate don",
+      "key": 0
+    },
+    {
+      "relation": "có thể làm tăng nhanh",
+      "evidence_id": "K06",
+      "subject": "Carbohydrate đơn",
+      "object": "Đường huyết",
+      "source": "concept:carbohydrate don",
+      "target": "concept:duong huyet",
+      "key": 0
+    },
+    {
+      "relation": "cung cấp",
+      "evidence_id": "K06",
+      "subject": "Mật ong",
+      "object": "Carbohydrate đơn",
+      "source": "concept:mat ong",
+      "target": "concept:carbohydrate don",
+      "key": 0
+    },
+    {
+      "relation": "cung cấp",
+      "evidence_id": "K06",
+      "subject": "Trái cây nguyên quả",
+      "object": "Chất xơ",
+      "source": "concept:trai cay nguyen qua",
+      "target": "concept:chat xo",
+      "key": 0
+    },
+    {
+      "relation": "cites",
+      "evidence_id": "K07",
+      "source": "K07",
+      "target": "https://www.cdc.gov/diabetes/healthy-eating/choosing-healthy-carbs.html",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K07",
+      "source": "alias:gao lut",
+      "target": "K07",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K07",
+      "source": "alias:com",
+      "target": "K07",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K07",
+      "source": "alias:tinh bot",
+      "target": "K07",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K07",
+      "source": "alias:bun",
+      "target": "K07",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K07",
+      "source": "alias:gao",
+      "target": "K07",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K07",
+      "source": "alias:banh mi",
+      "target": "K07",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K07",
+      "source": "alias:carb",
+      "target": "K07",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K07",
+      "source": "alias:yen mach",
+      "target": "K07",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K07",
+      "source": "alias:carbohydrate",
+      "target": "K07",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K07",
+      "source": "alias:pho",
+      "target": "K07",
+      "key": 0
+    },
+    {
+      "relation": "thuộc nhóm",
+      "evidence_id": "K07",
+      "subject": "Gạo trắng",
+      "object": "Ngũ cốc tinh chế",
+      "source": "concept:gao trang",
+      "target": "concept:ngu coc tinh che",
+      "key": 0
+    },
+    {
+      "relation": "cung cấp",
+      "evidence_id": "K07",
+      "subject": "Ngũ cốc nguyên hạt",
+      "object": "Chất xơ",
+      "source": "concept:ngu coc nguyen hat",
+      "target": "concept:chat xo",
+      "key": 0
+    },
+    {
+      "relation": "cần chú ý",
+      "evidence_id": "K07",
+      "subject": "Kiểm soát carbohydrate",
+      "object": "Khẩu phần",
+      "source": "concept:kiem soat carbohydrate",
+      "target": "concept:khau phan",
+      "key": 0
+    },
+    {
+      "relation": "có thể bao gồm",
+      "evidence_id": "K07",
+      "subject": "Chế độ ăn tiểu đường",
+      "object": "Carbohydrate",
+      "source": "concept:che do an tieu duong",
+      "target": "concept:carbohydrate",
+      "key": 0
+    },
+    {
+      "relation": "bao gồm",
+      "evidence_id": "K26",
+      "subject": "Carbohydrate",
+      "object": "Đường",
+      "source": "concept:carbohydrate",
+      "target": "concept:duong",
+      "key": 0
+    },
+    {
+      "relation": "bao gồm",
+      "evidence_id": "K26",
+      "subject": "Carbohydrate",
+      "object": "Tinh bột",
+      "source": "concept:carbohydrate",
+      "target": "concept:tinh bot",
+      "key": 0
+    },
+    {
+      "relation": "bao gồm",
+      "evidence_id": "K26",
+      "subject": "Carbohydrate",
+      "object": "Chất xơ",
+      "source": "concept:carbohydrate",
+      "target": "concept:chat xo",
+      "key": 0
+    },
+    {
+      "relation": "cites",
+      "evidence_id": "K08",
+      "source": "K08",
+      "target": "https://diabetes.org/food-nutrition/food-and-blood-sugar/diabetes-superstar-foods",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K08",
+      "source": "alias:cam",
+      "target": "K08",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K08",
+      "source": "alias:sua chua",
+      "target": "K08",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K08",
+      "source": "alias:sua",
+      "target": "K08",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K08",
+      "source": "alias:cac loai hat",
+      "target": "K08",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K08",
+      "source": "alias:hoa qua",
+      "target": "K08",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K08",
+      "source": "alias:buoi",
+      "target": "K08",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K08",
+      "source": "alias:chuoi",
+      "target": "K08",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K08",
+      "source": "alias:dau",
+      "target": "K08",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K08",
+      "source": "alias:ca",
+      "target": "K08",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K08",
+      "source": "alias:xoai",
+      "target": "K08",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K08",
+      "source": "alias:sau rieng",
+      "target": "K08",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K08",
+      "source": "alias:trai cay",
+      "target": "K08",
+      "key": 0
+    },
+    {
+      "relation": "cần kiểm soát",
+      "evidence_id": "K08",
+      "subject": "Trái cây",
+      "object": "Khẩu phần",
+      "source": "concept:trai cay",
+      "target": "concept:khau phan",
+      "key": 0
+    },
+    {
+      "relation": "thuộc nhóm",
+      "evidence_id": "K08",
+      "subject": "Rau lá xanh",
+      "object": "Rau ít tinh bột",
+      "source": "concept:rau la xanh",
+      "target": "concept:rau it tinh bot",
+      "key": 0
+    },
+    {
+      "relation": "thuộc nhóm",
+      "evidence_id": "K08",
+      "subject": "Đậu",
+      "object": "Thực phẩm giàu dưỡng chất",
+      "source": "concept:dau",
+      "target": "concept:thuc pham giau duong chat",
+      "key": 0
+    },
+    {
+      "relation": "cung cấp",
+      "evidence_id": "K08",
+      "subject": "Cá",
+      "object": "Protein",
+      "source": "concept:ca",
+      "target": "concept:protein",
+      "key": 0
+    },
+    {
+      "relation": "không đồng nghĩa với",
+      "evidence_id": "K08",
+      "subject": "Siêu thực phẩm",
+      "object": "Thuốc chữa tiểu đường",
+      "source": "concept:sieu thuc pham",
+      "target": "concept:thuoc chua tieu duong",
+      "key": 0
+    },
+    {
+      "relation": "cites",
+      "evidence_id": "K09",
+      "source": "K09",
+      "target": "https://www.niddk.nih.gov/health-information/diabetes/overview/preventing-problems/foot-problems",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K09",
+      "source": "alias:ban chan",
+      "target": "K09",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K09",
+      "source": "alias:giay dep",
+      "target": "K09",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K09",
+      "source": "alias:loet chan",
+      "target": "K09",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K09",
+      "source": "alias:cham lanh",
+      "target": "K09",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K09",
+      "source": "alias:cat mong",
+      "target": "K09",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K09",
+      "source": "alias:di chan dat",
+      "target": "K09",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K09",
+      "source": "alias:nhiem trung chan",
+      "target": "K09",
+      "key": 0
+    },
+    {
+      "relation": "có thể gây",
+      "evidence_id": "K09",
+      "subject": "Tiểu đường",
+      "object": "Giảm tuần hoàn chân",
+      "source": "concept:tieu duong",
+      "target": "concept:giam tuan hoan chan",
+      "key": 0
+    },
+    {
+      "relation": "tăng nguy cơ",
+      "evidence_id": "K12",
+      "subject": "Tiểu đường",
+      "object": "Bệnh tim mạch",
+      "source": "concept:tieu duong",
+      "target": "concept:benh tim mach",
+      "key": 0
+    },
+    {
+      "relation": "tăng nguy cơ",
+      "evidence_id": "K12",
+      "subject": "Tiểu đường",
+      "object": "Đột quỵ",
+      "source": "concept:tieu duong",
+      "target": "concept:dot quy",
+      "key": 0
+    },
+    {
+      "relation": "tăng nguy cơ",
+      "evidence_id": "K13",
+      "subject": "Tiểu đường",
+      "object": "Bệnh nướu",
+      "source": "concept:tieu duong",
+      "target": "concept:benh nuou",
+      "key": 0
+    },
+    {
+      "relation": "có thể đi kèm",
+      "evidence_id": "K18",
+      "subject": "Tiểu đường",
+      "object": "Căng thẳng vì bệnh",
+      "source": "concept:tieu duong",
+      "target": "concept:cang thang vi benh",
+      "key": 0
+    },
+    {
+      "relation": "có thể ảnh hưởng",
+      "evidence_id": "K23",
+      "subject": "Tiểu đường",
+      "object": "Chức năng tình dục",
+      "source": "concept:tieu duong",
+      "target": "concept:chuc nang tinh duc",
+      "key": 0
+    },
+    {
+      "relation": "thuộc nhóm",
+      "evidence_id": "K32",
+      "subject": "Tiểu đường",
+      "object": "Bệnh không lây nhiễm",
+      "source": "concept:tieu duong",
+      "target": "concept:benh khong lay nhiem",
+      "key": 0
+    },
+    {
+      "relation": "làm chậm",
+      "evidence_id": "K09",
+      "subject": "Giảm tuần hoàn chân",
+      "object": "Lành vết thương",
+      "source": "concept:giam tuan hoan chan",
+      "target": "concept:lanh vet thuong",
+      "key": 0
+    },
+    {
+      "relation": "có thể gây",
+      "evidence_id": "K09",
+      "subject": "Tổn thương thần kinh",
+      "object": "Mất cảm giác bàn chân",
+      "source": "concept:ton thuong than kinh",
+      "target": "concept:mat cam giac ban chan",
+      "key": 0
+    },
+    {
+      "relation": "bao gồm",
+      "evidence_id": "K09",
+      "subject": "Chăm sóc bàn chân",
+      "object": "Kiểm tra hằng ngày",
+      "source": "concept:cham soc ban chan",
+      "target": "concept:kiem tra hang ngay",
+      "key": 0
+    },
+    {
+      "relation": "cites",
+      "evidence_id": "K10",
+      "source": "K10",
+      "target": "https://www.niddk.nih.gov/health-information/diabetes/overview/preventing-problems/diabetic-eye-disease",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K10",
+      "source": "alias:glaucoma",
+      "target": "K10",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K10",
+      "source": "alias:kham day mat",
+      "target": "K10",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K10",
+      "source": "alias:mat",
+      "target": "K10",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K10",
+      "source": "alias:mu",
+      "target": "K10",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K10",
+      "source": "alias:duc thuy tinh the",
+      "target": "K10",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K10",
+      "source": "alias:vong mac",
+      "target": "K10",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K10",
+      "source": "alias:thi luc",
+      "target": "K10",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K10",
+      "source": "alias:mo mat",
+      "target": "K10",
+      "key": 0
+    },
+    {
+      "relation": "bao gồm",
+      "evidence_id": "K10",
+      "subject": "Bệnh mắt do tiểu đường",
+      "object": "Bệnh võng mạc",
+      "source": "concept:benh mat do tieu duong",
+      "target": "concept:benh vong mac",
+      "key": 0
+    },
+    {
+      "relation": "bao gồm",
+      "evidence_id": "K10",
+      "subject": "Bệnh mắt do tiểu đường",
+      "object": "Phù hoàng điểm",
+      "source": "concept:benh mat do tieu duong",
+      "target": "concept:phu hoang diem",
+      "key": 0
+    },
+    {
+      "relation": "bao gồm",
+      "evidence_id": "K10",
+      "subject": "Bệnh mắt do tiểu đường",
+      "object": "Đục thủy tinh thể",
+      "source": "concept:benh mat do tieu duong",
+      "target": "concept:duc thuy tinh the",
+      "key": 0
+    },
+    {
+      "relation": "giúp phát hiện",
+      "evidence_id": "K10",
+      "subject": "Khám mắt giãn đồng tử",
+      "object": "Bệnh mắt do tiểu đường",
+      "source": "concept:kham mat gian dong tu",
+      "target": "concept:benh mat do tieu duong",
+      "key": 0
+    },
+    {
+      "relation": "cites",
+      "evidence_id": "K11",
+      "source": "K11",
+      "target": "https://www.niddk.nih.gov/health-information/diabetes/overview/preventing-problems/nerve-damage-diabetic-neuropathies",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K11",
+      "source": "alias:dau rat",
+      "target": "K11",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K11",
+      "source": "alias:te tay",
+      "target": "K11",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K11",
+      "source": "alias:mat cam giac",
+      "target": "K11",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K11",
+      "source": "alias:neuropathy",
+      "target": "K11",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K11",
+      "source": "alias:than kinh",
+      "target": "K11",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K11",
+      "source": "alias:cham chich",
+      "target": "K11",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K11",
+      "source": "alias:te chan",
+      "target": "K11",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K11",
+      "source": "alias:te bi",
+      "target": "K11",
+      "key": 0
+    },
+    {
+      "relation": "có thể gây",
+      "evidence_id": "K11",
+      "subject": "Bệnh thần kinh ngoại biên",
+      "object": "Tê bì chân tay",
+      "source": "concept:benh than kinh ngoai bien",
+      "target": "concept:te bi chan tay",
+      "key": 0
+    },
+    {
+      "relation": "có thể gây",
+      "evidence_id": "K11",
+      "subject": "Bệnh thần kinh ngoại biên",
+      "object": "Đau rát",
+      "source": "concept:benh than kinh ngoai bien",
+      "target": "concept:dau rat",
+      "key": 0
+    },
+    {
+      "relation": "có thể ảnh hưởng",
+      "evidence_id": "K11",
+      "subject": "Bệnh thần kinh tự chủ",
+      "object": "Tiêu hóa",
+      "source": "concept:benh than kinh tu chu",
+      "target": "concept:tieu hoa",
+      "key": 0
+    },
+    {
+      "relation": "có thể gây",
+      "evidence_id": "K11",
+      "subject": "Bệnh thần kinh tự chủ",
+      "object": "Giảm nhận biết hạ đường huyết",
+      "source": "concept:benh than kinh tu chu",
+      "target": "concept:giam nhan biet ha duong huyet",
+      "key": 0
+    },
+    {
+      "relation": "cites",
+      "evidence_id": "K12",
+      "source": "K12",
+      "target": "https://www.niddk.nih.gov/health-information/diabetes/overview/preventing-problems/heart-disease-stroke",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K12",
+      "source": "alias:nhoi mau",
+      "target": "K12",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K12",
+      "source": "alias:mo mau",
+      "target": "K12",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K12",
+      "source": "alias:dot quy",
+      "target": "K12",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K12",
+      "source": "alias:hut thuoc",
+      "target": "K12",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K12",
+      "source": "alias:tim mach",
+      "target": "K12",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K12",
+      "source": "alias:thuoc la",
+      "target": "K12",
+      "key": 0
+    },
+    {
+      "relation": "tăng nguy cơ",
+      "evidence_id": "K12",
+      "subject": "Hút thuốc lá",
+      "object": "Bệnh tim mạch",
+      "source": "concept:hut thuoc la",
+      "target": "concept:benh tim mach",
+      "key": 0
+    },
+    {
+      "relation": "làm tăng",
+      "evidence_id": "K12",
+      "subject": "Huyết áp cao",
+      "object": "Nguy cơ tim mạch",
+      "source": "concept:huyet ap cao",
+      "target": "concept:nguy co tim mach",
+      "key": 0
+    },
+    {
+      "relation": "có thể gây",
+      "evidence_id": "K24",
+      "subject": "Huyết áp cao",
+      "object": "Tổn thương thận",
+      "source": "concept:huyet ap cao",
+      "target": "concept:ton thuong than",
+      "key": 0
+    },
+    {
+      "relation": "cites",
+      "evidence_id": "K13",
+      "source": "K13",
+      "target": "https://www.niddk.nih.gov/health-information/diabetes/overview/preventing-problems/gum-disease-dental-problems",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K13",
+      "source": "alias:chay mau chan rang",
+      "target": "K13",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K13",
+      "source": "alias:rang",
+      "target": "K13",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K13",
+      "source": "alias:rang mieng",
+      "target": "K13",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K13",
+      "source": "alias:kho mieng",
+      "target": "K13",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K13",
+      "source": "alias:loi",
+      "target": "K13",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K13",
+      "source": "alias:nha si",
+      "target": "K13",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K13",
+      "source": "alias:nha chu",
+      "target": "K13",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K13",
+      "source": "alias:nuou",
+      "target": "K13",
+      "key": 0
+    },
+    {
+      "relation": "có thể làm chậm",
+      "evidence_id": "K13",
+      "subject": "Đường huyết cao",
+      "object": "Lành vết thương",
+      "source": "concept:duong huyet cao",
+      "target": "concept:lanh vet thuong",
+      "key": 0
+    },
+    {
+      "relation": "có thể gây",
+      "evidence_id": "K24",
+      "subject": "Đường huyết cao",
+      "object": "Tổn thương mạch máu thận",
+      "source": "concept:duong huyet cao",
+      "target": "concept:ton thuong mach mau than",
+      "key": 0
+    },
+    {
+      "relation": "bao gồm",
+      "evidence_id": "K13",
+      "subject": "Chăm sóc răng miệng",
+      "object": "Vệ sinh kẽ răng",
+      "source": "concept:cham soc rang mieng",
+      "target": "concept:ve sinh ke rang",
+      "key": 0
+    },
+    {
+      "relation": "bao gồm",
+      "evidence_id": "K13",
+      "subject": "Chăm sóc răng miệng",
+      "object": "Khám nha khoa",
+      "source": "concept:cham soc rang mieng",
+      "target": "concept:kham nha khoa",
+      "key": 0
+    },
+    {
+      "relation": "cites",
+      "evidence_id": "K14",
+      "source": "K14",
+      "target": "https://www.niddk.nih.gov/health-information/diabetes/overview/managing-diabetes/continuous-glucose-monitoring",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K14",
+      "source": "alias:may do",
+      "target": "K14",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K14",
+      "source": "alias:theo doi glucose",
+      "target": "K14",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K14",
+      "source": "alias:dich ke",
+      "target": "K14",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K14",
+      "source": "alias:duong huyet tai nha",
+      "target": "K14",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K14",
+      "source": "alias:cgm",
+      "target": "K14",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K14",
+      "source": "alias:do lien tuc",
+      "target": "K14",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K14",
+      "source": "alias:cam bien",
+      "target": "K14",
+      "key": 0
+    },
+    {
+      "relation": "ước tính glucose từ",
+      "evidence_id": "K14",
+      "subject": "CGM",
+      "object": "Dịch kẽ",
+      "source": "concept:cgm",
+      "target": "concept:dich ke",
+      "key": 0
+    },
+    {
+      "relation": "giúp theo dõi",
+      "evidence_id": "K14",
+      "subject": "CGM",
+      "object": "Xu hướng đường huyết",
+      "source": "concept:cgm",
+      "target": "concept:xu huong duong huyet",
+      "key": 0
+    },
+    {
+      "relation": "có thể cung cấp",
+      "evidence_id": "K14",
+      "subject": "CGM",
+      "object": "Cảnh báo đường huyết",
+      "source": "concept:cgm",
+      "target": "concept:canh bao duong huyet",
+      "key": 0
+    },
+    {
+      "relation": "thường lấy mẫu từ",
+      "evidence_id": "K14",
+      "subject": "Đo đường huyết mao mạch",
+      "object": "Đầu ngón tay",
+      "source": "concept:do duong huyet mao mach",
+      "target": "concept:dau ngon tay",
+      "key": 0
+    },
+    {
+      "relation": "cites",
+      "evidence_id": "K15",
+      "source": "K15",
+      "target": "https://www.cdc.gov/diabetes/living-with/managing-sick-days.html",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K15",
+      "source": "alias:om",
+      "target": "K15",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K15",
+      "source": "alias:sot",
+      "target": "K15",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K15",
+      "source": "alias:bi benh",
+      "target": "K15",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K15",
+      "source": "alias:khong an duoc",
+      "target": "K15",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K15",
+      "source": "alias:non",
+      "target": "K15",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K15",
+      "source": "alias:sick day",
+      "target": "K15",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K15",
+      "source": "alias:cam cum",
+      "target": "K15",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K15",
+      "source": "alias:ngay om",
+      "target": "K15",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K15",
+      "source": "alias:tieu chay",
+      "target": "K15",
+      "key": 0
+    },
+    {
+      "relation": "có thể làm tăng",
+      "evidence_id": "K15",
+      "subject": "Ngày ốm",
+      "object": "Đường huyết",
+      "source": "concept:ngay om",
+      "target": "concept:duong huyet",
+      "key": 0
+    },
+    {
+      "relation": "bao gồm",
+      "evidence_id": "K15",
+      "subject": "Kế hoạch ngày ốm",
+      "object": "Theo dõi đường huyết",
+      "source": "concept:ke hoach ngay om",
+      "target": "concept:theo doi duong huyet",
+      "key": 0
+    },
+    {
+      "relation": "cần",
+      "evidence_id": "K15",
+      "subject": "Không giữ được nước",
+      "object": "Đánh giá y tế",
+      "source": "concept:khong giu duoc nuoc",
+      "target": "concept:danh gia y te",
+      "key": 0
+    },
+    {
+      "relation": "cần",
+      "evidence_id": "K15",
+      "subject": "Ketone khi bị ốm",
+      "object": "Đánh giá y tế",
+      "source": "concept:ketone khi bi om",
+      "target": "concept:danh gia y te",
+      "key": 0
+    },
+    {
+      "relation": "cites",
+      "evidence_id": "K16",
+      "source": "K16",
+      "target": "https://www.cdc.gov/diabetes/about/diabetic-ketoacidosis.html",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K16",
+      "source": "alias:dau bung",
+      "target": "K16",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K16",
+      "source": "alias:hoi tho mui trai cay",
+      "target": "K16",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K16",
+      "source": "alias:toan ketone",
+      "target": "K16",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K16",
+      "source": "alias:tho nhanh",
+      "target": "K16",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K16",
+      "source": "alias:ceton",
+      "target": "K16",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K16",
+      "source": "alias:dka",
+      "target": "K16",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K16",
+      "source": "alias:ketone",
+      "target": "K16",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K16",
+      "source": "alias:toan ceton",
+      "target": "K16",
+      "key": 0
+    },
+    {
+      "relation": "có thể dẫn đến",
+      "evidence_id": "K16",
+      "subject": "Thiếu insulin",
+      "object": "Nhiễm toan ceton",
+      "source": "concept:thieu insulin",
+      "target": "concept:nhiem toan ceton",
+      "key": 0
+    },
+    {
+      "relation": "liên quan đến",
+      "evidence_id": "K16",
+      "subject": "Nhiễm toan ceton",
+      "object": "Tích tụ ketone",
+      "source": "concept:nhiem toan ceton",
+      "target": "concept:tich tu ketone",
+      "key": 0
+    },
+    {
+      "relation": "có thể gây",
+      "evidence_id": "K16",
+      "subject": "Nhiễm toan ceton",
+      "object": "Thở nhanh sâu",
+      "source": "concept:nhiem toan ceton",
+      "target": "concept:tho nhanh sau",
+      "key": 0
+    },
+    {
+      "relation": "cần",
+      "evidence_id": "K16",
+      "subject": "Nhiễm toan ceton",
+      "object": "Đánh giá cấp cứu",
+      "source": "concept:nhiem toan ceton",
+      "target": "concept:danh gia cap cuu",
+      "key": 0
+    },
+    {
+      "relation": "cites",
+      "evidence_id": "K17",
+      "source": "K17",
+      "target": "https://www.cdc.gov/diabetes/about/tips-for-traveling-with-diabetes.html",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K17",
+      "source": "alias:di cong tac",
+      "target": "K17",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K17",
+      "source": "alias:di nuoc ngoai",
+      "target": "K17",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K17",
+      "source": "alias:mui gio",
+      "target": "K17",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K17",
+      "source": "alias:du lich",
+      "target": "K17",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K17",
+      "source": "alias:may bay",
+      "target": "K17",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K17",
+      "source": "alias:di xa",
+      "target": "K17",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K17",
+      "source": "alias:hanh ly",
+      "target": "K17",
+      "key": 0
+    },
+    {
+      "relation": "cần chuẩn bị",
+      "evidence_id": "K17",
+      "subject": "Du lịch với tiểu đường",
+      "object": "Thuốc và dụng cụ đo",
+      "source": "concept:du lich voi tieu duong",
+      "target": "concept:thuoc va dung cu do",
+      "key": 0
+    },
+    {
+      "relation": "cần chuẩn bị",
+      "evidence_id": "K17",
+      "subject": "Du lịch với tiểu đường",
+      "object": "Nguồn đường xử trí hạ đường huyết",
+      "source": "concept:du lich voi tieu duong",
+      "target": "concept:nguon duong xu tri ha duong huyet",
+      "key": 0
+    },
+    {
+      "relation": "có thể ảnh hưởng",
+      "evidence_id": "K17",
+      "subject": "Thay đổi múi giờ",
+      "object": "Lịch dùng thuốc",
+      "source": "concept:thay doi mui gio",
+      "target": "concept:lich dung thuoc",
+      "key": 0
+    },
+    {
+      "relation": "có thể làm hỏng",
+      "evidence_id": "K19",
+      "subject": "Nhiệt độ quá cao",
+      "object": "Insulin",
+      "source": "concept:nhiet do qua cao",
+      "target": "concept:insulin",
+      "key": 0
+    },
+    {
+      "relation": "có thể làm hỏng",
+      "evidence_id": "K19",
+      "subject": "Nhiệt độ quá cao",
+      "object": "Máy đo đường huyết",
+      "source": "concept:nhiet do qua cao",
+      "target": "concept:may do duong huyet",
+      "key": 0
+    },
+    {
+      "relation": "cites",
+      "evidence_id": "K18",
+      "source": "K18",
+      "target": "https://www.cdc.gov/diabetes/living-with/mental-health.html",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K18",
+      "source": "alias:cang thang",
+      "target": "K18",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K18",
+      "source": "alias:lo lang",
+      "target": "K18",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K18",
+      "source": "alias:kiet suc",
+      "target": "K18",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K18",
+      "source": "alias:tram cam",
+      "target": "K18",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K18",
+      "source": "alias:stress",
+      "target": "K18",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K18",
+      "source": "alias:ap luc",
+      "target": "K18",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K18",
+      "source": "alias:tinh than",
+      "target": "K18",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K18",
+      "source": "alias:met moi vi benh",
+      "target": "K18",
+      "key": 0
+    },
+    {
+      "relation": "cần",
+      "evidence_id": "K18",
+      "subject": "Căng thẳng vì bệnh",
+      "object": "Hỗ trợ từ đội ngũ y tế",
+      "source": "concept:cang thang vi benh",
+      "target": "concept:ho tro tu doi ngu y te",
+      "key": 0
+    },
+    {
+      "relation": "ảnh hưởng",
+      "evidence_id": "K18",
+      "subject": "Sức khỏe tinh thần",
+      "object": "Tự chăm sóc tiểu đường",
+      "source": "concept:suc khoe tinh than",
+      "target": "concept:tu cham soc tieu duong",
+      "key": 0
+    },
+    {
+      "relation": "cần",
+      "evidence_id": "K18",
+      "subject": "Triệu chứng trầm cảm kéo dài",
+      "object": "Đánh giá chuyên môn",
+      "source": "concept:trieu chung tram cam keo dai",
+      "target": "concept:danh gia chuyen mon",
+      "key": 0
+    },
+    {
+      "relation": "cites",
+      "evidence_id": "K19",
+      "source": "K19",
+      "target": "https://www.cdc.gov/diabetes/articles/managing-diabetes-in-the-heat.html",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K19",
+      "source": "alias:tu lanh",
+      "target": "K19",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K19",
+      "source": "alias:bao quan insulin",
+      "target": "K19",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K19",
+      "source": "alias:de thuoc",
+      "target": "K19",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K19",
+      "source": "alias:troi nong",
+      "target": "K19",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K19",
+      "source": "alias:nhiet do",
+      "target": "K19",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K19",
+      "source": "alias:mat nuoc",
+      "target": "K19",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K19",
+      "source": "alias:nang nong",
+      "target": "K19",
+      "key": 0
+    },
+    {
+      "relation": "tăng nguy cơ",
+      "evidence_id": "K19",
+      "subject": "Nắng nóng",
+      "object": "Mất nước",
+      "source": "concept:nang nong",
+      "target": "concept:mat nuoc",
+      "key": 0
+    },
+    {
+      "relation": "cần tuân theo",
+      "evidence_id": "K19",
+      "subject": "Bảo quản thuốc",
+      "object": "Hướng dẫn sản phẩm",
+      "source": "concept:bao quan thuoc",
+      "target": "concept:huong dan san pham",
+      "key": 0
+    },
+    {
+      "relation": "cites",
+      "evidence_id": "K20",
+      "source": "K20",
+      "target": "https://www.niddk.nih.gov/health-information/diabetes/overview/insulin-medicines-treatments",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K20",
+      "source": "alias:glp 1",
+      "target": "K20",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K20",
+      "source": "alias:thuoc tiem",
+      "target": "K20",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K20",
+      "source": "alias:sglt2",
+      "target": "K20",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K20",
+      "source": "alias:insulin la gi",
+      "target": "K20",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K20",
+      "source": "alias:sulfonylurea",
+      "target": "K20",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K20",
+      "source": "alias:thuoc uong",
+      "target": "K20",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K20",
+      "source": "alias:bom insulin",
+      "target": "K20",
+      "key": 0
+    },
+    {
+      "relation": "có thể dùng",
+      "evidence_id": "K20",
+      "subject": "Điều trị tiểu đường",
+      "object": "Insulin",
+      "source": "concept:dieu tri tieu duong",
+      "target": "concept:insulin",
+      "key": 0
+    },
+    {
+      "relation": "có thể dùng",
+      "evidence_id": "K20",
+      "subject": "Điều trị tiểu đường",
+      "object": "Thuốc uống",
+      "source": "concept:dieu tri tieu duong",
+      "target": "concept:thuoc uong",
+      "key": 0
+    },
+    {
+      "relation": "cần cân nhắc",
+      "evidence_id": "K20",
+      "subject": "Lựa chọn thuốc",
+      "object": "Chức năng thận",
+      "source": "concept:lua chon thuoc",
+      "target": "concept:chuc nang than",
+      "key": 0
+    },
+    {
+      "relation": "cần cân nhắc",
+      "evidence_id": "K20",
+      "subject": "Lựa chọn thuốc",
+      "object": "Nguy cơ hạ đường huyết",
+      "source": "concept:lua chon thuoc",
+      "target": "concept:nguy co ha duong huyet",
+      "key": 0
+    },
+    {
+      "relation": "cites",
+      "evidence_id": "K21",
+      "source": "K21",
+      "target": "https://www.cdc.gov/diabetes/articles/diabetes-shift-work.html",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K21",
+      "source": "alias:ca dem",
+      "target": "K21",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K21",
+      "source": "alias:lam ca",
+      "target": "K21",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K21",
+      "source": "alias:ngu",
+      "target": "K21",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K21",
+      "source": "alias:thuc khuya",
+      "target": "K21",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K21",
+      "source": "alias:thieu ngu",
+      "target": "K21",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K21",
+      "source": "alias:giac ngu",
+      "target": "K21",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K21",
+      "source": "alias:dao ca",
+      "target": "K21",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K21",
+      "source": "alias:mat ngu",
+      "target": "K21",
+      "key": 0
+    },
+    {
+      "relation": "có thể ảnh hưởng",
+      "evidence_id": "K21",
+      "subject": "Làm ca đêm",
+      "object": "Nhịp sinh học",
+      "source": "concept:lam ca dem",
+      "target": "concept:nhip sinh hoc",
+      "key": 0
+    },
+    {
+      "relation": "có thể ảnh hưởng",
+      "evidence_id": "K21",
+      "subject": "Làm ca đêm",
+      "object": "Giấc ngủ",
+      "source": "concept:lam ca dem",
+      "target": "concept:giac ngu",
+      "key": 0
+    },
+    {
+      "relation": "liên quan tăng nguy cơ",
+      "evidence_id": "K21",
+      "subject": "Thiếu ngủ",
+      "object": "Tiểu đường tuýp 2",
+      "source": "concept:thieu ngu",
+      "target": "concept:tieu duong tuyp 2",
+      "key": 0
+    },
+    {
+      "relation": "cần chú ý",
+      "evidence_id": "K21",
+      "subject": "Đổi ca làm việc",
+      "object": "Lịch bữa ăn",
+      "source": "concept:doi ca lam viec",
+      "target": "concept:lich bua an",
+      "key": 0
+    },
+    {
+      "relation": "cites",
+      "evidence_id": "K22",
+      "source": "K22",
+      "target": "https://diabetes.org/food-nutrition/diabetes-vitamins-supplements",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K22",
+      "source": "alias:kho qua",
+      "target": "K22",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K22",
+      "source": "alias:bo sung",
+      "target": "K22",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K22",
+      "source": "alias:que",
+      "target": "K22",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K22",
+      "source": "alias:vitamin",
+      "target": "K22",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K22",
+      "source": "alias:la cay",
+      "target": "K22",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K22",
+      "source": "alias:thuc pham chuc nang",
+      "target": "K22",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K22",
+      "source": "alias:day thia canh",
+      "target": "K22",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K22",
+      "source": "alias:thao duoc",
+      "target": "K22",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K22",
+      "source": "alias:thuoc nam",
+      "target": "K22",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K22",
+      "source": "alias:muop dang",
+      "target": "K22",
+      "key": 0
+    },
+    {
+      "relation": "không thay thế",
+      "evidence_id": "K22",
+      "subject": "Thực phẩm chức năng",
+      "object": "Điều trị tiểu đường",
+      "source": "concept:thuc pham chuc nang",
+      "target": "concept:dieu tri tieu duong",
+      "key": 0
+    },
+    {
+      "relation": "cần cân nhắc",
+      "evidence_id": "K22",
+      "subject": "Bổ sung vitamin",
+      "object": "Thiếu hụt dinh dưỡng",
+      "source": "concept:bo sung vitamin",
+      "target": "concept:thieu hut dinh duong",
+      "key": 0
+    },
+    {
+      "relation": "có thể gây",
+      "evidence_id": "K22",
+      "subject": "Thảo dược",
+      "object": "Tương tác thuốc",
+      "source": "concept:thao duoc",
+      "target": "concept:tuong tac thuoc",
+      "key": 0
+    },
+    {
+      "relation": "cần trao đổi với",
+      "evidence_id": "K22",
+      "subject": "Lựa chọn chất bổ sung",
+      "object": "Bác sĩ hoặc dược sĩ",
+      "source": "concept:lua chon chat bo sung",
+      "target": "concept:bac si hoac duoc si",
+      "key": 0
+    },
+    {
+      "relation": "cites",
+      "evidence_id": "K23",
+      "source": "K23",
+      "target": "https://www.niddk.nih.gov/health-information/diabetes/overview/preventing-problems/sexual-bladder-problems",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K23",
+      "source": "alias:cuong duong",
+      "target": "K23",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K23",
+      "source": "alias:kho am dao",
+      "target": "K23",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K23",
+      "source": "alias:tinh duc",
+      "target": "K23",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K23",
+      "source": "alias:bang quang",
+      "target": "K23",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K23",
+      "source": "alias:sinh ly",
+      "target": "K23",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K23",
+      "source": "alias:tieu son",
+      "target": "K23",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K23",
+      "source": "alias:roi loan cuong",
+      "target": "K23",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K23",
+      "source": "alias:tieu khong tu chu",
+      "target": "K23",
+      "key": 0
+    },
+    {
+      "relation": "có thể ảnh hưởng",
+      "evidence_id": "K23",
+      "subject": "Tổn thương thần kinh tự chủ",
+      "object": "Bàng quang",
+      "source": "concept:ton thuong than kinh tu chu",
+      "target": "concept:bang quang",
+      "key": 0
+    },
+    {
+      "relation": "cần",
+      "evidence_id": "K23",
+      "subject": "Rối loạn cương",
+      "object": "Đánh giá chuyên môn",
+      "source": "concept:roi loan cuong",
+      "target": "concept:danh gia chuyen mon",
+      "key": 0
+    },
+    {
+      "relation": "cần",
+      "evidence_id": "K23",
+      "subject": "Rối loạn đi tiểu",
+      "object": "Đánh giá nguyên nhân",
+      "source": "concept:roi loan di tieu",
+      "target": "concept:danh gia nguyen nhan",
+      "key": 0
+    },
+    {
+      "relation": "cites",
+      "evidence_id": "K24",
+      "source": "K24",
+      "target": "https://www.niddk.nih.gov/health-information/diabetes/overview/preventing-problems/diabetic-kidney-disease",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K24",
+      "source": "alias:hai than",
+      "target": "K24",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K24",
+      "source": "alias:bien chung than",
+      "target": "K24",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K24",
+      "source": "alias:bao ve than",
+      "target": "K24",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K24",
+      "source": "alias:ton thuong than",
+      "target": "K24",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K24",
+      "source": "alias:dam nieu",
+      "target": "K24",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K24",
+      "source": "alias:suy than",
+      "target": "K24",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K24",
+      "source": "alias:chay than",
+      "target": "K24",
+      "key": 0
+    },
+    {
+      "relation": "theo dõi bằng",
+      "evidence_id": "K24",
+      "subject": "Bệnh thận do tiểu đường",
+      "object": "Albumin niệu",
+      "source": "concept:benh than do tieu duong",
+      "target": "concept:albumin nieu",
+      "key": 0
+    },
+    {
+      "relation": "theo dõi bằng",
+      "evidence_id": "K24",
+      "subject": "Bệnh thận do tiểu đường",
+      "object": "Mức lọc cầu thận",
+      "source": "concept:benh than do tieu duong",
+      "target": "concept:muc loc cau than",
+      "key": 0
+    },
+    {
+      "relation": "cites",
+      "evidence_id": "K25",
+      "source": "K25",
+      "target": "https://www.cdc.gov/diabetes/healthy-eating/diabetes-meal-planning.html",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K25",
+      "source": "alias:dia an",
+      "target": "K25",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K25",
+      "source": "alias:plate method",
+      "target": "K25",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K25",
+      "source": "alias:chia dia",
+      "target": "K25",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K25",
+      "source": "alias:bua sang",
+      "target": "K25",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K25",
+      "source": "alias:lap thuc don",
+      "target": "K25",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K25",
+      "source": "alias:mot bua",
+      "target": "K25",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K25",
+      "source": "alias:an ngoai",
+      "target": "K25",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K25",
+      "source": "alias:bua toi",
+      "target": "K25",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K25",
+      "source": "alias:bua trua",
+      "target": "K25",
+      "key": 0
+    },
+    {
+      "relation": "dành nửa đĩa cho",
+      "evidence_id": "K25",
+      "subject": "Phương pháp đĩa ăn",
+      "object": "Rau ít tinh bột",
+      "source": "concept:phuong phap dia an",
+      "target": "concept:rau it tinh bot",
+      "key": 0
+    },
+    {
+      "relation": "dành một phần tư cho",
+      "evidence_id": "K25",
+      "subject": "Phương pháp đĩa ăn",
+      "object": "Đạm nạc",
+      "source": "concept:phuong phap dia an",
+      "target": "concept:dam nac",
+      "key": 0
+    },
+    {
+      "relation": "dành một phần tư cho",
+      "evidence_id": "K25",
+      "subject": "Phương pháp đĩa ăn",
+      "object": "Thực phẩm chứa carbohydrate",
+      "source": "concept:phuong phap dia an",
+      "target": "concept:thuc pham chua carbohydrate",
+      "key": 0
+    },
+    {
+      "relation": "cần tính đến",
+      "evidence_id": "K25",
+      "subject": "Kế hoạch bữa ăn",
+      "object": "Thuốc đang dùng",
+      "source": "concept:ke hoach bua an",
+      "target": "concept:thuoc dang dung",
+      "key": 0
+    },
+    {
+      "relation": "cites",
+      "evidence_id": "K26",
+      "source": "K26",
+      "target": "https://www.cdc.gov/diabetes/healthy-eating/carb-counting-manage-blood-sugar.html",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K26",
+      "source": "alias:khong duong",
+      "target": "K26",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K26",
+      "source": "alias:nhan",
+      "target": "K26",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K26",
+      "source": "alias:dem carbohydrate",
+      "target": "K26",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K26",
+      "source": "alias:serving",
+      "target": "K26",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K26",
+      "source": "alias:khau phan tren nhan",
+      "target": "K26",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K26",
+      "source": "alias:dem carb",
+      "target": "K26",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K26",
+      "source": "alias:tong carbohydrate",
+      "target": "K26",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K26",
+      "source": "alias:bao bi",
+      "target": "K26",
+      "key": 0
+    },
+    {
+      "relation": "cần xem",
+      "evidence_id": "K26",
+      "subject": "Đọc nhãn thực phẩm",
+      "object": "Tổng carbohydrate",
+      "source": "concept:doc nhan thuc pham",
+      "target": "concept:tong carbohydrate",
+      "key": 0
+    },
+    {
+      "relation": "cần xem",
+      "evidence_id": "K26",
+      "subject": "Đọc nhãn thực phẩm",
+      "object": "Kích thước khẩu phần",
+      "source": "concept:doc nhan thuc pham",
+      "target": "concept:kich thuoc khau phan",
+      "key": 0
+    },
+    {
+      "relation": "cites",
+      "evidence_id": "K27",
+      "source": "K27",
+      "target": "https://www.cdc.gov/diabetes/living-with/physical-activity.html",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K27",
+      "source": "alias:150 phut",
+      "target": "K27",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K27",
+      "source": "alias:di bo sau an",
+      "target": "K27",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K27",
+      "source": "alias:tap gym",
+      "target": "K27",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K27",
+      "source": "alias:dap xe",
+      "target": "K27",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K27",
+      "source": "alias:chay bo",
+      "target": "K27",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K27",
+      "source": "alias:tap an toan",
+      "target": "K27",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K27",
+      "source": "alias:bat dau tap",
+      "target": "K27",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K27",
+      "source": "alias:tap bao lau",
+      "target": "K27",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K27",
+      "source": "alias:boi",
+      "target": "K27",
+      "key": 0
+    },
+    {
+      "relation": "nên tăng dần theo",
+      "evidence_id": "K27",
+      "subject": "Bắt đầu vận động",
+      "object": "Khả năng cá nhân",
+      "source": "concept:bat dau van dong",
+      "target": "concept:kha nang ca nhan",
+      "key": 0
+    },
+    {
+      "relation": "cần chú ý",
+      "evidence_id": "K27",
+      "subject": "Vận động khi dùng insulin",
+      "object": "Hạ đường huyết",
+      "source": "concept:van dong khi dung insulin",
+      "target": "concept:ha duong huyet",
+      "key": 0
+    },
+    {
+      "relation": "cites",
+      "evidence_id": "K28",
+      "source": "K28",
+      "target": "https://www.niddk.nih.gov/health-information/diabetes/overview/tests-diagnosis",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K28",
+      "source": "alias:duong huyet 7",
+      "target": "K28",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K28",
+      "source": "alias:hba1c 6",
+      "target": "K28",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K28",
+      "source": "alias:bao nhieu la tieu duong",
+      "target": "K28",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K28",
+      "source": "alias:duong doi",
+      "target": "K28",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K28",
+      "source": "alias:mg dl",
+      "target": "K28",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K28",
+      "source": "alias:6 5",
+      "target": "K28",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K28",
+      "source": "alias:mmol l",
+      "target": "K28",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K28",
+      "source": "alias:126",
+      "target": "K28",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K28",
+      "source": "alias:nguong",
+      "target": "K28",
+      "key": 0
+    },
+    {
+      "relation": "có ngưỡng chẩn đoán tiểu đường",
+      "evidence_id": "K28",
+      "subject": "Xét nghiệm HbA1c",
+      "object": "Từ 6,5%",
+      "source": "concept:xet nghiem hba1c",
+      "target": "concept:tu 6 5",
+      "key": 0
+    },
+    {
+      "relation": "có ngưỡng chẩn đoán tiểu đường",
+      "evidence_id": "K28",
+      "subject": "Glucose huyết tương lúc đói",
+      "object": "Từ 126 mg/dL",
+      "source": "concept:glucose huyet tuong luc doi",
+      "target": "concept:tu 126 mg dl",
+      "key": 0
+    },
+    {
+      "relation": "có ngưỡng chẩn đoán tiểu đường",
+      "evidence_id": "K28",
+      "subject": "Glucose sau 2 giờ OGTT",
+      "object": "Từ 200 mg/dL",
+      "source": "concept:glucose sau 2 gio ogtt",
+      "target": "concept:tu 200 mg dl",
+      "key": 0
+    },
+    {
+      "relation": "có thể cần",
+      "evidence_id": "K28",
+      "subject": "Chẩn đoán tiểu đường",
+      "object": "Xét nghiệm xác nhận",
+      "source": "concept:chan doan tieu duong",
+      "target": "concept:xet nghiem xac nhan",
+      "key": 0
+    },
+    {
+      "relation": "cites",
+      "evidence_id": "K29",
+      "source": "K29",
+      "target": "https://www.niddk.nih.gov/health-information/professionals/diabetes-discoveries-practice/achieving-type-2-diabetes-remission-through-weight-loss",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K29",
+      "source": "alias:chua khoi",
+      "target": "K29",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K29",
+      "source": "alias:dao nguoc",
+      "target": "K29",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K29",
+      "source": "alias:beo phi",
+      "target": "K29",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K29",
+      "source": "alias:thuyen giam",
+      "target": "K29",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K29",
+      "source": "alias:het benh",
+      "target": "K29",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K29",
+      "source": "alias:song duoc bao lau",
+      "target": "K29",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K29",
+      "source": "alias:giam can",
+      "target": "K29",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K29",
+      "source": "alias:remission",
+      "target": "K29",
+      "key": 0
+    },
+    {
+      "relation": "không đồng nghĩa với",
+      "evidence_id": "K29",
+      "subject": "Thuyên giảm",
+      "object": "Chữa khỏi vĩnh viễn",
+      "source": "concept:thuyen giam",
+      "target": "concept:chua khoi vinh vien",
+      "key": 0
+    },
+    {
+      "relation": "vẫn cần",
+      "evidence_id": "K29",
+      "subject": "Thuyên giảm",
+      "object": "Theo dõi lâu dài",
+      "source": "concept:thuyen giam",
+      "target": "concept:theo doi lau dai",
+      "key": 0
+    },
+    {
+      "relation": "có thể hỗ trợ",
+      "evidence_id": "K29",
+      "subject": "Giảm cân duy trì",
+      "object": "Thuyên giảm",
+      "source": "concept:giam can duy tri",
+      "target": "concept:thuyen giam",
+      "key": 0
+    },
+    {
+      "relation": "cites",
+      "evidence_id": "K30",
+      "source": "K30",
+      "target": "https://www.niddk.nih.gov/health-information/diabetes/overview/symptoms-causes",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K30",
+      "source": "alias:cha me",
+      "target": "K30",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K30",
+      "source": "alias:gia dinh",
+      "target": "K30",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K30",
+      "source": "alias:nguyen nhan",
+      "target": "K30",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K30",
+      "source": "alias:di truyen",
+      "target": "K30",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K30",
+      "source": "alias:con co bi",
+      "target": "K30",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K30",
+      "source": "alias:vi sao mac",
+      "target": "K30",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K30",
+      "source": "alias:bo me",
+      "target": "K30",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K30",
+      "source": "alias:an ngot",
+      "target": "K30",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K30",
+      "source": "alias:an duong nhieu",
+      "target": "K30",
+      "key": 0
+    },
+    {
+      "relation": "chịu ảnh hưởng của",
+      "evidence_id": "K30",
+      "subject": "Nguy cơ tiểu đường",
+      "object": "Yếu tố di truyền",
+      "source": "concept:nguy co tieu duong",
+      "target": "concept:yeu to di truyen",
+      "key": 0
+    },
+    {
+      "relation": "không đồng nghĩa với",
+      "evidence_id": "K30",
+      "subject": "Tiền sử gia đình",
+      "object": "Chắc chắn mắc bệnh",
+      "source": "concept:tien su gia dinh",
+      "target": "concept:chac chan mac benh",
+      "key": 0
+    },
+    {
+      "relation": "cites",
+      "evidence_id": "K31",
+      "source": "K31",
+      "target": "https://www.nhs.uk/medicines/metformin/",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K31",
+      "source": "alias:uong metformin",
+      "target": "K31",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K31",
+      "source": "alias:thuoc metformin",
+      "target": "K31",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K31",
+      "source": "alias:metformin tieu chay",
+      "target": "K31",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K31",
+      "source": "alias:metformin",
+      "target": "K31",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K31",
+      "source": "alias:metformin tac dung",
+      "target": "K31",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K31",
+      "source": "alias:glucophage",
+      "target": "K31",
+      "key": 0
+    },
+    {
+      "relation": "được dùng trong",
+      "evidence_id": "K31",
+      "subject": "Metformin",
+      "object": "Tiểu đường tuýp 2",
+      "source": "concept:metformin",
+      "target": "concept:tieu duong tuyp 2",
+      "key": 0
+    },
+    {
+      "relation": "có thể gây",
+      "evidence_id": "K31",
+      "subject": "Metformin",
+      "object": "Tác dụng phụ tiêu hóa",
+      "source": "concept:metformin",
+      "target": "concept:tac dung phu tieu hoa",
+      "key": 0
+    },
+    {
+      "relation": "là",
+      "evidence_id": "K31",
+      "subject": "Metformin",
+      "object": "Thuốc kê đơn",
+      "source": "concept:metformin",
+      "target": "concept:thuoc ke don",
+      "key": 0
+    },
+    {
+      "relation": "cần xem xét",
+      "evidence_id": "K31",
+      "subject": "Sử dụng metformin",
+      "object": "Chức năng thận",
+      "source": "concept:su dung metformin",
+      "target": "concept:chuc nang than",
+      "key": 0
+    },
+    {
+      "relation": "cites",
+      "evidence_id": "K32",
+      "source": "K32",
+      "target": "https://www.canada.ca/en/public-health/services/diseases/diabetes.html",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K32",
+      "source": "alias:tiep xuc",
+      "target": "K32",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K32",
+      "source": "alias:hon",
+      "target": "K32",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K32",
+      "source": "alias:truyen nhiem",
+      "target": "K32",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K32",
+      "source": "alias:lay qua",
+      "target": "K32",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K32",
+      "source": "alias:lay",
+      "target": "K32",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K32",
+      "source": "alias:song chung",
+      "target": "K32",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K32",
+      "source": "alias:an chung",
+      "target": "K32",
+      "key": 0
+    },
+    {
+      "relation": "không làm lây",
+      "evidence_id": "K32",
+      "subject": "Ăn chung",
+      "object": "Tiểu đường",
+      "source": "concept:an chung",
+      "target": "concept:tieu duong",
+      "key": 0
+    },
+    {
+      "relation": "không làm lây",
+      "evidence_id": "K32",
+      "subject": "Tiếp xúc thông thường",
+      "object": "Tiểu đường",
+      "source": "concept:tiep xuc thong thuong",
+      "target": "concept:tieu duong",
+      "key": 0
+    },
+    {
+      "relation": "có thể khác nhau về",
+      "evidence_id": "K32",
+      "subject": "Các loại tiểu đường",
+      "object": "Nguyên nhân",
+      "source": "concept:cac loai tieu duong",
+      "target": "concept:nguyen nhan",
+      "key": 0
+    }
+  ]
+}

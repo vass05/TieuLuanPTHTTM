@@ -1,0 +1,40 @@
+{
+  "features": [
+    "Pregnancies",
+    "Glucose",
+    "BloodPressure",
+    "SkinThickness",
+    "Insulin",
+    "BMI",
+    "DiabetesPedigreeFunction",
+    "Age"
+  ],
+  "units": {
+    "Pregnancies": "count",
+    "Glucose": "mg/dL",
+    "BloodPressure": "mmHg",
+    "SkinThickness": "mm",
+    "Insulin": "uU/mL",
+    "BMI": "kg/m2",
+    "DiabetesPedigreeFunction": "score",
+    "Age": "years"
+  },
+  "zero_as_missing": [
+    "Glucose",
+    "BloodPressure",
+    "SkinThickness",
+    "Insulin",
+    "BMI"
+  ],
+  "architecture": [
+    8,
+    32,
+    16,
+    1
+  ],
+  "seed": 11,
+  "threshold": 0.38000000000000006,
+  "selection": "maximum validation ROC-AUC among MLP seeds; no test selection",
+  "dataset_sha256": "123ce738f394095a201da0f65c5e174cdcb19cdf5ec1535aee65e2b0e1e2aae2",
+  "scope": "historical Pima research cohort only"
+}

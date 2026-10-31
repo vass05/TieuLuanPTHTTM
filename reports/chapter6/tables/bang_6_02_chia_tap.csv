@@ -1,0 +1,4 @@
+﻿split,n,negative,positive,fraction
+train,491,320,171,0.6393229166666666
+validation,123,80,43,0.16015625
+test,154,100,54,0.20052083333333334
