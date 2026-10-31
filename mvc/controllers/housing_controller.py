@@ -20,17 +20,15 @@ def index():
         {"name": "Nhà phố Đô thị 3 tầng", "area": 85.0, "bedroom": 3, "toilet": 3, "floors": 3},
         {"name": "Biệt thự Liền kề 4 tầng", "area": 160.0, "bedroom": 5, "toilet": 4, "floors": 4}
     ]
-    initial_res = house_model.predict_price(area=75.0, bedroom=3, toilet=2, floors=2)
     return render_template(
         'housing.html',
         presets=sample_presets,
-        initial=initial_res,
         active_tab="housing"
     )
 
 @housing_bp.route('/api/housing/predict', methods=['POST'])
 def api_predict():
-    """Endpoint API định giá bất động sản thời gian thực"""
+    """Định giá theo thông số khi người dùng gửi yêu cầu tính toán."""
     data = request.get_json(force=True) or {}
     area = float(data.get('area', 75.0))
     bedroom = float(data.get('bedroom', 3.0))
