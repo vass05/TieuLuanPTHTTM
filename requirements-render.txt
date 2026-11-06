@@ -1,0 +1,17 @@
+# Full website on Render's Linux CPU instances. Keras is not imported by this runtime.
+--extra-index-url https://download.pytorch.org/whl/cpu
+Flask==3.1.3
+numpy==2.5.1
+pandas==3.0.5
+scikit-learn==1.9.0
+joblib==1.5.3
+Pillow==12.3.0
+xgboost-cpu==3.4.1
+torch==2.14.1+cpu
+h5py==3.16.0
+yfinance==1.7.0
+exchange-calendars==4.13.2
+networkx==3.6.1
+requests==2.34.2
+python-dotenv==1.2.1
+gunicorn==26.2.0

@@ -53,6 +53,7 @@ else:
         pass
     app.config['SECRET_KEY'] = secret_file.read_text(encoding='ascii').strip()
 app.config.update(SESSION_COOKIE_HTTPONLY=True, SESSION_COOKIE_SAMESITE='Lax',
+                  SESSION_COOKIE_SECURE=os.environ.get('RENDER') == 'true',
                   AGENTS_DATABASE=str(instance_dir / 'agents.sqlite3'))
 
 # Đăng ký các Blueprints
@@ -61,6 +62,12 @@ app.register_blueprint(housing_bp)
 app.register_blueprint(vision_bp)
 app.register_blueprint(rag_bp)
 app.register_blueprint(agents_bp)
+
+
+@app.get('/healthz')
+def healthz():
+    """Cheap hosting liveness check; does not create sessions or load the KB."""
+    return jsonify(status='ok')
 
 
 @app.route('/')

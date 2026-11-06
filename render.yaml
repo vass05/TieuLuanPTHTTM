@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: tieuluan-intelligent-systems
+    runtime: python
+    plan: free
+    buildCommand: bash scripts/render-build.sh
+    startCommand: gunicorn --config gunicorn.conf.py app:app
+    healthCheckPath: /healthz
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.14.6"
+      - key: FLASK_SECRET_KEY
+        generateValue: true
+      - key: MODEL_RUNTIME
+        value: torch_weights
+      - key: ASSISTANT_EXTERNAL_ENABLED
+        value: "false"
+      - key: OMP_NUM_THREADS
+        value: "1"
+      - key: OPENBLAS_NUM_THREADS
+        value: "1"
+      - key: MKL_NUM_THREADS
+        value: "1"
+      - key: MALLOC_ARENA_MAX
+        value: "2"
+      - key: PYTHONUNBUFFERED
+        value: "1"

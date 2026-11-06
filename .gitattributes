@@ -1,3 +1,4 @@
 # Preserve exact bytes for the SHA-256 checks recorded by the experiments.
 DATA/pima_indians_diabetes.csv -text
 reports/chapter6/artifacts/** -text
+scripts/render-build.sh text eol=lf

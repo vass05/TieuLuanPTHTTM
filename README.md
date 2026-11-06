@@ -55,6 +55,88 @@ notebook, sửa tham chiếu hàm chuẩn hóa để pickle có thể nạp ngo�
 manifest của bản đóng gói. Không sửa notebook hay chạy huấn luyện. Sau khi export,
 khởi động lại ứng dụng để nạp bản mới.
 
+## Deploy toàn bộ website lên Render Free
+
+`render.yaml` triển khai **một Web Service gói Free**, gồm `/agents`, `/timeseries`,
+`/housing`, `/vision` và `/rag`. KB của chatbot vẫn được nạp từ JSON trong repo;
+không cần Neo4j Aura, Redis hay database trả phí. Không đưa `.env`, mật khẩu Aura
+hoặc thư mục `instance/` lên GitHub.
+
+### Cách tạo service
+
+Có thể mở [Deploy to Render](https://render.com/deploy?repo=https://github.com/vass05/TieuLuanPTHTTM)
+để tạo Blueprint từ repo này, hoặc làm theo các bước dưới đây.
+
+1. Đưa các thay đổi triển khai lên repo GitHub, gồm `render.yaml`,
+   `gunicorn.conf.py`, `requirements-render.txt`, `scripts/render-build.sh`,
+   `scripts/check_render.py`, `mvc/models/torch_keras_runtime.py` và các file đã sửa.
+   Giữ đầy đủ `knowledge/`, `model/`, `mvc/`, `tests/fixtures/digits/2.png`,
+   `DATA/AMZN.csv`, `DATA/AEP_hourly.csv` trong repo để build kiểm tra và chạy thật.
+2. Vào [Render Dashboard](https://dashboard.render.com/), chọn **New → Blueprint**,
+   kết nối repo và chọn nhánh chứa thay đổi. Render đọc `render.yaml` ở thư mục gốc.
+3. Kiểm tra service có **Plan: Free**, rồi triển khai. Blueprint chỉ khai báo một
+   service, không tạo disk hoặc database. `FLASK_SECRET_KEY` được Render sinh tự động.
+4. Đợi build có dòng `Render check passed` và service chuyển sang **Live**.
+   Mở địa chỉ `https://<tên-service>.onrender.com/`. `/healthz` là kiểm tra tiến trình;
+   `/api/v1/health` kiểm tra thêm mô hình và KB.
+
+Nếu tạo **New → Web Service** thủ công, dùng các giá trị sau và sao chép đầy đủ
+biến môi trường từ `render.yaml` (tự sinh một khóa ngẫu nhiên cho `FLASK_SECRET_KEY`):
+
+| Trường | Giá trị |
+|---|---|
+| Runtime | Python 3 |
+| Instance Type | Free |
+| Build Command | `bash scripts/render-build.sh` |
+| Start Command | `gunicorn --config gunicorn.conf.py app:app` |
+| Health Check Path | `/healthz` |
+| Python | `PYTHON_VERSION=3.14.6` |
+
+### Bộ nhớ và suy luận
+
+Bản Render dùng `MODEL_RUNTIME=torch_weights`: đọc đúng trọng số của hai file
+Keras đã lưu và chạy phép tính bằng PyTorch CPU, không nhập thư viện Keras hoặc
+TensorFlow. Adapter chỉ chấp nhận hai kiến trúc đã kiểm tra bằng fingerprint
+`config.json`; nếu thay kiến trúc, cần cập nhật adapter hoặc dùng runtime Keras.
+Kết quả LSTM và SE-CNN được đối chiếu với phép tính từ trọng số gốc trong tests.
+MLP tiểu đường và CNN chữ số tiếp tục dùng PyTorch; giá nhà dùng XGBoost CPU.
+
+`requirements-render.txt` cố định các phiên bản đã kiểm tra, cài PyTorch CPU từ
+kho chính thức và `xgboost-cpu`, tránh gói GPU. Gunicorn chạy một worker với hai
+thread; các thư viện tính toán dùng một thread. Không tăng số worker trên Free.
+Lệnh build chạy `scripts/check_render.py` để thử mọi trang, truy xuất KB và các mô
+hình bằng dữ liệu cục bộ; không gọi Gemini hoặc nguồn chứng khoán trực tuyến.
+
+Để kiểm tra bản chạy nhẹ trên máy đã cài các thư viện của project:
+
+```powershell
+$env:MODEL_RUNTIME = 'torch_weights'
+$env:OMP_NUM_THREADS = '1'
+$env:OPENBLAS_NUM_THREADS = '1'
+$env:MKL_NUM_THREADS = '1'
+python scripts/check_render.py
+python app.py
+```
+
+Phép đo RAM trên máy Windows chỉ là tham khảo; cần quan sát log và mức dùng thực
+tế trên Render Linux, nhất là khi nhiều người dùng chạy mô hình cùng lúc.
+
+### Giới hạn của bản Free
+
+- Service tự ngủ sau 15 phút không có truy cập; lần mở tiếp theo có thời gian chờ.
+- SQLite lưu lịch sử chat, khóa phiên cục bộ và cache nằm trên ổ đĩa tạm. Lịch sử
+  và cache có thể mất khi service ngủ, restart hoặc deploy lại. Khóa phiên của
+  Blueprint dùng biến môi trường nên không phụ thuộc file tạm. KB JSON và trọng số
+  đi kèm repo được khôi phục từ mã nguồn khi triển khai.
+- `ASSISTANT_EXTERNAL_ENABLED=false` mặc định trả lời từ KB cục bộ. Không cần nhập
+  `GEMINI_API_KEY`. Nếu sau này tự bật Gemini, hạn mức và chi phí API là dịch vụ riêng.
+- Trang thị trường cần nguồn Yahoo Finance khi chọn trực tuyến. Nếu nguồn bị giới
+  hạn trên hosting, chọn dữ liệu `AMZN.csv` hoặc `AEP_hourly.csv` để demo ngoại tuyến.
+
+Tham khảo [Flask trên Render](https://render.com/docs/deploy-flask),
+[Blueprint](https://render.com/docs/blueprint-spec) và
+[giới hạn Free](https://render.com/docs/free).
+
 ## Những luồng có thể demo
 
 1. Gửi **Xin chào**. Phần điều phối ghi nhận lời chào và trả lời giao tiếp,
