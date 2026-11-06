@@ -11,7 +11,20 @@ import unicodedata
 from pathlib import Path
 from urllib.parse import urlparse
 
-TRUSTED_HOSTS = {'www.niddk.nih.gov', 'www.cdc.gov', 'www.medlineplus.gov', 'medlineplus.gov', 'diabetes.org', 'www.nhs.uk', 'www.canada.ca', 'www.diabetes.org.uk', 'www.nccih.nih.gov'}
+SOURCE_PUBLISHERS = {
+    'www.niddk.nih.gov': 'NIDDK / NIH',
+    'www.cdc.gov': 'CDC',
+    'www.medlineplus.gov': 'MedlinePlus / NIH',
+    'medlineplus.gov': 'MedlinePlus / NIH',
+    'diabetes.org': 'ADA',
+    'www.nhs.uk': 'NHS',
+    'www.canada.ca': 'Public Health Agency of Canada',
+    'www.diabetes.org.uk': 'Diabetes UK',
+    'www.nccih.nih.gov': 'NCCIH / NIH',
+    'daithaoduong.kcb.vn': 'Cục Quản lý Khám, chữa bệnh – Bộ Y tế',
+    'bachmai.gov.vn': 'Bệnh viện Bạch Mai',
+}
+TRUSTED_HOSTS = set(SOURCE_PUBLISHERS)
 
 
 def load_extended_documents(path):
@@ -27,11 +40,7 @@ def load_extended_documents(path):
         if not doc.get('summary_vi') or not doc.get('aliases') or not doc.get('facts'):
             raise ValueError('Incomplete knowledge document')
         seen.add(doc['doc_id'])
-        doc.update(publisher=('CDC' if 'cdc.gov' in url.hostname else 'ADA' if url.hostname == 'diabetes.org'
-            else 'MedlinePlus / NIH' if 'medlineplus' in url.hostname else 'NHS' if url.hostname=='www.nhs.uk'
-            else 'Public Health Agency of Canada' if url.hostname=='www.canada.ca'
-            else 'Diabetes UK' if url.hostname=='www.diabetes.org.uk'
-            else 'NCCIH / NIH' if url.hostname=='www.nccih.nih.gov' else 'NIDDK / NIH'),
+        doc.update(publisher=SOURCE_PUBLISHERS[url.hostname],
             reviewed_on=data['reviewed_on'],content_type=doc.get('content_type','manually_reviewed_vietnamese_paraphrase'), section=doc['title'])
     return documents
 

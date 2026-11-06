@@ -14,6 +14,7 @@ import socket
 import secrets
 from pathlib import Path
 from flask import Flask, jsonify, request, redirect, url_for
+from flask.json.provider import DefaultJSONProvider
 
 try:
     if hasattr(sys.stdout, 'reconfigure'):
@@ -37,7 +38,8 @@ app = Flask(
 )
 app.config['JSON_AS_ASCII'] = False
 app.config['TEMPLATES_AUTO_RELOAD'] = True
-app.json.ensure_ascii = False
+if isinstance(app.json, DefaultJSONProvider):
+    app.json.ensure_ascii = False
 # A local persistent signing key keeps task ownership valid across restarts.
 # The instance directory is excluded from version control.
 instance_dir = Path(app.instance_path)

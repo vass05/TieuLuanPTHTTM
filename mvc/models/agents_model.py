@@ -71,6 +71,7 @@ class AgentsModel:
                     self.root/'knowledge/diabetes_chat_documents.json')
                 extended = load_extended_documents(self.root/'knowledge/diabetes_extended.json')
                 extended += load_extended_documents(self.root/'knowledge/diabetes_expansion.json')
+                extended += load_extended_documents(self.root/'knowledge/diabetes_vietnam.json')
                 self.documents.extend(extended)
                 if len({d['doc_id'] for d in self.documents})!=len(self.documents):
                     raise ValueError('Duplicate knowledge document ID')

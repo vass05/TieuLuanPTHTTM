@@ -1,0 +1,268 @@
+{
+  "format_version": 1,
+  "reviewed_on": "2026-11-06",
+  "description": "Sáu bản tóm tắt giáo dục từ các trang tiếng Việt đã đối chiếu nội dung. Kiểm tra nguồn không thay thế thẩm định lâm sàng. Không dùng nội dung để kê đơn hoặc tự điều chỉnh thuốc.",
+  "documents": [
+    {
+      "doc_id": "V01",
+      "topic": "overview",
+      "title": "Khái niệm đái tháo đường theo Bộ Y tế",
+      "source_url": "https://daithaoduong.kcb.vn/dai-thao-duong-la-gi",
+      "source_title": "ĐÁI THÁO ĐƯỜNG LÀ GÌ?",
+      "source_country": "VN",
+      "source_language": "vi",
+      "category": "overview",
+      "aliases": [
+        "bộ y tế đái tháo đường là gì",
+        "bộ y tế tiểu đường là gì",
+        "bộ y tế bệnh tiểu đường là gì",
+        "đái tháo đường theo bộ y tế",
+        "khái niệm đái tháo đường bộ y tế"
+      ],
+      "summary_vi": "Theo cổng thông tin của Cục Quản lý Khám, chữa bệnh – Bộ Y tế, đái tháo đường là nhóm rối loạn chuyển hóa khiến glucose trong máu tăng do cơ thể tiết insulin không đủ, insulin hoạt động không hiệu quả hoặc cả hai cơ chế cùng tồn tại. Đường huyết tăng kéo dài có thể gây hại nhiều cơ quan, gồm hệ tim mạch, thận, mắt và thần kinh. Đây là thông tin khái quát về cơ chế và hậu quả của bệnh.",
+      "facts": [
+        [
+          "Đái tháo đường",
+          "có đặc điểm",
+          "Tăng glucose huyết"
+        ],
+        [
+          "Thiếu insulin",
+          "góp phần gây",
+          "Tăng glucose huyết"
+        ],
+        [
+          "Đường huyết cao kéo dài",
+          "có thể gây tổn thương",
+          "Mắt và thận"
+        ]
+      ],
+      "support_quotes": [
+        "khiếm khuyết về tiết insulin"
+      ],
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "manual_source_comparison",
+      "source_sha256": "fd46092bd9d0d18602f1edc2cd36c725a1ecd2c3fbafce2d9a07f594989ff90c",
+      "retrieved_on": "2026-11-06",
+      "http_status": 200
+    },
+    {
+      "doc_id": "V02",
+      "topic": "prevention",
+      "title": "Yếu tố nguy cơ đái tháo đường theo Bộ Y tế",
+      "source_url": "https://daithaoduong.kcb.vn/cac-yeu-to-nguy-co",
+      "source_title": "CÁC YẾU TỐ NGUY CƠ",
+      "source_country": "VN",
+      "source_language": "vi",
+      "category": "prevention",
+      "aliases": [
+        "yếu tố nguy cơ theo bộ y tế",
+        "bộ y tế yếu tố nguy cơ",
+        "nguy cơ mắc tiểu đường theo bộ y tế",
+        "nguy cơ đái tháo đường bộ y tế",
+        "bộ y tế nguy cơ đái tháo đường"
+      ],
+      "summary_vi": "Cổng thông tin của Bộ Y tế liệt kê các yếu tố liên quan đến nguy cơ đái tháo đường típ 2 như có người thân mắc bệnh, từng mắc đái tháo đường thai kỳ, lớn tuổi, thừa cân, ít vận động, tăng huyết áp và ăn uống thiếu lành mạnh. Rối loạn dung nạp glucose cũng là yếu tố cần lưu ý: đường huyết đã cao hơn bình thường nhưng chưa đạt mức chẩn đoán đái tháo đường. Các yếu tố này giúp nhận biết nguy cơ, không phải kết luận một người đã mắc bệnh.",
+      "facts": [
+        [
+          "Tiền sử gia đình có đái tháo đường",
+          "là yếu tố nguy cơ của",
+          "Đái tháo đường típ 2"
+        ],
+        [
+          "Thừa cân",
+          "là yếu tố nguy cơ của",
+          "Đái tháo đường típ 2"
+        ],
+        [
+          "Ít vận động",
+          "là yếu tố nguy cơ của",
+          "Đái tháo đường típ 2"
+        ]
+      ],
+      "support_quotes": [
+        "Tiền sử đái tháo đường thai kỳ"
+      ],
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "manual_source_comparison",
+      "source_sha256": "298094f85bd98b7e93abe343466769e6ac2b588247abd4085ed92bd71ca7c88b",
+      "retrieved_on": "2026-11-06",
+      "http_status": 200
+    },
+    {
+      "doc_id": "V03",
+      "topic": "nutrition",
+      "title": "Ăn uống phòng đái tháo đường típ 2 theo Bộ Y tế",
+      "source_url": "https://daithaoduong.kcb.vn/dinh-duong-hop-ly-de-phong-benh",
+      "source_title": "DINH DƯỠNG HỢP LÝ ĐỂ PHÒNG BỆNH",
+      "source_country": "VN",
+      "source_language": "vi",
+      "category": "nutrition",
+      "aliases": [
+        "dinh dưỡng hợp lý để phòng bệnh",
+        "dinh dưỡng phòng bệnh theo bộ y tế",
+        "ăn uống phòng tiểu đường theo bộ y tế",
+        "bộ y tế dinh dưỡng phòng bệnh",
+        "ăn uống phòng đái tháo đường bộ y tế"
+      ],
+      "summary_vi": "Trong bài về phòng bệnh, cổng thông tin Bộ Y tế nhấn mạnh phối hợp ăn uống lành mạnh và tăng vận động để giảm nguy cơ đái tháo đường típ 2. Các lựa chọn được gợi ý gồm uống nước thay đồ uống nhiều đường, dùng trái cây tươi hoặc sữa chua không đường cho bữa phụ, tăng rau và chọn ngũ cốc nguyên cám. Nguồn cũng khuyên hạn chế đồ uống có cồn, ưu tiên thịt nạc, gia cầm hoặc hải sản thay thịt chế biến sẵn.",
+      "facts": [
+        [
+          "Ăn uống lành mạnh và vận động",
+          "hỗ trợ giảm nguy cơ",
+          "Đái tháo đường típ 2"
+        ],
+        [
+          "Bữa ăn nhẹ",
+          "có thể chọn",
+          "Sữa chua không đường"
+        ],
+        [
+          "Ngũ cốc nguyên cám",
+          "là lựa chọn thay cho",
+          "Ngũ cốc tinh chế"
+        ]
+      ],
+      "support_quotes": [
+        "Hạn chế đồ uống có cồn"
+      ],
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "manual_source_comparison",
+      "source_sha256": "6d057850cad12af958971e9d2ddc32b95b3044c7a05ac519f681742273e08c1e",
+      "retrieved_on": "2026-11-06",
+      "http_status": 200
+    },
+    {
+      "doc_id": "V04",
+      "topic": "activity",
+      "title": "Vận động phòng đái tháo đường theo Bộ Y tế",
+      "source_url": "https://daithaoduong.kcb.vn/van-dong-the-luc-de-phong-benh",
+      "source_title": "VẬN ĐỘNG THỂ LỰC ĐỂ PHÒNG BỆNH",
+      "source_country": "VN",
+      "source_language": "vi",
+      "category": "activity",
+      "aliases": [
+        "vận động thể lực để phòng bệnh",
+        "vận động phòng bệnh theo bộ y tế",
+        "bộ y tế tập luyện phòng tiểu đường",
+        "bộ y tế vận động thể lực",
+        "vận động phòng đái tháo đường bộ y tế"
+      ],
+      "summary_vi": "Cổng thông tin Bộ Y tế giới thiệu đi bộ là hình thức vận động dễ thực hiện, với tổng thời gian tham khảo 150 phút mỗi tuần, đồng thời đề cập tập kháng lực. Người lớn tuổi hoặc đau khớp có thể chia thành các lượt tập ngắn trong ngày. Trước khi tập, người mắc đái tháo đường cần được đánh giá các vấn đề tim mạch, mắt, thần kinh và bàn chân. Vì vậy, lựa chọn hoạt động cần tính đến sức khỏe và biến chứng của từng người.",
+      "facts": [
+        [
+          "Đi bộ",
+          "có tổng thời gian tham khảo",
+          "150 phút mỗi tuần"
+        ],
+        [
+          "Người lớn tuổi hoặc đau khớp",
+          "có thể chia vận động thành",
+          "Các lượt ngắn trong ngày"
+        ],
+        [
+          "Lựa chọn vận động",
+          "cần đánh giá trước",
+          "Biến chứng tim mạch và bàn chân"
+        ]
+      ],
+      "support_quotes": [
+        "Mỗi tuần nên tập kháng lực"
+      ],
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "manual_source_comparison",
+      "source_sha256": "769883bdb2fd7878923cc569a2423b336ba591ce574245b98c8a04b99b0b0947",
+      "retrieved_on": "2026-11-06",
+      "http_status": 200
+    },
+    {
+      "doc_id": "V05",
+      "topic": "hypoglycemia",
+      "title": "Nhận biết nguy cơ hạ đường huyết từ cổng thông tin Bộ Y tế",
+      "source_url": "https://daithaoduong.kcb.vn/ban-dang-song-chung-voi-dai-thao-duong-hay-tim-hieu-ve-ha-duong-huyet",
+      "source_title": "Bạn đang sống chung với đái tháo đường? Hãy tìm hiểu về hạ đường huyết.",
+      "source_author": "TS. BS. Nguyễn Ngọc Tâm – Bệnh viện Lão khoa Trung ương",
+      "source_country": "VN",
+      "source_language": "vi",
+      "category": "hypoglycemia",
+      "aliases": [
+        "hạ đường huyết theo bộ y tế",
+        "hạ đường huyết bộ y tế",
+        "bộ y tế hạ đường huyết",
+        "nguy cơ hạ đường huyết lão khoa trung ương",
+        "bỏ bữa hạ đường huyết"
+      ],
+      "summary_vi": "Bài viết của bác sĩ Bệnh viện Lão khoa Trung ương trên cổng thông tin Bộ Y tế mô tả hạ đường huyết ở người đái tháo đường là khi glucose máu dưới 3,9 mmol/L, tương đương 70 mg/dL. Bỏ bữa, thay đổi thuốc, tăng vận động không phù hợp với điều trị, lạm dụng rượu hoặc suy thận có thể làm tăng nguy cơ. Biểu hiện có thể gồm đói, run, vã mồ hôi, chóng mặt hoặc thay đổi hành vi; có người không có dấu hiệu báo trước. Cần đo đường huyết để xác nhận tình trạng này.",
+      "facts": [
+        [
+          "Bỏ bữa",
+          "làm tăng nguy cơ",
+          "Hạ đường huyết"
+        ],
+        [
+          "Hạ đường huyết",
+          "có thể gây",
+          "Run và vã mồ hôi"
+        ],
+        [
+          "Hạ đường huyết",
+          "có thể không có",
+          "Triệu chứng báo trước"
+        ]
+      ],
+      "support_quotes": [
+        "chế độ ăn không đều đặn hoặc bỏ bữa"
+      ],
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "manual_source_comparison",
+      "source_sha256": "5239a760bbfb1686f49d029229e18bd500b2803e1094450b88ac1a74d1f7de7f",
+      "retrieved_on": "2026-11-06",
+      "http_status": 200
+    },
+    {
+      "doc_id": "V06",
+      "topic": "nutrition",
+      "title": "Dinh dưỡng cho người đái tháo đường tại Bệnh viện Bạch Mai",
+      "source_url": "https://bachmai.gov.vn/bai-viet/tu-van-dinh-duong-cho-nguoi-benh-dai-thao-duong?id=5b0d7548-b38c-b260-a4b4-94dabfdb116b",
+      "source_title": "TƯ VẤN DINH DƯỠNG CHO NGƯỜI BỆNH ĐÁI THÁO ĐƯỜNG",
+      "published_on": "2024-10-28",
+      "source_country": "VN",
+      "source_language": "vi",
+      "category": "nutrition",
+      "aliases": [
+        "dinh dưỡng theo bạch mai",
+        "bạch mai ăn uống",
+        "bệnh viện bạch mai dinh dưỡng",
+        "bạch mai tư vấn dinh dưỡng",
+        "gạo xát dối",
+        "bữa cơm theo bệnh viện bạch mai"
+      ],
+      "summary_vi": "Trong chương trình tư vấn tại Bệnh viện Bạch Mai, người đái tháo đường được hướng dẫn ăn nhiều loại thực phẩm, điều chỉnh lượng tinh bột và tăng chất xơ. Gạo lứt hoặc gạo xát dối là các ví dụ được nêu. Có thể thay đổi cơm sang món khác cùng nhóm như bún, phở, ngô hoặc khoai nhưng vẫn cần tính lượng ăn. Việc cân thực phẩm được thực hành theo cân nặng, chiều cao và tình trạng bệnh của từng người; không lấy khẩu phần của người khác áp dụng nguyên vẹn.",
+      "facts": [
+        [
+          "Tư vấn dinh dưỡng Bạch Mai",
+          "chú trọng",
+          "Kiểm soát lượng tinh bột"
+        ],
+        [
+          "Gạo xát dối",
+          "là ví dụ thực phẩm được nêu trong",
+          "Tư vấn dinh dưỡng Bạch Mai"
+        ],
+        [
+          "Khẩu phần ăn",
+          "cần dựa trên",
+          "Cân nặng và tình trạng bệnh"
+        ]
+      ],
+      "support_quotes": [
+        "kiểm soát đủ lượng tinh bột"
+      ],
+      "content_type": "source_based_vietnamese_paraphrase",
+      "review_method": "manual_source_comparison",
+      "source_sha256": "0e09881f83f1004ae1863ce503330d508b56f82db69eb3d23a7410ead5ad9b6b",
+      "retrieved_on": "2026-11-06",
+      "http_status": 200
+    }
+  ]
+}

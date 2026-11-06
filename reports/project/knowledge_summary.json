@@ -1,12 +1,12 @@
 {
   "statistics": {
-    "nodes": 1736,
-    "relations": 1418,
-    "clinical_entities": 593,
-    "clinical_relations": 410,
-    "aliases": 812,
-    "documents": 168,
-    "sources": 163
+    "nodes": 1802,
+    "relations": 1473,
+    "clinical_entities": 616,
+    "clinical_relations": 428,
+    "aliases": 843,
+    "documents": 174,
+    "sources": 169
   },
   "note": "Nodes include distinct concepts, query aliases, source pages and documents; aliases are not clinical entities.",
   "documents": [
@@ -1185,6 +1185,48 @@
       "publisher": "ADA",
       "source_url": "https://diabetes.org/health-wellness",
       "reviewed_on": "2026-10-31"
+    },
+    {
+      "doc_id": "V01",
+      "title": "Khái niệm đái tháo đường theo Bộ Y tế",
+      "publisher": "Cục Quản lý Khám, chữa bệnh – Bộ Y tế",
+      "source_url": "https://daithaoduong.kcb.vn/dai-thao-duong-la-gi",
+      "reviewed_on": "2026-11-06"
+    },
+    {
+      "doc_id": "V02",
+      "title": "Yếu tố nguy cơ đái tháo đường theo Bộ Y tế",
+      "publisher": "Cục Quản lý Khám, chữa bệnh – Bộ Y tế",
+      "source_url": "https://daithaoduong.kcb.vn/cac-yeu-to-nguy-co",
+      "reviewed_on": "2026-11-06"
+    },
+    {
+      "doc_id": "V03",
+      "title": "Ăn uống phòng đái tháo đường típ 2 theo Bộ Y tế",
+      "publisher": "Cục Quản lý Khám, chữa bệnh – Bộ Y tế",
+      "source_url": "https://daithaoduong.kcb.vn/dinh-duong-hop-ly-de-phong-benh",
+      "reviewed_on": "2026-11-06"
+    },
+    {
+      "doc_id": "V04",
+      "title": "Vận động phòng đái tháo đường theo Bộ Y tế",
+      "publisher": "Cục Quản lý Khám, chữa bệnh – Bộ Y tế",
+      "source_url": "https://daithaoduong.kcb.vn/van-dong-the-luc-de-phong-benh",
+      "reviewed_on": "2026-11-06"
+    },
+    {
+      "doc_id": "V05",
+      "title": "Nhận biết nguy cơ hạ đường huyết từ cổng thông tin Bộ Y tế",
+      "publisher": "Cục Quản lý Khám, chữa bệnh – Bộ Y tế",
+      "source_url": "https://daithaoduong.kcb.vn/ban-dang-song-chung-voi-dai-thao-duong-hay-tim-hieu-ve-ha-duong-huyet",
+      "reviewed_on": "2026-11-06"
+    },
+    {
+      "doc_id": "V06",
+      "title": "Dinh dưỡng cho người đái tháo đường tại Bệnh viện Bạch Mai",
+      "publisher": "Bệnh viện Bạch Mai",
+      "source_url": "https://bachmai.gov.vn/bai-viet/tu-van-dinh-duong-cho-nguoi-benh-dai-thao-duong?id=5b0d7548-b38c-b260-a4b4-94dabfdb116b",
+      "reviewed_on": "2026-11-06"
     }
   ]
 }

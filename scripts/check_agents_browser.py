@@ -219,7 +219,7 @@ def main():
         browser.js("document.getElementById('newConversation').click()")
         send_message('Tiểu đường tuýp 2 ăn chuối được không?')
         check('expanded_corpus_answers_banana_with_specific_clickable_source',browser.js("(()=>{const n=[...document.querySelectorAll('.assistant-message[data-task-id]')].at(-1);return n.textContent.includes('có thể ăn chuối') && n.querySelector('.message-citation').href.startsWith('https://www.diabetes.org.uk/') && !n.textContent.includes('[K01]')})()"))
-        check('expanded_corpus_count_is_visible',browser.js("document.getElementById('knowledgeStats').textContent.includes('168 tài liệu')"))
+        check('expanded_corpus_count_is_visible',browser.js("document.getElementById('knowledgeStats').textContent.includes('174 tài liệu')"))
         browser.js("(()=>{const n=document.getElementById('chatMessages');n.style.scrollBehavior='auto';n.scrollTop=n.scrollHeight;})()")
         browser.screenshot('corpus_expansion_chat.png')
         browser.js("document.getElementById('newConversation').click()")

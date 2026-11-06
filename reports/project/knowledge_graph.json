@@ -20,8 +20,8 @@
     },
     {
       "kind": "alias",
-      "label": "khai niem tieu duong",
-      "id": "alias:khai niem tieu duong"
+      "label": "dai thao duong la gi",
+      "id": "alias:dai thao duong la gi"
     },
     {
       "kind": "alias",
@@ -30,8 +30,8 @@
     },
     {
       "kind": "alias",
-      "label": "dai thao duong la gi",
-      "id": "alias:dai thao duong la gi"
+      "label": "khai niem tieu duong",
+      "id": "alias:khai niem tieu duong"
     },
     {
       "kind": "concept",
@@ -55,13 +55,8 @@
     },
     {
       "kind": "alias",
-      "label": "bieu hien",
-      "id": "alias:bieu hien"
-    },
-    {
-      "kind": "alias",
-      "label": "khat nhieu",
-      "id": "alias:khat nhieu"
+      "label": "vet thuong",
+      "id": "alias:vet thuong"
     },
     {
       "kind": "alias",
@@ -70,18 +65,23 @@
     },
     {
       "kind": "alias",
-      "label": "vet thuong",
-      "id": "alias:vet thuong"
+      "label": "nhin mo",
+      "id": "alias:nhin mo"
+    },
+    {
+      "kind": "alias",
+      "label": "khat nhieu",
+      "id": "alias:khat nhieu"
+    },
+    {
+      "kind": "alias",
+      "label": "bieu hien",
+      "id": "alias:bieu hien"
     },
     {
       "kind": "alias",
       "label": "tieu nhieu",
       "id": "alias:tieu nhieu"
-    },
-    {
-      "kind": "alias",
-      "label": "nhin mo",
-      "id": "alias:nhin mo"
     },
     {
       "kind": "concept",
@@ -100,8 +100,8 @@
     },
     {
       "kind": "alias",
-      "label": "chan doan",
-      "id": "alias:chan doan"
+      "label": "may do tai nha",
+      "id": "alias:may do tai nha"
     },
     {
       "kind": "alias",
@@ -110,8 +110,8 @@
     },
     {
       "kind": "alias",
-      "label": "xet nghiem",
-      "id": "alias:xet nghiem"
+      "label": "chan doan",
+      "id": "alias:chan doan"
     },
     {
       "kind": "alias",
@@ -120,8 +120,8 @@
     },
     {
       "kind": "alias",
-      "label": "may do tai nha",
-      "id": "alias:may do tai nha"
+      "label": "xet nghiem",
+      "id": "alias:xet nghiem"
     },
     {
       "kind": "concept",
@@ -140,13 +140,13 @@
     },
     {
       "kind": "alias",
-      "label": "cholesterol",
-      "id": "alias:cholesterol"
+      "label": "huyet ap",
+      "id": "alias:huyet ap"
     },
     {
       "kind": "alias",
-      "label": "ke hoach cham soc",
-      "id": "alias:ke hoach cham soc"
+      "label": "hba1c",
+      "id": "alias:hba1c"
     },
     {
       "kind": "alias",
@@ -155,13 +155,13 @@
     },
     {
       "kind": "alias",
-      "label": "huyet ap",
-      "id": "alias:huyet ap"
+      "label": "cholesterol",
+      "id": "alias:cholesterol"
     },
     {
       "kind": "alias",
-      "label": "hba1c",
-      "id": "alias:hba1c"
+      "label": "ke hoach cham soc",
+      "id": "alias:ke hoach cham soc"
     },
     {
       "kind": "alias",
@@ -190,6 +190,21 @@
     },
     {
       "kind": "alias",
+      "label": "do uong",
+      "id": "alias:do uong"
+    },
+    {
+      "kind": "alias",
+      "label": "khau phan",
+      "id": "alias:khau phan"
+    },
+    {
+      "kind": "alias",
+      "label": "bua an",
+      "id": "alias:bua an"
+    },
+    {
+      "kind": "alias",
       "label": "thuc pham",
       "id": "alias:thuc pham"
     },
@@ -204,21 +219,6 @@
       "id": "alias:dinh duong"
     },
     {
-      "kind": "alias",
-      "label": "bua an",
-      "id": "alias:bua an"
-    },
-    {
-      "kind": "alias",
-      "label": "khau phan",
-      "id": "alias:khau phan"
-    },
-    {
-      "kind": "alias",
-      "label": "do uong",
-      "id": "alias:do uong"
-    },
-    {
       "kind": "concept",
       "label": "Lifestyle:MealPlan",
       "id": "concept:lifestyle mealplan"
@@ -227,6 +227,16 @@
       "kind": "document",
       "label": "Vận động và lối sống",
       "id": "D06"
+    },
+    {
+      "kind": "alias",
+      "label": "tap luyen",
+      "id": "alias:tap luyen"
+    },
+    {
+      "kind": "alias",
+      "label": "di bo",
+      "id": "alias:di bo"
     },
     {
       "kind": "alias",
@@ -240,18 +250,8 @@
     },
     {
       "kind": "alias",
-      "label": "di bo",
-      "id": "alias:di bo"
-    },
-    {
-      "kind": "alias",
       "label": "van dong",
       "id": "alias:van dong"
-    },
-    {
-      "kind": "alias",
-      "label": "tap luyen",
-      "id": "alias:tap luyen"
     },
     {
       "kind": "concept",
@@ -270,8 +270,18 @@
     },
     {
       "kind": "alias",
+      "label": "thua can",
+      "id": "alias:thua can"
+    },
+    {
+      "kind": "alias",
       "label": "phong ngua",
       "id": "alias:phong ngua"
+    },
+    {
+      "kind": "alias",
+      "label": "tri hoan",
+      "id": "alias:tri hoan"
     },
     {
       "kind": "alias",
@@ -282,16 +292,6 @@
       "kind": "alias",
       "label": "can nang",
       "id": "alias:can nang"
-    },
-    {
-      "kind": "alias",
-      "label": "thua can",
-      "id": "alias:thua can"
-    },
-    {
-      "kind": "alias",
-      "label": "tri hoan",
-      "id": "alias:tri hoan"
     },
     {
       "kind": "concept",
@@ -315,18 +315,13 @@
     },
     {
       "kind": "alias",
-      "label": "chong mat",
-      "id": "alias:chong mat"
-    },
-    {
-      "kind": "alias",
       "label": "glucose thap",
       "id": "alias:glucose thap"
     },
     {
       "kind": "alias",
-      "label": "lu lan",
-      "id": "alias:lu lan"
+      "label": "chong mat",
+      "id": "alias:chong mat"
     },
     {
       "kind": "alias",
@@ -337,6 +332,11 @@
       "kind": "alias",
       "label": "run tay",
       "id": "alias:run tay"
+    },
+    {
+      "kind": "alias",
+      "label": "lu lan",
+      "id": "alias:lu lan"
     },
     {
       "kind": "concept",
@@ -360,21 +360,6 @@
     },
     {
       "kind": "alias",
-      "label": "gfr",
-      "id": "alias:gfr"
-    },
-    {
-      "kind": "alias",
-      "label": "egfr",
-      "id": "alias:egfr"
-    },
-    {
-      "kind": "alias",
-      "label": "nuoc tieu",
-      "id": "alias:nuoc tieu"
-    },
-    {
-      "kind": "alias",
       "label": "than",
       "id": "alias:than"
     },
@@ -385,8 +370,23 @@
     },
     {
       "kind": "alias",
+      "label": "gfr",
+      "id": "alias:gfr"
+    },
+    {
+      "kind": "alias",
+      "label": "nuoc tieu",
+      "id": "alias:nuoc tieu"
+    },
+    {
+      "kind": "alias",
       "label": "muc loc cau than",
       "id": "alias:muc loc cau than"
+    },
+    {
+      "kind": "alias",
+      "label": "egfr",
+      "id": "alias:egfr"
     },
     {
       "kind": "concept",
@@ -410,13 +410,13 @@
     },
     {
       "kind": "alias",
-      "label": "thuoc",
-      "id": "alias:thuoc"
+      "label": "tac dung phu",
+      "id": "alias:tac dung phu"
     },
     {
       "kind": "alias",
-      "label": "cach dung",
-      "id": "alias:cach dung"
+      "label": "thuoc",
+      "id": "alias:thuoc"
     },
     {
       "kind": "alias",
@@ -425,13 +425,13 @@
     },
     {
       "kind": "alias",
-      "label": "dieu tri",
-      "id": "alias:dieu tri"
+      "label": "cach dung",
+      "id": "alias:cach dung"
     },
     {
       "kind": "alias",
-      "label": "tac dung phu",
-      "id": "alias:tac dung phu"
+      "label": "dieu tri",
+      "id": "alias:dieu tri"
     },
     {
       "kind": "concept",
@@ -7060,7 +7060,7 @@
     },
     {
       "kind": "concept",
-      "label": "đái tháo đường",
+      "label": "Đái tháo đường",
       "id": "concept:dai thao duong"
     },
     {
@@ -8045,7 +8045,7 @@
     },
     {
       "kind": "concept",
-      "label": "đái tháo đường type 2",
+      "label": "Đái tháo đường típ 2",
       "id": "concept:dai thao duong tuyp 2"
     },
     {
@@ -8682,6 +8682,336 @@
       "kind": "concept",
       "label": "nguy cơ biến chứng",
       "id": "concept:nguy co bien chung"
+    },
+    {
+      "kind": "document",
+      "label": "Khái niệm đái tháo đường theo Bộ Y tế",
+      "id": "V01"
+    },
+    {
+      "kind": "source",
+      "label": "Cục Quản lý Khám, chữa bệnh – Bộ Y tế",
+      "id": "https://daithaoduong.kcb.vn/dai-thao-duong-la-gi"
+    },
+    {
+      "kind": "alias",
+      "label": "bo y te dai thao duong",
+      "id": "alias:bo y te dai thao duong"
+    },
+    {
+      "kind": "alias",
+      "label": "bo y te tieu duong",
+      "id": "alias:bo y te tieu duong"
+    },
+    {
+      "kind": "alias",
+      "label": "bo y te benh tieu duong",
+      "id": "alias:bo y te benh tieu duong"
+    },
+    {
+      "kind": "alias",
+      "label": "theo bo y te",
+      "id": "alias:theo bo y te"
+    },
+    {
+      "kind": "alias",
+      "label": "khai niem dai thao duong bo y te",
+      "id": "alias:khai niem dai thao duong bo y te"
+    },
+    {
+      "kind": "concept",
+      "label": "Tăng glucose huyết",
+      "id": "concept:tang glucose huyet"
+    },
+    {
+      "kind": "concept",
+      "label": "Mắt và thận",
+      "id": "concept:mat va than"
+    },
+    {
+      "kind": "document",
+      "label": "Yếu tố nguy cơ đái tháo đường theo Bộ Y tế",
+      "id": "V02"
+    },
+    {
+      "kind": "source",
+      "label": "Cục Quản lý Khám, chữa bệnh – Bộ Y tế",
+      "id": "https://daithaoduong.kcb.vn/cac-yeu-to-nguy-co"
+    },
+    {
+      "kind": "alias",
+      "label": "yeu to nguy co theo bo y te",
+      "id": "alias:yeu to nguy co theo bo y te"
+    },
+    {
+      "kind": "alias",
+      "label": "bo y te yeu to nguy co",
+      "id": "alias:bo y te yeu to nguy co"
+    },
+    {
+      "kind": "alias",
+      "label": "nguy co mac tieu duong theo bo y te",
+      "id": "alias:nguy co mac tieu duong theo bo y te"
+    },
+    {
+      "kind": "alias",
+      "label": "nguy co dai thao duong bo y te",
+      "id": "alias:nguy co dai thao duong bo y te"
+    },
+    {
+      "kind": "alias",
+      "label": "bo y te nguy co dai thao duong",
+      "id": "alias:bo y te nguy co dai thao duong"
+    },
+    {
+      "kind": "concept",
+      "label": "Tiền sử gia đình có đái tháo đường",
+      "id": "concept:tien su gia dinh co dai thao duong"
+    },
+    {
+      "kind": "concept",
+      "label": "Thừa cân",
+      "id": "concept:thua can"
+    },
+    {
+      "kind": "concept",
+      "label": "Ít vận động",
+      "id": "concept:it van dong"
+    },
+    {
+      "kind": "document",
+      "label": "Ăn uống phòng đái tháo đường típ 2 theo Bộ Y tế",
+      "id": "V03"
+    },
+    {
+      "kind": "source",
+      "label": "Cục Quản lý Khám, chữa bệnh – Bộ Y tế",
+      "id": "https://daithaoduong.kcb.vn/dinh-duong-hop-ly-de-phong-benh"
+    },
+    {
+      "kind": "alias",
+      "label": "dinh duong hop ly de phong benh",
+      "id": "alias:dinh duong hop ly de phong benh"
+    },
+    {
+      "kind": "alias",
+      "label": "dinh duong phong benh theo bo y te",
+      "id": "alias:dinh duong phong benh theo bo y te"
+    },
+    {
+      "kind": "alias",
+      "label": "an uong phong tieu duong theo bo y te",
+      "id": "alias:an uong phong tieu duong theo bo y te"
+    },
+    {
+      "kind": "alias",
+      "label": "bo y te dinh duong phong benh",
+      "id": "alias:bo y te dinh duong phong benh"
+    },
+    {
+      "kind": "alias",
+      "label": "an uong phong dai thao duong bo y te",
+      "id": "alias:an uong phong dai thao duong bo y te"
+    },
+    {
+      "kind": "concept",
+      "label": "Ăn uống lành mạnh và vận động",
+      "id": "concept:an uong lanh manh va van dong"
+    },
+    {
+      "kind": "concept",
+      "label": "Bữa ăn nhẹ",
+      "id": "concept:bua an nhe"
+    },
+    {
+      "kind": "concept",
+      "label": "Sữa chua không đường",
+      "id": "concept:sua chua khong duong"
+    },
+    {
+      "kind": "concept",
+      "label": "Ngũ cốc nguyên cám",
+      "id": "concept:ngu coc nguyen cam"
+    },
+    {
+      "kind": "document",
+      "label": "Vận động phòng đái tháo đường theo Bộ Y tế",
+      "id": "V04"
+    },
+    {
+      "kind": "source",
+      "label": "Cục Quản lý Khám, chữa bệnh – Bộ Y tế",
+      "id": "https://daithaoduong.kcb.vn/van-dong-the-luc-de-phong-benh"
+    },
+    {
+      "kind": "alias",
+      "label": "van dong the luc de phong benh",
+      "id": "alias:van dong the luc de phong benh"
+    },
+    {
+      "kind": "alias",
+      "label": "van dong phong benh theo bo y te",
+      "id": "alias:van dong phong benh theo bo y te"
+    },
+    {
+      "kind": "alias",
+      "label": "bo y te tap luyen phong tieu duong",
+      "id": "alias:bo y te tap luyen phong tieu duong"
+    },
+    {
+      "kind": "alias",
+      "label": "bo y te van dong the luc",
+      "id": "alias:bo y te van dong the luc"
+    },
+    {
+      "kind": "alias",
+      "label": "van dong phong dai thao duong bo y te",
+      "id": "alias:van dong phong dai thao duong bo y te"
+    },
+    {
+      "kind": "concept",
+      "label": "Đi bộ",
+      "id": "concept:di bo"
+    },
+    {
+      "kind": "concept",
+      "label": "150 phút mỗi tuần",
+      "id": "concept:150 phut moi tuan"
+    },
+    {
+      "kind": "concept",
+      "label": "Người lớn tuổi hoặc đau khớp",
+      "id": "concept:nguoi lon tuoi hoac dau khop"
+    },
+    {
+      "kind": "concept",
+      "label": "Các lượt ngắn trong ngày",
+      "id": "concept:cac luot ngan trong ngay"
+    },
+    {
+      "kind": "concept",
+      "label": "Lựa chọn vận động",
+      "id": "concept:lua chon van dong"
+    },
+    {
+      "kind": "concept",
+      "label": "Biến chứng tim mạch và bàn chân",
+      "id": "concept:bien chung tim mach va ban chan"
+    },
+    {
+      "kind": "document",
+      "label": "Nhận biết nguy cơ hạ đường huyết từ cổng thông tin Bộ Y tế",
+      "id": "V05"
+    },
+    {
+      "kind": "source",
+      "label": "Cục Quản lý Khám, chữa bệnh – Bộ Y tế",
+      "id": "https://daithaoduong.kcb.vn/ban-dang-song-chung-voi-dai-thao-duong-hay-tim-hieu-ve-ha-duong-huyet"
+    },
+    {
+      "kind": "alias",
+      "label": "ha duong huyet theo bo y te",
+      "id": "alias:ha duong huyet theo bo y te"
+    },
+    {
+      "kind": "alias",
+      "label": "ha duong huyet bo y te",
+      "id": "alias:ha duong huyet bo y te"
+    },
+    {
+      "kind": "alias",
+      "label": "bo y te ha duong huyet",
+      "id": "alias:bo y te ha duong huyet"
+    },
+    {
+      "kind": "alias",
+      "label": "nguy co ha duong huyet lao khoa trung uong",
+      "id": "alias:nguy co ha duong huyet lao khoa trung uong"
+    },
+    {
+      "kind": "alias",
+      "label": "bo bua ha duong huyet",
+      "id": "alias:bo bua ha duong huyet"
+    },
+    {
+      "kind": "concept",
+      "label": "Bỏ bữa",
+      "id": "concept:bo bua"
+    },
+    {
+      "kind": "concept",
+      "label": "Run và vã mồ hôi",
+      "id": "concept:run va va mo hoi"
+    },
+    {
+      "kind": "concept",
+      "label": "Triệu chứng báo trước",
+      "id": "concept:trieu chung bao truoc"
+    },
+    {
+      "kind": "document",
+      "label": "Dinh dưỡng cho người đái tháo đường tại Bệnh viện Bạch Mai",
+      "id": "V06"
+    },
+    {
+      "kind": "source",
+      "label": "Bệnh viện Bạch Mai",
+      "id": "https://bachmai.gov.vn/bai-viet/tu-van-dinh-duong-cho-nguoi-benh-dai-thao-duong?id=5b0d7548-b38c-b260-a4b4-94dabfdb116b"
+    },
+    {
+      "kind": "alias",
+      "label": "dinh duong theo bach mai",
+      "id": "alias:dinh duong theo bach mai"
+    },
+    {
+      "kind": "alias",
+      "label": "bach mai an uong",
+      "id": "alias:bach mai an uong"
+    },
+    {
+      "kind": "alias",
+      "label": "benh vien bach mai dinh duong",
+      "id": "alias:benh vien bach mai dinh duong"
+    },
+    {
+      "kind": "alias",
+      "label": "bach mai tu van dinh duong",
+      "id": "alias:bach mai tu van dinh duong"
+    },
+    {
+      "kind": "alias",
+      "label": "gao xat doi",
+      "id": "alias:gao xat doi"
+    },
+    {
+      "kind": "alias",
+      "label": "bua com theo benh vien bach mai",
+      "id": "alias:bua com theo benh vien bach mai"
+    },
+    {
+      "kind": "concept",
+      "label": "Tư vấn dinh dưỡng Bạch Mai",
+      "id": "concept:tu van dinh duong bach mai"
+    },
+    {
+      "kind": "concept",
+      "label": "Kiểm soát lượng tinh bột",
+      "id": "concept:kiem soat luong tinh bot"
+    },
+    {
+      "kind": "concept",
+      "label": "Gạo xát dối",
+      "id": "concept:gao xat doi"
+    },
+    {
+      "kind": "concept",
+      "label": "Khẩu phần ăn",
+      "id": "concept:khau phan an"
+    },
+    {
+      "kind": "concept",
+      "label": "Cân nặng và tình trạng bệnh",
+      "id": "concept:can nang va tinh trang benh"
     }
   ],
   "edges": [
@@ -8702,7 +9032,7 @@
     {
       "relation": "retrieves",
       "evidence_id": "D01",
-      "source": "alias:khai niem tieu duong",
+      "source": "alias:dai thao duong la gi",
       "target": "D01",
       "key": 0
     },
@@ -8716,7 +9046,7 @@
     {
       "relation": "retrieves",
       "evidence_id": "D01",
-      "source": "alias:dai thao duong la gi",
+      "source": "alias:khai niem tieu duong",
       "target": "D01",
       "key": 0
     },
@@ -8775,27 +9105,6 @@
     {
       "relation": "retrieves",
       "evidence_id": "D02",
-      "source": "alias:bieu hien",
-      "target": "D02",
-      "key": 0
-    },
-    {
-      "relation": "retrieves",
-      "evidence_id": "D02",
-      "source": "alias:khat nhieu",
-      "target": "D02",
-      "key": 0
-    },
-    {
-      "relation": "retrieves",
-      "evidence_id": "D02",
-      "source": "alias:trieu chung",
-      "target": "D02",
-      "key": 0
-    },
-    {
-      "relation": "retrieves",
-      "evidence_id": "D02",
       "source": "alias:vet thuong",
       "target": "D02",
       "key": 0
@@ -8810,7 +9119,7 @@
     {
       "relation": "retrieves",
       "evidence_id": "D02",
-      "source": "alias:tieu nhieu",
+      "source": "alias:trieu chung",
       "target": "D02",
       "key": 0
     },
@@ -8818,6 +9127,27 @@
       "relation": "retrieves",
       "evidence_id": "D02",
       "source": "alias:nhin mo",
+      "target": "D02",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "D02",
+      "source": "alias:khat nhieu",
+      "target": "D02",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "D02",
+      "source": "alias:bieu hien",
+      "target": "D02",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "D02",
+      "source": "alias:tieu nhieu",
       "target": "D02",
       "key": 0
     },
@@ -8831,7 +9161,7 @@
     {
       "relation": "retrieves",
       "evidence_id": "D03",
-      "source": "alias:chan doan",
+      "source": "alias:may do tai nha",
       "target": "D03",
       "key": 0
     },
@@ -8845,7 +9175,7 @@
     {
       "relation": "retrieves",
       "evidence_id": "D03",
-      "source": "alias:xet nghiem",
+      "source": "alias:chan doan",
       "target": "D03",
       "key": 0
     },
@@ -8859,7 +9189,7 @@
     {
       "relation": "retrieves",
       "evidence_id": "D03",
-      "source": "alias:may do tai nha",
+      "source": "alias:xet nghiem",
       "target": "D03",
       "key": 0
     },
@@ -8868,34 +9198,6 @@
       "evidence_id": "D04",
       "source": "D04",
       "target": "https://www.niddk.nih.gov/health-information/diabetes/overview/managing-diabetes",
-      "key": 0
-    },
-    {
-      "relation": "retrieves",
-      "evidence_id": "D04",
-      "source": "alias:cholesterol",
-      "target": "D04",
-      "key": 0
-    },
-    {
-      "relation": "retrieves",
-      "evidence_id": "K12",
-      "source": "alias:cholesterol",
-      "target": "K12",
-      "key": 0
-    },
-    {
-      "relation": "retrieves",
-      "evidence_id": "D04",
-      "source": "alias:ke hoach cham soc",
-      "target": "D04",
-      "key": 0
-    },
-    {
-      "relation": "retrieves",
-      "evidence_id": "D04",
-      "source": "alias:a1c",
-      "target": "D04",
       "key": 0
     },
     {
@@ -8916,6 +9218,34 @@
       "relation": "retrieves",
       "evidence_id": "D04",
       "source": "alias:hba1c",
+      "target": "D04",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "D04",
+      "source": "alias:a1c",
+      "target": "D04",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "D04",
+      "source": "alias:cholesterol",
+      "target": "D04",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "K12",
+      "source": "alias:cholesterol",
+      "target": "K12",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "D04",
+      "source": "alias:ke hoach cham soc",
       "target": "D04",
       "key": 0
     },
@@ -8945,6 +9275,27 @@
     {
       "relation": "retrieves",
       "evidence_id": "D05",
+      "source": "alias:do uong",
+      "target": "D05",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "D05",
+      "source": "alias:khau phan",
+      "target": "D05",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "D05",
+      "source": "alias:bua an",
+      "target": "D05",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "D05",
       "source": "alias:thuc pham",
       "target": "D05",
       "key": 0
@@ -8964,31 +9315,24 @@
       "key": 0
     },
     {
-      "relation": "retrieves",
-      "evidence_id": "D05",
-      "source": "alias:bua an",
-      "target": "D05",
-      "key": 0
-    },
-    {
-      "relation": "retrieves",
-      "evidence_id": "D05",
-      "source": "alias:khau phan",
-      "target": "D05",
-      "key": 0
-    },
-    {
-      "relation": "retrieves",
-      "evidence_id": "D05",
-      "source": "alias:do uong",
-      "target": "D05",
-      "key": 0
-    },
-    {
       "relation": "cites",
       "evidence_id": "D06",
       "source": "D06",
       "target": "https://www.niddk.nih.gov/health-information/diabetes/overview/healthy-living-with-diabetes",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "D06",
+      "source": "alias:tap luyen",
+      "target": "D06",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "D06",
+      "source": "alias:di bo",
+      "target": "D06",
       "key": 0
     },
     {
@@ -9008,21 +9352,7 @@
     {
       "relation": "retrieves",
       "evidence_id": "D06",
-      "source": "alias:di bo",
-      "target": "D06",
-      "key": 0
-    },
-    {
-      "relation": "retrieves",
-      "evidence_id": "D06",
       "source": "alias:van dong",
-      "target": "D06",
-      "key": 0
-    },
-    {
-      "relation": "retrieves",
-      "evidence_id": "D06",
-      "source": "alias:tap luyen",
       "target": "D06",
       "key": 0
     },
@@ -9036,7 +9366,21 @@
     {
       "relation": "retrieves",
       "evidence_id": "D07",
+      "source": "alias:thua can",
+      "target": "D07",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "D07",
       "source": "alias:phong ngua",
+      "target": "D07",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "D07",
+      "source": "alias:tri hoan",
       "target": "D07",
       "key": 0
     },
@@ -9051,20 +9395,6 @@
       "relation": "retrieves",
       "evidence_id": "D07",
       "source": "alias:can nang",
-      "target": "D07",
-      "key": 0
-    },
-    {
-      "relation": "retrieves",
-      "evidence_id": "D07",
-      "source": "alias:thua can",
-      "target": "D07",
-      "key": 0
-    },
-    {
-      "relation": "retrieves",
-      "evidence_id": "D07",
-      "source": "alias:tri hoan",
       "target": "D07",
       "key": 0
     },
@@ -9087,13 +9417,6 @@
     {
       "relation": "retrieves",
       "evidence_id": "D08",
-      "source": "alias:chong mat",
-      "target": "D08",
-      "key": 0
-    },
-    {
-      "relation": "retrieves",
-      "evidence_id": "D08",
       "source": "alias:glucose thap",
       "target": "D08",
       "key": 0
@@ -9101,7 +9424,7 @@
     {
       "relation": "retrieves",
       "evidence_id": "D08",
-      "source": "alias:lu lan",
+      "source": "alias:chong mat",
       "target": "D08",
       "key": 0
     },
@@ -9116,6 +9439,13 @@
       "relation": "retrieves",
       "evidence_id": "D08",
       "source": "alias:run tay",
+      "target": "D08",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "D08",
+      "source": "alias:lu lan",
       "target": "D08",
       "key": 0
     },
@@ -9138,27 +9468,6 @@
     {
       "relation": "retrieves",
       "evidence_id": "D09",
-      "source": "alias:gfr",
-      "target": "D09",
-      "key": 0
-    },
-    {
-      "relation": "retrieves",
-      "evidence_id": "D09",
-      "source": "alias:egfr",
-      "target": "D09",
-      "key": 0
-    },
-    {
-      "relation": "retrieves",
-      "evidence_id": "D09",
-      "source": "alias:nuoc tieu",
-      "target": "D09",
-      "key": 0
-    },
-    {
-      "relation": "retrieves",
-      "evidence_id": "D09",
       "source": "alias:than",
       "target": "D09",
       "key": 0
@@ -9173,7 +9482,28 @@
     {
       "relation": "retrieves",
       "evidence_id": "D09",
+      "source": "alias:gfr",
+      "target": "D09",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "D09",
+      "source": "alias:nuoc tieu",
+      "target": "D09",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "D09",
       "source": "alias:muc loc cau than",
+      "target": "D09",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "D09",
+      "source": "alias:egfr",
       "target": "D09",
       "key": 0
     },
@@ -9196,6 +9526,13 @@
     {
       "relation": "retrieves",
       "evidence_id": "D10",
+      "source": "alias:tac dung phu",
+      "target": "D10",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "D10",
       "source": "alias:thuoc",
       "target": "D10",
       "key": 0
@@ -9203,14 +9540,14 @@
     {
       "relation": "retrieves",
       "evidence_id": "D10",
-      "source": "alias:cach dung",
+      "source": "alias:insulin",
       "target": "D10",
       "key": 0
     },
     {
       "relation": "retrieves",
       "evidence_id": "D10",
-      "source": "alias:insulin",
+      "source": "alias:cach dung",
       "target": "D10",
       "key": 0
     },
@@ -9226,13 +9563,6 @@
       "evidence_id": "K20",
       "source": "alias:dieu tri",
       "target": "K20",
-      "key": 0
-    },
-    {
-      "relation": "retrieves",
-      "evidence_id": "D10",
-      "source": "alias:tac dung phu",
-      "target": "D10",
       "key": 0
     },
     {
@@ -9799,6 +10129,24 @@
       "object": "70 mg/dL",
       "source": "concept:ha duong huyet",
       "target": "concept:70 mg dl",
+      "key": 0
+    },
+    {
+      "relation": "có thể gây",
+      "evidence_id": "V05",
+      "subject": "Hạ đường huyết",
+      "object": "Run và vã mồ hôi",
+      "source": "concept:ha duong huyet",
+      "target": "concept:run va va mo hoi",
+      "key": 0
+    },
+    {
+      "relation": "có thể không có",
+      "evidence_id": "V05",
+      "subject": "Hạ đường huyết",
+      "object": "Triệu chứng báo trước",
+      "source": "concept:ha duong huyet",
+      "target": "concept:trieu chung bao truoc",
       "key": 0
     },
     {
@@ -11175,6 +11523,15 @@
       "object": "Nhiễm toan ceton",
       "source": "concept:thieu insulin",
       "target": "concept:nhiem toan ceton",
+      "key": 0
+    },
+    {
+      "relation": "góp phần gây",
+      "evidence_id": "V01",
+      "subject": "Thiếu insulin",
+      "object": "Tăng glucose huyết",
+      "source": "concept:thieu insulin",
+      "target": "concept:tang glucose huyet",
       "key": 0
     },
     {
@@ -17713,6 +18070,15 @@
       "key": 0
     },
     {
+      "relation": "có đặc điểm",
+      "evidence_id": "V01",
+      "subject": "Đái tháo đường",
+      "object": "Tăng glucose huyết",
+      "source": "concept:dai thao duong",
+      "target": "concept:tang glucose huyet",
+      "key": 0
+    },
+    {
       "relation": "gây ra",
       "evidence_id": "K124",
       "subject": "Cục máu đông",
@@ -17961,6 +18327,15 @@
       "object": "Tổn thương mạch máu và thần kinh",
       "source": "concept:duong huyet cao keo dai",
       "target": "concept:ton thuong mach mau va than kinh",
+      "key": 0
+    },
+    {
+      "relation": "có thể gây tổn thương",
+      "evidence_id": "V01",
+      "subject": "Đường huyết cao kéo dài",
+      "object": "Mắt và thận",
+      "source": "concept:duong huyet cao keo dai",
+      "target": "concept:mat va than",
       "key": 0
     },
     {
@@ -19429,6 +19804,382 @@
       "object": "nguy cơ biến chứng",
       "source": "concept:khi ban bi tieu duong",
       "target": "concept:nguy co bien chung",
+      "key": 0
+    },
+    {
+      "relation": "cites",
+      "evidence_id": "V01",
+      "source": "V01",
+      "target": "https://daithaoduong.kcb.vn/dai-thao-duong-la-gi",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "V01",
+      "source": "alias:bo y te dai thao duong",
+      "target": "V01",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "V01",
+      "source": "alias:bo y te tieu duong",
+      "target": "V01",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "V01",
+      "source": "alias:bo y te benh tieu duong",
+      "target": "V01",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "V01",
+      "source": "alias:theo bo y te",
+      "target": "V01",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "V01",
+      "source": "alias:khai niem dai thao duong bo y te",
+      "target": "V01",
+      "key": 0
+    },
+    {
+      "relation": "cites",
+      "evidence_id": "V02",
+      "source": "V02",
+      "target": "https://daithaoduong.kcb.vn/cac-yeu-to-nguy-co",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "V02",
+      "source": "alias:yeu to nguy co theo bo y te",
+      "target": "V02",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "V02",
+      "source": "alias:bo y te yeu to nguy co",
+      "target": "V02",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "V02",
+      "source": "alias:nguy co mac tieu duong theo bo y te",
+      "target": "V02",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "V02",
+      "source": "alias:nguy co dai thao duong bo y te",
+      "target": "V02",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "V02",
+      "source": "alias:bo y te nguy co dai thao duong",
+      "target": "V02",
+      "key": 0
+    },
+    {
+      "relation": "là yếu tố nguy cơ của",
+      "evidence_id": "V02",
+      "subject": "Tiền sử gia đình có đái tháo đường",
+      "object": "Đái tháo đường típ 2",
+      "source": "concept:tien su gia dinh co dai thao duong",
+      "target": "concept:dai thao duong tuyp 2",
+      "key": 0
+    },
+    {
+      "relation": "là yếu tố nguy cơ của",
+      "evidence_id": "V02",
+      "subject": "Thừa cân",
+      "object": "Đái tháo đường típ 2",
+      "source": "concept:thua can",
+      "target": "concept:dai thao duong tuyp 2",
+      "key": 0
+    },
+    {
+      "relation": "là yếu tố nguy cơ của",
+      "evidence_id": "V02",
+      "subject": "Ít vận động",
+      "object": "Đái tháo đường típ 2",
+      "source": "concept:it van dong",
+      "target": "concept:dai thao duong tuyp 2",
+      "key": 0
+    },
+    {
+      "relation": "cites",
+      "evidence_id": "V03",
+      "source": "V03",
+      "target": "https://daithaoduong.kcb.vn/dinh-duong-hop-ly-de-phong-benh",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "V03",
+      "source": "alias:dinh duong hop ly de phong benh",
+      "target": "V03",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "V03",
+      "source": "alias:dinh duong phong benh theo bo y te",
+      "target": "V03",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "V03",
+      "source": "alias:an uong phong tieu duong theo bo y te",
+      "target": "V03",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "V03",
+      "source": "alias:bo y te dinh duong phong benh",
+      "target": "V03",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "V03",
+      "source": "alias:an uong phong dai thao duong bo y te",
+      "target": "V03",
+      "key": 0
+    },
+    {
+      "relation": "hỗ trợ giảm nguy cơ",
+      "evidence_id": "V03",
+      "subject": "Ăn uống lành mạnh và vận động",
+      "object": "Đái tháo đường típ 2",
+      "source": "concept:an uong lanh manh va van dong",
+      "target": "concept:dai thao duong tuyp 2",
+      "key": 0
+    },
+    {
+      "relation": "có thể chọn",
+      "evidence_id": "V03",
+      "subject": "Bữa ăn nhẹ",
+      "object": "Sữa chua không đường",
+      "source": "concept:bua an nhe",
+      "target": "concept:sua chua khong duong",
+      "key": 0
+    },
+    {
+      "relation": "là lựa chọn thay cho",
+      "evidence_id": "V03",
+      "subject": "Ngũ cốc nguyên cám",
+      "object": "Ngũ cốc tinh chế",
+      "source": "concept:ngu coc nguyen cam",
+      "target": "concept:ngu coc tinh che",
+      "key": 0
+    },
+    {
+      "relation": "cites",
+      "evidence_id": "V04",
+      "source": "V04",
+      "target": "https://daithaoduong.kcb.vn/van-dong-the-luc-de-phong-benh",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "V04",
+      "source": "alias:van dong the luc de phong benh",
+      "target": "V04",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "V04",
+      "source": "alias:van dong phong benh theo bo y te",
+      "target": "V04",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "V04",
+      "source": "alias:bo y te tap luyen phong tieu duong",
+      "target": "V04",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "V04",
+      "source": "alias:bo y te van dong the luc",
+      "target": "V04",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "V04",
+      "source": "alias:van dong phong dai thao duong bo y te",
+      "target": "V04",
+      "key": 0
+    },
+    {
+      "relation": "có tổng thời gian tham khảo",
+      "evidence_id": "V04",
+      "subject": "Đi bộ",
+      "object": "150 phút mỗi tuần",
+      "source": "concept:di bo",
+      "target": "concept:150 phut moi tuan",
+      "key": 0
+    },
+    {
+      "relation": "có thể chia vận động thành",
+      "evidence_id": "V04",
+      "subject": "Người lớn tuổi hoặc đau khớp",
+      "object": "Các lượt ngắn trong ngày",
+      "source": "concept:nguoi lon tuoi hoac dau khop",
+      "target": "concept:cac luot ngan trong ngay",
+      "key": 0
+    },
+    {
+      "relation": "cần đánh giá trước",
+      "evidence_id": "V04",
+      "subject": "Lựa chọn vận động",
+      "object": "Biến chứng tim mạch và bàn chân",
+      "source": "concept:lua chon van dong",
+      "target": "concept:bien chung tim mach va ban chan",
+      "key": 0
+    },
+    {
+      "relation": "cites",
+      "evidence_id": "V05",
+      "source": "V05",
+      "target": "https://daithaoduong.kcb.vn/ban-dang-song-chung-voi-dai-thao-duong-hay-tim-hieu-ve-ha-duong-huyet",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "V05",
+      "source": "alias:ha duong huyet theo bo y te",
+      "target": "V05",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "V05",
+      "source": "alias:ha duong huyet bo y te",
+      "target": "V05",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "V05",
+      "source": "alias:bo y te ha duong huyet",
+      "target": "V05",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "V05",
+      "source": "alias:nguy co ha duong huyet lao khoa trung uong",
+      "target": "V05",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "V05",
+      "source": "alias:bo bua ha duong huyet",
+      "target": "V05",
+      "key": 0
+    },
+    {
+      "relation": "làm tăng nguy cơ",
+      "evidence_id": "V05",
+      "subject": "Bỏ bữa",
+      "object": "Hạ đường huyết",
+      "source": "concept:bo bua",
+      "target": "concept:ha duong huyet",
+      "key": 0
+    },
+    {
+      "relation": "cites",
+      "evidence_id": "V06",
+      "source": "V06",
+      "target": "https://bachmai.gov.vn/bai-viet/tu-van-dinh-duong-cho-nguoi-benh-dai-thao-duong?id=5b0d7548-b38c-b260-a4b4-94dabfdb116b",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "V06",
+      "source": "alias:dinh duong theo bach mai",
+      "target": "V06",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "V06",
+      "source": "alias:bach mai an uong",
+      "target": "V06",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "V06",
+      "source": "alias:benh vien bach mai dinh duong",
+      "target": "V06",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "V06",
+      "source": "alias:bach mai tu van dinh duong",
+      "target": "V06",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "V06",
+      "source": "alias:gao xat doi",
+      "target": "V06",
+      "key": 0
+    },
+    {
+      "relation": "retrieves",
+      "evidence_id": "V06",
+      "source": "alias:bua com theo benh vien bach mai",
+      "target": "V06",
+      "key": 0
+    },
+    {
+      "relation": "chú trọng",
+      "evidence_id": "V06",
+      "subject": "Tư vấn dinh dưỡng Bạch Mai",
+      "object": "Kiểm soát lượng tinh bột",
+      "source": "concept:tu van dinh duong bach mai",
+      "target": "concept:kiem soat luong tinh bot",
+      "key": 0
+    },
+    {
+      "relation": "là ví dụ thực phẩm được nêu trong",
+      "evidence_id": "V06",
+      "subject": "Gạo xát dối",
+      "object": "Tư vấn dinh dưỡng Bạch Mai",
+      "source": "concept:gao xat doi",
+      "target": "concept:tu van dinh duong bach mai",
+      "key": 0
+    },
+    {
+      "relation": "cần dựa trên",
+      "evidence_id": "V06",
+      "subject": "Khẩu phần ăn",
+      "object": "Cân nặng và tình trạng bệnh",
+      "source": "concept:khau phan an",
+      "target": "concept:can nang va tinh trang benh",
       "key": 0
     }
   ]
