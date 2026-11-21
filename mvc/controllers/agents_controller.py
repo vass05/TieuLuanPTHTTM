@@ -20,7 +20,8 @@ def get_agents_model():
             current_app.extensions['chapter6_agents'] = AgentsModel(
                 current_app.config.get('AGENTS_ROOT', current_app.root_path),
                 current_app.config['AGENTS_DATABASE'],
-                external_enabled=False if current_app.testing else current_app.config.get('ASSISTANT_EXTERNAL_ENABLED'))
+                external_enabled=False if current_app.testing else current_app.config.get('ASSISTANT_EXTERNAL_ENABLED'),
+                knowledge_backend=current_app.config.get('DIABETES_KB_BACKEND', 'local' if current_app.testing else None))
     return current_app.extensions['chapter6_agents']
 
 

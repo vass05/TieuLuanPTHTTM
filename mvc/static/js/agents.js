@@ -50,9 +50,16 @@
         document.querySelectorAll('#suggestedQueries button').forEach(button=>{button.disabled=!ready||busy;});
         $('chatPanel').setAttribute('aria-busy',String(busy));
     }
-    function sourceLink(url,label){
+    let sourceHosts=new Set();
+    function sourceLink(url,label,page){
         const anchor=el('a','',label);
-        try{const parsed=new URL(url);if(parsed.protocol==='https:'&&['www.niddk.nih.gov','www.cdc.gov','www.medlineplus.gov','medlineplus.gov','diabetes.org','www.nhs.uk','www.canada.ca','www.diabetes.org.uk','www.nccih.nih.gov'].includes(parsed.hostname))anchor.href=parsed.href;}catch{}
+        try{
+            const parsed=new URL(url);
+            if(parsed.protocol==='https:'&&sourceHosts.has(parsed.hostname)&&!parsed.username&&!parsed.password){
+                if(Number.isInteger(page)&&page>0)parsed.hash='page='+page;
+                anchor.href=parsed.href;
+            }
+        }catch{}
         anchor.target='_blank';anchor.rel='noopener noreferrer';return anchor;
     }
     function row(role){
@@ -84,13 +91,18 @@
         const blocks=task.answer_blocks||task.blocks||[];
         blocks.forEach(block=>{
             const p=el('p','',block.text);
-            (block.evidence_ids||[]).forEach(id=>{const hit=(task.evidence||[]).find(h=>h.doc_id===id);if(hit){const link=sourceLink(hit.source_url,'['+id+'] ↗');link.className='message-citation';p.append(link);}});
+            (block.evidence_ids||[]).forEach(id=>{const hit=(task.evidence||[]).find(h=>h.doc_id===id);if(hit){const link=sourceLink(hit.source_url,'['+id+(hit.page?' · tr. '+hit.page:'')+'] ↗',hit.page);link.className='message-citation';p.append(link);}});
             r.bubble.append(p);
         });
         if(!task.reply&&!blocks.length)(task.reasons||['Chưa có thông tin phù hợp để trả lời.']).forEach(reason=>r.bubble.append(el('p','',reason)));
         if((task.evidence||[]).length){
             const details=el('details','message-sources');details.append(el('summary','','Nguồn tham khảo ('+task.evidence.length+')'));
-            task.evidence.forEach(hit=>{const item=el('div','message-source');item.append(sourceLink(hit.source_url,hit.doc_id+' · '+hit.title+' ↗'),el('small','',(hit.publisher||'Nguồn y tế')+' · Tóm tắt tiếng Việt'));details.append(item);});
+            task.evidence.forEach(hit=>{
+                const item=el('div','message-source');
+                const kind=hit.page?'PDF trang '+hit.page:hit.content_type==='attributed_source_excerpt'?'Trích đoạn nguồn':'Tóm tắt tiếng Việt';
+                item.append(sourceLink(hit.source_url,hit.doc_id+' · '+hit.title+' ↗',hit.page),el('small','',(hit.publisher||'Nguồn y tế')+' · '+kind));
+                details.append(item);
+            });
             r.bubble.append(details);
         }
         const inspect=el('button','message-inspect','Xem luồng xử lý · '+number(task.latency_ms,2)+' ms');
@@ -136,7 +148,7 @@
             const item=el('li',e.status==='FAILED'?'is-failed':'');
             item.append(el('strong','',senders[e.sender]||e.sender),document.createTextNode(' · '+(actions[e.action]||e.action)));
             const labels=e.payload?.topics||[];
-            item.append(el('small','',number(e.duration_ms,2)+' ms'+(labels.length?' · '+labels.map(t=>topics[t]||t).join(', '):'')+(e.status==='FAILED'?' · có lỗi':'')));
+            item.append(el('small','',number(e.duration_ms,2)+' ms'+(e.payload?.backend==='neo4j'?' · Neo4j / Cypher':'')+(labels.length?' · '+labels.map(t=>topics[t]||t).join(', '):'')+(e.status==='FAILED'?' · có lỗi':'')));
             $('executionTrace').append(item);
         });
         $('traceCount').textContent=trace.length+' sự kiện';$('latencyMetric').textContent='Thời gian: '+number(task.latency_ms,2)+' ms';
@@ -191,7 +203,7 @@
     async function boot(){
         welcome();clearFlow();
         try{
-            const setup=await api('/api/v1/agents/session');csrf=setup.csrf_token;
+            const setup=await api('/api/v1/agents/session');csrf=setup.csrf_token;sourceHosts=new Set(setup.config.source_hosts||[]);
             const suggestions=[['Ăn uống','Tiểu đường ăn được gì'],['Theo dõi A1C','A1C cho biết điều gì trong kế hoạch chăm sóc?'],['Vận động','Hoạt động thể chất có vai trò gì?'],['Xét nghiệm','Làm sao biết có bị tiểu đường không?'],['Đánh giá bằng chỉ số','Tôi muốn đánh giá nguy cơ tiểu đường bằng các chỉ số sức khỏe'],['Thử dữ liệu mẫu','Chạy thử dự đoán bằng dữ liệu mẫu']];
             suggestions.forEach(([label,query])=>{const button=el('button','',label);button.type='button';button.title=query;button.addEventListener('click',()=>{$('chatInput').value=query;send();});$('suggestedQueries').append(button);});
             const health=await api('/api/v1/health');ready=true;$('serviceBadge').textContent='● Hệ thống sẵn sàng';$('serviceBadge').classList.add('is-ready');

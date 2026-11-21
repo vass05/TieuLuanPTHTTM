@@ -18,3 +18,6 @@ DATA/mnist_train.csv
 # Local session signing key and research task history
 instance/
 
+# Original PDFs retained locally for source verification
+/knowledge/sources/pdf/library/
+

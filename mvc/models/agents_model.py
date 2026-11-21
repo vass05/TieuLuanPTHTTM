@@ -13,7 +13,8 @@ from mvc.models.artifact_utils import artifact_digest
 from mvc.models.model_errors import ModelUnavailableError, TaskConflictError
 from mvc.models.assistant_synthesis import AssistantSynthesis
 from mvc.models.prediction_dialogue import prediction_request, prediction_reply, prediction_followup
-from mvc.models.diabetes_dialogue import DiabetesDialogue, load_conversation_documents, load_extended_documents, normalize_question
+from mvc.models.diabetes_dialogue import DiabetesDialogue, TRUSTED_HOSTS, load_conversation_documents, load_extended_documents, normalize_question
+from mvc.models.neo4j_knowledge import Neo4jKnowledge, settings, source_fields
 
 LOGGER = logging.getLogger(__name__)
 
@@ -30,12 +31,17 @@ FEATURE_FIELDS = [
 
 
 class AgentsModel:
-    def __init__(self, root, database_path, external_enabled=None):
+    def __init__(self, root, database_path, external_enabled=None, knowledge_backend=None):
         self.root = Path(root)
         self.store = AgentStore(database_path)
         self._lock = threading.RLock()
         self._loaded = False
         self.synthesis = AssistantSynthesis(self.root,external_enabled)
+        self.neo4j_config = settings(self.root)
+        self.knowledge_backend = knowledge_backend or self.neo4j_config['DIABETES_KB_BACKEND']
+        if self.knowledge_backend not in ('local', 'neo4j'):
+            raise ModelUnavailableError('DIABETES_KB_BACKEND phải là local hoặc neo4j.')
+        self.neo4j = None
 
     def ensure_loaded(self):
         with self._lock:
@@ -72,7 +78,13 @@ class AgentsModel:
                 extended = load_extended_documents(self.root/'knowledge/diabetes_extended.json')
                 extended += load_extended_documents(self.root/'knowledge/diabetes_expansion.json')
                 extended += load_extended_documents(self.root/'knowledge/diabetes_vietnam.json')
+                expansion_path = self.root/'knowledge/diabetes_sources.json'
+                supplemental = load_extended_documents(expansion_path) if expansion_path.is_file() else []
+                pdf_path = self.root/'knowledge/diabetes_pdf_sources.json'
+                if pdf_path.is_file():
+                    supplemental.extend(load_extended_documents(pdf_path))
                 self.documents.extend(extended)
+                self.documents.extend(supplemental)
                 if len({d['doc_id'] for d in self.documents})!=len(self.documents):
                     raise ValueError('Duplicate knowledge document ID')
                 self.examples = json.loads((agents / 'examples.json').read_text(encoding='utf-8'))
@@ -92,7 +104,7 @@ class AgentsModel:
                 knowledge.facts = [(d['subject'], d['relation'], d['object'], d['evidence_id'])
                     for _, _, d in knowledge.graph.edges(data=True) if 'subject' in d]
                 self.knowledge = knowledge
-                self.dialogue = DiabetesDialogue(knowledge,self.documents,extended)
+                self.dialogue = DiabetesDialogue(knowledge,self.documents,extended,supplemental=supplemental)
                 self.safety = core.Ch6SafetyAgent(self.documents)
                 self.q_table = np.load(agents / 'q_table.npy', allow_pickle=False)
                 if self.q_table.shape != (32, 5) or not np.isfinite(self.q_table).all():
@@ -100,6 +112,8 @@ class AgentsModel:
                 self.q_table.setflags(write=False)
                 self.core = core
                 self.manifest = manifest
+                if self.knowledge_backend == 'neo4j':
+                    self.neo4j = Neo4jKnowledge(self.neo4j_config, self.dialogue)
                 self._loaded = True
             except ModelUnavailableError:
                 raise
@@ -111,10 +125,15 @@ class AgentsModel:
 
     def health(self):
         self.ensure_loaded()
+        backend = {'name': 'local'}
+        if self.neo4j:
+            backend = dict(name='neo4j', version=self.neo4j.version, **self.neo4j.health())
         return dict(status='ready', service='diabetes-multi-agent', model_version=self.manifest['model_version'],
             prediction=True, knowledge=True, q_learning=True, documents=len(self.documents),
             knowledge_graph=self.dialogue.statistics(),
-            knowledge_engine='TF-IDF / LSA + local graph + Vietnamese topic expansion', response_mode='source-backed extractive',
+            knowledge_engine=('Vietnamese candidate ranking + Neo4j/Cypher evidence' if self.neo4j
+                              else 'TF-IDF / LSA + local graph + Vietnamese topic expansion'),
+            knowledge_backend=backend, response_mode='source-backed extractive',
             storage='SQLite', q_seed=self.manifest['q_seed'])
 
     def configuration(self):
@@ -123,6 +142,7 @@ class AgentsModel:
                     for k, label, display_unit, unit, step in FEATURE_FIELDS],
             examples=[{key:value for key,value in e.items() if key!='expected_prediction'} for e in self.examples],
             model_version=self.manifest['model_version'], threshold=self.metadata['threshold'],
+            source_hosts=sorted(TRUSTED_HOSTS),
             suggested_queries=['A1C cho biết điều gì trong kế hoạch chăm sóc?',
                 'Xét nghiệm nào theo dõi chức năng thận?', 'Làm sao lập kế hoạch bữa ăn khi có tiểu đường?',
                 'Hoạt động thể chất có vai trò gì?'])
@@ -148,13 +168,27 @@ class AgentsModel:
             return dict(safety=decision, evidence=[], blocks=[], graph=[])
         started = time.perf_counter()
         understanding = self.dialogue.understand(query)
-        evidence = self.dialogue.search(query,k=k,method=method,understanding=understanding)
+        evidence = self.retrieve_knowledge(query, k=k, method=method, understanding=understanding)
         blocks = self.knowledge.answer(evidence)
         final = self.safety.validate_results(None, evidence, blocks, False)
         return dict(safety=final, evidence=evidence, blocks=blocks, graph=self.graph_facts(evidence),understanding=understanding,
+                    knowledge_backend=self.knowledge_backend,
                     latency_ms=(time.perf_counter()-started)*1000)
 
+    def retrieve_knowledge(self, query, k=3, method='Hybrid', understanding=None):
+        candidates = self.dialogue.search(query, k=k, method=method, understanding=understanding)
+        self.safety.validate_results(None, candidates, [], False)
+        if self.neo4j:
+            return self.neo4j.retrieve(candidates, normalize_question(query))
+        for hit in candidates:
+            doc = self.dialogue.documents[hit['doc_id']]
+            hit.update(source_fields(doc), page=doc.get('page'), section=doc.get('section'),
+                       content_type=doc.get('content_type'))
+        return candidates
+
     def graph_facts(self, evidence):
+        if self.neo4j:
+            return [fact for hit in evidence for fact in hit['graph_paths']]
         ids = {h['doc_id'] for h in evidence}
         return [dict(source=s, relation=r, target=o, evidence_id=e) for s,r,o,e in self.dialogue.facts if e in ids]
 
@@ -295,7 +329,7 @@ class AgentsModel:
                 task['units'].update(payload.get('units', {}))
                 if 'query' in payload and payload['query'] != task['query']:
                     task['query'] = payload['query']
-                    task['evidence'], task['blocks'] = [], []
+                    task['evidence'], task['blocks'], task['graph'] = [], [], []
             else:
                 task = dict(task_id=uuid.uuid4().hex, query=payload['query'],
                     profile=copy.deepcopy(payload.get('profile', {})), units=copy.deepcopy(payload.get('units', {})),
@@ -332,7 +366,13 @@ class AgentsModel:
                     event(sender, action, (time.perf_counter()-tick)*1000, 'FAILED',
                           dict(error_type=type(exc).__name__))
                     raise
-                event(sender, action, (time.perf_counter()-tick)*1000)
+                details = None
+                if action == 'RETRIEVE_KNOWLEDGE':
+                    details = dict(backend=self.knowledge_backend,
+                                   doc_ids=[hit['doc_id'] for hit in value])
+                    if self.neo4j:
+                        details.update(query_id='retrieve_evidence_v1', kb_version=self.neo4j.version)
+                event(sender, action, (time.perf_counter()-tick)*1000, details=details)
                 return value
 
             def budget():
@@ -399,10 +439,11 @@ class AgentsModel:
                             for attempt in range(2):
                                 budget();calls += 1
                                 try:
-                                    hits = run('Knowledge','RETRIEVE_KNOWLEDGE',lambda:self.dialogue.search(
+                                    hits = run('Knowledge','RETRIEVE_KNOWLEDGE',lambda:self.retrieve_knowledge(
                                         task.get('retrieval_query',task['query']),understanding=understanding))
                                     run('Safety','VALIDATE_EVIDENCE',lambda:self.safety.validate_results(None,hits,[],False))
                                     task['evidence'] = hits
+                                    task['knowledge_backend'] = self.knowledge_backend
                                     if hits:
                                         task['graph']=run('Knowledge','LOOKUP_GRAPH',lambda:self.graph_facts(hits))
                                     break
@@ -422,6 +463,9 @@ class AgentsModel:
                             break
                         else:
                             raise RuntimeError('Unexpected workflow action')
+            except ModelUnavailableError as exc:
+                task.update(status='FAILED',outcome='TOOL_OR_BUDGET_ERROR',safety_status='ESCALATE',
+                            blocks=[],evidence=[],graph=[],reasons=[str(exc)])
             except Exception:
                 LOGGER.exception('Chapter 6 workflow failed: task=%s',task['task_id'])
                 task.update(status='FAILED',outcome='TOOL_OR_BUDGET_ERROR',safety_status='ESCALATE',
@@ -436,7 +480,6 @@ class AgentsModel:
             task['total_latency_ms'] += task['latency_ms']
             task['tool_calls'] += calls
             task['steps'] = steps
-            task['graph'] = self.graph_facts(task['evidence'])
             # Malformed numerical input is reported to the owner but never stored as NaN/Infinity.
             for key,value in task['profile'].items():
                 if isinstance(value,float) and not math.isfinite(value): task['profile'][key] = None

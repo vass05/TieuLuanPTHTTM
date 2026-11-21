@@ -23,6 +23,24 @@ SOURCE_PUBLISHERS = {
     'www.nccih.nih.gov': 'NCCIH / NIH',
     'daithaoduong.kcb.vn': 'Cục Quản lý Khám, chữa bệnh – Bộ Y tế',
     'bachmai.gov.vn': 'Bệnh viện Bạch Mai',
+    'kcb.vn': 'Cục Quản lý Khám, chữa bệnh – Bộ Y tế',
+    'emohbackup.moh.gov.vn': 'Bộ Y tế',
+    'bvdaihoc.com.vn': 'Bệnh viện Đại học Y Dược TP.HCM',
+    'bvchoray.vn': 'Bệnh viện Chợ Rẫy',
+    'benhviennoitiet.vn': 'Bệnh viện Nội tiết Trung ương',
+    'tamanhhospital.vn': 'Bệnh viện Đa khoa Tâm Anh',
+    'www.vinmec.com': 'Hệ thống Bệnh viện Vinmec',
+    'suckhoedoisong.vn': 'Sức khỏe & Đời sống',
+    'vjde.vn': 'Tạp chí Nội tiết và Đái tháo đường',
+    'tapchinghiencuuyhoc.vn': 'Tạp chí Nghiên cứu Y học',
+    'tapchiyhocvietnam.vn': 'Tạp chí Y học Việt Nam',
+    'tapchi.ctump.edu.vn': 'Tạp chí Y Dược học Cần Thơ',
+    'jcmhch.com.vn': 'Tạp chí Y học lâm sàng Bệnh viện Trung ương Huế',
+    'ttyttpbentre.org.vn': 'Bộ Y tế',
+    'professional.diabetes.org': 'American Diabetes Association',
+    'pmc-oa-opendata.s3.amazonaws.com': 'PubMed Central / NIH',
+    'stacks.cdc.gov': 'CDC',
+    'shop.diabetes.org.uk': 'Diabetes UK',
 }
 TRUSTED_HOSTS = set(SOURCE_PUBLISHERS)
 
@@ -35,13 +53,22 @@ def load_extended_documents(path):
     seen = set()
     for doc in documents:
         url = urlparse(doc['source_url'])
-        if url.scheme != 'https' or url.hostname not in TRUSTED_HOSTS or doc['doc_id'] in seen:
+        if (url.scheme != 'https' or url.hostname not in TRUSTED_HOSTS or url.username or url.password
+                or doc['doc_id'] in seen):
             raise ValueError('Invalid knowledge source or duplicate document')
         if not doc.get('summary_vi') or not doc.get('aliases') or not doc.get('facts'):
             raise ValueError('Incomplete knowledge document')
+        if doc.get('source_type', 'web') not in ('web', 'pdf'):
+            raise ValueError('Invalid knowledge source type')
+        if doc.get('source_type') == 'pdf':
+            page = doc.get('page')
+            if type(page) is not int or page < 1 or not doc.get('section'):
+                raise ValueError('Missing PDF evidence location')
         seen.add(doc['doc_id'])
         doc.update(publisher=SOURCE_PUBLISHERS[url.hostname],
-            reviewed_on=data['reviewed_on'],content_type=doc.get('content_type','manually_reviewed_vietnamese_paraphrase'), section=doc['title'])
+            reviewed_on=doc.get('reviewed_on', data['reviewed_on']),
+            content_type=doc.get('content_type','manually_reviewed_vietnamese_paraphrase'),
+            section=doc.get('section', doc['title']))
     return documents
 
 
@@ -74,6 +101,18 @@ TOPICS = (
         'tieu duong la gi insulin glucose khai niem', ('D01',)),
 )
 
+# A few questions need several terms to be interpreted together. Matching the
+# individual terms can otherwise pick a general document or an incidental alias.
+QUERY_PATTERNS = (
+    ('type1', (('tuyp 1',), ('tuyp 2',), ('khac nhau', 'phan biet', 'so sanh')), ('K02',)),
+    ('cgm', (('cgm', 'cam bien'), ('may do', 'dau ngon tay'), ('khac nhau', 'phan biet', 'so sanh')), ('K14',)),
+    ('hypoglycemia', (('bo y te',), ('ha duong huyet', 'duong huyet thap')), ('V05',)),
+    ('activity', (('bo y te',), ('van dong', 'tap luyen'), ('phong', 'phong ngua')), ('V04',)),
+    ('children_type_2_diabetes', (('tre em', 'tre nho'), ('tuyp 2',), ('co the mac', 'co bi', 'co mac')), ('K133',)),
+    ('older_adults', (('nguoi lon tuoi', 'nguoi cao tuoi'), ('tieu duong', 'dai thao duong'),
+                      ('can chu y gi', 'nen luu y gi')), ('S8A4EF61148', 'S4E76D30AFD')),
+)
+
 
 def normalize_question(text):
     text = unicodedata.normalize('NFD',str(text).lower().replace('đ','d'))
@@ -104,15 +143,18 @@ def load_conversation_documents(documents, path):
 
 
 class DiabetesDialogue:
-    def __init__(self, retriever, documents, extended=None):
+    def __init__(self, retriever, documents, extended=None, supplemental=None):
         from sklearn.feature_extraction.text import TfidfVectorizer
         self.retriever = retriever
         self.documents = {d['doc_id']:d for d in documents}
         self.extended = extended or []
+        self.supplemental = supplemental or []
+        self.supplemental_ids = {doc['doc_id'] for doc in self.supplemental}
+        serving_documents = self.extended + self.supplemental
         reserved={normalize_question(a) for d in documents if not d.get('review_method') for a in d.get('aliases',[])}
         reserved.update(phrase for _,phrases,_,_ in TOPICS for phrase in phrases)
         self.aliases={}
-        for doc in self.extended:
+        for doc in serving_documents:
             aliases=[]
             for value in doc['aliases']:
                 alias=normalize_question(value)
@@ -138,10 +180,14 @@ class DiabetesDialogue:
             texts = [' '.join(d['aliases'])+' '+d['title']+' '+d['summary_vi'] for d in self.extended]
             self.lexical_matrix = self.lexical.fit_transform(texts)
             self.character_matrix = self.characters.fit_transform(texts)
+        if self.supplemental:
+            titles = [doc['title'] + ' ' + ' '.join(doc['aliases']) for doc in self.supplemental]
+            self.supplemental_index = TfidfVectorizer(preprocessor=normalize_question, ngram_range=(1, 2))
+            self.supplemental_matrix = self.supplemental_index.fit_transform(titles)
         import networkx as nx
         self.graph = nx.MultiDiGraph()
         self.facts = list(retriever.facts)
-        for doc in self.extended:
+        for doc in serving_documents:
             self.facts.extend((s,r,o,doc['doc_id']) for s,r,o in doc['facts'])
         for doc in self.documents.values():
             did = doc['doc_id']
@@ -169,6 +215,20 @@ class DiabetesDialogue:
 
     def understand(self, query):
         text = normalize_question(query)
+        named_sources = [doc for doc in self.supplemental
+                         if text in self.aliases[doc['doc_id']]
+                         and (doc.get('source_type') == 'pdf' or text.startswith('nguon ')
+                              or doc.get('review_method') == 'manual_source_comparison')]
+        if named_sources:
+            return dict(topics=list(dict.fromkeys(doc['topic'] for doc in named_sources)),
+                        expanded_query=query, preferred_doc_ids=[doc['doc_id'] for doc in named_sources],
+                        match_method='named_source')
+        bounded = f' {text} '
+        for topic, phrase_groups, doc_ids in QUERY_PATTERNS:
+            if (all(doc_id in self.documents for doc_id in doc_ids)
+                    and all(any(f' {phrase} ' in bounded for phrase in group) for group in phrase_groups)):
+                return dict(topics=[topic], expanded_query=query, preferred_doc_ids=list(doc_ids),
+                            match_method='combined_phrases')
         matched = []
         for name,phrases,expansion,doc_ids in TOPICS:
             if any(re.search(r'\b'+re.escape(phrase)+r'\b',text) for phrase in phrases):
@@ -230,6 +290,13 @@ class DiabetesDialogue:
         # Validate even candidates that a later ranking step may discard.
         candidates = {hit['doc_id']:self._reviewed_hit(hit) for hit in raw}
         preferred = set(intent['preferred_doc_ids'])
+        if preferred & self.supplemental_ids:
+            return [self._extended_hit(self.documents[did], 1.0, intent.get('match_method', 'named_source'))
+                    for did in intent['preferred_doc_ids'] if did in self.supplemental_ids][:k]
+        text = normalize_question(query)
+        for prefix in ('pdf ', 'nguon pdf '):
+            if text.startswith(prefix):
+                return self._search_supplemental(text[len(prefix):], k, pdf_only=True) if self.supplemental else []
         extra_ids = {d['doc_id'] for d in self.extended}
         if preferred & extra_ids:
             return [self._extended_hit(self.documents[did],intent.get('rank_scores',{}).get(did,1.0),
@@ -260,7 +327,30 @@ class DiabetesDialogue:
                 indices = sorted(range(len(scores)),key=lambda i:-scores[i])
                 ranked = [self._extended_hit(self.extended[i],float(scores[i]),'lexical_character')
                     for i in indices[:k] if scores[i]>=.23 and scores[i]>=scores[indices[0]]*.75]
+        if not ranked and self.supplemental:
+            ranked = self._search_supplemental(query, k)
         return ranked[:k]
+
+    def _search_supplemental(self, query, k, pdf_only=False):
+        text = normalize_question(query)
+        generic = {'dai', 'thao', 'duong', 'tieu', 'benh', 'nguoi', 'co', 'mac', 'bi', 'la',
+                   'cach', 'bao', 'nhieu', 'gi', 'khi', 'cho', 'lam', 'nen', 'nhu', 'the',
+                   'nao', 'tai', 'doi', 'voi', 'va', 'trong', 'cua', 'khong', 'duoc'}
+        terms = set(text.split()) - generic
+        if len(terms) < 2:
+            return []
+        scores = (self.supplemental_matrix @ self.supplemental_index.transform([text]).T).toarray().ravel()
+        hits = []
+        for i in sorted(range(len(scores)), key=lambda idx: -scores[idx]):
+            if scores[i] < .38 or len(hits) >= k:
+                break
+            doc = self.supplemental[i]
+            if pdf_only and doc.get('source_type') != 'pdf':
+                continue
+            title = set(normalize_question(doc['title']).split()) - generic
+            if len(terms & title) >= 2:
+                hits.append(self._extended_hit(doc, float(scores[i]), 'supplemental_title'))
+        return hits
 
     def _extended_hit(self, doc, score, method):
         return dict(doc_id=doc['doc_id'],title=doc['title'],source_url=doc['source_url'],

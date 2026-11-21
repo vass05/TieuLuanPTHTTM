@@ -44,3 +44,17 @@ def test_specific_topic_outranks_an_incidental_mention(browser):
     task=chat_request(browser,'Nhiễm toan ceton là gì?')['task']
     assert task['evidence'][0]['doc_id']=='K16'
     assert 'Nhiễm toan ceton là biến chứng' in task['blocks'][0]['text']
+
+
+@pytest.mark.parametrize(('question', 'expected'), [
+    ('Tiểu đường tuýp 1 và tuýp 2 khác nhau ra sao?', 'K02'),
+    ('Máy đo đường huyết và cảm biến CGM khác nhau thế nào?', 'K14'),
+    ('Bộ Y tế nói gì về vận động phòng đái tháo đường?', 'V04'),
+    ('Hạ đường huyết có dấu hiệu gì theo Bộ Y tế?', 'V05'),
+    ('Trẻ em có thể mắc đái tháo đường tuýp 2 không?', 'K133'),
+    ('Người lớn tuổi mắc tiểu đường cần chú ý gì?', 'S8A4EF61148'),
+])
+def test_combined_query_terms_select_relevant_evidence(browser, question, expected):
+    task = chat_request(browser, question)['task']
+    assert task['outcome'] == 'ANSWERED'
+    assert task['evidence'][0]['doc_id'] == expected

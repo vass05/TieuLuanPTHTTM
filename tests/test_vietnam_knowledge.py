@@ -69,10 +69,10 @@ def test_vietnamese_sources_do_not_allow_arbitrary_hosts_or_http(tmp_path, url):
 
 def test_health_and_graph_include_vietnamese_sources(browser, web_app):
     health = browser[0].get('/api/v1/health').get_json()
-    assert health['documents'] == 174
-    assert health['knowledge_graph']['sources'] == 169
     with web_app.app_context():
         model = get_agents_model()
+        assert health['documents'] == len(model.documents)
+        assert health['knowledge_graph']['sources'] == len({d['source_url'] for d in model.documents})
         assert len(model.knowledge.documents) == 10
         for doc in load_extended_documents(CORPUS):
             edge = model.dialogue.graph.get_edge_data(doc['doc_id'], doc['source_url'])

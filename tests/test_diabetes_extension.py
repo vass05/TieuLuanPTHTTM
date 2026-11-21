@@ -26,7 +26,8 @@ def test_graph_has_distinct_concepts_aliases_and_source_provenance(browser,web_a
     with web_app.app_context():
         model=get_agents_model()
         stats=model.dialogue.statistics()
-        assert stats['documents']==174 and stats['sources']>=160
+        assert stats['documents']==len(model.documents)
+        assert stats['sources']==599
         assert stats['clinical_entities']>150 and stats['clinical_relations']>120
         graph=model.dialogue.graph
         assert stats['nodes']==len(graph)
