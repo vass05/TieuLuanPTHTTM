@@ -29,8 +29,97 @@ trang trích dẫn và mã kiểm tra tệp. Các PDF bổ sung lưu trích đo�
 được đối chiếu tự động theo trang. Nội dung dùng cho nguyên mẫu học tập.
 
 Các bản PDF tải về để đối chiếu nằm trong `knowledge/sources/pdf/library/`
-trên máy phát triển. Repository giữ PDF Bộ Y tế dùng cho demo, kèm dữ liệu
+trên máy phát triển. Tên file gồm tiền tố `VN` hoặc `QT`, tiêu đề và mã tài liệu.
+Repository giữ PDF Bộ Y tế dùng cho demo, kèm dữ liệu
 trích xuất và URL mở PDF gốc cho toàn bộ danh mục.
+
+## Cấu trúc thư mục dự án
+
+```text
+TieuLuan/
+├── app.py                            # Điểm khởi động Flask và đăng ký các trang/API
+├── app_rag_api.py                    # API GraphRAG độc lập cho truy vấn y tế và tài chính
+├── TieuLuan_HeThongThongMinh.ipynb    # Notebook huấn luyện và đánh giá các mô hình
+├── .env.example                      # Mẫu biến Neo4j và Gemini cho môi trường cục bộ
+├── requirements.txt                  # Thư viện chạy ứng dụng cục bộ
+├── requirements-render.txt           # Thư viện cho bản chạy CPU trên Render
+├── requirements-dev.txt              # Công cụ phát triển và kiểm thử
+├── requirements-notebook-ch6.txt     # Thư viện chạy thí nghiệm chương 6
+├── render.yaml                       # Lệnh build, khởi động và health check trên Render
+├── gunicorn.conf.py                  # Cấu hình máy chủ WSGI
+├── DATA/                             # Dữ liệu chạy mô hình và dùng trong notebook
+│   ├── AMZN.csv                       # Chuỗi giá cổ phiếu Amazon
+│   ├── AEP_hourly.csv                 # Phụ tải điện theo giờ
+│   ├── vietnam_housing_dataset.csv    # Dữ liệu nhà đất Việt Nam
+│   ├── pima_indians_diabetes.csv       # Dữ liệu dùng đánh giá MLP Pima
+│   └── chapter6/                     # Tài liệu và câu hỏi dùng trong thí nghiệm truy xuất
+├── knowledge/                        # Nội dung và nguồn phục vụ trợ lý tiểu đường
+│   ├── diabetes_chat_documents.json   # Tóm tắt tiếng Việt cho tài liệu từ notebook
+│   ├── diabetes_extended.json         # Bộ tài liệu mở rộng theo chủ đề
+│   ├── diabetes_expansion.json        # Nguồn bổ sung và trích đoạn đã đối chiếu
+│   ├── diabetes_editorial_overrides.json # Bản biên tập dùng khi tạo kho mở rộng
+│   ├── diabetes_vietnam.json          # Bằng chứng từ nguồn Việt Nam ban đầu
+│   ├── diabetes_sources.json          # Nguồn web bổ sung và bằng chứng PDF demo
+│   ├── diabetes_pdf_sources.json      # Trích đoạn và số trang từ 199 PDF bổ sung
+│   ├── DB_diabet.cypher               # Bản xuất Cypher để tạo kho trên Neo4j
+│   └── sources/
+│       ├── catalog.json              # Danh mục 599 nguồn, URL và vị trí trích dẫn
+│       └── pdf/
+│           ├── VN - Bộ Y tế 2558 - Võng mạc đái tháo đường [P01].pdf  # PDF demo trang 9
+│           └── library/              # 199 PDF gốc giữ cục bộ để đối chiếu
+├── model/                            # Trọng số và bộ tiền xử lý đã xuất
+│   ├── amzn_lstm_model.keras          # Mô hình LSTM dùng để dự báo chuỗi
+│   ├── best_housing_model.joblib      # Mô hình định giá nhà đã huấn luyện
+│   ├── fashion_se_model.keras         # Mô hình SE-CNN nhận diện thời trang
+│   ├── diabetes/                     # MLP Pima, bộ tiền xử lý và cấu hình dự đoán
+│   ├── agents/                       # Chỉ mục, đồ thị, dữ liệu mẫu và Q-table chương 6
+│   │   ├── manifest.json              # Phiên bản mô hình và mã kiểm tra artifact
+│   │   ├── knowledge_documents.json  # Bộ tài liệu thực nghiệm đi cùng chỉ mục
+│   │   ├── knowledge_index.joblib    # Chỉ mục TF-IDF/LSA đã xuất
+│   │   ├── knowledge_graph.json      # Đồ thị nền dùng để nạp bộ truy xuất cục bộ
+│   │   └── q_table.npy               # Bảng Q của chính sách điều phối thực nghiệm
+│   └── vision/                       # Trọng số và thông tin mô hình CNN đọc chữ số
+├── mvc/
+│   ├── controllers/                  # Route Flask cho trợ lý, RAG, nhà đất, chuỗi thời gian và ảnh
+│   │   ├── agents_controller.py      # Phiên chat, API hỏi đáp và API dự đoán tiểu đường
+│   │   ├── housing_controller.py     # Trang và API định giá nhà
+│   │   ├── timeseries_controller.py  # Trang và API dự báo chuỗi thời gian
+│   │   ├── vision_controller.py      # Trang và API nhận diện thời trang, chữ số
+│   │   └── rag_controller.py         # Trang và API truy xuất GraphRAG
+│   ├── models/
+│   │   ├── agents_model.py           # Điều phối truy xuất, dự đoán, kiểm chứng và ghi trace
+│   │   ├── diabetes_dialogue.py      # Hiểu câu hỏi tiếng Việt và xếp hạng tài liệu
+│   │   ├── neo4j_knowledge.py        # Chạy Cypher và đối chiếu bằng chứng trả về
+│   │   ├── agent_store.py            # Lưu cuộc trò chuyện, tác vụ và trace vào SQLite
+│   │   ├── chapter6_core.py          # MLP, truy xuất nền, kiểm chứng và chính sách điều phối
+│   │   ├── prediction_dialogue.py    # Thu thập chỉ số và giải thích dự đoán
+│   │   ├── assistant_synthesis.py    # Diễn đạt câu trả lời từ bằng chứng khi bật Gemini
+│   │   ├── rag_model.py              # Bộ truy xuất riêng cho trang /rag và API độc lập
+│   │   ├── housing_model.py          # Nạp mô hình và xử lý đặc trưng nhà đất
+│   │   ├── timeseries_model.py       # Chuẩn hóa cửa sổ chuỗi và gọi mô hình dự báo
+│   │   ├── vision_model.py           # Nhận diện ảnh thời trang
+│   │   └── digit_model.py            # Tiền xử lý ảnh chữ số và suy luận CNN
+│   ├── views/                        # Mẫu HTML, gồm agents.html cho trang /agents
+│   └── static/
+│       ├── css/                      # Bố cục và kiểu hiển thị
+│       └── js/                       # agents.js xử lý chat, trích dẫn và trace trên giao diện
+├── scripts/
+│   ├── import_diabetes_neo4j.py       # Tạo bản xuất, danh mục và nhập kho vào Neo4j
+│   ├── build_diabetes_knowledge.py    # Xuất đồ thị và số liệu cho phần báo cáo
+│   ├── export_chapter6_project.py     # Đưa artifact từ kết quả notebook vào model/
+│   ├── render-build.sh               # Cài thư viện và chạy bước kiểm tra build Render
+│   └── check_render.py               # Kiểm tra các trang và mô hình của bản chạy CPU
+├── tests/                            # Kiểm thử API, mô hình, hội thoại và truy xuất
+│   └── test_neo4j_knowledge.py        # Kiểm thử số nguồn và bằng chứng PDF qua Neo4j
+├── reports/
+│   ├── chapter6/                     # Bảng, hình và số liệu thí nghiệm chương 6
+│   └── project/                      # Ảnh và kết quả kiểm thử website để đối chiếu báo cáo
+└── instance/                         # SQLite và dữ liệu chạy cục bộ do ứng dụng tạo
+```
+
+Đường dẫn `local_path` trong [danh mục nguồn](knowledge/sources/catalog.json)
+tính từ `knowledge/`. Dùng `source_url` trong cùng bản ghi để mở tài liệu gốc.
+Các thư mục `instance/` và `knowledge/sources/pdf/library/` được Git bỏ qua.
 
 ## Chạy cục bộ
 

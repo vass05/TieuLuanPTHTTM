@@ -73,7 +73,14 @@ def ordered_graph(dialogue):
 def snapshot_version(dialogue):
     """Tính chung mã phiên bản cho trình nhập và backend truy xuất."""
     nodes, edges = ordered_graph(dialogue)
-    documents = sorted(dialogue.documents.values(), key=lambda doc: doc['doc_id'])
+    documents = []
+    for doc in sorted(dialogue.documents.values(), key=lambda item: item['doc_id']):
+        if doc.get('source_type') == 'pdf' and doc.get('local_path'):
+            # Dùng khóa lưu trữ ban đầu của PDF để giữ mã phiên bản khi đổi tên file hiển thị.
+            doc_id = doc['doc_id']
+            storage_name = 'byt-2558-2022.pdf' if doc_id == 'P01' else f'library/{doc_id.lower()}.pdf'
+            doc = dict(doc, local_path=f'sources/pdf/{storage_name}')
+        documents.append(doc)
     payload = json.dumps([2, documents, nodes, edges], sort_keys=True, ensure_ascii=False,
                          separators=(',', ':'))
     return hashlib.sha256(payload.encode()).hexdigest()[:24]
