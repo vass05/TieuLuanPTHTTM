@@ -52,10 +52,12 @@ def batches(query, rows, batch_size=100):
 
 
 def payload(dialogue):
+    """Chuẩn bị danh mục nguồn, lô ghi và số liệu dùng để kiểm tra khi import."""
     version = snapshot_version(dialogue)
     nodes, edges = ordered_graph(dialogue)
     documents = dialogue.documents
     catalog = {}
+    # Một URL gốc có thể chứng minh nhiều đoạn. Danh mục đếm URL riêng biệt.
     for doc in sorted(documents.values(), key=lambda item: item['doc_id']):
         url = doc['source_url']
         fields = source_fields(doc)
@@ -78,6 +80,7 @@ def payload(dialogue):
                 doc = documents[node_id]
                 properties.update({k: doc[k] for k in ('summary_vi', 'page', 'section', 'topic', 'category', 'content_type',
                                   'reviewed_on', 'source_sha256', 'support_quotes') if k in doc})
+            # Khóa MERGE tách các phiên bản và ổn định khi nhập lại cùng phiên bản.
             rows.append(dict(key=f'{version}|{node_id}', properties=properties))
         query = (f'UNWIND $rows AS row MERGE (n:KBNode:{label} {{kb_key: row.key}}) '
                  'SET n += row.properties')
@@ -85,6 +88,7 @@ def payload(dialogue):
 
     relationships = {'CITES': [], 'RETRIEVES': [], 'FACT': []}
     occurrences = Counter()
+    # Hai khái niệm có thể có nhiều cạnh. Mã cạnh giữ cả nội dung và xuất xứ.
     for start, end, data in edges:
         relation = data['relation']
         kind = relation.upper() if relation in ('cites', 'retrieves') else 'FACT'
@@ -110,6 +114,9 @@ def payload(dialogue):
 
 def write_export(out, version, counts, catalog, statements):
     cypher = ['// Reviewed diabetes graph. Rebuild with scripts/import_diabetes_neo4j.py.',
+              '// Thứ tự nhập: tạo ràng buộc, ghi nút, ghi quan hệ, ghi thống kê phiên bản.',
+              '// CITES: tài liệu → nguồn. RETRIEVES: bí danh → tài liệu.',
+              '// FACT: khái niệm → khái niệm, có evidence_id trỏ về mã tài liệu.',
               f'// KB version: {version}', *(f'{query};' for query in CONSTRAINTS)]
     for query, params in statements:
         cypher.append(query.replace('$rows', literal(params['rows'])) + ';')
@@ -122,6 +129,7 @@ def write_export(out, version, counts, catalog, statements):
 
 
 def import_into_database(config, version, counts, statements, node_counts, edge_counts):
+    # Ghi dữ liệu, kiểm tra số lượng và đánh dấu phiên bản trong cùng transaction.
     def write(tx):
         for cypher, params in statements:
             tx.run(cypher, params).consume()

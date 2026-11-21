@@ -51,6 +51,7 @@
         $('chatPanel').setAttribute('aria-busy',String(busy));
     }
     let sourceHosts=new Set();
+    // Backend cung cấp danh sách domain nguồn. Fragment #page mở đúng trang PDF trích dẫn.
     function sourceLink(url,label,page){
         const anchor=el('a','',label);
         try{
@@ -130,6 +131,7 @@
     actions.EXPLAIN_PREDICTION_RESULT='Giải thích kết quả dự đoán đã có';
     actions.COMPOSE_ASSISTED_RESPONSE='Diễn đạt câu trả lời từ bằng chứng';
     function renderFlow(task){
+        // Tô sáng các bước theo trace trả về của chính tin nhắn đang chọn.
         const trace=task.trace||[],called=action=>trace.some(e=>e.action===action&&e.status!=='FAILED');
         const rag=called('RETRIEVE_KNOWLEDGE'),graph=called('LOOKUP_GRAPH'),model=called('RUN_PREDICTION'),safety=trace.some(e=>e.sender==='Safety');
         flowNode('input',true);flowNode('coordinator',true);flowNode('rag',rag);flowNode('graph',graph);flowNode('model',model);

@@ -86,6 +86,28 @@ Trên `/agents`, dùng các câu “Dinh dưỡng theo Bạch Mai nên chú ý g
 “A1C cho biết điều gì trong kế hoạch chăm sóc?” và “PDF Bộ Y tế võng mạc” để
 minh họa lần lượt bài web Việt Nam, bài web quốc tế và PDF.
 
+## Đọc mã trợ lý tiểu đường
+
+1. [Controller Flask](mvc/controllers/agents_controller.py) nhận tin nhắn ở
+   `/api/v1/assistant/chat`, kiểm tra phiên và chuyển yêu cầu cho model.
+2. [AgentsModel](mvc/models/agents_model.py) điều phối truy xuất, kiểm chứng
+   bằng chứng, trả lời và ghi trace. [DiabetesDialogue](mvc/models/diabetes_dialogue.py)
+   chuẩn hóa câu hỏi tiếng Việt và xếp hạng các mã tài liệu ứng viên.
+3. [Neo4jKnowledge](mvc/models/neo4j_knowledge.py) nhận các mã đã xếp hạng,
+   chạy Cypher đọc tài liệu và đối chiếu nội dung, URL, trang PDF, quan hệ
+   với kho cùng phiên bản. [Giao diện chat](mvc/static/js/agents.js) hiển thị
+   bằng chứng và trace của từng tin nhắn.
+4. [Trình xuất và nhập Neo4j](scripts/import_diabetes_neo4j.py) tạo
+   `knowledge/DB_diabet.cypher` và danh mục từ cùng dữ liệu. Các cạnh
+   `RETRIEVES` nối bí danh với tài liệu, `CITES` nối tài liệu với nguồn.
+   Cạnh `FACT` nối hai khái niệm và lưu mã tài liệu trong `evidence_id`.
+
+Các thư mục `__pycache__/`, `.pytest_cache/`, `pytest-cache-files-*/` và
+`.ipynb_checkpoints/` do công cụ sinh. Tệp làm việc và kết quả chạy cục bộ
+nằm trong `instance/`. Các ảnh và báo cáo kiểm thử trong `reports/project/`
+phục vụ đối chiếu đồ án. Kho tri thức phục vụ trợ lý nằm trong `knowledge/`
+và artifact của notebook trong `model/agents/`.
+
 ## Triển khai
 
 Website được triển khai trên **Render Free** bằng cấu hình [render.yaml](render.yaml).

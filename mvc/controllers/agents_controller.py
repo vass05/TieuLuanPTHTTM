@@ -15,6 +15,7 @@ _service_lock = threading.Lock()
 
 
 def get_agents_model():
+    """Tạo model khi blueprint cần dùng lần đầu và dùng chung trong Flask app."""
     with _service_lock:
         if 'chapter6_agents' not in current_app.extensions:
             current_app.extensions['chapter6_agents'] = AgentsModel(

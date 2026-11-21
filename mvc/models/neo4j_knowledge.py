@@ -10,6 +10,8 @@ from dotenv import dotenv_values
 from mvc.models.model_errors import ModelUnavailableError
 
 
+# Cypher nhận mã tài liệu đã xếp hạng qua tham số. CITES lấy URL và thông tin
+# nguồn. evidence_id lưu mã tài liệu chứng minh của từng FACT.
 RETRIEVE_CYPHER = """
 MATCH (:DiabetesKB {version: $version})
 UNWIND $candidates AS candidate
@@ -41,6 +43,7 @@ RETURN kb.documents AS documents, kb.sources AS sources,
 
 
 def settings(root):
+    """Ưu tiên biến môi trường của tiến trình, sau đó đọc .env cục bộ."""
     local = dotenv_values(root / '.env')
     return {name: os.environ.get(name) or local.get(name) or default
             for name, default in {
@@ -68,6 +71,7 @@ def ordered_graph(dialogue):
 
 
 def snapshot_version(dialogue):
+    """Tính chung mã phiên bản cho trình nhập và backend truy xuất."""
     nodes, edges = ordered_graph(dialogue)
     documents = sorted(dialogue.documents.values(), key=lambda doc: doc['doc_id'])
     payload = json.dumps([2, documents, nodes, edges], sort_keys=True, ensure_ascii=False,
@@ -112,6 +116,7 @@ class Neo4jKnowledge:
             raise ModelUnavailableError('Không truy cập được kho tri thức Neo4j.') from None
 
     def health(self):
+        # DiabetesKB đánh dấu phiên bản mà trình nhập đã hoàn tất và đối chiếu.
         rows = self._read(VERSION_CYPHER)
         if len(rows) != 1:
             raise ModelUnavailableError('Phiên bản kho tri thức chưa được nhập vào Neo4j.')
@@ -132,6 +137,8 @@ class Neo4jKnowledge:
         if [row['doc_id'] for row in rows] != [hit['doc_id'] for hit in candidates]:
             raise ModelUnavailableError('Dữ liệu Neo4j thiếu hoặc lệch phiên bản kho tri thức.')
 
+        # Dùng dữ liệu trả về từ Neo4j sau khi đối chiếu nội dung, nguồn,
+        # trang PDF và quan hệ với corpus của cùng phiên bản.
         hits = []
         for row, candidate in zip(rows, candidates):
             doc = self.docs[row['doc_id']]

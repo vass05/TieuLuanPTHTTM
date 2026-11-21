@@ -180,6 +180,7 @@ class DiabetesDialogue:
             texts = [' '.join(d['aliases'])+' '+d['title']+' '+d['summary_vi'] for d in self.extended]
             self.lexical_matrix = self.lexical.fit_transform(texts)
             self.character_matrix = self.characters.fit_transform(texts)
+        # Kho bổ sung có chỉ mục riêng để giữ thứ hạng của bộ tài liệu nền.
         if self.supplemental:
             titles = [doc['title'] + ' ' + ' '.join(doc['aliases']) for doc in self.supplemental]
             self.supplemental_index = TfidfVectorizer(preprocessor=normalize_question, ngram_range=(1, 2))
@@ -189,6 +190,8 @@ class DiabetesDialogue:
         self.facts = list(retriever.facts)
         for doc in serving_documents:
             self.facts.extend((s,r,o,doc['doc_id']) for s,r,o in doc['facts'])
+        # Document nối Source qua CITES. Cạnh FACT giữ mã tài liệu ở evidence_id
+        # để truy về bằng chứng cụ thể, kể cả khi nhiều tài liệu nói cùng một chủ đề.
         for doc in self.documents.values():
             did = doc['doc_id']
             self.graph.add_node(did, kind='document', label=doc['title'])
@@ -214,6 +217,7 @@ class DiabetesDialogue:
             sources=len({d['source_url'] for d in self.documents.values()}))
 
     def understand(self, query):
+        """Nhận diện yêu cầu theo tên nguồn, tổ hợp cụm từ và bí danh."""
         text = normalize_question(query)
         named_sources = [doc for doc in self.supplemental
                          if text in self.aliases[doc['doc_id']]
@@ -285,6 +289,7 @@ class DiabetesDialogue:
         return result
 
     def search(self, query, k=3, method='Hybrid', understanding=None):
+        """Trả các tài liệu ứng viên theo ý định và điểm khớp câu hỏi."""
         intent = understanding or self.understand(query)
         raw = self.retriever.search(query,k=k,method=method)
         # Validate even candidates that a later ranking step may discard.
@@ -293,6 +298,7 @@ class DiabetesDialogue:
         if preferred & self.supplemental_ids:
             return [self._extended_hit(self.documents[did], 1.0, intent.get('match_method', 'named_source'))
                     for did in intent['preferred_doc_ids'] if did in self.supplemental_ids][:k]
+        # Tiền tố PDF lọc loại nguồn khi người dùng yêu cầu tài liệu dạng PDF.
         text = normalize_question(query)
         for prefix in ('pdf ', 'nguon pdf '):
             if text.startswith(prefix):
@@ -328,6 +334,7 @@ class DiabetesDialogue:
                 ranked = [self._extended_hit(self.extended[i],float(scores[i]),'lexical_character')
                     for i in indices[:k] if scores[i]>=.23 and scores[i]>=scores[indices[0]]*.75]
         if not ranked and self.supplemental:
+            # Tìm theo tiêu đề nguồn bổ sung khi các bước trước chưa có kết quả.
             ranked = self._search_supplemental(query, k)
         return ranked[:k]
 

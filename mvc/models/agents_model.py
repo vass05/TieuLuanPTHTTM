@@ -44,6 +44,7 @@ class AgentsModel:
         self.neo4j = None
 
     def ensure_loaded(self):
+        """Nạp artifact dự đoán, kho bằng chứng và backend truy xuất một lần."""
         with self._lock:
             if self._loaded:
                 return
@@ -72,6 +73,8 @@ class AgentsModel:
                 if artifact_digest(core_file) != manifest['inference_core_sha256']:
                     raise ModelUnavailableError('Mã suy luận khác bản xuất notebook. Chạy lại script export.')
                 self.metadata = json.loads((model_root / 'diabetes/pima_model_metadata.json').read_text(encoding='utf-8'))
+                # Bộ tài liệu thực nghiệm đi cùng chỉ mục xuất từ notebook.
+                # Lớp hội thoại bổ sung nội dung và nguồn dùng khi phục vụ chatbot.
                 experiment_documents = json.loads((agents / 'knowledge_documents.json').read_text(encoding='utf-8'))
                 self.documents = load_conversation_documents(experiment_documents,
                     self.root/'knowledge/diabetes_chat_documents.json')
@@ -176,6 +179,7 @@ class AgentsModel:
                     latency_ms=(time.perf_counter()-started)*1000)
 
     def retrieve_knowledge(self, query, k=3, method='Hybrid', understanding=None):
+        """Xếp hạng ứng viên cục bộ rồi nạp bằng chứng từ backend đã cấu hình."""
         candidates = self.dialogue.search(query, k=k, method=method, understanding=understanding)
         self.safety.validate_results(None, candidates, [], False)
         if self.neo4j:
@@ -187,6 +191,7 @@ class AgentsModel:
         return candidates
 
     def graph_facts(self, evidence):
+        """Lấy quan hệ gắn với đúng các tài liệu đã qua bước truy xuất."""
         if self.neo4j:
             return [fact for hit in evidence for fact in hit['graph_paths']]
         ids = {h['doc_id'] for h in evidence}
