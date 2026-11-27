@@ -8,6 +8,7 @@ from PIL import Image,ImageOps,UnidentifiedImageError
 
 def load_grayscale_image(image_input):
     try:
+        # Canvas gửi chuỗi Base64, còn ảnh tải lên được chuyển vào dưới dạng byte.
         if isinstance(image_input,str):
             content=base64.b64decode(image_input.split(',',1)[-1],validate=True)
         elif isinstance(image_input,(bytes,bytearray)):
@@ -15,6 +16,7 @@ def load_grayscale_image(image_input):
         else:
             raise ValueError('Unsupported image input')
         with Image.open(io.BytesIO(content)) as original:
+            # Áp dụng hướng ảnh từ EXIF trước khi chuyển hệ màu.
             original=ImageOps.exif_transpose(original)
             # Ghép vùng trong suốt lên nền trắng trước khi chuyển sang ảnh xám.
             if original.mode in ('RGBA','LA') or 'transparency' in original.info:

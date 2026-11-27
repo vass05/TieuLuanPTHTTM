@@ -39,6 +39,7 @@ class HousingModel:
         toilet = max(1.0, float(toilet))
         floors = max(1.0, float(floors))
         
+        # Giữ đúng thứ tự cột đầu vào của mô hình XGBoost đã huấn luyện.
         feat = np.array([[area, bedroom, toilet, floors]], dtype=np.float32)
         
         # Đầu ra ở thang log1p, dùng expm1 để đổi về giá tính theo tỷ đồng.

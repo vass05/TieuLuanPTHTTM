@@ -22,7 +22,7 @@ def model():
 
 
 def reference_prediction(window):
-    """Evaluate archived weights independently of Keras/backend loading."""
+    """Tính kết quả từ trọng số gốc bằng quy trình độc lập để đối chiếu với bộ nạp Keras."""
     with zipfile.ZipFile(ROOT/'model/amzn_lstm_model.keras') as archive:
         with h5py.File(io.BytesIO(archive.read('model.weights.h5')),'r') as weights:
             sequence=np.asarray(window,dtype=np.float64).reshape(30,1)
@@ -56,7 +56,7 @@ def test_forecast_matches_original_weights_and_rolling_preprocessing(model):
     assert len(set(actual['forecast_prices']))>1
     assert len(actual['forecast_dates'])==7
     assert all(np.isfinite(actual['forecast_prices']))
-    assert actual['forecast_dates'][3]=='2023-12-11'  # Skip the weekend in this dataset.
+    assert actual['forecast_dates'][3]=='2023-12-11'  # Ngày dự báo bỏ qua cuối tuần.
 
 
 def test_lstm_runs_after_explicit_torch_backend_selection(monkeypatch):
@@ -82,7 +82,7 @@ def test_timeseries_page_renders_the_forecast_instead_of_503(client):
     assert response.status_code==200
     assert b'id="stockChart"' in response.data
     assert b'const initialForecastPrices =' in response.data
-    assert b'134.53' in response.data  # Actual next-step result from the saved model.
+    assert b'134.53' in response.data  # Kết quả bước tiếp theo từ mô hình đã lưu.
 
 
 @pytest.mark.parametrize('steps',[1,7,14,30])

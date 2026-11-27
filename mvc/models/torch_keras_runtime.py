@@ -46,7 +46,7 @@ class SavedModel:
             hidden = torch.zeros((sequence.shape[0], 64))
             cell = torch.zeros_like(hidden)
             outputs = []
-            # Keras gate ordering is input, forget, candidate, output.
+            # Thứ tự từ Keras là cổng vào, cổng quên, trạng thái ứng viên và cổng ra.
             for value in sequence.unbind(dim=1):
                 i, f, candidate, o = (value @ kernel + hidden @ recurrent + bias).chunk(4, dim=1)
                 cell = torch.sigmoid(f) * cell + torch.sigmoid(i) * torch.tanh(candidate)
@@ -60,7 +60,7 @@ class SavedModel:
         features = F.max_pool2d(F.relu(F.conv2d(
             inputs.permute(0, 3, 1, 2), kernel, self.weights['conv2d/1'], padding=1)), 2)
         attention = torch.sigmoid(self.dense(F.relu(self.dense(features.mean(dim=(2, 3)), 'dense')), 'dense_1'))
-        # Preserve Keras channels-last flattening before the dense layers.
+        # Đưa kênh về chiều cuối theo Keras trước khi làm phẳng cho các lớp Dense.
         features = (features * attention[:, :, None, None]).permute(0, 2, 3, 1).reshape(inputs.shape[0], -1)
         return torch.softmax(self.dense(F.relu(self.dense(features, 'dense_2')), 'dense_3'), dim=1)
 
@@ -84,7 +84,7 @@ def load_saved_model(path):
         with h5py.File(io.BytesIO(archive.read('model.weights.h5')), 'r') as weights:
             for name, expected in shapes.items():
                 for index, shape in enumerate(expected):
-                    # The HDF5 variable group belongs to the LSTM cell itself.
+                    # Nhóm biến HDF5 này chứa trọng số của ô LSTM.
                     values = weights[f'layers/{name}/vars/{index}'][()]
                     if values.shape != shape or values.dtype != np.float32 or not np.isfinite(values).all():
                         raise ValueError('Invalid saved weights for the compact runtime')

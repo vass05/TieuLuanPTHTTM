@@ -36,7 +36,7 @@ def main():
         browser=Browser(tab['webSocketDebuggerUrl'])
         browser.call('Runtime.enable');browser.call('Page.enable')
         browser.call('Network.enable')
-        # This page needs Chart.js, but does not use the Bootstrap JS bundle.
+        # Giữ Chart.js để kiểm tra biểu đồ. Trang này dùng được khi bỏ qua JavaScript của Bootstrap.
         browser.call('Network.setBlockedURLs',{'urls':['https://cdn.jsdelivr.net/npm/bootstrap@*/dist/js/*']})
         response=HTTP.get('http://127.0.0.1:5000/timeseries',timeout=20)
         check('timeseries_returns_200',response.status_code==200)

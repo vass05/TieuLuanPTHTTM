@@ -1,4 +1,4 @@
-# Python & Jupyter cache
+# Bộ nhớ đệm của Python và Jupyter
 __pycache__/
 *.py[cod]
 *$py.class
@@ -6,20 +6,20 @@ __pycache__/
 .pytest_cache/
 /pytest-cache-files-*/
 
-# IDE settings
+# Thiết lập trình soạn thảo cục bộ
 .vscode/
 
-# GitHub file size limit is 100 MB (ignore files > 100MB)
+# Dữ liệu huấn luyện dung lượng lớn được lưu cục bộ.
 DATA/fashion-mnist_train.csv
 DATA/mnist_train.csv
 
-# Environment variables & secrets
+# Tệp cấu hình cục bộ và thông tin xác thực
 .env
 *.env
 
-# Local session signing key and research task history
+# Khóa ký phiên và lịch sử xử lý cục bộ
 instance/
 
-# Original PDFs retained locally for source verification
+# PDF gốc lưu cục bộ để đối chiếu nguồn
 /knowledge/sources/pdf/library/
 

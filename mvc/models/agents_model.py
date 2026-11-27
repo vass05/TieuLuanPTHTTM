@@ -268,8 +268,7 @@ class AgentsModel:
             retrieval_query=message
             uses_context=False
             if not intent['topics'] and normalized not in ['xin chao','chao','hello','hi','cam on','thank you']:
-                # Use context only for explicit follow-up phrasing. Independent
-                # unrelated questions must retain the no-evidence outcome.
+                # Chỉ ghép ngữ cảnh với câu hỏi nối tiếp rõ ràng. Câu độc lập tự tra cứu bằng chứng.
                 followup=normalized.startswith(('con ','vay ','the ','nhung loai','loai nao','noi ro','ke them'))
                 if followup:
                     last=next((t for t in reversed(previous) if t.get('understanding',{}).get('topics')),None)
@@ -295,7 +294,7 @@ class AgentsModel:
             result = self.execute(owner_id,dict(query=message,mode='knowledge',policy='rule',
                 conversation_id=conversation_id,conversation_turn=len(previous)+1,
                 retrieval_query=retrieval_query,plan=plan,conversation_reply=reply))
-        # Network synthesis must not hold the global model/workflow lock.
+        # Gọi Gemini bên ngoài khóa điều phối để yêu cầu khác có thể tiếp tục.
         if result['outcome']=='ANSWERED' and result['evidence']:
             composed = self.synthesis.compose(retrieval_query,result['evidence'])
             if composed:
@@ -367,6 +366,7 @@ class AgentsModel:
                     duration_ms=duration_ms, turn=task['turns']))
 
             def run(sender, action, function):
+                # Đo thời gian và ghi nhật ký của từng lời gọi agent để hiển thị trên sơ đồ.
                 tick = time.perf_counter()
                 try:
                     value = function()
@@ -400,6 +400,7 @@ class AgentsModel:
                     event('Coordinator','COLLECT_PREDICTION_INPUTS',payload['prediction_parse_ms'],details=dict(
                         received_fields=list(request['state']['profile']),missing=request['missing'],
                         issues=request['issues'],ready=request['ready'],demo=request['state']['demo']))
+                # Safety Agent kiểm tra phạm vi yêu cầu và chỉ số trước khi chạy công cụ.
                 decision = run('Safety','VALIDATE_INPUT',lambda:self.safety.preflight(
                     task['profile'],task['query'],needs_prediction,task['units']))
                 task['safety_status'],task['reasons'] = decision['status'],decision['reasons']
@@ -425,6 +426,7 @@ class AgentsModel:
                         p = (0 if task['prediction'] is None else
                              1 + int(task['prediction']['score'] >= 1/3) + int(task['prediction']['score'] >= 2/3))
                         state = (1,p,int(bool(task['evidence'])),0)
+                        # Hỏi đáp truy xuất rồi trả lời. Luồng dự đoán chọn bước theo luật hoặc bảng Q.
                         if not needs_prediction:
                             action = self.core.CH6_RETRIEVE if not task['evidence'] else self.core.CH6_RESPOND
                         elif task['policy']=='q_learning':
@@ -436,10 +438,12 @@ class AgentsModel:
                         event('Coordinator','SELECT_ACTION',0,details=dict(action=self.core.CH6_ACTIONS[action]))
                         if action == self.core.CH6_PREDICT:
                             budget();calls += 1
+                            # Prediction Agent chạy MLP, rồi Safety Agent kiểm tra kết quả.
                             prediction = run('Prediction','RUN_PREDICTION',lambda:self.predictor.predict(task['profile']))
                             run('Safety','VALIDATE_PREDICTION',lambda:self.safety.validate_results(prediction,[],[],True))
                             task['prediction'] = prediction
                         elif action == self.core.CH6_RETRIEVE:
+                            # Knowledge Agent nhận diện chủ đề, sau đó tìm tài liệu phù hợp.
                             understanding = run('Knowledge','UNDERSTAND_QUERY',
                                                 lambda:self.dialogue.understand(task.get('retrieval_query',task['query'])))
                             task['understanding'] = understanding
@@ -449,6 +453,7 @@ class AgentsModel:
                                 try:
                                     hits = run('Knowledge','RETRIEVE_KNOWLEDGE',lambda:self.retrieve_knowledge(
                                         task.get('retrieval_query',task['query']),understanding=understanding))
+                                    # Chỉ giữ bằng chứng sau khi Safety Agent đối chiếu với kho nguồn.
                                     run('Safety','VALIDATE_EVIDENCE',lambda:self.safety.validate_results(None,hits,[],False))
                                     task['evidence'] = hits
                                     task['knowledge_backend'] = self.knowledge_backend
@@ -462,6 +467,7 @@ class AgentsModel:
                                     reasons=['Chưa tìm thấy bằng chứng phù hợp. Hãy đặt câu hỏi cụ thể hơn về tiểu đường.'])
                                 break
                         elif action == self.core.CH6_RESPOND:
+                            # Tạo đoạn trả lời có trích dẫn, rồi kiểm chứng trước khi trả về.
                             blocks = run('Knowledge','COMPOSE_EXTRACTIVE_RESPONSE',lambda:self.knowledge.answer(task['evidence']))
                             final = run('Safety','VALIDATE_RESPONSE',lambda:self.safety.validate_results(
                                 task['prediction'],task['evidence'],blocks,needs_prediction))
@@ -488,7 +494,7 @@ class AgentsModel:
             task['total_latency_ms'] += task['latency_ms']
             task['tool_calls'] += calls
             task['steps'] = steps
-            # Malformed numerical input is reported to the owner but never stored as NaN/Infinity.
+            # Giá trị NaN hoặc vô cực đã bị báo lỗi được đổi thành null trước khi lưu JSON.
             for key,value in task['profile'].items():
                 if isinstance(value,float) and not math.isfinite(value): task['profile'][key] = None
             self.store.save(task,owner_id,revision)

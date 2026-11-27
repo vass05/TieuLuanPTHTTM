@@ -32,7 +32,7 @@ def main():
         indices = [None, diagram_index]
         isolated = nbformat.v4.new_notebook(cells=[nbformat.v4.new_code_cell(bootstrap), notebook.cells[diagram_index]])
     isolated.metadata.kernelspec = dict(display_name='Python 3', language='python', name='python3')
-    # Avoid writing IPython history into the user's profile.
+    # Lưu lịch sử IPython trong bộ nhớ để tách khỏi hồ sơ người dùng.
     os.environ['IPYTHONDIR'] = str(ROOT / '.ipynb_checkpoints/ch6_ipython')
     os.environ['MPLCONFIGDIR'] = str(ROOT / '.ipynb_checkpoints/ch6_matplotlib')
 
@@ -46,7 +46,7 @@ def main():
     try:
         client.execute()
     finally:
-        # Keep a failed cell's traceback too, so failures are reviewable and rerunnable.
+        # Giữ thông tin lỗi của ô đã chạy để thuận tiện kiểm tra và chạy lại.
         for index, cell in zip(indices, isolated.cells):
             if index is not None:
                 notebook.cells[index] = cell

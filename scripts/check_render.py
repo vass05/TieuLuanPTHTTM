@@ -14,7 +14,7 @@ def main():
     os.environ.setdefault('OPENBLAS_NUM_THREADS', '1')
     os.environ.setdefault('MKL_NUM_THREADS', '1')
     os.environ.setdefault('FLASK_SECRET_KEY', 'offline-build-check-only')
-    # This check must never call Gemini, read market feeds or change chat history.
+    # Dùng dữ liệu cục bộ và cơ sở dữ liệu thử để kiểm tra build mà không phụ thuộc dịch vụ ngoài.
     os.environ['ASSISTANT_EXTERNAL_ENABLED'] = 'false'
     from app import app
     from mvc.controllers.timeseries_controller import ts_model
@@ -51,7 +51,7 @@ def main():
         assert 'keras' not in sys.modules, 'Compact deployment unexpectedly loaded Keras'
         print('Render check passed: all five pages, local KB/chat, Pima MLP, housing, LSTM, fashion and MNIST.')
     finally:
-        # Only remove the isolated SQLite files created by this check.
+        # Dọn các tệp SQLite tạm do lần kiểm tra này tạo.
         for name in ('tasks.sqlite3', 'tasks.sqlite3-journal', 'tasks.sqlite3-wal', 'tasks.sqlite3-shm'):
             (folder / name).unlink(missing_ok=True)
         folder.rmdir()

@@ -262,6 +262,7 @@ Mỗi lượt giữ riêng validation score, threshold, test score và thời gi
 ''')
 code(r'''
 class Ch6MLP(nn.Module):
+    # Mô hình nhận tám chỉ số đầu vào và trả một logit cho mỗi hồ sơ.
     def __init__(self):
         super().__init__()
         self.layers = nn.Sequential(nn.Linear(8, 32), nn.ReLU(), nn.Dropout(0.15),
@@ -270,6 +271,7 @@ class Ch6MLP(nn.Module):
         return self.layers(x).squeeze(-1)
 
 def ch6_mlp_proba(model, values):
+    # Tắt Dropout và dùng sigmoid để đưa logit về khoảng 0 đến 1.
     model.eval()
     with torch.no_grad():
         return torch.sigmoid(model(torch.as_tensor(values, dtype=torch.float32))).numpy()
@@ -311,7 +313,7 @@ def ch6_fit_mlp(seed):
 def ch6_choose_threshold(y_true, probabilities):
     thresholds = np.linspace(0.2, 0.8, 61)
     scores = [f1_score(y_true, probabilities >= t, zero_division=0) for t in thresholds]
-    # Ties prefer a threshold closer to 0.5; this rule is fixed before test scoring.
+    # Khi đồng hạng, ưu tiên ngưỡng gần 0,5 hơn theo quy tắc đã chốt trước khi đánh giá tập test.
     return float(max(zip(scores, thresholds), key=lambda pair: (pair[0], -abs(pair[1]-0.5)))[1])
 
 ch6_fitted, ch6_model_rows, ch6_training_histories = {}, [], {}
@@ -337,7 +339,7 @@ for ch6_seed in CH6_CFG['model_seeds']:
             val_auc=roc_auc_score(ch6_y_val, ch6_val_prob),
             val_f1=f1_score(ch6_y_val, ch6_val_prob >= ch6_threshold), fit_seconds=ch6_fit_seconds))
 
-# Select representative seeds using validation only, before opening test metrics.
+# Chọn seed đại diện trên tập validation trước khi xem kết quả tập test.
 ch6_representatives = {name: max((key for key in ch6_fitted if key[0] == name),
     key=lambda key: ch6_fitted[key]['val_auc']) for name in ['Logistic Regression', 'Random Forest', 'MLP PyTorch']}
 for ch6_row in ch6_model_rows:
@@ -404,6 +406,7 @@ def ch6_normalize(text):
     return ''.join(c for c in text if unicodedata.category(c) != 'Mn')
 
 class Ch6KnowledgeAgent:
+    # Bộ truy xuất nền dùng TF-IDF, LSA và đồ thị NetworkX cục bộ.
     def __init__(self, documents):
         self.documents = documents
         self.by_id = {d['doc_id']: d for d in documents}
@@ -420,8 +423,8 @@ class Ch6KnowledgeAgent:
                 topic = 'topic:' + ch6_normalize(alias)
                 self.graph.add_node(topic, kind='concept', label=alias)
                 self.graph.add_edge(topic, doc['doc_id'], relation='SUPPORTED_BY', evidence_id=doc['doc_id'])
-        # Typed medical relations have document-level provenance. No treatment
-        # selection/contraindication is inferred from these educational sources.
+        # Mỗi quan hệ y khoa lưu mã tài liệu bằng chứng để truy vết nguồn.
+        # Các quan hệ này dùng cho tra cứu kiến thức giáo dục.
         facts = [
             ('Condition:Diabetes','ASSOCIATED_WITH','Biomarker:Glucose','D01'),
             ('Condition:Diabetes','HAS_SYMPTOM','Symptom:Thirst','D02'),
@@ -455,7 +458,7 @@ class Ch6KnowledgeAgent:
             matched_topics = [node for node,data in self.graph.nodes(data=True)
                               if data['kind']=='concept' and node.removeprefix('topic:') in normalized]
             by_document = {d['doc_id']:[] for d in self.documents}
-            # Traverse actual graph adjacency from matched concepts to documents.
+            # Duyệt cạnh từ khái niệm khớp câu hỏi tới tài liệu liên quan.
             for topic in matched_topics:
                 for neighbor in self.graph.neighbors(topic):
                     if self.graph.nodes[neighbor]['kind']=='document':
@@ -475,6 +478,7 @@ class Ch6KnowledgeAgent:
                 for i in ranked[:k] if scores[i] >= cutoff]
 
     def answer(self, hits):
+        # Dùng tóm tắt đã lưu và giữ mã nguồn để hiển thị trích dẫn.
         return [dict(text=h['content'], evidence_ids=[h['doc_id']], source_url=h['source_url']) for h in hits]
 
 ch6_knowledge = Ch6KnowledgeAgent(ch6_documents)
@@ -570,6 +574,7 @@ CH6_ACTIONS = ['REQUEST_INFO', 'RUN_PREDICTION', 'RETRIEVE_KNOWLEDGE', 'GENERATE
 CH6_REQUEST, CH6_PREDICT, CH6_RETRIEVE, CH6_RESPOND, CH6_ESCALATE = range(5)
 
 def ch6_encode_state(state):
+    # Mã hóa trạng thái hồ sơ, nhóm điểm, bằng chứng và cờ an toàn thành một dòng trong bảng Q.
     c, p, e, f = state
     return ((int(c)*4 + int(p))*2 + int(e))*2 + int(f)
 
@@ -593,6 +598,7 @@ def ch6_rule_policy(state):
     return CH6_RESPOND
 
 def ch6_q_policy(q_table, state):
+    # Chọn hành động hợp lệ có giá trị Q cao nhất cho trạng thái hiện tại.
     valid = ch6_valid_actions(state)
     return max(valid, key=lambda a: q_table[ch6_encode_state(state), a])
 
@@ -632,7 +638,7 @@ class Ch6WorkflowEnv:
         c, p, e, f = self.state
         reward = -0.1
         if action in ch6_valid_actions(self.state):
-            # Independent post-mask invariant accounting, not a constant metric.
+            # Đếm riêng các vi phạm khi thực thi sau khi áp dụng bộ lọc hành động.
             violation = ((action==CH6_PREDICT and not c)
                 or (action==CH6_RESPOND and not (c and p and e))
                 or (f and action!=CH6_ESCALATE))
@@ -640,7 +646,7 @@ class Ch6WorkflowEnv:
         if action not in ch6_valid_actions(self.state):
             self.unsafe_proposals += 1
             reward -= 5.0
-            # A rejected proposal never reaches a tool and never changes state.
+            # Hành động bị bộ lọc từ chối dừng trước khi gọi công cụ hoặc đổi trạng thái.
         elif action == CH6_ESCALATE:
             reward += 3.0
             self.done = self.success = True
@@ -747,7 +753,7 @@ ch6_write_json(CH6_OUT / 'artifacts/rl_eval_cases.json', ch6_eval_cases)
 for ch6_seed, ch6_q in ch6_q_tables.items():
     np.save(CH6_OUT / 'artifacts' / f'q_table_seed_{ch6_seed}.npy', ch6_q)
     np.save(CH6_OUT / 'artifacts' / f'q_visits_seed_{ch6_seed}.npy', ch6_q_visits[ch6_seed])
-# Use a predeclared seed, never select the best policy on test.
+# Dùng seed đã định trước để đánh giá chính sách trên tập test.
 ch6_fixed_q = ch6_q_tables[CH6_CFG['model_seeds'][0]]
 assert ch6_fixed_q.shape == (32, 5)
 print('Safety Violation Rate là vi phạm thực thi sau mask, không phải chất lượng chẩn đoán.')
@@ -844,6 +850,7 @@ class Ch6PredictionAgent:
 
     def predict(self, profile):
         raw = pd.DataFrame([{key: float(profile[key]) for key in CH6_FEATURES}], columns=CH6_FEATURES)
+        # Xem số 0 là dữ liệu thiếu ở đúng các cột đã quy định khi huấn luyện.
         raw[CH6_ZERO_MISSING] = raw[CH6_ZERO_MISSING].replace(0, np.nan)
         values = self.preprocessor.transform(raw).astype(np.float32)
         score = float(ch6_mlp_proba(self.model, values)[0])
@@ -895,6 +902,7 @@ class Ch6SafetyAgent:
             source = ch6_doc_by_id[hit['doc_id']]
             if hit.get('content') != source['summary_vi'] or hit.get('source_url') != source['source_url']:
                 raise ValueError('Evidence content/source mismatch')
+        # Câu trả lời phải dẫn tài liệu đã truy xuất và khớp nội dung tóm tắt của nguồn.
         allowed = {h['doc_id'] for h in evidence}
         for block in blocks:
             if not block.get('evidence_ids') or not set(block['evidence_ids']).issubset(allowed):
@@ -1007,7 +1015,7 @@ class Ch6Coordinator:
                                         return [hit]
                                     return self.knowledge_agent.search(task['query'])
                                 hits = timed('Knowledge', 'RETRIEVE_KNOWLEDGE', run_retrieval)
-                                # Validate before using tool output as task state or response text.
+                                # Kiểm tra đầu ra công cụ trước khi dùng để cập nhật trạng thái hoặc trả lời.
                                 timed('Safety', 'VALIDATE_EVIDENCE', lambda: self.safety_agent.validate_results(
                                     None, hits, [], False))
                                 task['evidence'] = hits
@@ -1129,7 +1137,7 @@ ch6_table(ch6_scenario_summary, 'bang_6_08_kich_ban',
 ch6_scenario_results.to_csv(CH6_OUT / 'logs/scenario_cases.csv', index=False)
 ch6_write_json(CH6_OUT / 'logs/scenario_execution_traces.json', ch6_scenario_traces)
 
-# Meaningful boundary checks beyond the six scenario families.
+# Kiểm tra thêm các trường hợp biên ngoài sáu nhóm kịch bản.
 ch6_wait = ch6_coordinator.execute(ch6_scenario_query, {})
 try:
     ch6_coordinator.execute(profile=ch6_example_profile, task_id=ch6_wait['task_id'], session_id='other-session')
@@ -1150,7 +1158,7 @@ ch6_check('knowledge_only_needs_no_pima_profile', ch6_qna['status']=='COMPLETED'
 ch6_check('trace_has_no_full_profile', all('profile' not in m['payload'] for t in ch6_scenario_traces
                                          for m in t['result']['messages']))
 
-# Direct fixed pipeline provides a distinct combined baseline, without an agent loop.
+# Đường cơ sở chạy các bước cố định để so sánh với vòng lặp điều phối agent.
 def ch6_static_pipeline(profile, query):
     started = time.perf_counter()
     pre = ch6_safety.preflight(profile, query, True)
@@ -1177,7 +1185,7 @@ for ch6_policy, ch6_label in [('rule','Multi-Agent Rule'), ('q_learning','Multi-
 ch6_table(pd.DataFrame(ch6_ablation_rows), 'bang_6_09_ablation',
     'Bảng 6.9. Ablation theo phạm vi và chỉ số phù hợp với từng thành phần', '6.6.6', '177')
 
-# A fresh model loaded from the exported state must reproduce inference.
+# Kiểm tra mô hình mới nạp lại trọng số có cho cùng kết quả suy luận.
 ch6_reloaded_mlp = Ch6MLP()
 ch6_reloaded_mlp.load_state_dict(torch.load(CH6_OUT / 'artifacts/pima_mlp_state.pt', weights_only=True))
 ch6_reloaded_pre = joblib.load(CH6_OUT / 'artifacts/pima_preprocessor.joblib')
@@ -1323,7 +1331,7 @@ for ch6_trace in ch6_scenario_traces:
 ch6_latency_df = pd.DataFrame(ch6_latency_records)
 ch6_stage_sums = ch6_latency_df.groupby(['policy','case_id','stage']).duration_ms.sum().unstack(fill_value=0)
 ch6_stage_means = ch6_stage_sums.groupby('policy').mean()
-# Coordinator's real overhead is the measured total minus the measured specialist calls.
+# Tính thời gian điều phối bằng tổng thời gian trừ thời gian gọi các agent chuyên trách.
 ch6_a_total = ch6_scenario_results.query("group == 'A'").set_index(['policy','case_id']).latency_ms
 ch6_specialist = ch6_stage_sums.drop(columns=['Coordinator'],errors='ignore').sum(axis=1)
 ch6_overhead = (ch6_a_total-ch6_specialist).clip(lower=0).groupby('policy').mean()
@@ -1396,7 +1404,7 @@ ch6_summary = dict(
 ch6_write_json(CH6_OUT / 'experiment_summary.json', ch6_summary)
 ch6_write_json(CH6_OUT / 'insertion_manifest.json', dict(figures=CH6_FIGURES, tables=CH6_TABLES))
 
-# Readable tables for copying into Word; CSV files retain full numeric precision.
+# Bảng trình bày để chèn vào Word. CSV giữ độ chính xác của các số đo.
 ch6_pretty_tables = {name: frame.copy() for name,frame in CH6_TABLE_FRAMES.items()}
 ch6_pretty_model = pd.DataFrame({'Mô hình':ch6_model_summary.model})
 for ch6_metric,ch6_label in [('accuracy','Accuracy'),('precision','Precision'),('recall','Recall'),

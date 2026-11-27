@@ -4,22 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Hệ Thống Thông Minh AI - Intelligent Systems Studio{% endblock %}</title>
-    <!-- Google Fonts Inter -->
+    <!-- Phông chữ Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- Bootstrap 5.3 CSS -->
+    <!-- Giao diện dùng CSS của Bootstrap 5.3 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- FontAwesome 6 -->
+    <!-- Biểu tượng Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <!-- Custom CSS -->
+    <!-- CSS dùng chung của ứng dụng -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <!-- Chart.js 4 -->
+    <!-- Thư viện vẽ biểu đồ Chart.js 4 -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     {# View con thêm CSS hoặc thư viện riêng ở đây. #}{% block extra_head %}{% endblock %}
 </head>
 <body>
-    <!-- Top Navigation Bar -->
+    <!-- Thanh điều hướng các chức năng -->
     <nav class="app-navbar">
         <div class="container">
             <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
@@ -49,12 +49,12 @@
         </div>
     </nav>
 
-    <!-- Main Content Body -->
+    <!-- Nội dung do từng trang cung cấp -->
     <main class="py-4">
         {% block content %}{% endblock %}
     </main>
 
-    <!-- Bootstrap 5 Bundle JS -->
+    <!-- JavaScript cho các thành phần tương tác của Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     {% block extra_scripts %}{% endblock %}
 </body>

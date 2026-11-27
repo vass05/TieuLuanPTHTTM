@@ -197,7 +197,7 @@
 
 {% block content %}
 <div class="container-fluid px-lg-4">
-    <!-- Top Navigation Bar -->
+    <!-- Thanh điều hướng của trang GraphRAG -->
     <div class="patient-bar mb-3">
         <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
             <div class="d-flex align-items-center gap-2">
@@ -210,7 +210,7 @@
                 </div>
             </div>
 
-            <!-- System Info & Reset Action -->
+            <!-- Thông tin hệ thống và nút đặt lại phiên -->
             <div class="d-flex align-items-center gap-2 flex-wrap">
                 <span class="badge-metric bg-success-subtle text-success border border-success-subtle">
                     <i class="fa-solid fa-circle-check me-1"></i>Hỗ trợ: <strong>Tất cả mọi người</strong>
@@ -229,7 +229,7 @@
         <!-- CỘT TRÁI: GIAO DIỆN CHATBOT Y TẾ -->
         <div class="col-lg-6 col-xl-5">
             <div class="chat-card">
-                <!-- Header Chatbot -->
+                <!-- Tiêu đề khung hội thoại -->
                 <div class="chat-header d-flex align-items-center justify-content-between">
                     <div class="d-flex align-items-center gap-2">
                         <div class="avatar-icon avatar-ai">
@@ -262,7 +262,7 @@
                     </div>
                 </div>
 
-                <!-- Chat Messages Scroll Area -->
+                <!-- Vùng cuộn các tin nhắn -->
                 <div class="chat-messages" id="chatMessages">
                     <!-- Tin nhắn chào mừng ban đầu -->
                     <div class="message-row">
@@ -328,7 +328,7 @@
         <!-- CỘT PHẢI: KHUNG ĐỒ THỊ TRI THỨC CYTOSCAPE ĐỒNG BỘ -->
         <div class="col-lg-6 col-xl-7">
             <div class="graph-card">
-                <!-- Header Graph -->
+                <!-- Tiêu đề và trạng thái đồ thị -->
                 <div class="chat-header d-flex align-items-center justify-content-between">
                     <div>
                         <div class="fw-bold text-dark small d-flex align-items-center gap-2">
@@ -373,7 +373,7 @@
                     </span>
                 </div>
 
-                <!-- Canvas Cytoscape -->
+                <!-- Vùng vẽ đồ thị Cytoscape -->
                 <div class="graph-canvas" id="cyCanvas"></div>
 
                 <!-- Chú thích đồ thị Mở Rộng -->

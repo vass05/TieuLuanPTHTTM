@@ -1,4 +1,4 @@
-"""Export the active corpus to Cypher and optionally import it into Neo4j."""
+"""Xuất kho tri thức đang dùng ra Cypher và nhập vào Neo4j khi có cờ --import."""
 
 import argparse
 from collections import Counter
@@ -114,11 +114,11 @@ def payload(dialogue):
 
 def write_export(out, version, counts, catalog, statements):
     """Ghi file Cypher để chạy thủ công và danh mục nguồn để tra cứu bằng chứng."""
-    cypher = ['// Reviewed diabetes graph. Rebuild with scripts/import_diabetes_neo4j.py.',
+    cypher = ['// Đồ thị tri thức tiểu đường. Tạo lại bằng scripts/import_diabetes_neo4j.py.',
               '// Thứ tự nhập: tạo ràng buộc, ghi nút, ghi quan hệ, ghi thống kê phiên bản.',
               '// CITES: tài liệu → nguồn. RETRIEVES: bí danh → tài liệu.',
               '// FACT: khái niệm → khái niệm, có evidence_id trỏ về mã tài liệu.',
-              f'// KB version: {version}', *(f'{query};' for query in CONSTRAINTS)]
+              f'// Phiên bản kho tri thức: {version}', *(f'{query};' for query in CONSTRAINTS)]
     for query, params in statements:
         cypher.append(query.replace('$rows', literal(params['rows'])) + ';')
     cypher.append(PUBLISH.replace('$version', literal(version)).replace('$counts', literal(counts)) + ';')

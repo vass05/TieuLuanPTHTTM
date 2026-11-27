@@ -92,8 +92,7 @@ def main():
         else:raise RuntimeError('Chrome did not start')
         browser=Browser(tab['webSocketDebuggerUrl'])
         browser.call('Runtime.enable');browser.call('Page.enable')
-        # This page uses native DOM/SVG; unrelated CDN scripts can stall the
-        # parser on machines without Internet access during the local check.
+        # Trang chat dùng DOM và SVG có sẵn. Bỏ qua script CDN để kiểm thử được khi ngoại tuyến.
         browser.call('Network.enable')
         browser.call('Network.setBlockedURLs',{'urls':['https://cdn.jsdelivr.net/npm/chart.js*',
             'https://cdn.jsdelivr.net/npm/bootstrap@*/dist/js/*']})

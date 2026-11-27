@@ -33,6 +33,7 @@ class AssistantSynthesis:
         with self._state_lock:
             if time.monotonic() < self._cooldown:
                 return dict(status='fallback',reason='temporarily_unavailable')
+        # Mỗi đoạn phản hồi theo schema phải có mã tài liệu và trích dẫn để đối chiếu.
         schema = {'type':'OBJECT','properties':{'blocks':{'type':'ARRAY','items':{
             'type':'OBJECT','properties':{'text':{'type':'STRING'},'evidence_ids':{'type':'ARRAY','items':{'type':'STRING'}},
                 'support_quotes':{'type':'ARRAY','items':{'type':'OBJECT','properties':{
@@ -48,6 +49,7 @@ class AssistantSynthesis:
             'Không tạo URL, HTML hoặc Markdown. Câu đầu trả lời trực tiếp đúng trọng tâm; sau đó giải thích 2–4 đoạn ngắn theo mức nguồn hỗ trợ. '
             'Không lặp ý hoặc kéo dài chỉ để đủ số từ. Nếu nguồn đã nêu đích danh thực phẩm được hỏi, dùng thông tin đó, không nói nguồn chưa đề cập. '
             'Chỉ xuất JSON theo schema; không tự thêm kiến thức bên ngoài tài liệu.')
+        # Chỉ lấy câu hỏi hiện tại và nội dung bằng chứng cho yêu cầu gửi Gemini.
         prompt = dict(question=question[:4000], sources=[dict(doc_id=h['doc_id'], title=h['title'],
             content=h['content']) for h in evidence])
         started = time.perf_counter()

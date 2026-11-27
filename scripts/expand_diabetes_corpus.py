@@ -72,7 +72,7 @@ def fetch(url):
         for node in main.select('nav,header,footer,aside,script,style,noscript,form,button'):
             node.decompose()
         lines=[n.get_text(' ',strip=True) for n in main.select('h1,h2,h3,p,li')]
-        # Nested list text is not repeated in the saved excerpt.
+        # Loại nội dung danh sách lồng nhau bị lặp trong trích đoạn.
         lines=list(dict.fromkeys(line for line in lines if len(line)>16))
         body='\n'.join(lines)
         if len(body)<350:return None
@@ -123,8 +123,7 @@ def select_sources():
     buckets={c:[] for c in ('nutrition','medicines','monitoring','pregnancy','complications','lifestyle','general')}
     for row in candidates:buckets[category(row['url'])].append(row)
     for values in buckets.values():values.sort(key=lambda r:(-r['url'].count('/'),r['url']))
-    # Cover common oral/injectable medicines before subtype-specific insulin
-    # pages, rather than filling the medicine allocation with similar leaf pages.
+    # Ưu tiên nguồn về thuốc uống và thuốc tiêm phổ biến để phần thuốc bao phủ nhiều chủ đề.
     medicine_urls=[
         'https://www.diabetes.org.uk/about-diabetes/looking-after-diabetes/treatments/insulin/types',
         'https://www.diabetes.org.uk/about-diabetes/looking-after-diabetes/treatments/insulin/what-is-insulin',
@@ -183,8 +182,8 @@ def generate_json(system,value):
     try:return json.loads(text)
     except json.JSONDecodeError:
         (CACHE/'last-invalid-response.txt').write_text(text,encoding='utf-8')
-        # Parse harmless trailing commas/unquoted object keys as data only.
-        # The full schema and source checks still run on the result.
+        # Đọc biến thể JSON có dấu phẩy cuối hoặc khóa thiếu ngoặc kép dưới dạng dữ liệu.
+        # Kết quả vẫn phải qua bước kiểm tra cấu trúc và đối chiếu nguồn.
         import json5
         return json5.loads(text)
 
@@ -269,6 +268,7 @@ def draft():
         if target.exists():continue
         values=[{k:r[k] for k in ('doc_id','title','url','category')}|{'source_text':r['text'][:14000],
             'quote_options':quote_options(r['text'])} for r in batch]
+        # Soạn tóm tắt tiếng Việt theo từng lô, rồi gắn trích đoạn nguyên văn đã chọn.
         result=checked_generation(system,values,batch)
         docs=result['documents']
         if len(docs)!=len(batch):raise ValueError('Missing draft document')

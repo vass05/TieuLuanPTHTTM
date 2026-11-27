@@ -39,7 +39,7 @@ def model():
 
 
 def reference_probabilities():
-    """Evaluate the archived SE weights independently of Keras deserialization."""
+    """Tính xác suất từ trọng số SE gốc để đối chiếu với kết quả sau khi nạp mô hình."""
     with zipfile.ZipFile(ROOT/'model/fashion_se_model.keras') as archive:
         with h5py.File(io.BytesIO(archive.read('model.weights.h5')),'r') as weights:
             def w(layer,index):return torch.from_numpy(weights[f'layers/{layer}/vars/{index}'][()])

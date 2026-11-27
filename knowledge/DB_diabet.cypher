@@ -1,4 +1,4 @@
-// Reviewed diabetes graph. Rebuild with scripts/import_diabetes_neo4j.py.
+// Đồ thị tri thức tiểu đường. Tạo lại bằng scripts/import_diabetes_neo4j.py.
 
 // Thứ tự nhập: tạo ràng buộc, ghi nút, ghi quan hệ, ghi thống kê phiên bản.
 
@@ -6,7 +6,7 @@
 
 // FACT: khái niệm → khái niệm, có evidence_id trỏ về mã tài liệu.
 
-// KB version: bc9cea01798e92613d7aba27
+// Phiên bản kho tri thức: bc9cea01798e92613d7aba27
 
 CREATE CONSTRAINT diabetes_kb_node IF NOT EXISTS FOR (n:KBNode) REQUIRE n.kb_key IS UNIQUE;
 

@@ -6,7 +6,7 @@
     32,
     5
   ],
-  "inference_core_sha256": "9f5b39fd89eae0cafbd7fd075d1ad1e01bfaf16e5e7e491cd621a9e699e435ac",
+  "inference_core_sha256": "affc7af489ee887b488796fa3c6e4d4e0e371ea0b8e30a44d98218109d0c3447",
   "digest_format": "normalized-text-v1",
   "source": "reports/chapter6/artifacts",
   "packages": {

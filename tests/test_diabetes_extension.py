@@ -34,7 +34,7 @@ def test_graph_has_distinct_concepts_aliases_and_source_provenance(browser,web_a
         assert all(data['evidence_id'] in model.dialogue.documents for _,_,data in graph.edges(data=True))
         for _,_,_,did in model.dialogue.facts:
             assert graph.has_edge(did,model.dialogue.documents[did]['source_url'])
-        assert len(model.knowledge.documents)==10  # frozen experiment stays intact
+        assert len(model.knowledge.documents)==10  # Kho mở rộng được nạp riêng khỏi 10 tài liệu thực nghiệm.
 
 
 @pytest.fixture

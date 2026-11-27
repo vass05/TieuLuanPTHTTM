@@ -37,8 +37,8 @@ def parse_inputs(message):
     glucose_segments=[]
     for key,(_,aliases,_) in FIELDS.items():
         names='|'.join(re.escape(a) for a in sorted(aliases,key=len,reverse=True))
-        # A label and its parenthesized abbreviation are one field token:
-        # "Chỉ số phả hệ tiểu đường (DPF): 1.080", not two unrelated labels.
+        # Đọc tên đầy đủ và chữ viết tắt trong ngoặc như một tên trường.
+        # Ví dụ «Chỉ số phả hệ tiểu đường (DPF)» được nhận dạng một lần.
         annotation=r'(?:[ \t]*(?:\([ \t]*(?:'+names+r')[ \t]*\)|\[[ \t]*(?:'+names+r')[ \t]*\]))?'
         pattern=r'(?<!\w)(?:'+names+r')(?!\w)'+annotation
         for match in re.finditer(pattern,text):
@@ -123,14 +123,14 @@ def prediction_request(message,previous,examples):
         elif parsed['sex_unknown']:state['sex']=None
         if parsed['fasting']:state['ogtt']=False
         elif parsed['ogtt']:state['ogtt']=True
-        # A new glucose number must have a stated measurement context.
+        # Yêu cầu xác nhận bối cảnh đo khi người dùng nhập giá trị glucose mới.
         elif 'Glucose' in parsed['values']:state['ogtt']=False
         for key in parsed['values']:
             if key in {'Age','Pregnancies','DiabetesPedigreeFunction','BMI'}:
                 state['units'].setdefault(key,FIELDS[key][2])
             elif key not in parsed['units']:
                 state['units'].pop(key,None)
-        # Do not silently mix a demo profile with a personal correction.
+        # Tạo hồ sơ cá nhân mới khi người dùng nhập chỉ số sau một lượt dùng mẫu.
         if state.get('demo') and (parsed['values'] or parsed['sex']):
             state=dict(profile=parsed['values'],units=parsed['units'],sex=parsed['sex'],
                 ogtt=parsed['ogtt'],active=True,demo=False)

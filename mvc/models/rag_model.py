@@ -560,7 +560,7 @@ class RAGModel:
         
         highlight_nodes = ["Bác sĩ Lâm sàng AI"]
         suggested_followups = []
-        triage_level = "info" # info, warning, danger
+        triage_level = "info"  # Mức hiển thị thông tin, cảnh báo hoặc nguy hiểm.
 
         # =====================================================================
         # PHÂN TÍCH Ý ĐỊNH CHUYÊN SÂU
@@ -1488,15 +1488,15 @@ class RAGModel:
         }
 
     # =========================================================================
-    # CYTOSCAPE GRAPH ELEMENTS
+    # Dữ liệu nút và cạnh cho đồ thị Cytoscape
     # =========================================================================
     def get_cytoscape_elements(self, domain: str = "all") -> list[dict[str, Any]]:
         """Đóng gói nút và cạnh thành danh sách phần tử cho đồ thị trên trình duyệt."""
         elements: list[dict[str, Any]] = []
         
-        # Medical Subgraph
+        # Đồ thị con y tế
         if domain in ["all", "medical"]:
-            # Patient node
+            # Nút hồ sơ bệnh nhân
             elements.append({
                 "data": {
                     "id": "Bệnh nhân (Pima)",
@@ -1506,7 +1506,7 @@ class RAGModel:
                 }
             })
 
-            # Conditions
+            # Nút bệnh lý
             for c in self.medical_graph["conditions"]:
                 elements.append({
                     "data": {
@@ -1518,7 +1518,7 @@ class RAGModel:
                     }
                 })
 
-            # Drugs (Active Ingredients)
+            # Nút thuốc theo hoạt chất
             for d in self.medical_graph["drugs"]:
                 elements.append({
                     "data": {
@@ -1559,7 +1559,7 @@ class RAGModel:
                     }
                 })
 
-            # Biomarkers
+            # Nút chỉ dấu sinh học
             for b in self.medical_graph["biomarkers"]:
                 elements.append({
                     "data": {
@@ -1571,7 +1571,7 @@ class RAGModel:
                     }
                 })
 
-            # Edges
+            # Cạnh liên kết các thực thể y tế
             elements.append({"data": {"id": "e_p_d", "source": "Bệnh nhân (Pima)", "target": "Đái tháo đường Tuýp 2", "label": "Mắc bệnh", "color": "#f59e0b"}})
             elements.append({"data": {"id": "e_p_ckd", "source": "Bệnh nhân (Pima)", "target": "Suy thận mạn tính Giai đoạn 4-5", "label": "eGFR = 25 mL/min", "color": "#dc2626"}})
 
@@ -1588,7 +1588,7 @@ class RAGModel:
                     }
                 })
 
-        # Financial Subgraph
+        # Đồ thị con tài chính
         if domain in ["all", "financial"]:
             fin_nodes = [
                 {"id": "Amazon (AMZN)", "label": "Amazon (AMZN)", "color": "#f59e0b"},

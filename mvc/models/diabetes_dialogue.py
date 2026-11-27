@@ -120,7 +120,7 @@ def normalize_question(text):
 
 
 def load_conversation_documents(documents, path):
-    """Merge reviewed project text without changing experiment documents/index."""
+    """Gộp bản tiếng Việt đã đối chiếu để hiển thị cùng kết quả của chỉ mục thực nghiệm."""
     result = copy.deepcopy(documents)
     by_id = {d['doc_id']:d for d in result}
     path = Path(path)
@@ -164,8 +164,7 @@ class DiabetesDialogue:
             if doc.get('review_method'):
                 parts=urlparse(doc['source_url']).path.strip('/').split('/')
                 if len(parts)>=2 and parts[0]=='medicines' and parts[1] not in {'insulin','metformin'}:
-                    # A verified medicine page must answer a question containing
-                    # its generic name even when the sentence differs from aliases.
+                    # Thêm tên hoạt chất đã xác minh làm cụm nhận diện cho các cách hỏi khác nhau.
                     generic=parts[1].replace('-',' ')
                     if generic not in aliases:aliases.append(generic)
             self.aliases[doc['doc_id']]=aliases
@@ -242,8 +241,8 @@ class DiabetesDialogue:
             if spans:
                 specific.append((spans,doc))
         if specific:
-            # Suppress a generic substring ("cam") when a specific entity
-            # ("nuoc cam") occupies the same span, but keep independent topics.
+            # Ưu tiên cụm cụ thể như «nước cam» khi trùng vị trí với từ «cam».
+            # Giữ các chủ đề khớp ở vị trí độc lập.
             all_spans = [span for spans,_ in specific for span in spans]
             specific = [(spans,d) for spans,d in specific if any(not any(
                 a<=start and end<=b and (a,b)!=(start,end) for a,b in all_spans) for start,end in spans)]
@@ -289,7 +288,7 @@ class DiabetesDialogue:
         """Trả các tài liệu ứng viên theo ý định và điểm khớp câu hỏi."""
         intent = understanding or self.understand(query)
         raw = self.retriever.search(query,k=k,method=method)
-        # Validate even candidates that a later ranking step may discard.
+        # Kiểm chứng kết quả gốc trước khi xếp hạng và lọc ứng viên.
         candidates = {hit['doc_id']:self._reviewed_hit(hit) for hit in raw}
         preferred = set(intent['preferred_doc_ids'])
         if preferred & self.supplemental_ids:
@@ -311,13 +310,11 @@ class DiabetesDialogue:
                 if hit['doc_id'] in preferred:
                     reviewed['match_method'] = 'topic_expansion'
                     candidates[hit['doc_id']] = reviewed
-            # Only report material relevant to an understood topic. Do not
-            # lower thresholds or fabricate a hit if the lookup still fails.
+            # Trả các tài liệu liên quan tới chủ đề đã nhận diện và đạt ngưỡng truy xuất.
             candidates = {key:hit for key,hit in candidates.items() if key in preferred}
         ranked = sorted(candidates.values(),key=lambda hit:(-hit['score'],hit['doc_id']))
         if not ranked and not preferred and self.extended:
-            # Remove generic disease/question wording before comparing. A bare
-            # mention of diabetes must not retrieve an arbitrary medical page.
+            # Bỏ cụm từ chung như «tiểu đường» để tập trung vào từ khóa phân biệt tài liệu.
             text = normalize_question(query)
             for phrase in ('dai thao duong','tieu duong','cho toi','cho minh','duoc khong','la gi'):
                 text = text.replace(phrase,' ')

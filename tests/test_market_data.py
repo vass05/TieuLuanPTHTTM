@@ -46,7 +46,7 @@ def test_open_market_bar_is_excluded_and_cache_refreshes_when_session_closes(mar
 def test_half_day_market_close_uses_exchange_calendar(market,monkeypatch):
     monkeypatch.setattr(market,'_download',lambda _:frame('2026-11-27'))
     monkeypatch.setattr(market,'_now',lambda:datetime(2026,11,27,19,tzinfo=timezone.utc))
-    assert market.history()['last_date']=='2026-11-27'  # 13:00 NY early close.
+    assert market.history()['last_date']=='2026-11-27'  # Phiên đóng cửa sớm lúc 13 giờ, giờ New York.
 
 
 def test_cache_is_short_lived_and_returns_independent_values(market,monkeypatch):
