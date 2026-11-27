@@ -40,8 +40,8 @@ app.config['JSON_AS_ASCII'] = False
 app.config['TEMPLATES_AUTO_RELOAD'] = True
 if isinstance(app.json, DefaultJSONProvider):
     app.json.ensure_ascii = False
-# A local persistent signing key keeps task ownership valid across restarts.
-# The instance directory is excluded from version control.
+# Khóa ký phiên cục bộ được lưu trong instance/ để trình duyệt vẫn mở được
+# lịch sử của mình sau khi khởi động lại ứng dụng.
 instance_dir = Path(app.instance_path)
 instance_dir.mkdir(parents=True, exist_ok=True)
 secret_file = instance_dir / 'session_secret.key'
@@ -68,7 +68,7 @@ app.register_blueprint(agents_bp)
 
 @app.get('/healthz')
 def healthz():
-    """Cheap hosting liveness check; does not create sessions or load the KB."""
+    """Cho Render kiểm tra tiến trình Flask mà không tạo phiên hay nạp kho tri thức."""
     return jsonify(status='ok')
 
 

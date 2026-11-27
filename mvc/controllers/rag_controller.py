@@ -2,7 +2,7 @@
 """
 rag_controller.py
 Tầng Controller (C) trong kiến trúc MVC cho Hệ thống Trợ lý Y khoa Thông minh GraphRAG Chatbot.
-Tích hợp Knowledge Graph (Neo4j) + Dược phẩm Long Châu + Google Gemini 1.5 Flash LLM.
+Các route /rag dùng RAGModel cho hội thoại và đồ thị Cytoscape. Trợ lý /agents dùng AgentsModel.
 """
 
 from typing import Any, Optional
@@ -76,7 +76,7 @@ def index():
 
 @rag_bp.route('/api/rag/chat', methods=['POST'])
 def api_rag_chat():
-    """Endpoint Đàm thoại 2 chiều cho Chatbot Y tế Đa lượt (Hỗ trợ Tăng cường Gemini 1.5 Flash)"""
+    """Chuyển câu hỏi và mã phiên đến RAGModel để tiếp tục hội thoại."""
     data = request.get_json(force=True) or {}
     message = str(data.get("message", "")).strip()
     session_id: Optional[str] = data.get("session_id")

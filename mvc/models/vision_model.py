@@ -67,6 +67,7 @@ class VisionModel:
         # Resize về kích thước chuẩn 28x28 của Fashion-MNIST
         img_resized = img.resize((28, 28), Image.Resampling.LANCZOS)
         img_arr = np.array(img_resized, dtype=np.float32) / 255.0
+        # Mô hình nhận tensor theo thứ tự batch, chiều cao, chiều rộng và kênh.
         img_tensor = img_arr.reshape(1, 28, 28, 1)
 
         probs = self.model.predict(img_tensor, verbose=0)[0]

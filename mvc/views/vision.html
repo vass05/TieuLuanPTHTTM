@@ -234,6 +234,7 @@
         const error=document.getElementById('visionError');
         error.textContent=message;error.hidden=!message;
     }
+    // Cả ảnh tải lên và nét vẽ Canvas đều gửi đến cùng API cùng loại bài toán đã chọn.
     async function recognize(options){
         const buttons=['btnPredictCanvas','btnPredictUpload'].map(id=>document.getElementById(id));
         buttons.forEach(button=>{button.disabled=true;button.setAttribute('aria-busy','true');});

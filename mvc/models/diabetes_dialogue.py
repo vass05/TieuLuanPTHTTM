@@ -1,8 +1,7 @@
-"""Vietnamese query understanding over the exported, source-backed retriever.
+"""Nhận diện cách diễn đạt tiếng Việt và xếp hạng tài liệu có nguồn.
 
-The experiment retriever stays frozen. This serving layer expands ordinary
-phrasing into topic vocabulary and validates retrieval output before presenting
-project-specific, reviewed summaries. It is not an LLM or a clinical reasoner.
+Mô-đun mở rộng cụm từ trong câu hỏi thành từ vựng theo chủ đề, rồi kết hợp
+kết quả từ bộ truy xuất của notebook với các tài liệu được bổ sung sau đó.
 """
 import copy
 import json
@@ -72,8 +71,7 @@ def load_extended_documents(path):
     return documents
 
 
-# Specific phrases, matched on word boundaries. A bare 'an' would also match
-# unrelated language, so we require a food/question phrase instead.
+# So khớp cả cụm từ tại ranh giới từ để tránh nhận nhầm chữ «ăn» trong câu hỏi khác.
 TOPICS = (
     ('nutrition', ('an duoc gi','an duoc','nen an gi','nen an','an gi','kieng gi','kieng an','nen kieng',
         'co duoc an','duoc an','an uong','che do an','thuc don','dinh duong','bua an',
@@ -101,8 +99,7 @@ TOPICS = (
         'tieu duong la gi insulin glucose khai niem', ('D01',)),
 )
 
-# A few questions need several terms to be interpreted together. Matching the
-# individual terms can otherwise pick a general document or an incidental alias.
+# Một số câu hỏi cần nhiều từ đi cùng nhau để chọn đúng chủ đề cụ thể.
 QUERY_PATTERNS = (
     ('type1', (('tuyp 1',), ('tuyp 2',), ('khac nhau', 'phan biet', 'so sanh')), ('K02',)),
     ('cgm', (('cgm', 'cam bien'), ('may do', 'dau ngon tay'), ('khac nhau', 'phan biet', 'so sanh')), ('K14',)),
@@ -339,6 +336,7 @@ class DiabetesDialogue:
         return ranked[:k]
 
     def _search_supplemental(self, query, k, pdf_only=False):
+        # Bỏ từ chung về tiểu đường để xếp hạng theo dấu hiệu cụ thể của câu hỏi.
         text = normalize_question(query)
         generic = {'dai', 'thao', 'duong', 'tieu', 'benh', 'nguoi', 'co', 'mac', 'bi', 'la',
                    'cach', 'bao', 'nhieu', 'gi', 'khi', 'cho', 'lam', 'nen', 'nhu', 'the',

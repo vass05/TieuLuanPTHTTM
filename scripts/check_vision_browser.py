@@ -1,4 +1,4 @@
-"""Check canvas and upload inference with the real saved model in Chrome/Edge."""
+"""Dùng Chrome hoặc Edge kiểm tra nhận diện từ Canvas và ảnh tải lên."""
 import json
 import socket
 import subprocess

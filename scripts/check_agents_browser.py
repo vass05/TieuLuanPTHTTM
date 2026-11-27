@@ -1,4 +1,4 @@
-"""Local-only browser check through Chrome DevTools; no external accounts."""
+"""Kiểm tra giao diện trợ lý trên máy cục bộ qua giao thức Chrome DevTools."""
 import base64
 import json
 import subprocess
@@ -26,6 +26,7 @@ CHECKS, EXCEPTIONS = [], []
 
 
 class Browser:
+    """Gửi lệnh DevTools để kiểm tra DOM, đợi trạng thái và lưu ảnh màn hình."""
     def __init__(self,url):
         self.socket = websocket.create_connection(url,suppress_origin=True,timeout=20)
         self.counter = 0

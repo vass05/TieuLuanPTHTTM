@@ -1,4 +1,4 @@
-/* Chat, adjustable panes and actual workflow records. */
+/* Hội thoại, chia khung màn hình và hiển thị các bước máy chủ đã thực thi. */
 (() => {
     'use strict';
     const root=document.getElementById('agentsApp');
@@ -26,6 +26,7 @@
     const number=(value,digits=1)=>Number(value).toLocaleString('vi-VN',{minimumFractionDigits:digits,maximumFractionDigits:digits});
     const el=(tag,className,text)=>{const n=document.createElement(tag);if(className)n.className=className;if(text!==undefined)n.textContent=text;return n;};
 
+    // Gửi cookie phiên cùng yêu cầu và gắn token CSRF khi API thay đổi dữ liệu.
     async function api(path,options={}){
         const method=options.method||'GET',headers={Accept:'application/json'};
         if(options.body!==undefined)headers['Content-Type']='application/json';
@@ -79,8 +80,7 @@
     function addAssistant(task){
         const r=row('assistant');r.wrapper.dataset.taskId=task.task_id;
         if(task.outcome!=='ANSWERED')r.bubble.append(el('div','message-notice '+(task.status==='FAILED'||task.outcome==='ESCALATE'?'is-error':''),outcomes[task.outcome]||task.status));
-        // Derive the heading from the stored classification, including older
-        // replies whose prose never explained what label 0/1 means.
+        // Lấy tiêu đề từ nhãn dự đoán đã lưu để hiển thị được cả câu trả lời cũ.
         if(task.outcome==='ANSWERED'&&task.prediction&&[0,1].includes(task.prediction.label)){
             const result=el('div','message-prediction-result');
             result.append(el('span','message-prediction-caption','Kết quả dự đoán của mô hình'),

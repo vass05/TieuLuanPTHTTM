@@ -1,4 +1,4 @@
-"""Versioned, read-only Neo4j retrieval for the reviewed diabetes corpus."""
+"""Truy xuất bằng chứng từ kho tri thức tiểu đường trên Neo4j theo phiên bản."""
 
 import hashlib
 import json
@@ -10,8 +10,10 @@ from dotenv import dotenv_values
 from mvc.models.model_errors import ModelUnavailableError
 
 
-# Cypher nhận mã tài liệu đã xếp hạng qua tham số. CITES lấy URL và thông tin
-# nguồn. evidence_id lưu mã tài liệu chứng minh của từng FACT.
+# UNWIND tách danh sách ứng viên đã xếp hạng thành từng dòng để truy vấn.
+# CITES nối tài liệu với nguồn gốc. RETRIEVES lấy các cách gọi khớp câu hỏi.
+# FACT dùng evidence_id để lấy các quan hệ có tài liệu này làm bằng chứng.
+# OPTIONAL MATCH giữ tài liệu ngay cả khi thiếu cách gọi hoặc quan hệ FACT.
 RETRIEVE_CYPHER = """
 MATCH (:DiabetesKB {version: $version})
 UNWIND $candidates AS candidate
@@ -34,6 +36,7 @@ RETURN d.id AS doc_id, d.label AS title, d.summary_vi AS content,
 ORDER BY candidate.position
 """
 
+# Nút DiabetesKB đánh dấu phiên bản đã nhập và lưu số liệu của kho.
 VERSION_CYPHER = """
 MATCH (kb:DiabetesKB {version: $version})
 RETURN kb.documents AS documents, kb.sources AS sources,
@@ -53,6 +56,7 @@ def settings(root):
 
 
 def source_fields(doc):
+    """Tạo mã nguồn ổn định từ URL và bổ sung thông tin phân nhóm nguồn."""
     url = doc['source_url']
     host = urlsplit(url).hostname or ''
     vietnam = doc.get('source_country') == 'VN' or host.endswith('.vn')
@@ -64,6 +68,7 @@ def source_fields(doc):
 
 
 def ordered_graph(dialogue):
+    """Sắp xếp nút và quan hệ để thứ tự nạp dữ liệu không làm đổi mã phiên bản."""
     nodes = sorted(dialogue.graph.nodes(data=True), key=lambda row: row[0])
     edges = sorted(dialogue.graph.edges(data=True),
                    key=lambda row: (row[0], row[1], json.dumps(row[2], sort_keys=True)))
@@ -71,7 +76,7 @@ def ordered_graph(dialogue):
 
 
 def snapshot_version(dialogue):
-    """Tính chung mã phiên bản cho trình nhập và backend truy xuất."""
+    """Băm tài liệu và đồ thị để trình nhập và ứng dụng dùng cùng mã phiên bản."""
     nodes, edges = ordered_graph(dialogue)
     documents = []
     for doc in sorted(dialogue.documents.values(), key=lambda item: item['doc_id']):
@@ -87,6 +92,7 @@ def snapshot_version(dialogue):
 
 
 def open_driver(config):
+    """Khởi tạo driver từ URI và thông tin đăng nhập Neo4j."""
     if not all(config.get(key) for key in ('NEO4J_URI', 'NEO4J_USERNAME', 'NEO4J_PASSWORD')):
         raise ModelUnavailableError('Chưa cấu hình địa chỉ và thông tin đăng nhập Neo4j.')
     try:
@@ -100,17 +106,21 @@ def open_driver(config):
 
 
 class Neo4jKnowledge:
+    """Đọc từ Neo4j và đối chiếu kết quả với dữ liệu cục bộ cùng phiên bản."""
+
     def __init__(self, config, dialogue):
         self.version = snapshot_version(dialogue)
         self.database = config['NEO4J_DATABASE']
         self.driver = open_driver(config)
         self.docs = dialogue.documents
         self.aliases = dialogue.aliases
+        # Lập bảng quan hệ dự kiến theo mã tài liệu bằng chứng (phần tử thứ tư của fact).
         self.facts = {doc_id: set() for doc_id in self.docs}
         for fact in dialogue.facts:
             self.facts[fact[3]].add(fact)
 
     def _read(self, cypher, **params):
+        """Chạy Cypher ở chế độ đọc với tham số riêng cho truy vấn và phiên bản."""
         from neo4j import Query
         from neo4j.exceptions import DriverError, Neo4jError
         try:
@@ -130,10 +140,12 @@ class Neo4jKnowledge:
         return rows[0]
 
     def retrieve(self, candidates, normalized_query):
-        """Resolve locally ranked IDs into evidence and graph facts from Neo4j."""
+        """Lấy bằng chứng và quan hệ từ Neo4j theo danh sách đã xếp hạng cục bộ."""
         if not candidates:
+            # Xác nhận kho vẫn truy cập được trước khi trả về kết quả rỗng.
             self.health()
             return []
+        # Gửi mã và vị trí để Cypher trả kết quả theo đúng thứ tự xếp hạng.
         request = []
         for position, hit in enumerate(candidates):
             doc_id = hit['doc_id']
@@ -144,8 +156,7 @@ class Neo4jKnowledge:
         if [row['doc_id'] for row in rows] != [hit['doc_id'] for hit in candidates]:
             raise ModelUnavailableError('Dữ liệu Neo4j thiếu hoặc lệch phiên bản kho tri thức.')
 
-        # Dùng dữ liệu trả về từ Neo4j sau khi đối chiếu nội dung, nguồn,
-        # trang PDF và quan hệ với corpus của cùng phiên bản.
+        # Đối chiếu nội dung, nguồn, trang PDF và tập quan hệ với bản cục bộ.
         hits = []
         for row, candidate in zip(rows, candidates):
             doc = self.docs[row['doc_id']]
@@ -161,6 +172,7 @@ class Neo4jKnowledge:
                      for item in row['graph_paths']}
             if facts != self.facts[doc['doc_id']]:
                 raise ModelUnavailableError('Quan hệ Neo4j không khớp phiên bản kho tri thức.')
+            # Giữ điểm xếp hạng cục bộ và gắn thông tin truy vết cho kết quả từ Neo4j.
             row.update(score=candidate['score'], match_method=candidate.get('match_method', 'ranked'),
                        backend='neo4j', kb_version=self.version)
             hits.append(row)

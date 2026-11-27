@@ -1,4 +1,4 @@
-"""Exercise the saved LSTM, preprocessing and Flask routes without TensorFlow."""
+"""Kiểm tra dự báo từ trọng số LSTM đã lưu, tiền xử lý và các route Flask."""
 import io
 import shutil
 import zipfile

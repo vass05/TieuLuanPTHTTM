@@ -41,6 +41,7 @@ class HousingModel:
         
         feat = np.array([[area, bedroom, toilet, floors]], dtype=np.float32)
         
+        # Đầu ra ở thang log1p, dùng expm1 để đổi về giá tính theo tỷ đồng.
         pred_log = float(self.model.predict(feat)[0])
         pred_price = float(np.expm1(pred_log))
             

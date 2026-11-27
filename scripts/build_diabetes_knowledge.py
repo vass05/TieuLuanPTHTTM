@@ -1,4 +1,4 @@
-"""Export the serving graph and its transparent counts for project review."""
+"""Xuất nút, cạnh và số liệu của kho đang dùng để đối chiếu khi review."""
 import json
 import sys
 from pathlib import Path

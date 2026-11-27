@@ -1,4 +1,4 @@
-"""Load saved Keras weights for inference using an available backend."""
+"""Chọn backend suy luận cho các mô hình đã lưu ở định dạng Keras."""
 import importlib.util
 import os
 from pathlib import Path
@@ -13,7 +13,7 @@ def load_inference_model(path):
         return load_saved_model(path), 'torch'
     if runtime != 'keras':
         raise ValueError('MODEL_RUNTIME must be keras or torch_weights')
-    # Backend selection must precede the first Keras import. Keep user settings.
+    # Keras đọc backend lúc import lần đầu. setdefault giữ cấu hình người dùng đã đặt.
     os.environ.setdefault('KERAS_BACKEND',
         'tensorflow' if importlib.util.find_spec('tensorflow') is not None else 'torch')
     import keras

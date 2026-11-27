@@ -1,4 +1,4 @@
-"""Latest completed daily market sessions, separate from archived CSV datasets."""
+"""Lấy giá đóng cửa thị trường và kiểm tra phiên giao dịch theo lịch sàn."""
 import copy
 import logging
 import threading
@@ -42,6 +42,7 @@ class MarketData:
                 calendar=xcals.get_calendar('XNYS')
                 sessions=calendar.sessions_in_range((now-timedelta(days=14)).date(),now.date())
                 completed=[s for s in sessions if calendar.session_close(s)<=now]
+                # Chỉ dùng cache 5 phút nếu cache còn khớp phiên đã đóng gần nhất.
                 expected=completed[-1].strftime('%Y-%m-%d')
                 cache_key=(symbol,limit)
                 cached=self._cache.get(cache_key)

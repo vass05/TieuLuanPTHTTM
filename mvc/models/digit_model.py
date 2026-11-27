@@ -1,4 +1,4 @@
-"""MNIST-only digit classifier; never reuse fashion weights for digit labels."""
+"""Nhận diện chữ số viết tay 0–9 bằng CNN và bộ trọng số huấn luyện trên MNIST."""
 import hashlib
 import json
 import threading
@@ -26,7 +26,7 @@ class DigitCNN(nn.Module):
 
 
 def normalize_digit(image):
-    """Crop ink, preserve its aspect ratio in 20x20 and center it on 28x28."""
+    """Cắt phần nét, giữ tỷ lệ khi thu vào vùng 20×20 rồi đặt giữa khung 28×28."""
     image=image.convert('L')
     values=np.asarray(image)
     border=np.concatenate((values[0],values[-1],values[:,0],values[:,-1]))
@@ -62,6 +62,7 @@ class DigitModel:
         return json.loads(self.manifest_path.read_text(encoding='utf-8'))
 
     def ensure_loaded(self):
+        # Đối chiếu checksum trong manifest trước khi nạp bộ trọng số.
         with self._lock:
             if self.model is not None:return
             try:

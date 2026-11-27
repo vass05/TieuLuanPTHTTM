@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block title %}Chưa tải được dữ liệu thị trường{% endblock %}
-{% block content %}
+{# Controller dùng view này khi thiếu dữ liệu thị trường. CSV là lựa chọn riêng của người dùng. #}{% block content %}
 <div class="container"><div class="custom-card p-4 mx-auto" style="max-width:800px">
     <h2>Chưa tải được dữ liệu thị trường</h2>
     <p>{{ message }}</p>

@@ -12,7 +12,7 @@
         <section class="assistant-card orchestration-panel" aria-labelledby="orchestrationTitle">
             <div class="assistant-card-header"><div class="assistant-heading"><span class="assistant-heading-icon"><i class="fa-solid fa-diagram-project" aria-hidden="true"></i></span><div><h2 id="orchestrationTitle">Luồng điều phối AI</h2><p>Công cụ được chọn theo nội dung câu hỏi</p></div></div><span class="assistant-small-badge" id="runState">Chờ tin nhắn</span></div>
             <div class="orchestration-content">
-                <div class="orchestration-graph" aria-label="Sơ đồ điều phối và kiểm chứng">
+                {# agents.js dùng ID của nút và cạnh để tô sáng theo trace từ API. #}<div class="orchestration-graph" aria-label="Sơ đồ điều phối và kiểm chứng">
                     <svg viewBox="0 0 620 405" role="img" aria-labelledby="flowDiagramTitle">
                         <title id="flowDiagramTitle">Luồng xử lý thực tế của tin nhắn đang chọn</title>
                         <defs><marker id="flowArrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="#cbd5e1"/></marker><marker id="flowArrowActive" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="#2563eb"/></marker></defs>

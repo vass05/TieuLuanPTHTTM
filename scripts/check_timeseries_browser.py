@@ -1,4 +1,4 @@
-"""Check the real forecast page, Chart.js and AJAX with a private browser profile."""
+"""Kiểm tra trang dự báo cập nhật biểu đồ Chart.js khi gửi yêu cầu AJAX."""
 import json
 import socket
 import subprocess

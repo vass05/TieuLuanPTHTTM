@@ -175,7 +175,7 @@
 
 {% block extra_scripts %}
 <script>
-    // Dữ liệu ban đầu truyền từ Flask Controller (Jinja2)
+    // Dự báo đầu tiên được Flask kết xuất. timeseries.js dùng các biến này để dựng biểu đồ.
     const initialHistDates = {{ hist.dates | tojson }};
     const initialHistPrices = {{ hist.prices | tojson }};
     const initialForecastDates = {{ forecast.forecast_dates | tojson }};

@@ -28,7 +28,7 @@ def index():
 
 @housing_bp.route('/api/housing/predict', methods=['POST'])
 def api_predict():
-    """Định giá theo thông số khi người dùng gửi yêu cầu tính toán."""
+    """Đọc thông số JSON, gọi HousingModel và trả về kết quả cho trang định giá."""
     data = request.get_json(force=True) or {}
     area = float(data.get('area', 75.0))
     bedroom = float(data.get('bedroom', 3.0))

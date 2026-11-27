@@ -1,4 +1,4 @@
-"""Latest-source routing must never silently substitute an archived CSV."""
+"""Kiểm tra lịch phiên giao dịch, cache giá đóng cửa và lựa chọn nguồn CSV tại API."""
 from datetime import datetime, timezone
 
 import exchange_calendars as xcals

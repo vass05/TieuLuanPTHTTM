@@ -111,7 +111,7 @@ class TimeSeriesModel:
         current_window = scaled_window.flatten().tolist()
         predicted_scaled = []
         
-        # Vòng lặp dự báo cuốn chiếu đa bước
+        # Đưa dự báo của mỗi bước trở lại cửa sổ đầu vào để tính bước kế tiếp.
         for _ in range(steps):
             inp = np.array(current_window[-30:], dtype=np.float32).reshape(1, 30, 1)
             next_val = float(self.lstm_model.predict(inp, verbose=0)[0, 0])
@@ -160,7 +160,7 @@ class TimeSeriesModel:
         }
 
     def _generate_future_dates(self, last_date_str, steps):
-        """US stock-market sessions, excluding weekends and exchange holidays."""
+        """Tạo ngày dự báo theo lịch phiên giao dịch, bỏ cuối tuần và ngày sàn nghỉ."""
         import exchange_calendars as xcals
         curr=pd.Timestamp(last_date_str[:10] if last_date_str else datetime.now().date())
         calendar=xcals.get_calendar('XNYS')

@@ -23,9 +23,10 @@ def bad_request(error):
 
 
 def forecast_options(values):
+    """Chuẩn hóa mã, số bước dự báo và nguồn trước khi tải chuỗi lịch sử."""
     symbol=values.get('symbol','AMZN')
     source=values.get('source','live')
-    if source=='dataset':source='live'  # Old clients called this option "real time".
+    if source=='dataset':source='live'  # Giữ cách hiểu lựa chọn dữ liệu thị trường của client cũ.
     try:
         steps=int(values.get('steps',7))
     except (ValueError,TypeError):
@@ -44,6 +45,7 @@ def forecast_options(values):
 
 
 def history_for_source(symbol,source):
+    # Dùng đúng nguồn được chọn để giao diện có thể ghi rõ xuất xứ dữ liệu.
     if source=='live':
         return market_data.history(symbol=symbol,limit=60)
     hist=ts_model.get_historical_data(symbol=symbol,limit=60)

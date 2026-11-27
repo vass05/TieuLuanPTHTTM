@@ -1,4 +1,4 @@
-"""Coverage of real questions, typed graph provenance and optional synthesis."""
+"""Kiểm tra truy xuất có nguồn, quan hệ đồ thị và bước diễn đạt lại bằng Gemini."""
 import json
 from pathlib import Path
 

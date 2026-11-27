@@ -113,6 +113,7 @@ def payload(dialogue):
 
 
 def write_export(out, version, counts, catalog, statements):
+    """Ghi file Cypher để chạy thủ công và danh mục nguồn để tra cứu bằng chứng."""
     cypher = ['// Reviewed diabetes graph. Rebuild with scripts/import_diabetes_neo4j.py.',
               '// Thứ tự nhập: tạo ràng buộc, ghi nút, ghi quan hệ, ghi thống kê phiên bản.',
               '// CITES: tài liệu → nguồn. RETRIEVES: bí danh → tài liệu.',
@@ -147,6 +148,7 @@ def import_into_database(config, version, counts, statements, node_counts, edge_
 
 
 def main():
+    # Mặc định chỉ xuất tệp. Cờ --import mới ghi dữ liệu vào Neo4j.
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--import', dest='import_db', action='store_true', help='also import to Neo4j from .env')
     parser.add_argument('--require-complete', action='store_true', help='require 399 web sources and 200 PDFs, 100 PDFs per group')

@@ -1,4 +1,4 @@
-"""Exercise every website feature offline before Render marks a build successful."""
+"""Chạy các kiểm tra Flask và suy luận bằng dữ liệu cục bộ trong bước build Render."""
 import os
 import sys
 import uuid

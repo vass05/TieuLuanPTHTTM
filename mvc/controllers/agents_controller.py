@@ -1,4 +1,4 @@
-"""Chapter 6 page and versioned APIs; browser sessions own their task history."""
+"""Điểm vào của trang trợ lý và các API theo phiên bản dành cho từng phiên trình duyệt."""
 import hmac
 import re
 import secrets
@@ -27,6 +27,7 @@ def get_agents_model():
 
 
 def prepare_session():
+    # Mã chủ sở hữu dùng để lọc lịch sử, token CSRF dùng để kiểm tra yêu cầu ghi.
     session.setdefault('agents_owner', secrets.token_hex(24))
     session.setdefault('agents_csrf', secrets.token_hex(32))
     return session['agents_owner']
@@ -110,6 +111,7 @@ def health():
 
 @agents_bp.post('/api/v1/assistant/chat')
 def assistant_chat():
+    # Controller kiểm tra dữ liệu đầu vào rồi để AgentsModel chọn luồng xử lý.
     value=payload(['message','conversation_id'])
     message=value.get('message')
     if not isinstance(message,str) or not message.strip() or len(message)>2000:

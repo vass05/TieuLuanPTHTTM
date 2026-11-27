@@ -365,6 +365,7 @@ class RAGModel:
         self._init_vector_indices()
 
     def _init_vector_indices(self):
+        # Mỗi miền có bộ TF-IDF riêng để xếp hạng tài liệu bằng từ vựng của miền đó.
         # Y tế
         self.med_vectorizer = TfidfVectorizer()
         med_docs = [d["text"] for d in self.medical_guidelines]
@@ -1490,6 +1491,7 @@ class RAGModel:
     # CYTOSCAPE GRAPH ELEMENTS
     # =========================================================================
     def get_cytoscape_elements(self, domain: str = "all") -> list[dict[str, Any]]:
+        """Đóng gói nút và cạnh thành danh sách phần tử cho đồ thị trên trình duyệt."""
         elements: list[dict[str, Any]] = []
         
         # Medical Subgraph

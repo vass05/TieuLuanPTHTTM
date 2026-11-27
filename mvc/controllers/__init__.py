@@ -1,2 +1,2 @@
 # -*- coding: utf-8 -*-
-# Controllers Layer
+# Mỗi mô-đun controller khai báo một Blueprint được đăng ký trong app.py.

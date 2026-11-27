@@ -1,4 +1,4 @@
-"""Serving corpus growth, source provenance and practical question relevance."""
+"""Kiểm tra quy mô kho mở rộng, thông tin nguồn và độ phù hợp với câu hỏi thực tế."""
 import json
 import re
 

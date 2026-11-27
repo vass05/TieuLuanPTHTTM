@@ -1,7 +1,7 @@
-"""Build-time source discovery/review for the public diabetes education corpus.
+"""Thu thập và kiểm tra tài liệu công khai khi chuẩn bị kho tri thức.
 
-Raw pages and draft responses stay in the gitignored checkpoint directory.
-Nothing crawls the web at chat runtime. Provider credentials are never exported.
+HTML gốc và bản nháp nằm trong thư mục trung gian được Git bỏ qua. Khi chat,
+ứng dụng đọc kho đã chuẩn bị sẵn.
 """
 import argparse
 import concurrent.futures
@@ -279,6 +279,7 @@ def draft():
 
 
 def review():
+    # Gộp kết quả tạo bản nháp theo nguồn để kiểm tra nội dung trước khi xuất kho.
     selected=json.loads((CACHE/'selected.json').read_text(encoding='utf-8'))
     drafts=[d for p in sorted(CACHE.glob('draft-*.json')) for d in json.loads(p.read_text(encoding='utf-8'))]
     by_id={d['doc_id']:d for d in drafts}

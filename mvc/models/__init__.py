@@ -1,2 +1,2 @@
 # -*- coding: utf-8 -*-
-# Models Layer
+# Các mô-đun xử lý nghiệp vụ, suy luận mô hình và đọc dữ liệu cho controller.

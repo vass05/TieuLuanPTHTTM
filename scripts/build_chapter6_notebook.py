@@ -1,4 +1,4 @@
-"""Build the self-contained Chapter 6 cells; never execute Chapters 1--5."""
+"""Tạo các ô Chương 6 và gắn thẻ chapter6 để có thể chạy riêng chương này."""
 from pathlib import Path
 import json
 import textwrap
@@ -23,8 +23,7 @@ def code(text):
     CELLS.append(cell)
 
 
-# These are short, manually reviewed Vietnamese paraphrases, not scraped passages
-# and not a clinical guideline database. URLs are the actual reference pages.
+# Bản diễn giải tiếng Việt này đã được rà soát thủ công. Mỗi mục lưu URL nguồn gốc.
 DOCS = [
     ('D01', 'Bệnh tiểu đường là gì?', 'what-is-diabetes', 'Khái niệm',
      'Tiểu đường liên quan đến lượng glucose trong máu cao. Insulin giúp glucose đi vào tế bào. Các loại tiểu đường có nguyên nhân khác nhau; thông tin giáo dục không thay thế đánh giá của nhân viên y tế.',
@@ -67,8 +66,7 @@ for doc_id, title, slug, section, summary, aliases in DOCS:
                      reviewed_on='2026-10-31', page=None))
 (DATA / 'knowledge_documents.json').write_text(json.dumps(docs, ensure_ascii=False, indent=2), encoding='utf-8')
 
-# Labels authored independently of the retrieval implementation; development
-# questions and held-out questions are distinct. This is a small curated benchmark.
+# Nhãn được viết độc lập với bộ truy xuất. Tập phát triển và tập đánh giá dùng các câu hỏi riêng.
 QUESTIONS = {
  'D01': ('Khái niệm đái tháo đường là gì?', 'Insulin có vai trò gì đối với glucose?', 'Giải thích bệnh tiểu đường là gì cho người mới tìm hiểu.'),
  'D02': ('Triệu chứng thường gặp của tiểu đường?', 'Khát nhiều và tiểu nhiều có phải biểu hiện cần đi xét nghiệm?', 'Nhìn mờ và vết thương chậm lành liên quan thế nào đến triệu chứng tiểu đường?'),

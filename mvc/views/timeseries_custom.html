@@ -126,6 +126,7 @@
     let customChartInstance = null;
     const ctxC = document.getElementById("customChart").getContext("2d");
 
+    // Chuyển chuỗi nhập tay thành danh sách số trước khi gọi API dự báo tùy biến.
     async function runCustomForecast() {
         const vals = parseValues();
         if (vals.length < 30) {

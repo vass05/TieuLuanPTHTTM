@@ -1,4 +1,4 @@
-"""Conversational model routing, data collection and genuine MLP inference."""
+"""Kiểm tra cách thu thập chỉ số qua hội thoại và gọi mô hình MLP khi đủ dữ liệu."""
 import json
 
 import pytest

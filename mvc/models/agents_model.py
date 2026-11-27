@@ -1,4 +1,4 @@
-"""Serving-only Chapter 6 runtime: notebook artifacts, bounded workflows and task memory."""
+"""Nạp mô hình từ notebook và điều phối các lượt hỏi đáp của trợ lý tiểu đường."""
 import copy
 import json
 import logging
@@ -69,6 +69,7 @@ class AgentsModel:
                         raise ValueError('Invalid artifact path')
                     if artifact_digest(path) != expected:
                         raise ModelUnavailableError('Artifact đã thay đổi. Chạy lại scripts/export_chapter6_project.py.')
+                # Kiểm tra mã suy luận xuất từ notebook cùng bộ mô hình trước khi phục vụ API.
                 core_file = Path(core.__file__)
                 if artifact_digest(core_file) != manifest['inference_core_sha256']:
                     raise ModelUnavailableError('Mã suy luận khác bản xuất notebook. Chạy lại script export.')
@@ -199,6 +200,7 @@ class AgentsModel:
 
     @staticmethod
     def public_task(task, include_inputs=True):
+        # Bỏ trạng thái thu thập chỉ số nội bộ trước khi trả dữ liệu cho trình duyệt.
         result = {key:copy.deepcopy(value) for key,value in task.items() if key not in ['profile','units','_prediction_dialogue']}
         if include_inputs:
             result['inputs'] = dict(profile=copy.deepcopy(task['profile']), units=copy.deepcopy(task['units']))
@@ -219,7 +221,7 @@ class AgentsModel:
         return [self.public_task(task,include_inputs=False) for task in tasks]
 
     def chat(self, owner_id, message, conversation_id=None):
-        """Choose the chat route on the server; the browser submits only a message."""
+        """Chọn luồng xử lý trên máy chủ từ tin nhắn và lịch sử hội thoại."""
         self.ensure_loaded()
         with self._lock:
             previous=[]
@@ -232,6 +234,7 @@ class AgentsModel:
             else:
                 conversation_id=uuid.uuid4().hex
             tick=time.perf_counter()
+            # Nếu người dùng hỏi về kết quả đã có, lấy lại lượt dự đoán để giải thích.
             completed=prediction_followup(message,previous)
             if completed is not None:
                 plan=dict(route='prediction_result',topics=['prediction'],uses_context=True,

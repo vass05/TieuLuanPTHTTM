@@ -1,4 +1,4 @@
-"""Deterministic collection of model inputs in chat; never invent missing labs."""
+"""Trích xuất và thu thập các chỉ số đầu vào của mô hình qua nhiều lượt chat."""
 import copy
 import math
 import re
@@ -67,7 +67,7 @@ def parse_inputs(message):
         elif re.match(r'\s*[:=]\s*(?:nan|inf|[a-z]+)',segment) and key not in units:
             invalid.add(key)
             issues.append(FIELDS[key][0]+': cần nhập một số hợp lệ.')
-    # Conversational age order: "tôi 47 tuổi". Do not map bare numbers to labs.
+    # Nhận dạng cách nói «tôi 47 tuổi» khi số đứng trước đơn vị tuổi.
     if 'Age' not in values:
         age=re.search(r'(?<![\w.])('+NUMBER+r')\s*tuoi\b',text)
         if age:
@@ -101,8 +101,7 @@ def prediction_request(message,previous,examples):
     educational=any(p in normalized for p in ('mo hinh la gi','mo hinh du doan la gi','hoat dong the nao'))
     demo=explicit and any(p in normalized for p in ('du lieu mau','ho so mau','vi du mau'))
     parsed=parse_inputs(message)
-    # A pasted, labelled profile is itself a request to process those inputs.
-    # Start fresh after a completed demo, never inherit its sample measurements.
+    # Hồ sơ có tên trường có thể mở lượt dự đoán mới. Sau demo, bắt đầu với các chỉ số vừa nhập.
     structured=(len(parsed['values'])>=3 and len(re.findall(r'[:=]',message))>=3
         and not re.search(r'\?|\b(?:la gi|nen an|an duoc|duoc khong|tai sao|vi sao)\b',normalized+' '+message))
     continuation=pending and (bool(parsed['values'] or parsed['units'] or parsed['sex'] or parsed['sex_unknown'] or parsed['invalid'] or parsed['ogtt']) or
@@ -178,7 +177,7 @@ def prediction_request(message,previous,examples):
 
 
 def prediction_followup(message,previous):
-    """Explain the latest completed classification without collecting inputs again."""
+    """Nhận diện câu hỏi cần giải thích kết quả dự đoán gần nhất trong hội thoại."""
     normalized=normalize_question(message)
     parsed=parse_inputs(message)
     if (parsed['values'] or parsed['units'] or parsed['sex'] or parsed['sex_unknown']

@@ -1,4 +1,4 @@
-"""Real SE-CNN inference, image input variants and HTTP error behavior."""
+"""Kiểm tra suy luận SE-CNN, các dạng đầu vào ảnh và mã lỗi HTTP."""
 import base64
 import io
 import zipfile

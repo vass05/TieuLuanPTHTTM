@@ -1,4 +1,4 @@
-"""SQLite task memory scoped to the browser's signed session."""
+"""Lưu lượt xử lý và hội thoại trong SQLite theo mã chủ sở hữu của phiên."""
 import json
 import sqlite3
 from contextlib import contextmanager
@@ -44,6 +44,7 @@ class AgentStore:
         return task
 
     def save(self, task, owner_id, expected_revision=None):
+        # So khớp revision khi cập nhật để phát hiện ghi đồng thời từ hai cửa sổ.
         now = utc_now()
         task['updated_at'] = now
         task.setdefault('created_at', now)
@@ -79,6 +80,7 @@ class AgentStore:
         return [json.loads(row['state_json']) for row in rows]
 
     def conversations(self, owner_id):
+        # Nhóm từng lượt theo mã hội thoại và lấy câu hỏi đầu làm tiêu đề.
         with self.connect() as connection:
             rows = connection.execute('''SELECT state_json FROM agent_tasks
                 WHERE owner_id=? AND json_extract(state_json,'$.conversation_id') IS NOT NULL

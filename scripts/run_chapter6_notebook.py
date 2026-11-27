@@ -1,4 +1,4 @@
-"""Execute Chapter 6 only in a clean kernel and retain its outputs in the main notebook."""
+"""Chạy riêng các ô Chương 6 trong kernel mới và ghi kết quả về notebook chính."""
 import os
 import sys
 import ast

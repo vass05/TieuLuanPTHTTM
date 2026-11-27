@@ -1,4 +1,4 @@
-"""Compact deployment must preserve inference from the archived models."""
+"""So sánh kết quả backend PyTorch trên Render với mô hình gốc đã lưu."""
 import json
 import subprocess
 import sys

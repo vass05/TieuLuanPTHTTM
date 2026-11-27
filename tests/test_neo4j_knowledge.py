@@ -1,4 +1,4 @@
-"""Exercise real Neo4j evidence through the assistant's public routes."""
+"""Kiểm tra nguồn web và trang PDF qua API trợ lý và đối chiếu dữ liệu trên Neo4j."""
 
 import os
 import json

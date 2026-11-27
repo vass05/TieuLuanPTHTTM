@@ -3,6 +3,7 @@
    ===================================================================== */
 document.addEventListener("DOMContentLoaded", function () {
     const ctx = document.getElementById("stockChart").getContext("2d");
+    // Giữ đối tượng Chart.js để cập nhật dữ liệu sau mỗi lần dự báo qua API.
     let chartInstance = null;
 
     function buildChartData(histDates, histPrices, forecastDates, forecastPrices, symbol, unit) {

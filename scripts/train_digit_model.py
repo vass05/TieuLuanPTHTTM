@@ -1,4 +1,4 @@
-"""Train the separate digit CNN; no downloads or training occur in web requests."""
+"""Huấn luyện CNN chữ số và xuất trọng số cho mô-đun suy luận MNIST."""
 import argparse
 import copy
 import gzip
@@ -49,6 +49,7 @@ def official_test(cache):
 
 
 def prepared(images,path):
+    # Dùng lại ảnh đã chuẩn hóa để tránh xử lý lại khi chạy huấn luyện.
     if path.exists():return np.load(path)['images']
     values=np.stack([normalize_digit(Image.fromarray(image)) for image in images])
     np.savez_compressed(path,images=values)

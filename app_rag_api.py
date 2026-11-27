@@ -20,7 +20,7 @@ except Exception:
 app = Flask(__name__)
 app.config['JSON_AS_ASCII'] = False
 
-# Khởi tạo mô hình RAG
+# API GraphRAG độc lập dùng RAGModel. Backend Neo4j của /agents được khởi tạo trong ứng dụng MVC.
 rag_engine = RAGModel()
 
 @app.route('/api/rag/query', methods=['POST'])

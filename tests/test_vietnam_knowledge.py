@@ -1,4 +1,4 @@
-"""Vietnamese source provenance, citations and compatibility with local serving."""
+"""Kiểm tra xuất xứ và trích dẫn nguồn Việt Nam trong chế độ truy xuất cục bộ."""
 import json
 import re
 

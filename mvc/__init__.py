@@ -1,2 +1,2 @@
 # -*- coding: utf-8 -*-
-# MVC Architecture Package
+# Gói MVC của Flask gồm controller xử lý yêu cầu, model xử lý dữ liệu và view hiển thị.

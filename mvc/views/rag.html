@@ -419,7 +419,7 @@ document.addEventListener("DOMContentLoaded", function() {
     initCytoscapeGraph();
 });
 
-// Khởi tạo đồ thị Cytoscape
+// Nạp nút và cạnh từ API /rag để dựng đồ thị Cytoscape cạnh khung chat.
 function initCytoscapeGraph() {
     fetch('/api/rag/graph_elements?domain=all')
         .then(res => res.json())

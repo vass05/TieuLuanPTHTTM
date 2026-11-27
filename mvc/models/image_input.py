@@ -1,4 +1,4 @@
-"""Decode image files and canvas data URLs consistently across vision tasks."""
+"""Giải mã ảnh tải lên và ảnh Canvas theo cùng một quy trình cho các mô hình thị giác."""
 import base64
 import binascii
 import io
@@ -16,6 +16,7 @@ def load_grayscale_image(image_input):
             raise ValueError('Unsupported image input')
         with Image.open(io.BytesIO(content)) as original:
             original=ImageOps.exif_transpose(original)
+            # Ghép vùng trong suốt lên nền trắng trước khi chuyển sang ảnh xám.
             if original.mode in ('RGBA','LA') or 'transparency' in original.info:
                 rgba=original.convert('RGBA')
                 original=Image.alpha_composite(Image.new('RGBA',rgba.size,'white'),rgba)

@@ -1,4 +1,4 @@
-"""Package verified notebook artifacts for the local Flask project (no training)."""
+"""Đóng gói mô hình và dữ liệu từ notebook để Flask nạp khi khởi động tính năng."""
 from pathlib import Path
 import ast
 import hashlib
@@ -76,6 +76,7 @@ from sklearn.decomposition import TruncatedSVD
     header += 'CH6_UNITS = ' + repr(meta['units']) + '\n'
     header += "CH6_ACTIONS = ['REQUEST_INFO', 'RUN_PREDICTION', 'RETRIEVE_KNOWLEDGE', 'GENERATE_RESPONSE', 'ESCALATE']\n"
     header += 'CH6_REQUEST, CH6_PREDICT, CH6_RETRIEVE, CH6_RESPOND, CH6_ESCALATE = range(5)\n\n'
+    # Mã suy luận được tái tạo từ notebook rồi ghi mã băm vào manifest.
     core_path = ROOT / 'mvc/models/chapter6_core.py'
     core_path.write_text(header + '\n\n'.join(definitions[name] for name in required) + '\n', encoding='utf-8')
     importlib.invalidate_caches()

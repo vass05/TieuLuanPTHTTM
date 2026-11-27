@@ -1,4 +1,4 @@
-"""Serving parity, real workflow behavior and ownership boundaries."""
+"""Kiểm tra API trợ lý, kết quả so với notebook và quyền truy cập lịch sử theo phiên."""
 import copy
 import json
 from pathlib import Path

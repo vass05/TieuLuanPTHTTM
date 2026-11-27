@@ -2,7 +2,7 @@
 """
 vision_controller.py
 Tầng Controller (C) trong kiến trúc MVC cho bài toán Thị giác máy tính (Fashion-MNIST).
-Xử lý tải lên hình ảnh, tiếp nhận nét vẽ từ Canvas HTML5 và gọi VisionModel để nhận diện.
+Nhận ảnh tải lên hoặc từ Canvas, rồi chọn mô hình thời trang hay chữ số theo yêu cầu.
 """
 
 from flask import Blueprint, render_template, request, jsonify

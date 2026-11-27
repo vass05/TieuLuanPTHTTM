@@ -1,4 +1,4 @@
-"""Task separation, saved MNIST inference and handwritten-image preparation."""
+"""Kiểm tra tiền xử lý nét vẽ và việc gọi đúng mô hình MNIST tại API thị giác."""
 import base64
 import io
 import json

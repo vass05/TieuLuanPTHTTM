@@ -17,7 +17,7 @@
 .message-bubble{font-size:14px;line-height:1.75}.message-role{font-size:11px;color:#64748b}.chat-composer textarea{font-size:13px}.assistant-heading h2{font-size:16px}.orchestration-plan li{font-size:12px}.orchestration-explanation{font-size:12px}
 @media(max-width:440px){.message-bubble{font-size:13px}.assistant-heading h2{font-size:14px}.chat-composer textarea{font-size:13px}.orchestration-plan li{font-size:11px}}
 @media(prefers-reduced-motion:reduce){.chat-messages{scroll-behavior:auto}.message-pending:before{animation:none}}
-/* Adjustable desktop split; mobile keeps chat first. */
+/* JavaScript chỉnh tỷ lệ hai cột trên desktop. Trên điện thoại, khung chat hiển thị trước. */
 @media(min-width:851px){.assistant-workspace{grid-template-columns:minmax(0,var(--chat-share,55fr)) 16px minmax(0,var(--flow-share,45fr));grid-template-areas:'chat resize flow';gap:0}.assistant-resizer{grid-area:resize;cursor:col-resize;display:flex;align-items:center;justify-content:center;touch-action:none;border-radius:8px}.assistant-resizer span{height:64px;width:4px;border-radius:4px;background:#cbd5e1}.assistant-resizer:hover span,.assistant-resizer:focus-visible span,.is-resizing .assistant-resizer span{background:#2563eb}.assistant-resizer:focus-visible{outline:2px solid #93c5fd;outline-offset:-3px}.is-resizing{user-select:none;cursor:col-resize}}
 @media(max-width:850px){.assistant-resizer{display:none}}
 .knowledge-stats{font-size:11px;line-height:1.7;color:#64748b;margin:8px 0}

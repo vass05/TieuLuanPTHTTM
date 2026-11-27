@@ -24,7 +24,7 @@ body {
     flex-direction: column;
 }
 
-/* Navbar */
+/* Thanh điều hướng dùng chung cho các trang MVC. */
 .app-navbar {
     background-color: #ffffff;
     border-bottom: 1px solid var(--border-card);
@@ -113,7 +113,7 @@ body {
     margin-top: 0.4rem;
 }
 
-/* Trend Badges */
+/* Nhãn tăng, giảm và đi ngang của trang dự báo. */
 .trend-badge {
     display: inline-flex;
     align-items: center;

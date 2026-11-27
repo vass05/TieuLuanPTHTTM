@@ -5,12 +5,14 @@ services:
     plan: free
     buildCommand: bash scripts/render-build.sh
     startCommand: gunicorn --config gunicorn.conf.py app:app
+    # /healthz kiểm tra tiến trình Flask. /api/v1/health cung cấp trạng thái kho tri thức.
     healthCheckPath: /healthz
     envVars:
       - key: PYTHON_VERSION
         value: "3.14.6"
       - key: FLASK_SECRET_KEY
         generateValue: true
+      # Đọc trọng số Keras qua PyTorch để triển khai hai mô hình trên CPU.
       - key: MODEL_RUNTIME
         value: torch_weights
       - key: ASSISTANT_EXTERNAL_ENABLED

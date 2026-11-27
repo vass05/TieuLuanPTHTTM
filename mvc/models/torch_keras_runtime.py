@@ -1,8 +1,7 @@
-"""CPU inference for the two shipped Keras archives, without importing Keras.
+"""Chạy suy luận trên CPU bằng PyTorch với hai mô hình đã lưu ở định dạng Keras.
 
-The config fingerprints restrict this adapter to the exact supported architectures.
-Weights are read directly from the original archives; no training or conversion
-of repository artifacts takes place. Dropout is inactive during inference.
+Mã băm của cấu hình xác nhận đúng kiến trúc LSTM hoặc Fashion SE-CNN trước
+khi đọc trọng số trực tiếp từ tệp gốc. Dropout được tắt khi suy luận.
 """
 import hashlib
 import io

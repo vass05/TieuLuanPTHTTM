@@ -1,8 +1,8 @@
-"""Optional server-side, evidence-constrained Gemini adapter.
+"""Gọi Gemini từ máy chủ để diễn đạt lại câu trả lời dựa trên bằng chứng đã lấy.
 
-Only the current question and retrieved public summaries leave this process.
-Keys, provider errors and configuration never enter task payloads or browser HTML.
-Citation/quotation checks are structural, not a clinical correctness proof.
+Yêu cầu gửi đi gồm câu hỏi hiện tại và tóm tắt công khai của các nguồn. Ứng dụng
+giữ khóa và lỗi từ nhà cung cấp trên máy chủ. Bộ kiểm tra xác nhận mã tài liệu
+và câu trích dẫn có trong bằng chứng đã cung cấp.
 """
 import json
 import os
@@ -71,13 +71,14 @@ class AssistantSynthesis:
             blocks = self.validate(json.loads(content),evidence)
             return dict(status='completed',blocks=blocks,duration_ms=(time.perf_counter()-started)*1000)
         except (requests.RequestException, ValueError, KeyError, IndexError, TypeError):
-            # Never log HTTP bodies, headers, request objects or exception strings.
+            # Tránh ghi log phần yêu cầu hoặc phản hồi có thể chứa khóa và nội dung hội thoại.
             with self._state_lock:
                 self._cooldown = time.monotonic()+60
             return dict(status='fallback',reason='unavailable_or_invalid',duration_ms=(time.perf_counter()-started)*1000)
 
     @staticmethod
     def validate(value, evidence):
+        # Mỗi mã tài liệu được dẫn phải có ít nhất một đoạn trích khớp nguyên văn.
         from mvc.models.diabetes_dialogue import normalize_question
         sources = {h['doc_id']:h['content'] for h in evidence}
         blocks = value.get('blocks') if isinstance(value,dict) else None
